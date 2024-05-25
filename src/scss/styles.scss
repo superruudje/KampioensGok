@@ -1,0 +1,46 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+$new-font-sizes: (
+        7: 0.75rem,
+);
+$new-grid-breakpoints: (
+        3xl: 1750px,
+        4xl: 2075px
+);
+$font-sizes: map-merge($font-sizes, $new-font-sizes);
+$grid-breakpoints: map-merge($grid-breakpoints, $new-grid-breakpoints);
+
+@import "bootstrap/scss/bootstrap";
+
+body {
+  background: #eee;
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, Segoe UI, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+.bg-gray {
+  background: #eee;
+}
+.bg-blue {
+  background-color: #253780!important;
+}
+.bg-orange {
+  background-color: #f36c21!important;
+}
+
+
+
+.txt-blue {
+  color: #253780!important;
+}
+.txt-orange {
+  color: #f36c21!important;
+}
+
+
+.btn-orange {
+
+}
+

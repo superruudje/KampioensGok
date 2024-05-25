@@ -1,0 +1,154 @@
+{
+  "schema": [
+    {
+      "match_day": 1,
+      "date": "14-06-2024",
+      "matches": [
+        {
+          "time": "21:00",
+          "group": "A",
+          "stadium": "Munich Football Arena",
+          "city": "Munich",
+          "teams": [
+            "Germany",
+            "Scotland"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": 1,
+      "date": "15-06-2024",
+      "matches": [
+        {
+          "time": "15:00",
+          "group": "A",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Hungary",
+            "Switzerland"
+          ]
+        },
+        {
+          "time": "18:00",
+          "group": "B",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Spain",
+            "Croatia"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "B",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Italy",
+            "Albania"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": 1,
+      "date": "16-06-2024",
+      "matches": [
+        {
+          "time": "15:00",
+          "group": "D",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Poland",
+            "Netherlands"
+          ]
+        },
+        {
+          "time": "18:00",
+          "group": "C",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Slovenia",
+            "Denmark"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "C",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Serbia",
+            "England"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": 1,
+      "date": "17-06-2024",
+      "matches": [
+        {
+          "time": "15:00",
+          "group": "E",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Romania",
+            "Ukraine"
+          ]
+        },
+        {
+          "time": "18:00",
+          "group": "E",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Belgium",
+            "Slovakia"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "D",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Austria",
+            "France"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": 1,
+      "date": "18-06-2024",
+      "matches": [
+        {
+          "time": "18:00",
+          "group": "F",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Türkiye",
+            "Georgia"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "F",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Portugal",
+            "Czechia"
+          ]
+        }
+      ]
+    }
+  ]
+}
