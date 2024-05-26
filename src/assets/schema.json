@@ -12,7 +12,8 @@
           "teams": [
             "Germany",
             "Scotland"
-          ]
+          ],
+          "result": [2, 4]
         }
       ]
     },
@@ -23,8 +24,8 @@
         {
           "time": "15:00",
           "group": "A",
-          "stadium": "",
-          "city": "",
+          "stadium": "Cologne Stadium",
+          "city": "Cologne",
           "teams": [
             "Hungary",
             "Switzerland"
@@ -33,8 +34,8 @@
         {
           "time": "18:00",
           "group": "B",
-          "stadium": "",
-          "city": "",
+          "stadium": "Olympiastadion",
+          "city": "Berlin",
           "teams": [
             "Spain",
             "Croatia"
@@ -43,8 +44,8 @@
         {
           "time": "21:00",
           "group": "B",
-          "stadium": "",
-          "city": "",
+          "stadium": "BVB Stadion Dortmund",
+          "city": "Dortmund",
           "teams": [
             "Italy",
             "Albania"
@@ -59,8 +60,8 @@
         {
           "time": "15:00",
           "group": "D",
-          "stadium": "",
-          "city": "",
+          "stadium": "Volksparkstadion",
+          "city": "Hamburg",
           "teams": [
             "Poland",
             "Netherlands"
@@ -69,8 +70,8 @@
         {
           "time": "18:00",
           "group": "C",
-          "stadium": "",
-          "city": "",
+          "stadium": "Stuttgart Arena",
+          "city": "Stuttgart",
           "teams": [
             "Slovenia",
             "Denmark"
@@ -79,8 +80,8 @@
         {
           "time": "21:00",
           "group": "C",
-          "stadium": "",
-          "city": "",
+          "stadium": "Arena AufSchalke",
+          "city": "Gelsenkirchen",
           "teams": [
             "Serbia",
             "England"
@@ -95,8 +96,8 @@
         {
           "time": "15:00",
           "group": "E",
-          "stadium": "",
-          "city": "",
+          "stadium": "Munich Football Arena",
+          "city": "Munich",
           "teams": [
             "Romania",
             "Ukraine"
@@ -105,8 +106,8 @@
         {
           "time": "18:00",
           "group": "E",
-          "stadium": "",
-          "city": "",
+          "stadium": "Frankfurt Arena",
+          "city": "Frankfurt am Main",
           "teams": [
             "Belgium",
             "Slovakia"
@@ -115,8 +116,8 @@
         {
           "time": "21:00",
           "group": "D",
-          "stadium": "",
-          "city": "",
+          "stadium": "Düsseldorf Arena",
+          "city": "Dusseldorf",
           "teams": [
             "Austria",
             "France"
@@ -131,8 +132,8 @@
         {
           "time": "18:00",
           "group": "F",
-          "stadium": "",
-          "city": "",
+          "stadium": "BVB Stadion Dortmund",
+          "city": "Dortmund",
           "teams": [
             "Türkiye",
             "Georgia"
@@ -141,11 +142,518 @@
         {
           "time": "21:00",
           "group": "F",
-          "stadium": "",
-          "city": "",
+          "stadium": "Leipzig Stadium",
+          "city": "Leipzig",
           "teams": [
             "Portugal",
             "Czechia"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": 2,
+      "date": "19-06-2024",
+      "matches": [
+        {
+          "time": "15:00",
+          "group": "B",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Croatia",
+            "Albania"
+          ]
+        },
+        {
+          "time": "18:00",
+          "group": "A",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Germany",
+            "Hungary"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "A",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Scotland",
+            "Switzerland"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": 2,
+      "date": "20-06-2024",
+      "matches": [
+        {
+          "time": "15:00",
+          "group": "C",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Slovenia",
+            "Serbia"
+          ]
+        },
+        {
+          "time": "18:00",
+          "group": "C",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Denmark",
+            "England"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "B",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Spain",
+            "Italy"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": 2,
+      "date": "21-06-2024",
+      "matches": [
+        {
+          "time": "15:00",
+          "group": "E",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Slovakia",
+            "Ukraine"
+          ]
+        },
+        {
+          "time": "18:00",
+          "group": "D",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Poland",
+            "Austria"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "D",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Netherlands",
+            "France"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": 2,
+      "date": "22-06-2024",
+      "matches": [
+        {
+          "time": "15:00",
+          "group": "F",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Georgia",
+            "Czechia"
+          ]
+        },
+        {
+          "time": "18:00",
+          "group": "F",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Türkiye",
+            "Portugal"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "E",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Belgium",
+            "Romania"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": 3,
+      "date": "23-06-2024",
+      "matches": [
+        {
+          "time": "21:00",
+          "group": "A",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Switzerland",
+            "Germany"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "A",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Scotland",
+            "Hungary"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": 3,
+      "date": "24-06-2024",
+      "matches": [
+        {
+          "time": "21:00",
+          "group": "B",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Albania",
+            "Spain"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "B",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Croatia",
+            "Italy"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": 3,
+      "date": "25-06-2024",
+      "matches": [
+        {
+          "time": "18:00",
+          "group": "D",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Netherlands",
+            "Austria"
+          ]
+        },
+        {
+          "time": "18:00",
+          "group": "D",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "France",
+            "Poland"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "C",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "England",
+            "Slovenia"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "C",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Denmark",
+            "Serbia"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": 3,
+      "date": "26-06-2024",
+      "matches": [
+        {
+          "time": "18:00",
+          "group": "E",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Slovakia",
+            "Romania"
+          ]
+        },
+        {
+          "time": "18:00",
+          "group": "E",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Ukraine",
+            "Belgium"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "F",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Georgia",
+            "Portugal"
+          ]
+        },
+        {
+          "time": "21:00",
+          "group": "F",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "Czechia",
+            "Türkiye"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": "Round of 16",
+      "date": "29-06-2024",
+      "matches": [
+        {
+          "num": 37,
+          "time": "18:00",
+          "group": "Round of 16",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "2nd: A",
+            "2nd: B"
+          ]
+        },
+        {
+          "num": 38,
+          "time": "21:00",
+          "group": "Round of 16",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "1st: A",
+            "2nd: C"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": "Round of 16",
+      "date": "30-06-2024",
+      "matches": [
+        {
+          "num": 39,
+          "time": "18:00",
+          "group": "Round of 16",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "1nd: C",
+            "3rd: D/E/F"
+          ]
+        },
+        {
+          "num": 40,
+          "time": "21:00",
+          "group": "Round of 16",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "1st: B",
+            "3rd: A/D/E/F"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": "Round of 16",
+      "date": "01-07-2024",
+      "matches": [
+        {
+          "num": 41,
+          "time": "18:00",
+          "group": "Round of 16",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "2nd: D",
+            "2nd: E"
+          ]
+        },
+        {
+          "num": 42,
+          "time": "21:00",
+          "group": "Round of 16",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "1st: F",
+            "3rd: A/B/C"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": "Round of 16",
+      "date": "02-07-2024",
+      "matches": [
+        {
+          "num": 43,
+          "time": "18:00",
+          "group": "Round of 16",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "1nd: E",
+            "3rd: A/B/C/D"
+          ]
+        },
+        {
+          "num": 44,
+          "time": "21:00",
+          "group": "Round of 16",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "1st: D",
+            "2nd: F"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": "Quarter-finals",
+      "date": "05-07-2024",
+      "matches": [
+        {
+          "num": 45,
+          "time": "18:00",
+          "group": "Quarter-finals",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "W39",
+            "W37"
+          ]
+        },
+        {
+          "num": 46,
+          "time": "21:00",
+          "group": "Quarter-finals",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "W41",
+            "W42"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": "Quarter-finals",
+      "date": "06-07-2024",
+      "matches": [
+        {
+          "num": 47,
+          "time": "18:00",
+          "group": "Quarter-finals",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "W40",
+            "W38"
+          ]
+        },
+        {
+          "num": 48,
+          "time": "21:00",
+          "group": "Quarter-finals",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "W43",
+            "W44"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": "Semi-finals",
+      "date": "09-07-2024",
+      "matches": [
+        {
+          "num": 49,
+          "time": "21:00",
+          "group": "Semi-finals",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "W45",
+            "W36"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": "Semi-finals",
+      "date": "10-07-2024",
+      "matches": [
+        {
+          "num": 50,
+          "time": "21:00",
+          "group": "Semi-finals",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "W47",
+            "W48"
+          ]
+        }
+      ]
+    },
+    {
+      "match_day": "Final",
+      "date": "14-07-2024",
+      "matches": [
+        {
+          "num": 51,
+          "time": "21:00",
+          "group": "Final",
+          "stadium": "",
+          "city": "",
+          "teams": [
+            "W49",
+            "W50"
           ]
         }
       ]

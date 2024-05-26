@@ -1,0 +1,250 @@
+{
+  "poules": [
+    {
+      "name": "A",
+      "teams": [
+        {
+          "name" : "Germany",
+          "score": {
+            "games": ["W", "D", "W", "L"],
+            "for": 5,
+            "against": 7,
+            "points": 6
+          }
+        },
+        {
+          "name" : "Scotland",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 6
+          }
+        },
+        {
+          "name" : "Hungary",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Switzerland",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "B",
+      "teams": [
+        {
+          "name" : "Spain",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Croatia",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Italy",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Albania",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "C",
+      "teams": [
+        {
+          "name" : "Slovenia",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Denmark",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Serbia",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "England",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "D",
+      "teams": [
+        {
+          "name" : "Netherlands",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "France",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Poland",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Austria",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "E",
+      "teams": [
+        {
+          "name" : "Ukraine",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Slovakia",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Belgium",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Romania",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "F",
+      "teams": [
+        {
+          "name" : "Portugal",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Czechia",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Georgia",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        },
+        {
+          "name" : "Türkiye",
+          "score": {
+            "games": ["W", "D", "W"],
+            "for": 0,
+            "against": 0,
+            "points": 0
+          }
+        }
+      ]
+    }
+  ]
+}

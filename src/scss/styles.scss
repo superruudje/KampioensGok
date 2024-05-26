@@ -41,6 +41,13 @@ body {
 
 
 .btn-orange {
-
+  border: 1px solid #f36c21;
+  background-color: #f36c21;
+  color: #fff;
+  &:hover {
+    border: 1px solid #f36c21;
+    background-color: transparent;
+    color: #f36c21;
+  }
 }
 
