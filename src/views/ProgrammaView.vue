@@ -1,9 +1,9 @@
 <template>
-    <main class="container-md py-5">
+    <main class="container-md py-2 py-md-5">
         <div class="row gy-3">
             <div class="col-12">
                 <div class="card border-0 rounded-0 shadow-sm">
-                    <div class="card-body p-4">
+                    <div class="card-body p-2 p-md-4">
                         <h2 class="mb-3 txt-blue fw-bolder">Programma</h2>
                         <div class="matches-wrapper">
                             <match-day-component v-for="(match_day, idx) in matches_to_play" :match_day="match_day"/>

@@ -13,7 +13,45 @@
             "Germany",
             "Scotland"
           ],
-          "result": [2, 4]
+          "result": [
+            2,
+            4
+          ],
+          "timeline": {
+            "goals": [
+              {
+                "minute": 35,
+                "team": "Germany",
+                "player": "Muller"
+              },
+              {
+                "minute": 35,
+                "team": "Germany",
+                "player": "Muller"
+              },
+              {
+                "minute": 12,
+                "team": "Scotland",
+                "player": "Klaassen"
+              }
+            ],
+            "cards" : {
+              "red": [
+                {
+                  "minute": 35,
+                  "team": "Germany",
+                  "player": "Muller"
+                }
+              ],
+              "yellow" : [
+                {
+                  "minute": 12,
+                  "team": "Scotland",
+                  "player": "Klaassen"
+                }
+              ]
+            }
+          }
         }
       ]
     },
