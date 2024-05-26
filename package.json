@@ -2,6 +2,7 @@
   "name": "kampioens-gok",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite --host --port 4242",
     "build": "vite build",
