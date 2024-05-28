@@ -21,6 +21,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "npm-check-updates": "^16.14.18",
+    "pathe": "^1.1.2",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",

@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import ProgrammaView from "@/views/ProgrammaView.vue";
 import RanglijstView from "@/views/RanglijstView.vue";
 import PouleView from "@/views/PouleView.vue";
+import UitslagenView from "@/views/UitslagenView.vue";
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/poules',
       name: 'poules',
       component: PouleView
+    },
+    {
+      path: '/uitslagen',
+      name: 'uitslagen',
+      component: UitslagenView
     },
     { path: "/:pathMatch(.*)*", redirect: '/' }
   ],

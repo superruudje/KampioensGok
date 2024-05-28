@@ -2,36 +2,30 @@
   "schema": [
     {
       "match_day": 1,
-      "date": "14-06-2024",
+      "date": "14-05-2024",
       "matches": [
         {
           "time": "21:00",
           "group": "A",
           "stadium": "Munich Football Arena",
           "city": "Munich",
-          "teams": [
-            "Germany",
-            "Scotland"
-          ],
-          "result": [
-            2,
-            4
-          ],
+          "teams": ["GER", "SCO"],
+          "result": [2, 4],
           "timeline": {
             "goals": [
               {
                 "minute": 35,
-                "team": "Germany",
+                "team": "GER",
                 "player": "Muller"
               },
               {
                 "minute": 35,
-                "team": "Germany",
+                "team": "GER",
                 "player": "Muller"
               },
               {
                 "minute": 12,
-                "team": "Scotland",
+                "team": "SCO",
                 "player": "Klaassen"
               }
             ],
@@ -39,14 +33,14 @@
               "red": [
                 {
                   "minute": 35,
-                  "team": "Germany",
+                  "team": "GER",
                   "player": "Muller"
                 }
               ],
               "yellow" : [
                 {
                   "minute": 12,
-                  "team": "Scotland",
+                  "team": "SCO",
                   "player": "Klaassen"
                 }
               ]
@@ -65,8 +59,8 @@
           "stadium": "Cologne Stadium",
           "city": "Cologne",
           "teams": [
-            "Hungary",
-            "Switzerland"
+            "HUN",
+            "SUI"
           ]
         },
         {
@@ -75,8 +69,8 @@
           "stadium": "Olympiastadion",
           "city": "Berlin",
           "teams": [
-            "Spain",
-            "Croatia"
+            "ESP",
+            "CRO"
           ]
         },
         {
@@ -85,8 +79,8 @@
           "stadium": "BVB Stadion Dortmund",
           "city": "Dortmund",
           "teams": [
-            "Italy",
-            "Albania"
+            "ITA",
+            "ALB"
           ]
         }
       ]
@@ -101,8 +95,8 @@
           "stadium": "Volksparkstadion",
           "city": "Hamburg",
           "teams": [
-            "Poland",
-            "Netherlands"
+            "POL",
+            "NED"
           ]
         },
         {
@@ -111,8 +105,8 @@
           "stadium": "Stuttgart Arena",
           "city": "Stuttgart",
           "teams": [
-            "Slovenia",
-            "Denmark"
+            "SVN",
+            "DEN"
           ]
         },
         {
@@ -121,8 +115,8 @@
           "stadium": "Arena AufSchalke",
           "city": "Gelsenkirchen",
           "teams": [
-            "Serbia",
-            "England"
+            "SRB",
+            "ENG"
           ]
         }
       ]
@@ -137,8 +131,8 @@
           "stadium": "Munich Football Arena",
           "city": "Munich",
           "teams": [
-            "Romania",
-            "Ukraine"
+            "ROM",
+            "UKR"
           ]
         },
         {
@@ -147,8 +141,8 @@
           "stadium": "Frankfurt Arena",
           "city": "Frankfurt am Main",
           "teams": [
-            "Belgium",
-            "Slovakia"
+            "BEL",
+            "SVK"
           ]
         },
         {
@@ -157,8 +151,8 @@
           "stadium": "Düsseldorf Arena",
           "city": "Dusseldorf",
           "teams": [
-            "Austria",
-            "France"
+            "AUT",
+            "FRA"
           ]
         }
       ]
@@ -173,8 +167,8 @@
           "stadium": "BVB Stadion Dortmund",
           "city": "Dortmund",
           "teams": [
-            "Türkiye",
-            "Georgia"
+            "TUR",
+            "GEO"
           ]
         },
         {
@@ -183,8 +177,8 @@
           "stadium": "Leipzig Stadium",
           "city": "Leipzig",
           "teams": [
-            "Portugal",
-            "Czechia"
+            "POR",
+            "CZE"
           ]
         }
       ]
@@ -196,31 +190,31 @@
         {
           "time": "15:00",
           "group": "B",
-          "stadium": "",
-          "city": "",
+          "stadium": "Volksparkstadion",
+          "city": "Hamburg",
           "teams": [
-            "Croatia",
-            "Albania"
+            "CRO",
+            "ALB"
           ]
         },
         {
           "time": "18:00",
           "group": "A",
-          "stadium": "",
-          "city": "",
+          "stadium": "Stuttgart Arena",
+          "city": "Stuttgart",
           "teams": [
-            "Germany",
-            "Hungary"
+            "GER",
+            "HUN"
           ]
         },
         {
           "time": "21:00",
           "group": "A",
-          "stadium": "",
-          "city": "",
+          "stadium": "Cologne Stadium",
+          "city": "Cologne",
           "teams": [
-            "Scotland",
-            "Switzerland"
+            "SCO",
+            "SUI"
           ]
         }
       ]
@@ -232,31 +226,31 @@
         {
           "time": "15:00",
           "group": "C",
-          "stadium": "",
-          "city": "",
+          "stadium": "Munich Football Arena",
+          "city": "Munich",
           "teams": [
-            "Slovenia",
-            "Serbia"
+            "SVN",
+            "SRB"
           ]
         },
         {
           "time": "18:00",
           "group": "C",
-          "stadium": "",
-          "city": "",
+          "stadium": "Frankfurt Arena",
+          "city": "Frankfurt am Main",
           "teams": [
-            "Denmark",
-            "England"
+            "DEN",
+            "ENG"
           ]
         },
         {
           "time": "21:00",
           "group": "B",
-          "stadium": "",
-          "city": "",
+          "stadium": "Arena AufSchalke",
+          "city": "Gelsenkirchen",
           "teams": [
-            "Spain",
-            "Italy"
+            "ESP",
+            "ITA"
           ]
         }
       ]
@@ -268,31 +262,31 @@
         {
           "time": "15:00",
           "group": "E",
-          "stadium": "",
-          "city": "",
+          "stadium": "Düsseldorf Arena",
+          "city": "Dusseldorf",
           "teams": [
-            "Slovakia",
-            "Ukraine"
+            "SVK",
+            "UKR"
           ]
         },
         {
           "time": "18:00",
           "group": "D",
-          "stadium": "",
-          "city": "",
+          "stadium": "Olympiastadion",
+          "city": "Berlin",
           "teams": [
-            "Poland",
-            "Austria"
+            "POL",
+            "AUT"
           ]
         },
         {
           "time": "21:00",
           "group": "D",
-          "stadium": "",
-          "city": "",
+          "stadium": "Leipzig Stadium",
+          "city": "Leipzig",
           "teams": [
-            "Netherlands",
-            "France"
+            "NED",
+            "FRA"
           ]
         }
       ]
@@ -304,31 +298,31 @@
         {
           "time": "15:00",
           "group": "F",
-          "stadium": "",
-          "city": "",
+          "stadium": "Volksparkstadion",
+          "city": "Hamburg",
           "teams": [
-            "Georgia",
-            "Czechia"
+            "GEO",
+            "CZE"
           ]
         },
         {
           "time": "18:00",
           "group": "F",
-          "stadium": "",
-          "city": "",
+          "stadium": "BVB Stadion Dortmund",
+          "city": "Dortmund",
           "teams": [
-            "Türkiye",
-            "Portugal"
+            "TUR",
+            "POR"
           ]
         },
         {
           "time": "21:00",
           "group": "E",
-          "stadium": "",
-          "city": "",
+          "stadium": "Cologne Stadium",
+          "city": "Cologne",
           "teams": [
-            "Belgium",
-            "Romania"
+            "BEL",
+            "ROM"
           ]
         }
       ]
@@ -340,21 +334,21 @@
         {
           "time": "21:00",
           "group": "A",
-          "stadium": "",
-          "city": "",
+          "stadium": "Frankfurt Arena",
+          "city": "Frankfurt am Main",
           "teams": [
-            "Switzerland",
-            "Germany"
+            "SUI",
+            "GER"
           ]
         },
         {
           "time": "21:00",
           "group": "A",
-          "stadium": "",
-          "city": "",
+          "stadium": "Stuttgart Arena",
+          "city": "Stuttgart",
           "teams": [
-            "Scotland",
-            "Hungary"
+            "SCO",
+            "HUN"
           ]
         }
       ]
@@ -366,21 +360,21 @@
         {
           "time": "21:00",
           "group": "B",
-          "stadium": "",
-          "city": "",
+          "stadium": "Düsseldorf Arena",
+          "city": "Dusseldorf",
           "teams": [
-            "Albania",
-            "Spain"
+            "ALB",
+            "ESP"
           ]
         },
         {
           "time": "21:00",
           "group": "B",
-          "stadium": "",
-          "city": "",
+          "stadium": "Leipzig Stadium",
+          "city": "Leipzig",
           "teams": [
-            "Croatia",
-            "Italy"
+            "CRO",
+            "ITA"
           ]
         }
       ]
@@ -392,41 +386,41 @@
         {
           "time": "18:00",
           "group": "D",
-          "stadium": "",
-          "city": "",
+          "stadium": "Olympiastadion",
+          "city": "Berlin",
           "teams": [
-            "Netherlands",
-            "Austria"
+            "NED",
+            "AUT"
           ]
         },
         {
           "time": "18:00",
           "group": "D",
-          "stadium": "",
-          "city": "",
+          "stadium": "BVB Stadion Dortmund",
+          "city": "Dortmund",
           "teams": [
-            "France",
-            "Poland"
+            "FRA",
+            "POL"
           ]
         },
         {
           "time": "21:00",
           "group": "C",
-          "stadium": "",
-          "city": "",
+          "stadium": "Cologne Stadium",
+          "city": "Cologne",
           "teams": [
-            "England",
-            "Slovenia"
+            "ENG",
+            "SVN"
           ]
         },
         {
           "time": "21:00",
           "group": "C",
-          "stadium": "",
-          "city": "",
+          "stadium": "Munich Football Arena",
+          "city": "Munich",
           "teams": [
-            "Denmark",
-            "Serbia"
+            "DEN",
+            "SRB"
           ]
         }
       ]
@@ -438,41 +432,41 @@
         {
           "time": "18:00",
           "group": "E",
-          "stadium": "",
-          "city": "",
+          "stadium": "Frankfurt Arena",
+          "city": "Frankfurt am Main",
           "teams": [
-            "Slovakia",
-            "Romania"
+            "SVK",
+            "ROM"
           ]
         },
         {
           "time": "18:00",
           "group": "E",
-          "stadium": "",
-          "city": "",
+          "stadium": "Stuttgart Arena",
+          "city": "Stuttgart",
           "teams": [
-            "Ukraine",
-            "Belgium"
+            "UKR",
+            "BEL"
           ]
         },
         {
           "time": "21:00",
           "group": "F",
-          "stadium": "",
-          "city": "",
+          "stadium": "Arena AufSchalke",
+          "city": "Gelsenkirchen",
           "teams": [
-            "Georgia",
-            "Portugal"
+            "GEO",
+            "POR"
           ]
         },
         {
           "time": "21:00",
           "group": "F",
-          "stadium": "",
-          "city": "",
+          "stadium": "Volksparkstadion",
+          "city": "Hamburg",
           "teams": [
-            "Czechia",
-            "Türkiye"
+            "CZE",
+            "TUR"
           ]
         }
       ]
@@ -482,22 +476,22 @@
       "date": "29-06-2024",
       "matches": [
         {
-          "num": 37,
+          "num": 38,
           "time": "18:00",
           "group": "Round of 16",
-          "stadium": "",
-          "city": "",
+          "stadium": "Olympiastadion",
+          "city": "Berlin",
           "teams": [
             "2nd: A",
             "2nd: B"
           ]
         },
         {
-          "num": 38,
+          "num": 37,
           "time": "21:00",
           "group": "Round of 16",
-          "stadium": "",
-          "city": "",
+          "stadium": "BVB Stadion Dortmund",
+          "city": "Dortmund",
           "teams": [
             "1st: A",
             "2nd: C"
@@ -510,22 +504,22 @@
       "date": "30-06-2024",
       "matches": [
         {
-          "num": 39,
+          "num": 40,
           "time": "18:00",
           "group": "Round of 16",
-          "stadium": "",
-          "city": "",
+          "stadium": "Cologne Stadium",
+          "city": "Cologne",
           "teams": [
             "1nd: C",
             "3rd: D/E/F"
           ]
         },
         {
-          "num": 40,
+          "num": 39,
           "time": "21:00",
           "group": "Round of 16",
-          "stadium": "",
-          "city": "",
+          "stadium": "Arena AufSchalke",
+          "city": "Gelsenkirchen",
           "teams": [
             "1st: B",
             "3rd: A/D/E/F"
@@ -538,22 +532,22 @@
       "date": "01-07-2024",
       "matches": [
         {
-          "num": 41,
+          "num": 42,
           "time": "18:00",
           "group": "Round of 16",
-          "stadium": "",
-          "city": "",
+          "stadium": "Düsseldorf Arena",
+          "city": "Dusseldorf",
           "teams": [
             "2nd: D",
             "2nd: E"
           ]
         },
         {
-          "num": 42,
+          "num": 41,
           "time": "21:00",
           "group": "Round of 16",
-          "stadium": "",
-          "city": "",
+          "stadium": "Frankfurt Arena",
+          "city": "Frankfurt am Main",
           "teams": [
             "1st: F",
             "3rd: A/B/C"
@@ -569,8 +563,8 @@
           "num": 43,
           "time": "18:00",
           "group": "Round of 16",
-          "stadium": "",
-          "city": "",
+          "stadium": "Munich Football Arena",
+          "city": "Munich",
           "teams": [
             "1nd: E",
             "3rd: A/B/C/D"
@@ -580,8 +574,8 @@
           "num": 44,
           "time": "21:00",
           "group": "Round of 16",
-          "stadium": "",
-          "city": "",
+          "stadium": "Leipzig Stadium",
+          "city": "Leipzig",
           "teams": [
             "1st: D",
             "2nd: F"
@@ -597,8 +591,8 @@
           "num": 45,
           "time": "18:00",
           "group": "Quarter-finals",
-          "stadium": "",
-          "city": "",
+          "stadium": "Stuttgart Arena",
+          "city": "Stuttgart",
           "teams": [
             "W39",
             "W37"
@@ -608,8 +602,8 @@
           "num": 46,
           "time": "21:00",
           "group": "Quarter-finals",
-          "stadium": "",
-          "city": "",
+          "stadium": "Volksparkstadion",
+          "city": "Hamburg",
           "teams": [
             "W41",
             "W42"
@@ -622,22 +616,22 @@
       "date": "06-07-2024",
       "matches": [
         {
-          "num": 47,
+          "num": 48,
           "time": "18:00",
           "group": "Quarter-finals",
-          "stadium": "",
-          "city": "",
+          "stadium": "Düsseldorf Arena",
+          "city": "Dusseldorf",
           "teams": [
             "W40",
             "W38"
           ]
         },
         {
-          "num": 48,
+          "num": 47,
           "time": "21:00",
           "group": "Quarter-finals",
-          "stadium": "",
-          "city": "",
+          "stadium": "Olympiastadion",
+          "city": "Berlin",
           "teams": [
             "W43",
             "W44"
@@ -653,8 +647,8 @@
           "num": 49,
           "time": "21:00",
           "group": "Semi-finals",
-          "stadium": "",
-          "city": "",
+          "stadium": "Munich Football Arena",
+          "city": "Munich",
           "teams": [
             "W45",
             "W36"
@@ -670,8 +664,8 @@
           "num": 50,
           "time": "21:00",
           "group": "Semi-finals",
-          "stadium": "",
-          "city": "",
+          "stadium": "BVB Stadion Dortmund",
+          "city": "Dortmund",
           "teams": [
             "W47",
             "W48"
@@ -687,8 +681,8 @@
           "num": 51,
           "time": "21:00",
           "group": "Final",
-          "stadium": "",
-          "city": "",
+          "stadium": "Olympiastadion",
+          "city": "Berlin",
           "teams": [
             "W49",
             "W50"

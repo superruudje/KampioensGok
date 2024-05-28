@@ -1,0 +1,100 @@
+{
+  "teams": [
+    {
+      "id": "ALB",
+      "name": "Albania"
+    },
+    {
+      "id": "AUT",
+      "name": "Austria"
+    },
+    {
+      "id": "BEL",
+      "name": "Belgium"
+    },
+    {
+      "id": "CRO",
+      "name": "Croatia"
+    },
+    {
+      "id": "CZE",
+      "name": "Czechia"
+    },
+    {
+      "id": "DEN",
+      "name": "Denmark"
+    },
+    {
+      "id": "ENG",
+      "name": "England"
+    },
+    {
+      "id": "FRA",
+      "name": "France"
+    },
+    {
+      "id": "GEO",
+      "name": "Georgia"
+    },
+    {
+      "id": "GER",
+      "name": "Germany"
+    },
+    {
+      "id": "HUN",
+      "name": "Hungary"
+    },
+    {
+      "id": "ITA",
+      "name": "Italy"
+    },
+    {
+      "id": "NED",
+      "name": "Netherlands"
+    },
+    {
+      "id": "POL",
+      "name": "Poland"
+    },
+    {
+      "id": "POR",
+      "name": "Portugal"
+    },
+    {
+      "id": "ROM",
+      "name": "Romania"
+    },
+    {
+      "id": "SCO",
+      "name": "Scotland"
+    },
+    {
+      "id": "SRB",
+      "name": "Serbia"
+    },
+    {
+      "id": "SVK",
+      "name": "Slovakia"
+    },
+    {
+      "id": "SVN",
+      "name": "Slovenia"
+    },
+    {
+      "id": "ESP",
+      "name": "Spain"
+    },
+    {
+      "id": "SUI",
+      "name": "Switzerland"
+    },
+    {
+      "id": "TUR",
+      "name": "Türkiye"
+    },
+    {
+      "id": "UKR",
+      "name": "Ukraine"
+    }
+  ]
+}

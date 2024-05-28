@@ -1,6 +1,9 @@
 <template>
     <main class="container-md py-2 py-md-5">
         <div class="row gy-3">
+            <div class="col-12">
+                TODO: playerpage, matchpage, statistics dashboard, automatic scoring, standing pagination
+            </div>
             <div class="col-12 col-md-4">
                 <div class="card border-0 rounded-0 shadow-sm">
                     <div class="card-body p-2 p-md-4">

@@ -20,7 +20,7 @@
                         <router-link @click="closeMenu" :to="{name: 'poules'}" activeClass="active" class="nav-link">Poules</router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Uitslagen</a>
+                        <router-link @click="closeMenu" :to="{name: 'uitslagen'}" activeClass="active" class="nav-link">Uitslagen</router-link>
                     </li>
                 </ul>
             </div>

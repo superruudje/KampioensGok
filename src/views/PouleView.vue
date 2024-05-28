@@ -10,6 +10,7 @@
                                 <thead>
                                 <tr>
                                     <th class="txt-orange" scope="col"></th>
+                                    <th class="txt-orange" scope="col">P</th>
                                     <th class="txt-orange" scope="col">G</th>
                                     <th class="txt-orange" scope="col">W</th>
                                     <th class="txt-orange" scope="col">GL</th>
@@ -17,20 +18,19 @@
                                     <th class="txt-orange" scope="col">+</th>
                                     <th class="txt-orange" scope="col">-</th>
                                     <th class="txt-orange" scope="col">+-</th>
-                                    <th class="txt-orange" scope="col">P</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr v-for="(team, idx) in getPouleStandings(poule.teams)">
-                                    <th class="text-nowrap">{{ idx + 1 }} {{ team.name }}</th>
-                                    <th>{{ team.score.games.length}}</th>
-                                    <th>{{ team.score.games.filter(g => g === "W").length}}</th>
-                                    <th>{{ team.score.games.filter(g => g === "D").length}}</th>
-                                    <th>{{ team.score.games.filter(g => g === "L").length}}</th>
-                                    <th>{{ team.score.for}}</th>
-                                    <th>{{ team.score.against}}</th>
-                                    <th>{{ team.score.for - team.score.against}}</th>
+                                    <td class="text-nowrap">{{ idx + 1 }} {{ team.name }}</td>
                                     <th>{{ team.score.points}}</th>
+                                    <td>{{ team.score.games.length}}</td>
+                                    <td>{{ team.score.games.filter(g => g === "W").length}}</td>
+                                    <td>{{ team.score.games.filter(g => g === "D").length}}</td>
+                                    <td>{{ team.score.games.filter(g => g === "L").length}}</td>
+                                    <td>{{ team.score.for}}</td>
+                                    <td>{{ team.score.against}}</td>
+                                    <td>{{ team.score.for - team.score.against}}</td>
                                 </tr>
                                 </tbody>
                             </table>
