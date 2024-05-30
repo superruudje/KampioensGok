@@ -1,5 +1,5 @@
 <template>
-    <div class="card bg-gray border-0 rounded-0">
+    <div class="card bg-gray border-0 rounded-0 h-100">
         <div class="card-body position-relative p-2 p-md-4 pt-4 pt-md-5">
             <div class="match-group position-absolute top-0 start-50 bg-blue text-light px-3 py-1">{{match.group.length > 1 ? match.group : `Groep ${match.group}` }}</div>
             <div class="d-flex justify-content-around align-items-center">
@@ -10,6 +10,8 @@
                 <div class="d-flex flex-column align-items-center">
                     <span v-if="match.result?.length" class="txt-orange fw-bold">{{ match.time }}</span>
                     <div class="text-black fw-bold fst-italic fs-1">{{ match.result?.length ? `${match.result[0]} : ${match.result[1]}` : match.time }}</div>
+                    <span v-if="match.result_nvl" class="mx-3 fw-bold">{{ match.result_nvl.join(' : ') }}</span>
+
                 </div>
                 <div class="team-wrapper">
                     <img loading="lazy" alt="" :src="imageB">
@@ -54,6 +56,8 @@
                 <span class="txt-blue text-wrap"><i class="bi bi-pin-map txt-orange me-2"></i>{{ match.stadium }}, {{match.city }}</span>
                 <button class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3 text-nowrap">Meer<i class="bi bi-chevron-right ms-2"></i></button>
             </div>
+            <i class="position-absolute top-0 end-0 bi p-2 bi-question-circle ms-2" data-bs-title="Uitslag na 90 minuten wordt gebruikt voor voorspelling"
+               data-bs-toggle="tooltip"></i>
         </div>
     </div>
 </template>

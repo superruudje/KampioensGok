@@ -15,10 +15,17 @@ $grid-breakpoints: map-merge($grid-breakpoints, $new-grid-breakpoints);
 
 @import "bootstrap/scss/bootstrap";
 
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   background: #eee;
   color: #222;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, Segoe UI, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  #app {
+    height: 100%;
+  }
 }
 .bg-gray {
   background: #eee;

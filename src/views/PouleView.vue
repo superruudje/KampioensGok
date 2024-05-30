@@ -1,43 +1,50 @@
 <template>
     <main class="container-md py-2 py-md-5">
         <div class="row gy-3">
-            <div class="col-12">
-                <div class="card border-0 rounded-0 shadow-sm mb-3 mb-md-5" v-for="poule in poules">
-                    <div class="card-body p-2 p-md-4">
-                        <h2 class="mb-3 txt-blue fw-bolder">Groep {{ poule.name }}</h2>
+            <div class="col-md-6" v-for="p in tournament.getPoules()">
+                <div  class="card border-0 rounded-0 shadow-sm mb-3 mb-md-5">
+                    <div class="card-body p-3 p-md-4">
+                        <h2 class="txt-blue fw-bolder">Groep {{ p.poule }}</h2>
                         <div class="w-100 overflow-hidden overflow-x-auto mb-2">
                             <table class="table">
                                 <thead>
                                 <tr>
-                                    <th class="txt-orange" scope="col"></th>
-                                    <th class="txt-orange" scope="col">P</th>
+                                    <th class="txt-orange" style="width: 99%" scope="col"></th>
                                     <th class="txt-orange" scope="col">G</th>
                                     <th class="txt-orange" scope="col">W</th>
                                     <th class="txt-orange" scope="col">GL</th>
                                     <th class="txt-orange" scope="col">V</th>
+                                    <th class="txt-orange" scope="col">P</th>
                                     <th class="txt-orange" scope="col">+</th>
                                     <th class="txt-orange" scope="col">-</th>
                                     <th class="txt-orange" scope="col">+-</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr v-for="(team, idx) in getPouleStandings(poule.teams)">
-                                    <td class="text-nowrap">{{ idx + 1 }} {{ team.name }}</td>
-                                    <th>{{ team.score.points}}</th>
-                                    <td>{{ team.score.games.length}}</td>
-                                    <td>{{ team.score.games.filter(g => g === "W").length}}</td>
-                                    <td>{{ team.score.games.filter(g => g === "D").length}}</td>
-                                    <td>{{ team.score.games.filter(g => g === "L").length}}</td>
-                                    <td>{{ team.score.for}}</td>
-                                    <td>{{ team.score.against}}</td>
-                                    <td>{{ team.score.for - team.score.against}}</td>
+                                <tr v-for="(t, idx) in p.teams">
+                                    <td class="text-nowrap" style="width: 99%">
+                                        <span class="me-2">{{ idx + 1 }}</span>
+                                        <img :src="getImage(t.team)" alt="" loading="lazy" width="30px">
+                                        <span class="ms-2 txt-blue fw-bold">{{ t.team }}</span>
+                                    </td>
+                                    <td>{{ t.matches.length }}</td>
+                                    <td>{{ t.matches.filter(g => g === "W").length }}</td>
+                                    <td>{{ t.matches.filter(g => g === "D").length }}</td>
+                                    <td>{{ t.matches.filter(g => g === "L").length }}</td>
+                                    <th>{{ t.points }}</th>
+                                    <td>{{ t.for }}</td>
+                                    <td>{{ t.against }}</td>
+                                    <td>{{ t.for - t.against }}</td>
                                 </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <button @click="openPouleDetails(poule.name)" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3">Groep details<i class="bi ms-2" :class="openPoule === poule.name ? 'bi-chevron-up' : 'bi-chevron-down'"></i></button>
-                        <div class="mt-5" v-if="openPoule === poule.name">
-                            <match-day-component v-for="match_day in tournament.matches_by_poule(poule.name)" :match_day="match_day"></match-day-component>
+                        <button class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3"
+                                @click="openPouleDetails(p.poule)">Groep details<i
+                            :class="openPoule === p.poule ? 'bi-chevron-up' : 'bi-chevron-down'" class="bi ms-2"></i>
+                        </button>
+                        <div v-if="openPoule === p.poule" class="mt-5">
+                            <match-day-component v-for="match_day in tournament.matches_by_poule(p.poule)" :full_width="true" :match_day="match_day"></match-day-component>
                         </div>
                     </div>
                 </div>
@@ -51,27 +58,48 @@ import {storeToRefs} from "pinia";
 import {useTournament} from "@/stores/content";
 import MatchDayComponent from "@/components/MatchDayComponent.vue";
 import {ref} from "vue";
+
 const tournament = useTournament();
-const {poules} = storeToRefs(tournament)
+const {poules, teamImages} = storeToRefs(tournament)
 const openPoule = ref(null)
 
+/**
+ * Return team image
+ * @param name
+ * @returns {*}
+ */
+function getImage(name) {
+    return teamImages.value[name] || teamImages.value[`default`]
+}
+
+/**
+ * Toggle poule details
+ * @param poule
+ */
 function openPouleDetails(poule) {
     openPoule.value = openPoule.value === poule ? null : poule
 }
 
+/**
+ * Return poule standing in correct order
+ * @param teams
+ * @returns {*}
+ */
 function getPouleStandings(teams) {
     return teams.sort((a, b) => {
-        if (b.score.points === a.score.points ) {
+        if (b.score.points === a.score.points) {
             const diffA = a.score.for - a.score.against
             const diffB = b.score.for - b.score.against
             return diffB - diffA
         } else
-           return b.score.points - a.score.points
+            return b.score.points - a.score.points
     })
 }
 
+console.log(tournament.getPoules())
+
 </script>
 
-<style scoped lang="sass">
+<style lang="sass" scoped>
 
 </style>

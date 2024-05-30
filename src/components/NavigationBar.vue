@@ -22,6 +22,9 @@
                     <li class="nav-item">
                         <router-link @click="closeMenu" :to="{name: 'uitslagen'}" activeClass="active" class="nav-link">Uitslagen</router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link @click="closeMenu" :to="{name: 'statistieken'}" activeClass="active" class="nav-link">Statistieken</router-link>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -34,7 +37,8 @@ import {ref} from "vue";
 const collapseBtn = ref(null)
 
 function closeMenu() {
-    collapseBtn.value.click()
+    if (getComputedStyle(collapseBtn.value).display !== 'none')
+        collapseBtn.value.click()
 }
 </script>
 

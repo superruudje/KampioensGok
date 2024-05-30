@@ -5,45 +5,65 @@
       "date": "14-05-2024",
       "matches": [
         {
+          "num": 1,
           "time": "21:00",
           "group": "A",
           "stadium": "Munich Football Arena",
           "city": "Munich",
           "teams": ["GER", "SCO"],
-          "result": [2, 4],
+          "result": [3, 1],
+          "result_nvl": [3, 2],
           "timeline": {
             "goals": [
               {
                 "minute": 35,
                 "team": "GER",
-                "player": "Muller"
+                "player": "Müller, Thomas"
               },
               {
                 "minute": 35,
                 "team": "GER",
-                "player": "Muller"
+                "player": "Müller, Thomas"
               },
               {
                 "minute": 12,
                 "team": "SCO",
-                "player": "Klaassen"
+                "player": "Depay, Memphis"
               }
             ],
-            "cards" : {
+            "cards": {
               "red": [
                 {
                   "minute": 35,
                   "team": "GER",
-                  "player": "Muller"
+                  "direct": true,
+                  "player": "Müller, Thomas"
                 }
               ],
-              "yellow" : [
+              "yellow": [
                 {
                   "minute": 12,
                   "team": "SCO",
-                  "player": "Klaassen"
+                  "player": "Depay, Memphis"
                 }
               ]
+            }
+          }
+        },
+        {
+          "num": 1,
+          "time": "21:00",
+          "group": "A",
+          "stadium": "Munich Football Arena",
+          "city": "Munich",
+          "teams": ["HUN", "SUI"],
+          "result": [0, 0],
+          "result_nvl": [0, 0],
+          "timeline": {
+            "goals": [],
+            "cards": {
+              "red": [],
+              "yellow": []
             }
           }
         }
@@ -54,6 +74,7 @@
       "date": "15-06-2024",
       "matches": [
         {
+          "num": 2,
           "time": "15:00",
           "group": "A",
           "stadium": "Cologne Stadium",
@@ -64,6 +85,7 @@
           ]
         },
         {
+          "num": 3,
           "time": "18:00",
           "group": "B",
           "stadium": "Olympiastadion",
@@ -74,6 +96,7 @@
           ]
         },
         {
+          "num": 4,
           "time": "21:00",
           "group": "B",
           "stadium": "BVB Stadion Dortmund",
@@ -90,6 +113,7 @@
       "date": "16-06-2024",
       "matches": [
         {
+          "num": 5,
           "time": "15:00",
           "group": "D",
           "stadium": "Volksparkstadion",
@@ -100,6 +124,7 @@
           ]
         },
         {
+          "num": 6,
           "time": "18:00",
           "group": "C",
           "stadium": "Stuttgart Arena",
@@ -110,6 +135,7 @@
           ]
         },
         {
+          "num": 7,
           "time": "21:00",
           "group": "C",
           "stadium": "Arena AufSchalke",
@@ -126,6 +152,7 @@
       "date": "17-06-2024",
       "matches": [
         {
+          "num": 8,
           "time": "15:00",
           "group": "E",
           "stadium": "Munich Football Arena",
@@ -136,6 +163,7 @@
           ]
         },
         {
+          "num": 9,
           "time": "18:00",
           "group": "E",
           "stadium": "Frankfurt Arena",
@@ -146,6 +174,7 @@
           ]
         },
         {
+          "num": 10,
           "time": "21:00",
           "group": "D",
           "stadium": "Düsseldorf Arena",
@@ -162,6 +191,7 @@
       "date": "18-06-2024",
       "matches": [
         {
+          "num": 11,
           "time": "18:00",
           "group": "F",
           "stadium": "BVB Stadion Dortmund",
@@ -172,6 +202,7 @@
           ]
         },
         {
+          "num": 12,
           "time": "21:00",
           "group": "F",
           "stadium": "Leipzig Stadium",
@@ -188,6 +219,7 @@
       "date": "19-06-2024",
       "matches": [
         {
+          "num": 13,
           "time": "15:00",
           "group": "B",
           "stadium": "Volksparkstadion",
@@ -198,6 +230,7 @@
           ]
         },
         {
+          "num": 14,
           "time": "18:00",
           "group": "A",
           "stadium": "Stuttgart Arena",
@@ -208,6 +241,7 @@
           ]
         },
         {
+          "num": 15,
           "time": "21:00",
           "group": "A",
           "stadium": "Cologne Stadium",
@@ -224,6 +258,7 @@
       "date": "20-06-2024",
       "matches": [
         {
+          "num": 16,
           "time": "15:00",
           "group": "C",
           "stadium": "Munich Football Arena",
@@ -234,6 +269,7 @@
           ]
         },
         {
+          "num": 17,
           "time": "18:00",
           "group": "C",
           "stadium": "Frankfurt Arena",
@@ -244,6 +280,7 @@
           ]
         },
         {
+          "num": 18,
           "time": "21:00",
           "group": "B",
           "stadium": "Arena AufSchalke",
@@ -260,6 +297,7 @@
       "date": "21-06-2024",
       "matches": [
         {
+          "num": 19,
           "time": "15:00",
           "group": "E",
           "stadium": "Düsseldorf Arena",
@@ -270,6 +308,7 @@
           ]
         },
         {
+          "num": 20,
           "time": "18:00",
           "group": "D",
           "stadium": "Olympiastadion",
@@ -280,6 +319,7 @@
           ]
         },
         {
+          "num": 21,
           "time": "21:00",
           "group": "D",
           "stadium": "Leipzig Stadium",
@@ -296,6 +336,7 @@
       "date": "22-06-2024",
       "matches": [
         {
+          "num": 22,
           "time": "15:00",
           "group": "F",
           "stadium": "Volksparkstadion",
@@ -306,6 +347,7 @@
           ]
         },
         {
+          "num": 23,
           "time": "18:00",
           "group": "F",
           "stadium": "BVB Stadion Dortmund",
@@ -316,6 +358,7 @@
           ]
         },
         {
+          "num": 24,
           "time": "21:00",
           "group": "E",
           "stadium": "Cologne Stadium",
@@ -332,6 +375,7 @@
       "date": "23-06-2024",
       "matches": [
         {
+          "num": 25,
           "time": "21:00",
           "group": "A",
           "stadium": "Frankfurt Arena",
@@ -342,6 +386,7 @@
           ]
         },
         {
+          "num": 26,
           "time": "21:00",
           "group": "A",
           "stadium": "Stuttgart Arena",
@@ -358,6 +403,7 @@
       "date": "24-06-2024",
       "matches": [
         {
+          "num": 27,
           "time": "21:00",
           "group": "B",
           "stadium": "Düsseldorf Arena",
@@ -368,6 +414,7 @@
           ]
         },
         {
+          "num": 28,
           "time": "21:00",
           "group": "B",
           "stadium": "Leipzig Stadium",
@@ -384,6 +431,7 @@
       "date": "25-06-2024",
       "matches": [
         {
+          "num": 29,
           "time": "18:00",
           "group": "D",
           "stadium": "Olympiastadion",
@@ -394,6 +442,7 @@
           ]
         },
         {
+          "num": 30,
           "time": "18:00",
           "group": "D",
           "stadium": "BVB Stadion Dortmund",
@@ -404,6 +453,7 @@
           ]
         },
         {
+          "num": 31,
           "time": "21:00",
           "group": "C",
           "stadium": "Cologne Stadium",
@@ -414,6 +464,7 @@
           ]
         },
         {
+          "num": 32,
           "time": "21:00",
           "group": "C",
           "stadium": "Munich Football Arena",
@@ -430,6 +481,7 @@
       "date": "26-06-2024",
       "matches": [
         {
+          "num": 33,
           "time": "18:00",
           "group": "E",
           "stadium": "Frankfurt Arena",
@@ -440,6 +492,7 @@
           ]
         },
         {
+          "num": 34,
           "time": "18:00",
           "group": "E",
           "stadium": "Stuttgart Arena",
@@ -450,6 +503,7 @@
           ]
         },
         {
+          "num": 35,
           "time": "21:00",
           "group": "F",
           "stadium": "Arena AufSchalke",
@@ -460,6 +514,7 @@
           ]
         },
         {
+          "num": 36,
           "time": "21:00",
           "group": "F",
           "stadium": "Volksparkstadion",
@@ -476,7 +531,7 @@
       "date": "29-06-2024",
       "matches": [
         {
-          "num": 38,
+          "num": 37,
           "time": "18:00",
           "group": "Round of 16",
           "stadium": "Olympiastadion",
@@ -487,7 +542,7 @@
           ]
         },
         {
-          "num": 37,
+          "num": 38,
           "time": "21:00",
           "group": "Round of 16",
           "stadium": "BVB Stadion Dortmund",
@@ -504,7 +559,7 @@
       "date": "30-06-2024",
       "matches": [
         {
-          "num": 40,
+          "num": 39,
           "time": "18:00",
           "group": "Round of 16",
           "stadium": "Cologne Stadium",
@@ -515,7 +570,7 @@
           ]
         },
         {
-          "num": 39,
+          "num": 40,
           "time": "21:00",
           "group": "Round of 16",
           "stadium": "Arena AufSchalke",
@@ -532,7 +587,7 @@
       "date": "01-07-2024",
       "matches": [
         {
-          "num": 42,
+          "num": 41,
           "time": "18:00",
           "group": "Round of 16",
           "stadium": "Düsseldorf Arena",
@@ -543,7 +598,7 @@
           ]
         },
         {
-          "num": 41,
+          "num": 42,
           "time": "21:00",
           "group": "Round of 16",
           "stadium": "Frankfurt Arena",
@@ -594,8 +649,8 @@
           "stadium": "Stuttgart Arena",
           "city": "Stuttgart",
           "teams": [
-            "W39",
-            "W37"
+            "W40",
+            "W38"
           ]
         },
         {
@@ -605,8 +660,8 @@
           "stadium": "Volksparkstadion",
           "city": "Hamburg",
           "teams": [
-            "W41",
-            "W42"
+            "W42",
+            "W41"
           ]
         }
       ]
@@ -616,18 +671,18 @@
       "date": "06-07-2024",
       "matches": [
         {
-          "num": 48,
+          "num": 47,
           "time": "18:00",
           "group": "Quarter-finals",
           "stadium": "Düsseldorf Arena",
           "city": "Dusseldorf",
           "teams": [
-            "W40",
-            "W38"
+            "W39",
+            "W37"
           ]
         },
         {
-          "num": 47,
+          "num": 48,
           "time": "21:00",
           "group": "Quarter-finals",
           "stadium": "Olympiastadion",
@@ -651,7 +706,7 @@
           "city": "Munich",
           "teams": [
             "W45",
-            "W36"
+            "W46"
           ]
         }
       ]
@@ -667,8 +722,8 @@
           "stadium": "BVB Stadion Dortmund",
           "city": "Dortmund",
           "teams": [
-            "W47",
-            "W48"
+            "W48",
+            "W47"
           ]
         }
       ]

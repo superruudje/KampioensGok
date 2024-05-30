@@ -1,8 +1,8 @@
 <template>
     <div class="match mb-4">
         <h5 class="txt-blue fst-italic mb-3">{{ localeDate }}</h5>
-        <div class="row g-3">
-            <div class="col-xl-6" v-for="(match) in match_day.matches">
+        <div class="row gx-3 gy-5">
+            <div :class="full_width ? 'col-12' : 'col-xl-6'" v-for="(match) in match_day.matches">
                 <match-component :match="match"/>
             </div>
         </div>
@@ -15,7 +15,7 @@ import {computed} from "vue";
 
 const props = defineProps({
     match_day: {type: Object, required: true},
-    flex: {type: Boolean, default: false},
+    full_width: {type: Boolean, default: false},
 })
 
 const localeDate = computed(() => {
