@@ -4,23 +4,27 @@
             <div class="col-12">
                 <div class="card border-0 rounded-0 shadow-sm mb-3 mb-md-5">
                     <div class="card-body p-2 p-md-4">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
                             <h2 class="mb-0 txt-blue fw-bolder">Ranglijst</h2>
-                            <div class="w-auto input-group input-group-sm">
-                                <input v-model="searchTerm" class="form-control" placeholder="Zoek naar deelnemer"
+                            <div class="ms-auto w-auto input-group input-group-sm">
+                                <input v-model="searchTerm" class="form-control" placeholder="Zoek naar deelnemer of team"
                                        type="search">
                                 <span id="basic-addon1" class="input-group-text"><i class="bi bi-search"></i></span>
                             </div>
+                            <select class="form-select form-select-sm w-auto" v-model="snapshot">
+                                <option :value="0">start</option>
+                                <option v-for="(snapshot, idx) in snapshots" :value="idx + 1">{{ snapshot }}</option>
+                            </select>
                         </div>
                         <div class="w-100 overflow-hidden overflow-x-auto">
                             <table class="table">
                                 <thead>
                                 <tr>
                                     <th class="txt-orange" scope="col">#</th>
+                                    <th class="txt-orange" scope="col"></th>
                                     <th class="txt-orange" scope="col">Deelnemer</th>
                                     <th class="txt-orange" style="width: 99%" scope="col">Team</th>
                                     <th class="txt-orange" scope="col">Punten</th>
-                                    <th class="txt-orange" scope="col"></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -28,16 +32,17 @@
                                     <th scope="row">
                                         {{ player.pos }}
                                     </th>
-                                    <td class="text-nowrap"><router-link :to="{name: 'deelnemer', params: {id: player.name}}">{{ player.name }}</router-link></td>
-                                    <td class="text-nowrap" style="width: 99%;">{{ player.team_name }}</td>
-                                    <td>{{ player.score }}</td>
                                     <td>
-                                        <i v-if="old_standing.find(p => p.player === player.name).pos < player.pos"
+                                        <i v-if="snapshot === 0" class="bi bi-dash-lg"></i>
+                                        <i v-else-if="old_standing.find(p => p.name === player.name).pos < player.pos"
                                            class="txt-blue bi bi-arrow-down-circle-fill"></i>
-                                        <i v-else-if="old_standing.find(p => p.player === player.name).pos > player.pos"
+                                        <i v-else-if="old_standing.find(p => p.name === player.name).pos > player.pos"
                                            class="txt-orange bi bi-arrow-up-circle-fill"></i>
                                         <i v-else class="bi bi-dash-lg"></i>
                                     </td>
+                                    <td class="text-nowrap"><router-link :to="{name: 'deelnemer', params: {id: player.name}}">{{ player.name }}</router-link></td>
+                                    <td class="text-nowrap" style="width: 99%;">{{ player.team_name }}</td>
+                                    <td>{{ player.score }}</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -111,10 +116,15 @@
                 </div>
                 <div class="card border-0 rounded-0 shadow-sm">
                     <div class="card-body p-2 p-md-4">
-                        <h2 class="mb-3 txt-blue fw-bolder">Scoreverloop</h2>
-                        <span class="text-danger fw-bold">TODO how to get score progression???</span>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <h2 class="mb-0 txt-blue fw-bolder me-auto">Scoreverloop</h2>
+                            <select class="form-select form-select-sm w-auto" v-model="snapshot">
+                                <option :value="0">start</option>
+                                <option v-for="(snapshot, idx) in snapshots" :value="idx + 1">{{ snapshot }}</option>
+                            </select>
+                        </div>
                         <div id="chart">
-                            <apexchart :options="chartOptions" :series="series" type="line"/>
+                            <apexchart :options="chartOptions" :series="chartData" type="line"/>
                         </div>
                     </div>
                 </div>
@@ -126,11 +136,32 @@
 <script setup>
 import {storeToRefs} from "pinia";
 import {useTournament} from "@/stores/content";
-import {computed, ref} from "vue";
+import {computed, onMounted, ref, watch} from "vue";
 
 const tournament = useTournament();
-const {standing, old_standing, pageSize, pageNumber} = storeToRefs(tournament)
+const {pageSize, pageNumber, matches_played, players} = storeToRefs(tournament)
 const searchTerm = ref('')
+const standing = ref([])
+const old_standing = ref([])
+const snapshot = ref(0)
+const chartData = ref([])
+
+const snapshots = computed(() => {
+    return matches_played.value.map(d => d.date)
+})
+
+watch(snapshot, (newSnapshot) => {
+    standing.value = tournament.getStanding(newSnapshot)
+    old_standing.value = tournament.getStanding(newSnapshot - 1)
+    getScoreProgression(newSnapshot)
+})
+
+onMounted(() => {
+    snapshot.value = snapshots.value.length
+    standing.value = tournament.getStanding(snapshot.value)
+    old_standing.value = tournament.getStanding(snapshot.value - 1)
+    getScoreProgression(snapshot.value)
+})
 
 /**
  * Paginated data
@@ -148,7 +179,8 @@ const paginatedData = computed(() => {
  * @type {ComputedRef<*>}
  */
 const filtersData = computed(() => {
-    return standing.value.filter(x => !searchTerm.value || x.name.toLowerCase().includes(searchTerm.value.toLowerCase()))
+    return standing.value.filter(x => !searchTerm.value || x.name.toLowerCase().includes(searchTerm.value.toLowerCase())
+        || x.team_name.toLowerCase().includes(searchTerm.value.toLowerCase()))
 })
 
 /**
@@ -160,27 +192,6 @@ const pageCount = computed(() => {
     const l = standing.value.length,
         s = pageSize.value;
     return Math.ceil(l / s);
-})
-
-/**
- * Chart data
- * @type {ComputedRef<*[]>}
- */
-const series = computed(() => {
-    let data = []
-    standing.value.forEach((player) => {
-        const obj = {
-            name: player.name,
-            data: player.scores.map((score, idx) => {
-                return {
-                    x: idx + 1,
-                    y: score
-                }
-            })
-        }
-        data.push(obj)
-    })
-    return data
 })
 
 /**
@@ -202,6 +213,26 @@ const chartOptions = {
             isSlopeChart: true,
         },
     }
+}
+
+/**
+ * Create chart data
+ */
+function getScoreProgression(snapshot) {
+    let dataSets = []
+    players.value.forEach(player => {
+        let data = [{x: "start", y: 0}]
+        snapshots.value.slice(0, snapshot).forEach((s, idx) => {
+            const score = tournament.getParticipantTotalScore(player.name, idx + 1)
+            data.push({x: s, y: score})
+        })
+        const dataSet = {
+            name: player.name,
+            data: data
+        }
+        dataSets.push(dataSet)
+    })
+    chartData.value = dataSets
 }
 
 /**

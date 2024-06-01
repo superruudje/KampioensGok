@@ -1,0 +1,13 @@
+What to do to update the site with new scores:
+
+1. add `result` (array) with score after 90min to match object (schema.json).
+2. add `result_nvl` (array) with final match score to match object (schema.json).
+3. add `timeline` ([object]) to match object (schema.json).
+    - type*: `goal` | `yellow` | `red`
+    - minute*: minute of event
+    - team*: team_id
+    - player*: player {lastname,initial.}
+    - direct: if type is red, set if direct red card or not
+
+4. if knockout-fase teams are known, update poule.json. Add team_id to correct array.
+5. if bonus question answer in known, update stores/content.js store -> bonus (array).

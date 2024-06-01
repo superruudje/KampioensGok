@@ -2,7 +2,7 @@
   "schema": [
     {
       "match_day": 1,
-      "date": "14-05-2024",
+      "date": "14-06-2024",
       "matches": [
         {
           "num": 1,
@@ -13,68 +13,7 @@
           "teams": [
             "GER",
             "SCO"
-          ],
-          "result": [
-            2,
-            1
-          ],
-          "result_nvl": [
-            2,
-            1
-          ],
-          "timeline": [
-            {
-              "type": "goal",
-              "minute": 6,
-              "team": "GER",
-              "player": "Müller, T."
-            },
-            {
-              "type": "goal",
-              "minute": 37,
-              "team": "GER",
-              "player": "Müller, T."
-            },
-            {
-              "type": "goal",
-              "minute": 77,
-              "team": "SCO",
-              "player": "Depay, M."
-            },
-            {
-              "type": "red",
-              "direct": true,
-              "minute": 25,
-              "team": "GER",
-              "player": "Müller, T."
-            },
-            {
-              "type": "yellow",
-              "minute": 88,
-              "team": "SCO",
-              "player": "Depay, M."
-            }
           ]
-        },
-        {
-          "num": 2,
-          "time": "21:00",
-          "group": "A",
-          "stadium": "Munich Football Arena",
-          "city": "Munich",
-          "teams": [
-            "HUN",
-            "SUI"
-          ],
-          "result": [
-            0,
-            0
-          ],
-          "result_nvl": [
-            0,
-            0
-          ],
-          "timeline": []
         }
       ]
     },

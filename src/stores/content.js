@@ -13,7 +13,17 @@ export const useTournament = defineStore('tournament', {
         poules: [],
         knock_out: {},
 
-        bonus: ["-", -1, -1, "-", "-", "-", "-", "-", "-"],
+        bonus: [
+            "-", //0.champion
+            -1, //1. goals scored
+            -1, //2. cards given
+            "-", //3. most against
+            "-", //4. most cards
+            "-", //5. top scorer
+            "-", //6. top assist
+            "?", //7. first goal NL
+            "?" //8. first card NL
+        ],
 
         teamImages: [],
 
@@ -22,50 +32,11 @@ export const useTournament = defineStore('tournament', {
     }),
     getters: {
         /**
-         * Return standing previous round
-         * @returns {*}
-         */
-        old_standing() {
-            return this.players.sort((a, b) => {
-                const score1 = b['scores'].at(-2)
-                const score2 = a['scores'].at(-2)
-                if (score1 === score2) {
-                    return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
-                } else {
-                    return score1 - score2
-                }
-            }).map((player, idx) => {
-                return {
-                    player: player.name,
-                    score: player.scores.at(-2),
-                    pos: idx + 1
-                }
-            });
-        },
-        /**
-         * Return standing
-         * @returns {*}
-         */
-        standing() {
-            return this.players.map(player => {
-                player.score = player.scores.at(-1)
-                return {
-                    scores: player.scores,
-                    name: player.name,
-                    team_name: player.team_name,
-                    score: this.getParticipantTotalScore(player.name)
-                }
-            }).sort((a, b) => b.score - a.score).map((player, idx, array) => {
-                player.pos = idx < 1 ? 1 : player.score === array[idx - 1].score ? array[idx - 1].pos : idx + 1
-                return player
-            })
-        },
-        /**
          * Return top 10 players
          * @returns {*}
          */
         standing_top_10() {
-            return this.standing.slice(0, 10)
+            return this.getStanding(null).slice(0, 10)
         },
         /**
          * Return matches played
@@ -288,6 +259,70 @@ export const useTournament = defineStore('tournament', {
             })
             return res.sort((a, b) => { return b.count - a.count })
         },
+        /**
+         * Return counted top scorer
+         * @returns {*}
+         */
+        prediction_top_scorer() {
+            let res = []
+            this.players.forEach((player) => {
+                if (player.bonus) {
+                    const top_scorer = player.bonus[5]
+                    if (!res.some((t) => t.id === top_scorer))
+                        res.push({id: top_scorer, count: 0})
+                    res.find((t) => t.id === top_scorer).count++;
+                }
+            })
+            return res.sort((a, b) => { return b.count - a.count })
+        },
+        /**
+         * Return counted top assist
+         * @returns {*}
+         */
+        prediction_top_assist() {
+            let res = []
+            this.players.forEach((player) => {
+                if (player.bonus) {
+                    const top_assist = player.bonus[6]
+                    if (!res.some((t) => t.id === top_assist))
+                        res.push({id: top_assist, count: 0})
+                    res.find((t) => t.id === top_assist).count++;
+                }
+            })
+            return res.sort((a, b) => { return b.count - a.count })
+        },
+        /**
+         * Return counted first goal NL
+         * @returns {*}
+         */
+        prediction_first_goal_nl() {
+            let res = []
+            this.players.forEach((player) => {
+                if (player.bonus) {
+                    const first_goal = player.bonus[7]
+                    if (!res.some((t) => t.id === first_goal))
+                        res.push({id: first_goal, count: 0})
+                    res.find((t) => t.id === first_goal).count++;
+                }
+            })
+            return res.sort((a, b) => { return b.count - a.count })
+        },
+        /**
+         * Return counted first card NL
+         * @returns {*}
+         */
+        prediction_first_card_nl() {
+            let res = []
+            this.players.forEach((player) => {
+                if (player.bonus) {
+                    const first_card = player.bonus[8]
+                    if (!res.some((t) => t.id === first_card))
+                        res.push({id: first_card, count: 0})
+                    res.find((t) => t.id === first_card).count++;
+                }
+            })
+            return res.sort((a, b) => { return b.count - a.count })
+        },
     },
     actions: {
         /**
@@ -327,6 +362,23 @@ export const useTournament = defineStore('tournament', {
             return matches
         },
         /**
+         * Return standing
+         * @returns {*}
+         */
+        getStanding(snapshot) {
+            return this.players.map(player => {
+                return {
+                    scores: player.scores,
+                    name: player.name,
+                    team_name: player.team_name,
+                    score: this.getParticipantTotalScore(player.name, snapshot)
+                }
+            }).sort((a, b) => b.score - a.score).map((player, idx, array) => {
+                player.pos = idx < 1 ? 1 : player.score === array[idx - 1].score ? array[idx - 1].pos : idx + 1
+                return player
+            })
+        },
+        /**
          * Return participant
          */
         getParticipant(name) {
@@ -335,20 +387,23 @@ export const useTournament = defineStore('tournament', {
         /**
          * Calculate total score
          * @param name
+         * @param snapshot
          * @returns {*}
          */
-        getParticipantTotalScore(name) {
-            return this.getParticipantScoreMatches(name) + this.getParticipantScoreBonus(name) + this.getParticipantScoreKnockOut(name)
+        getParticipantTotalScore(name, snapshot) {
+            return this.getParticipantScoreMatches(name, snapshot) + this.getParticipantScoreBonus(name, snapshot) + this.getParticipantScoreKnockOut(name, snapshot)
         },
         /**
          * Calculate total score
          * @param name
+         * @param snapshot
          * @returns {*}
          */
-        getParticipantScoreMatches(name) {
+        getParticipantScoreMatches(name, snapshot) {
             let score = 0
 
-            this.matches_played.forEach((match_day) => {
+            const slice_num = snapshot !== null ? snapshot : this.matches_played.length
+            this.matches_played.slice(0, slice_num).forEach((match_day) => {
                 match_day.matches.forEach((match) => {
                     const player_prediction = this.getMatchPlayerPrediction(name, match.num)
                     score += this.getPredictionScore(player_prediction, match)

@@ -1,7 +1,15 @@
 <template>
+    <header class="bg-blue py-3 py-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-white fw-bolder">{{ participant.name }}</h2>
+                    <span class="txt-orange fw-bolder">{{ participant.team_name }}</span>
+                </div>
+            </div>
+        </div>
+    </header>
     <main class="container-md py-2 py-md-5">
-        <h2 class="txt-blue fw-bolder">{{ participant.name }}</h2>
-        <h6 class="txt-orange fw-bolder">{{ participant.team_name }}</h6>
         <div class="row g-3 mb-3">
             <div class="col-md-4">
                 <div class="card border-0 rounded-0 shadow-sm h-100">
@@ -63,7 +71,6 @@
                 <div class="card border-0 rounded-0 shadow-sm mb-3">
                     <div class="card-body p-2 p-md-4">
                         <h2 class="txt-blue fw-bolder">Scoreverloop</h2>
-                        <span class="text-danger fw-bold">TODO: how to get score progression???</span>
                         <div id="chart">
                             <apexchart :options="chartOptions" :series="series" type="line"/>
                         </div>
@@ -86,15 +93,18 @@
                 <div class="card border-0 rounded-0 shadow-sm mb-3">
                     <div class="card-body p-2 p-md-4">
                         <h2 class="txt-blue fw-bolder">Bonusvragen</h2>
-                        <div class="d-flex flex-column mb-3" v-for="(q, idx) in bonus">
+                        <div class="d-flex flex-column mb-3" v-for="(q, idx) in questions">
                             <span class="txt-orange fs-5 fst-italic">{{ q }}</span>
                             <span class="txt-blue"><b>{{ getTeamName(participant.bonus[idx]) || '-' }}</b>
-                                <span v-if="idx === 0" class="small fst-italic"> ({{getPercentage(1)}}% denkt dit ook)</span>
+                                <span v-if="idx === 0" class="small fst-italic"> ({{getPercentage(prediction_tournament_champion.find(i => i.id === participant.bonus[idx]).count)}}% denkt dit ook)</span>
                                 <span v-if="idx === 1" class="small fst-italic"> (nu {{totalGoals}})</span>
                                 <span v-if="idx === 2" class="small fst-italic"> (nu {{totalCards}})</span>
-                                <span v-if="idx === 3" class="small fst-italic"> (nu {{getTeamName(groupedGoalsAgainst[0].id)}})</span>
-                                <span v-if="idx === 4" class="small fst-italic"> (nu {{getTeamName(groupedTeamCards[0].id)}})</span>
-                                <span v-if="idx === 5" class="small fst-italic"> (nu {{groupedTopScorer[0].player}})</span>
+                                <span v-if="idx === 3" class="small fst-italic"> ({{getPercentage(prediction_most_against.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{getTeamName(groupedGoalsAgainst[0].id)}})</span>
+                                <span v-if="idx === 4" class="small fst-italic"> ({{getPercentage(prediction_most_cards.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{getTeamName(groupedTeamCards[0].id)}})</span>
+                                <span v-if="idx === 5" class="small fst-italic"> ({{getPercentage(prediction_top_scorer.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{groupedTopScorer[0]?.player || '?'}})</span>
+                                <span v-if="idx === 6" class="small fst-italic"> ({{getPercentage(prediction_top_assist.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{'?'}})</span>
+                                <span v-if="idx === 7" class="small fst-italic"> ({{getPercentage(prediction_first_goal_nl.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{bonus[7]}})</span>
+                                <span v-if="idx === 8" class="small fst-italic"> ({{getPercentage(prediction_first_card_nl.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{bonus[8]}})</span>
                             </span>
                         </div>
                     </div>
@@ -127,6 +137,8 @@ const route = useRoute();
 
 const tournament = useTournament();
 const {
+    players,
+    matches_played,
     matches_played_poule,
     matches_to_play_poule,
     matches_played_knock_out,
@@ -137,11 +149,17 @@ const {
     groupedTeamCards,
     groupedTopScorer,
     prediction_tournament_champion,
-    teams} = storeToRefs(tournament)
+    prediction_top_scorer,
+    prediction_most_cards,
+    prediction_most_against,
+    prediction_first_goal_nl,
+    prediction_first_card_nl,
+    prediction_top_assist,
+    teams, bonus} = storeToRefs(tournament)
 
 const participant = ref(null);
 
-const bonus = ref([
+const questions = ref([
     "Welk land wordt Europees kampioen?",
     "Hoeveel goals worden er totaal gescoord?",
     "Hoeveel kaarten worden er in het toernooi gegeven?",
@@ -152,11 +170,6 @@ const bonus = ref([
     "Welke Nederlander scoort het eerste doelpunt?",
     "Welke Nederlander krijgt de eerste kaart?"
 ])
-
-
-const tot = computed(() => {
-    return prediction_tournament_champion.value.reduce((partialSum, a) => partialSum + a.count, 0);
-})
 
 /**
  * Return team name
@@ -173,7 +186,7 @@ function getTeamName(id) {
  * @returns {number}
  */
 function getPercentage(count) {
-    return (Math.round((count / tot.value * 100) * 100) / 100)
+    return (Math.round((count / players.value.length * 100) * 100) / 100)
 }
 
 onBeforeMount(() => {
@@ -189,14 +202,14 @@ onBeforeRouteUpdate((to, from) => {
  * @type {ComputedRef<*[]>}
  */
 const series = computed(() => {
+    let data = [{x: "start", y: 0}]
+    matches_played.value.forEach((s, idx) => {
+        const score = tournament.getParticipantTotalScore(participant.value.name, idx + 1)
+        data.push({x: s.date, y: score})
+    })
     return [{
         name: participant.value.name,
-        data: participant.value.scores.map((score, idx) => {
-            return {
-                x: idx + 1,
-                y: score
-            }
-        })
+        data: data
     }]
 })
 

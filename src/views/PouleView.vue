@@ -1,4 +1,14 @@
 <template>
+    <header class="bg-blue py-3 py-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="fs-2 text-white fw-bolder">EK 2024</h1>
+                    <h2 class="fs-6 mb-0 txt-orange fw-bolder">De poulefase</h2>
+                </div>
+            </div>
+        </div>
+    </header>
     <main class="container-md py-2 py-md-5">
         <div class="row gy-3">
             <div class="col-md-6" v-for="p in tournament.getPoules()">

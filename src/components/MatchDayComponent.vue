@@ -1,6 +1,6 @@
 <template>
     <div class="match mb-4">
-        <h5 class="txt-blue fst-italic mb-3">{{ localeDate }}</h5>
+        <h5 class="txt-blue fst-italic mb-4 text-capitalize">{{ localeDate }}</h5>
         <div class="row gx-3 gy-5">
             <div :class="full_width ? 'col-12' : 'col-md-6'" v-for="(match) in match_day.matches">
                 <match-component :match="match"/>

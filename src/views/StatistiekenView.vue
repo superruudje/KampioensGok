@@ -1,10 +1,20 @@
 <template>
+    <header class="bg-blue py-3 py-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="fs-2 text-white fw-bolder">EK 2024</h1>
+                    <h2 class="fs-6 mb-0 txt-orange fw-bolder">De statistieken</h2>
+                </div>
+            </div>
+        </div>
+    </header>
     <main class="container-md py-2 py-md-5">
         <div class="row g-3 mb-3">
             <div class="col-md-4">
                 <div class="card border-0 rounded-0 shadow-sm">
                     <div class="card-body p-3 p-md-4">
-                        <h2 class="mb-3 txt-blue fw-bolder">Meeste kaarten</h2>
+                        <h3 class="mb-3 txt-blue fw-bolder">Meeste kaarten</h3>
                         <table class="table">
                             <thead>
                             <tr>
@@ -28,7 +38,7 @@
             <div class="col-md-4">
                 <div class="card border-0 rounded-0 shadow-sm">
                     <div class="card-body p-3 p-md-4">
-                        <h2 class="mb-3 txt-blue fw-bolder">Top scorers</h2>
+                        <h3 class="mb-3 txt-blue fw-bolder">Top scorers</h3>
                         <table class="table">
                             <thead>
                             <tr>
@@ -61,7 +71,7 @@
             <div class="col-md-4">
                 <div class="card border-0 rounded-0 shadow-sm">
                     <div class="card-body p-3 p-md-4">
-                        <h2 class="mb-3 txt-blue fw-bolder">Meeste tegengoals</h2>
+                        <h3 class="mb-3 txt-blue fw-bolder">Meeste tegengoals</h3>
                         <table class="table">
                             <thead>
                             <tr>
@@ -91,25 +101,31 @@
                 </div>
             </div>
         </div>
-        <div class="row g-3 mb-3">
-            <div class="col-12">
-                <div class="card border-0 rounded-0 shadow-sm">
-                    <div class="card-body">
-                        <h2 class="mb-3 txt-blue fw-bolder">Wat denken we?</h2>
-                        <span class="text-danger fw-bold">TODO: add topscorer, assist, goals NL, card NL.</span>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <prediction-table :list="prediction_tournament_champion" title="Wie wordt kampioen?"/>
-                            </div>
-                            <div class="col-md-4">
-                                <prediction-table :list="prediction_most_against" title="Meeste tegengoals?"/>
-                            </div>
-                            <div class="col-md-4">
-                                <prediction-table :list="prediction_most_cards" title="Meeste kaarten?"/>
-                            </div>
-                        </div>
-                    </div>
+    </main>
+    <header class="bg-blue py-3 py-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="fs-2 text-white fw-bolder">Wat denken we?</h1>
+                    <h2 class="fs-6 mb-0 txt-orange fw-bolder">De statistieken</h2>
                 </div>
+            </div>
+        </div>
+    </header>
+    <main class="container-md py-2 py-md-5">
+        <div class="row g-3 mb-3">
+            <div class="col-md-4">
+                <prediction-table class="mb-3" :list="prediction_tournament_champion" title="Wie wordt kampioen?"/>
+                <prediction-table class="mb-3" :list="prediction_top_scorer" title="Wie wordt top scorer?"/>
+                <prediction-table :list="prediction_first_card_nl" title="Eerste kaart Team NL?"/>
+            </div>
+            <div class="col-md-4">
+                <prediction-table class="mb-3" :list="prediction_most_against" title="Meeste tegengoals?"/>
+                <prediction-table :list="prediction_top_assist" title="Wie wordt assist koning?"/>
+            </div>
+            <div class="col-md-4">
+                <prediction-table class="mb-3" :list="prediction_most_cards" title="Meeste kaarten?"/>
+                <prediction-table :list="prediction_first_goal_nl" title="Eerste goal Team NL?"/>
             </div>
         </div>
     </main>
@@ -128,6 +144,10 @@ const {
     prediction_tournament_champion,
     prediction_most_against,
     prediction_most_cards,
+    prediction_first_goal_nl,
+    prediction_first_card_nl,
+    prediction_top_scorer,
+    prediction_top_assist,
     totalGoals,
     totalCards,
     groupedTeamCards,

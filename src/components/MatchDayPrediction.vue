@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex flex-column align-items-center">
-        <span :class="{'text-decoration-line-through': played}">{{ localeDate }}</span>
+        <span class="text-capitalize" :class="{'text-decoration-line-through': played}">{{ localeDate }}</span>
         <div v-if="knockout" class="match-group bg-blue text-light px-3 py-1">{{match_day.match_day}}</div>
         <hr class="mt-1 w-100">
         <match-prediction v-for="(match) in match_day.matches" :knockout="knockout" :played="played" :name="name" :match="match" class="mb-3"/>
