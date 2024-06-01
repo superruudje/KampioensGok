@@ -1,8 +1,9 @@
 <template>
     <div class="d-flex flex-column align-items-center">
         <span :class="{'text-decoration-line-through': played}">{{ localeDate }}</span>
+        <div v-if="knockout" class="match-group bg-blue text-light px-3 py-1">{{match_day.match_day}}</div>
         <hr class="mt-1 w-100">
-        <match-prediction v-for="(match) in match_day.matches" :played="played" :name="name" :match="match" class="mb-3"/>
+        <match-prediction v-for="(match) in match_day.matches" :knockout="knockout" :played="played" :name="name" :match="match" class="mb-3"/>
     </div>
 </template>
 
@@ -14,6 +15,7 @@ const props = defineProps({
     match_day: {type: Object, required: true},
     name: {type: String, required: true},
     played: {type: Boolean, required: false, default: false},
+    knockout: {type: Boolean, required: false, default: false},
 })
 
 const localeDate = computed(() => {
@@ -30,4 +32,7 @@ const localeDate = computed(() => {
 
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass" scoped>
+.match-group
+    transform: skew(-8deg)
+</style>

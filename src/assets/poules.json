@@ -55,22 +55,10 @@
       ]
     }
   ],
-  "round_of_16": [
-    "HUN",
-    "ESP",
-    "GER",
-    "SRB",
-    "ENG",
-    "TUR",
-    "ITA",
-    "SVK",
-    "NED",
-    "ROM",
-    "POR",
-    "SCO",
-    "BEL",
-    "CRO",
-    "FRA",
-    "CZE"
-  ]
+  "knock_out":{
+    "round_of_16": [],
+    "quarter_finals": [],
+    "semi_finals": [],
+    "finals": []
+  }
 }

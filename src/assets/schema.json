@@ -10,62 +10,71 @@
           "group": "A",
           "stadium": "Munich Football Arena",
           "city": "Munich",
-          "teams": ["GER", "SCO"],
-          "result": [3, 1],
-          "result_nvl": [3, 2],
-          "timeline": {
-            "goals": [
-              {
-                "minute": 35,
-                "team": "GER",
-                "player": "Müller, Thomas"
-              },
-              {
-                "minute": 35,
-                "team": "GER",
-                "player": "Müller, Thomas"
-              },
-              {
-                "minute": 12,
-                "team": "SCO",
-                "player": "Depay, Memphis"
-              }
-            ],
-            "cards": {
-              "red": [
-                {
-                  "minute": 35,
-                  "team": "GER",
-                  "direct": true,
-                  "player": "Müller, Thomas"
-                }
-              ],
-              "yellow": [
-                {
-                  "minute": 12,
-                  "team": "SCO",
-                  "player": "Depay, Memphis"
-                }
-              ]
+          "teams": [
+            "GER",
+            "SCO"
+          ],
+          "result": [
+            2,
+            1
+          ],
+          "result_nvl": [
+            2,
+            1
+          ],
+          "timeline": [
+            {
+              "type": "goal",
+              "minute": 6,
+              "team": "GER",
+              "player": "Müller, T."
+            },
+            {
+              "type": "goal",
+              "minute": 37,
+              "team": "GER",
+              "player": "Müller, T."
+            },
+            {
+              "type": "goal",
+              "minute": 77,
+              "team": "SCO",
+              "player": "Depay, M."
+            },
+            {
+              "type": "red",
+              "direct": true,
+              "minute": 25,
+              "team": "GER",
+              "player": "Müller, T."
+            },
+            {
+              "type": "yellow",
+              "minute": 88,
+              "team": "SCO",
+              "player": "Depay, M."
             }
-          }
+          ]
         },
         {
-          "num": 1,
+          "num": 2,
           "time": "21:00",
           "group": "A",
           "stadium": "Munich Football Arena",
           "city": "Munich",
-          "teams": ["HUN", "SUI"],
-          "result": [0, 0],
-          "result_nvl": [0, 0],
-          "timeline": {
-            "goals": [],
-            "cards": {
-              "red": [],
-              "yellow": []
-            }
-          }
+          "teams": [
+            "HUN",
+            "SUI"
+          ],
+          "result": [
+            0,
+            0
+          ],
+          "result_nvl": [
+            0,
+            0
+          ],
+          "timeline": []
         }
       ]
     },
@@ -539,7 +548,8 @@
           "teams": [
             "2nd: A",
             "2nd: B"
-          ]
+          ],
+          "result": [1, 1]
         },
         {
           "num": 38,
@@ -550,7 +560,8 @@
           "teams": [
             "1st: A",
             "2nd: C"
-          ]
+          ],
+          "result": [3, 2]
         }
       ]
     },

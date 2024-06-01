@@ -96,6 +96,7 @@
                 <div class="card border-0 rounded-0 shadow-sm">
                     <div class="card-body">
                         <h2 class="mb-3 txt-blue fw-bolder">Wat denken we?</h2>
+                        <span class="text-danger fw-bold">TODO: add topscorer, assist, goals NL, card NL.</span>
                         <div class="row">
                             <div class="col-md-4">
                                 <prediction-table :list="prediction_tournament_champion" title="Wie wordt kampioen?"/>

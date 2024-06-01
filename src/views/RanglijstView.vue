@@ -1,7 +1,5 @@
 <template>
     <main class="container-md py-2 py-md-5">
-        //TODO get score computed instead of from players.json
-        //TODO how to get score course???
         <div class="row gy-3">
             <div class="col-12">
                 <div class="card border-0 rounded-0 shadow-sm mb-3 mb-md-5">
@@ -19,7 +17,8 @@
                                 <thead>
                                 <tr>
                                     <th class="txt-orange" scope="col">#</th>
-                                    <th class="txt-orange" style="width: 99%" scope="col">Deelnemer</th>
+                                    <th class="txt-orange" scope="col">Deelnemer</th>
+                                    <th class="txt-orange" style="width: 99%" scope="col">Team</th>
                                     <th class="txt-orange" scope="col">Punten</th>
                                     <th class="txt-orange" scope="col"></th>
                                 </tr>
@@ -29,7 +28,8 @@
                                     <th scope="row">
                                         {{ player.pos }}
                                     </th>
-                                    <td style="width: 99%;"><router-link :to="{name: 'deelnemer', params: {id: player.name}}">{{ player.name }}</router-link></td>
+                                    <td class="text-nowrap"><router-link :to="{name: 'deelnemer', params: {id: player.name}}">{{ player.name }}</router-link></td>
+                                    <td class="text-nowrap" style="width: 99%;">{{ player.team_name }}</td>
                                     <td>{{ player.score }}</td>
                                     <td>
                                         <i v-if="old_standing.find(p => p.player === player.name).pos < player.pos"
@@ -112,6 +112,7 @@
                 <div class="card border-0 rounded-0 shadow-sm">
                     <div class="card-body p-2 p-md-4">
                         <h2 class="mb-3 txt-blue fw-bolder">Scoreverloop</h2>
+                        <span class="text-danger fw-bold">TODO how to get score progression???</span>
                         <div id="chart">
                             <apexchart :options="chartOptions" :series="series" type="line"/>
                         </div>

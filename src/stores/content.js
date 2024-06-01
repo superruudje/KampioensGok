@@ -11,7 +11,7 @@ export const useTournament = defineStore('tournament', {
         schema: [],
         players: [],
         poules: [],
-        cardsGiven: 0,
+        knock_out: {},
 
         bonus: ["-", -1, -1, "-", "-", "-", "-", "-", "-"],
 
@@ -49,13 +49,14 @@ export const useTournament = defineStore('tournament', {
         standing() {
             return this.players.map(player => {
                 player.score = player.scores.at(-1)
-                return player
-            }).sort((a, b) => b.score - a.score).map((player, idx, array) => {
-                if (idx < 1) {
-                    player.pos = 1
-                } else {
-                    player.pos = player.score === array[idx - 1].score ? array[idx - 1].pos : idx + 1
+                return {
+                    scores: player.scores,
+                    name: player.name,
+                    team_name: player.team_name,
+                    score: this.getParticipantTotalScore(player.name)
                 }
+            }).sort((a, b) => b.score - a.score).map((player, idx, array) => {
+                player.pos = idx < 1 ? 1 : player.score === array[idx - 1].score ? array[idx - 1].pos : idx + 1
                 return player
             })
         },
@@ -79,6 +80,20 @@ export const useTournament = defineStore('tournament', {
             })
         },
         /**
+         * Return matches played in poule fase
+         * @returns {*}
+         */
+        matches_played_poule() {
+            return this.matches_played.filter((game_day) => typeof game_day.match_day === "number")
+        },
+        /**
+         * Return matches played in knockout fase
+         * @returns {*}
+         */
+        matches_played_knock_out() {
+            return this.matches_played.filter((game_day) => typeof game_day.match_day === "string")
+        },
+        /**
          * Return matches yet to be played
          * @returns {*}
          */
@@ -89,6 +104,20 @@ export const useTournament = defineStore('tournament', {
                 const now = new Date()
                 return now < date
             })
+        },
+        /**
+         * Return matches to play in poule fase
+         * @returns {*}
+         */
+        matches_to_play_poule() {
+            return this.matches_to_play.filter((game_day) => typeof game_day.match_day === "number")
+        },
+        /**
+         * Return matches to play in knockout fase
+         * @returns {*}
+         */
+        matches_to_play_knock_out() {
+            return this.matches_to_play.filter((game_day) => typeof game_day.match_day === "string")
         },
         /**
          * Return upcoming games
@@ -110,7 +139,7 @@ export const useTournament = defineStore('tournament', {
             let goals = 0
             this.matches_played.forEach((match_day) => {
                 match_day.matches.forEach(match => {
-                    goals+= match.result_nvl.reduce((partialSum, a) => partialSum + a, 0);
+                    goals+= match.result_nvl?.reduce((partialSum, a) => partialSum + a, 0) || 0;
                 })
             })
             return goals
@@ -123,8 +152,8 @@ export const useTournament = defineStore('tournament', {
             let cards = 0
             this.matches_played.forEach((match_day) => {
                 match_day.matches.forEach(match => {
-                    const yellow = match.timeline?.cards?.yellow?.length || 0
-                    const red = match.timeline?.cards?.red?.filter(r => r.direct).length || 0
+                    const yellow = match.timeline?.filter(e => e.type === 'yellow').length || 0
+                    const red = match.timeline?.filter(e => e.type === 'red' && e.direct).length || 0
                     cards+= (yellow + red)
                 })
             })
@@ -138,7 +167,7 @@ export const useTournament = defineStore('tournament', {
             let res = this.teams.map((t) => { return { id: t.id, count: 0}})
             this.matches_played.forEach((match_day) => {
                 match_day.matches.forEach(match => {
-                    const goals = match.timeline.goals
+                    const goals = match.timeline.filter(e => e.type === 'goal')
                     goals.reduce((p, goal) => {
                         const team = goal.team
                         if (!p.some((t) => t.id === team))
@@ -158,7 +187,7 @@ export const useTournament = defineStore('tournament', {
             let res = this.teams.map((t) => { return { id: t.id, count: 0}})
             this.matches_played.forEach((match_day) => {
                 match_day.matches.forEach(match => {
-                    const goals = match.timeline.goals
+                    const goals = match.timeline?.filter(e => e.type === 'goal') || []
                     goals.reduce((p, goal) => {
                         const team = goal.team === match.teams[0] ? match.teams[1] : match.teams[0]
                         if (!p.some((t) => t.id === team))
@@ -178,8 +207,8 @@ export const useTournament = defineStore('tournament', {
             let res = this.teams.map((t) => { return { id: t.id, count: 0}})
             this.matches_played.forEach((match_day) => {
                 match_day.matches.forEach(match => {
-                    const yellow = match.timeline?.cards?.yellow || []
-                    const red = match.timeline?.cards?.red?.filter(r => r.direct || r.direct === undefined) || []
+                    const yellow = match.timeline?.filter(e => e.type === 'yellow') || []
+                    const red = match.timeline?.filter(e => e.type === 'red' && e.direct) || []
                     const cards = yellow.concat(red)
 
                     cards.forEach((card) => {
@@ -200,7 +229,7 @@ export const useTournament = defineStore('tournament', {
             let res = []
             this.matches_played.forEach((match_day) => {
                 match_day.matches.forEach(match => {
-                    const goals = match.timeline?.goals || []
+                    const goals = match.timeline?.filter(e => e.type === 'goal') || []
                     goals.forEach((goal) => {
                         const player = goal.player
                         if (!res.some((t) => t.player === player))
@@ -269,6 +298,7 @@ export const useTournament = defineStore('tournament', {
             this.schema = schema.schema
             this.players = players.players
             this.poules = poules.poules
+            this.knock_out = poules.knock_out
             this.setImages()
         },
         /**
@@ -308,7 +338,7 @@ export const useTournament = defineStore('tournament', {
          * @returns {*}
          */
         getParticipantTotalScore(name) {
-            return this.getParticipantScoreMatches(name) + this.getParticipantScoreBonus(name)
+            return this.getParticipantScoreMatches(name) + this.getParticipantScoreBonus(name) + this.getParticipantScoreKnockOut(name)
         },
         /**
          * Calculate total score
@@ -350,6 +380,30 @@ export const useTournament = defineStore('tournament', {
             return score
         },
         /**
+         * Calculate total score knockout fase
+         * @param name
+         * @returns {*}
+         */
+        getParticipantScoreKnockOut(name) {
+            let score = 0
+            const player = this.players.find(player => player.name === name)
+
+            player.round_of_16.forEach(team => {
+                if (this.knock_out.round_of_16.includes(team)) score += 10
+            })
+            player.quarter_finals.forEach(team => {
+                if (this.knock_out.quarter_finals.includes(team)) score += 20
+            })
+            player.semi_finals.forEach(team => {
+                if (this.knock_out.semi_finals.includes(team)) score += 30
+            })
+            player.finals.forEach(team => {
+                if (this.knock_out.finals.includes(team)) score += 50
+            })
+
+            return score
+        },
+        /**
          * Find players prediction for given match
          * @param name
          * @param match
@@ -362,13 +416,25 @@ export const useTournament = defineStore('tournament', {
             return prediction?.score || ['?', '?']
         },
         /**
+         *
+         * @param name
+         * @param match
+         * @returns {string[]|*}
+         */
+        getMatchPlayerPredictionTeams(name, match) {
+            const player = this.players.find(player => player.name === name)
+            if (!player) return ['?', '?']
+            const prediction = player.predictions.find(prediction => prediction.match === match)
+            return prediction?.teams || ['?', '?']
+        },
+        /**
          * Return the achieved prediction score
          * @param prediction players prediction
          * @param match match object
          */
         getPredictionScore(prediction, match) {
             let score = 0
-            const final_score = match.result
+            const final_score = match.result || [0, 0]
             const winner_prediction = prediction[0] === prediction[1] ? null : prediction[0] > prediction[1] ? 0 : 1
             const final_winner = final_score[0] === final_score[1] ? null : final_score[0] > final_score[1] ? 0 : 1
             if (this.arrayEquals(prediction, final_score)) score+= 10

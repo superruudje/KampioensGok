@@ -60,7 +60,7 @@ import MatchDayComponent from "@/components/MatchDayComponent.vue";
 import {ref} from "vue";
 
 const tournament = useTournament();
-const {poules, teamImages} = storeToRefs(tournament)
+const {teamImages} = storeToRefs(tournament)
 const openPoule = ref(null)
 
 /**
@@ -79,24 +79,6 @@ function getImage(name) {
 function openPouleDetails(poule) {
     openPoule.value = openPoule.value === poule ? null : poule
 }
-
-/**
- * Return poule standing in correct order
- * @param teams
- * @returns {*}
- */
-function getPouleStandings(teams) {
-    return teams.sort((a, b) => {
-        if (b.score.points === a.score.points) {
-            const diffA = a.score.for - a.score.against
-            const diffB = b.score.for - b.score.against
-            return diffB - diffA
-        } else
-            return b.score.points - a.score.points
-    })
-}
-
-console.log(tournament.getPoules())
 
 </script>
 

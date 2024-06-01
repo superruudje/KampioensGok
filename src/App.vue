@@ -4,6 +4,7 @@
         <main class="flex-grow-1">
             <router-view></router-view>
         </main>
+        <back-to-top/>
         <footer-component/>
     </div>
 </template>
@@ -14,6 +15,7 @@ import {useTournament} from "@/stores/content";
 import {Tooltip} from "bootstrap";
 import {onMounted} from "vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+import BackToTop from "@/components/BackToTop.vue";
 const tournament = useTournament();
 tournament.fetchData()
 
