@@ -1,4 +1,14 @@
 <template>
+    <header class="bg-blue py-3 py-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="fs-2 text-white fw-bolder">EK 2024</h1>
+                    <h2 class="fs-6 mb-0 txt-orange fw-bolder">Home</h2>
+                </div>
+            </div>
+        </div>
+    </header>
     <main class="container-md py-2 py-md-5">
         <div class="row gy-3">
             <div class="col-12 col-md-4">
@@ -9,7 +19,7 @@
                             <thead>
                             <tr>
                                 <th class="txt-orange" scope="col">#</th>
-                                <th class="txt-orange" scope="col">Deelnemer</th>
+                                <th class="txt-orange" scope="col">Team</th>
                                 <th class="txt-orange" scope="col">Punten</th>
                             </tr>
                             </thead>
@@ -21,7 +31,7 @@
                                 <th v-else scope="row">{{ idx + 1 }}</th>
                                 <td>
                                     <router-link :to="{name: 'deelnemer', params: {id: player.name}}">{{
-                                            player.name
+                                            player.team_name
                                         }}
                                     </router-link>
                                 </td>

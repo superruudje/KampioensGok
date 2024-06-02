@@ -17,14 +17,16 @@ const router = createRouter({
     },
     {
       path: '/ranglijst',
-      name: 'ranglijst',
-      component: RanglijstView
+      children: [
+        { path: '', name: 'ranglijst', component: RanglijstView},
+        { path: ':id', name: 'deelnemer', component: DeelnemerView},
+      ]
     },
-    {
-      path: '/ranglijst/:id',
-      name: 'deelnemer',
-      component: DeelnemerView
-    },
+    // {
+    //   path: '/ranglijst/:id',
+    //   name: 'deelnemer',
+    //   component: DeelnemerView
+    // },
     {
       path: '/programma',
       name: 'programma',

@@ -3,13 +3,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-white fw-bolder">{{ participant.name }}</h2>
-                    <span class="txt-orange fw-bolder">{{ participant.team_name }}</span>
+                    <h1 class="fs-2 text-white fw-bolder">{{ participant.team_name }}</h1>
+                    <h2 class="fs-6 mb-0 txt-orange fw-bolder">{{ participant.name }}</h2>
                 </div>
             </div>
         </div>
     </header>
     <main class="container-md py-2 py-md-5">
+        <router-link :to="{name: 'ranglijst'}" tag="button" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3 mb-3" type="button"><i class="bi bi-arrow-left me-2"></i>Naar de ranglijst</router-link>
         <div class="row g-3 mb-3">
             <div class="col-md-4">
                 <div class="card border-0 rounded-0 shadow-sm h-100">
@@ -81,10 +82,15 @@
                     <div class="card-body position-relative p-2 p-md-4">
                         <h2 class="txt-blue fw-bolder">Voorspellingen Poulefase</h2>
                         <p>Bekijk de voorspellingen van <b>{{ participant.name }}</b> Bij reeds gespeelde wedstrijden wordt de stand na 90 minuten speeltijd getoond <u>onder</u> de voorspelling.</p>
-                        <match-day-prediction v-for="match_day in matches_played_poule" :match_day="match_day" :name="participant.name"
-                                              :played="true" class="mb-4"></match-day-prediction>
-                        <match-day-prediction v-for="match_day in matches_to_play_poule" :match_day="match_day"
-                                              :name="participant.name" class="mb-4"></match-day-prediction>
+                        <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
+                            <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij start toernooi.
+                        </div>
+                        <template v-else>
+                            <match-day-prediction v-for="match_day in matches_played_poule" :match_day="match_day" :name="participant.name"
+                                                  :played="true" class="mb-4"></match-day-prediction>
+                            <match-day-prediction v-for="match_day in matches_to_play_poule" :match_day="match_day"
+                                                  :name="participant.name" class="mb-4"></match-day-prediction>
+                        </template>
                     </div>
                 </div>
             </div>
@@ -93,20 +99,25 @@
                 <div class="card border-0 rounded-0 shadow-sm mb-3">
                     <div class="card-body p-2 p-md-4">
                         <h2 class="txt-blue fw-bolder">Bonusvragen</h2>
-                        <div class="d-flex flex-column mb-3" v-for="(q, idx) in questions">
-                            <span class="txt-orange fs-5 fst-italic">{{ q }}</span>
-                            <span class="txt-blue"><b>{{ getTeamName(participant.bonus[idx]) || '-' }}</b>
-                                <span v-if="idx === 0" class="small fst-italic"> ({{getPercentage(prediction_tournament_champion.find(i => i.id === participant.bonus[idx]).count)}}% denkt dit ook)</span>
-                                <span v-if="idx === 1" class="small fst-italic"> (nu {{totalGoals}})</span>
-                                <span v-if="idx === 2" class="small fst-italic"> (nu {{totalCards}})</span>
-                                <span v-if="idx === 3" class="small fst-italic"> ({{getPercentage(prediction_most_against.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{getTeamName(groupedGoalsAgainst[0].id)}})</span>
-                                <span v-if="idx === 4" class="small fst-italic"> ({{getPercentage(prediction_most_cards.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{getTeamName(groupedTeamCards[0].id)}})</span>
-                                <span v-if="idx === 5" class="small fst-italic"> ({{getPercentage(prediction_top_scorer.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{groupedTopScorer[0]?.player || '?'}})</span>
-                                <span v-if="idx === 6" class="small fst-italic"> ({{getPercentage(prediction_top_assist.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{'?'}})</span>
-                                <span v-if="idx === 7" class="small fst-italic"> ({{getPercentage(prediction_first_goal_nl.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{bonus[7]}})</span>
-                                <span v-if="idx === 8" class="small fst-italic"> ({{getPercentage(prediction_first_card_nl.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{bonus[8]}})</span>
-                            </span>
+                        <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
+                            <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij start toernooi.
                         </div>
+                        <template v-else>
+                            <div class="d-flex flex-column mb-3" v-for="(q, idx) in questions">
+                                <span class="txt-orange fs-5 fst-italic">{{ q }}</span>
+                                <span class="txt-blue"><b>{{ getTeamName(participant.bonus[idx]) || '-' }}</b>
+                                    <span v-if="idx === 0" class="small fst-italic"> ({{getPercentage(prediction_tournament_champion.find(i => i.id === participant.bonus[idx]).count)}}% denkt dit ook)</span>
+                                    <span v-if="idx === 1" class="small fst-italic"> (nu {{totalGoals}})</span>
+                                    <span v-if="idx === 2" class="small fst-italic"> (nu {{totalCards}})</span>
+                                    <span v-if="idx === 3" class="small fst-italic"> ({{getPercentage(prediction_most_against.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{getTeamName(groupedGoalsAgainst[0].id)}})</span>
+                                    <span v-if="idx === 4" class="small fst-italic"> ({{getPercentage(prediction_most_cards.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{getTeamName(groupedTeamCards[0].id)}})</span>
+                                    <span v-if="idx === 5" class="small fst-italic"> ({{getPercentage(prediction_top_scorer.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{groupedTopScorer[0]?.player || '?'}})</span>
+                                    <span v-if="idx === 6" class="small fst-italic"> ({{getPercentage(prediction_top_assist.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{'?'}})</span>
+                                    <span v-if="idx === 7" class="small fst-italic"> ({{getPercentage(prediction_first_goal_nl.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{bonus[7]}})</span>
+                                    <span v-if="idx === 8" class="small fst-italic"> ({{getPercentage(prediction_first_card_nl.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{bonus[8]}})</span>
+                                </span>
+                            </div>
+                        </template>
                     </div>
                 </div>
                 <!-- voorspelling -->
@@ -114,10 +125,15 @@
                     <div class="card-body position-relative p-2 p-md-4">
                         <h2 class="txt-blue fw-bolder">Voorspellingen Knock-Out</h2>
                         <p>Bekijk de voorspellingen van <b>{{ participant.name }}</b> Bij reeds gespeelde wedstrijden wordt de stand na 90 minuten speeltijd getoond <u>onder</u> de voorspelling.</p>
-                        <match-day-prediction v-for="match_day in matches_played_knock_out" :match_day="match_day" :name="participant.name"
-                                              :played="true" :knockout="true" class="mb-4"></match-day-prediction>
-                        <match-day-prediction v-for="match_day in matches_to_play_knock_out" :match_day="match_day"
-                                              :name="participant.name" :knockout="true" class="mb-4"></match-day-prediction>
+                        <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
+                            <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij start toernooi.
+                        </div>
+                        <template v-else>
+                            <match-day-prediction v-for="match_day in matches_played_knock_out" :match_day="match_day" :name="participant.name"
+                                                  :played="true" :knockout="true" class="mb-4"></match-day-prediction>
+                            <match-day-prediction v-for="match_day in matches_to_play_knock_out" :match_day="match_day"
+                                                  :name="participant.name" :knockout="true" class="mb-4"></match-day-prediction>
+                        </template>
                     </div>
                 </div>
             </div>
@@ -195,6 +211,10 @@ onBeforeMount(() => {
 
 onBeforeRouteUpdate((to, from) => {
     participant.value = tournament.getParticipant(to.params.id)
+})
+
+const started =  computed(() => {
+    return matches_played.value.length
 })
 
 /**

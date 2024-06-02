@@ -1,4 +1,14 @@
 <template>
+    <header class="bg-blue py-3 py-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="fs-2 text-white fw-bolder">EK 2024</h1>
+                    <h2 class="fs-6 mb-0 txt-orange fw-bolder">Ranglijst</h2>
+                </div>
+            </div>
+        </div>
+    </header>
     <main class="container-md py-2 py-md-5">
         <div class="row gy-3">
             <div class="col-12">
@@ -22,8 +32,8 @@
                                 <tr>
                                     <th class="txt-orange" scope="col">#</th>
                                     <th class="txt-orange" scope="col"></th>
-                                    <th class="txt-orange" scope="col">Deelnemer</th>
-                                    <th class="txt-orange" style="width: 99%" scope="col">Team</th>
+                                    <th class="txt-orange" scope="col">Team</th>
+                                    <th class="txt-orange" style="width: 99%" scope="col">Deelnemer</th>
                                     <th class="txt-orange" scope="col">Punten</th>
                                 </tr>
                                 </thead>
@@ -40,8 +50,8 @@
                                            class="txt-orange bi bi-arrow-up-circle-fill"></i>
                                         <i v-else class="bi bi-dash-lg"></i>
                                     </td>
-                                    <td class="text-nowrap"><router-link :to="{name: 'deelnemer', params: {id: player.name}}">{{ player.name }}</router-link></td>
-                                    <td class="text-nowrap" style="width: 99%;">{{ player.team_name }}</td>
+                                    <td class="text-nowrap"><router-link :to="{name: 'deelnemer', params: {id: player.name}}">{{ player.team_name }}</router-link></td>
+                                    <td class="text-nowrap" style="width: 99%;">{{ player.name }}</td>
                                     <td>{{ player.score }}</td>
                                 </tr>
                                 </tbody>

@@ -113,7 +113,10 @@
         </div>
     </header>
     <main class="container-md py-2 py-md-5">
-        <div class="row g-3 mb-3">
+        <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
+            <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij start toernooi.
+        </div>
+        <div v-else class="row g-3 mb-3">
             <div class="col-md-4">
                 <prediction-table class="mb-3" :list="prediction_tournament_champion" title="Wie wordt kampioen?"/>
                 <prediction-table class="mb-3" :list="prediction_top_scorer" title="Wie wordt top scorer?"/>
@@ -136,9 +139,11 @@ import {storeToRefs} from "pinia";
 import {useTournament} from "@/stores/content";
 import NumberCounter from "@/components/NumberCounter.vue";
 import PredictionTable from "@/components/PredictionTable.vue";
+import {computed} from "vue";
 
 const tournament = useTournament();
 const {
+    matches_played,
     teamImages,
     teams,
     prediction_tournament_champion,
@@ -172,6 +177,11 @@ function getImage(name) {
 function getTeamName(id) {
     return teams.value.find((e) => e.id === id)?.name || id
 }
+
+
+const started =  computed(() => {
+    return matches_played.value.length
+})
 
 </script>
 
