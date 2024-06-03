@@ -2,34 +2,36 @@
     <div class="card border-0 rounded-0">
         <div class="card-body">
             <h5 class="mb-3 txt-blue fw-bolder">{{ title }}</h5>
-            <table class="table align-middle">
-                <thead>
-                <tr>
-                    <th class="txt-orange" scope="col">Land</th>
-                    <th class="txt-orange w-50" scope="col">%</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr v-for="team in list.slice(0, open ? list.length : 5)">
-                    <td>
-                        <img :src="getImage(team.id)" alt="" loading="lazy" width="30px">
-                        <span class="ms-2 txt-blue fw-bold">{{ getTeamName(team.id) }}</span>
-                    </td>
-                    <td class="w-50">
-                        <div class="d-flex align-items-center">
-                            <div :aria-valuenow="getPercentage(team.count)" aria-label="Basic example"
-                                 aria-valuemax="100"
-                                 aria-valuemin="0" class="progress flex-grow-1"
-                                 role="progressbar">
-                                <div :style="'width: '+getPercentage(team.count)+'%'"
-                                     class="progress-bar bg-orange"></div>
+            <div class="w-100 overflow-hidden overflow-x-auto">
+                <table class="table align-middle">
+                    <thead>
+                    <tr>
+                        <th class="txt-orange" scope="col">Land</th>
+                        <th class="txt-orange w-50" scope="col">%</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="team in list.slice(0, open ? list.length : 5)">
+                        <td class="text-nowrap">
+                            <img v-if="image" class="me-2" :src="getImage(team.id)" alt="" loading="lazy" width="30px">
+                            <span class="txt-blue fw-bold">{{ getTeamName(team.id) }}</span>
+                        </td>
+                        <td class="w-50">
+                            <div class="d-flex align-items-center">
+                                <div :aria-valuenow="getPercentage(team.count)" aria-label="Basic example"
+                                     aria-valuemax="100"
+                                     aria-valuemin="0" class="progress flex-grow-1"
+                                     role="progressbar">
+                                    <div :style="'width: '+getPercentage(team.count)+'%'"
+                                         class="progress-bar bg-orange"></div>
+                                </div>
+                                <span class="ms-2">{{ getPercentage(team.count) }}%</span>
                             </div>
-                            <span class="ms-2">{{ getPercentage(team.count) }}%</span>
-                        </div>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
             <button class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3"
                     @click="open = !open">Toon alle<i
                 :class="open ? 'bi-chevron-up' : 'bi-chevron-down'"
@@ -50,6 +52,7 @@ const {teamImages, teams} = storeToRefs(tournament)
 const props = defineProps({
     title: {type: String, required: true},
     list: {type: Array, required: true},
+    image: {type: Boolean, default: true},
 })
 
 const open = ref(false)

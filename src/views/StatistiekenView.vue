@@ -47,6 +47,9 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <tr v-if="!groupedTopScorer.length">
+                                <td colspan="100%">Geen top scorers bekend.</td>
+                            </tr>
                             <tr v-for="(goal, idx) in groupedTopScorer.slice(0, 5)">
                                 <td>
                                     <img :src="getImage(goal.team)" alt="" loading="lazy" width="30px">
@@ -119,16 +122,24 @@
         <div v-else class="row g-3 mb-3">
             <div class="col-md-4">
                 <prediction-table class="mb-3" :list="prediction_tournament_champion" title="Wie wordt kampioen?"/>
-                <prediction-table class="mb-3" :list="prediction_top_scorer" title="Wie wordt top scorer?"/>
-                <prediction-table :list="prediction_first_card_nl" title="Eerste kaart Team NL?"/>
             </div>
             <div class="col-md-4">
                 <prediction-table class="mb-3" :list="prediction_most_against" title="Meeste tegengoals?"/>
-                <prediction-table :list="prediction_top_assist" title="Wie wordt assist koning?"/>
             </div>
             <div class="col-md-4">
                 <prediction-table class="mb-3" :list="prediction_most_cards" title="Meeste kaarten?"/>
-                <prediction-table :list="prediction_first_goal_nl" title="Eerste goal Team NL?"/>
+            </div>
+            <div class="col-md-4">
+                <prediction-table :image="false" class="mb-3" :list="prediction_top_scorer" title="Wie wordt top scorer?"/>
+            </div>
+            <div class="col-md-4">
+                <prediction-table :image="false" :list="prediction_top_assist" title="Wie wordt assist koning?"/>
+            </div>
+            <div class="col-md-4">
+                <prediction-table :image="false" :list="prediction_first_goal_nl" title="Eerste goal Team NL?"/>
+            </div>
+            <div class="col-md-4">
+                <prediction-table :image="false" :list="prediction_first_card_nl" title="Eerste kaart Team NL?"/>
             </div>
         </div>
     </main>

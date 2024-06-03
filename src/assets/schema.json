@@ -357,8 +357,8 @@
           "stadium": "Düsseldorf Arena",
           "city": "Dusseldorf",
           "teams": [
-            "ALB",
-            "ESP"
+            "CRO",
+            "ITA"
           ]
         },
         {
@@ -368,8 +368,8 @@
           "stadium": "Leipzig Stadium",
           "city": "Leipzig",
           "teams": [
-            "CRO",
-            "ITA"
+            "ALB",
+            "ESP"
           ]
         }
       ]
@@ -457,8 +457,8 @@
           "stadium": "Arena AufSchalke",
           "city": "Gelsenkirchen",
           "teams": [
-            "GEO",
-            "POR"
+            "CZE",
+            "TUR"
           ]
         },
         {
@@ -468,8 +468,8 @@
           "stadium": "Volksparkstadion",
           "city": "Hamburg",
           "teams": [
-            "CZE",
-            "TUR"
+            "GEO",
+            "POR"
           ]
         }
       ]

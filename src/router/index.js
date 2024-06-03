@@ -6,6 +6,7 @@ import PouleView from "@/views/PouleView.vue";
 import UitslagenView from "@/views/UitslagenView.vue";
 import DeelnemerView from "@/views/DeelnemerView.vue";
 import StatistiekenView from "@/views/StatistiekenView.vue";
+import InvulView from "@/views/InvulView.vue";
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -22,11 +23,6 @@ const router = createRouter({
         { path: ':id', name: 'deelnemer', component: DeelnemerView},
       ]
     },
-    // {
-    //   path: '/ranglijst/:id',
-    //   name: 'deelnemer',
-    //   component: DeelnemerView
-    // },
     {
       path: '/programma',
       name: 'programma',
@@ -46,6 +42,11 @@ const router = createRouter({
       path: '/statistieken',
       name: 'statistieken',
       component: StatistiekenView
+    },
+    {
+      path: '/invulsheet',
+      name: 'invulsheet',
+      component: InvulView
     },
     { path: "/:pathMatch(.*)*", redirect: '/' }
   ],
