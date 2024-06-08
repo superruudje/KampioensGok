@@ -21,8 +21,8 @@ export const useTournament = defineStore('tournament', {
             "-", //4. most cards
             "-", //5. top scorer
             "-", //6. top assist
-            "?", //7. first goal NL
-            "?" //8. first card NL
+            "-", //7. first goal NL
+            "-" //8. first card NL
         ],
 
         teamImages: [],

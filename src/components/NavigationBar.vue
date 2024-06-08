@@ -7,23 +7,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <router-link @click="closeMenu" :to="{name: 'home'}" activeClass="active" class="nav-link">Home</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link @click="closeMenu" :to="{name: 'ranglijst'}" activeClass="active" class="nav-link">Ranglijst</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link @click="closeMenu" :to="{name: 'programma'}" activeClass="active" class="nav-link">Programma</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link @click="closeMenu" :to="{name: 'poules'}" activeClass="active" class="nav-link">Poules</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link @click="closeMenu" :to="{name: 'uitslagen'}" activeClass="active" class="nav-link">Uitslagen</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link @click="closeMenu" :to="{name: 'statistieken'}" activeClass="active" class="nav-link">Statistieken</router-link>
+                    <li class="nav-item me-1" v-for="(page, i) in pages">
+                        <router-link @click="closeMenu" :to="{name: page}" activeClass="active" class="nav-link text-capitalize px-2">{{page}}</router-link>
                     </li>
                 </ul>
             </div>
@@ -36,6 +21,8 @@ import {ref} from "vue";
 
 const collapseBtn = ref(null)
 
+const pages = ['home', 'ranglijst', 'programma', 'poules', 'uitslagen', 'statistieken', 'spelregels'];
+
 function closeMenu() {
     if (getComputedStyle(collapseBtn.value).display !== 'none')
         collapseBtn.value.click()
@@ -43,5 +30,8 @@ function closeMenu() {
 </script>
 
 <style scoped lang="sass">
-
+.nav-item a
+    transform: skew(-8deg)
+    &.active
+        background-color: #253780!important
 </style>

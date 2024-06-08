@@ -2,7 +2,11 @@
     <div class="d-flex flex-column h-100">
         <navigation-bar></navigation-bar>
         <main class="flex-grow-1" style="padding-top: 56px">
-            <router-view></router-view>
+            <router-view v-slot="{ Component }">
+                <transition name="slide-fade">
+                    <component :is="Component" />
+                </transition>
+            </router-view>
         </main>
         <back-to-top/>
         <footer-component/>
@@ -26,4 +30,10 @@ onMounted(() => {
 })
 </script>
 
-<style scoped lang="sass"></style>
+<style scoped lang="sass">
+.slide-fade-enter-active
+    transition: all 0.3s ease-out
+.slide-fade-enter-from
+    transform: translateX(100%)
+    opacity: 0
+</style>

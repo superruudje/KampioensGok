@@ -7,6 +7,7 @@ import UitslagenView from "@/views/UitslagenView.vue";
 import DeelnemerView from "@/views/DeelnemerView.vue";
 import StatistiekenView from "@/views/StatistiekenView.vue";
 import InvulView from "@/views/InvulView.vue";
+import SpelregelsView from "@/views/SpelregelsView.vue";
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -42,6 +43,11 @@ const router = createRouter({
       path: '/statistieken',
       name: 'statistieken',
       component: StatistiekenView
+    },
+    {
+      path: '/spelregels',
+      name: 'spelregels',
+      component: SpelregelsView
     },
     {
       path: '/invulsheet',
