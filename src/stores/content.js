@@ -1,6 +1,6 @@
 import {defineStore} from "pinia";
 import teams from '../assets/teams.json'
-import schema from '../assets/schema.json'
+import matches from '../assets/matches.json'
 import players from '../assets/players.json'
 import poules from '../assets/poules.json'
 import {filename} from 'pathe/utils'
@@ -8,21 +8,21 @@ import {filename} from 'pathe/utils'
 export const useTournament = defineStore('tournament', {
     state: () => ({
         teams: [],
-        schema: [],
+        matches: [],
         players: [],
         poules: [],
         knock_out: {},
 
         bonus: [
-            "-", //0.champion
-            -1, //1. goals scored
-            -1, //2. cards given
-            "-", //3. most against
-            "-", //4. most cards
-            "-", //5. top scorer
-            "-", //6. top assist
-            "-", //7. first goal NL
-            "-" //8. first card NL
+            "", //0.champion
+            0, //1. goals scored
+            0, //2. cards given
+            "", //3. most against
+            "", //4. most cards
+            "", //5. top scorer
+            "", //6. top assist
+            "", //7. first goal NL
+            "" //8. first card NL
         ],
 
         teamImages: [],
@@ -43,64 +43,63 @@ export const useTournament = defineStore('tournament', {
          * @returns {*}
          */
         matches_played() {
-            return this.schema.filter((game_day) => {
-                const dateParts = game_day.date.split("-");
-                const date = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
-                const now = new Date()
-                return now > date
-            })
+            return this.matches.filter(m => m.hasOwnProperty('result'))
+        },
+        /**
+         * Return matches played
+         * @returns {*}
+         */
+        matches_played_by_day() {
+            return Object.groupBy(this.matches_played, ({date}) => date)
         },
         /**
          * Return matches played in poule fase
          * @returns {*}
          */
         matches_played_poule() {
-            return this.matches_played.filter((game_day) => typeof game_day.match_day === "number")
-        },
-        /**
-         * Return matches played in knockout fase
-         * @returns {*}
-         */
-        matches_played_knock_out() {
-            return this.matches_played.filter((game_day) => typeof game_day.match_day === "string")
-        },
-        /**
-         * Return matches yet to be played
-         * @returns {*}
-         */
-        matches_to_play() {
-            return this.schema.filter((game_day) => {
-                const dateParts = game_day.date.split("-");
-                const date = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
-                const now = new Date()
-                return now < date
-            })
+            return Object.groupBy(this.matches_played.filter((m) => m.group.length === 1), ({date}) => date)
         },
         /**
          * Return matches to play in poule fase
          * @returns {*}
          */
         matches_to_play_poule() {
-            return this.matches_to_play.filter((game_day) => typeof game_day.match_day === "number")
+            return Object.groupBy(this.matches_to_play.filter((m) => m.group.length === 1), ({date}) => date)
+        },
+        /**
+         * Return matches played in knockout fase
+         * @returns {*}
+         */
+        matches_played_knock_out() {
+            return Object.groupBy(this.matches_played.filter((m) => m.group.length > 1), ({date}) => date)
         },
         /**
          * Return matches to play in knockout fase
          * @returns {*}
          */
         matches_to_play_knock_out() {
-            return this.matches_to_play.filter((game_day) => typeof game_day.match_day === "string")
+            return Object.groupBy(this.matches_to_play.filter((m) => m.group.length > 1), ({date}) => date)
+        },
+        /**
+         * Return matches yet to be played
+         * @returns {*}
+         */
+        matches_to_play() {
+            return this.matches.filter(m => !m.hasOwnProperty('result'))
+        },
+        /**
+         * Return matches yet to be played
+         * @returns {*}
+         */
+        matches_to_play_by_day() {
+            return Object.groupBy(this.matches_to_play, ({date}) => date)
         },
         /**
          * Return upcoming games
          * @returns {*}
          */
         upcoming_matches() {
-            return this.schema.filter((game_day) => {
-                const dateParts = game_day.date.split("-");
-                const date = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
-                const now = new Date()
-                return now < date
-            }).slice(0, 2)
+            return Object.groupBy(this.matches_to_play.slice(0, 5), ({date}) => date)
         },
         /**
          * Total goals scored
@@ -108,10 +107,9 @@ export const useTournament = defineStore('tournament', {
          */
         totalGoals() {
             let goals = 0
-            this.matches_played.forEach((match_day) => {
-                match_day.matches.forEach(match => {
-                    goals+= match.result_nvl?.reduce((partialSum, a) => partialSum + a, 0) || 0;
-                })
+            this.matches_played.forEach(match => {
+                const result = match.result_nvl || match.result
+                goals += result?.reduce((partialSum, a) => partialSum + a, 0) || 0;
             })
             return goals
         },
@@ -121,12 +119,10 @@ export const useTournament = defineStore('tournament', {
          */
         totalCards() {
             let cards = 0
-            this.matches_played.forEach((match_day) => {
-                match_day.matches.forEach(match => {
-                    const yellow = match.timeline?.filter(e => e.type === 'yellow').length || 0
-                    const red = match.timeline?.filter(e => e.type === 'red' && e.direct).length || 0
-                    cards+= (yellow + red)
-                })
+            this.matches_played.forEach(match => {
+                const yellow = match.timeline?.filter(e => e.type === 'yellow').length || 0
+                const red = match.timeline?.filter(e => e.type === 'red' && e.direct).length || 0
+                cards += (yellow + red)
             })
             return cards
         },
@@ -135,62 +131,69 @@ export const useTournament = defineStore('tournament', {
          * @returns {{}}
          */
         groupedGoalsFor() {
-            let res = this.teams.map((t) => { return { id: t.id, count: 0}})
-            this.matches_played.forEach((match_day) => {
-                match_day.matches.forEach(match => {
-                    const goals = match.timeline.filter(e => e.type === 'goal')
-                    goals.reduce((p, goal) => {
-                        const team = goal.team
-                        if (!p.some((t) => t.id === team))
-                            p.push({id: team, count: 0})
-                        p.find((t) => t.id === team).count++;
-                        return p
-                    }, res)
-                })
+            let res = this.teams.map((t) => {
+                return {id: t.id, count: 0}
             })
-            return res.sort((a, b) => { return b.count - a.count })
+            this.matches_played.forEach(match => {
+                const goals = match.timeline.filter(e => e.type === 'goal')
+                goals.reduce((p, goal) => {
+                    const team = goal.team
+                    if (!p.some((t) => t.id === team))
+                        p.push({id: team, count: 0})
+                    p.find((t) => t.id === team).count++;
+                    return p
+                }, res)
+            })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
         },
         /**
          * Group teams by goals against
          * @returns {{}}
          */
         groupedGoalsAgainst() {
-            let res = this.teams.map((t) => { return { id: t.id, count: 0}})
-            this.matches_played.forEach((match_day) => {
-                match_day.matches.forEach(match => {
-                    const goals = match.timeline?.filter(e => e.type === 'goal') || []
-                    goals.reduce((p, goal) => {
-                        const team = goal.team === match.teams[0] ? match.teams[1] : match.teams[0]
-                        if (!p.some((t) => t.id === team))
-                            p.push({id: team, count: 0})
-                        p.find((t) => t.id === team).count++;
-                        return p
-                    }, res)
-                })
+            let res = this.teams.map((t) => {
+                return {id: t.id, count: 0}
             })
-            return res.sort((a, b) => { return b.count - a.count })
+            this.matches_played.forEach(match => {
+                const goals = match.timeline?.filter(e => e.type === 'goal') || []
+                goals.reduce((p, goal) => {
+                    const team = goal.team === match.teams[0] ? match.teams[1] : match.teams[0]
+                    if (!p.some((t) => t.id === team))
+                        p.push({id: team, count: 0})
+                    p.find((t) => t.id === team).count++;
+                    return p
+                }, res)
+
+            })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
         },
         /**
          * Group teams cards
          * @returns {*}
          */
         groupedTeamCards() {
-            let res = this.teams.map((t) => { return { id: t.id, count: 0}})
-            this.matches_played.forEach((match_day) => {
-                match_day.matches.forEach(match => {
-                    const yellow = match.timeline?.filter(e => e.type === 'yellow') || []
-                    const red = match.timeline?.filter(e => e.type === 'red' && e.direct) || []
-                    const cards = yellow.concat(red)
+            let res = this.teams.map((t) => {
+                return {id: t.id, count: 0}
+            })
+            this.matches_played.forEach(match => {
+                const yellow = match.timeline?.filter(e => e.type === 'yellow') || []
+                const red = match.timeline?.filter(e => e.type === 'red' && e.direct) || []
+                const cards = yellow.concat(red)
 
-                    cards.forEach((card) => {
-                        const team = card.team
-                        if (!res.some((t) => t.id === team))
-                            res.push({id: team, count: 0})
-                        res.find((t) => t.id === team).count++;
-                    })
+                cards.forEach((card) => {
+                    const team = card.team
+                    if (!res.some((t) => t.id === team))
+                        res.push({id: team, count: 0})
+                    res.find((t) => t.id === team).count++;
                 })
             })
-            return res.sort((a, b) => { return b.count - a.count })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
         },
         /**
          * Group top scorer
@@ -198,18 +201,37 @@ export const useTournament = defineStore('tournament', {
          */
         groupedTopScorer() {
             let res = []
-            this.matches_played.forEach((match_day) => {
-                match_day.matches.forEach(match => {
-                    const goals = match.timeline?.filter(e => e.type === 'goal') || []
-                    goals.forEach((goal) => {
-                        const player = goal.player
-                        if (!res.some((t) => t.player === player))
-                            res.push({player: player, team: goal.team, count: 0})
-                        res.find((t) => t.player === player).count++;
-                    })
+            this.matches_played.forEach(match => {
+                const goals = match.timeline?.filter(e => e.type === 'goal') || []
+                goals.forEach((goal) => {
+                    const player = goal.player
+                    if (!res.some((t) => t.player === player))
+                        res.push({player: player, team: goal.team, count: 0})
+                    res.find((t) => t.player === player).count++;
                 })
             })
-            return res.sort((a, b) => { return b.count - a.count })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
+        },
+        /**
+         * Group king assist
+         * @returns {*}
+         */
+        groupedAssist() {
+            let res = []
+            this.matches_played.forEach(match => {
+                const assists = match.timeline?.filter(e => e.type === 'assist') || []
+                assists.forEach((assist) => {
+                    const player = assist.player
+                    if (!res.some((t) => t.player === player))
+                        res.push({player: player, team: assist.team, count: 0})
+                    res.find((t) => t.player === player).count++;
+                })
+            })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
         },
         /**
          * Return counted champions
@@ -225,7 +247,9 @@ export const useTournament = defineStore('tournament', {
                     res.find((t) => t.id === winner).count++;
                 }
             })
-            return res.sort((a, b) => { return b.count - a.count })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
         },
         /**
          * Return counted most against
@@ -241,7 +265,9 @@ export const useTournament = defineStore('tournament', {
                     res.find((t) => t.id === winner).count++;
                 }
             })
-            return res.sort((a, b) => { return b.count - a.count })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
         },
         /**
          * Return counted most cards
@@ -257,7 +283,9 @@ export const useTournament = defineStore('tournament', {
                     res.find((t) => t.id === winner).count++;
                 }
             })
-            return res.sort((a, b) => { return b.count - a.count })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
         },
         /**
          * Return counted top scorer
@@ -273,7 +301,9 @@ export const useTournament = defineStore('tournament', {
                     res.find((t) => t.id === top_scorer).count++;
                 }
             })
-            return res.sort((a, b) => { return b.count - a.count })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
         },
         /**
          * Return counted top assist
@@ -289,7 +319,9 @@ export const useTournament = defineStore('tournament', {
                     res.find((t) => t.id === top_assist).count++;
                 }
             })
-            return res.sort((a, b) => { return b.count - a.count })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
         },
         /**
          * Return counted first goal NL
@@ -305,7 +337,9 @@ export const useTournament = defineStore('tournament', {
                     res.find((t) => t.id === first_goal).count++;
                 }
             })
-            return res.sort((a, b) => { return b.count - a.count })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
         },
         /**
          * Return counted first card NL
@@ -321,7 +355,9 @@ export const useTournament = defineStore('tournament', {
                     res.find((t) => t.id === first_card).count++;
                 }
             })
-            return res.sort((a, b) => { return b.count - a.count })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
         },
     },
     actions: {
@@ -330,7 +366,7 @@ export const useTournament = defineStore('tournament', {
          */
         fetchData() {
             this.teams = teams.teams
-            this.schema = schema.schema
+            this.matches = matches
             this.players = players.players
             this.poules = poules.poules
             this.knock_out = poules.knock_out
@@ -348,18 +384,9 @@ export const useTournament = defineStore('tournament', {
         /**
          * Return matches by poule name
          * @param poule
-         * @returns {*[]}
          */
         matches_by_poule(poule) {
-            let matches = []
-            this.schema.forEach((game_day) => {
-                if (game_day.matches.some(m => m.group === poule)) {
-                    let obj = {...game_day}
-                    obj.matches = game_day.matches.filter(m => m.group === poule)
-                    matches.push(obj)
-                }
-            })
-            return matches
+            return Object.groupBy(this.matches.filter(m => m.group === poule), ({date}) => date);
         },
         /**
          * Return standing
@@ -368,7 +395,7 @@ export const useTournament = defineStore('tournament', {
         getStanding(snapshot) {
             return this.players.map(player => {
                 return {
-                    scores: player.scores,
+                    // scores: player.scores,
                     name: player.name,
                     team_name: player.team_name,
                     score: this.getParticipantTotalScore(player.name, snapshot)
@@ -402,14 +429,14 @@ export const useTournament = defineStore('tournament', {
         getParticipantScoreMatches(name, snapshot) {
             let score = 0
 
-            const slice_num = snapshot !== null ? snapshot : this.matches_played.length
-            this.matches_played.slice(0, slice_num).forEach((match_day) => {
-                match_day.matches.forEach((match) => {
+            const slice_num = snapshot !== null ? snapshot : Object.keys(this.matches_played_by_day).length
+            const keys = Object.keys(this.matches_played_by_day).slice(0, slice_num)
+            keys.forEach(key => {
+                this.matches_played_by_day[key].forEach((match) => {
                     const player_prediction = this.getMatchPlayerPrediction(name, match.num)
-                    score += this.getPredictionScore(player_prediction, match)
+                    score += this.getPredictionScore(player_prediction, match).score
                 })
             })
-
             return score
         },
         /**
@@ -421,16 +448,16 @@ export const useTournament = defineStore('tournament', {
             let score = 0
             const player = this.players.find(player => player.name === name)
             // check for champion
-            if (player.bonus[0] === this.bonus[0]) score+= 75
+            if (player.bonus[0] === this.bonus[0]) score += 75
             // check for estimation questions
             for (let i = 1; i < 3; i++) {
-                if (player.bonus[i] === this.bonus[i]) score+= 40
-                else if (player.bonus[i] >= (this.bonus[i] - 5) && player.bonus[i] <= (this.bonus[i] + 5)) score+= 25
-                else if (player.bonus[i] >= (this.bonus[i] - 10) && player.bonus[i] <= (this.bonus[i] + 10)) score+= 15
+                if (player.bonus[i] === this.bonus[i]) score += 40
+                else if (player.bonus[i] >= (this.bonus[i] - 5) && player.bonus[i] <= (this.bonus[i] + 5)) score += 25
+                else if (player.bonus[i] >= (this.bonus[i] - 10) && player.bonus[i] <= (this.bonus[i] + 10)) score += 15
             }
             // check for teams/player questions
             for (let i = 3; i < player.bonus.length; i++) {
-                if (player.bonus[i] === this.bonus[i]) score+= 10
+                if (player.bonus[i] === this.bonus[i]) score += 10
             }
             return score
         },
@@ -489,18 +516,27 @@ export const useTournament = defineStore('tournament', {
          */
         getPredictionScore(prediction, match) {
             let score = 0
+            let reason = []
             const final_score = match.result || [0, 0]
             const winner_prediction = prediction[0] === prediction[1] ? null : prediction[0] > prediction[1] ? 0 : 1
             const final_winner = final_score[0] === final_score[1] ? null : final_score[0] > final_score[1] ? 0 : 1
-            if (this.arrayEquals(prediction, final_score)) score+= 10
-            else if (final_winner === null && winner_prediction === null) score+= 7
-            else {
-                if (final_winner === winner_prediction)
-                    score+= 5
-                if (prediction[0] === final_score[0] || prediction[1] === final_score[1])
-                    score+= 2
+            if (this.arrayEquals(prediction, final_score)) {
+                score += 10
+                reason.push('correct voorspeld')
+            } else if (final_winner === null && winner_prediction === null) {
+                score += 7
+                reason.push('gelijkspel voorspeld')
+            } else {
+                if (final_winner === winner_prediction) {
+                    score += 5
+                    reason.push('winnaar voorspeld')
+                }
+                if (prediction[0] === final_score[0] || prediction[1] === final_score[1]) {
+                    score += 2
+                    reason.push('score voorspeld')
+                }
             }
-            return score
+            return {score, reason}
         },
         /**
          * Get computed poules standing
@@ -513,22 +549,20 @@ export const useTournament = defineStore('tournament', {
                 let poule_team = []
                 poule.teams.forEach((team) => {
                     let team_stats = {team: team, points: 0, for: 0, against: 0, matches: []}
-                    this.matches_played.forEach((match_day) => {
-                        match_day.matches.forEach((match) => {
-                            if (!match.teams.includes(team)) return
-                            const final_score = match.result
-                            const final_winner = final_score[0] === final_score[1] ? null : final_score[0] > final_score[1] ? 0 : 1
-                            if (final_winner === null) {
-                                team_stats.points+= 1
-                                team_stats.matches.push('D')
-                            } else if (match.teams[final_winner] === team) {
-                                team_stats.points+= 3
-                                team_stats.matches.push('W')
-                            } else
-                                team_stats.matches.push('W')
-                            team_stats.for+= match.teams[0] === team ? final_score[0] : final_score[1]
-                            team_stats.against+= match.teams[0] === team ? final_score[1] : final_score[0]
-                        })
+                    this.matches_played.forEach((match) => {
+                        if (!match.teams.includes(team)) return
+                        const final_score = match.result
+                        const final_winner = final_score[0] === final_score[1] ? null : final_score[0] > final_score[1] ? 0 : 1
+                        if (final_winner === null) {
+                            team_stats.points += 1
+                            team_stats.matches.push('D')
+                        } else if (match.teams[final_winner] === team) {
+                            team_stats.points += 3
+                            team_stats.matches.push('W')
+                        } else
+                            team_stats.matches.push('W')
+                        team_stats.for += match.teams[0] === team ? final_score[0] : final_score[1]
+                        team_stats.against += match.teams[0] === team ? final_score[1] : final_score[0]
                     })
                     poule_team.push(team_stats)
                 })

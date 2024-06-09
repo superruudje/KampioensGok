@@ -32,8 +32,7 @@ onMounted(() => {
 
 <style scoped lang="sass">
 .slide-fade-enter-active
-    transition: all 0.3s ease-out
+    transition: opacity .5s ease
 .slide-fade-enter-from
-    transform: translateX(100%)
     opacity: 0
 </style>

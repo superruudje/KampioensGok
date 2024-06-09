@@ -19,7 +19,7 @@
                                 <h2 class="mb-0 txt-blue fw-bolder">Ranglijst</h2>
                                 <div class="ms-auto w-auto input-group input-group-sm">
                                     <input v-model="searchTerm" class="form-control" placeholder="Zoek naar deelnemer of team"
-                                           type="search">
+                                           type="search" @input="goPage(0)">
                                     <span id="basic-addon1" class="input-group-text"><i class="bi bi-search"></i></span>
                                 </div>
                                 <select class="form-select form-select-sm w-auto" v-model="snapshot">
@@ -111,7 +111,7 @@
                                     </nav>
                                 </div>
                                 <div class="col-auto ms-auto">
-                                    <span class="txt-blue fw-bold small">{{ standing.length }} resultaten</span>
+                                    <span class="txt-blue fw-bold small">{{ filtersData.length }} resultaten</span>
                                 </div>
                                 <div class="col-auto">
                                     <select v-model="pageSize" aria-label="Default select example" class="form-select">
@@ -119,7 +119,7 @@
                                         <option :value="20">20 resultaten per pagina</option>
                                         <option :value="30">30 resultaten per pagina</option>
                                         <option :value="60">60 resultaten per pagina</option>
-                                        <option :value="'all'">Toon alles ({{ standing.length }})</option>
+                                        <option :value="'all'">Toon alles ({{ filtersData.length }})</option>
                                     </select>
                                 </div>
                             </div>
@@ -151,7 +151,7 @@ import {useTournament} from "@/stores/content";
 import {computed, onMounted, ref, watch} from "vue";
 
 const tournament = useTournament();
-const {pageSize, pageNumber, matches_played, players} = storeToRefs(tournament)
+const {pageSize, pageNumber, matches_played_by_day, players} = storeToRefs(tournament)
 const searchTerm = ref('')
 const standing = ref([])
 const old_standing = ref([])
@@ -159,7 +159,7 @@ const snapshot = ref(0)
 const chartData = ref([])
 
 const snapshots = computed(() => {
-    return matches_played.value.map(d => d.date)
+    return Object.keys(matches_played_by_day.value)
 })
 
 watch(snapshot, (newSnapshot) => {
@@ -201,7 +201,7 @@ const filtersData = computed(() => {
  */
 const pageCount = computed(() => {
     if (pageSize.value === 'all') return 1
-    const l = standing.value.length,
+    const l = filtersData.value.length,
         s = pageSize.value;
     return Math.ceil(l / s);
 })
@@ -239,7 +239,7 @@ function getScoreProgression(snapshot) {
             data.push({x: s, y: score})
         })
         const dataSet = {
-            name: player.name,
+            name: player.team_name,
             data: data
         }
         dataSets.push(dataSet)

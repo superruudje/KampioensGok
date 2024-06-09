@@ -55,7 +55,7 @@
                                 :class="openPoule === p.poule ? 'bi-chevron-up' : 'bi-chevron-down'" class="bi ms-2"></i>
                             </button>
                             <div v-if="openPoule === p.poule" class="mt-5">
-                                <match-day-component v-for="match_day in tournament.matches_by_poule(p.poule)" :full_width="true" :match_day="match_day"></match-day-component>
+                                <match-day-component v-for="(matches, match_day) in tournament.matches_by_poule(p.poule)" :full_width="true" :match_day="match_day" :matches="matches"></match-day-component>
                             </div>
                         </div>
                     </div>

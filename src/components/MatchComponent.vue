@@ -7,7 +7,7 @@
             <div class="d-flex justify-content-around align-items-center">
                 <div class="team-wrapper">
                     <img :src="imageA" alt="" loading="lazy">
-                    <span class="pt-1 pt-md-3">{{ getTeamName(match.teams[0]) }}</span>
+                    <span class="pt-1">{{ getTeamName(match.teams[0]) }}</span>
                 </div>
                 <div class="d-flex flex-column align-items-center">
                     <span v-if="match.result?.length" class="txt-orange fw-bold">{{ match.time }}</span>
@@ -19,7 +19,7 @@
                 </div>
                 <div class="team-wrapper">
                     <img :src="imageB" alt="" loading="lazy">
-                    <span class="pt-1 pt-md-3">{{ getTeamName(match.teams[1]) }}</span>
+                    <span class="pt-1">{{ getTeamName(match.teams[1]) }}</span>
                 </div>
             </div>
 

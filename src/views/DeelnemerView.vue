@@ -87,16 +87,16 @@
                                 <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij start toernooi.
                             </div>
                             <template v-else>
-                                <match-day-prediction v-for="match_day in matches_played_poule" :match_day="match_day" :name="participant.name"
+                                <match-day-prediction v-for="(matches, match_day) in matches_played_poule" :match_day="match_day" :matches="matches" :name="participant.name"
                                                       :played="true" class="mb-4"></match-day-prediction>
-                                <match-day-prediction v-for="match_day in matches_to_play_poule" :match_day="match_day"
+                                <match-day-prediction v-for="(matches, match_day) in matches_to_play_poule" :match_day="match_day" :matches="matches"
                                                       :name="participant.name" class="mb-4"></match-day-prediction>
                             </template>
                         </div>
                     </div>
                 </div>
-                <!-- bonus vragen -->
                 <div class="col-md-6">
+                    <!-- bonus vragen -->
                     <div class="card border-0 rounded-0 shadow-sm mb-3">
                         <div class="card-body p-4">
                             <h2 class="txt-blue fw-bolder">Bonusvragen</h2>
@@ -105,20 +105,25 @@
                             </div>
                             <template v-else>
                                 <div class="d-flex flex-column mb-3" v-for="(q, idx) in questions">
-                                    <span class="txt-orange fs-5 fst-italic">{{ q }}</span>
-                                    <span class="txt-blue"><b>{{ getTeamName(participant.bonus[idx]) || '-' }}</b>
-                                        <span v-if="idx === 0" class="small fst-italic"> ({{getPercentage(prediction_tournament_champion.find(i => i.id === participant.bonus[idx]).count)}}% denkt dit ook)</span>
-                                        <span v-if="idx === 1" class="small fst-italic"> (nu {{totalGoals}})</span>
-                                        <span v-if="idx === 2" class="small fst-italic"> (nu {{totalCards}})</span>
-                                        <span v-if="idx === 3" class="small fst-italic"> ({{getPercentage(prediction_most_against.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{getTeamName(groupedGoalsAgainst[0].id)}})</span>
-                                        <span v-if="idx === 4" class="small fst-italic"> ({{getPercentage(prediction_most_cards.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{getTeamName(groupedTeamCards[0].id)}})</span>
-                                        <span v-if="idx === 5" class="small fst-italic"> ({{getPercentage(prediction_top_scorer.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{groupedTopScorer[0]?.player || '?'}})</span>
-                                        <span v-if="idx === 6" class="small fst-italic"> ({{getPercentage(prediction_top_assist.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{'?'}})</span>
-                                        <span v-if="idx === 7" class="small fst-italic"> ({{getPercentage(prediction_first_goal_nl.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{bonus[7]}})</span>
-                                        <span v-if="idx === 8" class="small fst-italic"> ({{getPercentage(prediction_first_card_nl.find(i => i.id === participant.bonus[idx]).count)}}% denk dit ook, nu {{bonus[8]}})</span>
-                                    </span>
+                                    <span class="txt-orange fs-5 fst-italic">{{ q.label }}</span>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="txt-blue">
+                                            <i v-if="participant.bonus[idx] === bonus[idx]" class="bi bi-check-circle-fill me-2 text-success"></i>
+                                            <i v-if="bonus[idx] && participant.bonus[idx] !== bonus[idx]" class="bi bi-x-circle-fill me-2 text-danger"></i>
+                                            <b>{{ getTeamName(participant.bonus[idx]) }}</b>
+                                            <span v-if="q.type === 'exact'" class="small fst-italic"> ({{getPercentage(data[idx].find(i => i.id === participant.bonus[idx])?.count)}}% denkt dit ook{{ q.now ? `, nu ${q.now}` : "" }})</span>
+                                            <span v-else class="small fst-italic"> (nu {{q.now}})</span>
+                                        </span>
+                                        <template v-if="bonus[idx]">
+                                            <span class="badge bg-orange">+{{ participant.bonus[idx] === bonus[idx] ? q.p : 0}}</span>
+                                        </template>
+                                    </div>
                                 </div>
                             </template>
+                            <router-link :to="{name: 'statistieken'}"
+                                         class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3"
+                                         tag="button">Naar statistieken<i
+                                class="bi bi-chevron-right ms-2"></i></router-link>
                         </div>
                     </div>
                     <!-- voorspelling -->
@@ -130,10 +135,10 @@
                                 <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij start toernooi.
                             </div>
                             <template v-else>
-                                <match-day-prediction v-for="match_day in matches_played_knock_out" :match_day="match_day" :name="participant.name"
-                                                      :played="true" :knockout="true" class="mb-4"></match-day-prediction>
-                                <match-day-prediction v-for="match_day in matches_to_play_knock_out" :match_day="match_day"
-                                                      :name="participant.name" :knockout="true" class="mb-4"></match-day-prediction>
+                                <match-day-prediction v-for="(matches, match_day) in matches_played_knock_out" :match_day="match_day" :matches="matches" :name="participant.name"
+                                                      :played="true" class="mb-4"></match-day-prediction>
+                                <match-day-prediction v-for="(matches, match_day) in matches_to_play_knock_out" :match_day="match_day" :matches="matches"
+                                                      :name="participant.name" class="mb-4"></match-day-prediction>
                             </template>
                         </div>
                     </div>
@@ -157,6 +162,7 @@ const tournament = useTournament();
 const {
     players,
     matches_played,
+    matches_played_by_day,
     matches_played_poule,
     matches_to_play_poule,
     matches_played_knock_out,
@@ -166,6 +172,7 @@ const {
     groupedGoalsAgainst,
     groupedTeamCards,
     groupedTopScorer,
+    groupedAssist,
     prediction_tournament_champion,
     prediction_top_scorer,
     prediction_most_cards,
@@ -177,16 +184,28 @@ const {
 
 const participant = ref(null);
 
+const data = ref([
+    prediction_tournament_champion.value,
+    [],
+    [],
+    prediction_most_against.value,
+    prediction_most_cards.value,
+    prediction_top_scorer.value,
+    prediction_top_assist.value,
+    prediction_first_goal_nl.value,
+    prediction_first_card_nl.value
+])
+
 const questions = ref([
-    "Welk land wordt Europees kampioen?",
-    "Hoeveel goals worden er totaal gescoord?",
-    "Hoeveel kaarten worden er in het toernooi gegeven?",
-    "Welk land krijgt de meeste tegengoals?",
-    "Welk land krijgt de meeste kaarten?",
-    "Wie wordt er topscorer?",
-    "Wie wordt de koning van de assist?",
-    "Welke Nederlander scoort het eerste doelpunt?",
-    "Welke Nederlander krijgt de eerste kaart?"
+    {label: "Welk land wordt Europees kampioen?", type: "exact", p: 75},
+    {label: "Hoeveel goals worden er totaal gescoord?", type: "estimate", now: totalGoals.value},
+    {label: "Hoeveel kaarten worden er in het toernooi gegeven?", type: "estimate", now: totalCards.value},
+    {label: "Welk land krijgt de meeste tegengoals?", type: "exact", p: 10, now: getTeamName(groupedGoalsAgainst.value[0].id)},
+    {label: "Welk land krijgt de meeste kaarten?", type: "exact", p: 10, now: getTeamName(groupedTeamCards.value[0].id)},
+    {label: "Wie wordt er topscorer?", type: "exact", p: 10, now: groupedTopScorer.value[0]?.player || '-'},
+    {label: "Wie wordt de koning van de assist?", type: "exact", p: 10, now: groupedAssist.value[0]?.player || '-'},
+    {label: "Welke Nederlander scoort het eerste doelpunt?", type: "exact", p: 10},
+    {label: "Welke Nederlander krijgt de eerste kaart?", type: "exact", p: 10},
 ])
 
 /**
@@ -225,9 +244,9 @@ const started =  computed(() => {
  */
 const series = computed(() => {
     let data = [{x: "start", y: 0}]
-    matches_played.value.forEach((s, idx) => {
+    Object.keys(matches_played_by_day.value).forEach((key, idx) => {
         const score = tournament.getParticipantTotalScore(participant.value.name, idx + 1)
-        data.push({x: s.date, y: score})
+        data.push({x: key, y: score})
     })
     return [{
         name: participant.value.name,

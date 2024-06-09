@@ -1,0 +1,636 @@
+[
+  {
+    "num": 1,
+    "date": "14-06-2024",
+    "time": "21:00",
+    "group": "A",
+    "stadium": "Munich Football Arena",
+    "city": "Munich",
+    "teams": [
+      "GER",
+      "SCO"
+    ],
+    "result": [
+      3,
+      2
+    ],
+    "result_nvl": [
+      3,
+      3
+    ],
+    "timeline": [
+      {
+        "type": "assist",
+        "minute": 2,
+        "team": "GER",
+        "player": "Kroos, T."
+      },
+      {
+        "type": "goal",
+        "minute": 3,
+        "team": "GER",
+        "player": "Muller, T."
+      }
+    ]
+  },
+  {
+    "num": 2,
+    "date": "15-06-2024",
+    "time": "15:00",
+    "group": "A",
+    "stadium": "Cologne Stadium",
+    "city": "Cologne",
+    "teams": [
+      "HUN",
+      "SUI"
+    ]
+  },
+  {
+    "num": 3,
+    "date": "15-06-2024",
+    "time": "18:00",
+    "group": "B",
+    "stadium": "Olympiastadion",
+    "city": "Berlin",
+    "teams": [
+      "ESP",
+      "CRO"
+    ]
+  },
+  {
+    "num": 4,
+    "date": "15-06-2024",
+    "time": "21:00",
+    "group": "B",
+    "stadium": "BVB Stadion Dortmund",
+    "city": "Dortmund",
+    "teams": [
+      "ITA",
+      "ALB"
+    ]
+  },
+  {
+    "num": 5,
+    "date": "16-06-2024",
+    "time": "15:00",
+    "group": "D",
+    "stadium": "Volksparkstadion",
+    "city": "Hamburg",
+    "teams": [
+      "POL",
+      "NED"
+    ]
+  },
+  {
+    "num": 6,
+    "date": "16-06-2024",
+    "time": "18:00",
+    "group": "C",
+    "stadium": "Stuttgart Arena",
+    "city": "Stuttgart",
+    "teams": [
+      "SVN",
+      "DEN"
+    ]
+  },
+  {
+    "num": 7,
+    "date": "16-06-2024",
+    "time": "21:00",
+    "group": "C",
+    "stadium": "Arena AufSchalke",
+    "city": "Gelsenkirchen",
+    "teams": [
+      "SRB",
+      "ENG"
+    ]
+  },
+  {
+    "num": 8,
+    "date": "17-06-2024",
+    "time": "15:00",
+    "group": "E",
+    "stadium": "Munich Football Arena",
+    "city": "Munich",
+    "teams": [
+      "ROM",
+      "UKR"
+    ]
+  },
+  {
+    "num": 9,
+    "date": "17-06-2024",
+    "time": "18:00",
+    "group": "E",
+    "stadium": "Frankfurt Arena",
+    "city": "Frankfurt am Main",
+    "teams": [
+      "BEL",
+      "SVK"
+    ]
+  },
+  {
+    "num": 10,
+    "date": "17-06-2024",
+    "time": "21:00",
+    "group": "D",
+    "stadium": "Düsseldorf Arena",
+    "city": "Dusseldorf",
+    "teams": [
+      "AUT",
+      "FRA"
+    ]
+  },
+  {
+    "num": 11,
+    "date": "18-06-2024",
+    "time": "18:00",
+    "group": "F",
+    "stadium": "BVB Stadion Dortmund",
+    "city": "Dortmund",
+    "teams": [
+      "TUR",
+      "GEO"
+    ]
+  },
+  {
+    "num": 12,
+    "date": "18-06-2024",
+    "time": "21:00",
+    "group": "F",
+    "stadium": "Leipzig Stadium",
+    "city": "Leipzig",
+    "teams": [
+      "POR",
+      "CZE"
+    ]
+  },
+  {
+    "num": 13,
+    "date": "19-06-2024",
+    "time": "15:00",
+    "group": "B",
+    "stadium": "Volksparkstadion",
+    "city": "Hamburg",
+    "teams": [
+      "CRO",
+      "ALB"
+    ]
+  },
+  {
+    "num": 14,
+    "date": "19-06-2024",
+    "time": "18:00",
+    "group": "A",
+    "stadium": "Stuttgart Arena",
+    "city": "Stuttgart",
+    "teams": [
+      "GER",
+      "HUN"
+    ]
+  },
+  {
+    "num": 15,
+    "date": "19-06-2024",
+    "time": "21:00",
+    "group": "A",
+    "stadium": "Cologne Stadium",
+    "city": "Cologne",
+    "teams": [
+      "SCO",
+      "SUI"
+    ]
+  },
+  {
+    "num": 16,
+    "date": "20-06-2024",
+    "time": "15:00",
+    "group": "C",
+    "stadium": "Munich Football Arena",
+    "city": "Munich",
+    "teams": [
+      "SVN",
+      "SRB"
+    ]
+  },
+  {
+    "num": 17,
+    "date": "20-06-2024",
+    "time": "18:00",
+    "group": "C",
+    "stadium": "Frankfurt Arena",
+    "city": "Frankfurt am Main",
+    "teams": [
+      "DEN",
+      "ENG"
+    ]
+  },
+  {
+    "num": 18,
+    "date": "20-06-2024",
+    "time": "21:00",
+    "group": "B",
+    "stadium": "Arena AufSchalke",
+    "city": "Gelsenkirchen",
+    "teams": [
+      "ESP",
+      "ITA"
+    ]
+  },
+  {
+    "num": 19,
+    "date": "21-06-2024",
+    "time": "15:00",
+    "group": "E",
+    "stadium": "Düsseldorf Arena",
+    "city": "Dusseldorf",
+    "teams": [
+      "SVK",
+      "UKR"
+    ]
+  },
+  {
+    "num": 20,
+    "date": "21-06-2024",
+    "time": "18:00",
+    "group": "D",
+    "stadium": "Olympiastadion",
+    "city": "Berlin",
+    "teams": [
+      "POL",
+      "AUT"
+    ]
+  },
+  {
+    "num": 21,
+    "date": "21-06-2024",
+    "time": "21:00",
+    "group": "D",
+    "stadium": "Leipzig Stadium",
+    "city": "Leipzig",
+    "teams": [
+      "NED",
+      "FRA"
+    ]
+  },
+  {
+    "num": 22,
+    "date": "22-06-2024",
+    "time": "15:00",
+    "group": "F",
+    "stadium": "Volksparkstadion",
+    "city": "Hamburg",
+    "teams": [
+      "GEO",
+      "CZE"
+    ]
+  },
+  {
+    "num": 23,
+    "date": "22-06-2024",
+    "time": "18:00",
+    "group": "F",
+    "stadium": "BVB Stadion Dortmund",
+    "city": "Dortmund",
+    "teams": [
+      "TUR",
+      "POR"
+    ]
+  },
+  {
+    "num": 24,
+    "date": "22-06-2024",
+    "time": "21:00",
+    "group": "E",
+    "stadium": "Cologne Stadium",
+    "city": "Cologne",
+    "teams": [
+      "BEL",
+      "ROM"
+    ]
+  },
+  {
+    "num": 25,
+    "date": "23-06-2024",
+    "time": "21:00",
+    "group": "A",
+    "stadium": "Frankfurt Arena",
+    "city": "Frankfurt am Main",
+    "teams": [
+      "SUI",
+      "GER"
+    ]
+  },
+  {
+    "num": 26,
+    "date": "23-06-2024",
+    "time": "21:00",
+    "group": "A",
+    "stadium": "Stuttgart Arena",
+    "city": "Stuttgart",
+    "teams": [
+      "SCO",
+      "HUN"
+    ]
+  },
+  {
+    "num": 27,
+    "date": "24-06-2024",
+    "time": "21:00",
+    "group": "B",
+    "stadium": "Leipzig Stadium",
+    "city": "Leipzig",
+    "teams": [
+      "CRO",
+      "ITA"
+    ]
+  },
+  {
+    "num": 28,
+    "date": "24-06-2024",
+    "time": "21:00",
+    "group": "B",
+    "stadium": "Düsseldorf Arena",
+    "city": "Dusseldorf",
+    "teams": [
+      "ALB",
+      "ESP"
+    ]
+  },
+  {
+    "num": 29,
+    "date": "25-06-2024",
+    "time": "18:00",
+    "group": "D",
+    "stadium": "Olympiastadion",
+    "city": "Berlin",
+    "teams": [
+      "NED",
+      "AUT"
+    ]
+  },
+  {
+    "num": 30,
+    "date": "25-06-2024",
+    "time": "18:00",
+    "group": "D",
+    "stadium": "BVB Stadion Dortmund",
+    "city": "Dortmund",
+    "teams": [
+      "FRA",
+      "POL"
+    ]
+  },
+  {
+    "num": 31,
+    "date": "25-06-2024",
+    "time": "21:00",
+    "group": "C",
+    "stadium": "Cologne Stadium",
+    "city": "Cologne",
+    "teams": [
+      "ENG",
+      "SVN"
+    ]
+  },
+  {
+    "num": 32,
+    "date": "25-06-2024",
+    "time": "21:00",
+    "group": "C",
+    "stadium": "Munich Football Arena",
+    "city": "Munich",
+    "teams": [
+      "DEN",
+      "SRB"
+    ]
+  },
+  {
+    "num": 33,
+    "date": "26-06-2024",
+    "time": "18:00",
+    "group": "E",
+    "stadium": "Frankfurt Arena",
+    "city": "Frankfurt am Main",
+    "teams": [
+      "SVK",
+      "ROM"
+    ]
+  },
+  {
+    "num": 34,
+    "date": "26-06-2024",
+    "time": "18:00",
+    "group": "E",
+    "stadium": "Stuttgart Arena",
+    "city": "Stuttgart",
+    "teams": [
+      "UKR",
+      "BEL"
+    ]
+  },
+  {
+    "num": 35,
+    "date": "26-06-2024",
+    "time": "21:00",
+    "group": "F",
+    "stadium": "Volksparkstadion",
+    "city": "Hamburg",
+    "teams": [
+      "CZE",
+      "TUR"
+    ]
+  },
+  {
+    "num": 36,
+    "date": "26-06-2024",
+    "time": "21:00",
+    "group": "F",
+    "stadium": "Arena AufSchalke",
+    "city": "Gelsenkirchen",
+    "teams": [
+      "GEO",
+      "POR"
+    ]
+  },
+  {
+    "num": 37,
+    "date": "29-06-2024",
+    "time": "18:00",
+    "group": "Round of 16",
+    "stadium": "Olympiastadion",
+    "city": "Berlin",
+    "teams": [
+      "2nd: A",
+      "2nd: B"
+    ]
+  },
+  {
+    "num": 38,
+    "date": "29-06-2024",
+    "time": "21:00",
+    "group": "Round of 16",
+    "stadium": "BVB Stadion Dortmund",
+    "city": "Dortmund",
+    "teams": [
+      "1st: A",
+      "2nd: C"
+    ]
+  },
+  {
+    "num": 39,
+    "date": "30-06-2024",
+    "time": "18:00",
+    "group": "Round of 16",
+    "stadium": "Arena AufSchalke",
+    "city": "Gelsenkirchen",
+    "teams": [
+      "1nd: C",
+      "3rd: D/E/F"
+    ]
+  },
+  {
+    "num": 40,
+    "date": "30-06-2024",
+    "time": "21:00",
+    "group": "Round of 16",
+    "stadium": "Cologne Stadium",
+    "city": "Cologne",
+    "teams": [
+      "1st: B",
+      "3rd: A/D/E/F"
+    ]
+  },
+  {
+    "num": 41,
+    "date": "01-07-2024",
+    "time": "18:00",
+    "group": "Round of 16",
+    "stadium": "Düsseldorf Arena",
+    "city": "Dusseldorf",
+    "teams": [
+      "2nd: D",
+      "2nd: E"
+    ]
+  },
+  {
+    "num": 42,
+    "date": "01-07-2024",
+    "time": "21:00",
+    "group": "Round of 16",
+    "stadium": "Frankfurt Arena",
+    "city": "Frankfurt am Main",
+    "teams": [
+      "1st: F",
+      "3rd: A/B/C"
+    ]
+  },
+  {
+    "num": 43,
+    "date": "02-07-2024",
+    "time": "18:00",
+    "group": "Round of 16",
+    "stadium": "Munich Football Arena",
+    "city": "Munich",
+    "teams": [
+      "1nd: E",
+      "3rd: A/B/C/D"
+    ]
+  },
+  {
+    "num": 44,
+    "date": "02-07-2024",
+    "time": "21:00",
+    "group": "Round of 16",
+    "stadium": "Leipzig Stadium",
+    "city": "Leipzig",
+    "teams": [
+      "1st: D",
+      "2nd: F"
+    ]
+  },
+  {
+    "num": 45,
+    "date": "05-07-2024",
+    "time": "18:00",
+    "group": "Quarter-finals",
+    "stadium": "Stuttgart Arena",
+    "city": "Stuttgart",
+    "teams": [
+      "W40",
+      "W38"
+    ]
+  },
+  {
+    "num": 46,
+    "date": "05-07-2024",
+    "time": "21:00",
+    "group": "Quarter-finals",
+    "stadium": "Volksparkstadion",
+    "city": "Hamburg",
+    "teams": [
+      "W42",
+      "W41"
+    ]
+  },
+  {
+    "num": 47,
+    "date": "06-07-2024",
+    "time": "18:00",
+    "group": "Quarter-finals",
+    "stadium": "Düsseldorf Arena",
+    "city": "Dusseldorf",
+    "teams": [
+      "W39",
+      "W37"
+    ]
+  },
+  {
+    "num": 48,
+    "date": "06-07-2024",
+    "time": "21:00",
+    "group": "Quarter-finals",
+    "stadium": "Olympiastadion",
+    "city": "Berlin",
+    "teams": [
+      "W43",
+      "W44"
+    ]
+  },
+  {
+    "num": 49,
+    "date": "09-07-2024",
+    "time": "21:00",
+    "group": "Semi-finals",
+    "stadium": "Munich Football Arena",
+    "city": "Munich",
+    "teams": [
+      "W45",
+      "W46"
+    ]
+  },
+  {
+    "num": 50,
+    "date": "10-07-2024",
+    "time": "21:00",
+    "group": "Semi-finals",
+    "stadium": "BVB Stadion Dortmund",
+    "city": "Dortmund",
+    "teams": [
+      "W48",
+      "W47"
+    ]
+  },
+  {
+    "num": 51,
+    "date": "14-07-2024",
+    "time": "21:00",
+    "group": "Final",
+    "stadium": "Olympiastadion",
+    "city": "Berlin",
+    "teams": [
+      "W49",
+      "W50"
+    ]
+  }
+]

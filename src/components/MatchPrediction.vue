@@ -3,8 +3,17 @@
         <div class="w-100 position-relative d-flex justify-content-center align-items-center">
             <div class="team-wrapper d-flex flex-nowrap align-items-center justify-content-end gap-2">
                 <div class="flex-shrink-1 d-flex flex-column align-items-end">
-                    <span :class="{'text-decoration-line-through' : knockout && played && player_prediction_teams[0] !== match.teams[0]}"
-                          class="fs-6 flex-shrink-1">{{ knockout ? getTeamName(player_prediction_teams[0]) : getTeamName(match.teams[0]) }}</span>
+                    <span class="fs-6 flex-shrink-1">
+                        {{ knockout ? getTeamName(player_prediction_teams[0]) : getTeamName(match.teams[0]) }}
+                        <i v-if="knockout && isTeam(match.teams[0]) && player_prediction_teams[0] !== match.teams[0]"
+                           class="bi bi-exclamation-circle-fill text-danger"
+                           data-bs-title="Team incorrect voorspeld."
+                           data-bs-toggle="tooltip"></i>
+                        <i v-else-if="knockout && isTeam(match.teams[0])"
+                           class="bi bi-check-circle-fill text-success"
+                           data-bs-title="Team correct voorspeld."
+                           data-bs-toggle="tooltip"></i>
+                    </span>
                     <span v-if="knockout" class="text-black-50 small">{{ getTeamName(match.teams[0]) }}</span>
                 </div>
                 <img :src="imageA" alt="" class="d-none d-lg-block" loading="lazy" width="40"/>
@@ -18,13 +27,24 @@
                 <img :src="imageB" alt="" class="d-none d-lg-block" loading="lazy" width="40">
                 <img :src="imageB" alt="" class="d-lg-none" loading="lazy" width="26">
                 <div class="flex-shrink-1 d-flex flex-column align-items-start">
-                    <span :class="{'text-decoration-line-through' : knockout && played && player_prediction_teams[1] !== match.teams[1]}"
-                        class="fs-6 flex-shrink-1">{{ knockout ? getTeamName(player_prediction_teams[1]) : getTeamName(match.teams[1]) }}</span>
+                    <span class="fs-6 flex-shrink-1">
+                        <i v-if="knockout && isTeam(match.teams[1]) && player_prediction_teams[1] !== match.teams[1]"
+                           class="bi bi-exclamation-circle-fill text-danger"
+                           data-bs-title="Team incorrect voorspeld."
+                           data-bs-toggle="tooltip"></i>
+                        <i v-else-if="knockout && isTeam(match.teams[1])"
+                           class="bi bi-check-circle-fill text-success"
+                           data-bs-title="Team correct voorspeld."
+                           data-bs-toggle="tooltip"></i>
+                        {{ knockout ? getTeamName(player_prediction_teams[1]) : getTeamName(match.teams[1]) }}
+                    </span>
                     <span v-if="knockout" class="text-black-50 small">{{ getTeamName(match.teams[1]) }}</span>
                 </div>
             </div>
-            <span v-if="played" class="position-absolute top-0 end-0 txt-orange fw-bold">+{{
-                    tournament.getPredictionScore(player_prediction, match)
+            <span v-if="played" class="position-absolute top-0 end-0 badge bg-orange"
+                  data-bs-toggle="tooltip" data-bs-html="true"
+                  :data-bs-title="score.reason.join(', ') + '.'">+{{
+                    score.score
                 }}</span>
         </div>
     </div>
@@ -49,14 +69,27 @@ const player_prediction = tournament.getMatchPlayerPrediction(props.name, props.
 const player_prediction_teams = tournament.getMatchPlayerPredictionTeams(props.name, props.match.num)
 
 const imageA = computed(() => {
-    const team = props.knockout ? player_prediction_teams[0] : props.match.teams[0]
+    const team = isTeam(props.match.teams[0]) ? props.match.teams[0] : player_prediction_teams[0]
     return teamImages.value[team] || teamImages.value[`default`]
 })
 
 const imageB = computed(() => {
-    const team = props.knockout ? player_prediction_teams[1] : props.match.teams[1]
+    const team = isTeam(props.match.teams[1]) ? props.match.teams[1] : player_prediction_teams[1]
     return teamImages.value[team] || teamImages.value[`default`]
 })
+
+const score = computed(() => {
+    return props.played ? tournament.getPredictionScore(player_prediction, props.match) : {}
+})
+
+/**
+ * Check if is valid team id
+ * @param string
+ * @returns {boolean}
+ */
+function isTeam(string) {
+    return teams.value.some(t => t.id === string)
+}
 
 function getTeamName(team) {
     return teams.value.find((e) => e.id === team)?.name || team

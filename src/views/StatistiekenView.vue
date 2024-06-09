@@ -12,6 +12,32 @@
         </header>
         <main class="container-md py-2 py-md-5">
             <div class="row g-3 mb-3">
+                <!-- meeste tegengoals -->
+                <div class="col-md-4">
+                    <div class="card border-0 rounded-0 shadow-sm">
+                        <div class="card-body p-3 p-md-4">
+                            <h3 class="mb-3 txt-blue fw-bolder">Meeste tegengoals</h3>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="txt-orange" scope="col">Speler</th>
+                                    <th class="txt-orange" scope="col">Goals</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr v-for="(team, idx) in groupedGoalsAgainst.slice(0, 5)">
+                                    <td>
+                                        <img :src="getImage(team.id)" alt="" loading="lazy" width="30px">
+                                        <span class="ms-2 txt-blue fw-bold">{{ getTeamName(team.id) }}</span>
+                                    </td>
+                                    <td>{{ team.count }}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- meeste kaarten -->
                 <div class="col-md-4">
                     <div class="card border-0 rounded-0 shadow-sm">
                         <div class="card-body p-3 p-md-4">
@@ -36,35 +62,70 @@
                         </div>
                     </div>
                 </div>
+                <!-- top scorer -->
                 <div class="col-md-4">
                     <div class="card border-0 rounded-0 shadow-sm">
-                        <div class="card-body p-3 p-md-4">
-                            <h3 class="mb-3 txt-blue fw-bolder">Top scorers</h3>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th class="txt-orange" scope="col">Speler</th>
-                                    <th class="txt-orange" scope="col">Goals</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr v-if="!groupedTopScorer.length">
-                                    <td colspan="100%">Geen top scorers bekend.</td>
-                                </tr>
-                                <tr v-for="(goal, idx) in groupedTopScorer.slice(0, 5)">
-                                    <td>
-                                        <img :src="getImage(goal.team)" alt="" loading="lazy" width="30px">
-                                        <span class="ms-2 txt-blue fw-bold">{{ goal.player }}</span>
-                                    </td>
-                                    <td>{{ goal.count }}</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <div class="card border-0 rounded-0 shadow-sm">
+                            <div class="card-body p-3 p-md-4">
+                                <h3 class="mb-3 txt-blue fw-bolder">Top scorers</h3>
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th class="txt-orange" scope="col">Speler</th>
+                                        <th class="txt-orange" scope="col">Goals</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr v-if="!groupedTopScorer.length">
+                                        <td colspan="100%">Geen top scorers bekend.</td>
+                                    </tr>
+                                    <tr v-for="(goal, idx) in groupedTopScorer.slice(0, 5)">
+                                        <td>
+                                            <img :src="getImage(goal.team)" alt="" loading="lazy" width="30px">
+                                            <span class="ms-2 txt-blue fw-bold">{{ goal.player }}</span>
+                                        </td>
+                                        <td>{{ goal.count }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                    <div class="card border-0 rounded-0 shadow-sm mt-3">
-                        <div
-                            class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-3 p-md-4">
+                </div>
+                <!-- meest assist -->
+                <div class="col-md-4">
+                    <div class="card border-0 rounded-0 shadow-sm">
+                        <div class="card border-0 rounded-0 shadow-sm">
+                            <div class="card-body p-3 p-md-4">
+                                <h3 class="mb-3 txt-blue fw-bolder">Assist koning</h3>
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th class="txt-orange" scope="col">Speler</th>
+                                        <th class="txt-orange" scope="col">Assists</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr v-if="!groupedAssist.length">
+                                        <td colspan="100%">Geen top scorers bekend.</td>
+                                    </tr>
+                                    <tr v-for="(goal, idx) in groupedAssist.slice(0, 5)">
+                                        <td>
+                                            <img :src="getImage(goal.team)" alt="" loading="lazy" width="30px">
+                                            <span class="ms-2 txt-blue fw-bold">{{ goal.player }}</span>
+                                        </td>
+                                        <td>{{ goal.count }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- goals -->
+                <div class="col-md-4">
+                    <div class="card border-0 rounded-0 shadow-sm">
+                        <div class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-3 p-md-4">
                                             <span class="txt-orange fw-bold" style="font-size: 5rem">
                                                 <number-counter :number="totalGoals"></number-counter>
                                             </span>
@@ -72,30 +133,9 @@
                         </div>
                     </div>
                 </div>
+                <!-- kaarten gegeven -->
                 <div class="col-md-4">
                     <div class="card border-0 rounded-0 shadow-sm">
-                        <div class="card-body p-3 p-md-4">
-                            <h3 class="mb-3 txt-blue fw-bolder">Meeste tegengoals</h3>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th class="txt-orange" scope="col">Speler</th>
-                                    <th class="txt-orange" scope="col">Goals</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr v-for="(team, idx) in groupedGoalsAgainst.slice(0, 5)">
-                                    <td>
-                                        <img :src="getImage(team.id)" alt="" loading="lazy" width="30px">
-                                        <span class="ms-2 txt-blue fw-bold">{{ getTeamName(team.id) }}</span>
-                                    </td>
-                                    <td>{{ team.count }}</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card border-0 rounded-0 shadow-sm mt-3">
                         <div class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-3 p-md-4">
                             <span class="txt-orange fw-bold" style="font-size: 5rem">
                                 <number-counter :number="totalCards"></number-counter>
@@ -170,6 +210,7 @@ const {
     totalCards,
     groupedTeamCards,
     groupedTopScorer,
+    groupedAssist,
     groupedGoalsAgainst
 } = storeToRefs(tournament)
 

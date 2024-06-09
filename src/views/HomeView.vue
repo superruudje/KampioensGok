@@ -103,7 +103,7 @@
                         <div class="card-body p-4">
                             <h2 class="mb-3 txt-blue fw-bolder">Aankomende wedstrijden</h2>
                             <div class="matches-wrapper">
-                                <match-day-component v-for="(match_day, idx) in upcoming_matches" :match_day="match_day"/>
+                                <match-day-component v-for="(matches, match_day, idx) in upcoming_matches" :match_day="match_day" :matches="matches"/>
                                 <router-link :to="{name: 'programma'}"
                                              class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3"
                                              tag="button">Naar volledig
