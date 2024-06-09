@@ -9,28 +9,6 @@
     "teams": [
       "GER",
       "SCO"
-    ],
-    "result": [
-      3,
-      2
-    ],
-    "result_nvl": [
-      3,
-      3
-    ],
-    "timeline": [
-      {
-        "type": "assist",
-        "minute": 2,
-        "team": "GER",
-        "player": "Kroos, T."
-      },
-      {
-        "type": "goal",
-        "minute": 3,
-        "team": "GER",
-        "player": "Muller, T."
-      }
     ]
   },
   {
