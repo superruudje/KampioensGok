@@ -14,113 +14,19 @@
             <div class="row g-3 mb-3">
                 <!-- meeste tegengoals -->
                 <div class="col-md-4">
-                    <div class="card border-0 rounded-0 shadow-sm">
-                        <div class="card-body p-3 p-md-4">
-                            <h3 class="mb-3 txt-blue fw-bolder">Meeste tegengoals</h3>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th class="txt-orange" scope="col">Speler</th>
-                                    <th class="txt-orange" scope="col">Goals</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr v-for="(team, idx) in groupedGoalsAgainst.slice(0, 5)">
-                                    <td>
-                                        <img :src="getImage(team.id)" alt="" loading="lazy" width="30px">
-                                        <span class="ms-2 txt-blue fw-bold">{{ getTeamName(team.id) }}</span>
-                                    </td>
-                                    <td>{{ team.count }}</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <top-table title="Meeste tegengoals" :list="groupedGoalsAgainst"/>
                 </div>
                 <!-- meeste kaarten -->
                 <div class="col-md-4">
-                    <div class="card border-0 rounded-0 shadow-sm">
-                        <div class="card-body p-3 p-md-4">
-                            <h3 class="mb-3 txt-blue fw-bolder">Meeste kaarten</h3>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th class="txt-orange" scope="col">Land</th>
-                                    <th class="txt-orange" scope="col">Kaarten</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr v-for="(team, idx) in groupedTeamCards.slice(0, 5)">
-                                    <td>
-                                        <img :src="getImage(team.id)" alt="" loading="lazy" width="30px">
-                                        <span class="ms-2 txt-blue fw-bold">{{ getTeamName(team.id) }}</span>
-                                    </td>
-                                    <td>{{ team.count }}</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <top-table title="Meeste kaarten" :list="groupedTeamCards" :table_header="['Land', 'Kaarten']"/>
                 </div>
                 <!-- top scorer -->
                 <div class="col-md-4">
-                    <div class="card border-0 rounded-0 shadow-sm">
-                        <div class="card border-0 rounded-0 shadow-sm">
-                            <div class="card-body p-3 p-md-4">
-                                <h3 class="mb-3 txt-blue fw-bolder">Top scorers</h3>
-                                <table class="table">
-                                    <thead>
-                                    <tr>
-                                        <th class="txt-orange" scope="col">Speler</th>
-                                        <th class="txt-orange" scope="col">Goals</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr v-if="!groupedTopScorer.length">
-                                        <td colspan="100%">Geen top scorers bekend.</td>
-                                    </tr>
-                                    <tr v-for="(goal, idx) in groupedTopScorer.slice(0, 5)">
-                                        <td>
-                                            <img :src="getImage(goal.team)" alt="" loading="lazy" width="30px">
-                                            <span class="ms-2 txt-blue fw-bold">{{ goal.player }}</span>
-                                        </td>
-                                        <td>{{ goal.count }}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    <top-table title="Top scorer" :list="groupedTopScorer" :table_header="['Speler', 'Goals']"/>
                 </div>
                 <!-- meest assist -->
                 <div class="col-md-4">
-                    <div class="card border-0 rounded-0 shadow-sm">
-                        <div class="card border-0 rounded-0 shadow-sm">
-                            <div class="card-body p-3 p-md-4">
-                                <h3 class="mb-3 txt-blue fw-bolder">Assist koning</h3>
-                                <table class="table">
-                                    <thead>
-                                    <tr>
-                                        <th class="txt-orange" scope="col">Speler</th>
-                                        <th class="txt-orange" scope="col">Assists</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr v-if="!groupedAssist.length">
-                                        <td colspan="100%">Geen top scorers bekend.</td>
-                                    </tr>
-                                    <tr v-for="(goal, idx) in groupedAssist.slice(0, 5)">
-                                        <td>
-                                            <img :src="getImage(goal.team)" alt="" loading="lazy" width="30px">
-                                            <span class="ms-2 txt-blue fw-bold">{{ goal.player }}</span>
-                                        </td>
-                                        <td>{{ goal.count }}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    <top-table title="Top assist" :list="groupedAssist" :table_header="['Speler', 'Assists']"/>
                 </div>
                 <!-- goals -->
                 <div class="col-md-4">
@@ -176,12 +82,42 @@
                 <div class="col-md-4">
                     <prediction-table :image="false" :list="prediction_top_assist" title="Wie wordt assist koning?"/>
                 </div>
+            </div>
+        </main>
+        <header class="bg-blue py-3 py-md-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="fs-2 text-white fw-bolder">Hoe gaat NL het doen?</h1>
+                        <h2 class="fs-6 mb-0 txt-orange fw-bolder">De statistieken</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container-md py-2 py-md-5">
+            <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
+                <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij start toernooi.
+            </div>
+            <div v-else class="row g-3 mb-3">
                 <div class="col-md-4">
                     <prediction-table :image="false" :list="prediction_first_goal_nl" title="Eerste goal Team NL?"/>
                 </div>
                 <div class="col-md-4">
                     <prediction-table :image="false" :list="prediction_first_card_nl" title="Eerste kaart Team NL?"/>
                 </div>
+                <div class="col-md-4">
+                    <prediction-table :image="false" :list="prediction_ned" title="Hoe ver komt NL?" table_header="Score"/>
+                </div>
+                <div class="col-md-4">
+                    <prediction-table :image="false" :list="pred_pol_ned" title="Poland - Netherlands" table_header="Score"/>
+                </div>
+                <div class="col-md-4">
+                    <prediction-table :image="false" :list="pred_ned_fra" title="Netherlands - France" table_header="Score"/>
+                </div>
+                <div class="col-md-4">
+                    <prediction-table :image="false" :list="pred_ned_aus" title="Netherlands - Austria" table_header="Score"/>
+                </div>
+
             </div>
         </main>
     </div>
@@ -193,17 +129,17 @@ import {useTournament} from "@/stores/content";
 import NumberCounter from "@/components/NumberCounter.vue";
 import PredictionTable from "@/components/PredictionTable.vue";
 import {computed} from "vue";
+import TopTable from "@/components/TopTable.vue";
 
 const tournament = useTournament();
 const {
     matches_played,
-    teamImages,
-    teams,
     prediction_tournament_champion,
     prediction_most_against,
     prediction_most_cards,
     prediction_first_goal_nl,
     prediction_first_card_nl,
+    prediction_ned,
     prediction_top_scorer,
     prediction_top_assist,
     totalGoals,
@@ -214,27 +150,21 @@ const {
     groupedGoalsAgainst
 } = storeToRefs(tournament)
 
-/**
- * Return team image
- * @param name
- * @returns {*}
- */
-function getImage(name) {
-    return teamImages.value[name] || teamImages.value[`default`]
-}
-
-/**
- * Return team name
- * @param id
- * @returns {*}
- */
-function getTeamName(id) {
-    return teams.value.find((e) => e.id === id)?.name || id
-}
-
 
 const started =  computed(() => {
     return matches_played.value.length
+})
+
+const pred_pol_ned = computed(() => {
+    return tournament.getGroupMatchPrediction(5)
+})
+
+const pred_ned_fra = computed(() => {
+    return tournament.getGroupMatchPrediction(21)
+})
+
+const pred_ned_aus = computed(() => {
+    return tournament.getGroupMatchPrediction(29)
 })
 
 </script>

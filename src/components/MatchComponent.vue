@@ -32,8 +32,8 @@
             </transition>
             <div class="spacer flex-grow-1"></div>
             <hr>
-            <div class="d-flex gap-2 align-items-center justify-content-between">
-                <span class="txt-blue text-wrap"><i class="bi bi-pin-map txt-orange me-2"></i>{{
+            <div class="d-flex flex-wrap gap-2 align-items-center justify-content-between">
+                <span class="txt-blue text-nowrap"><i class="bi bi-pin-map txt-orange me-2"></i>{{
                         match.stadium
                     }}, {{ match.city }}</span>
                 <button v-if="match.timeline" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3 text-nowrap"
@@ -41,7 +41,17 @@
                     {{ openTimeline ? 'miner' : 'meer' }}
                     <i :class="openTimeline ? 'bi-chevron-up' : 'bi-chevron-down'" class="bi ms-2"></i>
                 </button>
+                <button v-else-if="started && match.group.length < 2" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3 text-nowrap"
+                        @click="openPrediction = !openPrediction">Wat denk we?
+                    <i :class="openPrediction ? 'bi-chevron-up' : 'bi-chevron-down'" class="bi ms-2"></i>
+                </button>
             </div>
+            <transition name="collapse">
+                <div v-if="openPrediction" class="overflow-hidden">
+                    <hr>
+                    <prediction-table :image="false" :list="predictions" title="" table_header="Score"/>
+                </div>
+            </transition>
             <i class="position-absolute top-0 end-0 bi p-2 bi-question-circle ms-2"
                data-bs-title="Uitslag na 90 minuten wordt gebruikt voor voorspelling"
                data-bs-toggle="tooltip"></i>
@@ -54,10 +64,12 @@ import {useTournament} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
 import {computed, ref} from "vue";
 import TimelineComponent from "@/components/TimelineComponent.vue";
+import PredictionTable from "@/components/PredictionTable.vue";
 
-const content = useTournament()
-const {teamImages, teams} = storeToRefs(content)
+const tournament = useTournament()
+const {matches_played, teamImages, teams} = storeToRefs(tournament)
 const openTimeline = ref(false)
+const openPrediction = ref(false)
 
 const props = defineProps({
     match: {type: Object, required: true},
@@ -69,6 +81,14 @@ const imageA = computed(() => {
 
 const imageB = computed(() => {
     return teamImages.value[props.match.teams[1]] || teamImages.value[`default`]
+})
+
+const predictions = computed(() => {
+    return tournament.getGroupMatchPrediction(props.match.num)
+})
+
+const started =  computed(() => {
+    return matches_played.value.length
 })
 
 function getTeamName(id) {
@@ -86,7 +106,7 @@ function getTeamName(id) {
 
 @keyframes collapse
     from
-        max-height: 200px
+        max-height: 400px
     to
         max-height: 0
 

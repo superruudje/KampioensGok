@@ -359,6 +359,33 @@ export const useTournament = defineStore('tournament', {
                 return b.count - a.count
             })
         },
+        /**
+         *
+         * @returns {*}
+         */
+        prediction_ned() {
+            let res = []
+            this.players.forEach((player) => {
+                let exit = ''
+                if (player.finals.includes('NED'))
+                    exit = 'Finale'
+                else if (player.semi_finals.includes('NED'))
+                    exit = 'Halve Finale'
+                else if (player.quarter_finals.includes('NED'))
+                    exit = 'Kwartfinale'
+                else if (player.round_of_16.includes('NED'))
+                    exit = 'Achtste Finale'
+                else
+                    exit = 'Poule Fase'
+
+                if (!res.some((t) => t.id === exit))
+                    res.push({id: exit, count: 0})
+                res.find((t) => t.id === exit).count++;
+            })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
+        },
     },
     actions: {
         /**
@@ -575,6 +602,24 @@ export const useTournament = defineStore('tournament', {
                 computed_poules.push(computed_poule)
             })
             return computed_poules
+        },
+        /**
+         * Get grouped score prediction for given match
+         * @returns {*[]}
+         */
+        getGroupMatchPrediction(match) {
+            let res = []
+            this.players.forEach((player) => {
+                const pred = player.predictions.find((m) => m.match === match).score
+                const label = pred.join('-');
+
+                if (!res.some((t) => t.id === label))
+                    res.push({id: label, count: 0})
+                res.find((t) => t.id === label).count++;
+            })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
         },
         /**
          * Check if array content are equal

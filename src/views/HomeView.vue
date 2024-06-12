@@ -72,31 +72,9 @@
                                 class="bi bi-chevron-right ms-2"></i></router-link>
                         </div>
                     </div>
-                    <div class="card border-0 rounded-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <h2 class="mb-3 txt-blue fw-bolder">Top scorers</h2>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th class="txt-orange" scope="col">Speler</th>
-                                    <th class="txt-orange" scope="col">Goals</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr v-if="!groupedTopScorer.length">
-                                    <td colspan="100%">Geen top scorers bekend.</td>
-                                </tr>
-                                <tr v-for="(goal, idx) in groupedTopScorer.slice(0, 5)">
-                                    <td>
-                                        <img :src="getImage(goal.team)" alt="" loading="lazy" width="30px">
-                                        <span class="ms-2 txt-blue fw-bold">{{ goal.player }}</span>
-                                    </td>
-                                    <td>{{ goal.count }}</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+
+                    <top-table class="mb-3" title="Top scorers" :list="groupedTopScorer" :table_header="['Speler', 'Goals']"/>
+                    <prediction-table :image="false" :list="prediction_ned" title="Hoe ver komt NL?" table_header="Score"/>
                 </div>
                 <div class="col-12 col-md-8">
                     <div class="card border-0 rounded-0 shadow-sm">
@@ -122,14 +100,17 @@ import {storeToRefs} from "pinia";
 import {useTournament} from "@/stores/content";
 import MatchDayComponent from "@/components/MatchDayComponent.vue";
 import {onBeforeMount, ref} from "vue";
+import TopTable from "@/components/TopTable.vue";
+import PredictionTable from "@/components/PredictionTable.vue";
 
 const tournament = useTournament();
-const {standing_top_10, upcoming_matches, groupedTopScorer, teamImages} = storeToRefs(tournament)
+const {standing_top_10, upcoming_matches, groupedTopScorer, teamImages, prediction_ned} = storeToRefs(tournament)
 const days = ref(0)
 const hours = ref(0)
 const minutes = ref(0)
 const seconds = ref(0)
-const started = ref(false)
+const started = ref(true)
+const countDownDate = new Date("Jun 14, 2023 21:00:00").getTime();
 
 /**
  * Return team image
@@ -141,15 +122,12 @@ function getImage(name) {
 }
 
 function startCountdown() {
-    const countDownDate = new Date("Jun 14, 2024 21:00:00").getTime();
-
-// Update the count down every 1 second
     const x = setInterval(function () {
 
         // Get today's date and time
         const now = new Date().getTime();
 
-        // Find the distance between now and the count down date
+        // Find the distance between now and the countdown date
         const distance = countDownDate - now;
 
         // Time calculations for days, hours, minutes and seconds
@@ -166,8 +144,18 @@ function startCountdown() {
     }, 1000);
 }
 
+
+function checkCountdown() {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+    if (distance > 0) {
+        started.value = false
+        startCountdown()
+    }
+}
+
 onBeforeMount(() => {
-    startCountdown()
+    checkCountdown()
 })
 </script>
 

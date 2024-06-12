@@ -214,16 +214,47 @@ const chartOptions = {
     chart: {
         animations: {enabled: false},
         zoom: {enabled: false},
-        type: 'line',
+        type: 'line'
     },
     dataLabels: {enabled: false},
-    markers: {size: 1},
+    markers: {size: 5},
     xaxis: {title: {text: 'Speeldag'}},
     yaxis: {title: {text: 'Score'}},
     plotOptions: {
         line: {
             isSlopeChart: true,
         },
+    },
+    tooltip: {
+        fixed: {
+            enabled: true,
+            position: "topLeft",
+        },
+        custom: function({series, seriesIndex, dataPointIndex, w}) {
+            const score = series[seriesIndex][dataPointIndex]
+            const players = series.map((s, i) => {
+                return {
+                    idx: i,
+                    data: s,
+                    name: w.globals.seriesNames[i],
+                    color: w.globals.colors[i],
+                }
+            }).filter(s => s.data[dataPointIndex] === score)
+            let html = ''
+            players.forEach((s, i) => {
+                html += `<div class="d-flex align-items-center">`
+                html += `<i class="bi bi-circle-fill me-2" style="color:` + s.color + `"></i>`
+                html += `<div class="player">` + s.name +  ` <b>` + score + `</b>` +`</div>`
+                html += `</div>`
+            })
+
+            return '<div class="card border-0 rounded-0 shadow-sm">' +
+                '<div class="card-body">' +
+                '<div class="txt-blue fw-bolder">' + w.globals.categoryLabels[dataPointIndex] +'</div>' +
+                html +
+                '</div> ' +
+                '</div>'
+        }
     }
 }
 
@@ -232,7 +263,7 @@ const chartOptions = {
  */
 function getScoreProgression(snapshot) {
     let dataSets = []
-    players.value.forEach(player => {
+    players.value.sort((a, b) => a.team_name.localeCompare(b.team_name)).forEach(player => {
         let data = [{x: "start", y: 0}]
         snapshots.value.slice(0, snapshot).forEach((s, idx) => {
             const score = tournament.getParticipantTotalScore(player.name, idx + 1)

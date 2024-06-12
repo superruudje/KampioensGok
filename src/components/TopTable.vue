@@ -6,28 +6,20 @@
                 <table class="table align-middle">
                     <thead>
                     <tr>
-                        <th class="txt-orange" scope="col">{{ table_header }}</th>
-                        <th class="txt-orange w-50" scope="col">%</th>
+                        <th class="txt-orange" scope="col">{{ table_header[0] }}</th>
+                        <th class="txt-orange" scope="col">{{ table_header[1] }}</th>
                     </tr>
                     </thead>
                     <tbody>
+                    <tr v-if="!list.length">
+                        <td colspan="100%">Geen data bekend.</td>
+                    </tr>
                     <tr v-for="team in list.slice(0, open ? list.length : 5)">
                         <td class="text-nowrap">
                             <img v-if="image" class="me-2" :src="getImage(team.id)" alt="" loading="lazy" width="30px">
                             <span class="txt-blue fw-bold">{{ getTeamName(team.id) }}</span>
                         </td>
-                        <td class="w-50">
-                            <div class="d-flex align-items-center">
-                                <div :aria-valuenow="getPercentage(team.count)" aria-label="Basic example"
-                                     aria-valuemax="100"
-                                     aria-valuemin="0" class="progress flex-grow-1"
-                                     role="progressbar">
-                                    <div :style="'width: '+getPercentage(team.count)+'%'"
-                                         class="progress-bar bg-orange"></div>
-                                </div>
-                                <span class="ms-2">{{ getPercentage(team.count) }}%</span>
-                            </div>
-                        </td>
+                        <td>{{ team.count }}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -51,9 +43,9 @@ const {teamImages, teams} = storeToRefs(tournament)
 
 const props = defineProps({
     title: {type: String, required: true},
-    list: {type: Array, required: true},
+    list: {type: [Array, Object], required: true},
     image: {type: Boolean, default: true},
-    table_header: {type: String, default: 'Land'},
+    table_header: {type: Array, default: ['Land', 'Goals']},
 })
 
 const open = ref(false)
@@ -76,18 +68,6 @@ function getTeamName(id) {
     return teams.value.find((e) => e.id === id)?.name || id
 }
 
-const tot = computed(() => {
-    return props.list.reduce((partialSum, a) => partialSum + a.count, 0);
-})
-
-/**
- * Return percentage of occurrence
- * @param count
- * @returns {number}
- */
-function getPercentage(count) {
-    return (Math.round((count / tot.value * 100) * 100) / 100)
-}
 </script>
 
 <style lang="sass" scoped>

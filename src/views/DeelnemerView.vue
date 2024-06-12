@@ -100,7 +100,7 @@
                     <div class="card border-0 rounded-0 shadow-sm mb-3">
                         <div class="card-body p-4">
                             <h2 class="txt-blue fw-bolder">Bonusvragen</h2>
-                            <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
+                            <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white mb-3">
                                 <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij start toernooi.
                             </div>
                             <template v-else>
@@ -115,7 +115,8 @@
                                             <span v-else class="small fst-italic"> (nu {{q.now}})</span>
                                         </span>
                                         <template v-if="bonus[idx]">
-                                            <span class="badge bg-orange">+{{ participant.bonus[idx] === bonus[idx] ? q.p : 0}}</span>
+                                            <span v-if="q.type === 'exact'" class="badge bg-orange">+{{ participant.bonus[idx] === bonus[idx] ? q.p : 0}}</span>
+                                            <span v-else class="badge bg-orange">+{{ getEstimateScore(participant.bonus[idx], bonus[idx]) }}</span>
                                         </template>
                                     </div>
                                 </div>
@@ -224,6 +225,13 @@ function getTeamName(id) {
  */
 function getPercentage(count) {
     return (Math.round((count / players.value.length * 100) * 100) / 100)
+}
+
+function getEstimateScore(prediction, outcome) {
+    if (prediction === outcome) return  40
+    else if (prediction >= (outcome - 5) && prediction <= (outcome + 5)) return 25
+    else if (prediction >= (outcome - 10) && prediction <= (outcome + 10)) return 15
+    else return 0
 }
 
 onBeforeMount(() => {

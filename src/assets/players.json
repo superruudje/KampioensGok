@@ -4,13 +4,6 @@
       "name": "Rudi H.",
       "email": "rjhaamke@gmail.com",
       "team_name": "FC Op Goed Geluk",
-      "scores": [
-        0,
-        3,
-        5,
-        15,
-        30
-      ],
       "predictions": [
         {
           "match": 1,
@@ -155,8 +148,8 @@
         {
           "match": 21,
           "score": [
-            1,
-            3
+            2,
+            0
           ]
         },
         {
@@ -315,7 +308,7 @@
             0
           ],
           "teams": [
-            "NED",
+            "FRA",
             "ROM"
           ]
         },
@@ -344,11 +337,11 @@
         {
           "match": 44,
           "score": [
-            4,
+            2,
             0
           ],
           "teams": [
-            "FRA",
+            "NED",
             "CZE"
           ]
         },
@@ -371,7 +364,7 @@
           ],
           "teams": [
             "POR",
-            "NED"
+            "FRA"
           ]
         },
         {
@@ -393,7 +386,7 @@
           ],
           "teams": [
             "BEL",
-            "FRA"
+            "NED"
           ]
         },
         {
@@ -410,11 +403,11 @@
         {
           "match": 50,
           "score": [
-            3,
-            1
+            0,
+            2
           ],
           "teams": [
-            "FRA",
+            "NED",
             "ENG"
           ]
         },
@@ -422,23 +415,23 @@
           "match": 51,
           "score": [
             0,
-            1
+            2
           ],
           "teams": [
             "ITA",
-            "FRA"
+            "ENG"
           ]
         }
       ],
       "bonus": [
-        "FRA",
+        "ENG",
         145,
         145,
-        "TUR",
-        "POR",
-        "Mbappé, K.",
+        "ALB",
+        "POL",
+        "Ronaldo, C.",
         "De Bruyne, K.",
-        "Gakpo, C.",
+        "Depay, M.",
         "Dumfries, D."
       ],
       "round_of_16": [
@@ -450,41 +443,40 @@
         "TUR",
         "ITA",
         "SVK",
-        "NED",
+        "FRA",
         "ROM",
         "POR",
         "SCO",
         "BEL",
         "CRO",
-        "FRA",
+        "NED",
         "CZE"
       ],
       "quarter_finals": [
         "ITA",
         "GER",
         "POR",
-        "NED",
+        "FRA",
         "ENG",
         "ESP",
         "BEL",
-        "FRA"
+        "NED"
       ],
       "semi_finals": [
         "ITA",
         "POR",
-        "FRA",
+        "NED",
         "ENG"
       ],
       "finals": [
         "ITA",
-        "FRA"
+        "ENG"
       ]
     },
     {
       "name": "Patrick V.",
       "email": "pverhage@hotmail.com",
       "team_name": "Selecao das Quinas",
-      "scores": [],
       "predictions": [
         {
           "match": 1,
@@ -958,7 +950,6 @@
       "name": "Stefan A.",
       "email": "steef_appel@icloud.com",
       "team_name": "AppelFC",
-      "scores": [],
       "predictions": [
         {
           "match": 1,
@@ -1432,7 +1423,6 @@
       "name": "Nikita.",
       "email": "",
       "team_name": "DoCoS",
-      "scores": [],
       "predictions": [
         {
           "match": 1,
@@ -1906,7 +1896,6 @@
       "name": "Erwin Z.",
       "email": "zonneveldos@gmail.com",
       "team_name": "Eddertie",
-      "scores": [],
       "predictions": [
         {
           "match": 1,
@@ -2380,7 +2369,6 @@
       "name": "Dimitri vd G.",
       "email": "dimitri@partyguru.nl",
       "team_name": "Hack the planet!",
-      "scores": [],
       "predictions": [
         {
           "match": 1,
