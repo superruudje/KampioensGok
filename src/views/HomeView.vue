@@ -110,7 +110,7 @@ const hours = ref(0)
 const minutes = ref(0)
 const seconds = ref(0)
 const started = ref(true)
-const countDownDate = new Date("Jun 14, 2023 21:00:00").getTime();
+const countDownDate = new Date("Jun 14, 2024 21:00:00").getTime();
 
 /**
  * Return team image
