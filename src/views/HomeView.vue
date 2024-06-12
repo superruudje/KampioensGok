@@ -38,7 +38,7 @@
         </header>
         <main class="container-md py-2 py-md-5">
             <div class="row gy-3">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 order-last order-md-first">
                     <div class="card border-0 rounded-0 shadow-sm mb-3">
                         <div class="card-body p-4">
                             <h2 class="mb-3 txt-blue fw-bolder">Top 10</h2>

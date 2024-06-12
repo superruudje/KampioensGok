@@ -33,7 +33,7 @@
             <div class="spacer flex-grow-1"></div>
             <hr>
             <div class="d-flex flex-wrap gap-2 align-items-center justify-content-between">
-                <span class="txt-blue text-nowrap"><i class="bi bi-pin-map txt-orange me-2"></i>{{
+                <span class="txt-blue text-wrap"><i class="bi bi-pin-map txt-orange me-2"></i>{{
                         match.stadium
                     }}, {{ match.city }}</span>
                 <button v-if="match.timeline" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3 text-nowrap"

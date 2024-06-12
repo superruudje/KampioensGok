@@ -257,7 +257,7 @@ const series = computed(() => {
         data.push({x: key, y: score})
     })
     return [{
-        name: participant.value.name,
+        name: participant.value.team_name,
         data: data
     }]
 })
@@ -272,14 +272,42 @@ const chartOptions = {
         zoom: {enabled: false},
         type: 'line',
     },
+    colors: ['#f36c21'],
     dataLabels: {enabled: false},
-    markers: {size: 1},
+    markers: {size: 5},
     xaxis: {title: {text: 'Speeldag'}},
     yaxis: {title: {text: 'Score'}},
     plotOptions: {
         line: {
             isSlopeChart: true,
         },
+    },
+    tooltip: {
+        fixed: {
+            enabled: true,
+            position: "topLeft",
+        },
+        custom: function({series, seriesIndex, dataPointIndex, w}) {
+            const score = series[seriesIndex][dataPointIndex]
+            const name = w.globals.seriesNames[seriesIndex]
+            const color = w.globals.colors[seriesIndex]
+
+            let html = ''
+            html += `<div class="d-flex align-items-center">`
+            html += `<i class="bi bi-circle-fill me-2" style="color:` + color + `"></i>`
+            html += `<div class="player">` + name +  `: <b>` + score + `</b>` +`</div>`
+            html += `</div>`
+
+
+            return '<div class="card border-0 rounded-0 shadow-sm">' +
+                '<div class="card-body">' +
+                '<div class="txt-blue fw-bolder">' + w.globals.categoryLabels[dataPointIndex] +'</div>' +
+                '<div>' +
+                html +
+                '</div>' +
+                '</div> ' +
+                '</div>'
+        }
     }
 }
 

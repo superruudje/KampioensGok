@@ -212,14 +212,25 @@ const pageCount = computed(() => {
  */
 const chartOptions = {
     chart: {
+        width: "100%",
         animations: {enabled: false},
         zoom: {enabled: false},
-        type: 'line'
+        type: 'line',
     },
     dataLabels: {enabled: false},
     markers: {size: 5},
     xaxis: {title: {text: 'Speeldag'}},
     yaxis: {title: {text: 'Score'}},
+    responsive: [
+        {
+            breakpoint: 768,
+            options: {
+                chart: {height: 600},
+                xaxis: {labels: {show: false}},
+                yaxis: {labels: {show: false}},
+            }
+        }
+    ],
     plotOptions: {
         line: {
             isSlopeChart: true,
@@ -244,14 +255,16 @@ const chartOptions = {
             players.forEach((s, i) => {
                 html += `<div class="d-flex align-items-center">`
                 html += `<i class="bi bi-circle-fill me-2" style="color:` + s.color + `"></i>`
-                html += `<div class="player">` + s.name +  ` <b>` + score + `</b>` +`</div>`
+                html += `<div class="player">` + s.name +  `: <b>` + score + `</b>` +`</div>`
                 html += `</div>`
             })
 
             return '<div class="card border-0 rounded-0 shadow-sm">' +
                 '<div class="card-body">' +
                 '<div class="txt-blue fw-bolder">' + w.globals.categoryLabels[dataPointIndex] +'</div>' +
+                '<div class="overflow-hidden position-relative" style="max-height: 150px"><div id="' + (players.length > 6 ? 'scroll-me' : '') + '">' +
                 html +
+                '</div></div>' +
                 '</div> ' +
                 '</div>'
         }
@@ -302,6 +315,18 @@ function goPage(i) {
     pageNumber.value = i;
 }
 </script>
+
+<style lang="sass">
+.apexcharts-tooltip
+    opacity: 1!important
+#scroll-me
+    animation: MoveUpDown 15s linear infinite
+@keyframes MoveUpDown
+    0%
+        transform: translateY(0)
+    100%
+        transform: translateY(-100%)
+</style>
 
 <style lang="sass" scoped>
 .page-link
