@@ -276,7 +276,8 @@ const chartOptions = {
  */
 function getScoreProgression(snapshot) {
     let dataSets = []
-    players.value.sort((a, b) => a.team_name.localeCompare(b.team_name)).forEach(player => {
+    const sorted = [...players.value].sort((a, b) => a.team_name.localeCompare(b.team_name));
+    sorted.forEach(player => {
         let data = [{x: "start", y: 0}]
         snapshots.value.slice(0, snapshot).forEach((s, idx) => {
             const score = tournament.getParticipantTotalScore(player.name, idx + 1)
@@ -317,12 +318,10 @@ function goPage(i) {
 </script>
 
 <style lang="sass">
-.apexcharts-tooltip
-    opacity: 1!important
 #scroll-me
     animation: MoveUpDown 15s linear infinite
 @keyframes MoveUpDown
-    0%
+    10%
         transform: translateY(0)
     100%
         transform: translateY(-100%)
