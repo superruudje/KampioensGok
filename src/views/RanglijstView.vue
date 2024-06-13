@@ -304,7 +304,7 @@ function prevPage() {
  * Go to next page
  */
 function nextPage() {
-    if (pageNumber.value < pageCount.value)
+    if (pageNumber.value + 1 < pageCount.value)
         pageNumber.value++
 }
 
