@@ -3,7 +3,7 @@ What to do to update the site with new scores:
 1. add `result` (array) with score after 90min to match object (schema.json).
 2. add `result_nvl` (array) with final match score to match object (schema.json).
 3. add `timeline` ([object]) to match object (schema.json).
-    - type*: `goal` | `yellow` | `red`
+    - type*: `goal` | `yellow` | `red` | `assist`
     - minute*: minute of event
     - team*: team_id
     - player*: player {lastname,initial.}

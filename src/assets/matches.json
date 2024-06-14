@@ -16,16 +16,34 @@
     ],
     "timeline": [
       {
+        "type": "assist",
+        "minute": 10,
+        "team": "GER",
+        "player": "Kimmich"
+      },
+      {
         "type": "goal",
         "minute": 10,
         "team": "GER",
         "player": "Wirtz"
       },
       {
+        "type": "assist",
+        "minute": 19,
+        "team": "GER",
+        "player": "Havertz"
+      },
+      {
         "type": "goal",
         "minute": 19,
         "team": "GER",
         "player": "Musiala"
+      },
+      {
+        "type": "yellow",
+        "minute": 31,
+        "team": "GER",
+        "player": "Andrich"
       },
       {
         "type": "red",
@@ -41,6 +59,18 @@
         "player": "Havertz"
       },
       {
+        "type": "yellow",
+        "minute": 48,
+        "team": "SCO",
+        "player": "Ralston"
+      },
+      {
+        "type": "yellow",
+        "minute": 62,
+        "team": "GER",
+        "player": "Tah"
+      },
+      {
         "type": "goal",
         "minute": 68,
         "team": "GER",
@@ -51,6 +81,12 @@
         "minute": 87,
         "team": "SCO",
         "player": "Rüdiger (og)"
+      },
+      {
+        "type": "assist",
+        "minute": "90 + 3",
+        "team": "GER",
+        "player": "Müller"
       },
       {
         "type": "goal",
