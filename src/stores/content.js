@@ -15,8 +15,8 @@ export const useTournament = defineStore('tournament', {
 
         bonus: [
             "", //0.champion
-            0, //1. goals scored
-            0, //2. cards given
+            -1, //1. goals scored
+            -1, //2. cards given
             "", //3. most against
             "", //4. most cards
             "", //5. top scorer
