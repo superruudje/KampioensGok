@@ -160,9 +160,9 @@ export const useTournament = defineStore('tournament', {
                 const goals = match.timeline?.filter(e => e.type === 'goal') || []
                 goals.reduce((p, goal) => {
                     const team = goal.team === match.teams[0] ? match.teams[1] : match.teams[0]
-                    if (!p.some((t) => t.id === team))
-                        p.push({id: team, count: 0})
-                    p.find((t) => t.id === team).count++;
+                    if (!p.some((t) => t.label === team))
+                        p.push({label: team, image: team, count: 0})
+                    p.find((t) => t.label === team).count++;
                     return p
                 }, res)
 
@@ -186,9 +186,9 @@ export const useTournament = defineStore('tournament', {
 
                 cards.forEach((card) => {
                     const team = card.team
-                    if (!res.some((t) => t.id === team))
-                        res.push({id: team, count: 0})
-                    res.find((t) => t.id === team).count++;
+                    if (!res.some((t) => t.label === team))
+                        res.push({label: team, image: team, count: 0})
+                    res.find((t) => t.label === team).count++;
                 })
             })
             return res.sort((a, b) => {
@@ -205,9 +205,9 @@ export const useTournament = defineStore('tournament', {
                 const goals = match.timeline?.filter(e => e.type === 'goal') || []
                 goals.forEach((goal) => {
                     const player = goal.player
-                    if (!res.some((t) => t.player === player))
-                        res.push({player: player, team: goal.team, count: 0})
-                    res.find((t) => t.player === player).count++;
+                    if (!res.some((t) => t.label === player))
+                        res.push({label: player, image: goal.team, count: 0})
+                    res.find((t) => t.label === player).count++;
                 })
             })
             return res.sort((a, b) => {
@@ -224,9 +224,9 @@ export const useTournament = defineStore('tournament', {
                 const assists = match.timeline?.filter(e => e.type === 'assist') || []
                 assists.forEach((assist) => {
                     const player = assist.player
-                    if (!res.some((t) => t.player === player))
-                        res.push({player: player, team: assist.team, count: 0})
-                    res.find((t) => t.player === player).count++;
+                    if (!res.some((t) => t.label === player))
+                        res.push({label: player, image: assist.team, count: 0})
+                    res.find((t) => t.label === player).count++;
                 })
             })
             return res.sort((a, b) => {

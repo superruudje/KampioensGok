@@ -14,12 +14,12 @@
                     <tr v-if="!list.length">
                         <td colspan="100%">Geen data bekend.</td>
                     </tr>
-                    <tr v-for="team in list.slice(0, open ? list.length : 5)">
+                    <tr v-for="item in list.slice(0, open ? list.length : 5)">
                         <td class="text-nowrap">
-                            <img v-if="image" class="me-2" :src="getImage(team.id)" alt="" loading="lazy" width="30px">
-                            <span class="txt-blue fw-bold">{{ getTeamName(team.id) }}</span>
+                            <img v-if="image" class="me-2" :src="getImage(item.image)" alt="" loading="lazy" width="30px">
+                            <span class="txt-blue fw-bold">{{ getTeamName(item.label) }}</span>
                         </td>
-                        <td>{{ team.count }}</td>
+                        <td>{{ item.count }}</td>
                     </tr>
                     </tbody>
                 </table>
