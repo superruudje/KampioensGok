@@ -57,8 +57,8 @@
                                     </th>
                                     <th v-else scope="row">{{ idx + 1 }}</th>
                                     <td>
-                                        <router-link :to="{name: 'deelnemer', params: {id: player.name}}">{{
-                                                player.team_name
+                                        <router-link :to="{name: 'deelnemer', params: {id: player.team_name}}">{{
+                                                player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name
                                             }}
                                         </router-link>
                                     </td>
@@ -73,15 +73,18 @@
                         </div>
                     </div>
 
-                    <top-table class="mb-3" title="Top scorers" :list="groupedTopScorer" :table_header="['Speler', 'Goals']"/>
-                    <prediction-table :image="false" :list="prediction_ned" title="Hoe ver komt NL?" table_header="Score"/>
+                    <top-table :list="groupedTopScorer" :table_header="['Speler', 'Goals']" class="mb-3"
+                               title="Top scorers"/>
+                    <prediction-table :image="false" :list="prediction_ned" table_header="Score"
+                                      title="Hoe ver komt NL?"/>
                 </div>
                 <div class="col-12 col-md-8">
                     <div class="card border-0 rounded-0 shadow-sm">
                         <div class="card-body p-4">
                             <h2 class="mb-3 txt-blue fw-bolder">Aankomende wedstrijden</h2>
                             <div class="matches-wrapper">
-                                <match-day-component v-for="(matches, match_day, idx) in upcoming_matches" :match_day="match_day" :matches="matches"/>
+                                <match-day-component v-for="(matches, match_day, idx) in upcoming_matches"
+                                                     :match_day="match_day" :matches="matches"/>
                                 <router-link :to="{name: 'programma'}"
                                              class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3"
                                              tag="button">Naar volledig

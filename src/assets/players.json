@@ -671,7 +671,7 @@
           "match": 28,
           "score": [
             0,
-            8
+            3
           ]
         },
         {
@@ -905,7 +905,7 @@
         "Lukaku, R.",
         "De Bruyne, K.",
         "Simons, X.",
-        "Dumfries, D."
+        "De Ligt, M."
       ],
       "round_of_16": [
         "HUN",
@@ -3165,7 +3165,7 @@
           "match": 43,
           "score": [
             0,
-            3
+            2
           ],
           "teams": [
             "BEL",
@@ -10721,8 +10721,8 @@
         {
           "match": 42,
           "score": [
-            3,
-            1
+            1,
+            3
           ],
           "teams": [
             "POR",
@@ -18267,7 +18267,7 @@
         {
           "match": 40,
           "score": [
-            20,
+            2,
             0
           ],
           "teams": [
@@ -18445,6 +18445,7101 @@
       "finals": [
         "NED",
         "FRA"
+      ]
+    },
+    {
+      "name": "Rochella K.",
+      "email": "rochellakost@hotmail.com",
+      "team_name": "Boer Harm",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            2,
+            3
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            0,
+            0
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            2,
+            3
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            0,
+            0
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            4,
+            1
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            4
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "SUI",
+            "ITA"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "ENG",
+            "CZE"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "CRO",
+            "UKR"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "NED",
+            "BEL"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "POR",
+            "ESP"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            0,
+            1
+          ],
+          "teams": [
+            "ROM",
+            "AUT"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "FRA",
+            "TUR"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            0,
+            3
+          ],
+          "teams": [
+            "CRO",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "POR",
+            "NED"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ENG",
+            "ITA"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "AUT",
+            "FRA"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            2,
+            2
+          ],
+          "teams": [
+            "GER",
+            "POR"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "FRA",
+            "ENG"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            2,
+            3
+          ],
+          "teams": [
+            "GER",
+            "ENG"
+          ]
+        }
+      ],
+      "bonus": [
+        "FRA",
+        163,
+        110,
+        "ALB",
+        "POR",
+        "Kane, H.",
+        "Griezmann, A.",
+        "Depay, M.",
+        "Veerman, J."
+      ],
+      "round_of_16": [
+        "SUI",
+        "ITA",
+        "GER",
+        "DEN",
+        "ENG",
+        "CZE",
+        "CRO",
+        "UKR",
+        "NED",
+        "BEL",
+        "POR",
+        "ESP",
+        "ROM",
+        "AUT",
+        "FRA",
+        "TUR"
+      ],
+      "quarter_finals": [
+        "CRO",
+        "GER",
+        "POR",
+        "NED",
+        "ENG",
+        "ITA",
+        "AUT",
+        "FRA"
+      ],
+      "semi_finals": [
+        "GER",
+        "POR",
+        "FRA",
+        "ENG"
+      ],
+      "finals": [
+        "GER",
+        "ENG"
+      ]
+    },
+    {
+      "name": "Lauro R.",
+      "email": "donlauro@hotmail.com",
+      "team_name": "Don Lauro",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            4,
+            0
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            6,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            4,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            8
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            4
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            1,
+            3
+          ],
+          "teams": [
+            "SUI",
+            "ESP"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ENG",
+            "TUR"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ITA",
+            "ROM"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            1,
+            0
+          ],
+          "teams": [
+            "FRA",
+            "UKR"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "POR",
+            "SCO"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "BEL",
+            "CRO"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            2,
+            2
+          ],
+          "teams": [
+            "NED",
+            "CZE"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "ITA",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            0,
+            1
+          ],
+          "teams": [
+            "POR",
+            "FRA"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "ENG",
+            "ESP"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "BEL",
+            "NED"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "GER",
+            "FRA"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            3,
+            2
+          ],
+          "teams": [
+            "NED",
+            "ESP"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "FRA",
+            "NED"
+          ]
+        }
+      ],
+      "bonus": [
+        "NED",
+        131,
+        181,
+        "ALB",
+        "ITA",
+        "Depay, M.",
+        "Bellingham, J.",
+        "Simons, X.",
+        "De Ligt, M."
+      ],
+      "round_of_16": [
+        "SUI",
+        "ESP",
+        "GER",
+        "DEN",
+        "ENG",
+        "TUR",
+        "ITA",
+        "ROM",
+        "FRA",
+        "UKR",
+        "POR",
+        "SCO",
+        "BEL",
+        "CRO",
+        "NED",
+        "CZE"
+      ],
+      "quarter_finals": [
+        "ITA",
+        "GER",
+        "POR",
+        "FRA",
+        "ENG",
+        "ESP",
+        "BEL",
+        "NED"
+      ],
+      "semi_finals": [
+        "GER",
+        "FRA",
+        "NED",
+        "ESP"
+      ],
+      "finals": [
+        "FRA",
+        "NED"
+      ]
+    },
+    {
+      "name": "Arjan B.",
+      "email": "arjan.blokland@gmail.com",
+      "team_name": "Goliath",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            3,
+            2
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            3,
+            2
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "SUI",
+            "CRO"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "GER",
+            "ENG"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "DEN",
+            "AUT"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            1,
+            0
+          ],
+          "teams": [
+            "ESP",
+            "SCO"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "FRA",
+            "UKR"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "POR",
+            "CRO"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "BEL",
+            "SUI"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "NED",
+            "TUR"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            1,
+            0
+          ],
+          "teams": [
+            "ESP",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            0,
+            1
+          ],
+          "teams": [
+            "POR",
+            "FRA"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "DEN",
+            "CRO"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "BEL",
+            "NED"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            1,
+            0
+          ],
+          "teams": [
+            "ESP",
+            "FRA"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "NED",
+            "CRO"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            0,
+            1
+          ],
+          "teams": [
+            "ESP",
+            "NED"
+          ]
+        }
+      ],
+      "bonus": [
+        "GER",
+        146,
+        157,
+        "ALB",
+        "ENG",
+        "Lukaku, R.",
+        "Fernandes, B.",
+        "Dumfries, D.",
+        "De Ligt, M."
+      ],
+      "round_of_16": [
+        "SUI",
+        "CRO",
+        "GER",
+        "ENG",
+        "DEN",
+        "AUT",
+        "ESP",
+        "SCO",
+        "FRA",
+        "UKR",
+        "POR",
+        "CRO",
+        "BEL",
+        "SUI",
+        "NED",
+        "TUR"
+      ],
+      "quarter_finals": [
+        "ESP",
+        "GER",
+        "POR",
+        "FRA",
+        "DEN",
+        "CRO",
+        "BEL",
+        "NED"
+      ],
+      "semi_finals": [
+        "ESP",
+        "FRA",
+        "NED",
+        "CRO"
+      ],
+      "finals": [
+        "ESP",
+        "NED"
+      ]
+    },
+    {
+      "name": "Willem de B.",
+      "email": "familiedebruijn@live.nl",
+      "team_name": "HP (HaagsePaling)",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            1,
+            3
+          ],
+          "teams": [
+            "SCO",
+            "ESP"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "ENG",
+            "CZE"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "ITA",
+            "SUI"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "NED",
+            "UKR"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "POR",
+            "SRB"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "BEL",
+            "CRO"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "FRA",
+            "TUR"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "ITA",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "POR",
+            "NED"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ENG",
+            "ESP"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "BEL",
+            "FRA"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "GER",
+            "NED"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "FRA",
+            "ENG"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "NED",
+            "ENG"
+          ]
+        }
+      ],
+      "bonus": [
+        "NED",
+        129,
+        140,
+        "ALB",
+        "POR",
+        "Mbappé, K.",
+        "Frimpong, J.",
+        "Depay, M.",
+        "Dumfries, D."
+      ],
+      "round_of_16": [
+        "SCO",
+        "ESP",
+        "GER",
+        "DEN",
+        "ENG",
+        "CZE",
+        "ITA",
+        "SUI",
+        "NED",
+        "UKR",
+        "POR",
+        "SRB",
+        "BEL",
+        "CRO",
+        "FRA",
+        "TUR"
+      ],
+      "quarter_finals": [
+        "ITA",
+        "GER",
+        "POR",
+        "NED",
+        "ENG",
+        "ESP",
+        "BEL",
+        "FRA"
+      ],
+      "semi_finals": [
+        "GER",
+        "NED",
+        "FRA",
+        "ENG"
+      ],
+      "finals": [
+        "NED",
+        "ENG"
+      ]
+    },
+    {
+      "name": "Dennis van N.",
+      "email": "dvnunspeet@live.nl",
+      "team_name": "It's not a bird, it's not a plane. It must be Brunes who's on the train.",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            4,
+            1
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            2,
+            3
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            5,
+            2
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            0,
+            4
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            0,
+            0
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            4
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            5,
+            0
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            0,
+            0
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "SUI",
+            "ESP"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            4,
+            0
+          ],
+          "teams": [
+            "ENG",
+            "TUR"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ITA",
+            "SVK"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "NED",
+            "UKR"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "POR",
+            "CRO"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "BEL",
+            "SRB"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            4,
+            0
+          ],
+          "teams": [
+            "FRA",
+            "CZE"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            0,
+            1
+          ],
+          "teams": [
+            "ITA",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            0,
+            1
+          ],
+          "teams": [
+            "POR",
+            "NED"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            1,
+            0
+          ],
+          "teams": [
+            "ENG",
+            "ESP"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "BEL",
+            "FRA"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            0,
+            1
+          ],
+          "teams": [
+            "GER",
+            "NED"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            0,
+            1
+          ],
+          "teams": [
+            "FRA",
+            "ENG"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            0,
+            1
+          ],
+          "teams": [
+            "NED",
+            "ENG"
+          ]
+        }
+      ],
+      "bonus": [
+        "ENG",
+        154,
+        212,
+        "NED",
+        "ENG",
+        "Kane, H.",
+        "De Bruyne, K.",
+        "Depay, M.",
+        "Dumfries, D."
+      ],
+      "round_of_16": [
+        "SUI",
+        "ESP",
+        "GER",
+        "DEN",
+        "ENG",
+        "TUR",
+        "ITA",
+        "SVK",
+        "NED",
+        "UKR",
+        "POR",
+        "CRO",
+        "BEL",
+        "SRB",
+        "FRA",
+        "CZE"
+      ],
+      "quarter_finals": [
+        "ITA",
+        "GER",
+        "POR",
+        "NED",
+        "ENG",
+        "ESP",
+        "BEL",
+        "FRA"
+      ],
+      "semi_finals": [
+        "GER",
+        "NED",
+        "FRA",
+        "ENG"
+      ],
+      "finals": [
+        "NED",
+        "ENG"
+      ]
+    },
+    {
+      "name": "Jeroen P.",
+      "email": "j.peschier@dunea.nl",
+      "team_name": "Joepie",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            0,
+            4
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "HUN",
+            "ESP"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ENG",
+            "UKR"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ITA",
+            "SUI"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "NED",
+            "ROM"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            1,
+            0
+          ],
+          "teams": [
+            "POR",
+            "SCO"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "BEL",
+            "CRO"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "FRA",
+            "TUR"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "ITA",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "POR",
+            "NED"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "ENG",
+            "ESP"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            1,
+            3
+          ],
+          "teams": [
+            "BEL",
+            "FRA"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "GER",
+            "NED"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "FRA",
+            "ENG"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "GER",
+            "FRA"
+          ]
+        }
+      ],
+      "bonus": [
+        "FRA",
+        137,
+        184,
+        "ALB",
+        "POR",
+        "Mbappé, K.",
+        "Mbappé, K.",
+        "Depay, M.",
+        "Schouten, J."
+      ],
+      "round_of_16": [
+        "HUN",
+        "ESP",
+        "GER",
+        "DEN",
+        "ENG",
+        "UKR",
+        "ITA",
+        "SUI",
+        "NED",
+        "ROM",
+        "POR",
+        "SCO",
+        "BEL",
+        "CRO",
+        "FRA",
+        "TUR"
+      ],
+      "quarter_finals": [
+        "ITA",
+        "GER",
+        "POR",
+        "NED",
+        "ENG",
+        "ESP",
+        "BEL",
+        "FRA"
+      ],
+      "semi_finals": [
+        "GER",
+        "NED",
+        "FRA",
+        "ENG"
+      ],
+      "finals": [
+        "GER",
+        "FRA"
+      ]
+    },
+    {
+      "name": "Nathalie den D.",
+      "email": "nathaliedendulk@hotmail.com",
+      "team_name": "JustaSoccerForFun",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            3,
+            2
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            0,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            0,
+            0
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            2,
+            4
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            3,
+            2
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            2,
+            3
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            2,
+            3
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            1,
+            4
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            3,
+            2
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "SUI",
+            "ITA"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            1,
+            0
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "DEN",
+            "TUR"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "ESP",
+            "AUT"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "NED",
+            "UKR"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "POR",
+            "SCO"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            2,
+            3
+          ],
+          "teams": [
+            "BEL",
+            "CRO"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "FRA",
+            "GEO"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            0,
+            0
+          ],
+          "teams": [
+            "ESP",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            4,
+            2
+          ],
+          "teams": [
+            "POR",
+            "UKR"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            1,
+            3
+          ],
+          "teams": [
+            "DEN",
+            "ITA"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            2,
+            2
+          ],
+          "teams": [
+            "CRO",
+            "FRA"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            1,
+            0
+          ],
+          "teams": [
+            "ESP",
+            "POR"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "FRA",
+            "ITA"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            2,
+            4
+          ],
+          "teams": [
+            "ESP",
+            "FRA"
+          ]
+        }
+      ],
+      "bonus": [
+        "FRA",
+        127,
+        131,
+        "GEO",
+        "DEN",
+        "Beier, M.",
+        "Seiwald, N.",
+        "Depay, M.",
+        "Gakpo, C."
+      ],
+      "round_of_16": [
+        "SUI",
+        "ITA",
+        "GER",
+        "DEN",
+        "DEN",
+        "TUR",
+        "ESP",
+        "AUT",
+        "NED",
+        "UKR",
+        "POR",
+        "SCO",
+        "BEL",
+        "CRO",
+        "FRA",
+        "GEO"
+      ],
+      "quarter_finals": [
+        "ESP",
+        "GER",
+        "POR",
+        "UKR",
+        "DEN",
+        "ITA",
+        "CRO",
+        "FRA"
+      ],
+      "semi_finals": [
+        "ESP",
+        "POR",
+        "FRA",
+        "ITA"
+      ],
+      "finals": [
+        "ESP",
+        "FRA"
+      ]
+    },
+    {
+      "name": "Joost van W.",
+      "email": "joostvanwaasdijk@gmail.com",
+      "team_name": "JVW",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            0,
+            4
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            4
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "SUI",
+            "ITA"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "ENG",
+            "NED"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "ESP",
+            "HUN"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "NED",
+            "SVK"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "POR",
+            "CRO"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "BEL",
+            "CRO"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "FRA",
+            "CZE"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "ESP",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "POR",
+            "NED"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            2,
+            2
+          ],
+          "teams": [
+            "ENG",
+            "ITA"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            1,
+            3
+          ],
+          "teams": [
+            "BEL",
+            "FRA"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "ESP",
+            "POR"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "FRA",
+            "ENG"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "ESP",
+            "ENG"
+          ]
+        }
+      ],
+      "bonus": [
+        "ENG",
+        149,
+        179,
+        "ALB",
+        "ENG",
+        "Mbappé, K.",
+        "Foden, P.",
+        "Simons, X.",
+        "Dumfries, D."
+      ],
+      "round_of_16": [
+        "SUI",
+        "ITA",
+        "GER",
+        "DEN",
+        "ENG",
+        "NED",
+        "ESP",
+        "HUN",
+        "NED",
+        "SVK",
+        "POR",
+        "CRO",
+        "BEL",
+        "CRO",
+        "FRA",
+        "CZE"
+      ],
+      "quarter_finals": [
+        "ESP",
+        "GER",
+        "POR",
+        "NED",
+        "ENG",
+        "ITA",
+        "BEL",
+        "FRA"
+      ],
+      "semi_finals": [
+        "ESP",
+        "POR",
+        "FRA",
+        "ENG"
+      ],
+      "finals": [
+        "ESP",
+        "ENG"
+      ]
+    },
+    {
+      "name": "Nadine van der V.",
+      "email": "nadinee92@hotmail.com",
+      "team_name": "NLkampioen",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            2,
+            3
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            4,
+            0
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            0,
+            0
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            2,
+            3
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            1,
+            4
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "SUI",
+            "ESP"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ENG",
+            "POL"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "ITA",
+            "HUN"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "FRA",
+            "UKR"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "POR",
+            "CRO"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "BEL",
+            "SRB"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "NED",
+            "POR"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "ITA",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            0,
+            1
+          ],
+          "teams": [
+            "POR",
+            "FRA"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "ENG",
+            "ESP"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            0,
+            3
+          ],
+          "teams": [
+            "BEL",
+            "NED"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "GER",
+            "FRA"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "NED",
+            "ENG"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            0,
+            3
+          ],
+          "teams": [
+            "GER",
+            "NED"
+          ]
+        }
+      ],
+      "bonus": [
+        "NED",
+        142,
+        132,
+        "GEO",
+        "ITA",
+        "Gakpo, C.",
+        "Veerman, J.",
+        "Gakpo, C.",
+        "Dumfries, D."
+      ],
+      "round_of_16": [
+        "SUI",
+        "ESP",
+        "GER",
+        "DEN",
+        "ENG",
+        "POL",
+        "ITA",
+        "HUN",
+        "FRA",
+        "UKR",
+        "POR",
+        "CRO",
+        "BEL",
+        "SRB",
+        "NED",
+        "POR"
+      ],
+      "quarter_finals": [
+        "ITA",
+        "GER",
+        "POR",
+        "FRA",
+        "ENG",
+        "ESP",
+        "BEL",
+        "NED"
+      ],
+      "semi_finals": [
+        "GER",
+        "FRA",
+        "NED",
+        "ENG"
+      ],
+      "finals": [
+        "GER",
+        "NED"
+      ]
+    },
+    {
+      "name": "Sterre van der Z.",
+      "email": "sterrevanderzalm@gmail.com",
+      "team_name": "Sterrestof",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            0,
+            4
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            3,
+            2
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            4
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            2,
+            3
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "SUI",
+            "ITA"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ENG",
+            "AUT"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "ESP",
+            "SVK"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "NED",
+            "UKR"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "POR",
+            "CRO"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            4,
+            0
+          ],
+          "teams": [
+            "BEL",
+            "SVN"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "FRA",
+            "TUR"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            1,
+            3
+          ],
+          "teams": [
+            "ESP",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "POR",
+            "NED"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ENG",
+            "ITA"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "BEL",
+            "FRA"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "GER",
+            "NED"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "FRA",
+            "ENG"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "GER",
+            "ENG"
+          ]
+        }
+      ],
+      "bonus": [
+        "ENG",
+        145,
+        158,
+        "ALB",
+        "POL",
+        "Mbappé, K.",
+        "Fernandes, B.",
+        "Depay, M.",
+        "Dumfries, D."
+      ],
+      "round_of_16": [
+        "SUI",
+        "ITA",
+        "GER",
+        "DEN",
+        "ENG",
+        "AUT",
+        "ESP",
+        "SVK",
+        "NED",
+        "UKR",
+        "POR",
+        "CRO",
+        "BEL",
+        "SVN",
+        "FRA",
+        "TUR"
+      ],
+      "quarter_finals": [
+        "ESP",
+        "GER",
+        "POR",
+        "NED",
+        "ENG",
+        "ITA",
+        "BEL",
+        "FRA"
+      ],
+      "semi_finals": [
+        "GER",
+        "NED",
+        "FRA",
+        "ENG"
+      ],
+      "finals": [
+        "GER",
+        "ENG"
+      ]
+    },
+    {
+      "name": "Erwin S.",
+      "email": "emh.smit@gmail.com",
+      "team_name": "Steve Erwin",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            2,
+            3
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            1,
+            4
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            1,
+            4
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            0,
+            3
+          ],
+          "teams": [
+            "SUI",
+            "ESP"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "GER",
+            "ENG"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "DEN",
+            "POL"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "ITA",
+            "HUN"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            3,
+            2
+          ],
+          "teams": [
+            "FRA",
+            "SVK"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "CZE",
+            "CRO"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "BEL",
+            "SCO"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "NED",
+            "POR"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ITA",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "CZE",
+            "FRA"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            0,
+            4
+          ],
+          "teams": [
+            "DEN",
+            "ESP"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            0,
+            3
+          ],
+          "teams": [
+            "BEL",
+            "NED"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            1,
+            0
+          ],
+          "teams": [
+            "ITA",
+            "FRA"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "NED",
+            "ESP"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            0,
+            3
+          ],
+          "teams": [
+            "ITA",
+            "NED"
+          ]
+        }
+      ],
+      "bonus": [
+        "NED",
+        144,
+        169,
+        "TUR",
+        "GER",
+        "Depay, M.",
+        "Gakpo, C.",
+        "Veerman, J.",
+        "Weghorst, W."
+      ],
+      "round_of_16": [
+        "SUI",
+        "ESP",
+        "GER",
+        "ENG",
+        "DEN",
+        "POL",
+        "ITA",
+        "HUN",
+        "FRA",
+        "SVK",
+        "CZE",
+        "CRO",
+        "BEL",
+        "SCO",
+        "NED",
+        "POR"
+      ],
+      "quarter_finals": [
+        "ITA",
+        "GER",
+        "CZE",
+        "FRA",
+        "DEN",
+        "ESP",
+        "BEL",
+        "NED"
+      ],
+      "semi_finals": [
+        "ITA",
+        "FRA",
+        "NED",
+        "ESP"
+      ],
+      "finals": [
+        "ITA",
+        "NED"
+      ]
+    },
+    {
+      "name": "Fai W.",
+      "email": "f.wong@cloudseven.nl",
+      "team_name": "Tikkie Terug",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "SUI",
+            "ITA"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            3,
+            2
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ENG",
+            "ROM"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "CRO",
+            "CZE"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "NED",
+            "UKR"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            1,
+            3
+          ],
+          "teams": [
+            "TUR",
+            "ESP"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "BEL",
+            "SRB"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "FRA",
+            "POR"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            2,
+            3
+          ],
+          "teams": [
+            "CRO",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "ESP",
+            "NED"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "ENG",
+            "ITA"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            1,
+            3
+          ],
+          "teams": [
+            "BEL",
+            "FRA"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "GER",
+            "ESP"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "FRA",
+            "ENG"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "GER",
+            "FRA"
+          ]
+        }
+      ],
+      "bonus": [
+        "GER",
+        155,
+        130,
+        "GEO",
+        "ITA",
+        "Mbappé, K.",
+        "Kroos, T.",
+        "Depay, M.",
+        "De Ligt, M."
+      ],
+      "round_of_16": [
+        "SUI",
+        "ITA",
+        "GER",
+        "DEN",
+        "ENG",
+        "ROM",
+        "CRO",
+        "CZE",
+        "NED",
+        "UKR",
+        "TUR",
+        "ESP",
+        "BEL",
+        "SRB",
+        "FRA",
+        "POR"
+      ],
+      "quarter_finals": [
+        "CRO",
+        "GER",
+        "ESP",
+        "NED",
+        "ENG",
+        "ITA",
+        "BEL",
+        "FRA"
+      ],
+      "semi_finals": [
+        "GER",
+        "ESP",
+        "FRA",
+        "ENG"
+      ],
+      "finals": [
+        "GER",
+        "FRA"
+      ]
+    },
+    {
+      "name": "Vincent W.",
+      "email": "vwijtman@hotmail.com",
+      "team_name": "ViniVidiVici",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            3,
+            2
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            4,
+            0
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            2,
+            2
+          ],
+          "teams": [
+            "HUN",
+            "CRO"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "ENG",
+            "AUT"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "ESP",
+            "SVK"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "NED",
+            "UKR"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "POR",
+            "ITA"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "BEL",
+            "SRB"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            3,
+            0
+          ],
+          "teams": [
+            "FRA",
+            "CZE"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "ESP",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "POR",
+            "NED"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "ENG",
+            "CRO"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            1,
+            3
+          ],
+          "teams": [
+            "BEL",
+            "FRA"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "GER",
+            "NED"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            3,
+            2
+          ],
+          "teams": [
+            "FRA",
+            "ENG"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "GER",
+            "FRA"
+          ]
+        }
+      ],
+      "bonus": [
+        "FRA",
+        170,
+        163,
+        "ALB",
+        "SRB",
+        "Mbappé, K.",
+        "Gakpo, C.",
+        "Simons, X.",
+        "Dumfries, D."
+      ],
+      "round_of_16": [
+        "HUN",
+        "CRO",
+        "GER",
+        "DEN",
+        "ENG",
+        "AUT",
+        "ESP",
+        "SVK",
+        "NED",
+        "UKR",
+        "POR",
+        "ITA",
+        "BEL",
+        "SRB",
+        "FRA",
+        "CZE"
+      ],
+      "quarter_finals": [
+        "ESP",
+        "GER",
+        "POR",
+        "NED",
+        "ENG",
+        "CRO",
+        "BEL",
+        "FRA"
+      ],
+      "semi_finals": [
+        "GER",
+        "NED",
+        "FRA",
+        "ENG"
+      ],
+      "finals": [
+        "GER",
+        "FRA"
+      ]
+    },
+    {
+      "name": "Nina van der H.",
+      "email": "ninavanderhoeven1991@gmail.com",
+      "team_name": "Chickies",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            4
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "HUN",
+            "CRO"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "ENG",
+            "POL"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "ESP",
+            "CZE"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "FRA",
+            "UKR"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "POR",
+            "ITA"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "BEL",
+            "AUT"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            3,
+            2
+          ],
+          "teams": [
+            "NED",
+            "TUR"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "ESP",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "POR",
+            "FRA"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ENG",
+            "CRO"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "BEL",
+            "NED"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            3,
+            2
+          ],
+          "teams": [
+            "ESP",
+            "FRA"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            1,
+            3
+          ],
+          "teams": [
+            "NED",
+            "ENG"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            1,
+            2
+          ],
+          "teams": [
+            "ESP",
+            "ENG"
+          ]
+        }
+      ],
+      "bonus": [
+        "ENG",
+        142,
+        162,
+        "ALB",
+        "HUN",
+        "Kane, H.",
+        "Saka, B.",
+        "Depay, M.",
+        "Dumfries, D."
+      ],
+      "round_of_16": [
+        "HUN",
+        "CRO",
+        "GER",
+        "DEN",
+        "ENG",
+        "POL",
+        "ESP",
+        "CZE",
+        "FRA",
+        "UKR",
+        "POR",
+        "ITA",
+        "BEL",
+        "AUT",
+        "NED",
+        "TUR"
+      ],
+      "quarter_finals": [
+        "ESP",
+        "GER",
+        "POR",
+        "FRA",
+        "ENG",
+        "CRO",
+        "BEL",
+        "NED"
+      ],
+      "semi_finals": [
+        "ESP",
+        "FRA",
+        "NED",
+        "ENG"
+      ],
+      "finals": [
+        "ESP",
+        "ENG"
+      ]
+    },
+    {
+      "name": "Ruud H.",
+      "email": "ruudhaamke@gmail.com",
+      "team_name": "FC bal op 't dak",
+      "predictions": [
+        {
+          "match": 1,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 2,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 3,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 4,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 5,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 6,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 7,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 8,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 9,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 10,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 11,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 12,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 13,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 14,
+          "score": [
+            3,
+            1
+          ]
+        },
+        {
+          "match": 15,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 16,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 17,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 18,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 19,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 20,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 21,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 22,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 23,
+          "score": [
+            1,
+            2
+          ]
+        },
+        {
+          "match": 24,
+          "score": [
+            2,
+            0
+          ]
+        },
+        {
+          "match": 25,
+          "score": [
+            2,
+            2
+          ]
+        },
+        {
+          "match": 26,
+          "score": [
+            0,
+            1
+          ]
+        },
+        {
+          "match": 27,
+          "score": [
+            0,
+            3
+          ]
+        },
+        {
+          "match": 28,
+          "score": [
+            0,
+            2
+          ]
+        },
+        {
+          "match": 29,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 30,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 31,
+          "score": [
+            3,
+            0
+          ]
+        },
+        {
+          "match": 32,
+          "score": [
+            1,
+            0
+          ]
+        },
+        {
+          "match": 33,
+          "score": [
+            2,
+            1
+          ]
+        },
+        {
+          "match": 34,
+          "score": [
+            1,
+            3
+          ]
+        },
+        {
+          "match": 35,
+          "score": [
+            1,
+            1
+          ]
+        },
+        {
+          "match": 36,
+          "score": [
+            1,
+            4
+          ]
+        },
+        {
+          "match": 37,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "SUI",
+            "ITA"
+          ]
+        },
+        {
+          "match": 38,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "GER",
+            "DEN"
+          ]
+        },
+        {
+          "match": 39,
+          "score": [
+            3,
+            1
+          ],
+          "teams": [
+            "ENG",
+            "ROM"
+          ]
+        },
+        {
+          "match": 40,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "ESP",
+            "POL"
+          ]
+        },
+        {
+          "match": 41,
+          "score": [
+            2,
+            0
+          ],
+          "teams": [
+            "FRA",
+            "SVK"
+          ]
+        },
+        {
+          "match": 42,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "POR",
+            "CRO"
+          ]
+        },
+        {
+          "match": 43,
+          "score": [
+            2,
+            2
+          ],
+          "teams": [
+            "BEL",
+            "HUN"
+          ]
+        },
+        {
+          "match": 44,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "NED",
+            "TUR"
+          ]
+        },
+        {
+          "match": 45,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "ESP",
+            "GER"
+          ]
+        },
+        {
+          "match": 46,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "POR",
+            "FRA"
+          ]
+        },
+        {
+          "match": 47,
+          "score": [
+            3,
+            2
+          ],
+          "teams": [
+            "ENG",
+            "ITA"
+          ]
+        },
+        {
+          "match": 48,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "BEL",
+            "NED"
+          ]
+        },
+        {
+          "match": 49,
+          "score": [
+            2,
+            1
+          ],
+          "teams": [
+            "ESP",
+            "POR"
+          ]
+        },
+        {
+          "match": 50,
+          "score": [
+            1,
+            1
+          ],
+          "teams": [
+            "NED",
+            "ENG"
+          ]
+        },
+        {
+          "match": 51,
+          "score": [
+            0,
+            2
+          ],
+          "teams": [
+            "ESP",
+            "NED"
+          ]
+        }
+      ],
+      "bonus": [
+        "NED",
+        160,
+        95,
+        "ALB",
+        "ITA",
+        "Mbappé, K.",
+        "Frimpong, J.",
+        "Weghorst, W.",
+        "Geertruida, L."
+      ],
+      "round_of_16": [
+        "SUI",
+        "ITA",
+        "GER",
+        "DEN",
+        "ENG",
+        "ROM",
+        "ESP",
+        "POL",
+        "FRA",
+        "SVK",
+        "POR",
+        "CRO",
+        "BEL",
+        "HUN",
+        "NED",
+        "TUR"
+      ],
+      "quarter_finals": [
+        "ESP",
+        "GER",
+        "POR",
+        "FRA",
+        "ENG",
+        "ITA",
+        "BEL",
+        "NED"
+      ],
+      "semi_finals": [
+        "ESP",
+        "POR",
+        "NED",
+        "ENG"
+      ],
+      "finals": [
+        "ESP",
+        "NED"
       ]
     }
   ]

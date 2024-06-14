@@ -51,7 +51,7 @@
                                                class="txt-orange bi bi-arrow-up-circle-fill"></i>
                                             <i v-else class="bi bi-dash-lg"></i>
                                         </td>
-                                        <td class="text-nowrap"><router-link :to="{name: 'deelnemer', params: {id: player.name}}">{{ player.team_name }}</router-link></td>
+                                        <td class="text-nowrap"><router-link :to="{name: 'deelnemer', params: {id: player.team_name}}">{{ player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name }}</router-link></td>
                                         <td class="text-nowrap" style="width: 99%;">{{ player.name }}</td>
                                         <td>{{ player.score }}</td>
                                     </tr>
@@ -280,11 +280,11 @@ function getScoreProgression(snapshot) {
     sorted.forEach(player => {
         let data = [{x: "start", y: 0}]
         snapshots.value.slice(0, snapshot).forEach((s, idx) => {
-            const score = tournament.getParticipantTotalScore(player.name, idx + 1)
+            const score = tournament.getParticipantTotalScore(player.team_name, idx + 1)
             data.push({x: s, y: score})
         })
         const dataSet = {
-            name: player.team_name,
+            name: player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name,
             data: data
         }
         dataSets.push(dataSet)

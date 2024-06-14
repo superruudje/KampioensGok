@@ -425,7 +425,7 @@ export const useTournament = defineStore('tournament', {
                     // scores: player.scores,
                     name: player.name,
                     team_name: player.team_name,
-                    score: this.getParticipantTotalScore(player.name, snapshot)
+                    score: this.getParticipantTotalScore(player.team_name, snapshot)
                 }
             }).sort((a, b) => b.score - a.score).map((player, idx, array) => {
                 player.pos = idx < 1 ? 1 : player.score === array[idx - 1].score ? array[idx - 1].pos : idx + 1
@@ -433,14 +433,14 @@ export const useTournament = defineStore('tournament', {
             })
         },
         /**
-         * Return participant
+         * Return participant by team name
          */
         getParticipant(name) {
-            return this.players.find(item => item.name === name)
+            return this.players.find(item => item.team_name === name)
         },
         /**
          * Calculate total score
-         * @param name
+         * @param name team name
          * @param snapshot
          * @returns {*}
          */
@@ -473,7 +473,7 @@ export const useTournament = defineStore('tournament', {
          */
         getParticipantScoreBonus(name) {
             let score = 0
-            const player = this.players.find(player => player.name === name)
+            const player = this.players.find(player => player.team_name === name)
             // check for champion
             if (player.bonus[0] === this.bonus[0]) score += 75
             // check for estimation questions
@@ -495,7 +495,7 @@ export const useTournament = defineStore('tournament', {
          */
         getParticipantScoreKnockOut(name) {
             let score = 0
-            const player = this.players.find(player => player.name === name)
+            const player = this.players.find(player => player.team_name === name)
 
             player.round_of_16.forEach(team => {
                 if (this.knock_out.round_of_16.includes(team)) score += 10
@@ -519,7 +519,7 @@ export const useTournament = defineStore('tournament', {
          * @returns {string[]|*}
          */
         getMatchPlayerPrediction(name, match) {
-            const player = this.players.find(player => player.name === name)
+            const player = this.players.find(player => player.team_name === name)
             if (!player) return ['?', '?']
             const prediction = player.predictions.find(prediction => prediction.match === match)
             return prediction?.score || ['?', '?']
@@ -531,7 +531,7 @@ export const useTournament = defineStore('tournament', {
          * @returns {string[]|*}
          */
         getMatchPlayerPredictionTeams(name, match) {
-            const player = this.players.find(player => player.name === name)
+            const player = this.players.find(player => player.team_name === name)
             if (!player) return ['?', '?']
             const prediction = player.predictions.find(prediction => prediction.match === match)
             return prediction?.teams || ['?', '?']
