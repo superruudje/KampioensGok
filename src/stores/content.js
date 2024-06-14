@@ -15,8 +15,8 @@ export const useTournament = defineStore('tournament', {
 
         bonus: [
             "", //0.champion
-            -1, //1. goals scored
-            -1, //2. cards given
+            null, //1. goals scored
+            null, //2. cards given
             "", //3. most against
             "", //4. most cards
             "", //5. top scorer
@@ -478,7 +478,8 @@ export const useTournament = defineStore('tournament', {
             if (player.bonus[0] === this.bonus[0]) score += 75
             // check for estimation questions
             for (let i = 1; i < 3; i++) {
-                if (player.bonus[i] === this.bonus[i]) score += 40
+                if (this.bonus[i] === null) return 0
+                else if (player.bonus[i] === this.bonus[i]) score += 40
                 else if (player.bonus[i] >= (this.bonus[i] - 5) && player.bonus[i] <= (this.bonus[i] + 5)) score += 25
                 else if (player.bonus[i] >= (this.bonus[i] - 10) && player.bonus[i] <= (this.bonus[i] + 10)) score += 15
             }
