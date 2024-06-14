@@ -9,6 +9,55 @@
     "teams": [
       "GER",
       "SCO"
+    ],
+    "result": [
+      5,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 10,
+        "team": "GER",
+        "player": "Wirtz"
+      },
+      {
+        "type": "goal",
+        "minute": 19,
+        "team": "GER",
+        "player": "Musiala"
+      },
+      {
+        "type": "red",
+        "minute": 44,
+        "team": "SCO",
+        "player": "Porteous",
+        "direct": true
+      },
+      {
+        "type": "goal",
+        "minute": "45 + 1",
+        "team": "GER",
+        "player": "Havertz"
+      },
+      {
+        "type": "goal",
+        "minute": 68,
+        "team": "GER",
+        "player": "Füllkrug"
+      },
+      {
+        "type": "goal",
+        "minute": 87,
+        "team": "SCO",
+        "player": "Rüdiger (og)"
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 3",
+        "team": "GER",
+        "player": "Can"
+      }
     ]
   },
   {
