@@ -11,6 +11,7 @@
         <back-to-top/>
         <footer-component/>
     </div>
+    <mobile-navigation-bar/>
 </template>
 
 <script setup>
@@ -20,6 +21,7 @@ import {Tooltip} from "bootstrap";
 import {onMounted} from "vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import BackToTop from "@/components/BackToTop.vue";
+import MobileNavigationBar from "@/components/MobileNavigationBar.vue";
 const tournament = useTournament();
 tournament.fetchData()
 

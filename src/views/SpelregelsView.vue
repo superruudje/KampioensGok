@@ -13,7 +13,7 @@
         <main class="container-md py-2 py-md-5">
             <div class="row g-3">
                 <div class="col-md-8">
-                    <div class="card border-0 rounded-0 shadow-sm">
+                    <div class="card border-0 rounded-0 shadow-sm mb-3">
                         <div class="card-body p-4">
                             <h2 class="mb-b txt-blue fw-bolder">Puntensysteem</h2>
                             <p>Je verdient punten door uitslagen (gedeeltelijk) goed te voorspellen. Daarnaast kun je
@@ -21,12 +21,15 @@
                                 statistieken. Tot slot zijn er nog punten te behalen voor de bonusvragen.</p>
                             <p>Totaal zijn er <b class="txt-orange">1265 ptn.</b> te verdienen.</p>
                             <h5 class="txt-blue fw-bolder">Wedstrijduitslag</h5>
-                            <p>Het maximale aantal punten wat je kunt verdienen voor een wedstrijd is <b class="txt-orange">10
+                            <p>Het maximale aantal punten wat je kunt verdienen voor een wedstrijd is <b
+                                class="txt-orange">10
                                 pnt.</b> Tijdens het EK 2024 worden er totaal 51 wedstrijden gespeeld. Er zijn maximaal
                                 <b class="txt-orange">510 ptn.</b> te verdienen uit wedstrijden.</p>
                             <ul>
-                                <li><b class="txt-orange">10 pnt. </b>voor een volledig correct voorspelde wedstrijd.</li>
-                                <li><b class="txt-orange">7 pnt. </b>voor een correct voorspelde gelijkspel met incorrect
+                                <li><b class="txt-orange">10 pnt. </b>voor een volledig correct voorspelde wedstrijd.
+                                </li>
+                                <li><b class="txt-orange">7 pnt. </b>voor een correct voorspelde gelijkspel met
+                                    incorrect
                                     voorspelde eindstand.
                                 </li>
                                 <li><b class="txt-orange">5 pnt. </b>voor een correct voorspelde winnaar met incorrect
@@ -78,7 +81,8 @@
                             <div class="small">* Onder uitslag wordt verstaan de stand na <b>90</b> minuten.</div>
                             <hr class="my-4">
                             <h5 class="txt-blue fw-bolder">Knock-out fase</h5>
-                            <p>Voor elk correct voorspelde team in de knock-out fase zijn er punten te verdienen. Totaal zijn er
+                            <p>Voor elk correct voorspelde team in de knock-out fase zijn er punten te verdienen. Totaal
+                                zijn er
                                 <b class="txt-orange">540 pnt.</b> te verdienen.</p>
                             <ul>
                                 <li><b class="txt-orange">10 pnt. </b>per correct voorspelde achtste finalist.</li>
@@ -95,13 +99,46 @@
                                 <li><b class="txt-orange">40 pnt. </b>wanneer het aantal exact is voorspeld.</li>
                                 <li><b class="txt-orange">25 pnt. </b>wanneer het voorspelde aantal er max. 5 naast zit.
                                 </li>
-                                <li><b class="txt-orange">15 pnt. </b>wanneer het voorspelde aantal er max. 10 naast zit.
+                                <li><b class="txt-orange">15 pnt. </b>wanneer het voorspelde aantal er max. 10 naast
+                                    zit.
                                 </li>
                             </ul>
                             <p>Totaal zijn er <b class="txt-orange">215 pnt.</b> te verdienen met bonusvragen.</p>
                             <div class="small">1: Correct voorspelde kampioen is <b class="txt-orange">75 pnt.</b></div>
                             <div class="small">2: Indirecte rode kaart (bij 2x geel) telt niet als extra kaart.</div>
                             <div class="small">3: Totaal aantal goals is incl. verlengingen.</div>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h2 class="mb-b txt-blue fw-bolder">Prijzenpot</h2>
+                            <p>Na de poulefase worden de eerste prijzen verdeeld. Op basis van de ranglijst zijn de
+                                prijzen als volgt:</p>
+                            <ul>
+                                <li><b class="txt-orange">1e plaats: </b>1 x héél staatslot.
+                                </li>
+                                <li><b class="txt-orange">2e plaats: </b>3 x 1/5 staatslot XL.
+                                </li>
+                                <li><b class="txt-orange">3e plaats: </b>1 x 1/5 staatslot XL + 1 x 1/5 staatslot.
+                                </li>
+                            </ul>
+                            <p>Op basis van de eindstand is de prijzenpot als volgt:</p>
+                            <ul>
+                                <li><b class="txt-orange">1e plaats: </b>€270.
+                                </li>
+                                <li><b class="txt-orange">2e plaats: </b>€200.
+                                </li>
+                                <li><b class="txt-orange">3e plaats: </b>€160.
+                                </li>
+                                <li><b class="txt-orange">4e plaats: </b>€100.
+                                </li>
+                                <li><b class="txt-orange">5e plaats: </b>€75.
+                                </li>
+                                <li><b class="txt-orange">13e plaats: </b>€15.
+                                </li>
+                                <li><b class="txt-orange">Laatste plaats: </b>Troostprijs.
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -113,12 +150,16 @@
                             <p>Je hebt tot uiterlijk vrijdag 14 juni 20:59 uur om jouw invulsheet te mailen naar de
                                 organisatie.</p>
                             <h6 class="txt-blue fw-bolder">2. Wanneer worden de uitslagen ingevoerd?</h6>
-                            <p>Uitslagen worden zo snel mogelijk na de gespeelde wedstrijd ingevoerd. Mocht dit niet lukken,
+                            <p>Uitslagen worden zo snel mogelijk na de gespeelde wedstrijd ingevoerd. Mocht dit niet
+                                lukken,
                                 dan zullen de uitslagen in ieder geval voor 12.00 uur op de volgende dag ingevoerd
                                 worden.</p>
-                            <h6 class="txt-blue fw-bolder">3. Wanneer worden de punten voor de bonusvragen toegekend?</h6>
-                            <p>Zodra het antwoord op de bonusvraag bekend is, zal deze worden ingevoerd en worden de punten
-                                daarvan direct toegekend. Sommige antwoorden zullen echter pas bekend zijn na afloop van het
+                            <h6 class="txt-blue fw-bolder">3. Wanneer worden de punten voor de bonusvragen
+                                toegekend?</h6>
+                            <p>Zodra het antwoord op de bonusvraag bekend is, zal deze worden ingevoerd en worden de
+                                punten
+                                daarvan direct toegekend. Sommige antwoorden zullen echter pas bekend zijn na afloop van
+                                het
                                 toernooi.</p>
                         </div>
                     </div>

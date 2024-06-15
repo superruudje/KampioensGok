@@ -15,17 +15,21 @@
                 <div class="col-12">
                     <div class="card border-0 rounded-0 shadow-sm mb-3 mb-md-5">
                         <div class="card-body p-4">
-                            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-                                <h2 class="mb-0 txt-blue fw-bolder">Ranglijst</h2>
-                                <div class="ms-auto w-auto input-group input-group-sm">
-                                    <input v-model="searchTerm" class="form-control" placeholder="Zoek naar deelnemer of team"
-                                           type="search" @input="goPage(0)">
-                                    <span id="basic-addon1" class="input-group-text"><i class="bi bi-search"></i></span>
+                            <div class="row align-items-center g-2 mb-3">
+                                <h2 class="col-12 col-md-auto me-md-auto mb-0 txt-blue fw-bolder">Ranglijst</h2>
+                                <div class="col-auto">
+                                    <div class="ms-auto w-auto input-group input-group-sm">
+                                        <input v-model="searchTerm" class="form-control" placeholder="Zoek naar deelnemer of team"
+                                               type="search" @input="goPage(0)">
+                                        <span id="basic-addon1" class="input-group-text"><i class="bi bi-search"></i></span>
+                                    </div>
                                 </div>
-                                <select class="form-select form-select-sm w-auto" v-model="snapshot">
-                                    <option :value="0">start</option>
-                                    <option v-for="(snapshot, idx) in snapshots" :value="idx + 1">{{ snapshot }}</option>
-                                </select>
+                                <div class="col-auto">
+                                    <select class="form-select form-select-sm w-auto" v-model="snapshot">
+                                        <option :value="0">start</option>
+                                        <option v-for="(snapshot, idx) in snapshots" :value="idx + 1">{{ snapshot }}</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="w-100 overflow-hidden overflow-x-auto">
                                 <table class="table">
@@ -33,9 +37,9 @@
                                     <tr>
                                         <th class="txt-orange" scope="col">#</th>
                                         <th class="txt-orange" scope="col"></th>
+                                        <th class="txt-orange" scope="col">Pnt.</th>
                                         <th class="txt-orange" scope="col">Team</th>
                                         <th class="txt-orange" style="width: 99%" scope="col">Deelnemer</th>
-                                        <th class="txt-orange" scope="col">Punten</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -51,9 +55,9 @@
                                                class="txt-orange bi bi-arrow-up-circle-fill"></i>
                                             <i v-else class="bi bi-dash-lg"></i>
                                         </td>
+                                        <td>{{ player.score }}</td>
                                         <td class="text-nowrap"><router-link :to="{name: 'deelnemer', params: {id: player.team_name}}">{{ player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name }}</router-link></td>
                                         <td class="text-nowrap" style="width: 99%;">{{ player.name }}</td>
-                                        <td>{{ player.score }}</td>
                                     </tr>
                                     </tbody>
                                 </table>

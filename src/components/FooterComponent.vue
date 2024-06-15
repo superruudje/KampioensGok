@@ -9,6 +9,7 @@
                 </div>
             </div>
         </div>
+        <div class="d-sm-none" style="height: 75px"></div>
     </div>
 </template>
 
