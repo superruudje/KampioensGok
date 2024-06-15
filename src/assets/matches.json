@@ -211,6 +211,55 @@
     "teams": [
       "ITA",
       "ALB"
+    ],
+    "result": [
+      2,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 1,
+        "team": "ALB",
+        "player": "Bajrami"
+      },
+      {
+        "type": "goal",
+        "minute": 11,
+        "team": "ITA",
+        "player": "Bastoni",
+        "assist": "Pellegrini"
+      },
+      {
+        "type": "goal",
+        "minute": "16",
+        "team": "ITA",
+        "player": "Barella"
+      },
+      {
+        "type": "yellow",
+        "minute": 22,
+        "team": "ITA",
+        "player": "Pellegrini"
+      },
+      {
+        "type": "yellow",
+        "minute": 51,
+        "team": "ITA",
+        "player": "Calafiori"
+      },
+      {
+        "type": "yellow",
+        "minute": 51,
+        "team": "ALB",
+        "player": "Broja"
+      },
+      {
+        "type": "yellow",
+        "minute": 74,
+        "team": "ALB",
+        "player": "Hoxha"
+      }
     ]
   },
   {
