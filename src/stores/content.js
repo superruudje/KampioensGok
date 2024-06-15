@@ -221,11 +221,11 @@ export const useTournament = defineStore('tournament', {
         groupedAssist() {
             let res = []
             this.matches_played.forEach(match => {
-                const assists = match.timeline?.filter(e => e.type === 'assist') || []
-                assists.forEach((assist) => {
-                    const player = assist.player
+                const goals = match.timeline?.filter(e => e.type === 'goal' && e.assist) || []
+                goals.forEach((goal) => {
+                    const player = goal.assist
                     if (!res.some((t) => t.label === player))
-                        res.push({label: player, image: assist.team, count: 0})
+                        res.push({label: player, image: goal.team, count: 0})
                     res.find((t) => t.label === player).count++;
                 })
             })

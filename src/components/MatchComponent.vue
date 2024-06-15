@@ -38,7 +38,7 @@
                     }}, {{ match.city }}</span>
                 <button v-if="match.timeline" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3 text-nowrap"
                         @click="openTimeline = !openTimeline">Toon
-                    {{ openTimeline ? 'miner' : 'meer' }}
+                    {{ openTimeline ? 'minder' : 'meer' }}
                     <i :class="openTimeline ? 'bi-chevron-up' : 'bi-chevron-down'" class="bi ms-2"></i>
                 </button>
                 <button v-else-if="started && match.group.length < 2" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3 text-nowrap"

@@ -236,16 +236,16 @@ const questions = ref([
         label: "Welk land krijgt de meeste tegengoals?",
         type: "exact",
         p: 10,
-        now: getTeamName(groupedGoalsAgainst.value[0].id)
+        now: getTeamName(groupedGoalsAgainst.value[0].label)
     },
     {
         label: "Welk land krijgt de meeste kaarten?",
         type: "exact",
         p: 10,
-        now: getTeamName(groupedTeamCards.value[0].id)
+        now: getTeamName(groupedTeamCards.value[0].label)
     },
-    {label: "Wie wordt er topscorer?", type: "exact", p: 10, now: groupedTopScorer.value[0]?.player || '-'},
-    {label: "Wie wordt de koning van de assist?", type: "exact", p: 10, now: groupedAssist.value[0]?.player || '-'},
+    {label: "Wie wordt er topscorer?", type: "exact", p: 10, now: groupedTopScorer.value[0]?.label || '-'},
+    {label: "Wie wordt de koning van de assist?", type: "exact", p: 10, now: groupedAssist.value[0]?.label || '-'},
     {label: "Welke Nederlander scoort het eerste doelpunt?", type: "exact", p: 10},
     {label: "Welke Nederlander krijgt de eerste kaart?", type: "exact", p: 10},
 ])

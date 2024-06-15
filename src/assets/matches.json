@@ -16,28 +16,18 @@
     ],
     "timeline": [
       {
-        "type": "assist",
-        "minute": 10,
-        "team": "GER",
-        "player": "Kimmich"
-      },
-      {
         "type": "goal",
         "minute": 10,
         "team": "GER",
-        "player": "Wirtz"
-      },
-      {
-        "type": "assist",
-        "minute": 19,
-        "team": "GER",
-        "player": "Havertz"
+        "player": "Wirtz",
+        "assist": "Kimmich"
       },
       {
         "type": "goal",
         "minute": 19,
         "team": "GER",
-        "player": "Musiala"
+        "player": "Musiala",
+        "assist": "Havertz"
       },
       {
         "type": "yellow",
@@ -83,16 +73,11 @@
         "player": "Rüdiger (og)"
       },
       {
-        "type": "assist",
-        "minute": "90 + 3",
-        "team": "GER",
-        "player": "Müller"
-      },
-      {
         "type": "goal",
         "minute": "90 + 3",
         "team": "GER",
-        "player": "Can"
+        "player": "Can",
+        "assist": "Müller"
       }
     ]
   },
