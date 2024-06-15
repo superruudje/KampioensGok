@@ -166,6 +166,39 @@
     "teams": [
       "ESP",
       "CRO"
+    ],
+    "result": [
+      3,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 29,
+        "team": "ESP",
+        "player": "Morata",
+        "assist": "Ruiz"
+      },
+      {
+        "type": "goal",
+        "minute": 32,
+        "team": "ESP",
+        "player": "Ruiz",
+        "assist": "Pedri"
+      },
+      {
+        "type": "goal",
+        "minute": "45 + 2",
+        "team": "ESP",
+        "player": "Carvajal",
+        "assist": "Yamal"
+      },
+      {
+        "type": "yellow",
+        "minute": 78,
+        "team": "ESP",
+        "player": "Rodri"
+      }
     ]
   },
   {
