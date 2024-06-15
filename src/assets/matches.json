@@ -91,6 +91,69 @@
     "teams": [
       "HUN",
       "SUI"
+    ],
+    "result": [
+      1,
+      3
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 5,
+        "team": "SUI",
+        "player": "Widmer"
+      },
+      {
+        "type": "goal",
+        "minute": 12,
+        "team": "SUI",
+        "player": "Duah",
+        "assist": "Aebischer"
+      },
+      {
+        "type": "goal",
+        "minute": 45,
+        "team": "SUI",
+        "player": "Aebischer",
+        "assist": "Freuler"
+      },
+      {
+        "type": "yellow",
+        "minute": 59,
+        "team": "SUI",
+        "player": "Freuler"
+      },
+      {
+        "type": "goal",
+        "minute": 66,
+        "team": "HUN",
+        "player": "Varga",
+        "assist": "Szoboszlai"
+      },
+      {
+        "type": "yellow",
+        "minute": 69,
+        "team": "HUN",
+        "player": "Szalia"
+      },
+      {
+        "type": "yellow",
+        "minute": 88,
+        "team": "HUN",
+        "player": "Fiola"
+      },
+      {
+        "type": "yellow",
+        "minute": 88,
+        "team": "SUI",
+        "player": "Yakin"
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 3",
+        "team": "SUI",
+        "player": "Embolo"
+      }
     ]
   },
   {
