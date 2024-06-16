@@ -19,65 +19,65 @@
         "type": "goal",
         "minute": 10,
         "team": "GER",
-        "player": "Wirtz",
-        "assist": "Kimmich"
+        "player": "Wirtz, F.",
+        "assist": "Kimmich, J."
       },
       {
         "type": "goal",
         "minute": 19,
         "team": "GER",
-        "player": "Musiala",
-        "assist": "Havertz"
+        "player": "Musiala, J.",
+        "assist": "Havertz, K."
       },
       {
         "type": "yellow",
         "minute": 31,
         "team": "GER",
-        "player": "Andrich"
+        "player": "Andrich, R."
       },
       {
         "type": "red",
         "minute": 44,
         "team": "SCO",
-        "player": "Porteous",
+        "player": "Porteous, R.",
         "direct": true
       },
       {
         "type": "goal",
         "minute": "45 + 1",
         "team": "GER",
-        "player": "Havertz"
+        "player": "Havertz, K."
       },
       {
         "type": "yellow",
         "minute": 48,
         "team": "SCO",
-        "player": "Ralston"
+        "player": "Ralston, T."
       },
       {
         "type": "yellow",
         "minute": 62,
         "team": "GER",
-        "player": "Tah"
+        "player": "Tah, J."
       },
       {
         "type": "goal",
         "minute": 68,
         "team": "GER",
-        "player": "Füllkrug"
+        "player": "Füllkrug, N."
       },
       {
         "type": "goal",
         "minute": 87,
         "team": "SCO",
-        "player": "Rüdiger (og)"
+        "player": "Rüdiger, A. (og)"
       },
       {
         "type": "goal",
         "minute": "90 + 3",
         "team": "GER",
-        "player": "Can",
-        "assist": "Müller"
+        "player": "Can, E.",
+        "assist": "Müller, T."
       }
     ]
   },
@@ -101,58 +101,58 @@
         "type": "yellow",
         "minute": 5,
         "team": "SUI",
-        "player": "Widmer"
+        "player": "Widmer, S."
       },
       {
         "type": "goal",
         "minute": 12,
         "team": "SUI",
-        "player": "Duah",
-        "assist": "Aebischer"
+        "player": "Duah, K.",
+        "assist": "Aebischer, M."
       },
       {
         "type": "goal",
         "minute": 45,
         "team": "SUI",
-        "player": "Aebischer",
-        "assist": "Freuler"
+        "player": "Aebischer, M.",
+        "assist": "Freuler, R."
       },
       {
         "type": "yellow",
         "minute": 59,
         "team": "SUI",
-        "player": "Freuler"
+        "player": "Freuler, R."
       },
       {
         "type": "goal",
         "minute": 66,
         "team": "HUN",
-        "player": "Varga",
-        "assist": "Szoboszlai"
+        "player": "Varga, B.",
+        "assist": "Szoboszlai, D."
       },
       {
         "type": "yellow",
         "minute": 69,
         "team": "HUN",
-        "player": "Szalia"
+        "player": "Szalia, A."
       },
       {
         "type": "yellow",
         "minute": 88,
         "team": "HUN",
-        "player": "Fiola"
+        "player": "Bolla, B."
       },
       {
         "type": "yellow",
         "minute": 88,
         "team": "SUI",
-        "player": "Yakin"
+        "player": "Yakin, M."
       },
       {
         "type": "goal",
         "minute": "90 + 3",
         "team": "SUI",
-        "player": "Embolo"
+        "player": "Embolo, B."
       }
     ]
   },
@@ -176,22 +176,22 @@
         "type": "goal",
         "minute": 29,
         "team": "ESP",
-        "player": "Morata",
-        "assist": "Ruiz"
+        "player": "Morata, Á.",
+        "assist": "Ruiz, F."
       },
       {
         "type": "goal",
         "minute": 32,
         "team": "ESP",
-        "player": "Ruiz",
+        "player": "Ruiz, F.",
         "assist": "Pedri"
       },
       {
         "type": "goal",
         "minute": "45 + 2",
         "team": "ESP",
-        "player": "Carvajal",
-        "assist": "Yamal"
+        "player": "Carvajal, D.",
+        "assist": "Yamal, L."
       },
       {
         "type": "yellow",
@@ -221,44 +221,44 @@
         "type": "goal",
         "minute": 1,
         "team": "ALB",
-        "player": "Bajrami"
+        "player": "Bajrami, N."
       },
       {
         "type": "goal",
         "minute": 11,
         "team": "ITA",
-        "player": "Bastoni",
-        "assist": "Pellegrini"
+        "player": "Bastoni, A.",
+        "assist": "Pellegrini, L."
       },
       {
         "type": "goal",
         "minute": "16",
         "team": "ITA",
-        "player": "Barella"
+        "player": "Barella, N."
       },
       {
         "type": "yellow",
         "minute": 22,
         "team": "ITA",
-        "player": "Pellegrini"
+        "player": "Pellegrini, L."
       },
       {
         "type": "yellow",
         "minute": 51,
         "team": "ITA",
-        "player": "Calafiori"
+        "player": "Calafiori, R."
       },
       {
         "type": "yellow",
         "minute": 51,
         "team": "ALB",
-        "player": "Broja"
+        "player": "Broja, A."
       },
       {
         "type": "yellow",
         "minute": 74,
         "team": "ALB",
-        "player": "Hoxha"
+        "player": "Hoxha, A."
       }
     ]
   },
@@ -282,27 +282,27 @@
         "type": "yellow",
         "minute": 15,
         "team": "NED",
-        "player": "Veerman"
+        "player": "Veerman, J."
       },
       {
         "type": "goal",
         "minute": 16,
         "team": "POL",
-        "player": "Buska",
-        "assist": "Zieliński"
+        "player": "Buska, A.",
+        "assist": "Zieliński, P."
       },
       {
         "type": "goal",
         "minute": 29,
         "team": "NED",
-        "player": "Gakpo",
-        "assist": "Aké"
+        "player": "Gakpo, C.",
+        "assist": "Aké, N."
       },
       {
         "type": "goal",
         "minute": 83,
         "team": "NED",
-        "player": "Weghorst"
+        "player": "Weghorst, W."
       }
     ]
   },
@@ -326,32 +326,32 @@
         "type": "goal",
         "minute": 17,
         "team": "DEN",
-        "player": "Eriksen",
-        "assist": "Wind"
+        "player": "Eriksen, C.",
+        "assist": "Wind, J."
       },
       {
         "type": "yellow",
         "minute": 49,
         "team": "DEN",
-        "player": "Hjulmand"
+        "player": "Hjulmand, M."
       },
       {
         "type": "yellow",
         "minute": 53,
         "team": "SVN",
-        "player": "Stojanović"
+        "player": "Stojanović, P."
       },
       {
         "type": "goal",
         "minute": 77,
         "team": "SVN",
-        "player": "Janža"
+        "player": "Janža, E."
       },
       {
         "type": "yellow",
         "minute": 84,
         "team": "SVN",
-        "player": "Celar"
+        "player": "Celar, Ž."
       }
     ]
   },
@@ -365,6 +365,37 @@
     "teams": [
       "SRB",
       "ENG"
+    ],
+    "result": [
+      0,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 13,
+        "team": "ENG",
+        "player": "Bellingham, J.",
+        "assist": "Saka, B."
+      },
+      {
+        "type": "yellow",
+        "minute": 39,
+        "team": "SRB",
+        "player": "Gudelj, N."
+      },
+      {
+        "type": "yellow",
+        "minute": 75,
+        "team": "SRB",
+        "player": "Tadić, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 83,
+        "team": "SRB",
+        "player": "Stojković, D."
+      }
     ]
   },
   {
