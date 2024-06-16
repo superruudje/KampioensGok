@@ -156,7 +156,7 @@
                                 worden.</p>
                             <h6 class="txt-blue fw-bolder">3. Wanneer worden de punten voor de bonusvragen
                                 toegekend?</h6>
-                            <p>Zodra het antwoord op de bonusvraag bekend is, zal deze worden ingevoerd en worden de
+                            <p>Antwoorden op de bonusvragen worden na de poulefase ingevoerd. Zodra het antwoord op de desbetreffende bonusvraag bekend is, zal deze worden ingevoerd en worden de
                                 punten
                                 daarvan direct toegekend. Sommige antwoorden zullen echter pas bekend zijn na afloop van
                                 het
