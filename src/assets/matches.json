@@ -272,6 +272,38 @@
     "teams": [
       "POL",
       "NED"
+    ],
+    "result": [
+      1,
+      2
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 15,
+        "team": "NED",
+        "player": "Veerman"
+      },
+      {
+        "type": "goal",
+        "minute": 16,
+        "team": "POL",
+        "player": "Buska",
+        "assist": "Zieliński"
+      },
+      {
+        "type": "goal",
+        "minute": 29,
+        "team": "NED",
+        "player": "Gakpo",
+        "assist": "Aké"
+      },
+      {
+        "type": "goal",
+        "minute": 83,
+        "team": "NED",
+        "player": "Weghorst"
+      }
     ]
   },
   {
