@@ -316,6 +316,43 @@
     "teams": [
       "SVN",
       "DEN"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 17,
+        "team": "DEN",
+        "player": "Eriksen",
+        "assist": "Wind"
+      },
+      {
+        "type": "yellow",
+        "minute": 49,
+        "team": "DEN",
+        "player": "Hjulmand"
+      },
+      {
+        "type": "yellow",
+        "minute": 53,
+        "team": "SVN",
+        "player": "Stojanović"
+      },
+      {
+        "type": "goal",
+        "minute": 77,
+        "team": "SVN",
+        "player": "Janža"
+      },
+      {
+        "type": "yellow",
+        "minute": 84,
+        "team": "SVN",
+        "player": "Celar"
+      }
     ]
   },
   {
