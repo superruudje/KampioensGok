@@ -507,6 +507,60 @@
     "teams": [
       "AUT",
       "FRA"
+    ],
+    "result": [
+      0,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 16,
+        "team": "AUT",
+        "player": "Wöber, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 34,
+        "team": "AUT",
+        "player": "Mwene, P."
+      },
+      {
+        "type": "goal",
+        "minute": 38,
+        "team": "FRA",
+        "player": "Wöber, M. (og)"
+      },
+      {
+        "type": "yellow",
+        "minute": 56,
+        "team": "FRA",
+        "player": "Dembélé, O."
+      },
+      {
+        "type": "yellow",
+        "minute": 79,
+        "team": "AUT",
+        "player": "Baumgartner, C."
+      },
+      {
+        "type": "yellow",
+        "minute": 84,
+        "team": "AUT",
+        "player": "Laimer, K."
+      },
+      {
+        "type": "yellow",
+        "minute": 90,
+        "team": "FRA",
+        "player": "Mbappé, M."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 3",
+        "team": "AUT",
+        "player": "Danso, K."
+      }
     ]
   },
   {
