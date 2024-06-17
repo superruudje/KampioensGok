@@ -27,6 +27,8 @@ export const useTournament = defineStore('tournament', {
 
         teamImages: [],
 
+        profile: null,
+
         pageNumber: 0,
         pageSize: 10,
     }),
@@ -398,6 +400,7 @@ export const useTournament = defineStore('tournament', {
             this.poules = poules.poules
             this.knock_out = poules.knock_out
             this.setImages()
+            this.checkForProfile()
         },
         /**
          * Set images file names
@@ -407,6 +410,26 @@ export const useTournament = defineStore('tournament', {
             this.teamImages = Object.fromEntries(
                 Object.entries(glob).map(([key, value]) => [filename(key), value.default])
             )
+        },
+        /**
+         * Get profile from locale storage
+         */
+        checkForProfile() {
+            this.profile = JSON.parse(localStorage.getItem("profile")) || null;
+        },
+        /**
+         * Set profile in locale storage
+         */
+        setProfile(team) {
+            this.profile = team
+            localStorage.setItem("profile", JSON.stringify(team));
+        },
+        /**
+         * Unset profile in locale storage
+         */
+        unsetProfile() {
+            this.profile = null
+            localStorage.removeItem("profile");
         },
         /**
          * Return matches by poule name
@@ -431,6 +454,9 @@ export const useTournament = defineStore('tournament', {
                 player.pos = idx < 1 ? 1 : player.score === array[idx - 1].score ? array[idx - 1].pos : idx + 1
                 return player
             })
+        },
+        getPlayerStanding(team) {
+            return this.getStanding(null).find(p => p.team_name === team).pos
         },
         /**
          * Return participant by team name

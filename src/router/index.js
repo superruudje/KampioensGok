@@ -10,6 +10,7 @@ import InvulView from "@/views/InvulView.vue";
 import SpelregelsView from "@/views/SpelregelsView.vue";
 import NotFoundView from "@/views/NotFoundView.vue";
 import {useTournament} from "@/stores/content.js";
+import ProfileView from "@/views/ProfileView.vue";
 
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -63,6 +64,11 @@ const router = createRouter({
             path: '/invulsheet',
             name: 'invulsheet',
             component: InvulView
+        },
+        {
+            path: '/mijn-pagina',
+            name: 'mijn-pagina',
+            component: ProfileView
         },
         {
             path: "/:pathMatch(.*)*",

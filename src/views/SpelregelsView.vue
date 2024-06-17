@@ -111,7 +111,7 @@
                     </div>
                     <div class="card border-0 rounded-0 shadow-sm">
                         <div class="card-body p-4">
-                            <h2 class="mb-b txt-blue fw-bolder">Prijzenpot</h2>
+                            <h2 class="mb-3 txt-blue fw-bolder">Prijzenpot</h2>
                             <p>Na de poulefase worden de eerste prijzen verdeeld. Op basis van de ranglijst zijn de
                                 prijzen als volgt:</p>
                             <ul>
