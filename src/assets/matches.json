@@ -458,6 +458,43 @@
     "teams": [
       "BEL",
       "SVK"
+    ],
+    "result": [
+      0,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 7,
+        "team": "SVK",
+        "player": "Schranz, I.",
+        "assist": "Kucka, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 29,
+        "team": "BEL",
+        "player": "Mangala, O."
+      },
+      {
+        "type": "yellow",
+        "minute": 41,
+        "team": "SVK",
+        "player": "Schranz, I."
+      },
+      {
+        "type": "yellow",
+        "minute": 76,
+        "team": "BEL",
+        "player": "Tielemans, Y."
+      },
+      {
+        "type": "yellow",
+        "minute": 85,
+        "team": "BEL",
+        "player": "Lukébakio, D."
+      }
     ]
   },
   {
