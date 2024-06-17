@@ -408,6 +408,44 @@
     "teams": [
       "ROM",
       "UKR"
+    ],
+    "result": [
+      3,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 29,
+        "team": "ROM",
+        "player": "Stanciu, N.",
+        "assist": "Man, D."
+      },
+      {
+        "type": "goal",
+        "minute": 53,
+        "team": "ROM",
+        "player": "Marin, R."
+      },
+      {
+        "type": "goal",
+        "minute": 57,
+        "team": "ROM",
+        "player": "Drăguş, D.",
+        "assist": "Man, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 67,
+        "team": "UKR",
+        "player": "Konoplia, NY"
+      },
+      {
+        "type": "yellow",
+        "minute": 78,
+        "team": "ROM",
+        "player": "Marin, R."
+      }
     ]
   },
   {
