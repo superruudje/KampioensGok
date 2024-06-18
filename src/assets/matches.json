@@ -573,6 +573,56 @@
     "teams": [
       "TUR",
       "GEO"
+    ],
+    "result": [
+      3,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 25,
+        "team": "TUR",
+        "player": "Müldür, M."
+      },
+      {
+        "type": "goal",
+        "minute": 32,
+        "team": "GEO",
+        "player": "Mikautadze, G.",
+        "assist": "Kochorashvili, G."
+      },
+      {
+        "type": "yellow",
+        "minute": 35,
+        "team": "TUR",
+        "player": "Bardakcı, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 55,
+        "team": "GEO",
+        "player": "Kverkvelia, S."
+      },
+      {
+        "type": "goal",
+        "minute": 65,
+        "team": "TUR",
+        "player": "Güler, A.",
+        "assist": "Ayhan, K."
+      },
+      {
+        "type": "yellow",
+        "minute": 89,
+        "team": "TUR",
+        "player": "Çalhanoğlu, H."
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 7",
+        "team": "TUR",
+        "player": "Aktürkoğlu, K."
+      }
     ]
   },
   {
