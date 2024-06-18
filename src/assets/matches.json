@@ -635,6 +635,49 @@
     "teams": [
       "POR",
       "CZE"
+    ],
+    "result": [
+      2,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 39,
+        "team": "POR",
+        "player": "Leão, R."
+      },
+      {
+        "type": "yellow",
+        "minute": 57,
+        "team": "CZE",
+        "player": "Schick, P."
+      },
+      {
+        "type": "goal",
+        "minute": 62,
+        "team": "CZE",
+        "player": "Provod, L.",
+        "assist": "Coufal, V."
+      },
+      {
+        "type": "goal",
+        "minute": 69,
+        "team": "POR",
+        "player": "Hranáč, R. (og)"
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 2",
+        "team": "POR",
+        "player": "Conceição, F."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 3",
+        "team": "POR",
+        "player": "Conceição, F."
+      }
     ]
   },
   {
