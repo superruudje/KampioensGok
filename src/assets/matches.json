@@ -758,6 +758,56 @@
     "teams": [
       "GER",
       "HUN"
+    ],
+    "result": [
+      2,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 22,
+        "team": "GER",
+        "player": "Musiala, J.",
+        "assist": "Gündoğan, İ."
+      },
+      {
+        "type": "yellow",
+        "minute": 22,
+        "team": "HUN",
+        "player": "Varga, B."
+      },
+      {
+        "type": "yellow",
+        "minute": 27,
+        "team": "GER",
+        "player": "Rüdiger, A."
+      },
+      {
+        "type": "goal",
+        "minute": 67,
+        "team": "GER",
+        "player": "Gündoğan, İ",
+        "assist": "Mittelstädt, M"
+      },
+      {
+        "type": "yellow",
+        "minute": 89,
+        "team": "GER",
+        "player": "Mittelstädt, M."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 3",
+        "team": "HUN",
+        "player": "Szoboszlai, D."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 3",
+        "team": "HUN",
+        "player": "Rossi, M."
+      }
     ]
   },
   {
