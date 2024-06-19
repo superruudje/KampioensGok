@@ -202,7 +202,9 @@ const {
     matches_played_knock_out,
     matches_to_play_knock_out,
     totalGoals,
+    estTotalGoals,
     totalCards,
+    estTotalCards,
     groupedGoalsAgainst,
     groupedTeamCards,
     groupedTopScorer,
@@ -235,8 +237,8 @@ const data = ref([
 
 const questions = ref([
     {label: "Welk land wordt Europees kampioen?", type: "exact", p: 75},
-    {label: "Hoeveel goals worden er totaal gescoord?", type: "estimate", now: totalGoals.value},
-    {label: "Hoeveel kaarten worden er in het toernooi gegeven?", type: "estimate", now: totalCards.value},
+    {label: "Hoeveel goals worden er totaal gescoord?", type: "estimate", now: `${totalGoals.value}, geschat ${Math.ceil(estTotalGoals.value.average * estTotalCards.value.matches)}`},
+    {label: "Hoeveel kaarten worden er in het toernooi gegeven?", type: "estimate", now: `${totalCards.value}, geschat ${Math.ceil(estTotalCards.value.average * estTotalCards.value.matches)}`},
     {
         label: "Welk land krijgt de meeste tegengoals?",
         type: "exact",
@@ -251,8 +253,8 @@ const questions = ref([
     },
     {label: "Wie wordt er topscorer?", type: "exact", p: 10, now: groupedTopScorer.value[0]?.label || '-'},
     {label: "Wie wordt de koning van de assist?", type: "exact", p: 10, now: groupedAssist.value[0]?.label || '-'},
-    {label: "Welke Nederlander scoort het eerste doelpunt?", type: "exact", p: 10},
-    {label: "Welke Nederlander krijgt de eerste kaart?", type: "exact", p: 10},
+    {label: "Welke Nederlander scoort het eerste doelpunt?", type: "exact", p: 10, now: 'Gakpo, C.'},
+    {label: "Welke Nederlander krijgt de eerste kaart?", type: "exact", p: 10, now: 'Veerman, J.'},
 ])
 
 /**

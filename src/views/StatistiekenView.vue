@@ -32,10 +32,11 @@
                 <div class="col-md-4">
                     <div class="card border-0 rounded-0 shadow-sm">
                         <div class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-3 p-md-4">
-                                            <span class="txt-orange fw-bold" style="font-size: 5rem">
-                                                <number-counter :number="totalGoals"></number-counter>
-                                            </span>
+                            <span class="txt-orange fw-bold" style="font-size: 5rem">
+                                <number-counter :number="totalGoals"></number-counter>
+                            </span>
                             <span class="txt-blue fw-bold">Goals gescoord</span>
+                            <span class="small text-black-50 fw-bold">{{estTotalGoals.average}} * {{estTotalGoals.matches}} ≈ {{ Math.ceil(estTotalGoals.average * estTotalGoals.matches) }}</span>
                         </div>
                     </div>
                 </div>
@@ -47,6 +48,7 @@
                                 <number-counter :number="totalCards"></number-counter>
                             </span>
                             <span class="txt-blue fw-bold">Kaarten gegeven</span>
+                            <span class="small text-black-50 fw-bold">{{estTotalCards.average}} * {{estTotalCards.matches}} ≈ {{ Math.ceil(estTotalCards.average * estTotalCards.matches) }}</span>
                         </div>
                     </div>
                 </div>
@@ -143,7 +145,9 @@ const {
     prediction_top_scorer,
     prediction_top_assist,
     totalGoals,
+    estTotalGoals,
     totalCards,
+    estTotalCards,
     groupedTeamCards,
     groupedTopScorer,
     groupedAssist,

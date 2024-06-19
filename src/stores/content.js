@@ -116,6 +116,15 @@ export const useTournament = defineStore('tournament', {
             return goals
         },
         /**
+         * Estimate goals scored
+         * @returns {{average: number, matches}}
+         */
+        estTotalGoals() {
+            const average = Math.round((this.totalGoals / this.matches_played.length) * 100) / 100
+            const matches = this.matches.length
+            return {average, matches}
+        },
+        /**
          * Total cards given
          * @returns {number}
          */
@@ -127,6 +136,15 @@ export const useTournament = defineStore('tournament', {
                 cards += (yellow + red)
             })
             return cards
+        },
+        /**
+         * Estimate cards given
+         * @returns {{average: number, matches}}
+         */
+        estTotalCards() {
+            const average = Math.round((this.totalCards / this.matches_played.length) * 100) / 100
+            const matches = this.matches.length
+            return {average, matches}
         },
         /**
          * Group teams by goals for
