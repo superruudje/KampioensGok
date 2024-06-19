@@ -632,7 +632,7 @@ export const useTournament = defineStore('tournament', {
                             team_stats.points += 3
                             team_stats.matches.push('W')
                         } else
-                            team_stats.matches.push('W')
+                            team_stats.matches.push('L')
                         team_stats.for += match.teams[0] === team ? final_score[0] : final_score[1]
                         team_stats.against += match.teams[0] === team ? final_score[1] : final_score[0]
                     })
