@@ -218,7 +218,7 @@ const chartOptions = {
     chart: {
         width: "100%",
         animations: {enabled: false},
-        zoom: {enabled: false},
+        zoom: {enabled: true},
         type: 'line',
     },
     dataLabels: {enabled: false},

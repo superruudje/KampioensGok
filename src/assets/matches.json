@@ -690,6 +690,62 @@
     "teams": [
       "CRO",
       "ALB"
+    ],
+    "result": [
+      2,
+      2
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 11,
+        "team": "ALB",
+        "player": "Laçi, Q.",
+        "assist": "Asani, J."
+      },
+      {
+        "type": "goal",
+        "minute": 74,
+        "team": "CRO",
+        "player": "Kramarić, A.",
+        "assist": "Budimir, A."
+      },
+      {
+        "type": "goal",
+        "minute": 76,
+        "team": "CRO",
+        "player": "Gjasula, K. (og)"
+      },
+      {
+        "type": "yellow",
+        "minute": 77,
+        "team": "ALB",
+        "player": "Hysaj, E."
+      },
+      {
+        "type": "yellow",
+        "minute": 87,
+        "team": "CRO",
+        "player": "Ivušić, I."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 4",
+        "team": "ALB",
+        "player": "Daku, M."
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 5",
+        "team": "ALB",
+        "player": "Gjasula, K."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 7",
+        "team": "ALB",
+        "player": "Gjasula, K."
+      }
     ]
   },
   {
