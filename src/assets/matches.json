@@ -820,6 +820,55 @@
     "teams": [
       "SCO",
       "SUI"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 13,
+        "team": "SCO",
+        "player": "McTominay, S.",
+        "assist": "McGregor, C."
+      },
+      {
+        "type": "goal",
+        "minute": 26,
+        "team": "SUI",
+        "player": "Shaqiri, X"
+      },
+      {
+        "type": "yellow",
+        "minute": 31,
+        "team": "SUI",
+        "player": "Rodriguez, R."
+      },
+      {
+        "type": "yellow",
+        "minute": 51,
+        "team": "SCO",
+        "player": "McTominay, S."
+      },
+      {
+        "type": "yellow",
+        "minute": 68,
+        "team": "SCO",
+        "player": "McKenna, S."
+      },
+      {
+        "type": "yellow",
+        "minute": 71,
+        "team": "SCO",
+        "player": "McGinn, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 86,
+        "team": "SUI",
+        "player": "Sierro, V."
+      }
     ]
   },
   {
