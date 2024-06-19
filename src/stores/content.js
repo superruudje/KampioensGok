@@ -618,28 +618,28 @@ export const useTournament = defineStore('tournament', {
             let computed_poules = []
             this.poules.forEach((poule) => {
                 let computed_poule = {poule: poule.name}
-                let poule_team = []
+                let poule_teams = []
                 poule.teams.forEach((team) => {
                     let team_stats = {team: team, points: 0, for: 0, against: 0, matches: []}
                     this.matches_played.forEach((match) => {
                         if (!match.teams.includes(team)) return
                         const final_score = match.result
-                        const final_winner = final_score[0] === final_score[1] ? null : final_score[0] > final_score[1] ? 0 : 1
+                        const final_winner = final_score[0] === final_score[1] ? null : final_score[0] > final_score[1] ? match.teams[0] : match.teams[1]
                         if (final_winner === null) {
                             team_stats.points += 1
                             team_stats.matches.push('D')
-                        } else if (match.teams[final_winner] === team) {
+                        } else if (final_winner === team) {
                             team_stats.points += 3
                             team_stats.matches.push('W')
                         } else
-                            team_stats.matches.push('W')
+                            team_stats.matches.push('L')
                         team_stats.for += match.teams[0] === team ? final_score[0] : final_score[1]
                         team_stats.against += match.teams[0] === team ? final_score[1] : final_score[0]
                     })
-                    poule_team.push(team_stats)
+                    poule_teams.push(team_stats)
                 })
-                computed_poule.teams = poule_team.sort((a, b) => {
-                    if (b.points === a.points)
+                computed_poule.teams = poule_teams.sort((a, b) => {
+                    if (b.points === a.points) // if same score, check goals diff
                         return (b.for - b.against) - (a.for - a.against)
                     else
                         return b.points - a.points
