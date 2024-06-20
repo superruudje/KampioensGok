@@ -17,18 +17,19 @@
                         <div class="card-body p-3 p-md-4">
                             <h2 class="txt-blue fw-bolder">Groep {{ p.poule }}</h2>
                             <div class="w-100 overflow-hidden overflow-x-auto mb-2">
-                                <table class="table">
+                                <table class="table align-middle">
                                     <thead>
                                     <tr>
                                         <th class="txt-orange" style="width: 99%" scope="col"></th>
                                         <th class="txt-orange" scope="col">G</th>
-                                        <th class="txt-orange" scope="col">W</th>
-                                        <th class="txt-orange" scope="col">GL</th>
-                                        <th class="txt-orange" scope="col">V</th>
-                                        <th class="txt-orange" scope="col">P</th>
-                                        <th class="txt-orange" scope="col">+</th>
-                                        <th class="txt-orange" scope="col">-</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">W</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">GL</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">V</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">+</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">-</th>
                                         <th class="txt-orange" scope="col">+-</th>
+                                        <th class="txt-orange" scope="col">P</th>
+                                        <th class="txt-orange" scope="col">Vorm</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -39,13 +40,23 @@
                                             <span class="ms-2 txt-blue fw-bold">{{ t.team }}</span>
                                         </td>
                                         <td>{{ t.matches.length }}</td>
-                                        <td>{{ t.matches.filter(g => g === "W").length }}</td>
-                                        <td>{{ t.matches.filter(g => g === "D").length }}</td>
-                                        <td>{{ t.matches.filter(g => g === "L").length }}</td>
-                                        <th>{{ t.points }}</th>
-                                        <td>{{ t.for }}</td>
-                                        <td>{{ t.against }}</td>
+                                        <td class="d-none d-sm-table-cell">{{ t.matches.filter(g => g === "W").length }}</td>
+                                        <td class="d-none d-sm-table-cell">{{ t.matches.filter(g => g === "D").length }}</td>
+                                        <td class="d-none d-sm-table-cell">{{ t.matches.filter(g => g === "L").length }}</td>
+                                        <td class="d-none d-sm-table-cell">{{ t.for }}</td>
+                                        <td class="d-none d-sm-table-cell">{{ t.against }}</td>
                                         <td>{{ t.for - t.against }}</td>
+                                        <th>{{ t.points }}</th>
+                                        <td>
+                                            <div class="d-flex gap-1">
+                                                <template v-for="i in 3" >
+                                                    <span v-if="t.matches[i - 1] === 'W'" class="form-item bg-success rounded-circle">W</span>
+                                                    <span v-else-if="t.matches[i - 1] === 'L'" class="form-item bg-danger rounded-circle">V</span>
+                                                    <span v-else-if="t.matches[i - 1] === 'D'" class="form-item bg-secondary rounded-circle">G</span>
+                                                    <span v-else class="form-item border rounded-circle"></span>
+                                                </template>
+                                            </div>
+                                        </td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -95,5 +106,12 @@ function openPouleDetails(poule) {
 </script>
 
 <style lang="sass" scoped>
-
+.form-item
+    color: #fff
+    font-size: 9px
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 18px
+    height: 18px
 </style>

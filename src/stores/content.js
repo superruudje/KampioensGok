@@ -152,7 +152,7 @@ export const useTournament = defineStore('tournament', {
          */
         groupedGoalsFor() {
             let res = this.teams.map((t) => {
-                return {id: t.id, count: 0}
+                return {label: t.id, image: t.id, count: 0}
             })
             this.matches_played.forEach(match => {
                 const goals = match.timeline.filter(e => e.type === 'goal')
@@ -174,7 +174,7 @@ export const useTournament = defineStore('tournament', {
          */
         groupedGoalsAgainst() {
             let res = this.teams.map((t) => {
-                return {id: t.id, count: 0}
+                return {label: t.id, image: t.id, count: 0}
             })
             this.matches_played.forEach(match => {
                 const goals = match.timeline?.filter(e => e.type === 'goal') || []
@@ -197,7 +197,7 @@ export const useTournament = defineStore('tournament', {
          */
         groupedTeamCards() {
             let res = this.teams.map((t) => {
-                return {id: t.id, count: 0}
+                return {label: t.id, image: t.id, count: 0}
             })
             this.matches_played.forEach(match => {
                 const yellow = match.timeline?.filter(e => e.type === 'yellow') || []

@@ -438,7 +438,7 @@
         "type": "yellow",
         "minute": 67,
         "team": "UKR",
-        "player": "Konoplia, NY"
+        "player": "Konoplia, Y."
       },
       {
         "type": "yellow",
@@ -788,7 +788,7 @@
         "minute": 67,
         "team": "GER",
         "player": "Gündoğan, İ",
-        "assist": "Mittelstädt, M"
+        "assist": "Mittelstädt, M."
       },
       {
         "type": "yellow",
@@ -837,7 +837,7 @@
         "type": "goal",
         "minute": 26,
         "team": "SUI",
-        "player": "Shaqiri, X"
+        "player": "Shaqiri, X."
       },
       {
         "type": "yellow",
@@ -881,6 +881,62 @@
     "teams": [
       "SVN",
       "SRB"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 25,
+        "team": "SRB",
+        "player": "Mladenović, F."
+      },
+      {
+        "type": "yellow",
+        "minute": 54,
+        "team": "SRB",
+        "player": "Lukić, S."
+      },
+      {
+        "type": "goal",
+        "minute": 69,
+        "team": "SVN",
+        "player": "Karničnik, Ž.",
+        "assist": "Elšnik, T."
+      },
+      {
+        "type": "yellow",
+        "minute": 87,
+        "team": "SLV",
+        "player": "Janža, E."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 2",
+        "team": "SRB",
+        "player": "Jović, L."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 3",
+        "team": "SRB",
+        "player": "Gaćinović, M."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 4",
+        "team": "SLV",
+        "player": "Vipotnik, Ž."
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 5",
+        "team": "SRB",
+        "player": "Jović, L.",
+        "assist": "Ilić, I."
+      }
     ]
   },
   {
