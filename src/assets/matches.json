@@ -1004,6 +1004,48 @@
     "teams": [
       "ESP",
       "ITA"
+    ],
+    "result": [
+      1,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 15,
+        "team": "ITA",
+        "player": "Donnarumma, G."
+      },
+      {
+        "type": "yellow",
+        "minute": "45 + 1",
+        "team": "ESP",
+        "player": "Rodri"
+      },
+      {
+        "type": "yellow",
+        "minute": 46,
+        "team": "ITA",
+        "player": "Cristante, B."
+      },
+      {
+        "type": "goal",
+        "minute": 55,
+        "team": "ESP",
+        "player": "Calafiori, R. (og)"
+      },
+      {
+        "type": "yellow",
+        "minute": 69,
+        "team": "ESP",
+        "player": "Le Normand, R."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 7",
+        "team": "ESP",
+        "player": "Carvajal, D."
+      }
     ]
   },
   {
