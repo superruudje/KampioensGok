@@ -909,7 +909,7 @@
       {
         "type": "yellow",
         "minute": 87,
-        "team": "SLV",
+        "team": "SVN",
         "player": "Janža, E."
       },
       {
@@ -927,7 +927,7 @@
       {
         "type": "yellow",
         "minute": "90 + 4",
-        "team": "SLV",
+        "team": "SVN",
         "player": "Vipotnik, Ž."
       },
       {
@@ -949,6 +949,49 @@
     "teams": [
       "DEN",
       "ENG"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 18,
+        "team": "ENG",
+        "player": "Kane, H."
+      },
+      {
+        "type": "yellow",
+        "minute": 26,
+        "team": "DEN",
+        "player": "Vestergaard, J."
+      },
+      {
+        "type": "goal",
+        "minute": 34,
+        "team": "DEN",
+        "player": "Hjulmand, M.",
+        "assist": "Kristiansen, V."
+      },
+      {
+        "type": "yellow",
+        "minute": 62,
+        "team": "ENG",
+        "player": "Gallagher, C."
+      },
+      {
+        "type": "yellow",
+        "minute": 73,
+        "team": "DEN",
+        "player": "Mæhle, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 87,
+        "team": "DEN",
+        "player": "Nørgaard, C."
+      }
     ]
   },
   {

@@ -42,30 +42,32 @@
                     <div class="card border-0 rounded-0 shadow-sm mb-3">
                         <div class="card-body p-4">
                             <h2 class="mb-3 txt-blue fw-bolder">Top 10</h2>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th class="txt-orange" scope="col">#</th>
-                                    <th class="txt-orange" scope="col">Team</th>
-                                    <th class="txt-orange" scope="col">Punten</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr v-for="(player, idx) in standing_top_10">
-                                    <th v-if="idx > 0" scope="row">
-                                        {{ player.score === standing_top_10[idx - 1].score ? '-' : idx + 1 }}
-                                    </th>
-                                    <th v-else scope="row">{{ idx + 1 }}</th>
-                                    <td>
-                                        <router-link :to="{name: 'deelnemer', params: {id: player.team_name}}">{{
-                                                player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name
-                                            }}
-                                        </router-link>
-                                    </td>
-                                    <td>{{ player.score }}</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="w-100 overflow-hidden overflow-x-auto">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th class="txt-orange" scope="col">#</th>
+                                        <th class="txt-orange" scope="col">Team</th>
+                                        <th class="txt-orange" scope="col">Punten</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr v-for="(player, idx) in standing_top_10">
+                                        <th v-if="idx > 0" scope="row">
+                                            {{ player.score === standing_top_10[idx - 1].score ? '-' : idx + 1 }}
+                                        </th>
+                                        <th v-else scope="row">{{ idx + 1 }}</th>
+                                        <td>
+                                            <router-link :to="{name: 'deelnemer', params: {id: player.team_name}}">{{
+                                                    player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name
+                                                }}
+                                            </router-link>
+                                        </td>
+                                        <td>{{ player.score }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                             <router-link :to="{name: 'ranglijst'}"
                                          class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3"
                                          tag="button">Naar ranglijst<i
