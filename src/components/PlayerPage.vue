@@ -80,15 +80,6 @@
         </div>
         <div class="row g-3">
             <div class="col-md-6">
-                <!-- scoreverloop -->
-                <div class="card border-0 rounded-0 shadow-sm mb-3">
-                    <div class="card-body p-4">
-                        <h2 class="txt-blue fw-bolder">Scoreverloop</h2>
-                        <div id="chart">
-                            <apexchart :options="chartOptions" :series="series" type="line"/>
-                        </div>
-                    </div>
-                </div>
                 <!-- voorspelling -->
                 <div class="card border-0 rounded-0 shadow-sm">
                     <div class="card-body position-relative p-4">
@@ -101,13 +92,13 @@
                             start toernooi.
                         </div>
                         <template v-else>
+                            <match-day-prediction v-for="(matches, match_day) in matches_to_play_poule"
+                                                  :match_day="match_day" :matches="matches"
+                                                  :name="participant.team_name" class="mb-4"></match-day-prediction>
                             <match-day-prediction v-for="(matches, match_day) in matches_played_poule"
                                                   :match_day="match_day" :matches="matches"
                                                   :name="participant.team_name"
                                                   :played="true" class="mb-4"></match-day-prediction>
-                            <match-day-prediction v-for="(matches, match_day) in matches_to_play_poule"
-                                                  :match_day="match_day" :matches="matches"
-                                                  :name="participant.team_name" class="mb-4"></match-day-prediction>
                         </template>
                     </div>
                 </div>
@@ -158,7 +149,7 @@
                     </div>
                 </div>
                 <!-- voorspelling -->
-                <div class="card border-0 rounded-0 shadow-sm">
+                <div class="card border-0 rounded-0 shadow-sm mb-3">
                     <div class="card-body position-relative p-4">
                         <h2 class="txt-blue fw-bolder">Voorspellingen Knock-Out</h2>
                         <p>Bekijk de voorspellingen van <b>{{ participant.name }}</b> Bij reeds gespeelde
@@ -177,6 +168,15 @@
                                                   :match_day="match_day" :matches="matches"
                                                   :name="participant.team_name" class="mb-4"></match-day-prediction>
                         </template>
+                    </div>
+                </div>
+                <!-- scoreverloop -->
+                <div class="card border-0 rounded-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="txt-blue fw-bolder">Scoreverloop</h2>
+                        <div id="chart">
+                            <apexchart :options="chartOptions" :series="series" type="line"/>
+                        </div>
                     </div>
                 </div>
             </div>

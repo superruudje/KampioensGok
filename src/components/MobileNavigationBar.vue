@@ -15,6 +15,12 @@
                             <span class="fs-5">Spelregels</span>
                         </router-link>
                     </li>
+                    <li class="nav-item">
+                        <div @click="reload" class="nav-link text-white text-capitalize px-2 d-flex align-items-center">
+                            <i class="bi bi-arrow-clockwise fs-2 mb-0 lh-1 me-3"></i>
+                            <span class="fs-5">Herlaad</span>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </transition>
@@ -41,6 +47,10 @@ const pages = [
     {url: 'uitslagen', icon: 'clipboard2-data-fill'},
     {url: 'statistieken', icon: 'bar-chart-fill'}
 ]
+
+function reload() {
+    location.reload();
+}
 
 </script>
 
