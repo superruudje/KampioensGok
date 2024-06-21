@@ -1183,6 +1183,18 @@
     "teams": [
       "NED",
       "FRA"
+    ],
+    "result": [
+      0,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 31,
+        "team": "NED",
+        "player": "Schouten, J."
+      }
     ]
   },
   {
