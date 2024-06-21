@@ -1058,6 +1058,39 @@
     "teams": [
       "SVK",
       "UKR"
+    ],
+    "result": [
+      1,
+      2
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 17,
+        "team": "SVK",
+        "player": "Schranz, I.",
+        "assist": "Haraslin, L."
+      },
+      {
+        "type": "goal",
+        "minute": 54,
+        "team": "UKR",
+        "player": "Shaparenko, M.",
+        "assist": "Zinchenko, O."
+      },
+      {
+        "type": "goal",
+        "minute": 80,
+        "team": "UKR",
+        "player": "Yaremchuk, R.",
+        "assist": "Shaparenko, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 84,
+        "team": "UKR",
+        "player": "Yaremchuk, R."
+      }
     ]
   },
   {
