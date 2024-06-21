@@ -1103,6 +1103,74 @@
     "teams": [
       "POL",
       "AUT"
+    ],
+    "result": [
+      1,
+      3
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 9,
+        "team": "AUT",
+        "player": "Trauner, G.",
+        "assist": "Mwene, P."
+      },
+      {
+        "type": "goal",
+        "minute": 30,
+        "team": "POL",
+        "player": "Piątek, K."
+      },
+      {
+        "type": "yellow",
+        "minute": 53,
+        "team": "POL",
+        "player": "Slisz, B."
+      },
+      {
+        "type": "yellow",
+        "minute": 56,
+        "team": "AUT",
+        "player": "Wimmer, P."
+      },
+      {
+        "type": "yellow",
+        "minute": 62,
+        "team": "POL",
+        "player": "Moder, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 64,
+        "team": "POL",
+        "player": "Lewandowski, R."
+      },
+      {
+        "type": "goal",
+        "minute": 66,
+        "team": "AUT",
+        "player": "Baumgartner, C.",
+        "assist": "Prass, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 70,
+        "team": "AUT",
+        "player": "Arnautović, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 77,
+        "team": "POL",
+        "player": "Szczęsny, W."
+      },
+      {
+        "type": "goal",
+        "minute": 78,
+        "team": "AUT",
+        "player": "Arnautović, M."
+      }
     ]
   },
   {
