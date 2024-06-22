@@ -84,6 +84,12 @@
                 <div class="col-md-4">
                     <prediction-table :image="false" :list="prediction_top_assist" title="Wie wordt assist koning?"/>
                 </div>
+                <div class="col-md-4">
+                    <prediction-table :image="false" :list="prediction_total_goals" title="Hoe goals worden er gescoord?"/>
+                </div>
+                <div class="col-md-4">
+                    <prediction-table :image="false" :list="prediction_total_cards" title="Hoe kaarten worden er gegeven?"/>
+                </div>
             </div>
         </main>
         <header class="bg-blue py-3 py-md-5">
@@ -119,7 +125,6 @@
                 <div class="col-md-4">
                     <prediction-table :image="false" :list="pred_ned_aus" title="Netherlands - Austria" table_header="Score"/>
                 </div>
-
             </div>
         </main>
     </div>
@@ -144,6 +149,8 @@ const {
     prediction_ned,
     prediction_top_scorer,
     prediction_top_assist,
+    prediction_total_goals,
+    prediction_total_cards,
     totalGoals,
     estTotalGoals,
     totalCards,

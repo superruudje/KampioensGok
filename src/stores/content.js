@@ -398,6 +398,36 @@ export const useTournament = defineStore('tournament', {
                 return b.count - a.count
             })
         },
+        prediction_total_goals() {
+            let res = []
+            this.players.forEach((player) => {
+                if (player.bonus) {
+                    const goals = Math.ceil((player.bonus[1]) / 20 ) * 20;
+                    const id = goals > 0 ? `${goals - 20} - ${goals}` : `${goals}`
+                    if (!res.some((t) => t.id === id))
+                        res.push({id: id, count: 0})
+                    res.find((t) => t.id === id).count++;
+                }
+            })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
+        },
+        prediction_total_cards() {
+            let res = []
+            this.players.forEach((player) => {
+                if (player.bonus) {
+                    const cards = Math.ceil(player.bonus[2] / 20) * 20
+                    const id = cards > 0 ? `${cards - 20} - ${cards}` : `${cards}`
+                    if (!res.some((t) => t.id === id))
+                        res.push({id: id, count: 0})
+                    res.find((t) => t.id === id).count++;
+                }
+            })
+            return res.sort((a, b) => {
+                return b.count - a.count
+            })
+        },
         /**
          * Return counted first goal NL
          * @returns {*}
