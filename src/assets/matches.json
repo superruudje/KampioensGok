@@ -1291,6 +1291,61 @@
     "teams": [
       "TUR",
       "POR"
+    ],
+    "result": [
+      0,
+      3
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 21,
+        "team": "POR",
+        "player": "Silva, B."
+      },
+      {
+        "type": "yellow",
+        "minute": 25,
+        "team": "TUR",
+        "player": "Bardakcı, A."
+      },
+      {
+        "type": "goal",
+        "minute": 28,
+        "team": "POR",
+        "player": "Akaydin, A. (og)"
+      },
+      {
+        "type": "yellow",
+        "minute": 39,
+        "team": "POR",
+        "player": "Leão, R."
+      },
+      {
+        "type": "yellow",
+        "minute": 42,
+        "team": "TUR",
+        "player": "Akaydin, S."
+      },
+      {
+        "type": "yellow",
+        "minute": 42,
+        "team": "TUR",
+        "player": "Çelik, Z."
+      },
+      {
+        "type": "yellow",
+        "minute": "45 + 1",
+        "team": "POR",
+        "player": "Palhinha, J."
+      },
+      {
+        "type": "goal",
+        "minute": 56,
+        "team": "POR",
+        "player": "Fernandes, B.",
+        "assist": "Ronaldo, C."
+      }
     ]
   },
   {
