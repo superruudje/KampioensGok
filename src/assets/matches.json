@@ -1358,6 +1358,44 @@
     "teams": [
       "BEL",
       "ROM"
+    ],
+    "result": [
+      2,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 2,
+        "team": "BEL",
+        "player": "Tielemans, Y.",
+        "assist": "Lukaku, R."
+      },
+      {
+        "type": "yellow",
+        "minute": 35,
+        "team": "BEL",
+        "player": "Lukébakio, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 59,
+        "team": "ROM",
+        "player": "Bancu, N."
+      },
+      {
+        "type": "yellow",
+        "minute": 65,
+        "team": "ROM",
+        "player": "Marin, M."
+      },
+      {
+        "type": "goal",
+        "minute": 80,
+        "team": "BEL",
+        "player": "De Bruyne, K.",
+        "assist": "Casteels, K."
+      }
     ]
   },
   {
