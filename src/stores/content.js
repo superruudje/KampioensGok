@@ -52,35 +52,74 @@ export const useTournament = defineStore('tournament', {
          * @returns {*}
          */
         matches_played_by_day() {
-            return Object.groupBy(this.matches_played, ({date}) => date)
+            let obj = {}
+            this.matches_played.forEach(m => {
+                if (obj.hasOwnProperty(m.date))
+                    obj[m.date].push(m)
+                else
+                    obj[m.date] = [m]
+            })
+            return obj
         },
         /**
          * Return matches played in poule fase
          * @returns {*}
          */
         matches_played_poule() {
-            return Object.groupBy(this.matches_played.filter((m) => m.group.length === 1), ({date}) => date)
+            let obj = {}
+            this.matches_played.filter((m) => m.group.length === 1).forEach(m => {
+                if (obj.hasOwnProperty(m.date))
+                    obj[m.date].push(m)
+                else
+                    obj[m.date] = [m]
+            })
+            return obj
+            // return Object.groupBy(this.matches_played.filter((m) => m.group.length === 1), ({date}) => date)
         },
         /**
          * Return matches to play in poule fase
          * @returns {*}
          */
         matches_to_play_poule() {
-            return Object.groupBy(this.matches_to_play.filter((m) => m.group.length === 1), ({date}) => date)
+            let obj = {}
+            this.matches_to_play.filter((m) => m.group.length === 1).forEach(m => {
+                if (obj.hasOwnProperty(m.date))
+                    obj[m.date].push(m)
+                else
+                    obj[m.date] = [m]
+            })
+            return obj
+            // return Object.groupBy(this.matches_to_play.filter((m) => m.group.length === 1), ({date}) => date)
         },
         /**
          * Return matches played in knockout fase
          * @returns {*}
          */
         matches_played_knock_out() {
-            return Object.groupBy(this.matches_played.filter((m) => m.group.length > 1), ({date}) => date)
+            let obj = {}
+            this.matches_played.filter((m) => m.group.length > 1).forEach(m => {
+                if (obj.hasOwnProperty(m.date))
+                    obj[m.date].push(m)
+                else
+                    obj[m.date] = [m]
+            })
+            return obj
+            // return Object.groupBy(this.matches_played.filter((m) => m.group.length > 1), ({date}) => date)
         },
         /**
          * Return matches to play in knockout fase
          * @returns {*}
          */
         matches_to_play_knock_out() {
-            return Object.groupBy(this.matches_to_play.filter((m) => m.group.length > 1), ({date}) => date)
+            let obj = {}
+            this.matches_to_play.filter((m) => m.group.length > 1).forEach(m => {
+                if (obj.hasOwnProperty(m.date))
+                    obj[m.date].push(m)
+                else
+                    obj[m.date] = [m]
+            })
+            return obj
+            // return Object.groupBy(this.matches_to_play.filter((m) => m.group.length > 1), ({date}) => date)
         },
         /**
          * Return matches yet to be played
@@ -94,14 +133,30 @@ export const useTournament = defineStore('tournament', {
          * @returns {*}
          */
         matches_to_play_by_day() {
-            return Object.groupBy(this.matches_to_play, ({date}) => date)
+            let obj = {}
+            this.matches_to_play.forEach(m => {
+                if (obj.hasOwnProperty(m.date))
+                    obj[m.date].push(m)
+                else
+                    obj[m.date] = [m]
+            })
+            return obj
+            // return Object.groupBy(this.matches_to_play, ({date}) => date)
         },
         /**
          * Return upcoming games
          * @returns {*}
          */
         upcoming_matches() {
-            return Object.groupBy(this.matches_to_play.slice(0, 5), ({date}) => date)
+            let obj = {}
+            this.matches_to_play.slice(0, 5).forEach(m => {
+                if (obj.hasOwnProperty(m.date))
+                    obj[m.date].push(m)
+                else
+                    obj[m.date] = [m]
+            })
+            return obj
+            // return Object.groupBy(this.matches_to_play.slice(0, 5), ({date}) => date)
         },
         /**
          * Total goals scored
@@ -454,7 +509,15 @@ export const useTournament = defineStore('tournament', {
          * @param poule
          */
         matches_by_poule(poule) {
-            return Object.groupBy(this.matches.filter(m => m.group === poule), ({date}) => date);
+            let obj = {}
+            this.matches.filter(m => m.group === poule).forEach(m => {
+                if (obj.hasOwnProperty(m.date))
+                    obj[m.date].push(m)
+                else
+                    obj[m.date] = [m]
+            })
+            return obj
+            // return Object.groupBy(this.matches.filter(m => m.group === poule), ({date}) => date);
         },
         /**
          * Return standing

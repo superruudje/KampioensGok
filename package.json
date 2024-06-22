@@ -11,7 +11,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
@@ -20,22 +20,22 @@
     "apexcharts": "^3.49.1",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "npm-check-updates": "^16.14.18",
+    "npm-check-updates": "^16.14.20",
     "pathe": "^1.1.2",
     "pinia": "^2.1.7",
-    "vue": "^3.4.21",
+    "vue": "^3.4.30",
     "vue-gtag": "^2.0.1",
-    "vue-router": "^4.3.0",
+    "vue-router": "^4.4.0",
     "vue3-apexcharts": "^1.5.3"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.10.1",
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@rushstack/eslint-patch": "^1.10.3",
+    "@vitejs/plugin-vue": "^5.0.5",
     "@vue/eslint-config-prettier": "^9.0.0",
-    "eslint": "^9.0.0",
-    "eslint-plugin-vue": "^9.24.1",
-    "prettier": "^3.2.5",
-    "sass": "^1.74.1",
-    "vite": "^5.2.8"
+    "eslint": "^9.5.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "prettier": "^3.3.2",
+    "sass": "^1.77.6",
+    "vite": "^5.3.1"
   }
 }
