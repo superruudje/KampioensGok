@@ -1207,6 +1207,78 @@
     "teams": [
       "GEO",
       "CZE"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 18,
+        "team": "CZE",
+        "player": "Coufal, V."
+      },
+      {
+        "type": "yellow",
+        "minute": 36,
+        "team": "GEO",
+        "player": "Kashia, G."
+      },
+      {
+        "type": "yellow",
+        "minute": 40,
+        "team": "CZE",
+        "player": "Provod, L."
+      },
+      {
+        "type": "goal",
+        "minute": "45 + 4",
+        "team": "GEO",
+        "player": "Mikautadze, G."
+      },
+      {
+        "type": "yellow",
+        "minute": 47,
+        "team": "CZE",
+        "player": "Jurásek, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 53,
+        "team": "CZE",
+        "player": "Holeš, T."
+      },
+      {
+        "type": "goal",
+        "minute": 59,
+        "team": "CZE",
+        "player": "Schick, P."
+      },
+      {
+        "type": "yellow",
+        "minute": 81,
+        "team": "CZE",
+        "player": "Soucek, T."
+      },
+      {
+        "type": "yellow",
+        "minute": 82,
+        "team": "GEO",
+        "player": "Gvelesiani, G."
+      },
+      {
+        "type": "yellow",
+        "minute": 83,
+        "team": "GEO",
+        "player": "Mekvabishvili, A."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 5",
+        "team": "GEO",
+        "player": "Kochorashvili, G."
+      }
     ]
   },
   {
