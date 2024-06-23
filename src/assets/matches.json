@@ -302,7 +302,8 @@
         "type": "goal",
         "minute": 83,
         "team": "NED",
-        "player": "Weghorst, W."
+        "player": "Weghorst, W.",
+        "assist": "Aké, N."
       }
     ]
   },
@@ -1408,6 +1409,50 @@
     "teams": [
       "SUI",
       "GER"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 25,
+        "team": "SUI",
+        "player": "Ndoye, D."
+      },
+      {
+        "type": "goal",
+        "minute": 28,
+        "team": "SUI",
+        "player": "Ndoye, D.",
+        "assist": "Freuler, R."
+      },
+      {
+        "type": "yellow",
+        "minute": 38,
+        "team": "GER",
+        "player": "Tah, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 67,
+        "team": "SUI",
+        "player": "Xhaka, G."
+      },
+      {
+        "type": "yellow",
+        "minute": 81,
+        "team": "SUI",
+        "player": "Widmer, S."
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 2",
+        "team": "GER",
+        "player": "Füllkrug, N.",
+        "assist": "Raum, D."
+      }
     ]
   },
   {
@@ -1420,6 +1465,48 @@
     "teams": [
       "SCO",
       "HUN"
+    ],
+    "result": [
+      0,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 18,
+        "team": "HUN",
+        "player": "Styles, C."
+      },
+      {
+        "type": "yellow",
+        "minute": 26,
+        "team": "HUN",
+        "player": "Orbán, W."
+      },
+      {
+        "type": "yellow",
+        "minute": 44,
+        "team": "HUN",
+        "player": "Schäfer, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 50,
+        "team": "SCO",
+        "player": "McTominay, S."
+      },
+      {
+        "type": "yellow",
+        "minute": 75,
+        "team": "HUN",
+        "player": "Kleinheisler, L."
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 10",
+        "team": "HUN",
+        "player": "Csoboth, K."
+      }
     ]
   },
   {
@@ -1586,7 +1673,7 @@
     "stadium": "Cologne Stadium",
     "city": "Cologne",
     "teams": [
-      "1st: B",
+      "ESP",
       "3rd: A/D/E/F"
     ]
   },
@@ -1610,7 +1697,7 @@
     "stadium": "Frankfurt Arena",
     "city": "Frankfurt am Main",
     "teams": [
-      "1st: F",
+      "POR",
       "3rd: A/B/C"
     ]
   },
