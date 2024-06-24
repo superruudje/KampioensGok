@@ -1519,6 +1519,80 @@
     "teams": [
       "CRO",
       "ITA"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 24,
+        "team": "CRO",
+        "player": "Sučić, L."
+      },
+      {
+        "type": "goal",
+        "minute": 55,
+        "team": "CRO",
+        "player": "Modrić, L.",
+        "assist": "Budimir, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 60,
+        "team": "CRO",
+        "player": "Modrić, L."
+      },
+      {
+        "type": "yellow",
+        "minute": 73,
+        "team": "CRO",
+        "player": "Ivanušec, L."
+      },
+      {
+        "type": "yellow",
+        "minute": 78,
+        "team": "CRO",
+        "player": "Pongračić, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 82,
+        "team": "CRO",
+        "player": "Stanišić, J."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 1",
+        "team": "CRO",
+        "player": "Brozović, M."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 3",
+        "team": "ITA",
+        "player": "Calafiori, R."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 6",
+        "team": "ITA",
+        "player": "Fagioli, N."
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 8",
+        "team": "ITA",
+        "player": "Zaccagni, M.",
+        "assist": "Calafiori, R."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 9",
+        "team": "ITA",
+        "player": "Spalletti, L."
+      }
     ]
   },
   {
@@ -1531,6 +1605,37 @@
     "teams": [
       "ALB",
       "ESP"
+    ],
+    "result": [
+      0,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 13,
+        "team": "ESP",
+        "player": "Torres, F.",
+        "assist": "Olmo, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 67,
+        "team": "ALB",
+        "player": "Bajrami, N."
+      },
+      {
+        "type": "yellow",
+        "minute": 89,
+        "team": "ALB",
+        "player": "Berisha, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 90,
+        "team": "ESP",
+        "player": "Vivian, D."
+      }
     ]
   },
   {
@@ -1638,7 +1743,7 @@
     "city": "Berlin",
     "teams": [
       "SUI",
-      "2nd: B"
+      "ITA"
     ]
   },
   {
