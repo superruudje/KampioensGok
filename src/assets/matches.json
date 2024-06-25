@@ -1648,6 +1648,64 @@
     "teams": [
       "NED",
       "AUT"
+    ],
+    "result": [
+      2,
+      3
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 6,
+        "team": "AUT",
+        "player": "Malen, D. (og)"
+      },
+      {
+        "type": "yellow",
+        "minute": 32,
+        "team": "AUT",
+        "player": "Posch, S."
+      },
+      {
+        "type": "yellow",
+        "minute": 33,
+        "team": "AUT",
+        "player": "Wimmer, P."
+      },
+      {
+        "type": "goal",
+        "minute": 47,
+        "team": "NED",
+        "player": "Gakpo, C.",
+        "assist": "Simons, X."
+      },
+      {
+        "type": "goal",
+        "minute": 59,
+        "team": "AUT",
+        "player": "Schmid, R.",
+        "assist": "Grillitsch, F."
+      },
+      {
+        "type": "goal",
+        "minute": 75,
+        "team": "NED",
+        "player": "Depay, M.",
+        "assist": "Weghorst, W."
+      },
+      {
+        "type": "goal",
+        "minute": 80,
+        "team": "AUT",
+        "player": "Sabitzer, M.",
+        "assist": "Baumgartner, C."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 4",
+        "team": "AUT",
+        "player": "Querfeld, L."
+      }
     ]
   },
   {
@@ -1660,6 +1718,54 @@
     "teams": [
       "FRA",
       "POL"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 24,
+        "team": "POL",
+        "player": "Zalewski, N."
+      },
+      {
+        "type": "yellow",
+        "minute": 43,
+        "team": "FRA",
+        "player": "Rabiot, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 53,
+        "team": "POL",
+        "player": "Probierz, M."
+      },
+      {
+        "type": "goal",
+        "minute": 56,
+        "team": "FRA",
+        "player": "Mbappé, K."
+      },
+      {
+        "type": "goal",
+        "minute": 79,
+        "team": "POL",
+        "player": "Lewandowski, R."
+      },
+      {
+        "type": "yellow",
+        "minute": 89,
+        "team": "POL",
+        "player": "Dawidowicz, P."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 2",
+        "team": "POL",
+        "player": "Świderski, K."
+      }
     ]
   },
   {
