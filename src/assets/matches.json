@@ -1778,6 +1778,42 @@
     "teams": [
       "ENG",
       "SVN"
+    ],
+    "result": [
+      0,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 17,
+        "team": "ENG",
+        "player": "Trippier, K."
+      },
+      {
+        "type": "yellow",
+        "minute": 22,
+        "team": "SVN",
+        "player": "Janža, E."
+      },
+      {
+        "type": "yellow",
+        "minute": 68,
+        "team": "ENG",
+        "player": "Guéhi, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 72,
+        "team": "SVN",
+        "player": "Bijol, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 77,
+        "team": "ENG",
+        "player": "Foden, P."
+      }
     ]
   },
   {
@@ -1790,6 +1826,36 @@
     "teams": [
       "DEN",
       "SRB"
+    ],
+    "result": [
+      0,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 4,
+        "team": "SRB",
+        "player": "Milenković, N."
+      },
+      {
+        "type": "yellow",
+        "minute": 27,
+        "team": "DEN",
+        "player": "Wind, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 30,
+        "team": "DEN",
+        "player": "Hjulmand, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 84,
+        "team": "SRB",
+        "player": "Mitrović, A."
+      }
     ]
   },
   {
@@ -1861,7 +1927,7 @@
     "city": "Dortmund",
     "teams": [
       "GER",
-      "2nd: C"
+      "DEN"
     ]
   },
   {
@@ -1872,7 +1938,7 @@
     "stadium": "Arena AufSchalke",
     "city": "Gelsenkirchen",
     "teams": [
-      "1nd: C",
+      "ENG",
       "3rd: D/E/F"
     ]
   },
