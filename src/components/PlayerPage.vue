@@ -20,10 +20,15 @@
                 <div class="row g-3">
                     <div class="col-6">
                         <div class="card border-0 rounded-0 shadow-sm h-100">
-                            <div class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
-                                <floating-stars v-if="playerPos < 4" class="w-100" :color="playerPos === 1 ? 'txt-gold' : playerPos === 2 ? 'txt-silver' : 'txt-bronze'"/>
-                                <span :class="{ 'txt-gold' : playerPos === 1, 'txt-silver' : playerPos === 2, 'txt-bronze' : playerPos === 3}" class="txt-orange fw-bold lh-1"
-                                      style="font-size: 4rem">
+                            <div
+                                class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
+                                <floating-stars v-if="playerPos < 4"
+                                                :color="playerPos === 1 ? 'txt-gold' : playerPos === 2 ? 'txt-silver' : 'txt-bronze'"
+                                                class="w-100"/>
+                                <span
+                                    :class="{ 'txt-gold' : playerPos === 1, 'txt-silver' : playerPos === 2, 'txt-bronze' : playerPos === 3}"
+                                    class="txt-orange fw-bold lh-1"
+                                    style="font-size: 4rem">
                                     <number-counter
                                         :number="playerPos"></number-counter>
                             </span>
@@ -36,7 +41,8 @@
                     </div>
                     <div class="col-6">
                         <div class="card border-0 rounded-0 shadow-sm h-100">
-                            <div class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
+                            <div
+                                class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
                             <span class="txt-orange fw-bold lh-1" style="font-size: 4rem">
                                 <number-counter
                                     :number="tournament.getParticipantScoreMatches(participant.team_name)"></number-counter>
@@ -50,7 +56,8 @@
                     </div>
                     <div class="col-6">
                         <div class="card border-0 rounded-0 shadow-sm h-100">
-                            <div class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
+                            <div
+                                class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
                             <span class="txt-orange fw-bold lh-1" style="font-size: 4rem">
                                 <number-counter
                                     :number="tournament.getParticipantScoreKnockOut(participant.team_name)"></number-counter>
@@ -64,7 +71,8 @@
                     </div>
                     <div class="col-6">
                         <div class="card border-0 rounded-0 shadow-sm h-100">
-                            <div class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
+                            <div
+                                class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
                             <span class="txt-orange fw-bold lh-1" style="font-size: 4rem">
                                 <number-counter
                                     :number="tournament.getParticipantScoreBonus(participant.team_name)"></number-counter>
@@ -108,6 +116,7 @@
                 <div class="card border-0 rounded-0 shadow-sm mb-3">
                     <div class="card-body p-4">
                         <h2 class="txt-blue fw-bolder">Bonusvragen</h2>
+                        <p>Punten voor de bonusvragen worden pas <u>na</u> de poulefase toegekend.</p>
                         <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white mb-3">
                             <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij
                             start toernooi.
@@ -131,13 +140,12 @@
                                             <span v-else class="small fst-italic"> (nu {{ q.now }})</span>
                                         </span>
                                     <template v-if="bonus[idx]">
-                                            <span v-if="q.type === 'exact'"
-                                                  class="badge bg-orange">+{{
-                                                    participant.bonus[idx] === bonus[idx] ? q.p : 0
-                                                }}</span>
-                                        <span v-else class="badge bg-orange">+{{
-                                                getEstimateScore(participant.bonus[idx], bonus[idx])
-                                            }}</span>
+                                        <span v-if="q.type === 'exact'" class="badge bg-orange">+
+                                            {{ participant.bonus[idx] === bonus[idx] ? q.p : 0 }}
+                                        </span>
+                                        <span v-else class="badge bg-orange">+
+                                            {{ getEstimateScore(participant.bonus[idx], bonus[idx]) }}
+                                        </span>
                                     </template>
                                 </div>
                             </div>
@@ -154,7 +162,10 @@
                         <h2 class="txt-blue fw-bolder">Voorspellingen Knock-Out</h2>
                         <p>Bekijk de voorspellingen van <b>{{ participant.name }}</b> Bij reeds gespeelde
                             wedstrijden wordt de stand na 90 minuten speeltijd getoond <u>onder</u> de voorspelling.
+                            Punten voor de knock-out fase worden pas <u>na</u> de poulefase toegekend.
                         </p>
+                        <span class="d-block"><i class="bi bi-check-circle-fill text-success me-2"></i>Team correct voorspeld.</span>
+                        <span class="d-block mb-3"><i class="bi bi-exclamation-circle-fill text-danger me-2"></i>Team incorrect voorspeld.</span>
                         <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
                             <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij
                             start toernooi.
@@ -237,8 +248,16 @@ const data = ref([
 
 const questions = ref([
     {label: "Welk land wordt Europees kampioen?", type: "exact", p: 75},
-    {label: "Hoeveel goals worden er totaal gescoord?", type: "estimate", now: `${totalGoals.value}, geschat ${Math.ceil(estTotalGoals.value.average * estTotalCards.value.matches)}`},
-    {label: "Hoeveel kaarten worden er in het toernooi gegeven?", type: "estimate", now: `${totalCards.value}, geschat ${Math.ceil(estTotalCards.value.average * estTotalCards.value.matches)}`},
+    {
+        label: "Hoeveel goals worden er totaal gescoord?",
+        type: "estimate",
+        now: `${totalGoals.value}, geschat ${Math.ceil(estTotalGoals.value.average * estTotalCards.value.matches)}`
+    },
+    {
+        label: "Hoeveel kaarten worden er in het toernooi gegeven?",
+        type: "estimate",
+        now: `${totalCards.value}, geschat ${Math.ceil(estTotalCards.value.average * estTotalCards.value.matches)}`
+    },
     {
         label: "Welk land krijgt de meeste tegengoals?",
         type: "exact",
@@ -253,8 +272,8 @@ const questions = ref([
     },
     {label: "Wie wordt er topscorer?", type: "exact", p: 10, now: groupedTopScorer.value[0]?.label || '-'},
     {label: "Wie wordt de koning van de assist?", type: "exact", p: 10, now: groupedAssist.value[0]?.label || '-'},
-    {label: "Welke Nederlander scoort het eerste doelpunt?", type: "exact", p: 10, now: 'Gakpo, C.'},
-    {label: "Welke Nederlander krijgt de eerste kaart?", type: "exact", p: 10, now: 'Veerman, J.'},
+    {label: "Welke Nederlander scoort het eerste doelpunt?", type: "exact", p: 10, now: bonus.value[7]},
+    {label: "Welke Nederlander krijgt de eerste kaart?", type: "exact", p: 10, now: bonus.value[8]},
 ])
 
 /**
@@ -358,6 +377,80 @@ const chartOptions = {
                 '</div> ' +
                 '</div>'
         }
+    },
+    annotations: {
+        xaxis: [
+            {
+                x: "14-06-2024",
+                x2: "26-06-2024",
+                fillColor: '#f36c21',
+                opacity: .05,
+                label: {
+                    borderColor: "#f36c21",
+                    style: {
+                        color: "#fff",
+                        background: "#f36c21"
+                    },
+                    text: "Poule"
+                }
+            },
+            {
+                x: "26-06-2024",
+                x2: "02-07-2024",
+                fillColor: "#253780",
+                opacity: .05,
+                label: {
+                    borderColor: "#253780",
+                    style: {
+                        color: "#fff",
+                        background: "#253780"
+                    },
+                    text: "Round of 16"
+                }
+            },
+            {
+                x: "02-07-2024",
+                x2: "06-07-2024",
+                fillColor: '#f36c21',
+                opacity: .05,
+                label: {
+                    borderColor: "#f36c21",
+                    style: {
+                        color: "#fff",
+                        background: "#f36c21"
+                    },
+                    text: "Quarter-finals"
+                }
+            },
+            {
+                x: "06-07-2024",
+                x2: "10-07-2024",
+                fillColor: "#253780",
+                opacity: .05,
+                label: {
+                    borderColor: "#253780",
+                    style: {
+                        color: "#fff",
+                        background: "#253780"
+                    },
+                    text: "Semi-finals"
+                }
+            },
+            {
+                x: "10-07-2024",
+                x2: "14-07-2024",
+                fillColor: '#f36c21',
+                opacity: .05,
+                label: {
+                    borderColor: "#f36c21",
+                    style: {
+                        color: "#fff",
+                        background: "#f36c21"
+                    },
+                    text: "Final"
+                }
+            }
+        ]
     }
 }
 

@@ -13,6 +13,10 @@ export const useTournament = defineStore('tournament', {
         poules: [],
         knock_out: {},
 
+        roundOf16Start: 13,
+        quarterFinalsStart: 17,
+        semiFinalsStart: 19,
+        finalStart: 21,
         bonus: [
             "", //0.champion
             null, //1. goals scored
@@ -21,8 +25,8 @@ export const useTournament = defineStore('tournament', {
             "", //4. most cards
             "", //5. top scorer
             "", //6. top assist
-            "", //7. first goal NL
-            "" //8. first card NL
+            "Gakpo, C.", //7. first goal NL
+            "Veerman, J." //8. first card NL
         ],
 
         teamImages: [],
@@ -33,6 +37,32 @@ export const useTournament = defineStore('tournament', {
         pageSize: 10,
     }),
     getters: {
+        /**
+         * Check for player with double teams in knock-out phase
+         * @returns {string}
+         */
+        playersWithDoubleTeams() {
+            this.players.forEach((player) => {
+                let findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) !== index)
+                const round_of_16 = findDuplicates(player.round_of_16)
+                const quarter_finals = findDuplicates(player.quarter_finals)
+                const semi_finals = findDuplicates(player.semi_finals)
+                const finals = findDuplicates(player.finals)
+                if (round_of_16.length) {
+                    console.log((player.team_name + ": 16"), round_of_16)
+                }
+                if (quarter_finals.length) {
+                    console.log((player.team_name + ": Quarter"), quarter_finals)
+                }
+                if (semi_finals.length) {
+                    console.log((player.team_name + ": Semi"), semi_finals)
+                }
+                if (finals.length) {
+                    console.log((player.team_name + ": Final"), finals)
+                }
+            })
+            return ''
+        },
         /**
          * Return top 10 players
          * @returns {*}
@@ -89,7 +119,6 @@ export const useTournament = defineStore('tournament', {
                     obj[m.date] = [m]
             })
             return obj
-            // return Object.groupBy(this.matches_to_play.filter((m) => m.group.length === 1), ({date}) => date)
         },
         /**
          * Return matches played in knockout fase
@@ -104,7 +133,6 @@ export const useTournament = defineStore('tournament', {
                     obj[m.date] = [m]
             })
             return obj
-            // return Object.groupBy(this.matches_played.filter((m) => m.group.length > 1), ({date}) => date)
         },
         /**
          * Return matches to play in knockout fase
@@ -119,7 +147,6 @@ export const useTournament = defineStore('tournament', {
                     obj[m.date] = [m]
             })
             return obj
-            // return Object.groupBy(this.matches_to_play.filter((m) => m.group.length > 1), ({date}) => date)
         },
         /**
          * Return matches yet to be played
@@ -141,7 +168,6 @@ export const useTournament = defineStore('tournament', {
                     obj[m.date] = [m]
             })
             return obj
-            // return Object.groupBy(this.matches_to_play, ({date}) => date)
         },
         /**
          * Return upcoming games
@@ -156,7 +182,6 @@ export const useTournament = defineStore('tournament', {
                     obj[m.date] = [m]
             })
             return obj
-            // return Object.groupBy(this.matches_to_play.slice(0, 5), ({date}) => date)
         },
         /**
          * Total goals scored
@@ -398,6 +423,10 @@ export const useTournament = defineStore('tournament', {
                 return b.count - a.count
             })
         },
+        /**
+         * Return players predictions for total goals
+         * @returns {*[]}
+         */
         prediction_total_goals() {
             let res = []
             this.players.forEach((player) => {
@@ -413,6 +442,10 @@ export const useTournament = defineStore('tournament', {
                 return b.count - a.count
             })
         },
+        /**
+         * Return players predictions for total cards
+         * @returns {*[]}
+         */
         prediction_total_cards() {
             let res = []
             this.players.forEach((player) => {
@@ -465,7 +498,7 @@ export const useTournament = defineStore('tournament', {
             })
         },
         /**
-         *
+         * Return prediction NL tournament result
          * @returns {*}
          */
         prediction_ned() {
@@ -566,6 +599,11 @@ export const useTournament = defineStore('tournament', {
                 return player
             })
         },
+        /**
+         * Get players current position in ranking
+         * @param team
+         * @returns {*}
+         */
         getPlayerStanding(team) {
             return this.getStanding(null).find(p => p.team_name === team).pos
         },
@@ -606,16 +644,21 @@ export const useTournament = defineStore('tournament', {
         /**
          * Calculate total score bonus questions
          * @param name
+         * @param snapshot
          * @returns {*}
          */
-        getParticipantScoreBonus(name) {
+        getParticipantScoreBonus(name, snapshot) {
+            const slice_num = snapshot !== null ? snapshot : Object.keys(this.matches_played_by_day).length
+            const keys = Object.keys(this.matches_played_by_day).slice(0, slice_num)
+            if (keys.length <= this.roundOf16Start) return 0 //start counting after poule phase is done
+
             let score = 0
             const player = this.players.find(player => player.team_name === name)
             // check for champion
             if (player.bonus[0] === this.bonus[0]) score += 75
             // check for estimation questions
             for (let i = 1; i < 3; i++) {
-                if (this.bonus[i] === null) return 0
+                if (this.bonus[i] === null) continue;
                 else if (player.bonus[i] === this.bonus[i]) score += 40
                 else if (player.bonus[i] >= (this.bonus[i] - 5) && player.bonus[i] <= (this.bonus[i] + 5)) score += 25
                 else if (player.bonus[i] >= (this.bonus[i] - 10) && player.bonus[i] <= (this.bonus[i] + 10)) score += 15
@@ -628,25 +671,38 @@ export const useTournament = defineStore('tournament', {
         },
         /**
          * Calculate total score knockout fase
+         * Count only after certain tournament phase is finished
          * @param name
+         * @param snapshot
          * @returns {*}
          */
-        getParticipantScoreKnockOut(name) {
+        getParticipantScoreKnockOut(name, snapshot) {
             let score = 0
             const player = this.players.find(player => player.team_name === name)
 
-            player.round_of_16.forEach(team => {
-                if (this.knock_out.round_of_16.includes(team)) score += 10
-            })
-            player.quarter_finals.forEach(team => {
-                if (this.knock_out.quarter_finals.includes(team)) score += 20
-            })
-            player.semi_finals.forEach(team => {
-                if (this.knock_out.semi_finals.includes(team)) score += 30
-            })
-            player.finals.forEach(team => {
-                if (this.knock_out.finals.includes(team)) score += 50
-            })
+            const slice_num = snapshot !== null ? snapshot : Object.keys(this.matches_played_by_day).length
+            const keys = Object.keys(this.matches_played_by_day).slice(0, slice_num)
+
+            if (keys.length > this.roundOf16Start) {
+                this.knock_out.round_of_16.forEach(team => {
+                    if (player.round_of_16.includes(team)) score += 10
+                })
+            }
+            if (keys.length > this.quarterFinalsStart) {
+                this.knock_out.quarter_finals.forEach(team => {
+                    if (player.quarter_finals.includes(team)) score += 20
+                })
+            }
+            if (keys.length > this.semiFinalsStart) {
+                this.knock_out.semi_finals.forEach(team => {
+                    if (player.semi_finals.includes(team)) score += 30
+                })
+            }
+            if (keys.length > this.finalStart) {
+                this.knock_out.finals.forEach(team => {
+                    if (player.finals.includes(team)) score += 50
+                })
+            }
 
             return score
         },
@@ -732,9 +788,12 @@ export const useTournament = defineStore('tournament', {
                     poule_teams.push(team_stats)
                 })
                 computed_poule.teams = poule_teams.sort((a, b) => {
-                    if (b.points === a.points) // if same score, check goals diff
-                        return (b.for - b.against) - (a.for - a.against)
-                    else
+                    //TODO add more comparisons if teams are equal
+                    if (b.points === a.points) {
+                        if ((b.for - b.against) === (a.for - a.against))// if same score, check goals diff
+                            return b.for - a.for
+                        else return (b.for - b.against) - (a.for - a.against)
+                    } else
                         return b.points - a.points
                 })
                 computed_poules.push(computed_poule)

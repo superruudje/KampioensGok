@@ -272,6 +272,80 @@ const chartOptions = {
                 '</div> ' +
                 '</div>'
         }
+    },
+    annotations: {
+        xaxis: [
+            {
+                x: "14-06-2024",
+                x2: "26-06-2024",
+                fillColor: '#f36c21',
+                opacity: .05,
+                label: {
+                    borderColor: "#f36c21",
+                    style: {
+                        color: "#fff",
+                        background: "#f36c21"
+                    },
+                    text: "Poule"
+                }
+            },
+            {
+                x: "26-06-2024",
+                x2: "02-07-2024",
+                fillColor: "#253780",
+                opacity: .05,
+                label: {
+                    borderColor: "#253780",
+                    style: {
+                        color: "#fff",
+                        background: "#253780"
+                    },
+                    text: "Round of 16"
+                }
+            },
+            {
+                x: "02-07-2024",
+                x2: "06-07-2024",
+                fillColor: '#f36c21',
+                opacity: .05,
+                label: {
+                    borderColor: "#f36c21",
+                    style: {
+                        color: "#fff",
+                        background: "#f36c21"
+                    },
+                    text: "Quarter-finals"
+                }
+            },
+            {
+                x: "06-07-2024",
+                x2: "10-07-2024",
+                fillColor: "#253780",
+                opacity: .05,
+                label: {
+                    borderColor: "#253780",
+                    style: {
+                        color: "#fff",
+                        background: "#253780"
+                    },
+                    text: "Semi-finals"
+                }
+            },
+            {
+                x: "10-07-2024",
+                x2: "14-07-2024",
+                fillColor: '#f36c21',
+                opacity: .05,
+                label: {
+                    borderColor: "#f36c21",
+                    style: {
+                        color: "#fff",
+                        background: "#f36c21"
+                    },
+                    text: "Final"
+                }
+            }
+        ]
     }
 }
 

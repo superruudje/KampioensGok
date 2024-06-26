@@ -109,22 +109,13 @@ import TopTable from "@/components/TopTable.vue";
 import PredictionTable from "@/components/PredictionTable.vue";
 
 const tournament = useTournament();
-const {standing_top_10, upcoming_matches, groupedTopScorer, teamImages, prediction_ned} = storeToRefs(tournament)
+const {standing_top_10, upcoming_matches, groupedTopScorer, prediction_ned} = storeToRefs(tournament)
 const days = ref(0)
 const hours = ref(0)
 const minutes = ref(0)
 const seconds = ref(0)
 const started = ref(true)
 const countDownDate = new Date("Jun 14, 2024 21:00:00").getTime();
-
-/**
- * Return team image
- * @param name
- * @returns {*}
- */
-function getImage(name) {
-    return teamImages.value[name] || teamImages.value[`default`]
-}
 
 function startCountdown() {
     const x = setInterval(function () {
