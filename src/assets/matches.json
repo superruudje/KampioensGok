@@ -1869,6 +1869,55 @@
     "teams": [
       "SVK",
       "ROM"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 24,
+        "team": "SVK",
+        "player": "Duda, O.",
+        "assist": "Kucka, J."
+      },
+      {
+        "type": "goal",
+        "minute": 37,
+        "team": "ROM",
+        "player": "Marin, R."
+      },
+      {
+        "type": "yellow",
+        "minute": "45 + 1",
+        "team": "ROM",
+        "player": "Burcă, A."
+      },
+      {
+        "type": "yellow",
+        "minute": "45 + 4",
+        "team": "ROM",
+        "player": "Bancu, N."
+      },
+      {
+        "type": "yellow",
+        "minute": 55,
+        "team": "ROM",
+        "player": "Iordănescu, E."
+      },
+      {
+        "type": "yellow",
+        "minute": 88,
+        "team": "ROM",
+        "player": "Puşcaş, G."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 1",
+        "team": "SVK",
+        "player": "Duda, O."
+      }
     ]
   },
   {
@@ -1881,6 +1930,24 @@
     "teams": [
       "UKR",
       "BEL"
+    ],
+    "result": [
+      0,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 43,
+        "team": "BEL",
+        "player": "Faes, W."
+      },
+      {
+        "type": "yellow",
+        "minute": 69,
+        "team": "UKR",
+        "player": "Dovbyk, A."
+      }
     ]
   },
   {
@@ -1893,6 +1960,154 @@
     "teams": [
       "CZE",
       "TUR"
+    ],
+    "result": [
+      1,
+      2
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 11,
+        "team": "CZE",
+        "player": "Barák, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 20,
+        "team": "CZE",
+        "player": "Barák, A."
+      },
+      {
+        "type": "red",
+        "minute": 20,
+        "team": "CZE",
+        "player": "Barák, A.",
+        "direct": false
+      },
+      {
+        "type": "yellow",
+        "minute": 31,
+        "team": "TUR",
+        "player": "Özcan, S."
+      },
+      {
+        "type": "yellow",
+        "minute": 34,
+        "team": "CZE",
+        "player": "Schick, P."
+      },
+      {
+        "type": "yellow",
+        "minute": 37,
+        "team": "TUR",
+        "player": "Yıldız, K."
+      },
+      {
+        "type": "yellow",
+        "minute": 49,
+        "team": "TUR",
+        "player": "Yüksek, İ."
+      },
+      {
+        "type": "goal",
+        "minute": 51,
+        "team": "TUR",
+        "player": "Çalhanoğlu, H.",
+        "assist": "Yüksek, İ."
+      },
+      {
+        "type": "yellow",
+        "minute": 64,
+        "team": "TUR",
+        "player": "Günok, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 66,
+        "team": "TUR",
+        "player": "Çalhanoğlu, H."
+      },
+      {
+        "type": "goal",
+        "minute": 66,
+        "team": "CZE",
+        "player": "Soucek, T."
+      },
+      {
+        "type": "yellow",
+        "minute": 68,
+        "team": "TUR",
+        "player": "Çakır, U."
+      },
+      {
+        "type": "yellow",
+        "minute": 81,
+        "team": "TUR",
+        "player": "Müldür, H."
+      },
+      {
+        "type": "yellow",
+        "minute": 85,
+        "team": "TUR",
+        "player": "Akaydin, S."
+      },
+      {
+        "type": "yellow",
+        "minute": 85,
+        "team": "CZE",
+        "player": "Jaroš, V."
+      },
+      {
+        "type": "yellow",
+        "minute": 85,
+        "team": "CZE",
+        "player": "Červ, L."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 1",
+        "team": "CZE",
+        "player": "Krejčí, L."
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 4",
+        "team": "TUR",
+        "player": "Tosun, C.",
+        "assist": "Kökçü, O."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 5",
+        "team": "TUR",
+        "player": "Ayhan, K."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 5",
+        "team": "TUR",
+        "player": "Kökçü, O."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 8",
+        "team": "TUR",
+        "player": "Güler, A."
+      },
+      {
+        "type": "red",
+        "minute": "90 + 8",
+        "team": "CZE",
+        "player": "Chorý, T.",
+        "direct": true
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 8",
+        "team": "CZE",
+        "player": "Soucek, T."
+      }
     ]
   },
   {
@@ -1905,6 +2120,49 @@
     "teams": [
       "GEO",
       "POR"
+    ],
+    "result": [
+      2,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 2,
+        "team": "GEO",
+        "player": "Kvaratskhelia, K.",
+        "assist": "Mikautadze, G."
+      },
+      {
+        "type": "yellow",
+        "minute": 28,
+        "team": "POR",
+        "player": "Ronaldo, C."
+      },
+      {
+        "type": "yellow",
+        "minute": 44,
+        "team": "POR",
+        "player": "Neto, P."
+      },
+      {
+        "type": "yellow",
+        "minute": 53,
+        "team": "POR",
+        "player": "Neves, R."
+      },
+      {
+        "type": "goal",
+        "minute": 57,
+        "team": "GEO",
+        "player": "Mikautadze, G."
+      },
+      {
+        "type": "yellow",
+        "minute": 85,
+        "team": "GEO",
+        "player": "Mekvabishvili, A."
+      }
     ]
   },
   {
@@ -1940,7 +2198,7 @@
     "city": "Gelsenkirchen",
     "teams": [
       "ENG",
-      "3rd: D/E/F"
+      "SVK"
     ]
   },
   {
@@ -1952,7 +2210,7 @@
     "city": "Cologne",
     "teams": [
       "ESP",
-      "3rd: A/D/E/F"
+      "GEO"
     ]
   },
   {
@@ -1964,7 +2222,7 @@
     "city": "Dusseldorf",
     "teams": [
       "FRA",
-      "2nd: E"
+      "BEL"
     ]
   },
   {
@@ -1976,7 +2234,7 @@
     "city": "Frankfurt am Main",
     "teams": [
       "POR",
-      "3rd: A/B/C"
+      "SVN"
     ]
   },
   {
@@ -1987,8 +2245,8 @@
     "stadium": "Munich Football Arena",
     "city": "Munich",
     "teams": [
-      "1nd: E",
-      "3rd: A/B/C/D"
+      "ROM",
+      "NED"
     ]
   },
   {
@@ -2000,7 +2258,7 @@
     "city": "Leipzig",
     "teams": [
       "AUT",
-      "2nd: F"
+      "TUR"
     ]
   },
   {
