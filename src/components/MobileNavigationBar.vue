@@ -25,7 +25,7 @@
             </div>
         </transition>
         <nav class="d-flex align-items-center justify-content-around gap-2 border-top p-3">
-            <router-link v-for="page in pages" :to="{name: page.url}" tag="div" activeClass="txt-orange border" class="text-white d-flex flex-column align-items-center p-2">
+            <router-link v-for="page in pages" @click="showMore = false" :to="{name: page.url}" tag="div" activeClass="txt-orange border" class="text-white d-flex flex-column align-items-center p-2">
                 <i class="bi fs-2 mb-0 lh-1" :class="'bi-' + page.icon"></i>
             </router-link>
             <div @click="showMore = !showMore" class="text-white d-flex flex-column align-items-center p-2" :class="{'txt-orange border' : showMore}">
