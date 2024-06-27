@@ -1506,6 +1506,12 @@
         "minute": "90 + 10",
         "team": "HUN",
         "player": "Csoboth, K."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 11",
+        "team": "HUN",
+        "player": "Csoboth, K."
       }
     ]
   },

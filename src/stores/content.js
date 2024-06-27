@@ -281,7 +281,7 @@ export const useTournament = defineStore('tournament', {
             })
             this.matches_played.forEach(match => {
                 const yellow = match.timeline?.filter(e => e.type === 'yellow') || []
-                const red = match.timeline?.filter(e => e.type === 'red' && e.direct) || []
+                const red = match.timeline?.filter(e => e.type === 'red') || []
                 const cards = yellow.concat(red)
 
                 cards.forEach((card) => {
