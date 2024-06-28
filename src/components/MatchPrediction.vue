@@ -5,14 +5,19 @@
                 <div class="flex-shrink-1 d-flex flex-column align-items-end">
                     <span class="fs-6 flex-shrink-1">
                         {{ knockout ? getTeamName(player_prediction_teams[0]) : getTeamName(match.teams[0]) }}
-                        <i v-if="knockout && isTeam(match.teams[0]) && player_prediction_teams[0] !== match.teams[0]"
+                        <i v-if="knockout && isTeam(match.teams[0]) && player_prediction_teams[0] !== match.teams[0] && !inKnockOut(player_prediction_teams[0])"
                            class="bi bi-exclamation-circle-fill text-danger"
                            data-bs-title="Team incorrect voorspeld."
+                           data-bs-toggle="tooltip"></i>
+                        <i v-else-if="knockout && isTeam(match.teams[0]) && player_prediction_teams[0] !== match.teams[0] && inKnockOut(player_prediction_teams[0])"
+                           class="bi bi-exclamation-circle-fill text-warning"
+                           data-bs-title="Team incorrect voorspeld. Wel in knock-out."
                            data-bs-toggle="tooltip"></i>
                         <i v-else-if="knockout && isTeam(match.teams[0])"
                            class="bi bi-check-circle-fill text-success"
                            data-bs-title="Team correct voorspeld."
                            data-bs-toggle="tooltip"></i>
+
                     </span>
                     <span v-if="knockout" class="text-black-50 small">{{ getTeamName(match.teams[0]) }}</span>
                 </div>
@@ -28,9 +33,13 @@
                 <img :src="imageB" alt="" class="d-lg-none" loading="lazy" width="26">
                 <div class="flex-shrink-1 d-flex flex-column align-items-start">
                     <span class="fs-6 flex-shrink-1">
-                        <i v-if="knockout && isTeam(match.teams[1]) && player_prediction_teams[1] !== match.teams[1]"
+                        <i v-if="knockout && isTeam(match.teams[1]) && player_prediction_teams[1] !== match.teams[1]  && !inKnockOut(player_prediction_teams[1])"
                            class="bi bi-exclamation-circle-fill text-danger"
                            data-bs-title="Team incorrect voorspeld."
+                           data-bs-toggle="tooltip"></i>
+                        <i v-else-if="knockout && isTeam(match.teams[1]) && player_prediction_teams[1] !== match.teams[1] && inKnockOut(player_prediction_teams[1])"
+                           class="bi bi-exclamation-circle-fill text-warning"
+                           data-bs-title="Team incorrect voorspeld. Wel in knock-out."
                            data-bs-toggle="tooltip"></i>
                         <i v-else-if="knockout && isTeam(match.teams[1])"
                            class="bi bi-check-circle-fill text-success"
@@ -41,9 +50,9 @@
                     <span v-if="knockout" class="text-black-50 small">{{ getTeamName(match.teams[1]) }}</span>
                 </div>
             </div>
-            <span v-if="played" class="position-absolute top-0 end-0 badge bg-orange"
-                  data-bs-toggle="tooltip" data-bs-html="true"
-                  :data-bs-title="score.reason.join(', ') + '.'">+{{
+            <span v-if="played" :data-bs-title="score.reason.join(', ') + '.'"
+                  class="position-absolute top-0 end-0 badge bg-orange" data-bs-html="true"
+                  data-bs-toggle="tooltip">+{{
                     score.score
                 }}</span>
         </div>
@@ -56,7 +65,7 @@ import {storeToRefs} from "pinia";
 import {computed} from "vue";
 
 const tournament = useTournament()
-const {teamImages, teams} = storeToRefs(tournament)
+const {teamImages, teams, knock_out} = storeToRefs(tournament)
 
 const props = defineProps({
     match: {type: Object, required: true},
@@ -93,6 +102,15 @@ function isTeam(string) {
 
 function getTeamName(team) {
     return teams.value.find((e) => e.id === team)?.name || team
+}
+
+/**
+ * Check if team is in knockout
+ * @param team
+ */
+function inKnockOut(team) {
+    console.log(team)
+    return knock_out.value.round_of_16.some(t => t === team)
 }
 </script>
 

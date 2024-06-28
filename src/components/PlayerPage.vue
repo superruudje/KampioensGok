@@ -165,7 +165,8 @@
                             Punten voor de knock-out fase worden pas <u>na</u> de poulefase toegekend.
                         </p>
                         <span class="d-block"><i class="bi bi-check-circle-fill text-success me-2"></i>Team correct voorspeld.</span>
-                        <span class="d-block mb-3"><i class="bi bi-exclamation-circle-fill text-danger me-2"></i>Team incorrect voorspeld.</span>
+                        <span class="d-block"><i class="bi bi-exclamation-circle-fill text-warning me-2"></i>Team incorrect voorspeld, maar wel in knockout.</span>
+                        <span class="d-block mb-3"><i class="bi bi-exclamation-circle-fill text-danger me-2"></i>Team incorrect voorspeld (geen punten).</span>
                         <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
                             <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij
                             start toernooi.
