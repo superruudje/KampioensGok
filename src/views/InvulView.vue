@@ -290,7 +290,7 @@ import {storeToRefs} from "pinia";
 import {computed, onMounted, ref} from "vue";
 
 const tournament = useTournament();
-const {matches_to_play_poule, teams, teamImages, matches_to_play_knock_out} = storeToRefs(tournament)
+const {matches_played_poule, matches_to_play_poule, teams, teamImages, matches_to_play_knock_out} = storeToRefs(tournament)
 
 const matches = ref([])
 const matches_knockout = ref([])
@@ -377,9 +377,10 @@ function getTeamName(id) {
  * Get all games in poule fase
  */
 function getPouleMatches() {
-    let days = Object.keys(matches_to_play_poule.value)
-    days.forEach(day => {
-        matches_to_play_poule.value[day].forEach((match) => {
+    let merged = {...matches_played_poule.value, ...matches_to_play_poule.value};
+    let all_days = Object.keys(merged)
+    all_days.forEach(day => {
+        merged[day].forEach((match) => {
             matches.value.push(match)
         })
     })
