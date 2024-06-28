@@ -1,20 +1,19 @@
 <template>
-    <div id="uitslagen-view">
-        <header class="bg-blue py-3 py-md-5">
+    <div id="uitslagen-view" class="position-relative">
+        <header class="position-sticky bg-blue py-3 py-md-5">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="fs-2 text-white fw-bolder">EK 2024</h1>
-                        <h2 class="fs-6 mb-0 txt-orange fw-bolder">De uitslagen</h2>
+                        <h1 class="fs-2 text-white fw-bolder">Wedstrijden & resultaten</h1>
                     </div>
                 </div>
             </div>
         </header>
-        <main class="container-md py-3 py-md-5">
-            <div class="row gy-3">
+        <main class="container py-3 py-md-5">
+            <div class="row">
                 <div class="col-12">
-                    <div class="card border-0 rounded-0 shadow-sm">
-                        <div class="card-body p-3 p-md-4">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body p-0">
                             <div class="matches-wrapper">
                                 <span v-if="!Object.keys(matches_played_by_day).length">Geen uitslagen bekend. Bekijk <router-link :to="{name: 'programma'}">hier</router-link> het programma.</span>
                                 <match-day-component v-for="(matches, match_day, idx) in matches_played_by_day" :match_day="match_day" :matches="matches"/>

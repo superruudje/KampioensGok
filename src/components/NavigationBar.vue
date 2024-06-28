@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar fixed-top navbar-expand-lg bg-orange" data-bs-theme="dark">
+    <nav class="navbar sticky-top navbar-expand-lg bg-orange" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">EK'24 pool</a>
             <button ref="collapseBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

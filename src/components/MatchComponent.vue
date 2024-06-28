@@ -1,24 +1,23 @@
 <template>
     <div class="card bg-gray border-0 rounded-0">
-        <div class="card-body position-relative p-3 p-md-4 pt-4 pt-md-5 d-flex flex-column">
+        <div class="card-body position-relative p-3 pt-4 d-flex flex-column">
             <div class="match-group position-absolute top-0 start-50 bg-blue text-light px-3 py-1">
                 {{ match.group.length > 1 ? match.group : `Groep ${match.group}` }}
             </div>
-            <div class="d-flex justify-content-around align-items-center">
+            <div class="d-flex justify-content-around align-items-center gap-3">
                 <div class="team-wrapper">
-                    <img :src="imageA" alt="" loading="lazy">
+                    <img :src="imageA" :alt="'flag_' + props.match.teams[0]" loading="lazy" class="w-50">
                     <span class="pt-1">{{ getTeamName(match.teams[0]) }}</span>
                 </div>
-                <div class="d-flex flex-column align-items-center">
+                <div class="d-flex flex-column align-items-center flex-shrink-1">
                     <span v-if="match.result?.length" class="txt-orange fw-bold">{{ match.time }}</span>
-                    <div class="text-black fw-bold fst-italic fs-1">
+                    <div class="text-black fw-bold fst-italic fs-5">
                         {{ match.result?.length ? `${match.result[0]} : ${match.result[1]}` : match.time }}
                     </div>
                     <span v-if="match.result_nvl" class="mx-3 fw-bold">{{ match.result_nvl.join(' : ') }}</span>
-
                 </div>
                 <div class="team-wrapper">
-                    <img :src="imageB" alt="" loading="lazy">
+                    <img :src="imageB" :alt="'flag_' + props.match.teams[1]" loading="lazy" class="w-50">
                     <span class="pt-1">{{ getTeamName(match.teams[1]) }}</span>
                 </div>
             </div>
@@ -115,10 +114,13 @@ function getTeamName(id) {
 
 .team-wrapper
     display: flex
-    flex: 1
+    width: 30%
     flex-direction: column
     justify-content: space-between
     align-items: center
+    flex-shrink: 0
+    img
+        max-width: 52px
 
 .time-line
     flex: 1

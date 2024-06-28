@@ -10,7 +10,7 @@
                 </div>
             </div>
         </header>
-        <main class="container-md py-3 py-md-5">
+        <main class="container py-3 py-md-5">
             <div class="row gy-3">
                 <div class="col-12">
                     <div class="card border-0 rounded-0 shadow-sm">

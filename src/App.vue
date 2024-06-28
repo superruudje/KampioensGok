@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex flex-column h-100">
         <navigation-bar></navigation-bar>
-        <main class="flex-grow-1" style="padding-top: 56px">
+        <main class="flex-grow-1">
             <router-view v-slot="{ Component }">
                 <transition name="slide-fade">
                     <component :is="Component" />

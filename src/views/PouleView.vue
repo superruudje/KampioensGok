@@ -10,33 +10,33 @@
                 </div>
             </div>
         </header>
-        <main class="container-md py-2 py-md-5">
+        <main class="container py-2 py-md-5">
             <div class="row gy-3">
-                <div class="col-md-6" v-for="p in tournament.getPoules()">
+                <div class="col-12" v-for="p in tournament.getPoules()">
                     <div  class="card border-0 rounded-0 shadow-sm mb-3 mb-md-5">
                         <div class="card-body p-3 p-md-4">
                             <h2 class="txt-blue fw-bolder">Groep {{ p.poule }}</h2>
                             <div class="w-100 overflow-hidden overflow-x-auto mb-2">
                                 <table class="table align-middle">
                                     <thead>
-                                    <tr>
-                                        <th class="txt-orange" style="width: 99%" scope="col"></th>
-                                        <th class="txt-orange" scope="col">G</th>
-                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">W</th>
-                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">GL</th>
-                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">V</th>
-                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">+</th>
-                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">-</th>
-                                        <th class="txt-orange" scope="col">+-</th>
-                                        <th class="txt-orange" scope="col">P</th>
+                                    <tr class="text-center">
+                                        <th class="txt-orange" scope="col"></th>
+                                        <th class="txt-orange" scope="col">Gespeeld</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">Gewonnen</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">Gelijk</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">Verlies</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">Voor</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">Tegen</th>
+                                        <th class="txt-orange" scope="col">Goal<br>verschil</th>
+                                        <th class="txt-orange" scope="col">Punten</th>
                                         <th class="txt-orange" scope="col">Vorm</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr v-for="(t, idx) in p.teams">
-                                        <td class="text-nowrap" style="width: 99%">
+                                    <tr v-for="(t, idx) in p.teams" class="text-center">
+                                        <td class="text-nowrap text-start">
                                             <span class="me-2">{{ idx + 1 }}</span>
-                                            <img :src="getImage(t.team)" alt="" loading="lazy" width="30px">
+                                            <img :src="getImage(t.team)" alt="" loading="lazy" width="32px">
                                             <span class="ms-2 txt-blue fw-bold">{{ t.team }}</span>
                                         </td>
                                         <td>{{ t.matches.length }}</td>
@@ -46,9 +46,9 @@
                                         <td class="d-none d-sm-table-cell">{{ t.for }}</td>
                                         <td class="d-none d-sm-table-cell">{{ t.against }}</td>
                                         <td>{{ t.for - t.against }}</td>
-                                        <th>{{ t.points }}</th>
+                                        <td class="fw-bold">{{ t.points }}</td>
                                         <td>
-                                            <div class="d-flex gap-1">
+                                            <div class="d-flex justify-content-center gap-1">
                                                 <template v-for="i in 3" >
                                                     <span v-if="t.matches[i - 1] === 'W'" class="form-item bg-success rounded-circle">W</span>
                                                     <span v-else-if="t.matches[i - 1] === 'L'" class="form-item bg-danger rounded-circle">V</span>
@@ -66,7 +66,7 @@
                                 :class="openPoule === p.poule ? 'bi-chevron-up' : 'bi-chevron-down'" class="bi ms-2"></i>
                             </button>
                             <div v-if="openPoule === p.poule" class="mt-5">
-                                <match-day-component v-for="(matches, match_day) in tournament.matches_by_poule(p.poule)" :full_width="true" :match_day="match_day" :matches="matches"></match-day-component>
+                                <match-day-component v-for="(matches, match_day) in tournament.matches_by_poule(p.poule)" :match_day="match_day" :matches="matches"></match-day-component>
                             </div>
                         </div>
                     </div>
@@ -114,4 +114,10 @@ function openPouleDetails(poule) {
     justify-content: center
     width: 18px
     height: 18px
+tr
+    td
+        padding-top: 12px
+        padding-bottom: 12px
+    th
+        font-size: 12px
 </style>
