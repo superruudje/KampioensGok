@@ -64,7 +64,7 @@
                             </span>
                                 <span class="txt-blue fw-bold text-center">Knock-out teams</span>
                                 <i class="position-absolute top-0 end-0 bi p-2 bi-question-circle ms-2"
-                                   data-bs-title="Aantal teams goed voorspeld in knock-out fases"
+                                   data-bs-title="Punten verkregen vanuit teams in knock-out"
                                    data-bs-toggle="tooltip"></i>
                             </div>
                         </div>

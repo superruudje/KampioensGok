@@ -2181,6 +2181,44 @@
     "teams": [
       "SUI",
       "ITA"
+    ],
+    "result": [
+      2,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 35,
+        "team": "ITA",
+        "player": "Barella, N."
+      },
+      {
+        "type": "goal",
+        "minute": 37,
+        "team": "SUI",
+        "player": "Freuler, R.",
+        "assist": "Vargas, R."
+      },
+      {
+        "type": "yellow",
+        "minute": 45,
+        "team": "ITA",
+        "player": "El Shaarawy, S."
+      },
+      {
+        "type": "goal",
+        "minute": 46,
+        "team": "SUI",
+        "player": "Vargas, R.",
+        "assist": "Aebischer, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 57,
+        "team": "ITA",
+        "player": "Mancini, G."
+      }
     ]
   },
   {
@@ -2300,7 +2338,7 @@
     "city": "Dusseldorf",
     "teams": [
       "W39",
-      "W37"
+      "SUI"
     ]
   },
   {
