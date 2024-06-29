@@ -71,6 +71,20 @@ export const useTournament = defineStore('tournament', {
             return this.getStanding(null).slice(0, 10)
         },
         /**
+         * Return all matches by day
+         * @returns {*}
+         */
+        matches_by_day() {
+            let obj = {}
+            this.matches.forEach(m => {
+                if (obj.hasOwnProperty(m.date))
+                    obj[m.date].push(m)
+                else
+                    obj[m.date] = [m]
+            })
+            return obj
+        },
+        /**
          * Return matches played
          * @returns {*}
          */

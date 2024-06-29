@@ -78,7 +78,10 @@ const router = createRouter({
     ],
     scrollBehavior(to, from, savedPosition) {
         // always scroll to top
-        return {top: 0}
+        if (to.name !== 'uitslagen')
+            return {top: 0}
+        else
+            return false
     },
 })
 

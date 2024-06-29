@@ -2,35 +2,47 @@
     <div class="card position-relative">
         <div class="card-body p-4 d-flex flex-column">
             <div class="d-flex mb-3">
-                <span class="text-black-50 group-name">{{ match.group.length <= 1 ? `Groep ${match.group}` : `` }}</span>
+                <span class="text-black-50 group-name">{{
+                        match.group.length <= 1 ? `Groep ${match.group}` : ``
+                    }}</span>
             </div>
-            <div class="d-flex gap-3">
+            <div class="d-flex gap-2">
                 <div class="teams d-flex flex-column">
-                    <div class="team-home d-flex align-items-center justify-content-end flex-grow-1 flex-shrink-0 flex-row-reverse gap-2">
-                        <span>{{ getTeamName(match.teams[0])}}
-                            <span v-if="getRedCards(match.teams[0])" class="text-light ms-2 px-1 text-center bg-danger small">
+                    <div
+                        class="team-home d-flex align-items-center justify-content-end flex-grow-1 flex-shrink-0 flex-row-reverse gap-2">
+                        <span>{{ getTeamName(match.teams[0]) }}
+                            <span v-if="getRedCards(match.teams[0])"
+                                  class="text-light ms-2 px-1 text-center bg-danger small">
                                 {{ getRedCards(match.teams[0]) }}
                             </span>
                         </span>
-                        <img :src="imageA" :alt="'flag_' + props.match.teams[0]" loading="lazy" style="width: 24px">
+                        <img :alt="'flag_' + match.teams[0]" :src="imageA" loading="lazy" style="width: 24px">
                     </div>
-                    <div class="team-away d-flex align-items-center justify-content-end flex-grow-1 flex-shrink-0 flex-row-reverse gap-2">
-                        <span>{{ getTeamName(match.teams[1])}}
-                            <span v-if="getRedCards(match.teams[1])" class="text-light ms-2 px-1 text-center bg-danger small">
+                    <div
+                        class="team-away d-flex align-items-center justify-content-end flex-grow-1 flex-shrink-0 flex-row-reverse gap-2">
+                        <span>{{ getTeamName(match.teams[1]) }}
+                            <span v-if="getRedCards(match.teams[1])"
+                                  class="text-light ms-2 px-1 text-center bg-danger small">
                                 {{ getRedCards(match.teams[1]) }}
                             </span>
                         </span>
-                        <img :src="imageB" :alt="'flag_' + props.match.teams[1]" loading="lazy" style="width: 24px">
+                        <img :alt="'flag_' + match.teams[1]" :src="imageB" loading="lazy" style="width: 24px">
                     </div>
                 </div>
-                <div class="score d-flex flex-column fw-bold fs-4 lh-1" v-if="match.result?.length">
+                <div v-if="match.result_pen?.length"
+                     class="score-pen d-flex flex-column justify-content-around fs-5 lh-1">
+                    <span class="score-home">({{ match.result_pen[0] }})</span>
+                    <span class="score-home">({{ match.result_pen[1] }})</span>
+                </div>
+                <div v-if="match.result?.length"
+                     class="score d-flex flex-column justify-content-around fw-bold fs-4 lh-1">
                     <span class="score-home">{{ match.result[0] }}</span>
                     <span class="score-home">{{ match.result[1] }}</span>
                 </div>
-                <div class="border-start ps-3 d-flex flex-column align-items-center gap-2">
+                <div class="border-start ps-3 d-flex flex-column align-items-center justify-content-center gap-2">
                     <span v-if="match.result?.length" class="text-black-50 lh-1">Full time</span>
                     <span v-else class="fs-5 lh-1">{{ match.time }}</span>
-                    <button class="btn btn-sm btn-orange" title="">Toon details</button>
+                    <button v-if="isTeam(match.teams[0])" class="btn btn-sm btn-orange" title="">Toon details</button>
                 </div>
             </div>
         </div>
@@ -44,10 +56,6 @@
 import {useTournament} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
 import {computed, ref} from "vue";
-import TimelineComponent from "@/components/TimelineComponent.vue";
-import PredictionTable from "@/components/PredictionTable.vue";
-import {faMobile} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 const tournament = useTournament()
 const {matches_played, teamImages, teams} = storeToRefs(tournament)
@@ -70,9 +78,18 @@ const predictions = computed(() => {
     return tournament.getGroupMatchPrediction(props.match.num)
 })
 
-const started =  computed(() => {
+const started = computed(() => {
     return matches_played.value.length
 })
+
+/**
+ * Check if is valid team id
+ * @param string
+ * @returns {boolean}
+ */
+function isTeam(string) {
+    return teams.value.some(t => t.id === string)
+}
 
 function getTeamName(id) {
     return teams.value.find((e) => e.id === id)?.name || id
@@ -87,6 +104,7 @@ function getRedCards(team) {
 <style lang="sass" scoped>
 .teams
     flex: 1 1 0
-.teams, .score
+
+.teams
     gap: 12px
 </style>

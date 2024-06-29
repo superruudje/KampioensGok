@@ -1,5 +1,5 @@
 <template>
-    <div class="match mb-4">
+    <div :id="'day_' + match_day" class="match mb-5">
         <h5 class="txt-blue mb-4 text-capitalize">{{ localeDate }}</h5>
         <div class="row g-3">
             <div class="col-12 col-xl-6 col-xxl-4" v-for="(match) in matches">
