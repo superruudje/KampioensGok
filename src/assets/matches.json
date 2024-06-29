@@ -2231,6 +2231,54 @@
     "teams": [
       "GER",
       "DEN"
+    ],
+    "result": [
+      2,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 41,
+        "team": "DEN",
+        "player": "Hjulmand, K."
+      },
+      {
+        "type": "goal",
+        "minute": 53,
+        "team": "GER",
+        "player": "Havertz, K."
+      },
+      {
+        "type": "yellow",
+        "minute": 57,
+        "team": "DEN",
+        "player": "Bah, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 59,
+        "team": "GER",
+        "player": "Nagelsmann, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 60,
+        "team": "DEN",
+        "player": "Mæhle, J."
+      },
+      {
+        "type": "goal",
+        "minute": 68,
+        "team": "GER",
+        "player": "Musiala, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 72,
+        "team": "DEN",
+        "player": "Andersen, J."
+      }
     ]
   },
   {
