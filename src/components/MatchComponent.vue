@@ -41,7 +41,7 @@
                     {{ openTimeline ? 'minder' : 'meer' }}
                     <i :class="openTimeline ? 'bi-chevron-up' : 'bi-chevron-down'" class="bi ms-2"></i>
                 </button>
-                <button v-else-if="started && match.group.length < 2" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3 text-nowrap"
+                <button v-else-if="started" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3 text-nowrap"
                         @click="openPrediction = !openPrediction">Wat denken we?
                     <i :class="openPrediction ? 'bi-chevron-up' : 'bi-chevron-down'" class="bi ms-2"></i>
                 </button>
