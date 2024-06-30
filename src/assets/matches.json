@@ -2382,6 +2382,58 @@
     "teams": [
       "ESP",
       "GEO"
+    ],
+    "result": [
+      4,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 18,
+        "team": "GEO",
+        "player": "Le Normand, R. (og)"
+      },
+      {
+        "type": "goal",
+        "minute": 39,
+        "team": "ESP",
+        "player": "Rodri",
+        "assist": "Williams, N."
+      },
+      {
+        "type": "yellow",
+        "minute": 44,
+        "team": "ESP",
+        "player": "Morata, Á."
+      },
+      {
+        "type": "goal",
+        "minute": 51,
+        "team": "ESP",
+        "player": "Ruiz, F.",
+        "assist": "Yamal, L."
+      },
+      {
+        "type": "yellow",
+        "minute": 71,
+        "team": "GEO",
+        "player": "Davitashvili, Z."
+      },
+      {
+        "type": "goal",
+        "minute": 75,
+        "team": "ESP",
+        "player": "Williams, N.",
+        "assist": "Ruiz, F."
+      },
+      {
+        "type": "goal",
+        "minute": 83,
+        "team": "ESP",
+        "player": "Olmo, D.",
+        "assist": "Oyarzabal, M."
+      }
     ]
   },
   {
@@ -2440,7 +2492,7 @@
     "stadium": "Stuttgart Arena",
     "city": "Stuttgart",
     "teams": [
-      "W40",
+      "ESP",
       "GER"
     ]
   },
