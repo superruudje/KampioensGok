@@ -21,7 +21,7 @@ import {ref} from "vue";
 
 const collapseBtn = ref(null)
 
-const pages = ['home', 'ranglijst', 'programma', 'poules', 'uitslagen', 'statistieken', 'spelregels'];
+const pages = ['home', 'ranglijst', 'poules', 'wedstrijden', 'statistieken', 'spelregels'];
 
 function closeMenu() {
     if (getComputedStyle(collapseBtn.value).display !== 'none')

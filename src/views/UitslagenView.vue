@@ -4,13 +4,10 @@
             <div class="container">
                 <div class="row gy-3 text-light">
                     <div class="col-12">
-                        <h1 class="fs-2 text-white fw-bolder">Wedstrijden & resultaten</h1>
-                    </div>
-                    <div class="col-12">
                         <div class="d-flex justify-content-center align-items-center position-relative">
                             <div class="me-2">
-                                <button class="btn btn-sm rounded-pill bg-primary text-light" type="button"
-                                        @click="prev">
+                                <button class="btn btn-sm rounded-pill text-light" type="button"
+                                        @click="prev" style="background-color: rgba(255, 255, 255, 0.1);">
                                     <i class="bi bi-chevron-left"></i>
                                 </button>
                             </div>
@@ -18,8 +15,8 @@
                                 <div id="swiper" class="swiper-wrapper w-100 h-100 d-flex gap-1 position-relative z-1">
                                     <div v-for="i in playDates" :id="'chip_' + i"
                                          class="swiper-slide flex-shrink-0 w-auto h-100 position-relative">
-                                        <button :class="{'btn-primary' : i === activeChip}"
-                                                class="btn btn-sm w-100 rounded-pill text-light border px-3"
+                                        <button :class="{'active' : i === activeChip}"
+                                                class="btn btn-sm btn-trans w-100 rounded-pill px-3"
                                                 type="button" @click="selectDay(i)">
                                             <span class="text-capitalize">{{ localeDate(i) }}</span>
                                         </button>
@@ -27,8 +24,8 @@
                                 </div>
                             </div>
                             <div class="ms-2">
-                                <button class="btn btn-sm rounded-pill bg-primary text-light" type="button"
-                                        @click="next">
+                                <button class="btn btn-sm rounded-pill text-light" type="button"
+                                        @click="next" style="background-color: rgba(255, 255, 255, 0.1);">
                                     <i class="bi bi-chevron-right"></i>
                                 </button>
                             </div>

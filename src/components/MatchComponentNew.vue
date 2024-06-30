@@ -1,9 +1,9 @@
 <template>
-    <div class="card position-relative">
-        <div class="card-body p-4 d-flex flex-column">
-            <div class="d-flex mb-3">
-                <span class="text-black-50 group-name">{{
-                        match.group.length <= 1 ? `Groep ${match.group}` : ``
+    <div id="match_card" class="card position-relative">
+        <div class="card-body p-4 d-flex flex-column justify-content-center">
+            <div v-if="match.group.length <= 1 || summary" class="d-flex mb-3">
+                <span class="fw-lighter group-name">{{
+                        match.group.length <= 1 ? `Groep ${match.group}` : summary
                     }}</span>
             </div>
             <div class="d-flex gap-2">
@@ -40,7 +40,7 @@
                     <span class="score-home">{{ match.result[1] }}</span>
                 </div>
                 <div class="border-start ps-3 d-flex flex-column align-items-center justify-content-center gap-2">
-                    <span v-if="match.result?.length" class="text-black-50 lh-1">Full time</span>
+                    <span v-if="match.result?.length" class="fw-lighter lh-1">Full time</span>
                     <span v-else class="fs-5 lh-1">{{ match.time }}</span>
                     <button v-if="isTeam(match.teams[0])" class="btn btn-sm btn-orange" title="">Toon details</button>
                 </div>
@@ -74,6 +74,13 @@ const imageB = computed(() => {
     return teamImages.value[props.match.teams[1]] || teamImages.value[`default`]
 })
 
+const summary = computed(() => {
+    if (!props.match.result_nvl) return ''
+    const final_score = props.match.result_pen || props.match.result_nvl
+    const final_winner = final_score[0] === final_score[1] ? null : final_score[0] > final_score[1] ? 0 : 1
+    return `${getTeamName(props.match.teams[final_winner])} win after ${props.match.result_pen ? 'penalties' : 'extra time'}`
+})
+
 const predictions = computed(() => {
     return tournament.getGroupMatchPrediction(props.match.num)
 })
@@ -102,6 +109,8 @@ function getRedCards(team) {
 </script>
 
 <style lang="sass" scoped>
+#match_card
+    height: 144px
 .teams
     flex: 1 1 0
 

@@ -15,6 +15,10 @@ $grid-breakpoints: map-merge($grid-breakpoints, $new-grid-breakpoints);
 
 @import "bootstrap/scss/bootstrap";
 
+$kg-orange : #f36c21;
+$kg-blue: #253780;
+$kg-darkblue: #19265E;
+
 html {
   height: 100%;
 }
@@ -31,10 +35,14 @@ body {
   background: #eee;
 }
 .bg-blue {
-  background-color: #253780!important;
+  background-color: $kg-blue!important;
 }
+.bg-darkblue {
+ background-color: $kg-darkblue!important;
+}
+
 .bg-orange {
-  background-color: #f36c21!important;
+  background-color: $kg-orange!important;
 }
 .txt-uefa-1 {
   color: #1a313c
@@ -52,10 +60,10 @@ body {
 
 
 .txt-blue {
-  color: #253780!important;
+  color: $kg-blue!important;
 }
 .txt-orange {
-  color: #f36c21!important;
+  color: $kg-orange!important;
 }
 .txt-gold {
   color: #ffd700!important;
@@ -70,13 +78,22 @@ body {
 
 
 .btn-orange {
-  border: 1px solid #f36c21;
-  background-color: #f36c21;
+  border: 1px solid $kg-orange;
+  background-color: $kg-orange;
   color: #fff;
   &:hover {
-    border: 1px solid #f36c21;
+    border: 1px solid $kg-orange;
     background-color: transparent;
-    color: #f36c21;
+    color: $kg-orange;
+  }
+}
+.btn-trans {
+  background-color: $kg-darkblue;
+  color: #fff;
+  &.active,
+  &:hover {
+    border: 1px solid #ffffff;
+    background-color: $kg-blue;
   }
 }
 

@@ -16,7 +16,7 @@
                     <div class="card border-0 rounded-0 shadow-sm">
                         <div class="card-body p-3 p-md-4">
                             <div class="matches-wrapper">
-                                <span v-if="!Object.keys(matches_to_play_by_day).length">Geen programma bekend. Bekijk <router-link :to="{name: 'uitslagen'}">hier</router-link> de uitslagen.</span>
+                                <span v-if="!Object.keys(matches_to_play_by_day).length">Geen programma bekend. Bekijk <router-link :to="{name: 'wedstrijden'}">hier</router-link> de uitslagen.</span>
                                 <match-day-component v-for="(matches, match_day, idx) in matches_to_play_by_day" :match_day="match_day" :matches="matches"/>
                             </div>
                         </div>

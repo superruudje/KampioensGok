@@ -44,7 +44,7 @@ const pages = [
     {url: 'home', icon: 'house-door-fill'},
     {url: 'ranglijst', icon: 'trophy-fill'},
     {url: 'programma', icon: 'calendar-week-fill'},
-    {url: 'uitslagen', icon: 'clipboard2-data-fill'},
+    {url: 'wedstrijden', icon: 'clipboard2-data-fill'},
     {url: 'statistieken', icon: 'bar-chart-fill'}
 ]
 

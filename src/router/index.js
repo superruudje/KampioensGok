@@ -46,8 +46,8 @@ const router = createRouter({
             component: PouleView
         },
         {
-            path: '/uitslagen',
-            name: 'uitslagen',
+            path: '/wedstrijden',
+            name: 'wedstrijden',
             component: UitslagenView
         },
         {
@@ -78,7 +78,7 @@ const router = createRouter({
     ],
     scrollBehavior(to, from, savedPosition) {
         // always scroll to top
-        if (to.name !== 'uitslagen')
+        if (to.name !== 'wedstrijden')
             return {top: 0}
         else
             return false
