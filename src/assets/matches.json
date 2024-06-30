@@ -2291,6 +2291,85 @@
     "teams": [
       "ENG",
       "SVK"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "result_nvl": [
+      2,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 3,
+        "team": "ENG",
+        "player": "Guéhi, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 7,
+        "team": "ENG",
+        "player": "Mainoo, K."
+      },
+      {
+        "type": "yellow",
+        "minute": 13,
+        "team": "SVK",
+        "player": "Kucka, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 17,
+        "team": "ENG",
+        "player": "Bellingham, J."
+      },
+      {
+        "type": "goal",
+        "minute": 25,
+        "team": "SVK",
+        "player": "Schranz, I.",
+        "assist": "Strelec, D."
+      },
+      {
+        "type": "yellow",
+        "minute": "45 + 1",
+        "team": "SVK",
+        "player": "Škriniar, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 77,
+        "team": "SVK",
+        "player": "Pekarík, P."
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 6",
+        "team": "ENG",
+        "player": "Bellingham, J.",
+        "assist": "Guéhi, M."
+      },
+      {
+        "type": "goal",
+        "minute": 91,
+        "team": "ENG",
+        "player": "Kane, H.",
+        "assist": "Toney, I."
+      },
+      {
+        "type": "yellow",
+        "minute": 108,
+        "team": "SVK",
+        "player": "Vavro, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 114,
+        "team": "SVK",
+        "player": "Gyömbér, N."
+      }
     ]
   },
   {
@@ -2385,7 +2464,7 @@
     "stadium": "Düsseldorf Arena",
     "city": "Dusseldorf",
     "teams": [
-      "W39",
+      "ENG",
       "SUI"
     ]
   },
