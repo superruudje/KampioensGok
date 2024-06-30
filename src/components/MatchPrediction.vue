@@ -109,8 +109,18 @@ function getTeamName(team) {
  * @param team
  */
 function inKnockOut(team) {
-    console.log(team)
-    return knock_out.value.round_of_16.some(t => t === team)
+    switch (props.match.group) {
+        case 'Round of 16':
+            return knock_out.value.round_of_16.some(t => t === team)
+        case 'Quarter-finals':
+            return knock_out.value.quarter_finals.some(t => t === team)
+        case 'Semi-finals':
+            return knock_out.value.semi_finals.some(t => t === team)
+        case 'Final':
+            return knock_out.value.finals.some(t => t === team)
+        default:
+            return false
+    }
 }
 </script>
 
