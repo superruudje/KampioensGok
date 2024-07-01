@@ -2446,6 +2446,55 @@
     "teams": [
       "FRA",
       "BEL"
+    ],
+    "result": [
+      1,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 14,
+        "team": "FRA",
+        "player": "Tchouaméni, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 23,
+        "team": "FRA",
+        "player": "Griezmann, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 24,
+        "team": "FRA",
+        "player": "Rabiot, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 76,
+        "team": "BEL",
+        "player": "Vertonghen, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 76,
+        "team": "BEL",
+        "player": "Tedesco, D."
+      },
+      {
+        "type": "goal",
+        "minute": 85,
+        "team": "FRA",
+        "player": "Vertonghen, J. (og)",
+        "assist": "Muani, K."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 3",
+        "team": "BEL",
+        "player": "Mangala, O."
+      }
     ]
   },
   {
@@ -2505,7 +2554,7 @@
     "city": "Hamburg",
     "teams": [
       "W42",
-      "W41"
+      "FRA"
     ]
   },
   {
@@ -2568,4 +2617,4 @@
       "W50"
     ]
   }
-]
+] 
