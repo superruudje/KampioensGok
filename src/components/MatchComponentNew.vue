@@ -113,7 +113,5 @@ function getRedCards(team) {
     height: 144px
 .teams
     flex: 1 1 0
-
-.teams
     gap: 12px
 </style>

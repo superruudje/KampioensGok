@@ -118,7 +118,9 @@ async function scrollParentToChild() {
 }
 
 async function scrollToSection() {
-    document.getElementById('day_' + activeChip.value).scrollIntoView({block: 'center', inline: 'center'});
+    setTimeout(() => {
+        document.getElementById('day_' + activeChip.value).scrollIntoView({block: 'center', inline: 'center'});
+    }, 200)
 }
 
 watch(activeChip, () => {

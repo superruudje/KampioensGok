@@ -87,7 +87,7 @@
             </div>
         </div>
         <div class="row g-3">
-            <div class="col-md-6">
+            <div class="col-12">
                 <!-- voorspelling -->
                 <div class="card border-0 rounded-0 shadow-sm">
                     <div class="card-body position-relative p-4">
@@ -102,15 +102,17 @@
                         <template v-else>
                             <match-day-prediction v-for="(matches, match_day) in matches_to_play_poule"
                                                   :match_day="match_day" :matches="matches"
-                                                  :name="participant.team_name" class="mb-4"></match-day-prediction>
+                                                  :name="participant.team_name"></match-day-prediction>
                             <match-day-prediction v-for="(matches, match_day) in matches_played_poule"
                                                   :match_day="match_day" :matches="matches"
                                                   :name="participant.team_name"
-                                                  :played="true" class="mb-4"></match-day-prediction>
+                                                  :played="true"></match-day-prediction>
                         </template>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row g-3">
             <div class="col-md-6">
                 <!-- bonus vragen -->
                 <div class="card border-0 rounded-0 shadow-sm mb-3">
@@ -175,10 +177,10 @@
                             <match-day-prediction v-for="(matches, match_day) in matches_played_knock_out"
                                                   :match_day="match_day" :matches="matches"
                                                   :name="participant.team_name"
-                                                  :played="true" class="mb-4"></match-day-prediction>
+                                                  :played="true"></match-day-prediction>
                             <match-day-prediction v-for="(matches, match_day) in matches_to_play_knock_out"
                                                   :match_day="match_day" :matches="matches"
-                                                  :name="participant.team_name" class="mb-4"></match-day-prediction>
+                                                  :name="participant.team_name"></match-day-prediction>
                         </template>
                     </div>
                 </div>

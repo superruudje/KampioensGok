@@ -1,15 +1,5 @@
 <template>
     <div id="poule-view">
-        <header class="bg-blue py-3 py-md-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="fs-2 text-white fw-bolder">EK 2024</h1>
-                        <h2 class="fs-6 mb-0 txt-orange fw-bolder">De poulefase</h2>
-                    </div>
-                </div>
-            </div>
-        </header>
         <main class="container py-2 py-md-5">
             <div class="row gy-3">
                 <div class="col-12" v-for="p in tournament.getPoules()">
@@ -21,14 +11,17 @@
                                     <thead>
                                     <tr class="text-center">
                                         <th class="txt-orange" scope="col"></th>
-                                        <th class="txt-orange" scope="col">Gespeeld</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">Gespeeld</th>
+                                        <th class="txt-orange d-sm-none" scope="col">G</th>
                                         <th class="txt-orange d-none d-sm-table-cell" scope="col">Gewonnen</th>
                                         <th class="txt-orange d-none d-sm-table-cell" scope="col">Gelijk</th>
                                         <th class="txt-orange d-none d-sm-table-cell" scope="col">Verlies</th>
                                         <th class="txt-orange d-none d-sm-table-cell" scope="col">Voor</th>
                                         <th class="txt-orange d-none d-sm-table-cell" scope="col">Tegen</th>
-                                        <th class="txt-orange" scope="col">Goal<br>verschil</th>
-                                        <th class="txt-orange" scope="col">Punten</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">Goal<br>verschil</th>
+                                        <th class="txt-orange d-sm-none" scope="col">+/-</th>
+                                        <th class="txt-orange d-none d-sm-table-cell" scope="col">Punten</th>
+                                        <th class="txt-orange d-sm-none" scope="col">Pnt.</th>
                                         <th class="txt-orange" scope="col">Vorm</th>
                                     </tr>
                                     </thead>

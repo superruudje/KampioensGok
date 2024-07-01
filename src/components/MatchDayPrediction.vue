@@ -1,9 +1,22 @@
 <template>
-    <div class="d-flex flex-column align-items-center">
-        <span class="text-capitalize" :class="{'text-decoration-line-through': played}">{{ localeDate }}</span>
-        <div v-if="label.length > 1" class="match-group bg-blue text-light px-3 py-1">{{label}}</div>
-        <hr class="mt-1 w-100">
-        <match-prediction v-for="(match) in matches" :knockout="label.length > 1" :played="played" :name="name" :match="match" class="mb-3"/>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+                <button class="accordion-button px-0 fs-5 fw-medium txt-blue text-capitalize collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse_' + match_day" aria-expanded="false" :aria-controls="'collapse_' + match_day">
+                    {{ localeDate }}
+                    <span v-if="label.length > 1" class="fw-lighter ms-1 small">- {{label}}</span>
+                </button>
+            </h2>
+            <div :id="'collapse_' + match_day" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body px-0">
+                    <div class="row g-3">
+                        <div class="col-md-6" v-for="(match) in matches">
+                            <match-prediction :knockout="label.length > 1" :played="played" :name="name" :match="match"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -37,6 +50,11 @@ const localeDate = computed(() => {
 </script>
 
 <style lang="sass" scoped>
+.accordion
+    --bs-accordion-btn-focus-box-shadow: 0
 .match-group
     transform: skew(-8deg)
+.accordion-button:not(.collapsed)
+    background-color: transparent!important
+    box-shadow: none
 </style>

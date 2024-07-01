@@ -12,7 +12,7 @@
 
 <script setup>
 import MatchComponent from "@/components/MatchComponent.vue";
-import {computed} from "vue";
+import {computed, onMounted} from "vue";
 import MatchComponentNew from "@/components/MatchComponentNew.vue";
 
 const props = defineProps({
