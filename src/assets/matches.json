@@ -2507,6 +2507,63 @@
     "teams": [
       "POR",
       "SVN"
+    ],
+    "result": [
+      0,
+      0
+    ],
+    "result_nvl": [
+      0,
+      0
+    ],
+    "result_pen": [
+      3,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 32,
+        "team": "SVN",
+        "player": "Drkušić, V."
+      },
+      {
+        "type": "yellow",
+        "minute": 37,
+        "team": "SVN",
+        "player": "Karničnik, Ž."
+      },
+      {
+        "type": "yellow",
+        "minute": 101,
+        "team": "SVN",
+        "player": "Gorenc Stanković, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 106,
+        "team": "SVN",
+        "player": "Bijol, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 107,
+        "team": "SVN",
+        "player": "Balkovec, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 111,
+        "team": "POR",
+        "player": "Martínez, R."
+      },
+      {
+        "type": "red",
+        "direct": true,
+        "minute": 111,
+        "team": "SVN",
+        "player": "Kek, M."
+      }
     ]
   },
   {
@@ -2553,7 +2610,7 @@
     "stadium": "Volksparkstadion",
     "city": "Hamburg",
     "teams": [
-      "W42",
+      "POR",
       "FRA"
     ]
   },
@@ -2617,4 +2674,4 @@
       "W50"
     ]
   }
-] 
+]
