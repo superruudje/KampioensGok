@@ -2638,6 +2638,56 @@
     "teams": [
       "AUT",
       "TUR"
+    ],
+    "result": [
+      1,
+      2
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 1,
+        "team": "TUR",
+        "player": "Demiral, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 11,
+        "team": "TUR",
+        "player": "Kökçü, O."
+      },
+      {
+        "type": "yellow",
+        "minute": 38,
+        "team": "AUT",
+        "player": "Schmid, R."
+      },
+      {
+        "type": "yellow",
+        "minute": 42,
+        "team": "TUR",
+        "player": "Yüksek, İ."
+      },
+      {
+        "type": "yellow",
+        "minute": 52,
+        "team": "AUT",
+        "player": "Lienhart, P."
+      },
+      {
+        "type": "goal",
+        "minute": 59,
+        "team": "TUR",
+        "player": "Demiral, M.",
+        "assist": "Güler, A."
+      },
+      {
+        "type": "goal",
+        "minute": 66,
+        "team": "AUT",
+        "player": "Gregoritsch, M.",
+        "assist": "Posch, S."
+      }
     ]
   },
   {
@@ -2685,7 +2735,7 @@
     "city": "Berlin",
     "teams": [
       "NED",
-      "W44"
+      "TUR"
     ]
   },
   {
