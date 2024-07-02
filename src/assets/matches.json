@@ -2576,6 +2576,56 @@
     "teams": [
       "ROM",
       "NED"
+    ],
+    "result": [
+      0,
+      3
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 20,
+        "team": "NED",
+        "player": "Gakpo, C.",
+        "assist": "Simons, X."
+      },
+      {
+        "type": "yellow",
+        "minute": 67,
+        "team": "ROM",
+        "player": "Marin, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 78,
+        "team": "NED",
+        "player": "Dumfries, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 81,
+        "team": "ROM",
+        "player": "Stanciu, N."
+      },
+      {
+        "type": "goal",
+        "minute": 82,
+        "team": "NED",
+        "player": "Malen, M.",
+        "assist": "Gakpo, C."
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 3",
+        "team": "NED",
+        "player": "Malen, M."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 4",
+        "team": "NED",
+        "player": "Malen, M."
+      }
     ]
   },
   {
@@ -2634,7 +2684,7 @@
     "stadium": "Olympiastadion",
     "city": "Berlin",
     "teams": [
-      "W43",
+      "NED",
       "W44"
     ]
   },
