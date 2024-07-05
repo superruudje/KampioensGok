@@ -38,32 +38,6 @@ export const useTournament = defineStore('tournament', {
     }),
     getters: {
         /**
-         * Check for player with double teams in knock-out phase
-         * @returns {string}
-         */
-        playersWithDoubleTeams() {
-            this.players.forEach((player) => {
-                let findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) !== index)
-                const round_of_16 = findDuplicates(player.round_of_16)
-                const quarter_finals = findDuplicates(player.quarter_finals)
-                const semi_finals = findDuplicates(player.semi_finals)
-                const finals = findDuplicates(player.finals)
-                if (round_of_16.length) {
-                    console.log((player.team_name + ": 16"), round_of_16)
-                }
-                if (quarter_finals.length) {
-                    console.log((player.team_name + ": Quarter"), quarter_finals)
-                }
-                if (semi_finals.length) {
-                    console.log((player.team_name + ": Semi"), semi_finals)
-                }
-                if (finals.length) {
-                    console.log((player.team_name + ": Final"), finals)
-                }
-            })
-            return ''
-        },
-        /**
          * Return top 10 players
          * @returns {*}
          */

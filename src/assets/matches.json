@@ -2700,6 +2700,140 @@
     "teams": [
       "ESP",
       "GER"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "result_nvl": [
+      2,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 13,
+        "team": "GER",
+        "player": "Rüdiger, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 28,
+        "team": "GER",
+        "player": "Raum, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 29,
+        "team": "ESP",
+        "player": "Le Normand, R."
+      },
+      {
+        "type": "goal",
+        "minute": 51,
+        "team": "ESP",
+        "player": "Olmo, D.",
+        "assist": "Yamal, L."
+      },
+      {
+        "type": "yellow",
+        "minute": 56,
+        "team": "GER",
+        "player": "Andrich, R."
+      },
+      {
+        "type": "yellow",
+        "minute": 67,
+        "team": "GER",
+        "player": "Kroos, T."
+      },
+      {
+        "type": "yellow",
+        "minute": 73,
+        "team": "GER",
+        "player": "Mittelstädt, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 74,
+        "team": "ESP",
+        "player": "Torres, F."
+      },
+      {
+        "type": "yellow",
+        "minute": 82,
+        "team": "ESP",
+        "player": "Simón, U."
+      },
+      {
+        "type": "goal",
+        "minute": 89,
+        "team": "GER",
+        "player": "Wirtz, F.",
+        "assist": "Kimmich, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 89,
+        "team": "GER",
+        "player": "Schlotterbeck, N."
+      },
+      {
+        "type": "yellow",
+        "minute": 94,
+        "team": "GER",
+        "player": "Wirtz, F."
+      },
+      {
+        "type": "yellow",
+        "minute": 100,
+        "team": "ESP",
+        "player": "Carvajal, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 110,
+        "team": "ESP",
+        "player": "Rodri"
+      },
+      {
+        "type": "yellow",
+        "minute": 113,
+        "team": "GER",
+        "player": "Undav, D."
+      },
+      {
+        "type": "goal",
+        "minute": 119,
+        "team": "ESP",
+        "player": "Merino, M.",
+        "assist": "Olmo, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 120,
+        "team": "ESP",
+        "player": "Morata, Á."
+      },
+      {
+        "type": "yellow",
+        "minute": 120,
+        "team": "ESP",
+        "player": "Ruiz, F."
+      },
+      {
+        "type": "yellow",
+        "minute": "120 + 6",
+        "team": "ESP",
+        "player": "Carvajal, D."
+      },
+      {
+        "type": "red",
+        "direct": false,
+        "minute": "120 + 6",
+        "team": "ESP",
+        "player": "Carvajal, D."
+      }
     ]
   },
   {
