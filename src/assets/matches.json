@@ -2846,6 +2846,32 @@
     "teams": [
       "POR",
       "FRA"
+    ],
+    "result": [
+      0,
+      0
+    ],
+    "result_nvl": [
+      0,
+      0
+    ],
+    "result_pen": [
+      3,
+      5
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 79,
+        "team": "POR",
+        "player": "Palhinha, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 84,
+        "team": "FRA",
+        "player": "Saliba, W."
+      }
     ]
   },
   {
@@ -2880,8 +2906,8 @@
     "stadium": "Munich Football Arena",
     "city": "Munich",
     "teams": [
-      "W45",
-      "W46"
+      "ESP",
+      "FRA"
     ]
   },
   {
