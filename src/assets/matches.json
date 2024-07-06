@@ -2884,6 +2884,51 @@
     "teams": [
       "ENG",
       "SUI"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "result_nvl": [
+      1,
+      1
+    ],
+    "result_pen": [
+      5,
+      3
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 32,
+        "team": "SUI",
+        "player": "Schär, F."
+      },
+      {
+        "type": "yellow",
+        "minute": 67,
+        "team": "ENG",
+        "player": "Kane, H."
+      },
+      {
+        "type": "goal",
+        "minute": 75,
+        "team": "SUI",
+        "player": "Embolo, B."
+      },
+      {
+        "type": "goal",
+        "minute": 80,
+        "team": "ENG",
+        "player": "Saka, B.",
+        "assist": "Rice, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 85,
+        "team": "SUI",
+        "player": "Widmer, S."
+      }
     ]
   },
   {
@@ -2896,6 +2941,74 @@
     "teams": [
       "NED",
       "TUR"
+    ],
+    "result": [
+      2,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 30,
+        "team": "NED",
+        "player": "Simons, X."
+      },
+      {
+        "type": "goal",
+        "minute": 35,
+        "team": "TUR",
+        "player": "Akaydin, S.",
+        "assist": "Güler, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 54,
+        "team": "NED",
+        "player": "Aké, N."
+      },
+      {
+        "type": "yellow",
+        "minute": 64,
+        "team": "NED",
+        "player": "van Dijk, V."
+      },
+      {
+        "type": "goal",
+        "minute": 70,
+        "team": "NED",
+        "player": "de Vrij, S.",
+        "assist": "Depay, M."
+      },
+      {
+        "type": "goal",
+        "minute": 76,
+        "team": "NED",
+        "player": "Müldür, M. (og)"
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 3",
+        "team": "TUR",
+        "player": "Tosun, C."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 5",
+        "team": "TUR",
+        "player": "Montella, V."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 6",
+        "team": "NED",
+        "player": "Weghorst, W."
+      },
+      {
+        "type": "red",
+        "minute": "90 + 6",
+        "team": "TUR",
+        "player": "Yıldırım, B."
+      }
     ]
   },
   {
@@ -2918,8 +3031,8 @@
     "stadium": "BVB Stadion Dortmund",
     "city": "Dortmund",
     "teams": [
-      "W48",
-      "W47"
+      "NED",
+      "ENG"
     ]
   },
   {
