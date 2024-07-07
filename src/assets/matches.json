@@ -2450,6 +2450,55 @@
     "teams": [
       "FRA",
       "BEL"
+    ],
+    "result": [
+      1,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 14,
+        "team": "FRA",
+        "player": "Tchouaméni, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 23,
+        "team": "FRA",
+        "player": "Griezmann, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 24,
+        "team": "FRA",
+        "player": "Rabiot, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 76,
+        "team": "BEL",
+        "player": "Vertonghen, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 76,
+        "team": "BEL",
+        "player": "Tedesco, D."
+      },
+      {
+        "type": "goal",
+        "minute": 85,
+        "team": "FRA",
+        "player": "Vertonghen, J. (og)",
+        "assist": "Muani, K."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 3",
+        "team": "BEL",
+        "player": "Mangala, O."
+      }
     ]
   },
   {
@@ -2462,6 +2511,63 @@
     "teams": [
       "POR",
       "SVN"
+    ],
+    "result": [
+      0,
+      0
+    ],
+    "result_nvl": [
+      0,
+      0
+    ],
+    "result_pen": [
+      3,
+      0
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 32,
+        "team": "SVN",
+        "player": "Drkušić, V."
+      },
+      {
+        "type": "yellow",
+        "minute": 37,
+        "team": "SVN",
+        "player": "Karničnik, Ž."
+      },
+      {
+        "type": "yellow",
+        "minute": 101,
+        "team": "SVN",
+        "player": "Gorenc Stanković, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 106,
+        "team": "SVN",
+        "player": "Bijol, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 107,
+        "team": "SVN",
+        "player": "Balkovec, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 111,
+        "team": "POR",
+        "player": "Martínez, R."
+      },
+      {
+        "type": "red",
+        "direct": true,
+        "minute": 111,
+        "team": "SVN",
+        "player": "Kek, M."
+      }
     ]
   },
   {
@@ -2474,6 +2580,56 @@
     "teams": [
       "ROM",
       "NED"
+    ],
+    "result": [
+      0,
+      3
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 20,
+        "team": "NED",
+        "player": "Gakpo, C.",
+        "assist": "Simons, X."
+      },
+      {
+        "type": "yellow",
+        "minute": 67,
+        "team": "ROM",
+        "player": "Marin, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 78,
+        "team": "NED",
+        "player": "Dumfries, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 81,
+        "team": "ROM",
+        "player": "Stanciu, N."
+      },
+      {
+        "type": "goal",
+        "minute": 82,
+        "team": "NED",
+        "player": "Malen, M.",
+        "assist": "Gakpo, C."
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 3",
+        "team": "NED",
+        "player": "Malen, M."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 4",
+        "team": "NED",
+        "player": "Malen, M."
+      }
     ]
   },
   {
@@ -2486,6 +2642,56 @@
     "teams": [
       "AUT",
       "TUR"
+    ],
+    "result": [
+      1,
+      2
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 1,
+        "team": "TUR",
+        "player": "Demiral, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 11,
+        "team": "TUR",
+        "player": "Kökçü, O."
+      },
+      {
+        "type": "yellow",
+        "minute": 38,
+        "team": "AUT",
+        "player": "Schmid, R."
+      },
+      {
+        "type": "yellow",
+        "minute": 42,
+        "team": "TUR",
+        "player": "Yüksek, İ."
+      },
+      {
+        "type": "yellow",
+        "minute": 52,
+        "team": "AUT",
+        "player": "Lienhart, P."
+      },
+      {
+        "type": "goal",
+        "minute": 59,
+        "team": "TUR",
+        "player": "Demiral, M.",
+        "assist": "Güler, A."
+      },
+      {
+        "type": "goal",
+        "minute": 66,
+        "team": "AUT",
+        "player": "Gregoritsch, M.",
+        "assist": "Posch, S."
+      }
     ]
   },
   {
@@ -2498,6 +2704,140 @@
     "teams": [
       "ESP",
       "GER"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "result_nvl": [
+      2,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 13,
+        "team": "GER",
+        "player": "Rüdiger, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 28,
+        "team": "GER",
+        "player": "Raum, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 29,
+        "team": "ESP",
+        "player": "Le Normand, R."
+      },
+      {
+        "type": "goal",
+        "minute": 51,
+        "team": "ESP",
+        "player": "Olmo, D.",
+        "assist": "Yamal, L."
+      },
+      {
+        "type": "yellow",
+        "minute": 56,
+        "team": "GER",
+        "player": "Andrich, R."
+      },
+      {
+        "type": "yellow",
+        "minute": 67,
+        "team": "GER",
+        "player": "Kroos, T."
+      },
+      {
+        "type": "yellow",
+        "minute": 73,
+        "team": "GER",
+        "player": "Mittelstädt, M."
+      },
+      {
+        "type": "yellow",
+        "minute": 74,
+        "team": "ESP",
+        "player": "Torres, F."
+      },
+      {
+        "type": "yellow",
+        "minute": 82,
+        "team": "ESP",
+        "player": "Simón, U."
+      },
+      {
+        "type": "goal",
+        "minute": 89,
+        "team": "GER",
+        "player": "Wirtz, F.",
+        "assist": "Kimmich, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 89,
+        "team": "GER",
+        "player": "Schlotterbeck, N."
+      },
+      {
+        "type": "yellow",
+        "minute": 94,
+        "team": "GER",
+        "player": "Wirtz, F."
+      },
+      {
+        "type": "yellow",
+        "minute": 100,
+        "team": "ESP",
+        "player": "Carvajal, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 110,
+        "team": "ESP",
+        "player": "Rodri"
+      },
+      {
+        "type": "yellow",
+        "minute": 113,
+        "team": "GER",
+        "player": "Undav, D."
+      },
+      {
+        "type": "goal",
+        "minute": 119,
+        "team": "ESP",
+        "player": "Merino, M.",
+        "assist": "Olmo, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 120,
+        "team": "ESP",
+        "player": "Morata, Á."
+      },
+      {
+        "type": "yellow",
+        "minute": 120,
+        "team": "ESP",
+        "player": "Ruiz, F."
+      },
+      {
+        "type": "yellow",
+        "minute": "120 + 6",
+        "team": "ESP",
+        "player": "Carvajal, D."
+      },
+      {
+        "type": "red",
+        "direct": false,
+        "minute": "120 + 6",
+        "team": "ESP",
+        "player": "Carvajal, D."
+      }
     ]
   },
   {
@@ -2508,8 +2848,34 @@
     "stadium": "Volksparkstadion",
     "city": "Hamburg",
     "teams": [
-      "W42",
-      "W41"
+      "POR",
+      "FRA"
+    ],
+    "result": [
+      0,
+      0
+    ],
+    "result_nvl": [
+      0,
+      0
+    ],
+    "result_pen": [
+      3,
+      5
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 79,
+        "team": "POR",
+        "player": "Palhinha, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 84,
+        "team": "FRA",
+        "player": "Saliba, W."
+      }
     ]
   },
   {
@@ -2522,6 +2888,51 @@
     "teams": [
       "ENG",
       "SUI"
+    ],
+    "result": [
+      1,
+      1
+    ],
+    "result_nvl": [
+      1,
+      1
+    ],
+    "result_pen": [
+      5,
+      3
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 32,
+        "team": "SUI",
+        "player": "Schär, F."
+      },
+      {
+        "type": "yellow",
+        "minute": 67,
+        "team": "ENG",
+        "player": "Kane, H."
+      },
+      {
+        "type": "goal",
+        "minute": 75,
+        "team": "SUI",
+        "player": "Embolo, B."
+      },
+      {
+        "type": "goal",
+        "minute": 80,
+        "team": "ENG",
+        "player": "Saka, B.",
+        "assist": "Rice, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 85,
+        "team": "SUI",
+        "player": "Widmer, S."
+      }
     ]
   },
   {
@@ -2532,8 +2943,76 @@
     "stadium": "Olympiastadion",
     "city": "Berlin",
     "teams": [
-      "W43",
-      "W44"
+      "NED",
+      "TUR"
+    ],
+    "result": [
+      2,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 30,
+        "team": "NED",
+        "player": "Simons, X."
+      },
+      {
+        "type": "goal",
+        "minute": 35,
+        "team": "TUR",
+        "player": "Akaydin, S.",
+        "assist": "Güler, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 54,
+        "team": "NED",
+        "player": "Aké, N."
+      },
+      {
+        "type": "yellow",
+        "minute": 64,
+        "team": "NED",
+        "player": "van Dijk, V."
+      },
+      {
+        "type": "goal",
+        "minute": 70,
+        "team": "NED",
+        "player": "de Vrij, S.",
+        "assist": "Depay, M."
+      },
+      {
+        "type": "goal",
+        "minute": 76,
+        "team": "NED",
+        "player": "Müldür, M. (og)"
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 3",
+        "team": "TUR",
+        "player": "Tosun, C."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 5",
+        "team": "TUR",
+        "player": "Montella, V."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 6",
+        "team": "NED",
+        "player": "Weghorst, W."
+      },
+      {
+        "type": "red",
+        "minute": "90 + 6",
+        "team": "TUR",
+        "player": "Yıldırım, B."
+      }
     ]
   },
   {
@@ -2544,8 +3023,8 @@
     "stadium": "Munich Football Arena",
     "city": "Munich",
     "teams": [
-      "W45",
-      "W46"
+      "ESP",
+      "FRA"
     ]
   },
   {
@@ -2556,8 +3035,8 @@
     "stadium": "BVB Stadion Dortmund",
     "city": "Dortmund",
     "teams": [
-      "W48",
-      "W47"
+      "NED",
+      "ENG"
     ]
   },
   {

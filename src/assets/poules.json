@@ -57,8 +57,8 @@
   ],
   "knock_out":{
     "round_of_16": ["SUI", "ITA", "GER", "DEN", "ENG", "SVK", "ESP", "GEO", "FRA", "BEL", "POR", "SVN", "ROM", "NED", "AUT", "TUR"],
-    "quarter_finals": ["SUI","GER", "ENG", "ESP"],
-    "semi_finals": [],
+    "quarter_finals": ["SUI","GER", "ENG", "ESP", "FRA", "POR", "NED", "TUR"],
+    "semi_finals": ["ESP", "FRA", "ENG", "NED"],
     "finals": []
   }
 }

@@ -14,7 +14,8 @@
                     <div class="text-black fw-bold fst-italic fs-5">
                         {{ match.result?.length ? `${match.result[0]} : ${match.result[1]}` : match.time }}
                     </div>
-                    <span v-if="match.result_nvl" class="mx-3 fw-bold">{{ match.result_nvl.join(' : ') }}</span>
+                    <span v-if="match.result_pen" class="mx-3 fw-bold">{{ `(${match.result_pen[0]}) : (${match.result_pen[1]})` }}</span>
+                    <span v-else-if="match.result_nvl" class="mx-3 fw-bold">{{ match.result_nvl.join(' : ') }}</span>
                 </div>
                 <div class="team-wrapper">
                     <img :src="imageB" :alt="'flag_' + props.match.teams[1]" loading="lazy" class="w-50">
