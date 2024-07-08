@@ -10,7 +10,7 @@
             <div :id="'collapse_' + match_day" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body px-0">
                     <div class="row g-3">
-                        <div class="col-md-6" v-for="(match) in matches">
+                        <div :class="full ? 'col-12' : 'col-md-6'" v-for="(match) in matches">
                             <match-prediction :knockout="label.length > 1" :played="played" :name="name" :match="match"/>
                         </div>
                     </div>
@@ -29,6 +29,7 @@ const props = defineProps({
     matches: {type: Array, required: true},
     name: {type: String, required: true},
     played: {type: Boolean, required: false, default: false},
+    full: {type: Boolean, required: false, default: false},
 })
 
 const label = computed(() => {

@@ -88,9 +88,6 @@
                     <span class="score-home">{{ player_prediction[0] }}</span>
                     <span class="score-home">{{ player_prediction[1] }}</span>
                 </div>
-                <div class="d-flex flex-column justify-content-around fs-5">
-                    <i class="bi bi-person-circle"></i>
-                </div>
             </div>
         </div>
     </div>

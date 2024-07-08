@@ -87,9 +87,9 @@
             </div>
         </div>
         <div class="row g-3">
-            <div class="col-12">
+            <div class="col-md-6">
                 <!-- voorspelling -->
-                <div class="card border-0 rounded-0 shadow-sm">
+                <div class="card border-0 rounded-0 shadow-sm mb-3">
                     <div class="card-body position-relative p-4">
                         <h2 class="txt-blue fw-bolder">Voorspellingen Poulefase</h2>
                         <p>Bekijk de voorspellingen van <b>{{ participant.name }}</b> Bij reeds gespeelde
@@ -110,9 +110,33 @@
                         </template>
                     </div>
                 </div>
+                <!-- voorspelling -->
+                <div class="card border-0 rounded-0 shadow-sm">
+                    <div class="card-body position-relative p-4">
+                        <h2 class="txt-blue fw-bolder">Voorspellingen Knock-Out</h2>
+                        <p>Bekijk de voorspellingen van <b>{{ participant.name }}</b> Bij reeds gespeelde
+                            wedstrijden wordt de stand na 90 minuten speeltijd getoond <u>onder</u> de voorspelling.
+                            Punten voor de knock-out fase worden pas <u>na</u> de poulefase toegekend.
+                        </p>
+                        <span class="d-block"><i class="bi bi-check-circle-fill text-success me-2"></i>Team correct voorspeld.</span>
+                        <span class="d-block"><i class="bi bi-exclamation-circle-fill text-warning me-2"></i>Team incorrect voorspeld, maar wel in knockout.</span>
+                        <span class="d-block mb-3"><i class="bi bi-exclamation-circle-fill text-danger me-2"></i>Team incorrect voorspeld (geen punten).</span>
+                        <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
+                            <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij
+                            start toernooi.
+                        </div>
+                        <template v-else>
+                            <match-day-prediction v-for="(matches, match_day) in matches_played_knock_out"
+                                                  :match_day="match_day" :matches="matches"
+                                                  :name="participant.team_name"
+                                                  :played="true" :full="true"></match-day-prediction>
+                            <match-day-prediction v-for="(matches, match_day) in matches_to_play_knock_out"
+                                                  :match_day="match_day" :matches="matches"
+                                                  :name="participant.team_name" :full="true"></match-day-prediction>
+                        </template>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row g-3">
             <div class="col-md-6">
                 <!-- bonus vragen -->
                 <div class="card border-0 rounded-0 shadow-sm mb-3">
@@ -156,32 +180,6 @@
                                      class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3"
                                      tag="button">Naar statistieken<i
                             class="bi bi-chevron-right ms-2"></i></router-link>
-                    </div>
-                </div>
-                <!-- voorspelling -->
-                <div class="card border-0 rounded-0 shadow-sm mb-3">
-                    <div class="card-body position-relative p-4">
-                        <h2 class="txt-blue fw-bolder">Voorspellingen Knock-Out</h2>
-                        <p>Bekijk de voorspellingen van <b>{{ participant.name }}</b> Bij reeds gespeelde
-                            wedstrijden wordt de stand na 90 minuten speeltijd getoond <u>onder</u> de voorspelling.
-                            Punten voor de knock-out fase worden pas <u>na</u> de poulefase toegekend.
-                        </p>
-                        <span class="d-block"><i class="bi bi-check-circle-fill text-success me-2"></i>Team correct voorspeld.</span>
-                        <span class="d-block"><i class="bi bi-exclamation-circle-fill text-warning me-2"></i>Team incorrect voorspeld, maar wel in knockout.</span>
-                        <span class="d-block mb-3"><i class="bi bi-exclamation-circle-fill text-danger me-2"></i>Team incorrect voorspeld (geen punten).</span>
-                        <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
-                            <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij
-                            start toernooi.
-                        </div>
-                        <template v-else>
-                            <match-day-prediction v-for="(matches, match_day) in matches_played_knock_out"
-                                                  :match_day="match_day" :matches="matches"
-                                                  :name="participant.team_name"
-                                                  :played="true"></match-day-prediction>
-                            <match-day-prediction v-for="(matches, match_day) in matches_to_play_knock_out"
-                                                  :match_day="match_day" :matches="matches"
-                                                  :name="participant.team_name"></match-day-prediction>
-                        </template>
                     </div>
                 </div>
                 <!-- scoreverloop -->
