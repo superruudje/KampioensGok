@@ -3021,6 +3021,55 @@
     "teams": [
       "ESP",
       "FRA"
+    ],
+    "result": [
+      2,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 9,
+        "team": "FRA",
+        "player": " Kolo Muani, R.",
+        "assist": "Mbappé, K."
+      },
+      {
+        "type": "yellow",
+        "minute": 14,
+        "team": "ESP",
+        "player": "Navas, J."
+      },
+      {
+        "type": "goal",
+        "minute": 21,
+        "team": "ESP",
+        "player": "Yamal, L."
+      },
+      {
+        "type": "goal",
+        "minute": 25,
+        "team": "ESP",
+        "player": "Olmo, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 60,
+        "team": "FRA",
+        "player": "Tchouaméni, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 89,
+        "team": "FRA",
+        "player": "Camavinga, E."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 1",
+        "team": "ESP",
+        "player": "Yamal, L."
+      }
     ]
   },
   {
@@ -3043,7 +3092,7 @@
     "stadium": "Olympiastadion",
     "city": "Berlin",
     "teams": [
-      "W49",
+      "ESP",
       "W50"
     ]
   }
