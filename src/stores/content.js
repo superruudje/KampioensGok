@@ -405,7 +405,7 @@ export const useTournament = defineStore('tournament', {
             let res = []
             this.players.forEach((player) => {
                 if (player.bonus) {
-                    const goals = Math.ceil((player.bonus[1]) / 20 ) * 20;
+                    const goals = Math.ceil((player.bonus[1]) / 20) * 20;
                     const id = goals > 0 ? `${goals - 20} - ${goals}` : `${goals}`
                     if (!res.some((t) => t.id === id))
                         res.push({id: id, count: 0})
@@ -639,7 +639,8 @@ export const useTournament = defineStore('tournament', {
             }
             // check for teams/player questions
             for (let i = 3; i < player.bonus.length; i++) {
-                if (player.bonus[i] === this.bonus[i]) score += 10
+                if (Array.isArray(this.bonus[i]) && this.bonus[i].includes(player.bonus[i])) score += 10
+                else if (player.bonus[i] === this.bonus[i]) score += 10
             }
             return score
         },

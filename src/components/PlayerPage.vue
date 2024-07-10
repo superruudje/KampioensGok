@@ -126,10 +126,9 @@
                                 <span class="txt-orange fs-5 fst-italic">{{ q.label }}</span>
                                 <div class="d-flex align-items-center justify-content-between">
                                         <span class="txt-blue">
-                                            <i v-if="participant.bonus[idx] === bonus[idx]"
+                                            <i v-if="(Array.isArray(bonus[idx]) && bonus[idx].includes(participant.bonus[idx])) || participant.bonus[idx] === bonus[idx]"
                                                class="bi bi-check-circle-fill me-2 text-success"></i>
-                                            <i v-if="bonus[idx] && participant.bonus[idx] !== bonus[idx]"
-                                               class="bi bi-x-circle-fill me-2 text-danger"></i>
+                                            <i v-else-if="bonus[idx]" class="bi bi-x-circle-fill me-2 text-danger"></i>
                                             <b>{{ getTeamName(participant.bonus[idx]) }}</b>
                                             <span v-if="q.type === 'exact'"
                                                   class="small fst-italic"> ({{
@@ -141,7 +140,9 @@
                                         </span>
                                     <template v-if="bonus[idx]">
                                         <span v-if="q.type === 'exact'" class="badge bg-orange">+
-                                            {{ participant.bonus[idx] === bonus[idx] ? q.p : 0 }}
+                                            {{
+                                                bonus[idx].includes(participant.bonus[idx]) || participant.bonus[idx] === bonus[idx] ? q.p : 0
+                                            }}
                                         </span>
                                         <span v-else class="badge bg-orange">+
                                             {{ getEstimateScore(participant.bonus[idx], bonus[idx]) }}
