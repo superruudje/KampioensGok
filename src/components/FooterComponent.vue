@@ -5,7 +5,7 @@
                 <div class="col-md-4">
                     <floating-heart/>
                     <span class="d-block text-white mb-2">Made with <span class="txt-orange">&hearts;</span>, by <a class="text-white" href="https://github.com/superruudje" target="_blank">Superruudje</a></span>
-                    <a @click="countClick" href="https://tikkie.me/pay/gkt6jabdbt3m76hk9s53" target="_blank" class="btn btn-sm btn-orange rounded-0 py-2 px-3" role="button">Stuur een bedankje!</a>
+                    <a @click="countClick" href="https://tikkie.me/pay/27rkecgmu8s85k5ofmnm" target="_blank" class="btn btn-sm btn-orange rounded-0 py-2 px-3" role="button">Stuur een bedankje!</a>
                 </div>
             </div>
         </div>
