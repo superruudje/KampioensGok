@@ -3133,7 +3133,7 @@
       {
         "type": "goal",
         "minute": "90 + 1",
-        "team": "NED",
+        "team": "ENG",
         "player": "Watkins, O.",
         "assist": "Palmer, C."
       },
@@ -3155,6 +3155,57 @@
     "teams": [
       "ESP",
       "ENG"
+    ],
+    "result": [
+      2,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 25,
+        "team": "ENG",
+        "player": "Kane, H."
+      },
+      {
+        "type": "yellow",
+        "minute": 31,
+        "team": "ESP",
+        "player": "Olmo, D."
+      },
+      {
+        "type": "goal",
+        "minute": 47,
+        "team": "ESP",
+        "player": "Williams, N.",
+        "assist": "Yamal, L."
+      },
+      {
+        "type": "yellow",
+        "minute": 53,
+        "team": "ENG",
+        "player": "Stones, J."
+      },
+      {
+        "type": "goal",
+        "minute": 73,
+        "team": "ENG",
+        "player": "Palmer, C.",
+        "assist": "Bellingham, J."
+      },
+      {
+        "type": "goal",
+        "minute": 86,
+        "team": "ESP",
+        "player": "Oyarzabal, M.",
+        "assist": "Cucurella, M."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 2",
+        "team": "ENG",
+        "player": "Watkins, O."
+      }
     ]
   }
 ]
