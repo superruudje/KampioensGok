@@ -17,26 +17,60 @@ export const useTournament = defineStore('tournament', {
         quarterFinalsStart: 17,
         semiFinalsStart: 19,
         finalStart: 21,
-        bonus: [
-            "", //0.champion
-            null, //1. goals scored
-            null, //2. cards given
-            "", //3. most against
-            "", //4. most cards
-            "", //5. top scorer
-            "", //6. top assist
-            "Gakpo, C.", //7. first goal NL
-            "Veerman, J." //8. first card NL
-        ],
 
         teamImages: [],
-
         profile: null,
 
         pageNumber: 0,
         pageSize: 10,
     }),
     getters: {
+        bonus_vragen() {
+            return [
+                {
+                    q: "Welk land wordt Europees kampioen?",
+                    a: "ESP",
+                    t: "exact", p: 75, d: 22, n: "ESP"},
+                {
+                    q: "Hoeveel goals worden er totaal gescoord?",
+                    a: 117,
+                    t: "est", d: 22, n: this.totalGoals},
+                {
+                    q: "Hoeveel kaarten worden er in het toernooi gegeven?",
+                    a: 243,
+                    t: "est", d: 22, n: this.totalCards},
+                {
+                    q: "Welk land krijgt de meeste tegengoals?",
+                    a: ["GEO", "TUR"],
+                    t: "exact", p: 10, d: 22, n: this.groupedGoalsAgainst[0].label
+                },
+                {
+                    q: "Welk land krijgt de meeste kaarten?",
+                    a: "TUR",
+                    t: "exact", p: 10, d: 22, n: this.groupedTeamCards[0].label
+                },
+                {
+                    q: "Wie wordt er topscorer?",
+                    a: ["Gakpo, C.", "Kane, H.", "Mikautadze, G.", "Musiala, J.", "Olmo, D.", "Schranz, I."],
+                    t: "exact", p: 10, d: 22, n: this.groupedTopScorer[0]?.label
+                },
+                {
+                    q: "Wie wordt de koning van de assist?",
+                    a: "Yamal, L.",
+                    t: "exact", p: 10, d: 22, n: this.groupedAssist[0]?.label
+                },
+                {
+                    q: "Welke Nederlander scoort het eerste doelpunt?",
+                    a: "Gakpo, C.",
+                    t: "exact", p: 10, d: 13, n: "Gakpo, C."
+                },
+                {
+                    q: "Welke Nederlander krijgt de eerste kaart?",
+                    a: "Veerman, J.",
+                    t: "exact", p: 10, d: 13, n: "Veerman, J."
+                },
+            ]
+        },
         /**
          * Return top 10 players
          * @returns {*}
@@ -419,7 +453,7 @@ export const useTournament = defineStore('tournament', {
             let res = []
             this.players.forEach((player) => {
                 if (player.bonus) {
-                    const goals = Math.ceil((player.bonus[1]) / 20 ) * 20;
+                    const goals = Math.ceil((player.bonus[1]) / 20) * 20;
                     const id = goals > 0 ? `${goals - 20} - ${goals}` : `${goals}`
                     if (!res.some((t) => t.id === id))
                         res.push({id: id, count: 0})
@@ -511,7 +545,7 @@ export const useTournament = defineStore('tournament', {
             return res.sort((a, b) => {
                 return b.count - a.count
             })
-        },
+        }
     },
     actions: {
         /**
@@ -638,24 +672,39 @@ export const useTournament = defineStore('tournament', {
         getParticipantScoreBonus(name, snapshot) {
             const slice_num = snapshot !== null ? snapshot : Object.keys(this.matches_played_by_day).length
             const keys = Object.keys(this.matches_played_by_day).slice(0, slice_num)
-            if (keys.length <= this.roundOf16Start) return 0 //start counting after poule phase is done
 
             let score = 0
             const player = this.players.find(player => player.team_name === name)
-            // check for champion
-            if (player.bonus[0] === this.bonus[0]) score += 75
-            // check for estimation questions
-            for (let i = 1; i < 3; i++) {
-                if (this.bonus[i] === null) continue;
-                else if (player.bonus[i] === this.bonus[i]) score += 40
-                else if (player.bonus[i] >= (this.bonus[i] - 5) && player.bonus[i] <= (this.bonus[i] + 5)) score += 25
-                else if (player.bonus[i] >= (this.bonus[i] - 10) && player.bonus[i] <= (this.bonus[i] + 10)) score += 15
-            }
-            // check for teams/player questions
-            for (let i = 3; i < player.bonus.length; i++) {
-                if (player.bonus[i] === this.bonus[i]) score += 10
+
+            for (let i = 0; i < this.bonus_vragen.length; i++) {
+                score += Math.max(0, this.getBonusScore(this.bonus_vragen[i], player.bonus[i], keys.length))
             }
             return score
+        },
+        /**
+         * Get score for given bonus question
+         * @param q
+         * @param pa
+         * @param keys
+         * @returns {number|*|number}
+         */
+        getBonusScore(q, pa, keys) {
+            if (keys < q.d) return -1
+            else if (q.t === 'exact')
+                return Array.isArray(q.a) && q.a.includes(pa) || q.a === pa ? q.p : 0
+            else if (q.t === 'est')
+                return this.getEstimateScore(q.a, pa)
+        },
+        /**
+         * Calculate points for est question
+         * @param qa question answer
+         * @param pa player answer for question
+         */
+        getEstimateScore(qa, pa) {
+            if (qa === pa) return 40
+            else if (pa >= (qa - 5) && pa <= (qa + 5)) return 25
+            else if (pa >= (qa - 10) && pa <= (qa + 10)) return 15
+            else return 0
         },
         /**
          * Calculate total score knockout fase

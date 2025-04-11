@@ -3025,6 +3025,55 @@
     "teams": [
       "ESP",
       "FRA"
+    ],
+    "result": [
+      2,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 9,
+        "team": "FRA",
+        "player": "Kolo Muani, R.",
+        "assist": "Mbappé, K."
+      },
+      {
+        "type": "yellow",
+        "minute": 14,
+        "team": "ESP",
+        "player": "Navas, J."
+      },
+      {
+        "type": "goal",
+        "minute": 21,
+        "team": "ESP",
+        "player": "Yamal, L."
+      },
+      {
+        "type": "goal",
+        "minute": 25,
+        "team": "ESP",
+        "player": "Olmo, D."
+      },
+      {
+        "type": "yellow",
+        "minute": 60,
+        "team": "FRA",
+        "player": "Tchouaméni, A."
+      },
+      {
+        "type": "yellow",
+        "minute": 89,
+        "team": "FRA",
+        "player": "Camavinga, E."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 1",
+        "team": "ESP",
+        "player": "Yamal, L."
+      }
     ]
   },
   {
@@ -3037,6 +3086,67 @@
     "teams": [
       "NED",
       "ENG"
+    ],
+    "result": [
+      1,
+      2
+    ],
+    "timeline": [
+      {
+        "type": "goal",
+        "minute": 7,
+        "team": "NED",
+        "player": "Simons, X."
+      },
+      {
+        "type": "yellow",
+        "minute": 17,
+        "team": "NED",
+        "player": "Dumfries, D."
+      },
+      {
+        "type": "goal",
+        "minute": 18,
+        "team": "ENG",
+        "player": "Kane, H."
+      },
+      {
+        "type": "yellow",
+        "minute": 72,
+        "team": "ENG",
+        "player": "Bellingham, J."
+      },
+      {
+        "type": "yellow",
+        "minute": 86,
+        "team": "ENG",
+        "player": "Saka, B."
+      },
+      {
+        "type": "yellow",
+        "minute": 87,
+        "team": "NED",
+        "player": "an Dijk, V."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 1",
+        "team": "NED",
+        "player": "Simons, X."
+      },
+      {
+        "type": "goal",
+        "minute": "90 + 1",
+        "team": "ENG",
+        "player": "Watkins, O.",
+        "assist": "Palmer, C."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 4",
+        "team": "ENG",
+        "player": "Trippier, K."
+      }
     ]
   },
   {
@@ -3047,8 +3157,59 @@
     "stadium": "Olympiastadion",
     "city": "Berlin",
     "teams": [
-      "W49",
-      "W50"
+      "ESP",
+      "ENG"
+    ],
+    "result": [
+      2,
+      1
+    ],
+    "timeline": [
+      {
+        "type": "yellow",
+        "minute": 25,
+        "team": "ENG",
+        "player": "Kane, H."
+      },
+      {
+        "type": "yellow",
+        "minute": 31,
+        "team": "ESP",
+        "player": "Olmo, D."
+      },
+      {
+        "type": "goal",
+        "minute": 47,
+        "team": "ESP",
+        "player": "Williams, N.",
+        "assist": "Yamal, L."
+      },
+      {
+        "type": "yellow",
+        "minute": 53,
+        "team": "ENG",
+        "player": "Stones, J."
+      },
+      {
+        "type": "goal",
+        "minute": 73,
+        "team": "ENG",
+        "player": "Palmer, C.",
+        "assist": "Bellingham, J."
+      },
+      {
+        "type": "goal",
+        "minute": 86,
+        "team": "ESP",
+        "player": "Oyarzabal, M.",
+        "assist": "Cucurella, M."
+      },
+      {
+        "type": "yellow",
+        "minute": "90 + 2",
+        "team": "ENG",
+        "player": "Watkins, O."
+      }
     ]
   }
 ]

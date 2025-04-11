@@ -148,31 +148,28 @@
                             start toernooi.
                         </div>
                         <template v-else>
-                            <div v-for="(q, idx) in questions" class="d-flex flex-column mb-3">
-                                <span class="txt-orange fs-5 fst-italic">{{ q.label }}</span>
+                            <div v-for="(q, idx) in bonus_vragen" class="d-flex flex-column mb-3">
+                                <span class="txt-orange fs-5 fst-italic">{{ q.q }}</span>
                                 <div class="d-flex align-items-center justify-content-between">
-                                        <span class="txt-blue">
-                                            <i v-if="participant.bonus[idx] === bonus[idx]"
+                                    <span class="txt-blue">
+                                        <template v-if="getQuestionPoints(q, idx) > -1">
+                                            <i v-if="getQuestionPoints(q, idx) > 0"
                                                class="bi bi-check-circle-fill me-2 text-success"></i>
-                                            <i v-if="bonus[idx] && participant.bonus[idx] !== bonus[idx]"
-                                               class="bi bi-x-circle-fill me-2 text-danger"></i>
-                                            <b>{{ getTeamName(participant.bonus[idx]) }}</b>
-                                            <span v-if="q.type === 'exact'"
-                                                  class="small fst-italic"> ({{
-                                                    getPercentage(data[idx].find(i => i.id === participant.bonus[idx])?.count)
-                                                }}% denkt dit ook{{
-                                                    q.now ? `, nu ${q.now}` : ""
-                                                }})</span>
-                                            <span v-else class="small fst-italic"> (nu {{ q.now }})</span>
-                                        </span>
-                                    <template v-if="bonus[idx]">
-                                        <span v-if="q.type === 'exact'" class="badge bg-orange">+
-                                            {{ participant.bonus[idx] === bonus[idx] ? q.p : 0 }}
-                                        </span>
-                                        <span v-else class="badge bg-orange">+
-                                            {{ getEstimateScore(participant.bonus[idx], bonus[idx]) }}
-                                        </span>
-                                    </template>
+                                            <i v-else-if="q.a" class="bi bi-x-circle-fill me-2 text-danger"></i>
+                                        </template>
+                                        <b>{{ getTeamName(participant.bonus[idx]) }}</b>
+                                        <span v-if="q.t === 'exact'" class="small fst-italic"> ({{
+                                                getPercentage(data[idx].find(i => i.id === participant.bonus[idx])?.count)
+                                            }}% denkt dit ook{{
+                                                q.n ? `, nu ${q.n}` : ""
+                                            }})</span>
+                                        <span v-if="q.t === 'est'" class="small fst-italic"> ({{
+                                                q.n ? `nu ${q.n}` : ""
+                                            }})</span>
+                                    </span>
+                                    <span v-if="getQuestionPoints(q, idx) > -1" class="badge bg-orange">+{{
+                                            getQuestionPoints(q, idx)
+                                        }}</span>
                                 </div>
                             </div>
                         </template>
@@ -215,12 +212,7 @@ const {
     matches_to_play_knock_out,
     totalGoals,
     estTotalGoals,
-    totalCards,
     estTotalCards,
-    groupedGoalsAgainst,
-    groupedTeamCards,
-    groupedTopScorer,
-    groupedAssist,
     prediction_tournament_champion,
     prediction_top_scorer,
     prediction_most_cards,
@@ -228,7 +220,8 @@ const {
     prediction_first_goal_nl,
     prediction_first_card_nl,
     prediction_top_assist,
-    teams, bonus
+    teams,
+    bonus_vragen
 } = storeToRefs(tournament)
 
 const props = defineProps({
@@ -247,35 +240,10 @@ const data = ref([
     prediction_first_card_nl.value
 ])
 
-const questions = ref([
-    {label: "Welk land wordt Europees kampioen?", type: "exact", p: 75},
-    {
-        label: "Hoeveel goals worden er totaal gescoord?",
-        type: "estimate",
-        now: `${totalGoals.value}, geschat ${Math.ceil(estTotalGoals.value.average * estTotalCards.value.matches)}`
-    },
-    {
-        label: "Hoeveel kaarten worden er in het toernooi gegeven?",
-        type: "estimate",
-        now: `${totalCards.value}, geschat ${Math.ceil(estTotalCards.value.average * estTotalCards.value.matches)}`
-    },
-    {
-        label: "Welk land krijgt de meeste tegengoals?",
-        type: "exact",
-        p: 10,
-        now: getTeamName(groupedGoalsAgainst.value[0].label)
-    },
-    {
-        label: "Welk land krijgt de meeste kaarten?",
-        type: "exact",
-        p: 10,
-        now: getTeamName(groupedTeamCards.value[0].label)
-    },
-    {label: "Wie wordt er topscorer?", type: "exact", p: 10, now: groupedTopScorer.value[0]?.label || '-'},
-    {label: "Wie wordt de koning van de assist?", type: "exact", p: 10, now: groupedAssist.value[0]?.label || '-'},
-    {label: "Welke Nederlander scoort het eerste doelpunt?", type: "exact", p: 10, now: bonus.value[7]},
-    {label: "Welke Nederlander krijgt de eerste kaart?", type: "exact", p: 10, now: bonus.value[8]},
-])
+function getQuestionPoints(q, idx) {
+    return tournament.getBonusScore(q, props.participant.bonus[idx],
+        Object.keys(matches_played_by_day.value).length)
+}
 
 /**
  * Return team name
