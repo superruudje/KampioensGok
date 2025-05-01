@@ -1,123 +1,154 @@
 <template>
-    <div class="w-100 d-flex">
-        <div class="w-100 position-relative d-flex justify-content-center align-items-center">
-            <div class="team-wrapper d-flex flex-nowrap align-items-center justify-content-end gap-2">
-                <div class="flex-shrink-1 d-flex flex-column align-items-end">
-                    <span class="fs-6 flex-shrink-1">
-                        {{ knockout ? getTeamName(player_prediction_teams[0]) : getTeamName(match.teams[0]) }}
-                        <i v-if="knockout && isTeam(match.teams[0]) && player_prediction_teams[0] !== match.teams[0] && !inKnockOut(player_prediction_teams[0])"
-                           class="bi bi-exclamation-circle-fill text-danger"
-                           data-bs-title="Team incorrect voorspeld."
-                           data-bs-toggle="tooltip"></i>
-                        <i v-else-if="knockout && isTeam(match.teams[0]) && player_prediction_teams[0] !== match.teams[0] && inKnockOut(player_prediction_teams[0])"
-                           class="bi bi-exclamation-circle-fill text-warning"
-                           data-bs-title="Team incorrect voorspeld. Wel in knock-out."
-                           data-bs-toggle="tooltip"></i>
-                        <i v-else-if="knockout && isTeam(match.teams[0])"
-                           class="bi bi-check-circle-fill text-success"
-                           data-bs-title="Team correct voorspeld."
-                           data-bs-toggle="tooltip"></i>
-
+    <div id="match_card" class="card rounded-4 position-relative w-100">
+        <div class="card-body p-3 p-md-4">
+            <div class="d-flex align-items-center gap-3 mb-3">
+                <span class="fw-lighter text-secondary">{{ summary || `#${match.num}`}}</span>
+                <template v-if="played">
+                    <span
+                        :data-bs-title="score.reason?.join(', ') + '.'"
+                        class="ms-auto badge bg-orange"
+                        data-bs-html="true"
+                        data-bs-toggle="tooltip">
+                        +{{ score.score }}
                     </span>
-                    <span v-if="knockout" class="text-black-50 small">{{ getTeamName(match.teams[0]) }}</span>
+                    <span v-if="score.score === 0">😭</span>
+                    <span v-if="score.score === 2">😔</span>
+                    <span v-if="score.score === 5">&#128517;</span>
+                    <span v-if="score.score === 7">&#128079;</span>
+                    <span v-if="score.score === 10">&#127881;</span>
+                </template>
+            </div>
+            <div class="d-flex gap-2 gap-md-3">
+                <div class="flex-grow-1 d-flex flex-column gap-2 justify-content-center">
+                    <div v-for="n in 2" class="d-flex align-items-center gap-2">
+                        <img
+                            :alt="`team${n}`"
+                            :src="getTeamImage(match.teams[n-1])"
+                            class="border"
+                            loading="lazy"
+                            width="30px"/>
+                        <span>{{ getTeamName(match.teams[n - 1]) }}</span>
+                    </div>
                 </div>
-                <img :src="imageA" alt="" class="d-none d-lg-block" loading="lazy" width="40"/>
-                <img :src="imageA" alt="" class="d-lg-none" loading="lazy" width="26">
-            </div>
-            <div class="d-flex flex-column align-items-center flex-shrink-0">
-                <span class="mx-2 mx-lg-3 fw-bold">{{ player_prediction.join(' : ') }}</span>
-                <span v-if="match.result" class="fw-bold text-black-50 small">{{ match.result.join(' : ') }}</span>
-            </div>
-            <div class="team-wrapper d-flex flex-nowrap align-items-center gap-2">
-                <img :src="imageB" alt="" class="d-none d-lg-block" loading="lazy" width="40">
-                <img :src="imageB" alt="" class="d-lg-none" loading="lazy" width="26">
-                <div class="flex-shrink-1 d-flex flex-column align-items-start">
-                    <span class="fs-6 flex-shrink-1">
-                        <i v-if="knockout && isTeam(match.teams[1]) && player_prediction_teams[1] !== match.teams[1]  && !inKnockOut(player_prediction_teams[1])"
-                           class="bi bi-exclamation-circle-fill text-danger"
-                           data-bs-title="Team incorrect voorspeld."
-                           data-bs-toggle="tooltip"></i>
-                        <i v-else-if="knockout && isTeam(match.teams[1]) && player_prediction_teams[1] !== match.teams[1] && inKnockOut(player_prediction_teams[1])"
-                           class="bi bi-exclamation-circle-fill text-warning"
-                           data-bs-title="Team incorrect voorspeld. Wel in knock-out."
-                           data-bs-toggle="tooltip"></i>
-                        <i v-else-if="knockout && isTeam(match.teams[1])"
-                           class="bi bi-check-circle-fill text-success"
-                           data-bs-title="Team correct voorspeld."
-                           data-bs-toggle="tooltip"></i>
-                        {{ knockout ? getTeamName(player_prediction_teams[1]) : getTeamName(match.teams[1]) }}
-                    </span>
-                    <span v-if="knockout" class="text-black-50 small">{{ getTeamName(match.teams[1]) }}</span>
+                <div
+                    v-if="match.result_after_penalties?.length"
+                    class="flex-shrink-0 d-flex flex-column gap-2 justify-content-center">
+                    <span class="fs-6 lh-1">({{ match.result_after_penalties[0] }})</span>
+                    <span class="fs-6 lh-1">({{ match.result_after_penalties[1] }})</span>
+                </div>
+                <div class="flex-shrink-0 d-flex flex-column gap-2 justify-content-center">
+                    <span class="fs-4 fw-bold lh-1">{{ match.result[0] != null ? match.result[0] : '?' }}</span>
+                    <span class="fs-4 fw-bold lh-1">{{ match.result[1] != null ? match.result[1] : '?' }}</span>
+                </div>
+                <div class="vr"></div>
+                <div
+                    v-if="isKnockout"
+                    class="flex-shrink-0 d-flex flex-column gap-2 justify-content-center">
+                    <template v-for="n in 2">
+                        <div class="d-flex gap-2 align-items-center">
+                            <i
+                                v-if="isTeam(match.teams[n-1]) && player_prediction_teams[n-1] !== match.teams[n-1] && !inKnockOut(player_prediction_teams[n-1])"
+                                class="bi bi-exclamation-circle-fill text-red lh-1"
+                                data-bs-title="Team incorrect voorspeld."
+                                data-bs-toggle="tooltip"></i>
+                            <i
+                                v-else-if="isTeam(match.teams[n-1]) && player_prediction_teams[n-1] !== match.teams[n-1] && inKnockOut(player_prediction_teams[n-1])"
+                                class="bi bi-exclamation-circle-fill text-yellow lh-1"
+                                data-bs-title="Team incorrect voorspeld. Wel in knock-out."
+                                data-bs-toggle="tooltip"></i>
+                            <i
+                                v-else-if="isTeam(match.teams[n-1])"
+                                class="bi bi-exclamation-circle-fill text-green lh-1"
+                                data-bs-title="Team correct voorspeld."
+                                data-bs-toggle="tooltip"></i>
+                            <img
+                                :alt="`team${n}_prediction`"
+                                :src="getTeamImage(player_prediction_teams[n-1])"
+                                class="border"
+                                loading="lazy"
+                                width="30px"/>
+                        </div>
+                    </template>
+                </div>
+                <div class="flex-shrink-0 d-flex flex-column gap-2 justify-content-center">
+                    <span class="fs-4 fw-bold lh-1">{{ player_prediction[0] }}</span>
+                    <span class="fs-4 fw-bold lh-1">{{ player_prediction[1] }}</span>
                 </div>
             </div>
-            <span v-if="played" :data-bs-title="score.reason.join(', ') + '.'"
-                  class="position-absolute top-0 end-0 badge bg-orange" data-bs-html="true"
-                  data-bs-toggle="tooltip">+{{
-                    score.score
-                }}</span>
         </div>
     </div>
 </template>
 
-<script setup>
-import {useTournament} from "@/stores/content.js";
+<script lang="ts" setup>
+import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
 import {computed} from "vue";
+import type {Match, MatchDayType} from "@/types/tournament.ts";
 
 const tournament = useTournament()
 const {teamImages, teams, knock_out} = storeToRefs(tournament)
 
-const props = defineProps({
-    match: {type: Object, required: true},
-    name: {type: String, required: true},
-    played: {type: Boolean, default: false},
-    knockout: {type: Boolean, default: false},
-})
+const props = defineProps<{
+    match: Match,
+    matchDayType: MatchDayType
+    teamName: string,
+    played?: boolean,
+    isKnockout?: boolean,
+}>()
 
-const player_prediction = tournament.getMatchPlayerPrediction(props.name, props.match.num)
-const player_prediction_teams = tournament.getMatchPlayerPredictionTeams(props.name, props.match.num)
+const player_prediction = tournament.getMatchPlayerPrediction(props.teamName, props.match.num)
+const player_prediction_teams = tournament.getMatchPlayerPredictionTeams(props.teamName, props.match.num)
 
-const imageA = computed(() => {
-    const team = isTeam(props.match.teams[0]) ? props.match.teams[0] : player_prediction_teams[0]
-    return teamImages.value[team] || teamImages.value[`default`]
-})
-
-const imageB = computed(() => {
-    const team = isTeam(props.match.teams[1]) ? props.match.teams[1] : player_prediction_teams[1]
-    return teamImages.value[team] || teamImages.value[`default`]
+const summary = computed(() => {
+    if (!props.match.result_after_extra_time) return ''
+    const final_score = props.match.result_after_penalties || props.match.result_after_extra_time
+    const final_winner = final_score[0] === final_score[1] ? null : final_score[0] > final_score[1] ? 0 : 1
+    if (final_winner === null) return 'Draw';
+    return `${getTeamName(props.match.teams[final_winner])} wint na ${props.match.result_after_penalties ? 'penalties' : 'extra tijd'}`
 })
 
 const score = computed(() => {
-    return props.played ? tournament.getPredictionScore(player_prediction, props.match) : {}
+    return props.played ? tournament.getPredictionScore(player_prediction, props.match) : {score: 0, reason: []}
 })
+
+function getTeamImage(teamName: string) {
+    return teamImages.value[teamName] || teamImages.value[`default`]
+}
 
 /**
  * Check if is valid team id
- * @param string
- * @returns {boolean}
+ * @param teamName
  */
-function isTeam(string) {
-    return teams.value.some(t => t.id === string)
+function isTeam(teamName: string) {
+    return teams.value.some(t => t.short_name === teamName)
 }
 
-function getTeamName(team) {
-    return teams.value.find((e) => e.id === team)?.name || team
+function getTeamName(teamName: string) {
+    return teams.value.find((e) => e.short_name === teamName)?.full_name || teamName
+}
+
+function getRedCards(teamName: string) {
+    return props.match.events ? props.match.events.filter(event => event.type === 'red_card' && event.team === teamName).length : 0
 }
 
 /**
- * Check if team is in knockout
- * @param team
+ * Check if the team is in knockout
+ * @param teamName
  */
-function inKnockOut(team) {
-    switch (props.match.group) {
-        case 'Round of 16':
-            return knock_out.value.round_of_16.some(t => t === team)
-        case 'Quarter-finals':
-            return knock_out.value.quarter_finals.some(t => t === team)
-        case 'Semi-finals':
-            return knock_out.value.semi_finals.some(t => t === team)
-        case 'Final':
-            return knock_out.value.finals.some(t => t === team)
+function inKnockOut(teamName: string) {
+    switch (props.matchDayType) {
+        case 'round_of_32':
+            return knock_out.value.round_of_32.some(t => t === teamName)
+        case 'round_of_16':
+            return knock_out.value.round_of_16.some(t => t === teamName)
+        case 'quarter_final':
+            return knock_out.value.quarter_final.some(t => t === teamName)
+        case 'semi_final':
+            return knock_out.value.semi_final.some(t => t === teamName)
+        case 'final_bronze':
+            return knock_out.value.final_bronze.some(t => t === teamName)
+        case 'final':
+            return knock_out.value.final.some(t => t === teamName)
         default:
             return false
     }
@@ -125,6 +156,7 @@ function inKnockOut(team) {
 </script>
 
 <style lang="sass" scoped>
-.team-wrapper
-    flex: 1
+.teams
+    flex: 1 1 0
+    gap: 12px
 </style>

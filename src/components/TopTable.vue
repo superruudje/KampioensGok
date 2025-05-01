@@ -1,61 +1,61 @@
 <template>
-    <div class="card border-0 rounded-0">
-        <div class="card-body">
-            <h5 v-if="title" class="mb-3 txt-blue fw-bolder">{{ title }}</h5>
+    <div class="card rounded-4 overflow-hidden">
+        <div class="card-body p-0">
+            <h4 class="header text-light w26-condensed bg-26-primary-01 p-4 pb-2 mb-0">
+                {{ title }}
+            </h4>
+
             <div class="w-100 overflow-hidden overflow-x-auto">
-                <table class="table align-middle">
-                    <thead>
-                    <tr>
-                        <th class="txt-orange" scope="col">{{ table_header[0] }}</th>
-                        <th class="txt-orange" scope="col">{{ table_header[1] }}</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr v-if="!list.length">
-                        <td colspan="100%">Geen data bekend.</td>
-                    </tr>
-                    <tr v-for="item in list.slice(0, open ? list.length : 5)">
-                        <td class="text-nowrap">
-                            <img v-if="image" class="me-2" :src="getImage(item.image)" alt="" loading="lazy" width="30px">
-                            <span class="txt-blue fw-bold">{{ getTeamName(item.label) }}</span>
-                        </td>
-                        <td>{{ item.count }}</td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div
+                    v-for="(item, idx) in list.slice(0, open ? list.length : 5)"
+                    class="px-4 py-2 d-flex align-items-center"
+                    :class="idx < 1 ? 'bg-26-primary-01 text-light' : 'border-bottom'">
+                    <div class="flex-grow-1 d-flex align-items-center">
+                        <img
+                            :alt="'flag_' + item.label"
+                            :src="getImage(item.team || item.label)"
+                            class="border me-2"
+                            loading="lazy"
+                            width="32px">
+                        <span>{{ getTeamName(item.label) }}</span>
+                    </div>
+                    <div>
+                        <span :class="idx < 1 ? 'fs-4' : 'fs-5'">{{ item.count }}</span>
+                    </div>
+                </div>
             </div>
-            <button v-if="list.length > 5" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3"
-                    @click="open = !open">Toon alle<i
-                :class="open ? 'bi-chevron-up' : 'bi-chevron-down'"
-                class="bi ms-2"></i>
-            </button>
+            <div class="p-4">
+                <button
+                    class="dropdown-toggle btn-wc26 sm btn-wc26-lightblue w-fit"
+                    @click="open = !open">
+                    {{ open ? 'Verberg' : 'Toon alle'}}
+                </button>
+            </div>
         </div>
     </div>
 </template>
 
-<script setup>
-import {computed, ref} from "vue";
-import {useTournament} from "@/stores/content.js";
+<script setup lang="ts">
+import {type Ref, ref} from "vue";
+import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
 
 const tournament = useTournament();
 const {teamImages, teams} = storeToRefs(tournament)
 
-const props = defineProps({
-    title: {type: String, required: true},
-    list: {type: [Array, Object], required: true},
-    image: {type: Boolean, default: true},
-    table_header: {type: Array, default: ['Land', 'Goals']},
-})
+const props = withDefaults(defineProps<{
+    title: string,
+    list: {label: string, team?: string, count: number}[],
+}>(), {})
 
-const open = ref(false)
+const open: Ref<boolean> = ref(false);
 
 /**
  * Return team image
  * @param name
  * @returns {*}
  */
-function getImage(name) {
+function getImage(name: string): string {
     return teamImages.value[name] || teamImages.value[`default`]
 }
 
@@ -64,12 +64,10 @@ function getImage(name) {
  * @param id
  * @returns {*}
  */
-function getTeamName(id) {
-    return teams.value.find((e) => e.id === id)?.name || id
+function getTeamName(id: string): string {
+    return teams.value.find((e) => e.id === id)?.full_name || id
 }
 
 </script>
 
-<style lang="sass" scoped>
-
-</style>
+<style lang="sass" scoped></style>

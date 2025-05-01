@@ -7,19 +7,21 @@
                 <template v-if="e.team === teams[0]">
                     <span class="txt-blue fw-semibold d-block lh-1">{{ e.player }}</span>
                     <span class="small text-black-50 lh-1">{{ e.assist }}</span>
+                    <span v-if="e.note" class="small text-black-50 lh-1">{{ e.note }}</span>
                 </template>
                 <span v-else class="text-black-50">{{ e.minute }}'</span>
             </div>
-            <div class="mx-3 text-center icon bg-gray">
-                <FontAwesomeIcon v-if="e.type === 'assist'" :icon="faHandshakeAngle"/>
-                <FontAwesomeIcon v-else-if="e.type === 'goal'" :icon="faSoccerBall"/>
-                <FontAwesomeIcon v-else :class="{'text-warning' : e.type === 'yellow', 'text-danger' : e.type === 'red'}"
+            <div class="mx-3 text-center icon bg-white">
+                <FontAwesomeIcon v-if="e.type === 'goal'" :icon="faSoccerBall"/>
+                <FontAwesomeIcon v-else-if="e.type === 'substitution'" :icon="faArrowsTurnToDots"/>
+                <FontAwesomeIcon v-else :class="{'text-yellow' : e.type === 'yellow_card', 'text-red' : e.type === 'red_card'}"
                                  :icon="faMobile"/>
             </div>
             <div class="time-line">
                 <template v-if="e.team === teams[1]">
                     <span class="txt-blue fw-semibold d-block lh-1">{{ e.player }}</span>
                     <span class="small text-black-50 lh-1">{{ e.assist }}</span>
+                    <span v-if="e.note" class="small text-black-50 lh-1">{{ e.note }}</span>
                 </template>
                 <span v-else class="text-black-50">{{ e.minute }}'</span>
             </div>
@@ -27,17 +29,17 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {computed} from "vue";
 import {faSoccerBall} from "@fortawesome/free-regular-svg-icons";
-import {faMobile} from "@fortawesome/free-solid-svg-icons";
-import {faHandshakeAngle} from "@fortawesome/free-solid-svg-icons";
+import {faMobile, faArrowsTurnToDots} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import type {MatchEvent} from "@/types/tournament.ts";
 
-const props = defineProps({
-    teams: {type: Array, required: true},
-    timeline: {type: Object, required: true},
-})
+const props = defineProps<{
+    teams: string[],
+    timeline: MatchEvent[]
+}>()
 
 const ordered_timeline = computed(() => {
     return props.timeline ? props.timeline.sort((a, b) => a.minute - b.minute) : []

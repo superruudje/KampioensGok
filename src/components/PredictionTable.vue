@@ -1,7 +1,11 @@
 <template>
-    <div class="card border-0 rounded-0">
-        <div class="card-body">
-            <h5 v-if="title" class="mb-3 txt-blue fw-bolder">{{ title }}</h5>
+    <div class="card rounded-4">
+        <div class="card-body p-3 p-md-4">
+            <h3
+                v-if="title"
+                class="mb-3 fw-bolder w26-condensed">
+                {{ title }}
+            </h3>
             <div class="w-100 overflow-hidden overflow-x-auto">
                 <table class="table align-middle">
                     <thead>
@@ -18,11 +22,14 @@
                         </td>
                         <td class="w-50">
                             <div class="d-flex align-items-center">
-                                <div :aria-valuenow="getPercentage(team.count)" aria-label="Basic example"
-                                     aria-valuemax="100"
-                                     aria-valuemin="0" class="progress flex-grow-1"
-                                     role="progressbar">
-                                    <div :style="'width: '+getPercentage(team.count)+'%'"
+                                <div
+                                    :aria-valuenow="getPercentage(team.count)"
+                                    aria-label="Basic example"
+                                    aria-valuemax="100"
+                                    aria-valuemin="0"
+                                    class="progress flex-grow-1"
+                                    role="progressbar">
+                                    <div :style="'width: ' + getPercentage(team.count)+'%'"
                                          class="progress-bar bg-orange"></div>
                                 </div>
                                 <span class="ms-2">{{ getPercentage(team.count) }}%</span>
@@ -32,38 +39,41 @@
                     </tbody>
                 </table>
             </div>
-            <button v-if="list.length > 5" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3"
-                    @click="open = !open">Toon alle<i
-                :class="open ? 'bi-chevron-up' : 'bi-chevron-down'"
-                class="bi ms-2"></i>
+            <button
+                class="dropdown-toggle btn-wc26 sm btn-wc26-orange w-fit"
+                @click="open = !open">
+                {{ open ? 'Verberg' : 'Toon alle'}}
             </button>
         </div>
     </div>
 </template>
 
-<script setup>
-import {computed, ref} from "vue";
-import {useTournament} from "@/stores/content.js";
+<script setup lang="ts">
+import {computed, type Ref, ref} from "vue";
+import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
 
 const tournament = useTournament();
 const {teamImages, teams} = storeToRefs(tournament)
 
-const props = defineProps({
-    title: {type: String, required: true},
-    list: {type: Array, required: true},
-    image: {type: Boolean, default: true},
-    table_header: {type: String, default: 'Land'},
+const props = withDefaults(defineProps<{
+    title: string,
+    list: {id: string, count: number}[],
+    image?: boolean,
+    table_header?: string,
+}>(), {
+    image: true,
+    table_header: 'Land',
 })
 
-const open = ref(false)
+const open: Ref<boolean> = ref(false);
 
 /**
  * Return team image
  * @param name
  * @returns {*}
  */
-function getImage(name) {
+function getImage(name: string): string {
     return teamImages.value[name] || teamImages.value[`default`]
 }
 
@@ -72,8 +82,8 @@ function getImage(name) {
  * @param id
  * @returns {*}
  */
-function getTeamName(id) {
-    return teams.value.find((e) => e.id === id)?.name || id
+function getTeamName(id: string): string {
+    return teams.value.find((e) => e.id === id)?.full_name || id
 }
 
 const tot = computed(() => {
@@ -85,11 +95,9 @@ const tot = computed(() => {
  * @param count
  * @returns {number}
  */
-function getPercentage(count) {
+function getPercentage(count: number): number {
     return (Math.round((count / tot.value * 100) * 100) / 100)
 }
 </script>
 
-<style lang="sass" scoped>
-
-</style>
+<style lang="sass" scoped></style>

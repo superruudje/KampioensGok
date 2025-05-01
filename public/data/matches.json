@@ -1,0 +1,1326 @@
+[
+    {
+        "num": 1,
+        "match_day_id": 1,
+        "time": "21:00",
+        "location_id": 3,
+        "teams": [
+            "MEX",
+            "ALB"
+        ],
+        "result": [0, 0],
+        "events": [
+            {
+                "type": "goal",
+                "minute": 2,
+                "player": "Jan Klaassen",
+                "team": "MEX",
+                "assist": "Jan Klaas",
+                "note": ""
+            },
+            {
+                "type": "goal",
+                "minute": 45,
+                "player": "Jsjj Klaassen",
+                "team": "ALB",
+                "assist": "Jan Klaas",
+                "note": ""
+            },
+            {
+                "type": "red_card",
+                "minute": 23,
+                "player": "Wead Kwnp",
+                "team": "ALB",
+                "assist": "",
+                "note": ""
+            },
+            {
+                "type": "substitution",
+                "minute": 76,
+                "player": "Wead Kwnp",
+                "team": "MEX",
+                "assist": "",
+                "note": "in voor Piet Heijn"
+            }
+        ],
+        "poule_name": "A"
+    },
+    {
+        "num": 2,
+        "match_day_id": 1,
+        "time": "21:00",
+        "poule_name": "A",
+        "location_id": 4,
+        "teams": [
+            "ALG",
+            "ARG"
+        ],
+        "result": [1, 2],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 3,
+        "match_day_id": 2,
+        "time": "21:00",
+        "poule_name": "B",
+        "location_id": 1,
+        "teams": [
+            "CAN",
+            "AUS"
+        ],
+        "result": [3, 2],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 4,
+        "match_day_id": 2,
+        "time": "21:00",
+        "poule_name": "D",
+        "location_id": 11,
+        "teams": [
+            "USA",
+            "CMR"
+        ],
+        "result": [0, 2],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 5,
+        "match_day_id": 3,
+        "time": "21:00",
+        "poule_name": "C",
+        "location_id": 7,
+        "teams": ["BFA", "BRA"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 6,
+        "match_day_id": 3,
+        "time": "21:00",
+        "poule_name": "D",
+        "location_id": 2,
+        "teams": [
+            "COD",
+            "COL"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 7,
+        "match_day_id": 3,
+        "time": "21:00",
+        "poule_name": "C",
+        "location_id": 13,
+        "teams": ["CHI", "CIV"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 8,
+        "match_day_id": 3,
+        "time": "21:00",
+        "poule_name": "B",
+        "location_id": 15,
+        "teams": [
+            "AUT",
+            "BEL"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 9,
+        "match_day_id": 4,
+        "time": "21:00",
+        "poule_name": "E",
+        "location_id": 14,
+        "teams": ["CRC", "CRO"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 10,
+        "match_day_id": 4,
+        "time": "21:00",
+        "poule_name": "E",
+        "location_id": 9,
+        "teams": ["CZE", "DEN"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 11,
+        "match_day_id": 4,
+        "time": "21:00",
+        "poule_name": "F",
+        "location_id": 8,
+        "teams": ["ECU", "EGY"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 12,
+        "match_day_id": 4,
+        "time": "21:00",
+        "poule_name": "F",
+        "location_id": 5,
+        "teams": ["ENG", "ESP"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 13,
+        "match_day_id": 5,
+        "time": "21:00",
+        "poule_name": "H",
+        "location_id": 12,
+        "teams": ["IRN", "IRQ"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 14,
+        "match_day_id": 5,
+        "time": "21:00",
+        "poule_name": "H",
+        "location_id": 6,
+        "teams": ["ITA", "JAM"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 15,
+        "match_day_id": 5,
+        "time": "21:00",
+        "poule_name": "G",
+        "location_id": 11,
+        "teams": ["FRA", "GER"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 16,
+        "match_day_id": 5,
+        "time": "21:00",
+        "poule_name": "G",
+        "location_id": 16,
+        "teams": ["GRE", "HUN"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 17,
+        "match_day_id": 6,
+        "time": "21:00",
+        "poule_name": "I",
+        "location_id": 13,
+        "teams": ["JOR", "JPN"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 18,
+        "match_day_id": 6,
+        "time": "21:00",
+        "poule_name": "I",
+        "location_id": 7,
+        "teams": ["KOR", "MAR"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 19,
+        "match_day_id": 6,
+        "time": "21:00",
+        "poule_name": "J",
+        "location_id": 10,
+        "teams": ["SCO", "NED"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 20,
+        "match_day_id": 6,
+        "time": "21:00",
+        "poule_name": "J",
+        "location_id": 15,
+        "teams": ["NGA", "NOR"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 21,
+        "match_day_id": 7,
+        "time": "21:00",
+        "poule_name": "L",
+        "location_id": 1,
+        "teams": ["POR", "QAT"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 22,
+        "match_day_id": 7,
+        "time": "21:00",
+        "poule_name": "L",
+        "location_id": 8,
+        "teams": ["ROU", "RSA"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 23,
+        "match_day_id": 7,
+        "time": "21:00",
+        "poule_name": "K",
+        "location_id": 9,
+        "teams": ["PAN", "PAR"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 24,
+        "match_day_id": 7,
+        "time": "21:00",
+        "poule_name": "K",
+        "location_id": 3,
+        "teams": ["PER", "POL"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 25,
+        "match_day_id": 8,
+        "time": "21:00",
+        "poule_name": "A",
+        "location_id": 6,
+        "teams": [
+            "ARG",
+            "ALB"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 26,
+        "match_day_id": 8,
+        "time": "21:00",
+        "poule_name": "B",
+        "location_id": 11,
+        "teams": [
+            "BEL",
+            "AUS"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 27,
+        "match_day_id": 8,
+        "time": "21:00",
+        "poule_name": "B",
+        "location_id": 2,
+        "teams": [
+            "CAN",
+            "AUT"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 28,
+        "match_day_id": 8,
+        "time": "21:00",
+        "poule_name": "A",
+        "location_id": 4,
+        "teams": [
+            "MEX",
+            "ALG"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 29,
+        "match_day_id": 9,
+        "time": "21:00",
+        "poule_name": "C",
+        "location_id": 14,
+        "teams": ["BRA", "CHI"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 30,
+        "match_day_id": 9,
+        "time": "21:00",
+        "poule_name": "C",
+        "location_id": 7,
+        "teams": ["CIV", "BFA"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 31,
+        "match_day_id": 9,
+        "time": "21:00",
+        "poule_name": "D",
+        "location_id": 15,
+        "teams": [
+            "COL",
+            "CMR"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 32,
+        "match_day_id": 9,
+        "time": "21:00",
+        "poule_name": "D",
+        "location_id": 16,
+        "teams": [
+            "USA",
+            "COD"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 33,
+        "match_day_id": 10,
+        "time": "21:00",
+        "poule_name": "E",
+        "location_id": 1,
+        "teams": ["CRO", "CZE"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 34,
+        "match_day_id": 10,
+        "time": "21:00",
+        "poule_name": "E",
+        "location_id": 10,
+        "teams": ["DEN", "CRC"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 35,
+        "match_day_id": 10,
+        "time": "21:00",
+        "poule_name": "F",
+        "location_id": 9,
+        "teams": ["EGY", "ENG"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 36,
+        "match_day_id": 10,
+        "time": "21:00",
+        "poule_name": "F",
+        "location_id": 5,
+        "teams": ["ESP", "ECU"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 37,
+        "match_day_id": 11,
+        "time": "21:00",
+        "poule_name": "H",
+        "location_id": 12,
+        "teams": ["IRQ", "ITA"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 38,
+        "match_day_id": 11,
+        "time": "21:00",
+        "poule_name": "H",
+        "location_id": 6,
+        "teams": ["JAM", "IRN"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 39,
+        "match_day_id": 11,
+        "time": "21:00",
+        "poule_name": "G",
+        "location_id": 11,
+        "teams": ["GER", "GRE"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 40,
+        "match_day_id": 11,
+        "time": "21:00",
+        "poule_name": "G",
+        "location_id": 2,
+        "teams": ["HUN", "FRA"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 41,
+        "match_day_id": 12,
+        "time": "21:00",
+        "poule_name": "I",
+        "location_id": 13,
+        "teams": ["JPN", "KOR"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 42,
+        "match_day_id": 12,
+        "time": "21:00",
+        "poule_name": "I",
+        "location_id": 14,
+        "teams": ["MAR", "JOR"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 43,
+        "match_day_id": 12,
+        "time": "21:00",
+        "poule_name": "J",
+        "location_id": 8,
+        "teams": ["NED", "NGA"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 44,
+        "match_day_id": 12,
+        "time": "21:00",
+        "poule_name": "J",
+        "location_id": 15,
+        "teams": ["NOR", "SCO"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 45,
+        "match_day_id": 13,
+        "time": "21:00",
+        "poule_name": "L",
+        "location_id": 7,
+        "teams": ["QAT", "ROU"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 46,
+        "match_day_id": 13,
+        "time": "21:00",
+        "poule_name": "L",
+        "location_id": 1,
+        "teams": ["RSA", "POR"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 47,
+        "match_day_id": 13,
+        "time": "21:00",
+        "poule_name": "K",
+        "location_id": 9,
+        "teams": ["PAR", "PER"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 48,
+        "match_day_id": 13,
+        "time": "21:00",
+        "poule_name": "K",
+        "location_id": 4,
+        "teams": ["POL", "PAN"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 49,
+        "match_day_id": 14,
+        "time": "21:00",
+        "poule_name": "C",
+        "location_id": 12,
+        "teams": ["BFA", "CHI"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 50,
+        "match_day_id": 14,
+        "time": "21:00",
+        "poule_name": "C",
+        "location_id": 6,
+        "teams": ["BRA", "CIV"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 51,
+        "match_day_id": 14,
+        "time": "21:00",
+        "poule_name": "B",
+        "location_id": 2,
+        "teams": [
+            "BEL",
+            "CAN"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 52,
+        "match_day_id": 14,
+        "time": "21:00",
+        "poule_name": "B",
+        "location_id": 16,
+        "teams": [
+            "AUS",
+            "AUT"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 53,
+        "match_day_id": 14,
+        "time": "21:00",
+        "poule_name": "A",
+        "location_id": 3,
+        "teams": [
+            "ARG",
+            "MEX"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 54,
+        "match_day_id": 14,
+        "time": "21:00",
+        "poule_name": "A",
+        "location_id": 5,
+        "teams": [
+            "ALB",
+            "ALG"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 55,
+        "match_day_id": 15,
+        "time": "21:00",
+        "poule_name": "E",
+        "location_id": 14,
+        "teams": ["CRC", "CZE"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 56,
+        "match_day_id": 15,
+        "time": "21:00",
+        "poule_name": "E",
+        "location_id": 13,
+        "teams": ["CRO", "DEN"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 57,
+        "match_day_id": 15,
+        "time": "21:00",
+        "poule_name": "F",
+        "location_id": 8,
+        "teams": ["ECU", "ENG"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 58,
+        "match_day_id": 15,
+        "time": "21:00",
+        "poule_name": "F",
+        "location_id": 10,
+        "teams": ["EGY", "ESP"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 59,
+        "match_day_id": 15,
+        "time": "21:00",
+        "poule_name": "D",
+        "location_id": 11,
+        "teams": [
+            "COL",
+            "USA"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 60,
+        "match_day_id": 15,
+        "time": "21:00",
+        "poule_name": "D",
+        "location_id": 15,
+        "teams": [
+            "CMR",
+            "COD"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 61,
+        "match_day_id": 16,
+        "time": "21:00",
+        "poule_name": "I",
+        "location_id": 7,
+        "teams": ["JOR", "KOR"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 62,
+        "match_day_id": 16,
+        "time": "21:00",
+        "poule_name": "I",
+        "location_id": 1,
+        "teams": ["JPN", "MAR"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 63,
+        "match_day_id": 16,
+        "time": "21:00",
+        "poule_name": "G",
+        "location_id": 16,
+        "teams": ["FRA", "GRE"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 64,
+        "match_day_id": 16,
+        "time": "21:00",
+        "poule_name": "G",
+        "location_id": 2,
+        "teams": ["GER", "HUN"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 65,
+        "match_day_id": 16,
+        "time": "21:00",
+        "poule_name": "H",
+        "location_id": 9,
+        "teams": ["IRN", "ITA"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 66,
+        "match_day_id": 16,
+        "time": "21:00",
+        "poule_name": "H",
+        "location_id": 4,
+        "teams": ["IRQ", "JAM"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 67,
+        "match_day_id": 17,
+        "time": "21:00",
+        "poule_name": "L",
+        "location_id": 13,
+        "teams": ["POR", "ROU"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 68,
+        "match_day_id": 17,
+        "time": "21:00",
+        "poule_name": "L",
+        "location_id": 14,
+        "teams": ["QAT", "RSA"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 69,
+        "match_day_id": 17,
+        "time": "21:00",
+        "poule_name": "J",
+        "location_id": 10,
+        "teams": ["SCO", "NGA"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 70,
+        "match_day_id": 17,
+        "time": "21:00",
+        "poule_name": "J",
+        "location_id": 8,
+        "teams": ["NED", "NOR"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 71,
+        "match_day_id": 17,
+        "time": "21:00",
+        "poule_name": "K",
+        "location_id": 12,
+        "teams": ["PAN", "PER"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 72,
+        "match_day_id": 17,
+        "time": "21:00",
+        "poule_name": "K",
+        "location_id": 6,
+        "teams": ["PAR", "POL"],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 73,
+        "match_day_id": 18,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 11,
+        "teams": ["2A", "2B"],
+        "result": [],
+        "result_after_extra_time": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 74,
+        "match_day_id": 19,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 7,
+        "teams": [
+            "1E",
+            "3A/B/C/D/F"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 75,
+        "match_day_id": 19,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 5,
+        "teams": [
+            "1F",
+            "2C"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 76,
+        "match_day_id": 19,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 9,
+        "teams": [
+            "1C",
+            "2F"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 77,
+        "match_day_id": 20,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 13,
+        "teams": [
+            "1I",
+            "3C/D/F/G/H"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 78,
+        "match_day_id": 20,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 8,
+        "teams": [
+            "2E",
+            "2I"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 79,
+        "match_day_id": 20,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 3,
+        "teams": [
+            "1A",
+            "3C/E/F/H/I"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 80,
+        "match_day_id": 21,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 6,
+        "teams": [
+            "1L",
+            "3E/H/I/J/K"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 81,
+        "match_day_id": 21,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 15,
+        "teams": [
+            "1D",
+            "3B/E/F/I/J"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 82,
+        "match_day_id": 21,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 16,
+        "teams": [
+            "1G",
+            "3A/E/H/I/J"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 83,
+        "match_day_id": 22,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 1,
+        "teams": [
+            "2K",
+            "2L"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 84,
+        "match_day_id": 22,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 11,
+        "teams": [
+            "1H",
+            "2J"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 85,
+        "match_day_id": 22,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 2,
+        "teams": [
+            "1B",
+            "3E/F/G/I/J"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 86,
+        "match_day_id": 23,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 12,
+        "teams": [
+            "1J",
+            "2H"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 87,
+        "match_day_id": 23,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 10,
+        "teams": [
+            "1K",
+            "3D/E/I/J/L"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 88,
+        "match_day_id": 23,
+        "time": "21:00",
+        "poule_name": "round_of_32",
+        "location_id": 8,
+        "teams": [
+            "2D",
+            "2G"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 89,
+        "match_day_id": 24,
+        "time": "21:00",
+        "poule_name": "round_of_16",
+        "location_id": 14,
+        "teams": [
+            "W74",
+            "W77"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 90,
+        "match_day_id": 24,
+        "time": "21:00",
+        "poule_name": "round_of_16",
+        "location_id": 9,
+        "teams": [
+            "W73",
+            "W75"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 91,
+        "match_day_id": 25,
+        "time": "21:00",
+        "poule_name": "round_of_16",
+        "location_id": 13,
+        "teams": [
+            "W76",
+            "W78"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 92,
+        "match_day_id": 25,
+        "time": "21:00",
+        "poule_name": "round_of_16",
+        "location_id": 3,
+        "teams": [
+            "W79",
+            "W80"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 93,
+        "match_day_id": 26,
+        "time": "21:00",
+        "poule_name": "round_of_16",
+        "location_id": 8,
+        "teams": [
+            "W83",
+            "W84"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 94,
+        "match_day_id": 26,
+        "time": "21:00",
+        "poule_name": "round_of_16",
+        "location_id": 16,
+        "teams": [
+            "W81",
+            "W82"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 95,
+        "match_day_id": 27,
+        "time": "21:00",
+        "poule_name": "round_of_16",
+        "location_id": 6,
+        "teams": [
+            "W86",
+            "W88"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 96,
+        "match_day_id": 27,
+        "time": "21:00",
+        "poule_name": "round_of_16",
+        "location_id": 2,
+        "teams": [
+            "W85",
+            "W87"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 97,
+        "match_day_id": 28,
+        "time": "21:00",
+        "poule_name": "quarter_finals",
+        "location_id": 7,
+        "teams": [
+            "W89",
+            "W90"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 98,
+        "match_day_id": 29,
+        "time": "21:00",
+        "poule_name": "quarter_finals",
+        "location_id": 11,
+        "teams": [
+            "W93",
+            "W94"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 99,
+        "match_day_id": 30,
+        "time": "21:00",
+        "poule_name": "quarter_finals",
+        "location_id": 12,
+        "teams": [
+            "W91",
+            "W92"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 100,
+        "match_day_id": 30,
+        "time": "21:00",
+        "poule_name": "quarter_finals",
+        "location_id": 10,
+        "teams": [
+            "W95",
+            "W96"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 101,
+        "match_day_id": 31,
+        "time": "21:00",
+        "poule_name": "semi_finals",
+        "location_id": 8,
+        "teams": [
+            "W97",
+            "W98"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 102,
+        "match_day_id": 32,
+        "time": "21:00",
+        "poule_name": "semi_finals",
+        "location_id": 6,
+        "teams": [
+            "W99",
+            "W100"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 103,
+        "match_day_id": 33,
+        "time": "21:00",
+        "poule_name": "final_bronze",
+        "location_id": 12,
+        "teams": [
+            "POR01",
+            "POR02"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    },
+    {
+        "num": 104,
+        "match_day_id": 34,
+        "time": "21:00",
+        "poule_name": "final",
+        "location_id": 13,
+        "teams": [
+            "W101",
+            "W102"
+        ],
+        "result": [],
+        "result_after_penalties": [],
+        "events": []
+    }
+]

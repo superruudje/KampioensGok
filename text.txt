@@ -1,0 +1,16 @@
+Toronto 1
+Vancouver 2
+Mexico City 3
+Guadalajara 4
+Monterrey 5
+Atlanta 6
+Boston 7
+Dallas 8
+Houston 9
+Kansas City 10
+Los Angeles 11
+Miami 12
+New York New Jersey 13
+Philadelphia 14
+San Francisco Bay Area 15
+Seattle 16
