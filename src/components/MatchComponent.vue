@@ -60,14 +60,14 @@
 </template>
 
 <script setup>
-import {useTournament} from "@/stores/content.js";
+import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
 import {computed, ref} from "vue";
 import TimelineComponent from "@/components/TimelineComponent.vue";
 import PredictionTable from "@/components/PredictionTable.vue";
 
 const tournament = useTournament()
-const {matches_played, teamImages, teams} = storeToRefs(tournament)
+const {playedMatches, teamImages, teams} = storeToRefs(tournament)
 const openTimeline = ref(false)
 const openPrediction = ref(false)
 
@@ -84,11 +84,11 @@ const imageB = computed(() => {
 })
 
 const predictions = computed(() => {
-    return tournament.getGroupMatchPrediction(props.match.num)
+    return tournament.getGroupedMatchPrediction(props.match.num)
 })
 
 const started =  computed(() => {
-    return matches_played.value.length
+    return playedMatches.value.length
 })
 
 function getTeamName(id) {

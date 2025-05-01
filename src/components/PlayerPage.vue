@@ -1,170 +1,128 @@
 <template>
     <div id="player-page">
-        <div class="row g-3 mb-3">
-            <div class="col-md-4">
-                <div class="card border-0 rounded-0 shadow-sm h-100">
-                    <div
-                        class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
-                            <span class="txt-orange fw-bold lh-1" style="font-size: 4rem">
-                                <number-counter
-                                    :number="tournament.getParticipantTotalScore(participant.team_name, null)"></number-counter>
-                            </span>
-                        <span class="txt-blue fw-bold text-center">Totale punten</span>
-                        <i class="position-absolute top-0 end-0 bi p-2 bi-question-circle ms-2"
-                           data-bs-title="Totaal behaalde punten"
-                           data-bs-toggle="tooltip"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="row g-3">
-                    <div class="col-6">
-                        <div class="card border-0 rounded-0 shadow-sm h-100">
-                            <div
-                                class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
-                                <floating-stars v-if="playerPos < 4"
-                                                :color="playerPos === 1 ? 'txt-gold' : playerPos === 2 ? 'txt-silver' : 'txt-bronze'"
-                                                class="w-100"/>
-                                <span
-                                    :class="{ 'txt-gold' : playerPos === 1, 'txt-silver' : playerPos === 2, 'txt-bronze' : playerPos === 3}"
-                                    class="txt-orange fw-bold lh-1"
-                                    style="font-size: 4rem">
-                                    <number-counter
-                                        :number="playerPos"></number-counter>
-                            </span>
-                                <span class="txt-blue fw-bold text-center">Positie</span>
-                                <i class="position-absolute top-0 end-0 bi p-2 bi-question-circle ms-2"
-                                   data-bs-title="Huidige positie in de ranglijst"
-                                   data-bs-toggle="tooltip"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card border-0 rounded-0 shadow-sm h-100">
-                            <div
-                                class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
-                            <span class="txt-orange fw-bold lh-1" style="font-size: 4rem">
-                                <number-counter
-                                    :number="tournament.getParticipantScoreMatches(participant.team_name)"></number-counter>
-                            </span>
-                                <span class="txt-blue fw-bold text-center">Punten uit wedstrijden</span>
-                                <i class="position-absolute top-0 end-0 bi p-2 bi-question-circle ms-2"
-                                   data-bs-title="Totaal aantal punten verkregen uit wedstrijden"
-                                   data-bs-toggle="tooltip"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card border-0 rounded-0 shadow-sm h-100">
-                            <div
-                                class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
-                            <span class="txt-orange fw-bold lh-1" style="font-size: 4rem">
-                                <number-counter
-                                    :number="tournament.getParticipantScoreKnockOut(participant.team_name)"></number-counter>
-                            </span>
-                                <span class="txt-blue fw-bold text-center">Knock-out teams</span>
-                                <i class="position-absolute top-0 end-0 bi p-2 bi-question-circle ms-2"
-                                   data-bs-title="Punten verkregen vanuit teams in knock-out"
-                                   data-bs-toggle="tooltip"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card border-0 rounded-0 shadow-sm h-100">
-                            <div
-                                class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-4">
-                            <span class="txt-orange fw-bold lh-1" style="font-size: 4rem">
-                                <number-counter
-                                    :number="tournament.getParticipantScoreBonus(participant.team_name)"></number-counter>
-                            </span>
-                                <span class="txt-blue fw-bold text-center">Bonuspunten</span>
-                                <i class="position-absolute top-0 end-0 bi p-2 bi-question-circle ms-2"
-                                   data-bs-title="Punten verkregen vanuit bonusvragen" data-bs-toggle="tooltip"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row g-3">
+        <div class="row g-4">
             <div class="col-md-6">
                 <!-- voorspelling -->
-                <div class="card border-0 rounded-0 shadow-sm mb-3">
-                    <div class="card-body position-relative p-4">
-                        <h2 class="txt-blue fw-bolder">Voorspellingen Poulefase</h2>
-                        <p>Bekijk de voorspellingen van <b>{{ participant.name }}</b> Bij reeds gespeelde
-                            wedstrijden wordt de stand na 90 minuten speeltijd getoond <u>onder</u> de voorspelling.
-                        </p>
-                        <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
+                <div class="card rounded-4 mb-4">
+                    <div class="card-body p-3 p-md-4">
+                        <h3 class="fw-bolder w26-condensed mb-3">Voorspellingen poulefase</h3>
+                        <div v-if="!started" class="bg-orange rounded-2 py-2 px-3 text-light">
                             <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij
                             start toernooi.
                         </div>
                         <template v-else>
-                            <match-day-prediction v-for="(matches, match_day) in matches_to_play_poule"
-                                                  :match_day="match_day" :matches="matches"
-                                                  :name="participant.team_name"></match-day-prediction>
-                            <match-day-prediction v-for="(matches, match_day) in matches_played_poule"
-                                                  :match_day="match_day" :matches="matches"
-                                                  :name="participant.team_name"
-                                                  :played="true"></match-day-prediction>
+                            <MatchDayPrediction
+                                v-for="match_day in tournament.playedPouleMatches"
+                                :key="'played'"
+                                :match_day="match_day"
+                                :team_name="player.team_name"
+                                full
+                                played/>
+                            <MatchDayPrediction
+                                v-for="match_day in tournament.unplayedPouleMatches"
+                                :key="'to_play'"
+                                :match_day="match_day"
+                                :team_name="player.team_name"
+                                full/>
                         </template>
                     </div>
                 </div>
                 <!-- voorspelling -->
-                <div class="card border-0 rounded-0 shadow-sm">
-                    <div class="card-body position-relative p-4">
-                        <h2 class="txt-blue fw-bolder">Voorspellingen Knock-Out</h2>
-                        <p>Bekijk de voorspellingen van <b>{{ participant.name }}</b> Bij reeds gespeelde
-                            wedstrijden wordt de stand na 90 minuten speeltijd getoond <u>onder</u> de voorspelling.
-                            Punten voor de knock-out fase worden pas <u>na</u> de poulefase toegekend.
-                        </p>
-                        <span class="d-block"><i class="bi bi-check-circle-fill text-success me-2"></i>Team correct voorspeld.</span>
-                        <span class="d-block"><i class="bi bi-exclamation-circle-fill text-warning me-2"></i>Team incorrect voorspeld, maar wel in knockout.</span>
-                        <span class="d-block mb-3"><i class="bi bi-exclamation-circle-fill text-danger me-2"></i>Team incorrect voorspeld (geen punten).</span>
-                        <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
+                <div class="card rounded-4 mb-4">
+                    <div class="card-body p-3 p-md-4">
+                        <h3 class="fw-bolder w26-condensed mb-3">Voorspellingen knockout I</h3>
+                        <div v-if="!started" class="bg-orange rounded-2 py-2 px-3 text-light">
                             <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij
                             start toernooi.
                         </div>
                         <template v-else>
-                            <match-day-prediction v-for="(matches, match_day) in matches_played_knock_out"
-                                                  :match_day="match_day" :matches="matches"
-                                                  :name="participant.team_name"
-                                                  :played="true" :full="true"></match-day-prediction>
-                            <match-day-prediction v-for="(matches, match_day) in matches_to_play_knock_out"
-                                                  :match_day="match_day" :matches="matches"
-                                                  :name="participant.team_name" :full="true"></match-day-prediction>
+                            <MatchDayPrediction
+                                v-for="(matchDay) in tournament.playedMatchesByMatchDayType(MatchDayType.RoundOf32)"
+                                :match_day="matchDay"
+                                :team_name="player.team_name"
+                                played/>
+                            <MatchDayPrediction
+                                v-for="matchDay in tournament.unplayedMatchesByMatchDayType(MatchDayType.RoundOf32)"
+                                :match_day="matchDay"
+                                :team_name="player.team_name"/>
                         </template>
                     </div>
                 </div>
+                <!-- voorspelling -->
+                <div class="card rounded-4 mb-4">
+                    <div class="card-body p-3 p-md-4">
+                        <h3 class="fw-bolder w26-condensed mb-3">Voorspellingen knockout II</h3>
+                        <div v-if="!started" class="bg-orange rounded-2 py-2 px-3 text-light">
+                            <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij
+                            start toernooi.
+                        </div>
+                        <template v-else>
+                            <MatchDayPrediction
+                                v-for="(matchDay) in tournament.playedMatchesByMatchDayType(MatchDayType.RoundOf16)"
+                                :match_day="matchDay"
+                                :team_name="player.team_name"
+                                played/>
+                            <MatchDayPrediction
+                                v-for="matchDay in tournament.unplayedMatchesByMatchDayType(MatchDayType.RoundOf16)"
+                                :match_day="matchDay"
+                                :team_name="player.team_name"/>
+                        </template>
+                    </div>
+                </div>
+                <!-- voorspelling -->
+                <div class="card rounded-4">
+                    <div class="card-body p-3 p-md-4">
+                        <h3 class="fw-bolder w26-condensed mb-3">Voorspellingen finales</h3>
+                        <div v-if="!started" class="bg-orange rounded-2 py-2 px-3 text-light">
+                            <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij
+                            start toernooi.
+                        </div>
+                        <div v-else>
+                            <div v-for="round in ['quarter_final', 'semi_final', 'final']">
+                                <MatchDayPrediction
+                                    v-for="(matchDay) in tournament.playedMatchesByMatchDayType(round as MatchDayType)"
+                                    :match_day="matchDay"
+                                    :team_name="player.team_name"
+                                    played/>
+                                <MatchDayPrediction
+                                    v-for="matchDay in tournament.unplayedMatchesByMatchDayType(round as MatchDayType)"
+                                    :match_day="matchDay"
+                                    :team_name="player.team_name"/>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div class="col-md-6">
                 <!-- bonus vragen -->
-                <div class="card border-0 rounded-0 shadow-sm mb-3">
-                    <div class="card-body p-4">
-                        <h2 class="txt-blue fw-bolder">Bonusvragen</h2>
+                <div class="card rounded-4 mb-4">
+                    <div class="card-body p-3 p-md-4">
+                        <h3 class="fw-bolder w26-condensed mb-3">Bonusvragen</h3>
                         <p>Punten voor de bonusvragen worden pas <u>na</u> de poulefase toegekend.</p>
                         <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white mb-3">
                             <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij
                             start toernooi.
                         </div>
                         <template v-else>
-                            <div v-for="(q, idx) in bonus_vragen" class="d-flex flex-column mb-3">
-                                <span class="txt-orange fs-5 fst-italic">{{ q.q }}</span>
+                            <div
+                                v-for="(q, idx) in tournament.bonusQuestions"
+                                class="d-flex flex-column mb-3">
+                                <span class="txt-orange fs-6 fst-italic">{{ q.question }}</span>
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <span class="txt-blue">
+                                    <span class="txt-pk-elevation-01">
                                         <template v-if="getQuestionPoints(q, idx) > -1">
                                             <i v-if="getQuestionPoints(q, idx) > 0"
                                                class="bi bi-check-circle-fill me-2 text-success"></i>
-                                            <i v-else-if="q.a" class="bi bi-x-circle-fill me-2 text-danger"></i>
+                                            <i v-else-if="q.answer" class="bi bi-x-circle-fill me-2 text-danger"></i>
                                         </template>
-                                        <b>{{ getTeamName(participant.bonus[idx]) }}</b>
-                                        <span v-if="q.t === 'exact'" class="small fst-italic"> ({{
-                                                getPercentage(data[idx].find(i => i.id === participant.bonus[idx])?.count)
-                                            }}% denkt dit ook{{
-                                                q.n ? `, nu ${q.n}` : ""
-                                            }})</span>
-                                        <span v-if="q.t === 'est'" class="small fst-italic"> ({{
-                                                q.n ? `nu ${q.n}` : ""
+                                        <b>{{ getTeamName(player.bonus[idx]) }}</b>
+                                        <span v-if="q.type === 'exact'" class="small fst-italic"> ({{
+                                                getPercentage(data[idx].find(i => i.id === player.bonus[idx])?.count || 0)
+                                            }}% denkt dit ook{{ `, nu ${q.current_answer || '-'}` }})</span>
+                                        <span v-if="q.type === 'estimate'" class="small fst-italic"> ({{
+                                                `nu ${q.current_answer || '-'}`
                                             }})</span>
                                     </span>
                                     <span v-if="getQuestionPoints(q, idx) > -1" class="badge bg-orange">+{{
@@ -173,19 +131,30 @@
                                 </div>
                             </div>
                         </template>
-                        <router-link :to="{name: 'statistieken'}"
-                                     class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3"
-                                     tag="button">Naar statistieken<i
-                            class="bi bi-chevron-right ms-2"></i></router-link>
+                        <RouterLink :to="{name: 'statistieken'}">
+                            <button class="btn-wc26 btn-wc26-orange-alt w-fit">
+                                Naar statistieken
+                            </button>
+                        </RouterLink>
                     </div>
                 </div>
                 <!-- scoreverloop -->
-                <div class="card border-0 rounded-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <h2 class="txt-blue fw-bolder">Scoreverloop</h2>
-                        <div id="chart">
-                            <apexchart :options="chartOptions" :series="series" type="line"/>
+                <div class="card rounded-4 mb-4">
+                    <div class="card-body p-3 p-md-4">
+                        <h3 class="fw-bolder w26-condensed mb-3">Scoreverloop</h3>
+                        <div style="height: 300px">
+                            <EchartLine :data="LINE_CHART"/>
                         </div>
+                    </div>
+                </div>
+                <!-- info -->
+                <div class="card rounded-4">
+                    <div class="card-body p-3 p-md-4">
+                        <h3 class="fw-bolder w26-condensed mb-3">Info</h3>
+                        <span class="d-block"><i class="bi bi-check-circle-fill text-success me-2"></i>Team correct voorspeld.</span>
+                        <span class="d-block"><i class="bi bi-exclamation-circle-fill text-warning me-2"></i>Team incorrect voorspeld, maar wel in knockout.</span>
+                        <span class="d-block"><i class="bi bi-exclamation-circle-fill text-danger me-2"></i>Team incorrect voorspeld (geen punten).</span>
+
                     </div>
                 </div>
             </div>
@@ -193,56 +162,71 @@
     </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import {computed, ref} from "vue";
-import {useTournament} from "@/stores/content.js";
-import NumberCounter from "@/components/NumberCounter.vue";
+import {useTournament} from "@/stores/content.ts";
 import MatchDayPrediction from "@/components/MatchDayPrediction.vue";
 import {storeToRefs} from "pinia";
-import FloatingStars from "@/components/floatingStars.vue";
+import {MatchDayType} from "@/types/tournament.ts";
+import type {Player, Question} from "@/types/pool.ts";
+import EchartLine from "@/components/charts/EchartLine.vue";
 
 const tournament = useTournament();
 const {
     players,
-    matches_played,
-    matches_played_by_day,
-    matches_played_poule,
-    matches_to_play_poule,
-    matches_played_knock_out,
-    matches_to_play_knock_out,
-    totalGoals,
-    estTotalGoals,
-    estTotalCards,
-    prediction_tournament_champion,
-    prediction_top_scorer,
-    prediction_most_cards,
-    prediction_most_against,
-    prediction_first_goal_nl,
-    prediction_first_card_nl,
-    prediction_top_assist,
+    playedMatchesGroupedByDay,
     teams,
-    bonus_vragen
 } = storeToRefs(tournament)
 
-const props = defineProps({
-    participant: Object
-})
+const props = defineProps<{
+    player: Player,
+}>()
+
+const matchesPlayedQuarterFinal = computed(() => tournament.playedMatchesByMatchDayType(MatchDayType.QuaterFinal));
+const matchesUnplayedQuarterFinal = computed(() => tournament.unplayedMatchesByMatchDayType(MatchDayType.QuaterFinal));
 
 const data = ref([
-    prediction_tournament_champion.value,
+    tournament.getBonusPrediction(0),
     [],
     [],
-    prediction_most_against.value,
-    prediction_most_cards.value,
-    prediction_top_scorer.value,
-    prediction_top_assist.value,
-    prediction_first_goal_nl.value,
-    prediction_first_card_nl.value
+    tournament.getBonusPrediction(3),
+    tournament.getBonusPrediction(4),
+    tournament.getBonusPrediction(5),
+    tournament.getBonusPrediction(6),
+    tournament.getBonusPrediction(7),
+    tournament.getBonusPrediction(8),
 ])
 
-function getQuestionPoints(q, idx) {
-    return tournament.getBonusScore(q, props.participant.bonus[idx],
-        Object.keys(matches_played_by_day.value).length)
+const LINE_CHART = computed(() => {
+    const lines: { name: string, data: { category: string, value?: number }[] }[] = [];
+
+    const data: { category: string, value?: number }[] = [
+        {category: 'start', value: 0}
+    ]
+
+    playedMatchesGroupedByDay.value.forEach((matchDay, idx) => {
+        const score = tournament.getParticipantTotalScore(props.player.team_name, idx + 1);
+        data.push({category: matchDay.matchDayDate, value: score})
+    })
+
+    lines.push({
+        name: props.player.team_name.length > 30 ? props.player.team_name.slice(0, 30) + '...' :props.player.team_name,
+        data
+    })
+
+    return lines
+})
+
+/**
+ * Calculates the points for the given question based on the player's bonus and the number of played matches grouped by day.
+ *
+ * @param {Question} question - The question object for which points need to be calculated.
+ * @param {number} idx - The index of the player's bonus associated with the question.
+ * @return {number} The calculated score for the given question.
+ */
+function getQuestionPoints(question: Question, idx: number) {
+    return tournament.getBonusScore(question, props.player.bonus[idx],
+        Object.keys(playedMatchesGroupedByDay.value).length)
 }
 
 /**
@@ -250,8 +234,8 @@ function getQuestionPoints(q, idx) {
  * @param id
  * @returns {*}
  */
-function getTeamName(id) {
-    return teams.value.find((e) => e.id === id)?.name || id
+function getTeamName(id: string) {
+    return teams.value.find((e) => e.id === id)?.full_name || id
 }
 
 /**
@@ -259,29 +243,13 @@ function getTeamName(id) {
  * @param count
  * @returns {number}
  */
-function getPercentage(count) {
+function getPercentage(count: number) {
     return (Math.round((count / players.value.length * 100) * 100) / 100)
 }
 
-/**
- * Calculate score for estimate questions
- * @param prediction
- * @param outcome
- * @returns {number}
- */
-function getEstimateScore(prediction, outcome) {
-    if (prediction === outcome) return 40
-    else if (prediction >= (outcome - 5) && prediction <= (outcome + 5)) return 25
-    else if (prediction >= (outcome - 10) && prediction <= (outcome + 10)) return 15
-    else return 0
-}
-
-const playerPos = computed(() => {
-    return tournament.getPlayerStanding(props.participant.team_name)
-})
-
 const started = computed(() => {
-    return matches_played.value.length
+    return true
+    // return playedMatches.value.length
 })
 
 /**
@@ -290,143 +258,16 @@ const started = computed(() => {
  */
 const series = computed(() => {
     let data = [{x: "start", y: 0}]
-    Object.keys(matches_played_by_day.value).forEach((key, idx) => {
-        const score = tournament.getParticipantTotalScore(props.participant.team_name, idx + 1)
+    Object.keys(playedMatchesGroupedByDay.value).forEach((key, idx) => {
+        const score = tournament.getParticipantTotalScore(props.player.team_name, idx + 1)
         data.push({x: key, y: score})
     })
     return [{
-        name: props.participant.team_name,
+        name: props.player.team_name,
         data: data
     }]
 })
 
-/**
- * Chart options
- * @type {{plotOptions: {line: {isSlopeChart: boolean}}, dataLabels: {enabled: boolean}, xaxis: {title: {text: string}}, markers: {size: number}, chart: {animations: {enabled: boolean}, zoom: {enabled: boolean}, type: string}, yaxis: {title: {text: string}}}}
- */
-const chartOptions = {
-    chart: {
-        animations: {enabled: false},
-        zoom: {enabled: false},
-        type: 'line',
-    },
-    colors: ['#f36c21'],
-    dataLabels: {enabled: false},
-    markers: {size: 5},
-    xaxis: {title: {text: 'Speeldag'}},
-    yaxis: {title: {text: 'Score'}},
-    plotOptions: {
-        line: {
-            isSlopeChart: true,
-        },
-    },
-    tooltip: {
-        fixed: {
-            enabled: true,
-            position: "topLeft",
-        },
-        custom: function ({series, seriesIndex, dataPointIndex, w}) {
-            const score = series[seriesIndex][dataPointIndex]
-            const name = w.globals.seriesNames[seriesIndex]
-            const color = w.globals.colors[seriesIndex]
-
-            let html = ''
-            html += `<div class="d-flex align-items-center">`
-            html += `<i class="bi bi-circle-fill me-2" style="color:` + color + `"></i>`
-            html += `<div class="player">` + name + `: <b>` + score + `</b>` + `</div>`
-            html += `</div>`
-
-
-            return '<div class="card border-0 rounded-0 shadow-sm">' +
-                '<div class="card-body">' +
-                '<div class="txt-blue fw-bolder">' + w.globals.categoryLabels[dataPointIndex] + '</div>' +
-                '<div>' +
-                html +
-                '</div>' +
-                '</div> ' +
-                '</div>'
-        }
-    },
-    annotations: {
-        xaxis: [
-            {
-                x: "14-06-2024",
-                x2: "26-06-2024",
-                fillColor: '#f36c21',
-                opacity: .05,
-                label: {
-                    borderColor: "#f36c21",
-                    style: {
-                        color: "#fff",
-                        background: "#f36c21"
-                    },
-                    text: "Poule"
-                }
-            },
-            {
-                x: "26-06-2024",
-                x2: "02-07-2024",
-                fillColor: "#253780",
-                opacity: .05,
-                label: {
-                    borderColor: "#253780",
-                    style: {
-                        color: "#fff",
-                        background: "#253780"
-                    },
-                    text: "Round of 16"
-                }
-            },
-            {
-                x: "02-07-2024",
-                x2: "06-07-2024",
-                fillColor: '#f36c21',
-                opacity: .05,
-                label: {
-                    borderColor: "#f36c21",
-                    style: {
-                        color: "#fff",
-                        background: "#f36c21"
-                    },
-                    text: "Quarter-finals"
-                }
-            },
-            {
-                x: "06-07-2024",
-                x2: "10-07-2024",
-                fillColor: "#253780",
-                opacity: .05,
-                label: {
-                    borderColor: "#253780",
-                    style: {
-                        color: "#fff",
-                        background: "#253780"
-                    },
-                    text: "Semi-finals"
-                }
-            },
-            {
-                x: "10-07-2024",
-                x2: "14-07-2024",
-                fillColor: '#f36c21',
-                opacity: .05,
-                label: {
-                    borderColor: "#f36c21",
-                    style: {
-                        color: "#fff",
-                        background: "#f36c21"
-                    },
-                    text: "Final"
-                }
-            }
-        ]
-    }
-}
-
 </script>
 
-<style lang="sass" scoped>
-.team-wrapper
-    flex: 1
-
-</style>
+<style lang="sass" scoped></style>

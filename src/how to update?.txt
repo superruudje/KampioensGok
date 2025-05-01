@@ -10,4 +10,4 @@ What to do to update the site with new scores:
     - direct: if type is red, set if direct red card or not
 4. update teams if knockout-fase
 5. if knockout-fase teams are known, update poule.json. Add team_id to correct array.
-6. if bonus question answer in known, update stores/content.js store -> bonus (array).
+6. if bonus question answer in known, update stores/content.ts store -> bonus (array).

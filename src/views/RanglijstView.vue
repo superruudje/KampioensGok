@@ -1,37 +1,39 @@
 <template>
     <div id="ranglijst-view">
-        <header class="bg-blue py-3 py-md-5">
-            <div class="container">
-                <div class="row">
+        <header class="bg-26-primary py-3 py-md-5">
+            <div class="container-lg">
+                <div class="row text-white">
                     <div class="col-12">
-                        <h1 class="fs-2 text-white fw-bolder">EK 2024</h1>
-                        <h2 class="fs-6 mb-0 txt-orange fw-bolder">Ranglijst</h2>
+                        <h1 class="w26-condensed fw-bolder mb-0">Ranglijst en scoreverloop</h1>
                     </div>
                 </div>
             </div>
         </header>
-        <main class="container-md py-2 py-md-5">
-            <div class="row gy-3">
+        <main class="container-lg py-3 py-md-5">
+            <div class="row">
                 <div class="col-12">
-                    <div class="card border-0 rounded-0 shadow-sm mb-3 mb-md-5">
-                        <div class="card-body p-4">
-                            <div class="row align-items-center g-2 mb-3">
-                                <h2 class="col-12 col-md-auto me-md-auto mb-0 txt-blue fw-bolder">Ranglijst</h2>
-                                <div class="col-auto">
-                                    <div class="ms-auto w-auto input-group input-group-sm">
-                                        <input v-model="searchTerm" class="form-control" placeholder="Zoek naar deelnemer of team"
-                                               type="search" @input="goPage(0)">
-                                        <span id="basic-addon1" class="input-group-text"><i class="bi bi-search"></i></span>
-                                    </div>
+                    <div class="card rounded-4 mb-4">
+                        <div class="card-body p-3 p-md-4">
+                            <div class="d-flex gap-2 align-items-center mb-3">
+                                <h3 class="fw-bolder w26-condensed mb-0">Ranglijst</h3>
+                                <div class="ms-auto w-auto input-group input-group-sm">
+                                    <input v-model="searchTerm" class="form-control" placeholder="Zoek naar deelnemer of team"
+                                           type="search" @input="goPage(0)">
+                                    <span id="basic-addon1" class="input-group-text"><i class="bi bi-search"></i></span>
                                 </div>
-                                <div class="col-auto">
-                                    <select class="form-select form-select-sm w-auto" v-model="snapshot">
-                                        <option :value="0">start</option>
-                                        <option v-for="(snapshot, idx) in snapshots" :value="idx + 1">{{ snapshot }}</option>
-                                    </select>
-                                </div>
+                                <select
+                                    v-model="snapshot"
+                                    class="form-select form-select-sm w-auto">
+                                    <option :value="0">Start</option>
+                                    <option v-for="(snapshot, idx) in snapshots" :value="snapshot.id">{{ snapshot.label }}</option>
+                                </select>
                             </div>
-                            <div class="w-100 overflow-hidden overflow-x-auto">
+                            <p class="font-book mb-4">Op deze pagina kun je eenvoudig zoeken naar een team door de naam in de zoekbalk in te
+                                typen — de
+                                ranglijst past zich automatisch aan. Benieuwd hoe het ervoor stond in een eerdere ronde? Spring terug in
+                                de tijd en bekijk de ranglijst en het scoreverloop zoals het toen was. Wil je zien wat iemand precies
+                                heeft voorspeld? Klik dan op de naam van de speler om al zijn of haar voorspellingen te bekijken.</p>
+                            <div class="w-100 overflow-hidden overflow-x-auto mb-3">
                                 <table class="table">
                                     <thead>
                                     <tr>
@@ -39,7 +41,7 @@
                                         <th class="txt-orange" scope="col"></th>
                                         <th class="txt-orange" scope="col">Pnt.</th>
                                         <th class="txt-orange" scope="col">Team</th>
-                                        <th class="txt-orange" style="width: 99%" scope="col">Deelnemer</th>
+                                        <th class="txt-orange" scope="col" style="width: 99%">Deelnemer</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -49,20 +51,25 @@
                                         </th>
                                         <td>
                                             <i v-if="snapshot === 0" class="bi bi-dash-lg"></i>
-                                            <i v-else-if="old_standing.find(p => p.name === player.name).pos < player.pos"
-                                               class="txt-blue bi bi-arrow-down-circle-fill"></i>
-                                            <i v-else-if="old_standing.find(p => p.name === player.name).pos > player.pos"
-                                               class="txt-orange bi bi-arrow-up-circle-fill"></i>
+                                            <i v-else-if="(old_standing.find(p => p.name === player.name)?.pos || 0) < (player.pos || 0)"
+                                               class="text-red bi bi-arrow-down-circle-fill"></i>
+                                            <i v-else-if="(old_standing.find(p => p.name === player.name)?.pos || 0) > (player.pos || 0)"
+                                               class="text-green bi bi-arrow-up-circle-fill"></i>
                                             <i v-else class="bi bi-dash-lg"></i>
                                         </td>
                                         <td>{{ player.score }}</td>
-                                        <td class="text-nowrap"><router-link :to="{name: 'deelnemer', params: {id: player.team_name}}">{{ player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name }}</router-link></td>
+                                        <td class="text-nowrap w26-condensed">
+                                            <router-link :to="{name: 'deelnemer', params: {id: player.team_name}}">{{
+                                                    player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name
+                                                }}
+                                            </router-link>
+                                        </td>
                                         <td class="text-nowrap" style="width: 99%;">{{ player.name }}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="row align-items-center g-2 mb-5">
+                            <div class="row align-items-center g-2">
                                 <div class="col-12 col-md">
                                     <nav>
                                         <ul class="pagination mb-0">
@@ -118,7 +125,9 @@
                                     <span class="txt-blue fw-bold small">{{ filtersData.length }} resultaten</span>
                                 </div>
                                 <div class="col-auto">
-                                    <select v-model="pageSize" aria-label="Default select example" class="form-select">
+                                    <select
+                                        v-model="pageSize"
+                                        class="form-select form-select-sm">
                                         <option :value="10">10 resultaten per pagina</option>
                                         <option :value="20">20 resultaten per pagina</option>
                                         <option :value="30">30 resultaten per pagina</option>
@@ -129,17 +138,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card border-0 rounded-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center gap-2 mb-3">
-                                <h2 class="mb-0 txt-blue fw-bolder me-auto">Scoreverloop</h2>
-                                <select class="form-select form-select-sm w-auto" v-model="snapshot">
+                    <div class="card rounded-4">
+                        <div class="card-body p-3 p-md-4">
+                            <div class="d-flex gap-2 align-items-center mb-4">
+                                <h3 class="fw-bolder w26-condensed mb-0">Scoreverloop</h3>
+                                <select v-model="snapshot" class="ms-auto form-select form-select-sm w-auto">
                                     <option :value="0">start</option>
-                                    <option v-for="(snapshot, idx) in snapshots" :value="idx + 1">{{ snapshot }}</option>
+                                    <option v-for="(snapshot, idx) in snapshots" :value="snapshot.id">{{ snapshot.label }}</option>
                                 </select>
                             </div>
-                            <div id="chart">
-                                <apexchart :options="chartOptions" :series="chartData" type="line"/>
+
+                            <div style="height: 800px">
+                                <EchartLine :data="LINE_CHART"/>
                             </div>
                         </div>
                     </div>
@@ -149,34 +159,35 @@
     </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import {storeToRefs} from "pinia";
-import {useTournament} from "@/stores/content";
-import {computed, onMounted, ref, watch} from "vue";
+import {useTournament} from "@/stores/content.js";
+import {computed, onMounted, type Ref, ref, watch} from "vue";
+import EchartLine from "@/components/charts/EchartLine.vue";
+import type {Player} from "@/types/pool.ts";
 
 const tournament = useTournament();
-const {pageSize, pageNumber, matches_played_by_day, players} = storeToRefs(tournament)
-const searchTerm = ref('')
-const standing = ref([])
-const old_standing = ref([])
-const snapshot = ref(0)
-const chartData = ref([])
+const {pageSize, pageNumber, playedMatchesGroupedByDay, players} = storeToRefs(tournament)
+const searchTerm: Ref<string> = ref('');
+const standing: Ref<Player[]> = ref([]);
+const old_standing: Ref<Player[]> = ref([]);
+const snapshot: Ref<number> = ref(0);
 
 const snapshots = computed(() => {
-    return Object.keys(matches_played_by_day.value)
+    return playedMatchesGroupedByDay.value.map(groupDay => {
+        return {label: groupDay.matchDayDate, id: groupDay.matchDayId}
+    })
 })
 
 watch(snapshot, (newSnapshot) => {
-    standing.value = tournament.getStanding(newSnapshot)
-    old_standing.value = tournament.getStanding(newSnapshot - 1)
-    getScoreProgression(newSnapshot)
+    standing.value = tournament.getStanding(newSnapshot);
+    old_standing.value = tournament.getStanding(newSnapshot - 1);
 })
 
 onMounted(() => {
-    snapshot.value = snapshots.value.length
-    standing.value = tournament.getStanding(snapshot.value)
-    old_standing.value = tournament.getStanding(snapshot.value - 1)
-    getScoreProgression(snapshot.value)
+    snapshot.value = snapshots.value.at(-1)?.id || 0;
+    standing.value = tournament.getStanding(snapshot.value);
+    old_standing.value = tournament.getStanding(snapshot.value - 1);
 })
 
 /**
@@ -184,194 +195,88 @@ onMounted(() => {
  * @type {ComputedRef<*>}
  */
 const paginatedData = computed(() => {
-    if (pageSize.value === 'all') return filtersData.value
-    const start = pageNumber.value * pageSize.value,
-        end = start + pageSize.value
-    return filtersData.value.slice(start, end)
+    if (typeof pageSize.value === 'string') return filtersData.value
+    else {
+        const start = pageNumber.value * pageSize.value,
+            end = start + pageSize.value
+        return filtersData.value.slice(start, end)
+    }
 })
 
 /**
  * Filter original data by search value
- * @type {ComputedRef<*>}
+ * @type {ComputedRef<Player[]>}
  */
 const filtersData = computed(() => {
-    return standing.value.filter(x => !searchTerm.value || x.name.toLowerCase().includes(searchTerm.value.toLowerCase())
-        || x.team_name.toLowerCase().includes(searchTerm.value.toLowerCase()))
+    return standing.value.filter(player => !searchTerm.value || player.name.toLowerCase().includes(searchTerm.value.toLowerCase())
+        || player.team_name.toLowerCase().includes(searchTerm.value.toLowerCase()))
 })
 
 /**
- * Total amount of pages
+ * Total number of pages
  * @type {ComputedRef<number|number>}
  */
 const pageCount = computed(() => {
     if (pageSize.value === 'all') return 1
     const l = filtersData.value.length,
-        s = pageSize.value;
+        s = pageSize.value as number;
     return Math.ceil(l / s);
 })
 
 /**
- * Chart options
- * @type {{plotOptions: {line: {isSlopeChart: boolean}}, dataLabels: {enabled: boolean}, xaxis: {title: {text: string}}, markers: {size: number}, chart: {animations: {enabled: boolean}, zoom: {enabled: boolean}, type: string}, yaxis: {title: {text: string}}}}
+ * A computed variable representing data for a line chart visualization. This data is structured
+ * as an array containing information for two players, where each player object includes a name
+ * and a series of data points. Each data point consists of a category label and a corresponding value.
+ *
+ * The structure of the data is as follows:
+ * - Each player object contains:
+ *   - `name` (string): The name of the player.
+ *   - `data` (array): An array of data points, where each point is an object consisting of:
+ *     - `category` (string): The category or label of the data point (e.g., 'start', 'match_day_1').
+ *     - `value` (number): The numerical value associated with that category.
+ *
+ * Example data structure:
+ * [
+ *   {
+ *     name: "Player1",
+ *     data: [
+ *       { category: "start", value: 0 },
+ *       { category: "match_day_1", value: 5 },
+ *       { category: "match_day_2", value: 7 }
+ *     ]
+ *   },
+ *   {
+ *     name: "Player2",
+ *     data: [
+ *       { category: "start", value: 0 },
+ *       { category: "match_day_1", value: 2 },
+ *       { category: "match_day_2", value: 4 }
+ *     ]
+ *   }
+ * ]
  */
-const chartOptions = {
-    chart: {
-        width: "100%",
-        animations: {enabled: false},
-        zoom: {enabled: true},
-        type: 'line',
-    },
-    dataLabels: {enabled: false},
-    markers: {size: 5},
-    xaxis: {title: {text: 'Speeldag'}},
-    yaxis: {title: {text: 'Score'}},
-    responsive: [
-        {
-            breakpoint: 768,
-            options: {
-                chart: {height: 600},
-                xaxis: {labels: {show: false}},
-                yaxis: {labels: {show: false}},
-            }
-        }
-    ],
-    plotOptions: {
-        line: {
-            isSlopeChart: true,
-        },
-    },
-    tooltip: {
-        fixed: {
-            enabled: true,
-            position: "topLeft",
-        },
-        custom: function({series, seriesIndex, dataPointIndex, w}) {
-            const score = series[seriesIndex][dataPointIndex]
-            const players = series.map((s, i) => {
-                return {
-                    idx: i,
-                    data: s,
-                    name: w.globals.seriesNames[i],
-                    color: w.globals.colors[i],
-                }
-            }).filter(s => s.data[dataPointIndex] === score)
-            let html = ''
-            players.forEach((s, i) => {
-                html += `<div class="d-flex align-items-center">`
-                html += `<i class="bi bi-circle-fill me-2" style="color:` + s.color + `"></i>`
-                html += `<div class="player">` + s.name +  `: <b>` + score + `</b>` +`</div>`
-                html += `</div>`
-            })
-
-            return '<div class="card border-0 rounded-0 shadow-sm">' +
-                '<div class="card-body">' +
-                '<div class="txt-blue fw-bolder">' + w.globals.categoryLabels[dataPointIndex] +'</div>' +
-                '<div class="overflow-hidden position-relative" style="max-height: 150px"><div id="' + (players.length > 6 ? 'scroll-me' : '') + '">' +
-                html +
-                '</div></div>' +
-                '</div> ' +
-                '</div>'
-        }
-    },
-    annotations: {
-        xaxis: [
-            {
-                x: "14-06-2024",
-                x2: "26-06-2024",
-                fillColor: '#f36c21',
-                opacity: .05,
-                label: {
-                    borderColor: "#f36c21",
-                    style: {
-                        color: "#fff",
-                        background: "#f36c21"
-                    },
-                    text: "Poule"
-                }
-            },
-            {
-                x: "26-06-2024",
-                x2: "02-07-2024",
-                fillColor: "#253780",
-                opacity: .05,
-                label: {
-                    borderColor: "#253780",
-                    style: {
-                        color: "#fff",
-                        background: "#253780"
-                    },
-                    text: "Round of 16"
-                }
-            },
-            {
-                x: "02-07-2024",
-                x2: "06-07-2024",
-                fillColor: '#f36c21',
-                opacity: .05,
-                label: {
-                    borderColor: "#f36c21",
-                    style: {
-                        color: "#fff",
-                        background: "#f36c21"
-                    },
-                    text: "Quarter-finals"
-                }
-            },
-            {
-                x: "06-07-2024",
-                x2: "10-07-2024",
-                fillColor: "#253780",
-                opacity: .05,
-                label: {
-                    borderColor: "#253780",
-                    style: {
-                        color: "#fff",
-                        background: "#253780"
-                    },
-                    text: "Semi-finals"
-                }
-            },
-            {
-                x: "10-07-2024",
-                x2: "14-07-2024",
-                fillColor: '#f36c21',
-                opacity: .05,
-                label: {
-                    borderColor: "#f36c21",
-                    style: {
-                        color: "#fff",
-                        background: "#f36c21"
-                    },
-                    text: "Final"
-                }
-            }
+const LINE_CHART = computed(() => {
+    const lines: { name: string, data: { category: string, value?: number }[] }[] = [];
+    tournament.players.forEach((player: Player) => {
+        const data: { category: string, value?: number }[] = [
+            {category: 'start', value: 0}
         ]
-    }
-}
-
-/**
- * Create chart data
- */
-function getScoreProgression(snapshot) {
-    let dataSets = []
-    const sorted = [...players.value].sort((a, b) => a.team_name.localeCompare(b.team_name));
-    sorted.forEach(player => {
-        let data = [{x: "start", y: 0}]
-        snapshots.value.slice(0, snapshot).forEach((s, idx) => {
-            const score = tournament.getParticipantTotalScore(player.team_name, idx + 1)
-            data.push({x: s, y: score})
+        snapshots.value.slice(0, snapshot.value).forEach(snapshot => {
+            const score = tournament.getParticipantTotalScore(player.team_name, snapshot.id)
+            data.push({category: snapshot.label, value: score})
         })
-        const dataSet = {
+
+        lines.push({
             name: player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name,
-            data: data
-        }
-        dataSets.push(dataSet)
+            data
+        })
     })
-    chartData.value = dataSets
-}
+
+    return lines
+})
 
 /**
- * Go to previous page
+ * Go to the previous page
  */
 function prevPage() {
     if (pageNumber.value > 0)
@@ -379,7 +284,7 @@ function prevPage() {
 }
 
 /**
- * Go to next page
+ * Go to the next page
  */
 function nextPage() {
     if (pageNumber.value + 1 < pageCount.value)
@@ -387,17 +292,19 @@ function nextPage() {
 }
 
 /**
- * Go to page number
+ * Go to the page number
  * @param i
  */
-function goPage(i) {
+function goPage(i: number) {
     pageNumber.value = i;
 }
+
 </script>
 
 <style lang="sass">
 #scroll-me
     animation: MoveUpDown 15s linear infinite
+
 @keyframes MoveUpDown
     10%
         transform: translateY(0)
@@ -409,6 +316,7 @@ function goPage(i) {
 .page-link
     margin: 0 4px
     border: none
+    border-radius: 8px
     color: #253780
     font-size: 13px
     font-weight: bold

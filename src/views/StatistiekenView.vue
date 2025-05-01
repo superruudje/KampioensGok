@@ -1,138 +1,231 @@
 <template>
     <div id="statistieken-view">
-        <header class="bg-blue py-3 py-md-5">
+        <header class="bg-wk26-darkblue py-3 py-md-5">
             <div class="container">
-                <div class="row">
+                <div class="row g-3">
                     <div class="col-12">
-                        <h1 class="fs-2 text-white fw-bolder">EK 2024</h1>
-                        <h2 class="fs-6 mb-0 txt-orange fw-bolder">De statistieken</h2>
+                        <h1 class="text-white w26-condensed fw-bolder mb-0">Toernooi statistieken</h1>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-light bg-mix rounded-4 p-4">
+                            <h2 class="fs-5">Goals</h2>
+                            <div class="num-stat-item">
+                                <div class="fs-1 fw-bold">
+                                    <NumberCounter
+                                        :number="tournament.totalGoals"/>
+                                </div>
+                                <div class="fw-lighter">Totale goals</div>
+                            </div>
+                            <hr>
+                            <div class="d-flex gap-4">
+                                <div class="num-stat-item">
+                                    <div class="fs-4 fw-bold">
+                                        {{ tournament.averageGoalsPerMatch }}
+                                    </div>
+                                    <div class="fw-lighter">Goals per wedstrijd</div>
+                                </div>
+                                <div class="num-stat-item">
+                                    <div class="fs-4 fw-bold">
+                                        {{ tournament.averageGoalsPerMatch * tournament.matches.length }}
+                                    </div>
+                                    <div class="fw-lighter">Goals verwacht</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-light bg-mix rounded-4 p-4">
+                            <h2 class="fs-5">Kaarten</h2>
+                            <div class="num-stat-item">
+                                <div class="fs-1 fw-bold">
+                                    <NumberCounter
+                                        :number="total_cards"/>
+                                </div>
+                                <div class="fw-lighter">Totale kaarten</div>
+                            </div>
+                            <hr>
+                            <div class="d-flex gap-4">
+                                <div class="num-stat-item">
+                                    <div class="fs-4 fw-bold">
+                                        {{ tournament.averageCardsPerMatch }}
+                                    </div>
+                                    <div class="fw-lighter">Kaarten per wedstrijd</div>
+                                </div>
+                                <div class="num-stat-item">
+                                    <div class="fs-4 fw-bold">
+                                        {{ tournament.averageCardsPerMatch * tournament.matches.length }}
+                                    </div>
+                                    <div class="fw-lighter">Kaarten verwacht</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
-        <main class="container-md py-2 py-md-5">
-            <div class="row g-3 mb-3">
+        <main class="container-md py-3 py-md-5">
+            <div class="row g-3 mb-5">
+                <div class="col-12">
+                    <h2 class="w26-condensed">Team statistieken</h2>
+                </div>
                 <!-- meeste tegengoals -->
                 <div class="col-md-4">
-                    <top-table title="Meeste tegengoals" :list="groupedGoalsAgainst"/>
+                    <TopTable
+                        key="goals_against"
+                        :list="tournament.goalsAgainstRanking"
+                        title="Goals tegen"/>
                 </div>
                 <!-- meeste kaarten -->
                 <div class="col-md-4">
-                    <top-table title="Meeste kaarten" :list="groupedTeamCards" :table_header="['Land', 'Kaarten']"/>
+                    <TopTable
+                        key="total_cards"
+                        :list="tournament.totalCardsPerTeam"
+                        title="Meeste kaarten"/>
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-12">
+                    <h2 class="w26-condensed">Speler statistieken</h2>
                 </div>
                 <!-- top scorer -->
                 <div class="col-md-4">
-                    <top-table title="Top scorer" :list="groupedTopScorer" :table_header="['Speler', 'Goals']"/>
+                    <TopTable
+                        key="top_scorer"
+                        :list="tournament.topScorers"
+                        title="Top scorer"/>
                 </div>
                 <!-- meest assist -->
                 <div class="col-md-4">
-                    <top-table title="Top assist" :list="groupedAssist" :table_header="['Speler', 'Assists']"/>
-                </div>
-                <!-- goals -->
-                <div class="col-md-4">
-                    <div class="card border-0 rounded-0 shadow-sm">
-                        <div class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-3 p-md-4">
-                            <span class="txt-orange fw-bold" style="font-size: 5rem">
-                                <number-counter :number="totalGoals"></number-counter>
-                            </span>
-                            <span class="txt-blue fw-bold">Goals gescoord</span>
-                            <span class="small text-black-50 fw-bold">{{estTotalGoals.average}} * {{estTotalGoals.matches}} ≈ {{ Math.ceil(estTotalGoals.average * estTotalGoals.matches) }}</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- kaarten gegeven -->
-                <div class="col-md-4">
-                    <div class="card border-0 rounded-0 shadow-sm">
-                        <div class="card-body position-relative d-flex flex-column align-items-center justify-content-center p-3 p-md-4">
-                            <span class="txt-orange fw-bold" style="font-size: 5rem">
-                                <number-counter :number="totalCards"></number-counter>
-                            </span>
-                            <span class="txt-blue fw-bold">Kaarten gegeven</span>
-                            <span class="small text-black-50 fw-bold">{{estTotalCards.average}} * {{estTotalCards.matches}} ≈ {{ Math.ceil(estTotalCards.average * estTotalCards.matches) }}</span>
-                        </div>
-                    </div>
+                    <TopTable
+                        key="top_assist"
+                        :list="tournament.topAssist"
+                        title="Top assist"/>
                 </div>
             </div>
         </main>
-        <header class="bg-blue py-3 py-md-5">
-            <div class="container">
-                <div class="row">
+        <header class="bg-26-primary py-3 py-md-5">
+            <div class="container-lg">
+                <div class="row text-light">
                     <div class="col-12">
-                        <h1 class="fs-2 text-white fw-bolder">Wat denken we?</h1>
-                        <h2 class="fs-6 mb-0 txt-orange fw-bolder">De statistieken</h2>
+                        <h1 class="w26-condensed mb-0">Wat denken we?</h1>
                     </div>
                 </div>
             </div>
         </header>
-        <main class="container-md py-2 py-md-5">
+        <main class="container-md py-3 py-md-5">
             <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
                 <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij start toernooi.
             </div>
             <div v-else class="row g-3 mb-3">
                 <div class="col-md-4">
-                    <prediction-table class="mb-3" :list="prediction_tournament_champion" title="Wie wordt kampioen?"/>
+                    <PredictionTable
+                        :list="tournament.getBonusPrediction(0)"
+                        title="Wie wordt kampioen?"/>
                 </div>
                 <div class="col-md-4">
-                    <prediction-table class="mb-3" :list="prediction_most_against" title="Meeste tegengoals?"/>
+                    <PredictionTable
+                        :list="tournament.getBonusPrediction(3)"
+                        title="Meeste tegengoals?"/>
                 </div>
                 <div class="col-md-4">
-                    <prediction-table class="mb-3" :list="prediction_most_cards" title="Meeste kaarten?"/>
+                    <PredictionTable
+                        :list="tournament.getBonusPrediction(4)"
+                        title="Meeste kaarten?"/>
                 </div>
                 <div class="col-md-4">
-                    <prediction-table :image="false" class="mb-3" :list="prediction_top_scorer" title="Wie wordt top scorer?"/>
+                    <PredictionTable
+                        :image="false"
+                        :list="tournament.getBonusPrediction(5)"
+                        table_header="Speler"
+                        title="Wie wordt top scorer?"/>
                 </div>
                 <div class="col-md-4">
-                    <prediction-table :image="false" :list="prediction_top_assist" title="Wie wordt assist koning?"/>
+                    <PredictionTable
+                        :image="false"
+                        :list="tournament.getBonusPrediction(7)"
+                        table_header="Speler"
+                        title="Wie wordt assist koning?"/>
                 </div>
                 <div class="col-md-4">
-                    <prediction-table :image="false" :list="prediction_total_goals" title="Hoe goals worden er gescoord?"/>
+                    <PredictionTable
+                        :image="false"
+                        :list="tournament.getBonusPrediction(1)"
+                        table_header="Aantal"
+                        title="Hoe goals worden er gescoord?"/>
                 </div>
                 <div class="col-md-4">
-                    <prediction-table :image="false" :list="prediction_total_cards" title="Hoe kaarten worden er gegeven?"/>
+                    <PredictionTable
+                        :image="false"
+                        :list="tournament.getBonusPrediction(2)"
+                        table_header="Aantal"
+                        title="Hoe kaarten worden er gegeven?"/>
                 </div>
             </div>
         </main>
-        <header class="bg-blue py-3 py-md-5">
-            <div class="container">
-                <div class="row">
+        <header class="bg-26-primary py-3 py-md-5">
+            <div class="container-lg">
+                <div class="row text-light">
                     <div class="col-12">
-                        <h1 class="fs-2 text-white fw-bolder">Hoe gaat NL het doen?</h1>
-                        <h2 class="fs-6 mb-0 txt-orange fw-bolder">De statistieken</h2>
+                        <h1 class="w26-condensed mb-0">Hoe gaat NL het doen?</h1>
                     </div>
                 </div>
             </div>
         </header>
-        <main class="container-md py-2 py-md-5">
+        <main class="container-md py-3 py-md-5">
             <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
                 <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij start toernooi.
             </div>
             <div v-else class="row g-3 mb-3">
                 <div class="col-md-4">
-                    <prediction-table :image="false" :list="prediction_first_goal_nl" title="Eerste goal Team NL?"/>
+                    <PredictionTable
+                        :image="false"
+                        :list="tournament.getBonusPrediction(7)"
+                        table_header="Speler"
+                        title="Eerste goal Team NL?"/>
                 </div>
                 <div class="col-md-4">
-                    <prediction-table :image="false" :list="prediction_first_card_nl" title="Eerste kaart Team NL?"/>
+                    <PredictionTable
+                        :image="false"
+                        :list="tournament.getBonusPrediction(8)"
+                        table_header="Speler"
+                        title="Eerste kaart Team NL?"/>
                 </div>
                 <div class="col-md-4">
-                    <prediction-table :image="false" :list="prediction_ned" title="Hoe ver komt NL?" table_header="Score"/>
+                    <PredictionTable
+                        :image="false"
+                        :list="prediction_ned"
+                        table_header="Ronde"
+                        title="Hoe ver komt NL?"/>
                 </div>
                 <div class="col-md-4">
-                    <prediction-table :image="false" :list="pred_pol_ned" title="Poland - Netherlands" table_header="Score"/>
+                    <PredictionTable
+                        :image="false"
+                        :list="pred_pol_ned"
+                        table_header="Score"
+                        title="Poland - Netherlands"/>
                 </div>
                 <div class="col-md-4">
-                    <prediction-table :image="false" :list="pred_ned_fra" title="Netherlands - France" table_header="Score"/>
+                    <PredictionTable
+                        :image="false"
+                        :list="pred_ned_fra"
+                        table_header="Score"
+                        title="Netherlands - France"/>
                 </div>
                 <div class="col-md-4">
-                    <prediction-table :image="false" :list="pred_ned_aus" title="Netherlands - Austria" table_header="Score"/>
+                    <PredictionTable
+                        :image="false"
+                        :list="pred_ned_aus"
+                        table_header="Score"
+                        title="Netherlands - Austria"/>
                 </div>
             </div>
         </main>
     </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import {storeToRefs} from "pinia";
-import {useTournament} from "@/stores/content";
+import {useTournament} from "@/stores/content.js";
 import NumberCounter from "@/components/NumberCounter.vue";
 import PredictionTable from "@/components/PredictionTable.vue";
 import {computed} from "vue";
@@ -140,42 +233,29 @@ import TopTable from "@/components/TopTable.vue";
 
 const tournament = useTournament();
 const {
-    matches_played,
-    prediction_tournament_champion,
-    prediction_most_against,
-    prediction_most_cards,
-    prediction_first_goal_nl,
-    prediction_first_card_nl,
+    playedMatches,
     prediction_ned,
-    prediction_top_scorer,
-    prediction_top_assist,
-    prediction_total_goals,
-    prediction_total_cards,
-    totalGoals,
-    estTotalGoals,
-    totalCards,
-    estTotalCards,
-    groupedTeamCards,
-    groupedTopScorer,
-    groupedAssist,
-    groupedGoalsAgainst
 } = storeToRefs(tournament)
 
 
-const started =  computed(() => {
-    return matches_played.value.length
+const started = computed(() => {
+    return playedMatches.value.length
 })
 
 const pred_pol_ned = computed(() => {
-    return tournament.getGroupMatchPrediction(5)
+    return tournament.getGroupedMatchPrediction(1);
 })
 
 const pred_ned_fra = computed(() => {
-    return tournament.getGroupMatchPrediction(21)
+    return tournament.getGroupedMatchPrediction(1);
 })
 
 const pred_ned_aus = computed(() => {
-    return tournament.getGroupMatchPrediction(29)
+    return tournament.getGroupedMatchPrediction(1);
+})
+
+const total_cards = computed(() => {
+    return tournament.totalCards.red + tournament.totalCards.yellow;
 })
 
 </script>

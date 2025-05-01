@@ -1,0 +1,408 @@
+{
+    "poules": [
+        {
+            "name": "A",
+            "teams": [
+                {
+                    "team": "MEX",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "ALB",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "ALG",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "ARG",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "B",
+            "teams": [
+                {
+                    "team": "CAN",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "AUS",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "AUT",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "BEL",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "C",
+            "teams": [
+                {
+                    "team": "BFA",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "BRA",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "CHI",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "CIV",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "D",
+            "teams": [
+                {
+                    "team": "USA",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "CMR",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "COD",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "COL",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "E",
+            "teams": [
+                {
+                    "team": "CRC",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "CRO",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "CZE",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "DEN",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "F",
+            "teams": [
+                {
+                    "team": "ECU",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "EGY",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "ENG",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "ESP",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "G",
+            "teams": [
+                {
+                    "team": "FRA",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "GER",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "GRE",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "HUN",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "H",
+            "teams": [
+                {
+                    "team": "IRN",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "IRQ",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "ITA",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "JAM",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "I",
+            "teams": [
+                {
+                    "team": "JOR",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "JPN",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "KOR",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "MAR",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "J",
+            "teams": [
+                {
+                    "team": "SCO",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "NED",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "NGA",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "NOR",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "K",
+            "teams": [
+                {
+                    "team": "PAN",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "PAR",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "PER",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "POL",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "L",
+            "teams": [
+                {
+                    "team": "POR",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "QAT",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "ROU",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                },
+                {
+                    "team": "RSA",
+                    "points": 0,
+                    "for": 0,
+                    "against": 0,
+                    "matches": []
+                }
+            ]
+        }
+    ],
+    "knock_out": {
+        "round_of_32": [],
+        "round_of_16": [],
+        "quarter_final": [],
+        "semi_final": [],
+        "final_bronze": [],
+        "final": []
+    }
+}
