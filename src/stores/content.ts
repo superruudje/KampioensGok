@@ -676,16 +676,17 @@ export const useTournament = defineStore('tournament', {
          * Fetch tournament data
          */
         async fetchData() {
+            const base = import.meta.env.VITE_ASSET_URL;
             this.loading = true;
             try {
                 const timestamp = Date.now();
                 const [teams, matches, matchDays, locations, players, tournament] = await Promise.all([
-                    fetch(`/data/teams.json?t=${timestamp}`).then(res => res.json()),
-                    fetch(`/data/matches.json?t=${timestamp}`).then(res => res.json()),
-                    fetch(`/data/match_days.json?t=${timestamp}`).then(res => res.json()),
-                    fetch(`/data/locations.json?t=${timestamp}`).then(res => res.json()),
-                    fetch(`/data/players.json?t=${timestamp}`).then(res => res.json()),
-                    fetch(`/data/tournament.json?t=${timestamp}`).then(res => res.json())
+                    fetch(`${base}/data/teams.json?t=${timestamp}`).then(res => res.json()),
+                    fetch(`${base}/data/matches.json?t=${timestamp}`).then(res => res.json()),
+                    fetch(`${base}/data/match_days.json?t=${timestamp}`).then(res => res.json()),
+                    fetch(`${base}/data/locations.json?t=${timestamp}`).then(res => res.json()),
+                    fetch(`${base}/data/players.json?t=${timestamp}`).then(res => res.json()),
+                    fetch(`${base}/data/tournament.json?t=${timestamp}`).then(res => res.json())
                 ]);
 
                 this.teams = teams
