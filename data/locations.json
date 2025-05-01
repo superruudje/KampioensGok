@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "country": "Canada",
+        "city": "Toronto",
+        "stadium": "Toronto Stadium",
+        "capacity": 45000
+    },
+    {
+        "id": 2,
+        "country": "Canada",
+        "city": "Vancouver",
+        "stadium": "BC Place Vancouver",
+        "capacity": 54000
+    },
+    {
+        "id": 3,
+        "country": "Mexico",
+        "city": "Mexico City",
+        "stadium": "Estadio Azteca Mexico City",
+        "capacity": 83000
+    },
+    {
+        "id": 4,
+        "country": "Mexico",
+        "city": "Guadalajara",
+        "stadium": "Estadio Guadalajara",
+        "capacity": 48000
+    },
+    {
+        "id": 5,
+        "country": "Mexico",
+        "city": "Monterrey",
+        "stadium": "Estadio Monterrey",
+        "capacity": 53500
+    },
+    {
+        "id": 6,
+        "country": "USA",
+        "city": "Atlanta",
+        "stadium": "Atlanta Stadium",
+        "capacity": 75000
+    },
+    {
+        "id": 7,
+        "country": "USA",
+        "city": "Boston",
+        "stadium": "Boston Stadium",
+        "capacity": 65000
+    },
+    {
+        "id": 8,
+        "country": "USA",
+        "city": "Dallas",
+        "stadium": "Dallas Stadium",
+        "capacity": 94000
+    },
+    {
+        "id": 9,
+        "country": "USA",
+        "city": "Houston",
+        "stadium": "Houston Stadium",
+        "capacity": 72000
+    },
+    {
+        "id": 10,
+        "country": "USA",
+        "city": "Kansas City",
+        "stadium": "Kansas City Stadium",
+        "capacity": 73000
+    },
+    {
+        "id": 11,
+        "country": "USA",
+        "city": "Los Angelas",
+        "stadium": "Los Angelas Stadium",
+        "capacity": 70000
+    },
+    {
+        "id": 12,
+        "country": "USA",
+        "city": "Miami",
+        "stadium": "Miami Stadium",
+        "capacity": 65000
+    },
+    {
+        "id": 13,
+        "country": "USA",
+        "city": "New York New Jersey",
+        "stadium": "New York New Jersey Stadium",
+        "capacity": 83500
+    },
+    {
+        "id": 14,
+        "country": "USA",
+        "city": "Philadelphia",
+        "stadium": "Philadelphia Stadium",
+        "capacity": 69000
+    },
+    {
+        "id": 15,
+        "country": "USA",
+        "city": "San Francisco Bay Area",
+        "stadium": "San Francisco Bay Area Stadium",
+        "capacity": 71000
+    },
+    {
+        "id": 16,
+        "country": "USA",
+        "city": "Seattle",
+        "stadium": "Seattle Stadium",
+        "capacity": 69000
+    }
+]
