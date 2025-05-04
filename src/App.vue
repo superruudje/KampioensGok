@@ -21,7 +21,7 @@
                             <div class="container-lg">
                                 <div class="row text-light">
                                     <div class="col-12">
-                                        <h1 class="w26-condensed">Loading</h1>
+                                        <h1 class="w26-condensed">Laden</h1>
                                     </div>
                                 </div>
                             </div>

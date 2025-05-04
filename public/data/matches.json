@@ -8,41 +8,8 @@
             "MEX",
             "ALB"
         ],
-        "result": [0, 0],
-        "events": [
-            {
-                "type": "goal",
-                "minute": 2,
-                "player": "Jan Klaassen",
-                "team": "MEX",
-                "assist": "Jan Klaas",
-                "note": ""
-            },
-            {
-                "type": "goal",
-                "minute": 45,
-                "player": "Jsjj Klaassen",
-                "team": "ALB",
-                "assist": "Jan Klaas",
-                "note": ""
-            },
-            {
-                "type": "red_card",
-                "minute": 23,
-                "player": "Wead Kwnp",
-                "team": "ALB",
-                "assist": "",
-                "note": ""
-            },
-            {
-                "type": "substitution",
-                "minute": 76,
-                "player": "Wead Kwnp",
-                "team": "MEX",
-                "assist": "",
-                "note": "in voor Piet Heijn"
-            }
-        ],
+        "result": [],
+        "events": [],
         "poule_name": "A"
     },
     {
@@ -55,7 +22,7 @@
             "ALG",
             "ARG"
         ],
-        "result": [1, 2],
+        "result": [],
         "result_after_penalties": [],
         "events": []
     },
@@ -69,7 +36,7 @@
             "CAN",
             "AUS"
         ],
-        "result": [3, 2],
+        "result": [],
         "result_after_penalties": [],
         "events": []
     },
@@ -83,7 +50,7 @@
             "USA",
             "CMR"
         ],
-        "result": [0, 2],
+        "result": [],
         "result_after_penalties": [],
         "events": []
     },
