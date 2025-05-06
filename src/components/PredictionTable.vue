@@ -10,14 +10,20 @@
                 <table class="table align-middle">
                     <thead>
                     <tr>
-                        <th class="txt-orange" scope="col">{{ table_header }}</th>
+                        <th class="txt-orange text-capitalize" scope="col">{{ table_header }}</th>
                         <th class="txt-orange w-50" scope="col">%</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr v-for="team in list.slice(0, open ? list.length : 5)">
                         <td class="text-nowrap">
-                            <img v-if="image" class="me-2" :src="getImage(team.id)" alt="" loading="lazy" width="30px">
+                            <img
+                                v-if="image"
+                                :src="getImage(team.id)"
+                                alt="flag"
+                                class="me-2"
+                                loading="lazy"
+                                width="30px">
                             <span class="txt-blue fw-bold">{{ getTeamName(team.id) }}</span>
                         </td>
                         <td class="w-50">
@@ -42,13 +48,13 @@
             <button
                 class="dropdown-toggle btn-wc26 sm btn-wc26-orange w-fit"
                 @click="open = !open">
-                {{ open ? 'Verberg' : 'Toon alle'}}
+                {{ open ? $t('cta.hide') : $t('cta.view_all') }}
             </button>
         </div>
     </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import {computed, type Ref, ref} from "vue";
 import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
@@ -58,7 +64,7 @@ const {teamImages, teams} = storeToRefs(tournament)
 
 const props = withDefaults(defineProps<{
     title: string,
-    list: {id: string, count: number}[],
+    list: { id: string, count: number }[],
     image?: boolean,
     table_header?: string,
 }>(), {

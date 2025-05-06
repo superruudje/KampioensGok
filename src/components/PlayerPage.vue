@@ -131,7 +131,7 @@
                                 </div>
                             </div>
                         </template>
-                        <RouterLink :to="{name: 'statistieken'}">
+                        <RouterLink :to="{name: 'statistics'}">
                             <button class="btn-wc26 btn-wc26-orange-alt w-fit">
                                 Naar statistieken
                             </button>

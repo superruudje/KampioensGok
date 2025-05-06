@@ -4,7 +4,7 @@
             <div class="container-lg">
                 <div class="row text-light">
                     <div class="col-12">
-                        <h1 class="w26-condensed mb-0">De spelregels</h1>
+                        <h1 class="w26-condensed mb-0">{{ $t('menu.rules') }}</h1>
                     </div>
                 </div>
             </div>
@@ -122,7 +122,7 @@
                             <p>Elke deelnemer betaalt €11, waarvan €10 direct in de prijzenpot gaat en €1 bestemd is voor
                                 administratiekosten. Hoe meer deelnemers, hoe groter de prijzenpot! De exacte inhoud van de prijzenpot wordt
                                 bekendgemaakt zodra de inschrijvingen zijn gesloten.</p>
-                            <RouterLink :to="{name: 'invulsheet'}">
+                            <RouterLink :to="{name: 'register'}">
                                 <button class="btn-wc26 btn-wc26-orange-alt w-fit">Meedoen</button>
                             </RouterLink>
                         </div>

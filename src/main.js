@@ -1,8 +1,10 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import VueApexCharts from "vue3-apexcharts";
+import { i18n } from './i18n'
 
-import "moment/dist/locale/nl.js";
+import 'dayjs/locale/nl';
+import 'dayjs/locale/en';
 
 import App from './App.vue'
 import router from './router'
@@ -13,7 +15,8 @@ import "./scss/styles.scss"
 const app = createApp(App)
 
 app.use(VueApexCharts);
-app.use(createPinia())
-app.use(router)
+app.use(createPinia());
+app.use(i18n);
+app.use(router);
 
 app.mount('#app')

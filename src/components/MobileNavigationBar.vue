@@ -14,13 +14,13 @@
 
 <script setup>
 const pages = [
-    {url: 'wedstrijden', icon: 'calendar-week-fill'},
-    {url: 'poules', icon: 'list-ol'},
-    {url: 'statistieken', icon: 'bar-chart-fill'},
-    {url: 'ranglijst', icon: 'trophy-fill'},
-    {url: 'spelregels', icon: 'journal-text'},
-    {url: 'invulsheet', icon: 'ui-checks-grid'},
-    {url: 'mijn pagina', icon: 'person-circle'}
+    {url: 'matches', icon: 'calendar-week-fill'},
+    {url: 'groups', icon: 'list-ol'},
+    {url: 'statistics', icon: 'bar-chart-fill'},
+    {url: 'ranking', icon: 'trophy-fill'},
+    {url: 'rules', icon: 'journal-text'},
+    {url: 'register', icon: 'ui-checks-grid'},
+    {url: 'my-page', icon: 'person-circle'}
 ]
 
 </script>

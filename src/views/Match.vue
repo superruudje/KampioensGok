@@ -87,11 +87,14 @@ import {computed, onBeforeMount, ref, type Ref} from "vue";
 import type {Match} from "@/types/tournament.ts";
 import {useTournament} from "@/stores/content.ts";
 import router from "@/router";
-//@ts-ignore
-import moment from "moment/dist/moment.js";
 import {storeToRefs} from "pinia";
 import TimelineComponent from "@/components/TimelineComponent.vue";
 import PredictionTable from "@/components/PredictionTable.vue";
+import dayjs from "dayjs";
+import { useI18n } from 'vue-i18n'
+import {i18n} from "@/i18n";
+
+const { locale } = useI18n();
 
 const route = useRoute();
 
@@ -110,23 +113,36 @@ const matchDay = computed(() => {
 })
 
 const label = computed(() => {
-    moment.updateLocale("nl")
-    return moment(matchDay.value?.date, "DD-MM-YYYY").format("D MMM");
+    dayjs.locale(locale.value);
+    return dayjs(matchDay.value?.date).format("D MMM");
 })
 
 const matchType = computed(() => {
     if (match.value?.poule_name.length === 1)
-        return `Groep ${match.value?.poule_name}`;
+        return `${i18n.global.t('dict.group')} ${match.value?.poule_name}`;
     else
         return match.value?.poule_name.replaceAll("_", " ");
 })
 
 const summary = computed(() => {
-    if (!match.value || !match.value.result_after_extra_time) return ''
-    const final_score = match.value.result_after_penalties || match.value.result_after_extra_time
-    const final_winner = final_score[0] === final_score[1] ? null : final_score[0] > final_score[1] ? 0 : 1
-    if (final_winner === null) return 'Draw';
-    return `${getTeamName(match.value.teams[final_winner])} wint na ${match.value.result_after_penalties ? 'penalties' : 'extra tijd'}`
+    const { result_after_extra_time, result_after_penalties, teams } = match.value as Match;
+    if (!result_after_extra_time) return '';
+
+    const final_score = result_after_penalties || result_after_extra_time;
+    const [scoreA, scoreB] = final_score;
+    const final_winner = scoreA === scoreB ? null : scoreA > scoreB ? 0 : 1;
+
+    if (final_winner === null) {
+        return i18n.global.t('dict.draw');
+    }
+
+    const winnerName = getTeamName(teams[final_winner]);
+
+    if (result_after_penalties) {
+        return i18n.global.t('dict.wins_on_penalties', { team: winnerName });
+    }
+
+    return i18n.global.t('dict.wins_after_extra_time', { team: winnerName });
 })
 
 /**

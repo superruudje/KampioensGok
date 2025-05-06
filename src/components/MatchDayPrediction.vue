@@ -40,6 +40,9 @@ import {computed, onMounted} from "vue";
 import type {MatchesByDay} from "@/types/tournament.js";
 //@ts-ignore
 import moment from "moment/dist/moment.js";
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n();
 
 import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
@@ -56,7 +59,7 @@ const props = defineProps<{
 const matches = computed(() => props.match_day.matches)
 
 const localeDate = computed(() => {
-    moment.updateLocale("nl")
+    moment.updateLocale(locale.value);
     return moment(props.match_day.matchDayDate, "DD-MM-YYYY").format("dddd D MMMM");
 })
 

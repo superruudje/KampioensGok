@@ -8,13 +8,13 @@
                     </div>
                     <div class="col-md-6">
                         <div class="text-light bg-mix rounded-4 p-4">
-                            <h2 class="fs-5">Punten</h2>
+                            <h2 class="fs-5 text-capitalize">{{ $t('dict.points') }}</h2>
                             <div class="num-stat-item">
                                 <div class="fs-1 fw-bold">
                                     <NumberCounter
                                         :number="tournament.getParticipantTotalScore(participant.team_name, null)"/>
                                 </div>
-                                <div class="fw-lighter">Totale punten</div>
+                                <div class="fw-lighter">{{ capitalize($t('dict.total')) }} {{ $t('dict.points') }}</div>
                             </div>
                             <hr>
                             <div class="d-flex gap-4">
@@ -22,7 +22,7 @@
                                     <div class="fs-4 fw-bold">
                                         {{ tournament.getParticipantScoreMatches(participant.team_name) }}
                                     </div>
-                                    <div class="fw-lighter">Wedstrijden</div>
+                                    <div class="fw-lighter">{{ $t('menu.matches') }}</div>
                                 </div>
                                 <div class="num-stat-item">
                                     <div class="fs-4 fw-bold">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="text-light bg-mix rounded-4 p-4 h-100 d-flex flex-column">
-                            <h2 class="fs-5">Positie</h2>
+                            <h2 class="fs-5 text-capitalize">{{ $t('dict.position') }}</h2>
                             <div class="flex-grow-1 d-flex justify-content-center align-items-center">
                                 <h1 style="font-size: 6rem">
                                     <NumberCounter
@@ -58,9 +58,9 @@
             </div>
         </header>
         <main v-if="participant" class="container-md py-5">
-            <RouterLink :to="{name: 'ranglijst'}">
+            <RouterLink :to="{name: 'ranking'}">
                 <button class="btn-wc26 sm btn-wc26-orange-alt w-fit mb-4">
-                    <i class="bi bi-arrow-left me-2"></i>Naar de ranglijst
+                    {{ $t('cta.to_rankings') }}
                 </button>
             </RouterLink>
             <PlayerPage :player="participant"/>
@@ -77,6 +77,7 @@ import PlayerPage from "@/components/PlayerPage.vue";
 import NumberCounter from "@/components/NumberCounter.vue";
 import FloatingStars from "@/components/floatingStars.vue";
 import type {Player} from "@/types/pool.ts";
+import {capitalize} from "../helpers/magic.ts";
 
 const route = useRoute();
 
@@ -89,11 +90,13 @@ const playerPos = computed(() => {
 })
 
 onBeforeMount(() => {
-    participant.value = tournament.getParticipant(route.params.id as string);
+    let id = route.params.id as string;
+    participant.value = tournament.getParticipant(id.replace(/-/g, ' ') as string);
 })
 
 onBeforeRouteUpdate((to, from) => {
-    if (!tournament.getParticipant(to.params.id as string)) router.push({name: '404'})
+    let id = route.params.id as string;
+    if (!tournament.getParticipant(id.replace(/-/g, ' ') as string)) router.push({name: '404'})
     else participant.value = tournament.getParticipant(to.params.id as string);
 })
 </script>

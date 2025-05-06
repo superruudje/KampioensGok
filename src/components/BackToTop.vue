@@ -12,6 +12,7 @@
 <script setup>
 import {ref} from "vue";
 
+const scrolled = 600;
 const show = ref(false)
 window.onscroll = function () {
     scrollFunction();
@@ -24,7 +25,7 @@ window.onscroll = function () {
  * @return {void} This function does not return a value.
  */
 function scrollFunction() {
-    show.value = document.body.scrollTop > 60 || document.documentElement.scrollTop > 60;
+    show.value = document.body.scrollTop > scrolled || document.documentElement.scrollTop > scrolled;
 }
 
 /**

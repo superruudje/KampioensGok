@@ -50,7 +50,7 @@
                                     voorspelt, hoe hoger je op het klassement eindigt!</p>
 
                                 <p>Meer weten over de puntentelling en de spelregels? Bekijk dan de
-                                    <RouterLink :to="{name: 'spelregels'}">puntentelling en de spelregels</RouterLink>
+                                    <RouterLink :to="{name: 'rules'}">puntentelling en de spelregels</RouterLink>
                                     .
                                 </p>
                                 <p>Succes – en veel plezier met voorspellen!</p>

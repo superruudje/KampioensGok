@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row gy-3 text-light">
                     <div class="col-12">
-                        <h1 class="d-none d-md-block w26-condensed mb-3">Wedstrijden en uitslagen</h1>
+                        <h1 class="d-none d-md-block w26-condensed mb-3">{{ $t('heading.fixtures_results') }}</h1>
                         <div class="d-flex justify-content-center align-items-center position-relative">
                             <div class="me-2">
                                 <button class="btn btn-sm rounded-pill text-light" style="background-color: rgba(255, 255, 255, 0.1);"
@@ -41,8 +41,6 @@
                     <div class="card border-0 bg-transparent">
                         <div class="card-body p-0">
                             <div class="d-flex flex-column gap-3">
-                                <span v-if="!Object.keys(matchesGroupedByDay).length">Geen uitslagen bekend. Bekijk <router-link
-                                    :to="{name: 'programma'}">hier</router-link> het programma.</span>
                                 <MatchDayComponent
                                     v-for="matchDay in matchesGroupedByDay"
                                     :match_day="matchDay"/>
@@ -60,16 +58,17 @@ import {storeToRefs} from "pinia";
 import {useTournament} from "@/stores/content.js";
 import MatchDayComponent from "@/components/MatchDayComponent.vue";
 import {computed, onBeforeMount, ref, watch} from "vue";
-
-import moment from "moment";
+import dayjs from 'dayjs';
+import {useI18n} from "vue-i18n";
 
 const tournament = useTournament();
 const {matchesGroupedByDay} = storeToRefs(tournament)
+const {locale} = useI18n();
 
 const activeChip = ref('')
 
 /**
- * Get list of play dates.
+ * Get a list of play dates.
  */
 const playDates = computed(() => {
     return [...new Set(tournament.matchesGroupedByDay.map(matchDay => matchDay.matchDayDate))];
@@ -107,7 +106,8 @@ function selectDay(dateString: string) {
  * @param dateString
  */
 function localeDate(dateString: string) {
-    return moment(dateString, "DD-MM-YYYY").format("dd D MMM");
+    dayjs.locale(locale.value);
+    return dayjs(dateString).format('dd D MMM');
 }
 
 /**
@@ -117,7 +117,7 @@ async function scrollParentToChild() {
     const parent = document.getElementById('swiper');
     const child = document.getElementById('chip_' + activeChip.value);
 
-    // Check if parent or child is null and return early if so
+    // Check if a parent or child is null and return early if so
     if (!parent || !child) {
         console.warn('Parent or child element not found');
         return;

@@ -78,7 +78,7 @@ export const useTournament = defineStore('tournament', {
         bonusQuestions(): Question[] {
             return [
                 {
-                    question: "Welk land wordt Europees kampioen?",
+                    question: "Welk land wordt kampioen?",
                     help: "",
                     answer: "NED",
                     answer_type: "team",
@@ -142,7 +142,7 @@ export const useTournament = defineStore('tournament', {
                     current_answer: this.topAssist[0]?.label
                 },
                 {
-                    question: "Welke Nederlander scoort het eerste doelpunt?",
+                    question: "Wie maakt het eerste doelpunt voor Oranje?",
                     answer: "",
                     answer_type: "player",
                     type: "exact",
@@ -151,7 +151,7 @@ export const useTournament = defineStore('tournament', {
                     current_answer: ""
                 },
                 {
-                    question: "Welke Nederlander krijgt de eerste kaart?",
+                    question: "Wie ontvangt die eerste kaart voor Oranje?",
                     answer: "",
                     answer_type: "player",
                     type: "exact",

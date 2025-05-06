@@ -8,8 +8,8 @@
             <div class="w-100 overflow-hidden overflow-x-auto">
                 <div
                     v-for="(item, idx) in list.slice(0, open ? list.length : 5)"
-                    class="px-4 py-2 d-flex align-items-center"
-                    :class="idx < 1 ? 'bg-26-primary-01 text-light' : 'border-bottom'">
+                    :class="idx < 1 ? 'bg-26-primary-01 text-light' : 'border-bottom'"
+                    class="px-4 py-2 d-flex align-items-center">
                     <div class="flex-grow-1 d-flex align-items-center">
                         <img
                             :alt="'flag_' + item.label"
@@ -28,14 +28,14 @@
                 <button
                     class="dropdown-toggle btn-wc26 sm btn-wc26-lightblue w-fit"
                     @click="open = !open">
-                    {{ open ? 'Verberg' : 'Toon alle'}}
+                    {{ open ? $t('cta.hide') : $t('cta.view_all') }}
                 </button>
             </div>
         </div>
     </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import {type Ref, ref} from "vue";
 import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
@@ -43,9 +43,9 @@ import {storeToRefs} from "pinia";
 const tournament = useTournament();
 const {teamImages, teams} = storeToRefs(tournament)
 
-const props = withDefaults(defineProps<{
+withDefaults(defineProps<{
     title: string,
-    list: {label: string, team?: string, count: number}[],
+    list: { label: string, team?: string, count: number }[],
 }>(), {})
 
 const open: Ref<boolean> = ref(false);

@@ -1,0 +1,110 @@
+{
+    "app": {
+        "title": "WC 2026 POOL",
+        "participants": "{count} player|{count} players",
+        "loading": "loading",
+        "just_a_moment": "Just a moment...",
+        "just_a_moment_2": "Getting the data ready."
+    },
+    "menu": {
+        "home": "Home",
+        "matches": "Matches",
+        "groups": "Groups",
+        "statistics": "Stats",
+        "ranking": "Ranking",
+        "rules": "Rules",
+        "register": "Register",
+        "my-page": "My page"
+    },
+    "cta": {
+        "to_rankings": "To the rankings",
+        "to_matches": "All matches",
+        "to_schedule": "To match schedule",
+        "view_details": "View details",
+        "view_all": "View all",
+        "hide": "Hide"
+    },
+    "footer": {
+        "visit": "also visit",
+        "made_by": "made by",
+        "thank_me": "Appreciate the project? Support me on Ko-fi!",
+        "github": "Check out the code on",
+        "line_1": "© {year} WK 2026 POOL. All rights reserved.",
+        "line_2": "WC 2026 POOL is an independent, non-commercial website intended for participants in a football pool during the FIFA World Cup 2026. This website is solely for entertainment purposes and allows users to track their predictions and scores throughout the tournament."
+    },
+    "time": {
+        "days": "days",
+        "hours": "hours",
+        "minutes": "minutes",
+        "seconds": "seconds"
+    },
+    "heading": {
+        "ranking": "Ranking",
+        "progression": "Progression",
+        "upcoming_matches": "Upcoming matches",
+        "fixtures_results": "Fixtures & results",
+        "tournament_stats": "Tournament stats",
+        "ranking_scores": "Ranking and score progression"
+    },
+    "dict": {
+        "amount": "amount",
+        "country": "country",
+        "player": "player",
+        "position": "position",
+        "prediction": "prediction|predictions",
+        "round": "round",
+        "draw": "Draw",
+        "full_time": "Full time",
+        "group": "Group | Groups",
+        "team_name": "Team name",
+        "wins_on_penalties": "{team} wins on penalties",
+        "wins_after_extra_time": "{team} wins after extra time",
+        "played": "played",
+        "won": "won",
+        "drawn": "drawn",
+        "lost": "lost",
+        "for": "for",
+        "against": "against",
+        "goal": "goal|goals",
+        "assist": "assist|assists",
+        "card": "card|cards",
+        "goal_difference": "goal difference",
+        "points": "points",
+        "points_abbr": "pts",
+        "form_guide": "form guide",
+        "expected": "expected",
+        "total": "total",
+        "per_match": "per match"
+    },
+    "home": {
+        "match_schedule_title": "View the World Cup 2026 match schedule",
+        "match_schedule_text": "Check out the match schedule for the tournament in Canada, Mexico and USA with each of the 104 fixtures from the 48-team event."
+    },
+    "stats": {
+        "team_stats": "Team stats",
+        "player_stats": "Player stats",
+        "predictions_insight": "Insights from the pool",
+        "nl_predictions": "Predictions for the Dutch team",
+        "goals_against": "Goals against"
+    },
+    "ranking": {
+        "ranking_text": "On this page, you can easily search for a team by typing its name in the search bar — the rankings will update automatically. Curious how things looked in an earlier round? Jump back in time to view the standings and score progress as they were then. Want to see someone’s exact predictions? Just click on the player’s name to view all of their predictions.",
+        "table_results": "{count} result|{count} results",
+        "table_page": "{count} result per page|{count} results per page"
+    },
+    "questions": {
+        "champion": "Which country will win the championship?",
+        "goals_against": "Which country will concede the most goals?",
+        "most_cards": "Which country will receive the most cards?",
+        "top_scorer": "Who will be the top scorer?",
+        "top_assist": "Who will be the assist king?",
+        "goals_amount": "How many goals will be scored in total?",
+        "cards_amount": "How many cards will be given during the tournament?",
+        "first_goal_nl": "Who will score the first goal for the Netherlands?",
+        "first_card_nl": "Who will receive the first card for the Netherlands?",
+        "nl_result": "How far will the Dutch team make it?"
+    },
+    "errors": {
+        "not_started": "Predictions will be revealed at the start of the tournament."
+    }
+}

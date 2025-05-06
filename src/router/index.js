@@ -1,17 +1,17 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import UitslagenView from "@/views/UitslagenView.vue";
-import PouleView from "@/views/PouleView.vue";
-import StatistiekenView from "@/views/StatistiekenView.vue";
-import RanglijstView from "@/views/RanglijstView.vue";
-import SpelregelsView from "@/views/SpelregelsView.vue";
-import InvulView from "@/views/InvulView.vue";
+import Matches from "@/views/Matches.vue";
+import Groups from "@/views/Groups.vue";
+import Statistics from "@/views/Statistics.vue";
+import Ranking from "@/views/Ranking.vue";
+import Rules from "@/views/Rules.vue";
+import Register from "@/views/Register.vue";
 
 import DeelnemerView from "@/views/DeelnemerView.vue";
 import NotFoundView from "@/views/NotFoundView.vue";
 import {useTournament} from "@/stores/content.ts";
 import ProfileView from "@/views/ProfileView.vue";
-import WedstrijdView from "@/views/WedstrijdView.vue";
+import Match from "@/views/Match.vue";
 
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -22,29 +22,34 @@ const router = createRouter({
             component: HomeView
         },
         {
-            path: '/ranglijst',
+            path: '/ranking',
             children: [
-                {path: '', name: 'ranglijst', component: RanglijstView},
+                {path: '', name: 'ranking', component: Ranking},
                 {
                     path: ':id', name: 'deelnemer', component: DeelnemerView, beforeEnter: async (to, from, next) => {
-                        const tournament = useTournament();
-                        if (!tournament.players.length) await tournament.fetchData();
-                        tournament.getParticipant(to.params.id) ? next() : next({name: '404'})
+                        const tournament = useTournament()
+                        if (!tournament.players.length) await tournament.fetchData()
+
+                        // Convert dashes back to spaces to match player names
+                        const normalizedId = (to.params.id).replace(/-/g, ' ')
+                        const participant = tournament.getParticipant(normalizedId)
+
+                        participant ? next() : next({ name: '404' })
                     }
                 },
             ]
         },
         {
-            path: '/poules',
-            name: 'poules',
-            component: PouleView
+            path: '/standings',
+            name: 'groups',
+            component: Groups
         },
         {
-            path: '/wedstrijden',
+            path: '/matches',
             children: [
-                {path: '', name: 'wedstrijden', component: UitslagenView},
+                {path: '', name: 'matches', component: Matches},
                 {
-                    path: ':id', name: 'wedstrijd', component: WedstrijdView, beforeEnter: async (to, from, next) => {
+                    path: ':id', name: 'wedstrijd', component: Match, beforeEnter: async (to, from, next) => {
                         const tournament = useTournament();
                         if (!tournament.matches.length) await tournament.fetchData();
                         tournament.getMatch(parseInt(to.params.id)) ? next() : next({name: '404'})
@@ -53,23 +58,23 @@ const router = createRouter({
             ]
         },
         {
-            path: '/statistieken',
-            name: 'statistieken',
-            component: StatistiekenView
+            path: '/statistics',
+            name: 'statistics',
+            component: Statistics
         },
         {
-            path: '/spelregels',
-            name: 'spelregels',
-            component: SpelregelsView
+            path: '/rules',
+            name: 'rules',
+            component: Rules
         },
         {
-            path: '/invulsheet',
-            name: 'invulsheet',
-            component: InvulView
+            path: '/register',
+            name: 'register',
+            component: Register
         },
         {
-            path: '/mijn-pagina',
-            name: 'mijn pagina',
+            path: '/my-page',
+            name: 'my-page',
             component: ProfileView
         },
         {
@@ -80,7 +85,7 @@ const router = createRouter({
     ],
     scrollBehavior(to, from, savedPosition) {
         // always scroll to the top
-        if (to.name !== 'wedstrijden')
+        if (to.name !== 'matches')
             return {top: 0}
         else
             return false

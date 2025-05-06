@@ -19,10 +19,12 @@
 import {computed} from "vue";
 import MatchComponentNew from "@/components/MatchComponentNew.vue";
 import type {MatchesByDay} from "@/types/tournament.js";
-//@ts-ignore
-import moment from "moment/dist/moment.js";
+import dayjs from 'dayjs';
 
+import {useI18n} from 'vue-i18n'
 import {useTournament} from "@/stores/content.ts";
+
+const {locale} = useI18n();
 
 const tournament = useTournament();
 
@@ -33,8 +35,8 @@ const props = defineProps<{
 const matches = computed(() => props.match_day.matches)
 
 const label = computed(() => {
-    moment.updateLocale("nl")
-    return moment(props.match_day.matchDayDate, "DD-MM-YYYY").format("dddd D MMMM YYYY");
+    dayjs.locale(locale.value);
+    return dayjs(props.match_day.matchDayDate).format('dddd D MMMM YYYY');
 })
 
 const matchDay = computed(() => {
@@ -42,6 +44,4 @@ const matchDay = computed(() => {
 })
 </script>
 
-<style lang="sass" scoped>
-
-</style>
+<style lang="sass" scoped></style>
