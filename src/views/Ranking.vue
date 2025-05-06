@@ -4,7 +4,7 @@
             <div class="container-lg">
                 <div class="row text-white">
                     <div class="col-12">
-                        <h1 class="w26-condensed fw-bolder mb-0">Ranglijst en scoreverloop</h1>
+                        <h1 class="w26-condensed fw-bolder mb-0">{{ $t('heading.ranking_scores') }}</h1>
                     </div>
                 </div>
             </div>
@@ -15,9 +15,9 @@
                     <div class="card rounded-4 mb-4">
                         <div class="card-body p-3 p-md-4">
                             <div class="d-flex gap-2 align-items-center mb-3">
-                                <h3 class="fw-bolder w26-condensed mb-0">Ranglijst</h3>
+                                <h3 class="fw-bolder w26-condensed mb-0">{{ $t('heading.ranking') }}</h3>
                                 <div class="ms-auto w-auto input-group input-group-sm">
-                                    <input v-model="searchTerm" class="form-control" placeholder="Zoek naar deelnemer of team"
+                                    <input v-model="searchTerm" class="form-control" :placeholder="$t('dict.team_name')"
                                            type="search" @input="goPage(0)">
                                     <span id="basic-addon1" class="input-group-text"><i class="bi bi-search"></i></span>
                                 </div>
@@ -25,23 +25,19 @@
                                     v-model="snapshot"
                                     class="form-select form-select-sm w-auto">
                                     <option :value="0">Start</option>
-                                    <option v-for="(snapshot, idx) in snapshots" :value="snapshot.id">{{ snapshot.label }}</option>
+                                    <option v-for="(snapshot, idx) in snapshots" :value="snapshot.id">{{ getLabel(snapshot.label) }}</option>
                                 </select>
                             </div>
-                            <p class="font-book mb-4">Op deze pagina kun je eenvoudig zoeken naar een team door de naam in de zoekbalk in te
-                                typen — de
-                                ranglijst past zich automatisch aan. Benieuwd hoe het ervoor stond in een eerdere ronde? Spring terug in
-                                de tijd en bekijk de ranglijst en het scoreverloop zoals het toen was. Wil je zien wat iemand precies
-                                heeft voorspeld? Klik dan op de naam van de speler om al zijn of haar voorspellingen te bekijken.</p>
+                            <p class="font-book mb-4">{{ $t('ranking.ranking_text')}}</p>
                             <div class="w-100 overflow-hidden overflow-x-auto mb-3">
                                 <table class="table">
                                     <thead>
-                                    <tr>
+                                    <tr class="text-capitalize">
                                         <th class="txt-orange" scope="col">#</th>
                                         <th class="txt-orange" scope="col"></th>
-                                        <th class="txt-orange" scope="col">Pnt.</th>
-                                        <th class="txt-orange" scope="col">Team</th>
-                                        <th class="txt-orange" scope="col" style="width: 99%">Deelnemer</th>
+                                        <th class="txt-orange" scope="col">{{ $t('dict.points_abbr') }}</th>
+                                        <th class="txt-orange" scope="col">{{ $t('dict.team_name') }}</th>
+                                        <th class="txt-orange" scope="col" style="width: 99%">{{ $t('dict.player') }}</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -59,10 +55,10 @@
                                         </td>
                                         <td>{{ player.score }}</td>
                                         <td class="text-nowrap w26-condensed">
-                                            <router-link :to="{name: 'deelnemer', params: {id: player.team_name}}">{{
+                                            <RouterLink :to="{name: 'deelnemer', params: {id: player.team_name.replace(/\s+/g, '-')}}">{{
                                                     player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name
                                                 }}
-                                            </router-link>
+                                            </RouterLink>
                                         </td>
                                         <td class="text-nowrap" style="width: 99%;">{{ player.name }}</td>
                                     </tr>
@@ -122,17 +118,17 @@
                                     </nav>
                                 </div>
                                 <div class="col-auto ms-auto">
-                                    <span class="txt-blue fw-bold small">{{ filtersData.length }} resultaten</span>
+                                    <span class="txt-blue fw-bold small"> {{ $t('ranking.table_results', { count: filtersData.length}) }}</span>
                                 </div>
                                 <div class="col-auto">
                                     <select
                                         v-model="pageSize"
                                         class="form-select form-select-sm">
-                                        <option :value="10">10 resultaten per pagina</option>
-                                        <option :value="20">20 resultaten per pagina</option>
-                                        <option :value="30">30 resultaten per pagina</option>
-                                        <option :value="60">60 resultaten per pagina</option>
-                                        <option :value="'all'">Toon alles ({{ filtersData.length }})</option>
+                                        <option :value="10">{{ $t('ranking.table_page', { count: 10}) }}</option>
+                                        <option :value="20">{{ $t('ranking.table_page', { count: 20}) }}</option>
+                                        <option :value="30">{{ $t('ranking.table_page', { count: 30}) }}</option>
+                                        <option :value="60">{{ $t('ranking.table_page', { count: 60}) }}</option>
+                                        <option :value="'all'">{{ $t('cta.view_all') }} ({{ filtersData.length }})</option>
                                     </select>
                                 </div>
                             </div>
@@ -141,10 +137,10 @@
                     <div class="card rounded-4">
                         <div class="card-body p-3 p-md-4">
                             <div class="d-flex gap-2 align-items-center mb-4">
-                                <h3 class="fw-bolder w26-condensed mb-0">Scoreverloop</h3>
+                                <h3 class="fw-bolder w26-condensed mb-0">{{ $t('heading.progression') }}</h3>
                                 <select v-model="snapshot" class="ms-auto form-select form-select-sm w-auto">
                                     <option :value="0">start</option>
-                                    <option v-for="(snapshot, idx) in snapshots" :value="snapshot.id">{{ snapshot.label }}</option>
+                                    <option v-for="(snapshot, idx) in snapshots" :value="snapshot.id">{{ getLabel(snapshot.label) }}</option>
                                 </select>
                             </div>
 
@@ -165,8 +161,12 @@ import {useTournament} from "@/stores/content.js";
 import {computed, onMounted, type Ref, ref, watch} from "vue";
 import EchartLine from "@/components/charts/EchartLine.vue";
 import type {Player} from "@/types/pool.ts";
+import dayjs from "dayjs";
+import {useI18n} from "vue-i18n";
 
 const tournament = useTournament();
+const {locale} = useI18n();
+
 const {pageSize, pageNumber, playedMatchesGroupedByDay, players} = storeToRefs(tournament)
 const searchTerm: Ref<string> = ref('');
 const standing: Ref<Player[]> = ref([]);
@@ -178,6 +178,11 @@ const snapshots = computed(() => {
         return {label: groupDay.matchDayDate, id: groupDay.matchDayId}
     })
 })
+
+function getLabel(date: string) {
+    dayjs.locale(locale.value);
+    return dayjs(date).format('dddd D MMMM YYYY');
+}
 
 watch(snapshot, (newSnapshot) => {
     standing.value = tournament.getStanding(newSnapshot);
@@ -263,7 +268,8 @@ const LINE_CHART = computed(() => {
         ]
         snapshots.value.slice(0, snapshot.value).forEach(snapshot => {
             const score = tournament.getParticipantTotalScore(player.team_name, snapshot.id)
-            data.push({category: snapshot.label, value: score})
+            dayjs.locale(locale.value);
+            data.push({category: dayjs(snapshot.label).format('ddd D MMM'), value: score})
         })
 
         lines.push({

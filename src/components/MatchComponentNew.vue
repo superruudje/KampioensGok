@@ -3,7 +3,9 @@
         <div class="card-body p-3 p-md-4">
             <div class="d-flex mb-3">
                 <span class="fw-lighter text-secondary">#{{ match.num }}&emsp;</span>
-                <span v-if="match.poule_name || summary" class="fw-lighter text-secondary">
+                <span
+                    v-if="match.poule_name || summary"
+                    class="fw-lighter text-secondary">
                     {{ summary ? summary : `${match.poule_name.replaceAll('_', ' ')}` }}
                 </span>
             </div>
@@ -43,14 +45,14 @@
                 </div>
                 <div class="vr"></div>
                 <div class="d-flex flex-column gap-2 justify-content-center align-items-center">
-                    <span v-if="match.result?.length" class="fw-lighter lh-1">Full time</span>
+                    <span v-if="match.result?.length" class="fw-lighter lh-1">{{ $t('dict.full_time') }}</span>
                     <span v-else class="fw-lighter lh-1">{{ match.time }}</span>
                 </div>
             </div>
 
             <div class="d-flex flex-wrap gap-1 justify-content-between align-items-center">
                 <RouterLink :to="{name: 'wedstrijd', params: {id: match.num}}" class="flex-shrink-0">
-                    <button class="btn-wc26 sm btn-wc26-orange-alt w-fit">Toon details</button>
+                    <button class="btn-wc26 sm btn-wc26-orange-alt w-fit">{{ $t('cta.view_details') }}</button>
                 </RouterLink>
                 <span class="fw-lighter small group-name">
                     {{ location?.city }}, {{ location?.country }}
@@ -66,9 +68,10 @@ import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
 import {computed} from "vue";
 import type {Match} from "@/types/tournament.ts";
+import {i18n} from "@/i18n";
 
 const tournament = useTournament()
-const {playedMatches, teamImages, teams} = storeToRefs(tournament)
+const {teamImages, teams} = storeToRefs(tournament)
 
 const props = defineProps<{
     match: Match
@@ -78,40 +81,58 @@ const location = computed(() => {
     return tournament.getLocation(props.match.location_id)
 })
 
+/**
+ * Computes a summary of the match results based on extra time and penalty details.
+ *
+ * If there is no result after extra time, it returns an empty string.
+ * It determines the match outcome (win, loss, or draw) based on the scores and
+ * calculates the final winner (team or draw). Depending on the match result,
+ * it provides a localized string indicating whether the match ended in a draw,
+ * was won after penalties, or was won after extra time.
+ *
+ * @constant {Function} summary
+ * @returns {string} A localized string summarizing the match result.
+ */
 const summary = computed(() => {
-    if (!props.match.result_after_extra_time) return ''
-    const final_score = props.match.result_after_penalties || props.match.result_after_extra_time
-    const final_winner = final_score[0] === final_score[1] ? null : final_score[0] > final_score[1] ? 0 : 1
-    if (final_winner === null) return 'Draw';
-    return `${getTeamName(props.match.teams[final_winner])} wint na ${props.match.result_after_penalties ? 'penalties' : 'extra tijd'}`
+    const { result_after_extra_time, result_after_penalties, teams } = props.match;
+    if (!result_after_extra_time) return '';
+
+    const final_score = result_after_penalties || result_after_extra_time;
+    const [scoreA, scoreB] = final_score;
+    const final_winner = scoreA === scoreB ? null : scoreA > scoreB ? 0 : 1;
+
+    if (final_winner === null) {
+        return i18n.global.t('dict.draw');
+    }
+
+    const winnerName = getTeamName(teams[final_winner]);
+
+    if (result_after_penalties) {
+        return i18n.global.t('dict.wins_on_penalties', { team: winnerName });
+    }
+
+    return i18n.global.t('dict.wins_after_extra_time', { team: winnerName });
 })
 
-const predictions = computed(() => {
-    return tournament.getGroupedMatchPrediction(props.match.num)
-})
-
-const started = computed(() => {
-    return playedMatches.value.length
-})
-
+/**
+ * Retrieves the image associated with the specified team name.
+ * If no specific image is found for the given team name, returns the default team image.
+ *
+ * @param {string} teamName - The name of the team whose image is to be retrieved.
+ * @return {string} The URL or identifier of the team's image, or the default image if no match is found.
+ */
 function getTeamImage(teamName: string) {
     return teamImages.value[teamName] || teamImages.value[`default`]
 }
 
 /**
- * Check if is valid team id
- * @param teamName
+ * Retrieves the full name of the team based on its short name.
+ *
+ * @param {string} teamName - The short name of the team to search for.
+ * @return {string} The full name of the team if found; otherwise, the original short name provided.
  */
-function isTeam(teamName: string) {
-    return teams.value.some(t => t.short_name === teamName)
-}
-
 function getTeamName(teamName: string) {
     return teams.value.find((e) => e.short_name === teamName)?.full_name || teamName
-}
-
-function getRedCards(teamName: string) {
-    return props.match.events ? props.match.events.filter(event => event.type === 'red_card' && event.team === teamName).length : 0
 }
 
 </script>

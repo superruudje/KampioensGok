@@ -32,18 +32,20 @@
                             :to="{name: page}"
                             activeClass="active"
                             class="link px-3 py-2 text-capitalize">
-                            <span>{{ page }}</span>
+                            <span>{{ $t('menu.' + page) }}</span>
                         </RouterLink>
                     </li>
                 </ul>
+                <LanguageSwitcher/>
             </div>
         </div>
     </nav>
 </template>
 
 <script setup>
+import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 
-const pages = ['wedstrijden', 'poules', 'statistieken', 'ranglijst', 'spelregels', 'invulsheet', 'mijn pagina'];
+const pages = ['matches', 'groups', 'statistics', 'ranking', 'rules', 'register', 'my-page'];
 </script>
 
 <style lang="sass" scoped>

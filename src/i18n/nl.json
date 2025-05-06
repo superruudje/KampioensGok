@@ -1,0 +1,110 @@
+{
+    "app": {
+        "title": "WK 2026 POOL",
+        "participants": "{count} deelnemer|{count} deelnemers",
+        "loading": "laden",
+        "just_a_moment": "Even wachten...",
+        "just_a_moment_2": "We halen de gegevens er even bij."
+    },
+    "menu": {
+        "home": "Home",
+        "matches": "Wedstrijden",
+        "groups": "Poules",
+        "statistics": "Statistieken",
+        "ranking": "Ranglijst",
+        "rules": "Regels",
+        "register": "Inschrijven",
+        "my-page": "Mijn pagina"
+    },
+    "cta": {
+        "to_rankings": "Naar de ranglijst",
+        "to_matches": "Alle wedstrijden",
+        "to_schedule": "Naar het schema",
+        "view_details": "Toon details",
+        "view_all": "Toon alle",
+        "hide": "Verberg"
+    },
+    "footer": {
+        "visit": "bezoek ook",
+        "made_by": "gemaakt door",
+        "thank_me": "Waardeer je het project? Steun me op Ko-fi!",
+        "github": "Bekijk de code op",
+        "line_1": "© {year} WK 2026 POOL. Alle rechten voorbehouden.",
+        "line_2": "WK 2026 POOL is een onafhankelijke, niet-commerciële website bedoeld voor deelnemers aan een voetbalpool tijdens het FIFA Wereldkampioenschap 2026. Deze website is uitsluitend bedoeld voor entertainmentdoeleinden en biedt gebruikers de mogelijkheid om hun voorspellingen en scores bij te houden tijdens het toernooi."
+    },
+    "time": {
+        "days": "dagen",
+        "hours": "uren",
+        "minutes": "minuten",
+        "seconds": "seconden"
+    },
+    "heading": {
+        "ranking": "Ranglijst",
+        "progression": "Scoreverloop",
+        "upcoming_matches": "Aankomende wedstrijden",
+        "fixtures_results": "Wedstrijden en uitslagen",
+        "tournament_stats": "Toernooi statistieken",
+        "ranking_scores": "Ranking en scoreverloop"
+    },
+    "dict": {
+        "amount": "aantal",
+        "country": "land",
+        "player": "speler",
+        "position": "positie",
+        "prediction": "voorspelling|voorspellingen",
+        "round": "ronde",
+        "draw": "Gelijkspel",
+        "full_time": "Afgerond",
+        "group": "Poule | Poules",
+        "team_name": "Teamnaam",
+        "wins_on_penalties": "{team} wint na penalties",
+        "wins_after_extra_time": "{team} wint na extra tijd",
+        "played": "gespeeld",
+        "won": "gewonnen",
+        "drawn": "gelijk",
+        "lost": "verloren",
+        "for": "voor",
+        "against": "tegen",
+        "goal": "goal|goals",
+        "assist": "assist|assists",
+        "card": "kaart|kaarten",
+        "goal_difference": "goal verschil",
+        "points": "punten",
+        "points_abbr": "pnt",
+        "form_guide": "vorm",
+        "expected": "verwacht",
+        "total": "totale",
+        "per_match": "per wedstrijd"
+    },
+    "home": {
+        "match_schedule_title": "Bekijk het Wereld Kampioenschap 2026 wedstrijdschema",
+        "match_schedule_text": "Bekijk het volledige wedstrijdschema voor het toernooi in Canada, Mexico en de VS, inclusief alle wedstrijden en uitslagen van de 104 duels in het toernooi met 48 teams."
+    },
+    "stats": {
+        "team_stats": "Team statistieken",
+        "player_stats": "Speler statistieken",
+        "predictions_insight": "Voorspellingen in beeld",
+        "nl_predictions": "Voorspellingen voor Nederland",
+        "goals_against": "Goals tegen"
+    },
+    "ranking": {
+        "ranking_text": "Op deze pagina kun je eenvoudig zoeken naar een team door de naam in de zoekbalk in te typen — de ranglijst past zich automatisch aan. Benieuwd hoe het ervoor stond in een eerdere ronde? Spring terug in de tijd en bekijk de ranglijst en het scoreverloop zoals het toen was. Wil je zien wat iemand precies heeft voorspeld? Klik dan op de naam van de speler om al zijn of haar voorspellingen te bekijken.",
+        "table_results": "{count} resultaat|{count} resultaten",
+        "table_page": "{count} resultaat per pagina|{count} resultaten per pagina"
+    },
+    "questions": {
+        "champion": "Welk land wordt kampioen?",
+        "goals_against": "Welk land krijgt de meeste tegengoals?",
+        "most_cards": "Welk land krijgt de meeste kaarten?",
+        "top_scorer": "Wie wordt er topscorer?",
+        "top_assist": "Wie wordt de koning van de assist?",
+        "goals_amount": "Hoeveel goals worden er totaal gescoord?",
+        "cards_amount": "Hoeveel kaarten worden er in het toernooi gegeven?",
+        "first_goal_nl": "Wie maakt het eerste doelpunt voor Oranje?",
+        "first_card_nl": "Wie ontvangt die eerste kaart voor Oranje?",
+        "nl_result": "Hoe ver gaat Oranje het schoppen?"
+    },
+    "errors": {
+        "not_started": "Voorspellingen worden bekendgemaakt bij de start van het toernooi."
+    }
+}

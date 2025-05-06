@@ -4,17 +4,17 @@
             <div class="container">
                 <div class="row g-3">
                     <div class="col-12">
-                        <h1 class="text-white w26-condensed fw-bolder mb-0">Toernooi statistieken</h1>
+                        <h1 class="text-white w26-condensed fw-bolder mb-0">{{ $t('heading.tournament_stats') }}</h1>
                     </div>
                     <div class="col-md-6">
                         <div class="text-light bg-mix rounded-4 p-4">
-                            <h2 class="fs-5">Goals</h2>
+                            <h2 class="fs-5 text-capitalize">{{ $t('dict.goal', 2) }}</h2>
                             <div class="num-stat-item">
                                 <div class="fs-1 fw-bold">
                                     <NumberCounter
                                         :number="tournament.totalGoals"/>
                                 </div>
-                                <div class="fw-lighter">Totale goals</div>
+                                <div class="fw-lighter">{{ capitalize($t('dict.total')) }} {{ $t('dict.goal', 2) }}</div>
                             </div>
                             <hr>
                             <div class="d-flex gap-4">
@@ -22,26 +22,26 @@
                                     <div class="fs-4 fw-bold">
                                         {{ tournament.averageGoalsPerMatch }}
                                     </div>
-                                    <div class="fw-lighter">Goals per wedstrijd</div>
+                                    <div class="fw-lighter">{{ capitalize($t('dict.goal', 2)) }} {{ $t('dict.per_match') }}</div>
                                 </div>
                                 <div class="num-stat-item">
                                     <div class="fs-4 fw-bold">
                                         {{ tournament.averageGoalsPerMatch * tournament.matches.length }}
                                     </div>
-                                    <div class="fw-lighter">Goals verwacht</div>
+                                    <div class="fw-lighter">{{ capitalize($t('dict.goal', 2)) }} {{ $t('dict.expected') }}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="text-light bg-mix rounded-4 p-4">
-                            <h2 class="fs-5">Kaarten</h2>
+                            <h2 class="fs-5">{{ capitalize($t('dict.card', 2)) }}</h2>
                             <div class="num-stat-item">
                                 <div class="fs-1 fw-bold">
                                     <NumberCounter
                                         :number="total_cards"/>
                                 </div>
-                                <div class="fw-lighter">Totale kaarten</div>
+                                <div class="fw-lighter">{{ capitalize($t('dict.total')) }} {{ $t('dict.card', 2) }}</div>
                             </div>
                             <hr>
                             <div class="d-flex gap-4">
@@ -49,13 +49,13 @@
                                     <div class="fs-4 fw-bold">
                                         {{ tournament.averageCardsPerMatch }}
                                     </div>
-                                    <div class="fw-lighter">Kaarten per wedstrijd</div>
+                                    <div class="fw-lighter">{{ capitalize($t('dict.card', 2)) }} {{ $t('dict.per_match') }}</div>
                                 </div>
                                 <div class="num-stat-item">
                                     <div class="fs-4 fw-bold">
                                         {{ tournament.averageCardsPerMatch * tournament.matches.length }}
                                     </div>
-                                    <div class="fw-lighter">Kaarten verwacht</div>
+                                    <div class="fw-lighter">{{ capitalize($t('dict.card', 2)) }} {{ $t('dict.expected') }}</div>
                                 </div>
                             </div>
                         </div>
@@ -66,40 +66,40 @@
         <main class="container-md py-3 py-md-5">
             <div class="row g-3 mb-5">
                 <div class="col-12">
-                    <h2 class="w26-condensed">Team statistieken</h2>
+                    <h2 class="w26-condensed">{{ $t('stats.team_stats') }}</h2>
                 </div>
                 <!-- meeste tegengoals -->
                 <div class="col-md-4">
                     <TopTable
                         key="goals_against"
                         :list="tournament.goalsAgainstRanking"
-                        title="Goals tegen"/>
+                        :title="$t('stats.goals_against')"/>
                 </div>
                 <!-- meeste kaarten -->
                 <div class="col-md-4">
                     <TopTable
                         key="total_cards"
                         :list="tournament.totalCardsPerTeam"
-                        title="Meeste kaarten"/>
+                        :title="capitalize($t('dict.card', 2))"/>
                 </div>
             </div>
             <div class="row g-3 mb-3">
                 <div class="col-12">
-                    <h2 class="w26-condensed">Speler statistieken</h2>
+                    <h2 class="w26-condensed">{{ $t('stats.player_stats') }}</h2>
                 </div>
                 <!-- top scorer -->
                 <div class="col-md-4">
                     <TopTable
                         key="top_scorer"
                         :list="tournament.topScorers"
-                        title="Top scorer"/>
+                        :title="capitalize($t('dict.goal', 2))"/>
                 </div>
                 <!-- meest assist -->
                 <div class="col-md-4">
                     <TopTable
                         key="top_assist"
                         :list="tournament.topAssist"
-                        title="Top assist"/>
+                        :title="capitalize($t('dict.assist', 2))"/>
                 </div>
             </div>
         </main>
@@ -107,58 +107,59 @@
             <div class="container-lg">
                 <div class="row text-light">
                     <div class="col-12">
-                        <h1 class="w26-condensed mb-0">Wat denken we?</h1>
+                        <h1 class="w26-condensed mb-0">{{ $t('stats.predictions_insight') }}</h1>
                     </div>
                 </div>
             </div>
         </header>
         <main class="container-md py-3 py-md-5">
-            <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
-                <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij start toernooi.
-            </div>
+            <NotStarted v-if="!started"/>
             <div v-else class="row g-3 mb-3">
                 <div class="col-md-4">
                     <PredictionTable
                         :list="tournament.getBonusPrediction(0)"
-                        title="Wie wordt kampioen?"/>
+                        :table_header="$t('dict.country')"
+                        :title="$t('questions.champion')"/>
                 </div>
                 <div class="col-md-4">
                     <PredictionTable
                         :list="tournament.getBonusPrediction(3)"
-                        title="Meeste tegengoals?"/>
+                        :table_header="$t('dict.country')"
+                        :title="$t('questions.goals_against')"/>
                 </div>
                 <div class="col-md-4">
                     <PredictionTable
                         :list="tournament.getBonusPrediction(4)"
-                        title="Meeste kaarten?"/>
+                        :table_header="$t('dict.country')"
+                        :title="$t('questions.most_cards')"/>
                 </div>
                 <div class="col-md-4">
                     <PredictionTable
                         :image="false"
                         :list="tournament.getBonusPrediction(5)"
-                        table_header="Speler"
-                        title="Wie wordt top scorer?"/>
+                        :table_header="$t('dict.player')"
+                        :title="$t('questions.top_scorer')"/>
                 </div>
                 <div class="col-md-4">
                     <PredictionTable
                         :image="false"
                         :list="tournament.getBonusPrediction(7)"
-                        table_header="Speler"
-                        title="Wie wordt assist koning?"/>
+                        :table_header="$t('dict.player')"
+                        :title="$t('questions.top_assist')"/>
                 </div>
                 <div class="col-md-4">
                     <PredictionTable
                         :image="false"
                         :list="tournament.getBonusPrediction(1)"
-                        table_header="Aantal"
-                        title="Hoe goals worden er gescoord?"/>
+                        :table_header="$t('dict.amount')"
+                        :title="$t('questions.goals_amount')"/>
                 </div>
                 <div class="col-md-4">
                     <PredictionTable
                         :image="false"
                         :list="tournament.getBonusPrediction(2)"
-                        table_header="Aantal"
-                        title="Hoe kaarten worden er gegeven?"/>
+                        :table_header="$t('dict.amount')"
+                        :title="$t('questions.cards_amount')"/>
                 </div>
             </div>
         </main>
@@ -166,57 +167,34 @@
             <div class="container-lg">
                 <div class="row text-light">
                     <div class="col-12">
-                        <h1 class="w26-condensed mb-0">Hoe gaat NL het doen?</h1>
+                        <h1 class="w26-condensed mb-0">{{ $t('stats.nl_predictions') }}</h1>
                     </div>
                 </div>
             </div>
         </header>
         <main class="container-md py-3 py-md-5">
-            <div v-if="!started" class="bg-orange fw-bolder py-2 px-3 text-white">
-                <i class="bi bi-exclamation-circle me-2"></i>Voorspellingen worden bekend gemaakt bij start toernooi.
-            </div>
+            <NotStarted v-if="!started"/>
             <div v-else class="row g-3 mb-3">
                 <div class="col-md-4">
                     <PredictionTable
                         :image="false"
                         :list="tournament.getBonusPrediction(7)"
-                        table_header="Speler"
-                        title="Eerste goal Team NL?"/>
+                        :table_header="$t('dict.player')"
+                        :title="$t('questions.first_goal_nl')"/>
                 </div>
                 <div class="col-md-4">
                     <PredictionTable
                         :image="false"
                         :list="tournament.getBonusPrediction(8)"
-                        table_header="Speler"
-                        title="Eerste kaart Team NL?"/>
+                        :table_header="$t('dict.player')"
+                        :title="$t('questions.first_card_nl')"/>
                 </div>
                 <div class="col-md-4">
                     <PredictionTable
                         :image="false"
                         :list="prediction_ned"
-                        table_header="Ronde"
-                        title="Hoe ver komt NL?"/>
-                </div>
-                <div class="col-md-4">
-                    <PredictionTable
-                        :image="false"
-                        :list="pred_pol_ned"
-                        table_header="Score"
-                        title="Poland - Netherlands"/>
-                </div>
-                <div class="col-md-4">
-                    <PredictionTable
-                        :image="false"
-                        :list="pred_ned_fra"
-                        table_header="Score"
-                        title="Netherlands - France"/>
-                </div>
-                <div class="col-md-4">
-                    <PredictionTable
-                        :image="false"
-                        :list="pred_ned_aus"
-                        table_header="Score"
-                        title="Netherlands - Austria"/>
+                        :table_header="$t('dict.round')"
+                        :title="$t('questions.nl_result')"/>
                 </div>
             </div>
         </main>
@@ -230,6 +208,8 @@ import NumberCounter from "@/components/NumberCounter.vue";
 import PredictionTable from "@/components/PredictionTable.vue";
 import {computed} from "vue";
 import TopTable from "@/components/TopTable.vue";
+import NotStarted from "@/components/NotStarted.vue";
+import {capitalize} from "../helpers/magic.ts";
 
 const tournament = useTournament();
 const {
@@ -240,18 +220,6 @@ const {
 
 const started = computed(() => {
     return playedMatches.value.length
-})
-
-const pred_pol_ned = computed(() => {
-    return tournament.getGroupedMatchPrediction(1);
-})
-
-const pred_ned_fra = computed(() => {
-    return tournament.getGroupedMatchPrediction(1);
-})
-
-const pred_ned_aus = computed(() => {
-    return tournament.getGroupedMatchPrediction(1);
 })
 
 const total_cards = computed(() => {

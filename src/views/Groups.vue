@@ -4,7 +4,7 @@
             <div class="container-lg">
                 <div class="row text-light">
                     <div class="col-12">
-                        <h1 class="w26-condensed mb-0">Poules</h1>
+                        <h1 class="w26-condensed mb-0">{{ $t('dict.group', 2) }}</h1>
                     </div>
                 </div>
             </div>
@@ -18,24 +18,27 @@
                             class="card rounded-4">
                             <div class="card-body p-0">
                                 <div class="p-3 p-md-4">
-                                    <h3 class="fw-bolder w26-condensed mb-3">Poule {{ poule.name }}</h3>
+                                    <h3 class="fw-bolder w26-condensed mb-3">{{ $t('dict.group', 1) }} {{ poule.name }}</h3>
                                     <div class="w-100 overflow-hidden overflow-x-auto mb-2">
                                         <table class="table align-middle">
                                             <thead>
-                                            <tr class="text-center">
+                                            <tr class="text-center text-capitalize">
                                                 <th class="txt-orange" scope="col"></th>
-                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">Gespeeld</th>
+                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">{{ $t('dict.played') }}</th>
                                                 <th class="txt-orange d-sm-none" scope="col">G</th>
-                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">Gewonnen</th>
-                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">Gelijk</th>
-                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">Verlies</th>
-                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">Voor</th>
-                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">Tegen</th>
-                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">Goal<br>verschil</th>
+                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">{{ $t('dict.won') }}</th>
+                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">{{ $t('dict.drawn') }}</th>
+                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">{{ $t('dict.lost') }}</th>
+                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">{{ $t('dict.for') }}</th>
+                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">{{ $t('dict.against') }}</th>
+                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">{{
+                                                        $t('dict.goal_difference')
+                                                    }}
+                                                </th>
                                                 <th class="txt-orange d-sm-none" scope="col">+/-</th>
-                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">Punten</th>
-                                                <th class="txt-orange d-sm-none" scope="col">Pnt.</th>
-                                                <th class="txt-orange" scope="col">Vorm</th>
+                                                <th class="txt-orange d-none d-sm-table-cell" scope="col">{{ $t('dict.points') }}</th>
+                                                <th class="txt-orange d-sm-none" scope="col">{{ $t('dict.points_abbr') }}</th>
+                                                <th class="txt-orange" scope="col">{{ $t('dict.form_guide') }}</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -59,9 +62,9 @@
                                                         <span v-if="t.matches[i - 1] === 'W'"
                                                               class="form-item bg-success rounded-circle">W</span>
                                                             <span v-else-if="t.matches[i - 1] === 'L'"
-                                                                  class="form-item bg-danger rounded-circle">V</span>
+                                                                  class="form-item bg-danger rounded-circle">L</span>
                                                             <span v-else-if="t.matches[i - 1] === 'D'"
-                                                                  class="form-item bg-secondary rounded-circle">G</span>
+                                                                  class="form-item bg-secondary rounded-circle">D</span>
                                                             <span v-else class="form-item border rounded-circle"></span>
                                                         </template>
                                                     </div>
@@ -74,7 +77,7 @@
                                     <button
                                         class="dropdown-toggle btn-wc26 btn-wc26-orange w-fit"
                                         @click="openPouleDetails(poule.name)">
-                                        Groep details
+                                        {{ $t('cta.view_details') }}
                                     </button>
                                 </div>
 
@@ -88,9 +91,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div v-for="poule in poules" class="col-12">
-
                 </div>
             </div>
         </main>

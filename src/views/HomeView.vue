@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row gy-3 align-items-center">
                     <div class="col-md-4">
-                        <h1 class="fs-2 text-white fw-bolder w26-condensed">WK 2026 POOL</h1>
+                        <h1 class="fs-2 text-white fw-bolder w26-condensed">{{ $t('app.title') }}</h1>
                         <h2 class="fs-6 mb-0 txt-orange fw-bolder">Home</h2>
                     </div>
                     <div class="col-md-8">
@@ -14,25 +14,25 @@
                                     <div class="col-auto">
                                         <div class="d-flex flex-column align-items-center">
                                             <span class="fs-1 mb-0 text-white">{{ days }}</span>
-                                            <span class="text-white">dagen</span>
+                                            <span class="text-white">{{ $t('time.days') }}</span>
                                         </div>
                                     </div>
                                     <div class="col-auto">
                                         <div class="d-flex flex-column align-items-center">
                                             <span class="fs-1 mb-0 text-white">{{ hours }}</span>
-                                            <span class="text-white">uur</span>
+                                            <span class="text-white">{{ $t('time.hours') }}</span>
                                         </div>
                                     </div>
                                     <div class="col-auto">
                                         <div class="d-flex flex-column align-items-center">
                                             <span class="fs-1 mb-0 text-white">{{ minutes }}</span>
-                                            <span class="text-white">minuten</span>
+                                            <span class="text-white">{{ $t('time.minutes') }}</span>
                                         </div>
                                     </div>
                                     <div class="col-auto">
                                         <div class="d-flex flex-column align-items-center">
                                             <span class="fs-1 mb-0 text-white">{{ seconds }}</span>
-                                            <span class="text-white">seconden</span>
+                                            <span class="text-white">{{ $t('time.seconds') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -52,14 +52,14 @@
                     <div class="col-12 col-md-4 order-last order-md-first">
                         <div class="card rounded-4 mb-4 bg-26-ev2 text-light">
                             <div class="card-body p-3 p-md-4">
-                                <h3 class="mb-3 fw-bolder w26-condensed">Ranglijst</h3>
+                                <h3 class="mb-3 fw-bolder w26-condensed">{{ $t('heading.ranking') }}</h3>
                                 <div class="w-100 overflow-hidden overflow-x-auto mb-3">
                                     <table class="table">
                                         <thead>
-                                        <tr>
+                                        <tr class="text-capitalize">
                                             <th class="txt-orange" scope="col">#</th>
-                                            <th class="txt-orange" scope="col">Teamnaam</th>
-                                            <th class="txt-orange" scope="col">Punten</th>
+                                            <th class="txt-orange" scope="col">{{ $t('dict.team_name') }}</th>
+                                            <th class="txt-orange" scope="col">{{ $t('dict.points') }}</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -69,21 +69,21 @@
                                             </th>
                                             <th v-else scope="row">{{ idx + 1 }}</th>
                                             <td>
-                                                <router-link
-                                                    :to="{name: 'deelnemer', params: {id: player.team_name}}"
+                                                <RouterLink
+                                                    :to="{name: 'deelnemer', params: {id: player.team_name.replace(/\s+/g, '-')}}"
                                                     class="w26-condensed text-light text-decoration-none">{{
                                                         player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name
                                                     }}
-                                                </router-link>
+                                                </RouterLink>
                                             </td>
                                             <td>{{ player.score }}</td>
                                         </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <RouterLink :to="{name: 'ranglijst'}">
+                                <RouterLink :to="{name: 'ranking'}">
                                     <button class="btn-wc26 btn-wc26-orange w-fit">
-                                        Volledige ranglijst
+                                        {{ $t('cta.to_rankings') }}
                                     </button>
                                 </RouterLink>
                             </div>
@@ -98,14 +98,14 @@
                     <div class="col-12 col-md-8">
                         <div class="card rounded-4">
                             <div class="card-body p-3 p-md-4">
-                                <h3 class="mb-3 txt-blue fw-bolder w26-condensed">Aankomende wedstrijden</h3>
+                                <h3 class="mb-3 txt-blue fw-bolder w26-condensed">{{ $t('heading.upcoming_matches') }}</h3>
                                 <div class="d-flex flex-column gap-3">
                                     <MatchDayComponent
                                         v-for="matchDay in first5UnplayedMatches"
                                         :match_day="matchDay"/>
-                                    <RouterLink :to="{name: 'wedstrijden'}">
+                                    <RouterLink :to="{name: 'matches'}">
                                         <button class="btn-wc26 btn-wc26-orange-alt">
-                                            Naar volledig programma<i class="bi bi-chevron-right ms-2"></i>
+                                            {{ $t('cta.to_matches') }}<i class="bi bi-chevron-right ms-2"></i>
                                         </button>
                                     </RouterLink>
                                 </div>
@@ -119,21 +119,20 @@
         <div class="bg-white">
             <div class="container py-3 py-md-5">
                 <div class="row">
-                    <div class="col-md-6">
-                        <h1 class="w26-condensed text-uppercase">Bekijk het wedstrijdschema</h1>
-                        <p>Bekijk het volledige wedstrijdschema voor het WK 2026 in Canada, Mexico en de VS,
-                            inclusief alle wedstrijden en uitslagen van de 104 duels in het toernooi met 48 teams.</p>
+                    <div class="col-md-8">
+                        <h1 class="w26-condensed text-uppercase"> {{ $t('home.match_schedule_title') }}</h1>
+                        <p class="w-75">{{ $t('home.match_schedule_text') }}</p>
                         <div>
                             <div class="adaptive-width d-inline-block">
-                                <RouterLink :to="{name: 'wedstrijden'}">
+                                <RouterLink :to="{name: 'matches'}">
                                     <button class="btn-wc26 btn-wc26-lightblue">
-                                        Naar het schema
+                                        {{ $t('cta.to_schedule') }}
                                     </button>
                                 </RouterLink>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 bg-cup rounded-4"></div>
+                    <div class="col-md-4 bg-cup rounded-4"></div>
                 </div>
             </div>
         </div>
