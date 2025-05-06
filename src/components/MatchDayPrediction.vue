@@ -38,14 +38,13 @@
 import MatchPrediction from "@/components/MatchPrediction.vue";
 import {computed, onMounted} from "vue";
 import type {MatchesByDay} from "@/types/tournament.js";
-//@ts-ignore
-import moment from "moment/dist/moment.js";
 import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n();
 
 import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
+import dayjs from "dayjs";
 
 const tournament = useTournament();
 const {first5UnplayedMatches} = storeToRefs(tournament);
@@ -59,8 +58,8 @@ const props = defineProps<{
 const matches = computed(() => props.match_day.matches)
 
 const localeDate = computed(() => {
-    moment.updateLocale(locale.value);
-    return moment(props.match_day.matchDayDate, "DD-MM-YYYY").format("dddd D MMMM");
+    dayjs.locale(locale.value);
+    return dayjs(props.match_day.matchDayDate).format('dddd D MMMM YYYY');
 })
 
 const matchDay = computed(() => {
