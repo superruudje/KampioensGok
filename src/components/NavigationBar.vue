@@ -1,9 +1,24 @@
 <template>
     <nav class="navbar navbar-expand-md sticky-top bg-26-primary-01">
-        <div class="container-fluid px-md-4">
-            <RouterLink :to="'/'" class="navbar-brand p-0 me-4">
+        <div class="container-fluid gap-3 justify-content-start px-md-4">
+            <RouterLink :to="'/'" class="navbar-brand p-0 me-auto me-md-4">
                 <img alt="logo" class="logo" src="@/assets/images/wc26.png"/>
             </RouterLink>
+            <div
+                id="navbarSupportedContent"
+                class="collapse navbar-collapse overflow-x-auto">
+                <ul class="navbar-nav me-auto mb-0">
+                    <li v-for="(page, i) in pages" class="nav-item d-flex align-items-center h-100">
+                        <RouterLink
+                            :to="{name: page}"
+                            activeClass="active"
+                            class="link px-3 py-2 text-capitalize">
+                            <span class="text-nowrap">{{ $t('menu.' + page) }}</span>
+                        </RouterLink>
+                    </li>
+                </ul>
+            </div>
+            <LanguageSwitcher/>
             <div class="d-md-none dropdown">
                 <button
                     aria-expanded="false"
@@ -17,26 +32,11 @@
                         <RouterLink
                             :to="{name: page}"
                             activeClass="active"
-                            class="dropdown-item text-capitalize">
-                            {{ page }}
+                            class="dropdown-item text-capitalize text-nowrap">
+                            {{ $t('menu.' + page) }}
                         </RouterLink>
                     </li>
                 </ul>
-            </div>
-            <div
-                id="navbarSupportedContent"
-                class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto mb-0">
-                    <li v-for="(page, i) in pages" class="nav-item d-flex align-items-center h-100">
-                        <RouterLink
-                            :to="{name: page}"
-                            activeClass="active"
-                            class="link px-3 py-2 text-capitalize">
-                            <span>{{ $t('menu.' + page) }}</span>
-                        </RouterLink>
-                    </li>
-                </ul>
-                <LanguageSwitcher/>
             </div>
         </div>
     </nav>
