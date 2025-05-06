@@ -52,6 +52,7 @@
         "player": "player",
         "position": "position",
         "prediction": "prediction|predictions",
+        "result": "Result",
         "round": "round",
         "draw": "Draw",
         "full_time": "Full time",
@@ -91,6 +92,22 @@
         "ranking_text": "On this page, you can easily search for a team by typing its name in the search bar — the rankings will update automatically. Curious how things looked in an earlier round? Jump back in time to view the standings and score progress as they were then. Want to see someone’s exact predictions? Just click on the player’s name to view all of their predictions.",
         "table_results": "{count} result|{count} results",
         "table_page": "{count} result per page|{count} results per page"
+    },
+    "rules": {
+        "point_system": "Points system",
+        "text_1": "You earn points by (partially) correctly predicting match results. In addition, you can earn bonus points by (partially) correctly predicting standings and/or statistics. Finally, there are additional points to be earned through the bonus questions.",
+        "points_total": "A total of <b class='txt-orange'>{points}</b> points can be earned.",
+        "match_result": "Match Result",
+        "text_2": "The maximum number of points you can earn per match is <b class='txt-orange'>10</b> points. A total of {matches} matches will be played during the tournament. You can earn up to <b class='txt-orange'>{matchPoints}</b> points from match predictions.",
+        "points1": "<b class='txt-orange'>10</b> points for a fully correct match prediction.",
+        "points2": "<b class='txt-orange'>7</b> points for a correctly predicted draw with an incorrect final score.",
+        "points3": "<b class='txt-orange'>5</b> points for a correctly predicted winner with an incorrect final score.",
+        "points4": "<b class='txt-orange'>2</b> points for a correctly predicted score for one of the teams.",
+        "example1": "(fully correct)",
+        "example2": "(draw correct, score not)",
+        "example3": "(winner correct, score not)",
+        "example4": "(winner correct, one score correct)",
+        "example5": "(one score correct)"
     },
     "questions": {
         "champion": "Which country will win the championship?",

@@ -610,7 +610,7 @@ import ButtonBar from "@/components/Invulsheet/ButtonBar.vue";
 import TableHead from "@/components/Invulsheet/TableHead.vue";
 import TableRow from "@/components/Invulsheet/TableRow.vue";
 import Stepper from "@/components/Invulsheet/Stepper.vue";
-import moment from "moment";
+import dayjs from "dayjs";
 
 const tournament = useTournament();
 const {teams, teamImages} = storeToRefs(tournament);
@@ -956,7 +956,7 @@ function downloadPlayerAsJSON() {
 
     const a = document.createElement("a");
     a.href = url;
-    a.download = `${player.value.team_name}-${moment().format('DDMMYYYY')}.json`;
+    a.download = `${player.value.team_name}-${dayjs().format('DDMMYYYY')}.json`;
     document.body.appendChild(a);
     a.click();
     setTimeout(() => {

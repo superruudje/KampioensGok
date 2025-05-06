@@ -52,6 +52,7 @@
         "player": "speler",
         "position": "positie",
         "prediction": "voorspelling|voorspellingen",
+        "result": "Resultaat",
         "round": "ronde",
         "draw": "Gelijkspel",
         "full_time": "Afgerond",
@@ -91,6 +92,22 @@
         "ranking_text": "Op deze pagina kun je eenvoudig zoeken naar een team door de naam in de zoekbalk in te typen — de ranglijst past zich automatisch aan. Benieuwd hoe het ervoor stond in een eerdere ronde? Spring terug in de tijd en bekijk de ranglijst en het scoreverloop zoals het toen was. Wil je zien wat iemand precies heeft voorspeld? Klik dan op de naam van de speler om al zijn of haar voorspellingen te bekijken.",
         "table_results": "{count} resultaat|{count} resultaten",
         "table_page": "{count} resultaat per pagina|{count} resultaten per pagina"
+    },
+    "rules": {
+        "point_system": "Puntensysteem",
+        "text_1": "Je verdient punten door uitslagen (gedeeltelijk) goed te voorspellen. Daarnaast kun je bonuspunten verdienen door het (gedeeltelijk) goed voorspellen van standen en/of statistieken. Tot slot zijn er nog punten te behalen voor de bonusvragen.",
+        "points_total": "Totaal zijn er <b class='txt-orange'>{points}</b> punten te verdienen.",
+        "match_result": "Wedstrijdresultaat",
+        "text_2": "Het maximale aantal punten wat je kunt verdienen voor een wedstrijd is <b class='txt-orange'>10</b> punten. Tijdens het toernooi worden er totaal {matches} wedstrijden gespeeld. Er zijn maximaal <b class='txt-orange'>{matchPoints}</b> punten te verdienen uit wedstrijden.",
+        "points1": "<b class='txt-orange'>10</b> punten voor een volledig correct voorspelde wedstrijd.",
+        "points2": "<b class='txt-orange'>7</b>punten voor een correct voorspelde gelijkspel met incorrect voorspelde eindstand.",
+        "points3": "<b class='txt-orange'>5</b>punten voor een correct voorspelde winnaar met incorrect voorspelde eindstand.",
+        "points4": "<b class='txt-orange'>2</b>punten voor een correct voorspelde score voor één van de teams.",
+        "example1": "(volledig correct)",
+        "example2": "(gelijkspel correct, score niet)",
+        "example3": "(winnaar correct, score niet)",
+        "example4": "(winnaar correct, één score correct)",
+        "example5": "(één score correct)"
     },
     "questions": {
         "champion": "Welk land wordt kampioen?",
