@@ -4,8 +4,8 @@
             <h2 class="accordion-header">
                 <button
                     :id="`${match_day.matchDayDate}`"
-                    :aria-controls="'matchday_' + match_day.matchDayId"
-                    :data-bs-target="'#matchday_' + match_day.matchDayId"
+                    :aria-controls="'matchday_' + match_day.matchDayId + `_${played ? 'played' : 'unplayed'}`"
+                    :data-bs-target="'#matchday_' + match_day.matchDayId + `_${played ? 'played' : 'unplayed'}`"
                     aria-expanded="false"
                     class="accordion-button p-2 txt-pk-elevation-01 text-capitalize collapsed d-flex gap-2 align-items-center"
                     data-bs-toggle="collapse"
@@ -16,7 +16,7 @@
                         class="badge ms-auto fs-9 bg-26-interaction txt-pk-elevation-01">{{ matchDay.type.replaceAll('_', ' ') }}</span>
                 </button>
             </h2>
-            <div :id="'matchday_' + match_day.matchDayId" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div :id="'matchday_' + match_day.matchDayId + `_${played ? 'played' : 'unplayed'}`" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body px-0">
                     <div class="d-flex flex-column gap-3">
                         <div v-for="(match) in matches">

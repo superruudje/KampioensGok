@@ -1,57 +1,49 @@
 <template>
-    <div class="card rounded-4">
-        <div class="card-body p-3 p-md-4">
-            <h3
-                v-if="title"
-                class="mb-3 fw-bolder w26-condensed">
-                {{ title }}
-            </h3>
-            <div class="w-100 overflow-hidden overflow-x-auto">
-                <table class="table align-middle">
-                    <thead>
-                    <tr>
-                        <th class="txt-orange text-capitalize" scope="col">{{ table_header }}</th>
-                        <th class="txt-orange w-50" scope="col">%</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr v-for="team in list.slice(0, open ? list.length : 5)">
-                        <td class="text-nowrap">
-                            <img
-                                v-if="image"
-                                :src="getImage(team.id)"
-                                alt="flag"
-                                class="me-2"
-                                loading="lazy"
-                                width="30px">
-                            <span class="txt-blue fw-bold">{{ getTeamName(team.id) }}</span>
-                        </td>
-                        <td class="w-50">
-                            <div class="d-flex align-items-center">
-                                <div
-                                    :aria-valuenow="getPercentage(team.count)"
-                                    aria-label="Basic example"
-                                    aria-valuemax="100"
-                                    aria-valuemin="0"
-                                    class="progress flex-grow-1"
-                                    role="progressbar">
-                                    <div :style="'width: ' + getPercentage(team.count)+'%'"
-                                         class="progress-bar bg-orange"></div>
-                                </div>
-                                <span class="ms-2">{{ getPercentage(team.count) }}%</span>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <button
-                class="dropdown-toggle btn-wc26 sm btn-wc26-orange w-fit"
-                @click="open = !open">
-                {{ open ? $t('cta.hide') : $t('cta.view_all') }}
-            </button>
-        </div>
+    <div class="w-100 overflow-hidden overflow-x-auto">
+        <table class="table align-middle">
+            <thead>
+            <tr>
+                <th class="txt-orange text-capitalize" scope="col">{{ table_header }}</th>
+                <th class="txt-orange w-50" scope="col">%</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="team in list.slice(0, open ? list.length : 5)">
+                <td class="text-nowrap">
+                    <img
+                        v-if="image"
+                        :src="getImage(team.id)"
+                        alt="flag"
+                        class="me-2 border"
+                        loading="lazy"
+                        width="30px">
+                    <span class="txt-blue fw-bold">{{ isTeam(team.id) ? $t('countries.' + team.id) : team.id }}</span>
+                </td>
+                <td class="w-50">
+                    <div class="d-flex align-items-center">
+                        <div
+                            :aria-valuenow="getPercentage(team.count)"
+                            aria-label="Basic example"
+                            aria-valuemax="100"
+                            aria-valuemin="0"
+                            class="progress flex-grow-1"
+                            role="progressbar">
+                            <div :style="'width: ' + getPercentage(team.count)+'%'"
+                                 class="progress-bar bg-orange"></div>
+                        </div>
+                        <span class="ms-2">{{ getPercentage(team.count) }}%</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+    <button
+        class="dropdown-toggle btn-wc26 sm btn-wc26-orange w-fit"
+        @click="open = !open">
+        {{ open ? $t('cta.hide') : $t('cta.view_all') }}
+    </button>
+
 </template>
 
 <script lang="ts" setup>
@@ -63,7 +55,6 @@ const tournament = useTournament();
 const {teamImages, teams} = storeToRefs(tournament)
 
 const props = withDefaults(defineProps<{
-    title: string,
     list: { id: string, count: number }[],
     image?: boolean,
     table_header?: string,
@@ -81,6 +72,14 @@ const open: Ref<boolean> = ref(false);
  */
 function getImage(name: string): string {
     return teamImages.value[name] || teamImages.value[`default`]
+}
+
+/**
+ * Check if is valid team id
+ * @param teamName
+ */
+function isTeam(teamName: string) {
+    return teams.value.some(t => t.short_name === teamName)
 }
 
 /**
@@ -106,4 +105,7 @@ function getPercentage(count: number): number {
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass" scoped>
+.table > :not(caption) > * > *
+    background-color: transparent
+</style>

@@ -1,128 +1,144 @@
 <template>
-    <div class="card bg-gray border-0 rounded-0">
-        <div class="card-body position-relative p-3 pt-4 d-flex flex-column">
-            <div class="match-group position-absolute top-0 start-50 bg-blue text-light px-3 py-1">
-                {{ match.group.length > 1 ? match.group : `Groep ${match.group}` }}
+    <div id="match_card" class="card rounded-4">
+        <div class="card-body p-3 p-md-4">
+            <div class="d-flex mb-3">
+                <span class="fw-lighter text-secondary">#{{ match.num }}&emsp;</span>
+                <span
+                    v-if="match.poule_name || summary"
+                    class="fw-lighter text-secondary">
+                    {{ summary ? summary : `${match.poule_name.replaceAll('_', ' ')}` }}
+                </span>
             </div>
-            <div class="d-flex justify-content-around align-items-center gap-3">
-                <div class="team-wrapper">
-                    <img :src="imageA" :alt="'flag_' + props.match.teams[0]" loading="lazy" class="w-50">
-                    <span class="pt-1">{{ getTeamName(match.teams[0]) }}</span>
-                </div>
-                <div class="d-flex flex-column align-items-center flex-shrink-1">
-                    <span v-if="match.result?.length" class="txt-orange fw-bold">{{ match.time }}</span>
-                    <div class="text-black fw-bold fst-italic fs-5">
-                        {{ match.result?.length ? `${match.result[0]} : ${match.result[1]}` : match.time }}
+            <div class="d-flex gap-2 gap-md-3 mb-3">
+                <div class="flex-grow-1 d-flex flex-column gap-2 justify-content-center">
+                    <div v-for="n in 2" class="d-flex align-items-center gap-2">
+                        <img
+                            :alt="`team${n}`"
+                            :src="getTeamImage(match.teams[n-1])"
+                            class="border"
+                            loading="lazy"
+                            width="30px"/>
+                        <span>{{ $t('countries.' + match.teams[n - 1]) }}</span>
                     </div>
-                    <span v-if="match.result_pen" class="mx-3 fw-bold">{{ `(${match.result_pen[0]}) : (${match.result_pen[1]})` }}</span>
-                    <span v-else-if="match.result_nvl" class="mx-3 fw-bold">{{ match.result_nvl.join(' : ') }}</span>
                 </div>
-                <div class="team-wrapper">
-                    <img :src="imageB" :alt="'flag_' + props.match.teams[1]" loading="lazy" class="w-50">
-                    <span class="pt-1">{{ getTeamName(match.teams[1]) }}</span>
+                <div
+                    v-if="match.result_after_penalties?.length"
+                    class="flex-shrink-0 d-flex flex-column gap-2 justify-content-center">
+                    <span class="fs-5 lh-1">({{ match.result_after_penalties[0] }})</span>
+                    <span class="fs-5 lh-1">({{ match.result_after_penalties[1] }})</span>
+                </div>
+                <div
+                    v-if="match.result_after_extra_time?.length"
+                    class="flex-shrink-0 d-flex flex-column gap-2 justify-content-center">
+                    <span class="fs-4 fw-bold lh-1">{{
+                            match.result_after_extra_time[0] != null ? match.result_after_extra_time[0] : '?'
+                        }}</span>
+                    <span class="fs-4 fw-bold lh-1">{{
+                            match.result_after_extra_time[1] != null ? match.result_after_extra_time[1] : '?'
+                        }}</span>
+                </div>
+                <div
+                    v-else
+                    class="flex-shrink-0 d-flex flex-column gap-2 justify-content-center">
+                    <span class="fs-4 fw-bold lh-1">{{ match.result[0] != null ? match.result[0] : '?' }}</span>
+                    <span class="fs-4 fw-bold lh-1">{{ match.result[1] != null ? match.result[1] : '?' }}</span>
+                </div>
+                <div class="vr"></div>
+                <div class="d-flex flex-column gap-2 justify-content-center align-items-center">
+                    <span v-if="match.result?.length" class="fw-lighter lh-1">{{ $t('dict.full_time') }}</span>
+                    <span v-else class="fw-lighter lh-1">{{ match.time }}</span>
                 </div>
             </div>
 
-            <transition name="collapse">
-                <div v-if="openTimeline" class="overflow-hidden">
-                    <hr>
-                    <span v-if="!match.timeline.length">Geen data beschikbaar</span>
-                    <timeline-component :teams="match.teams" :timeline="match.timeline"/>
-                </div>
-            </transition>
-            <div class="spacer flex-grow-1"></div>
-            <hr>
-            <div class="d-flex flex-wrap gap-2 align-items-center justify-content-between">
-                <span class="txt-blue text-wrap"><i class="bi bi-pin-map txt-orange me-2"></i>{{
-                        match.stadium
-                    }}, {{ match.city }}</span>
-                <button v-if="match.timeline" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3 text-nowrap"
-                        @click="openTimeline = !openTimeline">Toon
-                    {{ openTimeline ? 'minder' : 'meer' }}
-                    <i :class="openTimeline ? 'bi-chevron-up' : 'bi-chevron-down'" class="bi ms-2"></i>
-                </button>
-                <button v-else-if="started" class="btn btn-sm btn-orange rounded-0 fw-bolder py-2 px-3 text-nowrap"
-                        @click="openPrediction = !openPrediction">Wat denken we?
-                    <i :class="openPrediction ? 'bi-chevron-up' : 'bi-chevron-down'" class="bi ms-2"></i>
-                </button>
+            <div class="d-flex flex-wrap gap-1 justify-content-between align-items-center">
+                <RouterLink :to="{name: 'wedstrijd', params: {id: match.num}}" class="flex-shrink-0">
+                    <button class="btn-wc26 sm btn-wc26-orange-alt w-fit">{{ $t('cta.view_details') }}</button>
+                </RouterLink>
+                <span class="fw-lighter small group-name">
+                    {{ location?.city }}, {{ location?.country }}
+                    <i class="bi bi-pin-map ms-1"></i>
+                </span>
             </div>
-            <transition name="collapse">
-                <div v-if="openPrediction" class="overflow-hidden">
-                    <hr>
-                    <prediction-table :image="false" :list="predictions" title="" table_header="Score"/>
-                </div>
-            </transition>
-            <i class="position-absolute top-0 end-0 bi p-2 bi-question-circle ms-2"
-               data-bs-title="Uitslag na 90 minuten wordt gebruikt voor voorspelling"
-               data-bs-toggle="tooltip"></i>
         </div>
     </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
-import {computed, ref} from "vue";
-import TimelineComponent from "@/components/TimelineComponent.vue";
-import PredictionTable from "@/components/PredictionTable.vue";
+import {computed} from "vue";
+import type {Match} from "@/types/tournament.ts";
+import {i18n} from "@/i18n";
 
 const tournament = useTournament()
-const {playedMatches, teamImages, teams} = storeToRefs(tournament)
-const openTimeline = ref(false)
-const openPrediction = ref(false)
+const {teamImages, teams} = storeToRefs(tournament)
 
-const props = defineProps({
-    match: {type: Object, required: true},
+const props = defineProps<{
+    match: Match
+}>()
+
+const location = computed(() => {
+    return tournament.getLocation(props.match.location_id)
 })
 
-const imageA = computed(() => {
-    return teamImages.value[props.match.teams[0]] || teamImages.value[`default`]
+/**
+ * Computes a summary of the match results based on extra time and penalty details.
+ *
+ * If there is no result after extra time, it returns an empty string.
+ * It determines the match outcome (win, loss, or draw) based on the scores and
+ * calculates the final winner (team or draw). Depending on the match result,
+ * it provides a localized string indicating whether the match ended in a draw,
+ * was won after penalties, or was won after extra time.
+ *
+ * @constant {Function} summary
+ * @returns {string} A localized string summarizing the match result.
+ */
+const summary = computed(() => {
+    const { result_after_extra_time, result_after_penalties, teams } = props.match;
+    if (!result_after_extra_time) return '';
+
+    const final_score = result_after_penalties || result_after_extra_time;
+    const [scoreA, scoreB] = final_score;
+    const final_winner = scoreA === scoreB ? null : scoreA > scoreB ? 0 : 1;
+
+    if (final_winner === null) {
+        return i18n.global.t('dict.draw');
+    }
+
+    const winnerName = getTeamName(teams[final_winner]);
+
+    if (result_after_penalties) {
+        return i18n.global.t('dict.wins_on_penalties', { team: winnerName });
+    }
+
+    return i18n.global.t('dict.wins_after_extra_time', { team: winnerName });
 })
 
-const imageB = computed(() => {
-    return teamImages.value[props.match.teams[1]] || teamImages.value[`default`]
-})
+/**
+ * Retrieves the image associated with the specified team name.
+ * If no specific image is found for the given team name, returns the default team image.
+ *
+ * @param {string} teamName - The name of the team whose image is to be retrieved.
+ * @return {string} The URL or identifier of the team's image, or the default image if no match is found.
+ */
+function getTeamImage(teamName: string) {
+    return teamImages.value[teamName] || teamImages.value[`default`]
+}
 
-const predictions = computed(() => {
-    return tournament.getGroupedMatchPrediction(props.match.num)
-})
-
-const started =  computed(() => {
-    return playedMatches.value.length
-})
-
-function getTeamName(id) {
-    return teams.value.find((e) => e.id === id)?.name || id
+/**
+ * Retrieves the full name of the team based on its short name.
+ *
+ * @param {string} teamName - The short name of the team to search for.
+ * @return {string} The full name of the team if found; otherwise, the original short name provided.
+ */
+function getTeamName(teamName: string) {
+    return teams.value.find((e) => e.short_name === teamName)?.full_name || teamName
 }
 
 </script>
 
 <style lang="sass" scoped>
-.collapse-enter-active
-    animation: collapse reverse 500ms ease
-
-.collapse-leave-active
-    animation: collapse 500ms ease
-
-@keyframes collapse
-    from
-        max-height: 400px
-    to
-        max-height: 0
-
-.match-group
-    transform: translate(-50%, -50%) skew(-8deg)
-
-.team-wrapper
-    display: flex
-    width: 30%
-    flex-direction: column
-    justify-content: space-between
-    align-items: center
-    flex-shrink: 0
-    img
-        max-width: 52px
-
-.time-line
-    flex: 1
+.teams
+    flex: 1 1 0
+    gap: 12px
 </style>

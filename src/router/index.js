@@ -7,7 +7,7 @@ import Ranking from "@/views/Ranking.vue";
 import Rules from "@/views/Rules.vue";
 import Register from "@/views/Register.vue";
 
-import DeelnemerView from "@/views/DeelnemerView.vue";
+import Player from "@/views/Player.vue";
 import NotFoundView from "@/views/NotFoundView.vue";
 import {useTournament} from "@/stores/content.ts";
 import ProfileView from "@/views/ProfileView.vue";
@@ -26,7 +26,7 @@ const router = createRouter({
             children: [
                 {path: '', name: 'ranking', component: Ranking},
                 {
-                    path: ':id', name: 'deelnemer', component: DeelnemerView, beforeEnter: async (to, from, next) => {
+                    path: ':id', name: 'player', component: Player, beforeEnter: async (to, from, next) => {
                         const tournament = useTournament()
                         if (!tournament.players.length) await tournament.fetchData()
 

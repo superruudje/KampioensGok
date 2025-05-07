@@ -12,7 +12,7 @@
         </header>
         <PlayerHeader
             v-if="player"
-            :participant="player"
+            :player="player"
         />
         <main v-if="!player" class="container-lg py-3 py-md-5">
             <div class="row">
@@ -47,13 +47,13 @@
         </main>
         <main v-else class="container-lg py-3 py-md-5">
             <button
-                class="btn-wc26 sm btn-wc26-orange w-fit mb-3"
+                class="btn-wc26 sm btn-wc26-orange-alt w-fit mb-3"
                 title="Wijzig snelkoppeling"
                 type="button"
                 @click="tournament.unsetProfile()">
-                Wijzig snelkoppeling
+                {{ $t('cta.shortcut') }}
             </button>
-            <PlayerPage :player="player"/>
+            <PlayerPredictions :player="player"/>
         </main>
     </div>
 </template>
@@ -62,7 +62,7 @@
 import {computed, type ComputedRef, type Ref, ref} from "vue";
 import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
-import PlayerPage from "@/components/PlayerPage.vue";
+import PlayerPredictions from "@/components/PlayerPredictions.vue";
 import type {Player} from "@/types/pool.ts";
 import NumberCounter from "@/components/NumberCounter.vue";
 import FloatingStars from "@/components/floatingStars.vue";
@@ -85,10 +85,6 @@ function selectProfile() {
 
 const player = computed(() => {
     return profile.value ? players.value.find(item => item.team_name === profile.value) : undefined
-})
-
-const playerPos = computed(() => {
-    return player.value ? tournament.getPlayerStanding(player.value.team_name) as number : 0
 })
 
 /**

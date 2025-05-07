@@ -12,8 +12,8 @@
                             <div
                                 class="d-flex flex-grow-1 flex-shrink-0 align-items-center justify-content-end gap-2"
                                 style="flex-basis: 30%">
-                                <h1 class="mb-0 d-none d-md-block">{{ getTeamName(match.teams[0]) }}</h1>
-                                <h6 class="mb-0 d-md-none">{{ getTeamName(match.teams[0]) }}</h6>
+                                <h1 class="mb-0 d-none d-md-block">{{ $t('countries.' + match.teams[0]) }}</h1>
+                                <h6 class="mb-0 d-md-none">{{ $t('countries.' + match.teams[0]) }}</h6>
                                 <img
                                     :src="getTeamImage(match.teams[0])"
                                     alt="teamA"
@@ -32,8 +32,8 @@
                             <div
                                 class="d-flex flex-row-reverse flex-grow-1 flex-shrink-0 align-items-center justify-content-end gap-2"
                                 style="flex-basis: 30%">
-                                <h1 class="mb-0 d-none d-md-block">{{ getTeamName(match.teams[1]) }}</h1>
-                                <h6 class="mb-0 d-md-none">{{ getTeamName(match.teams[1]) }}</h6>
+                                <h1 class="mb-0 d-none d-md-block">{{ $t('countries.' + match.teams[1]) }}</h1>
+                                <h6 class="mb-0 d-md-none">{{ $t('countries.' + match.teams[1]) }}</h6>
                                 <img
                                     :src="getTeamImage(match.teams[1])"
                                     alt="teamA"
@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <PredictionTable
+                    <PredictionTableCard
                         :image="false"
                         :list="tournament.getGroupedMatchPrediction(match?.num)"
                         table_header="Uitslag"
@@ -89,7 +89,7 @@ import {useTournament} from "@/stores/content.ts";
 import router from "@/router";
 import {storeToRefs} from "pinia";
 import TimelineComponent from "@/components/TimelineComponent.vue";
-import PredictionTable from "@/components/PredictionTable.vue";
+import PredictionTableCard from "@/components/PredictionTableCard.vue";
 import dayjs from "dayjs";
 import { useI18n } from 'vue-i18n'
 import {i18n} from "@/i18n";

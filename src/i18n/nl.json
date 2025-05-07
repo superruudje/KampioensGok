@@ -20,9 +20,11 @@
         "to_rankings": "Naar de ranglijst",
         "to_matches": "Alle wedstrijden",
         "to_schedule": "Naar het schema",
+        "to_stats": "Naar statistieken",
         "view_details": "Toon details",
         "view_all": "Toon alle",
-        "hide": "Verberg"
+        "hide": "Verberg",
+        "shortcut": "Wijzig team"
     },
     "footer": {
         "visit": "bezoek ook",
@@ -52,6 +54,7 @@
         "player": "speler",
         "position": "positie",
         "prediction": "voorspelling|voorspellingen",
+        "bonus_questions": "bonusvragen",
         "result": "Resultaat",
         "round": "ronde",
         "draw": "Gelijkspel",
@@ -75,7 +78,11 @@
         "form_guide": "vorm",
         "expected": "verwacht",
         "total": "totale",
-        "per_match": "per wedstrijd"
+        "per_match": "per wedstrijd",
+        "group_stage": "poulefase",
+        "round_32": "ronde of 32",
+        "round_16": "ronde of 16",
+        "finals": "finales"
     },
     "home": {
         "match_schedule_title": "Bekijk het Wereld Kampioenschap 2026 wedstrijdschema",
@@ -107,7 +114,10 @@
         "example2": "(gelijkspel correct, score niet)",
         "example3": "(winnaar correct, score niet)",
         "example4": "(winnaar correct, één score correct)",
-        "example5": "(één score correct)"
+        "example5": "(één score correct)",
+        "info1": "Team correct voorspeld.",
+        "info2": "Team incorrect voorspeld, maar wel in knockout.",
+        "info3": "Team incorrect voorspeld (geen punten)."
     },
     "questions": {
         "champion": "Welk land wordt kampioen?",
@@ -119,9 +129,61 @@
         "cards_amount": "Hoeveel kaarten worden er in het toernooi gegeven?",
         "first_goal_nl": "Wie maakt het eerste doelpunt voor Oranje?",
         "first_card_nl": "Wie ontvangt die eerste kaart voor Oranje?",
-        "nl_result": "Hoe ver gaat Oranje het schoppen?"
+        "nl_result": "Hoe ver gaat Oranje het schoppen?",
+        "stats": "({percentage}% denkt dit ook, momenteel {current})",
+        "current": "(momenteel {current})"
     },
     "errors": {
         "not_started": "Voorspellingen worden bekendgemaakt bij de start van het toernooi."
+    },
+    "countries": {
+        "MEX": "Mexico",
+        "BEL": "België",
+        "JOR": "Jordanië",
+        "SEN": "Senegal",
+        "CAN": "Canada",
+        "SUI": "Zwitserland",
+        "KSA": "Saoedi-Arabië",
+        "CMR": "Kameroen",
+        "SRB": "Servië",
+        "BRA": "Brazilië",
+        "UZB": "Oezbekistan",
+        "MAR": "Marokko",
+        "USA": "Verenigde Staten",
+        "POL": "Polen",
+        "QAT": "Qatar",
+        "RSA": "Zuid-Afrika",
+        "ARG": "Argentinië",
+        "AUT": "Oostenrijk",
+        "IRN": "Iran",
+        "CIV": "Ivoorkust",
+        "FRA": "Frankrijk",
+        "DEN": "Denemarken",
+        "IRQ": "Irak",
+        "TUN": "Tunesië",
+        "ENG": "Engeland",
+        "CRO": "Kroatië",
+        "JPN": "Japan",
+        "PAN": "Panama",
+        "ESP": "Spanje",
+        "NGA": "Nigeria",
+        "CZE": "Tsjechië",
+        "NCL": "Nieuw-Caledonië",
+        "POR": "Portugal",
+        "URU": "Uruguay",
+        "EGY": "Egypte",
+        "CRC": "Costa Rica",
+        "ITA": "Italië",
+        "ECU": "Ecuador",
+        "KOR": "Zuid-Korea",
+        "MLI": "Mali",
+        "GER": "Duitsland",
+        "CHI": "Chili",
+        "AUS": "Australië",
+        "GUA": "Guatemala",
+        "NED": "Nederland",
+        "PAR": "Paraguay",
+        "ALG": "Algerije",
+        "NZL": "Nieuw-Zeeland"
     }
 }

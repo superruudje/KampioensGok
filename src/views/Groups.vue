@@ -24,6 +24,7 @@
                                             <thead>
                                             <tr class="text-center text-capitalize">
                                                 <th class="txt-orange" scope="col"></th>
+                                                <th class="txt-orange" scope="col"></th>
                                                 <th class="txt-orange d-none d-sm-table-cell" scope="col">{{ $t('dict.played') }}</th>
                                                 <th class="txt-orange d-sm-none" scope="col">G</th>
                                                 <th class="txt-orange d-none d-sm-table-cell" scope="col">{{ $t('dict.won') }}</th>
@@ -43,10 +44,12 @@
                                             </thead>
                                             <tbody>
                                             <tr v-for="(t, idx) in poule.teams" class="text-center">
+                                                <td>
+                                                    <span>{{ idx + 1 }}</span>
+                                                </td>
                                                 <td class="text-nowrap text-start d-flex align-items-center">
-                                                    <span class="me-2">{{ idx + 1 }}</span>
                                                     <img :src="getImage(t.team)" alt="team logo" class="border" loading="lazy" width="32px">
-                                                    <span class="ms-2 txt-blue fw-bold">{{ t.team }}</span>
+                                                    <span class="ms-2 txt-blue fw-bold">{{ $t('countries.' + t.team) }}</span>
                                                 </td>
                                                 <td>{{ t.matches.length }}</td>
                                                 <td class="d-none d-sm-table-cell">{{ t.matches.filter(g => g === "W").length }}</td>
@@ -81,7 +84,9 @@
                                     </button>
                                 </div>
 
-                                <div v-if="openPoule === poule.name" class="border-top p-3 p-md-4 bg-body-tertiary rounded-bottom-4">
+                                <div
+                                    v-if="openPoule === poule.name"
+                                    class="border-top p-3 p-md-4 bg-body-tertiary rounded-bottom-4">
                                     <div class="d-flex flex-column gap-3">
                                         <MatchDayComponent
                                             v-for="match_day in tournament.matchesForPoule(poule.name)"

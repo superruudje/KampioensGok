@@ -20,9 +20,11 @@
         "to_rankings": "To the rankings",
         "to_matches": "All matches",
         "to_schedule": "To match schedule",
+        "to_stats": "To stats",
         "view_details": "View details",
         "view_all": "View all",
-        "hide": "Hide"
+        "hide": "Hide",
+        "shortcut": "Change team"
     },
     "footer": {
         "visit": "also visit",
@@ -52,6 +54,7 @@
         "player": "player",
         "position": "position",
         "prediction": "prediction|predictions",
+        "bonus_questions": "bonus questions",
         "result": "Result",
         "round": "round",
         "draw": "Draw",
@@ -75,7 +78,11 @@
         "form_guide": "form guide",
         "expected": "expected",
         "total": "total",
-        "per_match": "per match"
+        "per_match": "per match",
+        "group_stage": "group stage",
+        "round_32": "round of 32",
+        "round_16": "round of 16",
+        "finals": "finals"
     },
     "home": {
         "match_schedule_title": "View the World Cup 2026 match schedule",
@@ -107,7 +114,10 @@
         "example2": "(draw correct, score not)",
         "example3": "(winner correct, score not)",
         "example4": "(winner correct, one score correct)",
-        "example5": "(one score correct)"
+        "example5": "(one score correct)",
+        "info1": "Team predicted correctly.",
+        "info2": "Team predicted incorrectly, but in knock-out.",
+        "info3": "Team predicted incorrectly (no points)."
     },
     "questions": {
         "champion": "Which country will win the championship?",
@@ -119,9 +129,61 @@
         "cards_amount": "How many cards will be given during the tournament?",
         "first_goal_nl": "Who will score the first goal for the Netherlands?",
         "first_card_nl": "Who will receive the first card for the Netherlands?",
-        "nl_result": "How far will the Dutch team make it?"
+        "nl_result": "How far will the Dutch team make it?",
+        "stats": "({percentage}% thinks the same, currently {current})",
+        "current": "(currently {current})"
     },
     "errors": {
         "not_started": "Predictions will be revealed at the start of the tournament."
+    },
+    "countries": {
+        "MEX": "Mexico",
+        "BEL": "Belgium",
+        "JOR": "Jordan",
+        "SEN": "Senegal",
+        "CAN": "Canada",
+        "SUI": "Switzerland",
+        "KSA": "Saudi Arabia",
+        "CMR": "Cameroon",
+        "SRB": "Serbia",
+        "BRA": "Brazil",
+        "UZB": "Uzbekistan",
+        "MAR": "Morocco",
+        "USA": "United States",
+        "POL": "Poland",
+        "QAT": "Qatar",
+        "RSA": "South Africa",
+        "ARG": "Argentina",
+        "AUT": "Austria",
+        "IRN": "Iran",
+        "CIV": "Ivory Coast",
+        "FRA": "France",
+        "DEN": "Denmark",
+        "IRQ": "Iraq",
+        "TUN": "Tunisia",
+        "ENG": "England",
+        "CRO": "Croatia",
+        "JPN": "Japan",
+        "PAN": "Panama",
+        "ESP": "Spain",
+        "NGA": "Nigeria",
+        "CZE": "Czech Republic",
+        "NCL": "New Caledonia",
+        "POR": "Portugal",
+        "URU": "Uruguay",
+        "EGY": "Egypt",
+        "CRC": "Costa Rica",
+        "ITA": "Italy",
+        "ECU": "Ecuador",
+        "KOR": "South Korea",
+        "MLI": "Mali",
+        "GER": "Germany",
+        "CHI": "Chile",
+        "AUS": "Australia",
+        "GUA": "Guatemala",
+        "NED": "Netherlands",
+        "PAR": "Paraguay",
+        "ALG": "Algeria",
+        "NZL": "New Zealand"
     }
 }

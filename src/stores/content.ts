@@ -1,5 +1,7 @@
 import {defineStore} from "pinia";
 import {filename} from 'pathe/utils'
+import {i18n} from "@/i18n";
+
 import {
     type Location,
     type Match,
@@ -78,7 +80,7 @@ export const useTournament = defineStore('tournament', {
         bonusQuestions(): Question[] {
             return [
                 {
-                    question: "Welk land wordt kampioen?",
+                    question: i18n.global.t('questions.champion'),
                     help: "",
                     answer: "NED",
                     answer_type: "team",
@@ -88,7 +90,7 @@ export const useTournament = defineStore('tournament', {
                     current_answer: ""
                 },
                 {
-                    question: "Hoeveel goals worden er totaal gescoord?",
+                    question: i18n.global.t('questions.goals_amount'),
                     help: "Inclusief goals in verlengingen.",
                     answer: 10,
                     answer_type: "number",
@@ -97,7 +99,7 @@ export const useTournament = defineStore('tournament', {
                     current_answer: this.totalGoals
                 },
                 {
-                    question: "Hoeveel kaarten worden er in het toernooi gegeven?",
+                    question: i18n.global.t('questions.cards_amount'),
                     help: "Indirecte rode kaart telt niet als extra kaart.",
                     answer: null,
                     answer_type: "number",
@@ -106,7 +108,7 @@ export const useTournament = defineStore('tournament', {
                     current_answer: this.totalCards.red + this.totalCards.yellow
                 },
                 {
-                    question: "Welk land krijgt de meeste tegengoals?",
+                    question: i18n.global.t('questions.goals_against'),
                     answer: "",
                     answer_type: "team",
                     type: "exact",
@@ -115,7 +117,7 @@ export const useTournament = defineStore('tournament', {
                     current_answer: this.goalsAgainstRanking[0]?.label
                 },
                 {
-                    question: "Welk land krijgt de meeste kaarten?",
+                    question: i18n.global.t('questions.most_cards'),
                     answer: "",
                     answer_type: "team",
                     type: "exact",
@@ -124,7 +126,7 @@ export const useTournament = defineStore('tournament', {
                     current_answer: this.totalCardsPerTeam[0]?.label
                 },
                 {
-                    question: "Wie wordt er topscorer?",
+                    question: i18n.global.t('questions.top_scorer'),
                     answer: "",
                     answer_type: "player",
                     type: "exact",
@@ -133,7 +135,7 @@ export const useTournament = defineStore('tournament', {
                     current_answer: this.topScorers[0]?.label
                 },
                 {
-                    question: "Wie wordt de koning van de assist?",
+                    question: i18n.global.t('questions.top_assist'),
                     answer: "",
                     answer_type: "player",
                     type: "exact",
@@ -142,7 +144,7 @@ export const useTournament = defineStore('tournament', {
                     current_answer: this.topAssist[0]?.label
                 },
                 {
-                    question: "Wie maakt het eerste doelpunt voor Oranje?",
+                    question: i18n.global.t('questions.first_goal_nl'),
                     answer: "",
                     answer_type: "player",
                     type: "exact",
@@ -151,7 +153,7 @@ export const useTournament = defineStore('tournament', {
                     current_answer: ""
                 },
                 {
-                    question: "Wie ontvangt die eerste kaart voor Oranje?",
+                    question: i18n.global.t('questions.first_card_nl'),
                     answer: "",
                     answer_type: "player",
                     type: "exact",
@@ -601,11 +603,15 @@ export const useTournament = defineStore('tournament', {
                 .map(([label, {team, count}]) => ({label, team, count}))
                 .sort((a, b) => b.count - a.count);
         },
-
-
-        getBonusPrediction(state): (index: number) => {id: string, count: number}[] {
+        /**
+         * Analyzes the bonus predictions for players in the given state and provides a function to retrieve the collective results based on a specified index.
+         *
+         * @param {Object} state - The state object containing players and their associated information.
+         * @returns {function(index: number): {id: string, count: number}[]} A function that takes an index as an input and returns a sorted array of objects each containing an `id` of the prediction and its occurrence `count`.
+         */
+        getBonusPrediction(state): (index: number) => { id: string, count: number }[] {
             return (index: number) => {
-                let res: {id: string, count: number}[] = []
+                let res: { id: string, count: number }[] = []
                 state.players.forEach(player => {
                     if (player.bonus && player.bonus[index]) {
                         const answer = player.bonus[index] as string;
@@ -620,36 +626,37 @@ export const useTournament = defineStore('tournament', {
                 })
             }
         },
-
         /**
          * Return player predictions for total goals
          * @returns {*[]}
          */
-        prediction_total_goals() {
-            let res: {id: string, count: number}[] = []
-            this.players.forEach((player) => {
-                if (player.bonus) {
-                    const goals = Math.ceil((player.bonus[1]) / 20) * 20;
-                    const id = goals > 0 ? `${goals - 20} - ${goals}` : `${goals}`
+        getBonusPredictionGrouped(state): (index: number) => { id: string, count: number }[] {
+            return (index: number) => {
+                let res: { id: string, count: number }[] = []
+                state.players.forEach(player => {
+                    if (player.bonus && player.bonus[index]) {
+                        const count = Math.ceil((player.bonus[1]) / 20) * 20;
+                        const answer = count > 0 ? `${count - 20} - ${count}` : `${count}`
+                        const found = res.find(t => t.id === answer)
+                        if (!found) res.push({id: answer, count: 1})
+                        else found.count++;
+                    }
+                });
 
-                    const found = res.find(t => t.id === id)
-                    if (!found) res.push({id: id, count: 1})
-                    else found.count++;
-                }
-            })
-            return res.sort((a, b) => {
-                return b.count - a.count
-            })
+                return res.sort((a, b) => {
+                    return b.count - a.count
+                })
+            }
         },
         /**
          * Return prediction NL tournament result
          * @returns {*}
          */
         prediction_ned() {
-            let res: {id: string, count: number}[] = []
+            let res: { id: string, count: number }[] = []
             this.players.forEach((player) => {
                 let exit = ''
-                if (player.finals.includes('NED'))
+                if (player.final.includes('NED'))
                     exit = 'Finale'
                 else if (player.semi_finals.includes('NED'))
                     exit = 'Halve Finale'
@@ -701,7 +708,9 @@ export const useTournament = defineStore('tournament', {
             } catch (error) {
                 console.error('Failed to fetch tournament data:', error);
             } finally {
-                setTimeout(() => {this.loading = false;}, 800)
+                setTimeout(() => {
+                    this.loading = false;
+                }, 800)
             }
         },
         /**
@@ -839,7 +848,7 @@ export const useTournament = defineStore('tournament', {
          * @param player_answer
          * @param days_played
          */
-        getBonusScore(question: Question, player_answer: any, days_played: number): number{
+        getBonusScore(question: Question, player_answer: any, days_played: number): number {
             if (days_played < question.match_day_answered) return -1
             else if (question.type === 'exact' && question.points)
                 return (Array.isArray(question.answer) && question.answer.includes(player_answer)) || question.answer === player_answer ? question.points : 0;
@@ -890,7 +899,7 @@ export const useTournament = defineStore('tournament', {
             }
             if (keys.length > this.finalStart) {
                 this.knock_out.final.forEach(team => {
-                    if (player.finals.includes(team)) score += 50
+                    if (player.final.includes(team)) score += 50
                 })
             }
 
@@ -1026,7 +1035,7 @@ export const useTournament = defineStore('tournament', {
          * Get grouped score prediction for a given match
          * @param matchNumber
          */
-        getGroupedMatchPrediction(matchNumber: number): {id: string, count: number}[] {
+        getGroupedMatchPrediction(matchNumber: number): { id: string, count: number }[] {
             let res: { id: string, count: number }[] = [];
             this.players.forEach((player) => {
                 const pred = player.predictions.find((m) => m.match === matchNumber)?.result

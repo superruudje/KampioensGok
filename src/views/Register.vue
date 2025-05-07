@@ -119,11 +119,8 @@
                             <div class="card-body p-3 p-md-4">
                                 <h3 class="fw-bolder w26-condensed mb-3">Poulefase</h3>
                                 <p class="font-book">In de poulefase van het WK 2026 strijden 48 landen verdeeld over 12 poules van 4 teams
-                                    tegen elkaar.
-
-                                    Voor elke wedstrijd in de poulefase moet je een uitslag invullen.
-
-                                    Denk goed na over je voorspellingen — elk goed (of deels goed) antwoord levert punten op die meetellen
+                                    tegen elkaar. Voor elke wedstrijd in de poulefase moet je een uitslag invullen. Denk goed na over je
+                                    voorspellingen — elk goed (of deels goed) antwoord levert punten op die meetellen
                                     voor het totaalklassement!
                                 </p>
                                 <div class="d-inline-flex gap-1 mb-3">
@@ -160,7 +157,7 @@
                                 </div>
 
                                 <FormError v-if="wasValidated && !isValid" class="mb-3"/>
-                                <ButtonBar @previous="pevious" @save="save"/>
+                                <ButtonBar @previous="previous" @save="save"/>
                             </div>
                         </form>
                         <form
@@ -219,7 +216,7 @@
                                 </div>
 
                                 <FormError v-if="wasValidated && !isValid" class="mb-3"/>
-                                <ButtonBar @previous="pevious" @save="save"/>
+                                <ButtonBar @previous="previous" @save="save"/>
                             </div>
                         </form>
                         <form
@@ -279,7 +276,7 @@
                                 </div>
 
                                 <FormError v-if="wasValidated && !isValid" class="mb-3"/>
-                                <ButtonBar @previous="pevious" @save="save"/>
+                                <ButtonBar @previous="previous" @save="save"/>
                             </div>
                         </form>
                         <form
@@ -400,7 +397,7 @@
                                 </div>
 
                                 <FormError v-if="wasValidated && !isValid" class="mb-3"/>
-                                <ButtonBar @previous="pevious" @save="save"/>
+                                <ButtonBar @previous="previous" @save="save"/>
                             </div>
                         </form>
                         <form
@@ -452,7 +449,7 @@
                                                     form="form6"
                                                     required>
                                                     <option :value="''">Maak een keuze...</option>
-                                                    <option v-for="t in teams" :value="t.id">{{ t.full_name }}</option>
+                                                    <option v-for="t in teams" :value="t.id">{{ $t('countries.' + t.id) }}</option>
                                                 </select>
                                                 <select
                                                     v-if="q.answer_type === 'player'"
@@ -474,10 +471,10 @@
                                                     :id="'q_' + idx"
                                                     v-model="player.bonus[idx]"
                                                     class="form-control"
+                                                    form="form6"
                                                     inputmode="numeric"
                                                     min="0"
                                                     pattern="[0-9]*"
-                                                    form="form6"
                                                     placeholder="0"
                                                     required
                                                     type="text">
@@ -497,7 +494,7 @@
                                 </div>
 
                                 <FormError v-if="wasValidated && !isValid" class="mb-3"/>
-                                <ButtonBar @previous="pevious" @save="save"/>
+                                <ButtonBar @previous="previous" @save="save"/>
                             </div>
                         </form>
                         <form
@@ -588,7 +585,7 @@
 
 
                                 <FormError v-if="wasValidated && !isValid" class="mb-3"/>
-                                <ButtonBar is-last @previous="pevious" @save="save"/>
+                                <ButtonBar is-last @previous="previous" @save="save"/>
                             </div>
                         </form>
                     </Transition>
@@ -626,8 +623,8 @@ const player: Ref<Player> = ref({
     round_of_16: [],
     quarter_finals: [],
     semi_finals: [],
-    finals_bronze: [],
-    finals: []
+    final_bronze: [],
+    final: []
 })
 
 const wasValidated = ref(false);
@@ -769,7 +766,10 @@ function setTeamsForRound(previousRound: string, roundToPredict: string) {
     })
 }
 
-function pevious() {
+/**
+ *
+ */
+function previous() {
     wasValidated.value = false;
     isValid.value = true;
     currentStep.value--;
@@ -950,7 +950,8 @@ function loadSavedPlayer() {
  * @return {void} This function does not return a value.
  */
 function downloadPlayerAsJSON() {
-    const dataStr = JSON.stringify(player.value, null, 2);
+    let sheet = {...player.value, ...advancingTeams.value};
+    const dataStr = JSON.stringify(sheet, null, 2);
     const blob = new Blob([dataStr], {type: "application/json"});
     const url = URL.createObjectURL(blob);
 

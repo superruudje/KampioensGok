@@ -17,7 +17,7 @@
                             <div class="d-flex gap-2 align-items-center mb-3">
                                 <h3 class="fw-bolder w26-condensed mb-0">{{ $t('heading.ranking') }}</h3>
                                 <div class="ms-auto w-auto input-group input-group-sm">
-                                    <input v-model="searchTerm" class="form-control" :placeholder="$t('dict.team_name')"
+                                    <input v-model="searchTerm" :placeholder="$t('dict.team_name')" class="form-control"
                                            type="search" @input="goPage(0)">
                                     <span id="basic-addon1" class="input-group-text"><i class="bi bi-search"></i></span>
                                 </div>
@@ -25,14 +25,17 @@
                                     v-model="snapshot"
                                     class="form-select form-select-sm w-auto">
                                     <option :value="0">Start</option>
-                                    <option v-for="(snapshot, idx) in snapshots" :value="snapshot.id">{{ getLabel(snapshot.label) }}</option>
+                                    <option v-for="(snapshot, idx) in snapshots" :value="snapshot.id">{{
+                                            getLabel(snapshot.label)
+                                        }}
+                                    </option>
                                 </select>
                             </div>
-                            <p class="font-book mb-4">{{ $t('ranking.ranking_text')}}</p>
+                            <p class="font-book mb-4">{{ $t('ranking.ranking_text') }}</p>
                             <div class="w-100 overflow-hidden overflow-x-auto mb-3">
                                 <table class="table">
                                     <thead>
-                                    <tr class="text-capitalize">
+                                    <tr class="text-capitalize text-nowrap">
                                         <th class="txt-orange" scope="col">#</th>
                                         <th class="txt-orange" scope="col"></th>
                                         <th class="txt-orange" scope="col">{{ $t('dict.points_abbr') }}</th>
@@ -55,7 +58,7 @@
                                         </td>
                                         <td>{{ player.score }}</td>
                                         <td class="text-nowrap w26-condensed">
-                                            <RouterLink :to="{name: 'deelnemer', params: {id: player.team_name.replace(/\s+/g, '-')}}">{{
+                                            <RouterLink :to="{name: 'player', params: {id: player.team_name.replace(/\s+/g, '-')}}">{{
                                                     player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name
                                                 }}
                                             </RouterLink>
@@ -118,16 +121,18 @@
                                     </nav>
                                 </div>
                                 <div class="col-auto ms-auto">
-                                    <span class="txt-blue fw-bold small"> {{ $t('ranking.table_results', { count: filtersData.length}) }}</span>
+                                    <span class="txt-blue fw-bold small"> {{
+                                            $t('ranking.table_results', {count: filtersData.length})
+                                        }}</span>
                                 </div>
                                 <div class="col-auto">
                                     <select
                                         v-model="pageSize"
                                         class="form-select form-select-sm">
-                                        <option :value="10">{{ $t('ranking.table_page', { count: 10}) }}</option>
-                                        <option :value="20">{{ $t('ranking.table_page', { count: 20}) }}</option>
-                                        <option :value="30">{{ $t('ranking.table_page', { count: 30}) }}</option>
-                                        <option :value="60">{{ $t('ranking.table_page', { count: 60}) }}</option>
+                                        <option :value="10">{{ $t('ranking.table_page', {count: 10}) }}</option>
+                                        <option :value="20">{{ $t('ranking.table_page', {count: 20}) }}</option>
+                                        <option :value="30">{{ $t('ranking.table_page', {count: 30}) }}</option>
+                                        <option :value="60">{{ $t('ranking.table_page', {count: 60}) }}</option>
                                         <option :value="'all'">{{ $t('cta.view_all') }} ({{ filtersData.length }})</option>
                                     </select>
                                 </div>
@@ -140,7 +145,10 @@
                                 <h3 class="fw-bolder w26-condensed mb-0">{{ $t('heading.progression') }}</h3>
                                 <select v-model="snapshot" class="ms-auto form-select form-select-sm w-auto">
                                     <option :value="0">start</option>
-                                    <option v-for="(snapshot, idx) in snapshots" :value="snapshot.id">{{ getLabel(snapshot.label) }}</option>
+                                    <option v-for="(snapshot, idx) in snapshots" :value="snapshot.id">{{
+                                            getLabel(snapshot.label)
+                                        }}
+                                    </option>
                                 </select>
                             </div>
 
@@ -264,7 +272,7 @@ const LINE_CHART = computed(() => {
     const lines: { name: string, data: { category: string, value?: number }[] }[] = [];
     tournament.players.forEach((player: Player) => {
         const data: { category: string, value?: number }[] = [
-            {category: 'start', value: 0}
+            {category: 'Start', value: 0}
         ]
         snapshots.value.slice(0, snapshot.value).forEach(snapshot => {
             const score = tournament.getParticipantTotalScore(player.team_name, snapshot.id)

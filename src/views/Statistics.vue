@@ -73,14 +73,16 @@
                     <TopTable
                         key="goals_against"
                         :list="tournament.goalsAgainstRanking"
-                        :title="$t('stats.goals_against')"/>
+                        :title="$t('stats.goals_against')"
+                        isTeam/>
                 </div>
                 <!-- meeste kaarten -->
                 <div class="col-md-4">
                     <TopTable
                         key="total_cards"
                         :list="tournament.totalCardsPerTeam"
-                        :title="capitalize($t('dict.card', 2))"/>
+                        :title="capitalize($t('dict.card', 2))"
+                        isTeam/>
                 </div>
             </div>
             <div class="row g-3 mb-3">
@@ -116,48 +118,48 @@
             <NotStarted v-if="!started"/>
             <div v-else class="row g-3 mb-3">
                 <div class="col-md-4">
-                    <PredictionTable
+                    <PredictionTableCard
                         :list="tournament.getBonusPrediction(0)"
                         :table_header="$t('dict.country')"
                         :title="$t('questions.champion')"/>
                 </div>
                 <div class="col-md-4">
-                    <PredictionTable
+                    <PredictionTableCard
                         :list="tournament.getBonusPrediction(3)"
                         :table_header="$t('dict.country')"
                         :title="$t('questions.goals_against')"/>
                 </div>
                 <div class="col-md-4">
-                    <PredictionTable
+                    <PredictionTableCard
                         :list="tournament.getBonusPrediction(4)"
                         :table_header="$t('dict.country')"
                         :title="$t('questions.most_cards')"/>
                 </div>
                 <div class="col-md-4">
-                    <PredictionTable
+                    <PredictionTableCard
                         :image="false"
                         :list="tournament.getBonusPrediction(5)"
                         :table_header="$t('dict.player')"
                         :title="$t('questions.top_scorer')"/>
                 </div>
                 <div class="col-md-4">
-                    <PredictionTable
+                    <PredictionTableCard
                         :image="false"
                         :list="tournament.getBonusPrediction(7)"
                         :table_header="$t('dict.player')"
                         :title="$t('questions.top_assist')"/>
                 </div>
                 <div class="col-md-4">
-                    <PredictionTable
+                    <PredictionTableCard
                         :image="false"
-                        :list="tournament.getBonusPrediction(1)"
+                        :list="tournament.getBonusPredictionGrouped(1)"
                         :table_header="$t('dict.amount')"
                         :title="$t('questions.goals_amount')"/>
                 </div>
                 <div class="col-md-4">
-                    <PredictionTable
+                    <PredictionTableCard
                         :image="false"
-                        :list="tournament.getBonusPrediction(2)"
+                        :list="tournament.getBonusPredictionGrouped(2)"
                         :table_header="$t('dict.amount')"
                         :title="$t('questions.cards_amount')"/>
                 </div>
@@ -176,21 +178,21 @@
             <NotStarted v-if="!started"/>
             <div v-else class="row g-3 mb-3">
                 <div class="col-md-4">
-                    <PredictionTable
+                    <PredictionTableCard
                         :image="false"
                         :list="tournament.getBonusPrediction(7)"
                         :table_header="$t('dict.player')"
                         :title="$t('questions.first_goal_nl')"/>
                 </div>
                 <div class="col-md-4">
-                    <PredictionTable
+                    <PredictionTableCard
                         :image="false"
                         :list="tournament.getBonusPrediction(8)"
                         :table_header="$t('dict.player')"
                         :title="$t('questions.first_card_nl')"/>
                 </div>
                 <div class="col-md-4">
-                    <PredictionTable
+                    <PredictionTableCard
                         :image="false"
                         :list="prediction_ned"
                         :table_header="$t('dict.round')"
@@ -205,7 +207,7 @@
 import {storeToRefs} from "pinia";
 import {useTournament} from "@/stores/content.js";
 import NumberCounter from "@/components/NumberCounter.vue";
-import PredictionTable from "@/components/PredictionTable.vue";
+import PredictionTableCard from "@/components/PredictionTableCard.vue";
 import {computed} from "vue";
 import TopTable from "@/components/TopTable.vue";
 import NotStarted from "@/components/NotStarted.vue";

@@ -17,7 +17,7 @@
                             class="border me-2"
                             loading="lazy"
                             width="32px">
-                        <span>{{ getTeamName(item.label) }}</span>
+                        <span>{{ isTeam ? $t('countries.' + item.label)  : item.label }}</span>
                     </div>
                     <div>
                         <span :class="idx < 1 ? 'fs-4' : 'fs-5'">{{ item.count }}</span>
@@ -46,6 +46,7 @@ const {teamImages, teams} = storeToRefs(tournament)
 withDefaults(defineProps<{
     title: string,
     list: { label: string, team?: string, count: number }[],
+    isTeam?: boolean,
 }>(), {})
 
 const open: Ref<boolean> = ref(false);

@@ -8,7 +8,7 @@
         </div>
         <div class="row g-3">
             <div v-for="(match) in matches" class="col-12 col-lg-6">
-                <MatchComponentNew
+                <MatchComponent
                     :match="match"/>
             </div>
         </div>
@@ -17,7 +17,7 @@
 
 <script lang="ts" setup>
 import {computed} from "vue";
-import MatchComponentNew from "@/components/MatchComponentNew.vue";
+import MatchComponent from "@/components/MatchComponent.vue";
 import type {MatchesByDay} from "@/types/tournament.js";
 import dayjs from 'dayjs';
 

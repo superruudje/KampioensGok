@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row g-3">
                 <div class="col-12">
-                    <h1 class="text-white w26-condensed fw-bolder mb-4">{{ participant.team_name }}</h1>
+                    <h1 class="text-white w26-condensed fw-bolder mb-4">{{ player.team_name }}</h1>
                 </div>
                 <div class="col-md-6">
                     <div class="text-light bg-mix rounded-4 p-4">
@@ -11,7 +11,7 @@
                         <div class="num-stat-item">
                             <div class="fs-1 fw-bold">
                                 <NumberCounter
-                                    :number="tournament.getParticipantTotalScore(participant.team_name, null)"/>
+                                    :number="tournament.getParticipantTotalScore(player.team_name, null)"/>
                             </div>
                             <div class="fw-lighter">{{ capitalize($t('dict.total')) }} {{ $t('dict.points') }}</div>
                         </div>
@@ -19,21 +19,21 @@
                         <div class="d-flex gap-4">
                             <div class="num-stat-item">
                                 <div class="fs-4 fw-bold">
-                                    {{ tournament.getParticipantScoreMatches(participant.team_name) }}
+                                    {{ tournament.getParticipantScoreMatches(player.team_name) }}
                                 </div>
                                 <div class="fw-lighter">{{ $t('menu.matches') }}</div>
                             </div>
                             <div class="num-stat-item">
                                 <div class="fs-4 fw-bold">
-                                    {{ tournament.getParticipantScoreKnockOut(participant.team_name) }}
+                                    {{ tournament.getParticipantScoreKnockOut(player.team_name) }}
                                 </div>
                                 <div class="fw-lighter">Knock-out</div>
                             </div>
                             <div class="num-stat-item">
                                 <div class="fs-4 fw-bold">
-                                    {{ tournament.getParticipantScoreBonus(participant.team_name) }}
+                                    {{ tournament.getParticipantScoreBonus(player.team_name) }}
                                 </div>
-                                <div class="fw-lighter">Bonusvragen</div>
+                                <div class="fw-lighter">{{ capitalize($t('dict.bonus_questions')) }}</div>
                             </div>
                         </div>
                     </div>
@@ -70,11 +70,11 @@ import {computed} from "vue";
 const tournament = useTournament();
 
 const props = defineProps<{
-    participant: Player
+    player: Player
 }>()
 
 const playerPos = computed(() => {
-    return props.participant ? tournament.getPlayerStanding(props.participant.team_name) as number : 0
+    return props.player ? tournament.getPlayerStanding(props.player.team_name) as number : 0
 })
 </script>
 

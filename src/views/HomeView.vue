@@ -3,11 +3,11 @@
         <header class="bg-26-primary py-3 py-md-5">
             <div class="container">
                 <div class="row gy-3 align-items-center">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <h1 class="fs-2 text-white fw-bolder w26-condensed">{{ $t('app.title') }}</h1>
                         <h2 class="fs-6 mb-0 txt-orange fw-bolder">Home</h2>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <div class="card border-0 rounded-4 bg-26-ev2">
                             <div class="card-body">
                                 <div v-if="!started" class="row g-3 g-md-4 justify-content-center fw-bold w26-condensed">
@@ -70,7 +70,7 @@
                                             <th v-else scope="row">{{ idx + 1 }}</th>
                                             <td>
                                                 <RouterLink
-                                                    :to="{name: 'deelnemer', params: {id: player.team_name.replace(/\s+/g, '-')}}"
+                                                    :to="{name: 'player', params: {id: player.team_name.replace(/\s+/g, '-')}}"
                                                     class="w26-condensed text-light text-decoration-none">{{
                                                         player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name
                                                     }}
@@ -89,7 +89,7 @@
                             </div>
                         </div>
 
-                        <PredictionTable
+                        <PredictionTableCard
                             :image="false"
                             :list="prediction_ned"
                             table_header="Score"
@@ -148,7 +148,7 @@ import {storeToRefs} from "pinia";
 import {useTournament} from "@/stores/content.js";
 import MatchDayComponent from "@/components/MatchDayComponent.vue";
 import {onBeforeMount, type Ref, ref} from "vue";
-import PredictionTable from "@/components/PredictionTable.vue";
+import PredictionTableCard from "@/components/PredictionTableCard.vue";
 import type {Player} from "@/types/pool.ts";
 
 const tournament = useTournament();

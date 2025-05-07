@@ -11,8 +11,8 @@
                 required
                 @input="setPredictionTeam(0, $event)">
                 <option :value="''">{{ match.teams[0] }}</option>
-                <option v-for="t in getPossibleTeams(match.teams[0])" :value="t?.id">
-                    {{ t?.full_name }} - ({{ t?.poule_name }})
+                <option v-for="t in getPossibleTeams(match.teams[0])" :value="t.id">
+                    {{ $t('countries.' + t.id) }} - ({{ t.poule_name }})
                 </option>
             </select>
         </td>
@@ -66,8 +66,8 @@
                 required
                 @input="setPredictionTeam(1, $event)">
                 <option :value="''">{{ match.teams[1] }}</option>
-                <option v-for="t in getPossibleTeams(match.teams[1])" :value="t?.id">
-                    {{ t?.full_name }} - ({{ t?.poule_name }})
+                <option v-for="t in getPossibleTeams(match.teams[1])" :value="t.id">
+                    {{ $t('countries.' + t.id) }} - ({{ t.poule_name }})
                 </option>
             </select>
         </td>
@@ -77,7 +77,7 @@
 <script lang="ts" setup>
 import {storeToRefs} from "pinia";
 import {useTournament} from "@/stores/content.ts";
-import type {Match} from "@/types/tournament.ts";
+import type {Match, Team} from "@/types/tournament.ts";
 import type {MatchResult} from "@/types/pool.ts";
 
 const tournament = useTournament();
@@ -137,9 +137,9 @@ function setPredictionScore(teamIndex: number, event: Event) {
  * @param {string} teamPlaceholder - A string used to identify and filter teams. It may include a 'W' followed by a number or uppercase letters.
  * @return {Array} - An array of possible teams matching the conditions dictated by the placeholder.
  */
-function getPossibleTeams(teamPlaceholder: string) {
+function getPossibleTeams(teamPlaceholder: string): Team[] {
     if (teams.value.some(team => team.id === teamPlaceholder)) {
-        return [teams.value.find(team => team.id === teamPlaceholder)]
+        return teams.value.filter(team => team.id === teamPlaceholder)
     } else if (teamPlaceholder.includes('W')) {
         const number = parseInt(teamPlaceholder.slice(1), 10);
         const prediction = props.predictions.find(prediction => prediction.match === number)
