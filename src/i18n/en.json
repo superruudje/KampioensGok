@@ -24,7 +24,9 @@
         "view_details": "View details",
         "view_all": "View all",
         "hide": "Hide",
-        "shortcut": "Change team"
+        "shortcut": "Change team",
+        "download": "Download",
+        "mail_sheet": "Submit your sheet"
     },
     "footer": {
         "visit": "also visit",
@@ -82,7 +84,13 @@
         "group_stage": "group stage",
         "round_32": "round of 32",
         "round_16": "round of 16",
-        "finals": "finals"
+        "quarter_finals": "quarter-finals",
+        "semi_finals": "semi-finals",
+        "bronze_final": "bronze final",
+        "final": "final",
+        "finals": "finals",
+        "please_note": "Please note:",
+        "tip": "Tip:"
     },
     "home": {
         "match_schedule_title": "View the World Cup 2026 match schedule",
@@ -115,26 +123,102 @@
         "example3": "(winner correct, score not)",
         "example4": "(winner correct, one score correct)",
         "example5": "(one score correct)",
+        "result_help": "*The result refers to the score after <b>90</b> minutes.",
+        "knockout1": "<b class='txt-orange'>5</b> points per correctly predicted team in round of 32.",
+        "knockout2": "<b class='txt-orange'>10</b> points per correctly predicted team in round of 16.",
+        "knockout3": "<b class='txt-orange'>20</b> points per correctly predicted team in quarter finals.",
+        "knockout4": "<b class='txt-orange'>30</b> points for a correctly predicted score for one of the teams.",
+        "knockout5": "<b class='txt-orange'>50</b> points for a correctly predicted score for one of the teams.",
         "info1": "Team predicted correctly.",
         "info2": "Team predicted incorrectly, but in knock-out.",
         "info3": "Team predicted incorrectly (no points)."
     },
     "questions": {
         "champion": "Which country will win the championship?",
+        "goals_amount": "How many goals will be scored in total?",
+        "goals_amount_help": "Including goals scored in extra time.",
+        "cards_amount": "How many cards will be given during the tournament?",
+        "cards_amount_help": "An indirect red card does not count as an additional card.",
         "goals_against": "Which country will concede the most goals?",
         "most_cards": "Which country will receive the most cards?",
         "top_scorer": "Who will be the top scorer?",
         "top_assist": "Who will be the assist king?",
-        "goals_amount": "How many goals will be scored in total?",
-        "cards_amount": "How many cards will be given during the tournament?",
         "first_goal_nl": "Who will score the first goal for the Netherlands?",
         "first_card_nl": "Who will receive the first card for the Netherlands?",
         "nl_result": "How far will the Dutch team make it?",
         "stats": "({percentage}% thinks the same, currently {current})",
-        "current": "(currently {current})"
+        "current": "(currently {current})",
+        "help": "Points for the bonus questions will only be awarded after the group stage."
+    },
+    "forms": {
+        "next": "Next",
+        "previous": "Previous",
+        "save": "Save",
+        "saved": "Form saved!",
+        "continue": "Continue were I left off",
+        "reset": "Reset",
+        "auto-fill": "Auto-fill",
+        "please_pick": "Please pick an option...",
+        "step1": {
+            "title": "Team name",
+            "sub_title": "Sign up for the pool now!",
+            "p1": "Enter your details below to participate in this exciting football pool for the 2026 FIFA World Cup.",
+            "p2": "The tournament will be bigger than ever: with <strong>{countries}</strong> participating countries and no less than <strong>{matches}</strong> matches, it will be a World Cup not to miss. The matches will take place in the United States, Mexico, and Canada, spread across multiple host cities.",
+            "p3": "During the tournament, you can earn points by correctly (or partially) predicting match results. Additionally, you can earn bonus points for predicting rankings, statistics, and bonus questions. The better your predictions, the higher you'll rank on the leaderboard!",
+            "p4": "Want to know more about the scoring system and the rules? See:",
+            "p5": "Good luck – and have fun predicting!",
+            "name": "Your name",
+            "team_name": "Your team name"
+        },
+        "step2": {
+            "title": "Group stage",
+            "p1": "In the group stage of the 2026 World Cup, 48 countries compete in 12 groups of 4 teams each. For every match in the group stage, you must submit a prediction. Think carefully about your guesses — each correct (or partially correct) answer earns points that count toward the overall ranking!"
+        },
+        "step3": {
+            "title": "Round of 32",
+            "p1": "Now fill in the knockout stage for the final 32 teams. To automatically populate the teams based on your predictions, click the <b>‘Auto-fill’</b> button. The group winners and the best third-placed teams will then be calculated based on your earlier predictions from step 2. You can still manually adjust the automatically filled teams if you wish. Make sure everything is correct before proceeding to the next round.",
+            "p2": "You predict the score after 90 minutes of play, so without extra time or penalty shootouts. In case of a draw, you can select which team you think will advance to the next round."
+        },
+        "step4": {
+            "title": "Round of 16",
+            "p1": "Now fill in the knockout stage for the final 16 teams. To automatically populate the teams based on your previous predictions, click the <b>‘Auto-fill’</b> button. The teams will then be determined based on the results you entered in the first knockout round (last 32). You can still manually adjust the automatically filled teams if you wish. Make sure everything is correct before proceeding to the next round."
+        },
+        "step5": {
+            "title": "Finals",
+            "p1": "Now fill in the final rounds: quarter-finals, semi-finals, and the final. To automatically populate the teams based on your predictions, click the <b>‘Auto-fill’</b> button. The teams will then be determined based on the results you entered in the previous round. You can still manually adjust the automatically filled teams if you wish. Make sure everything is correct before proceeding to the next round."
+        },
+        "step6": {
+            "title": "Bonus questions",
+            "p1": "Besides predicting the matches, you can earn extra points with bonus questions. For questions where you need to name a team or player, a correct answer earns you 10 points. For estimation questions, you will receive 40 points for an exact prediction, 25 points if you are within five, and 15 points if you are within ten. A total of 215 points can be earned from the bonus questions. A strong score on these questions can ultimately make the difference in the rankings.",
+            "p2": "The answers you provide for the bonus questions do not need to match the predictions you previously made for the matches. This allows you to spread your chances and play more strategically."
+        },
+        "step7": {
+            "title": "Submit",
+            "p1": "Follow the steps below to complete your entry. Carefully review your predictions, download your submission, and send it to the organization.",
+            "check": {
+                "title": "Check",
+                "p1": "Carefully review all entered results and chosen finalists. Correct any mistakes before proceeding.",
+                "p2": "Once submitted, no changes can be made."
+            },
+            "download": {
+                "title": "Download your prediction sheet",
+                "p1": "Click the download button to save your submission. This is a JSON file containing all the predictions and data you have filled in. Keep it safe."
+            },
+            "mail": {
+                "title": "Email your sheet to the organization",
+                "p1": "Email the downloaded file to the organization. Please use our template for this by clicking the button below. Make sure you attach the downloaded JSON file."
+            },
+            "confirm": {
+                "title": "Wait for confirmation",
+                "p1": "After submission, you will receive a payment link from the organization. Once the payment is completed, your sheet will be added to the pool."
+            }
+        }
     },
     "errors": {
-        "not_started": "Predictions will be revealed at the start of the tournament."
+        "not_started": "Predictions will be revealed at the start of the tournament.",
+        "already_chosen": "This team name is already chosen.",
+        "required": "This field is required.",
+        "check_form": "Please, check the form for errors."
     },
     "countries": {
         "MEX": "Mexico",

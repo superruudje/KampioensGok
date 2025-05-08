@@ -14,7 +14,7 @@
                 <div class="col-12">
                     <div class="card rounded-4 mb-4">
                         <div class="card-body p-3 p-md-4">
-                            <div class="d-flex gap-2 align-items-center mb-3">
+                            <div class="d-flex flex-wrap gap-2 align-items-center mb-3">
                                 <h3 class="fw-bolder w26-condensed mb-0">{{ $t('heading.ranking') }}</h3>
                                 <div class="ms-auto w-auto input-group input-group-sm">
                                     <input v-model="searchTerm" :placeholder="$t('dict.team_name')" class="form-control"

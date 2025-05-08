@@ -1,7 +1,7 @@
 <template>
     <div
         class="shake-me bg-danger rounded-3 py-2 px-3 text-white small">
-        {{ message ? message : 'Controleer formulier!' }}
+        {{ message ? message : $t('errors.check_form') }}
     </div>
 </template>
 

@@ -140,7 +140,7 @@ function setPredictionScore(teamIndex: number, event: Event) {
 function getPossibleTeams(teamPlaceholder: string): Team[] {
     if (teams.value.some(team => team.id === teamPlaceholder)) {
         return teams.value.filter(team => team.id === teamPlaceholder)
-    } else if (teamPlaceholder.includes('W')) {
+    } else if ((teamPlaceholder.includes('W') || teamPlaceholder.includes('L')) && teamPlaceholder.length > 1) {
         const number = parseInt(teamPlaceholder.slice(1), 10);
         const prediction = props.predictions.find(prediction => prediction.match === number)
         if (!prediction) return teams.value;
@@ -194,6 +194,4 @@ function gotoNext(event: KeyboardEvent) {
 
 </script>
 
-<style lang="sass" scoped>
-
-</style>
+<style lang="sass" scoped></style>

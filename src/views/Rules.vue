@@ -66,15 +66,20 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="small">* Onder uitslag wordt verstaan de stand na <b>90</b> minuten.</div>
+                                <div class="small" v-html="$t('rules.result_help')"></div>
                                 <hr class="my-4">
                             </article>
                             <article>
                                 <h5 class="txt-blue fw-bolder">Knock-out fase</h5>
-                                <p>Voor elk correct voorspelde team in de knock-out fase zijn er punten te verdienen. Totaal
-                                    zijn er
-                                    <b class="txt-orange">{{ knockoutPoints }} pnt.</b> te verdienen.</p>
+                                <p>Voor elk correct voorspelde team in de knock-out fase zijn er punten te verdienen.</p>
+                                <p v-html="$t('rules.points_total', { points: knockoutPoints })"></p>
                                 <ul>
+                                    <li v-html="$t('rules.knockout1')"></li>
+                                    <li v-html="$t('rules.knockout2')"></li>
+                                    <li v-html="$t('rules.knockout3')"></li>
+                                    <li v-html="$t('rules.knockout4')"></li>
+                                    <li v-html="$t('rules.knockout5')"></li>
+
                                     <li><b class="txt-orange">5 pnt. </b>per correct voorspelde 1/32 finalist.</li>
                                     <li><b class="txt-orange">10 pnt. </b>per correct voorspelde 1/16 finalist.</li>
                                     <li><b class="txt-orange">20 pnt. </b>per correct voorspelde kwartfinalist.</li>
@@ -83,7 +88,7 @@
                                 </ul>
                                 <hr class="my-4">
                             </article>
-                            <h5 class="txt-blue fw-bolder">Bonusvragen</h5>
+                            <h5 class="txt-blue fw-bolder">{{ capitalize($t('dict.bonus_questions')) }}</h5>
                             <p>Bij vragen waarbij er een <b>team</b> of <b>speler</b> opgegeven moet worden, zijn er <b
                                 class="txt-orange">10 pnt. </b> te verdienen<sup>1</sup>.
                                 Bij inschattingsvragen<sup>2,
@@ -145,6 +150,7 @@
 <script lang="ts" setup>
 import {computed} from "vue";
 import {useTournament} from "@/stores/content.js";
+import {capitalize} from "../helpers/magic.ts";
 
 const tournament = useTournament();
 

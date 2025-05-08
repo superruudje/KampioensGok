@@ -104,6 +104,7 @@ import {storeToRefs} from "pinia";
 import {computed, ref} from "vue";
 import type {Match, MatchDayType} from "@/types/tournament.ts";
 import PredictionTable from "@/components/PredictionTable.vue";
+import {i18n} from "@/i18n";
 
 const tournament = useTournament()
 const {teamImages, teams, knock_out} = storeToRefs(tournament)
@@ -121,11 +122,24 @@ const player_prediction_teams = tournament.getMatchPlayerPredictionTeams(props.t
 const viewPredictions = ref(false);
 
 const summary = computed(() => {
-    if (!props.match.result_after_extra_time) return ''
-    const final_score = props.match.result_after_penalties || props.match.result_after_extra_time
-    const final_winner = final_score[0] === final_score[1] ? null : final_score[0] > final_score[1] ? 0 : 1
-    if (final_winner === null) return 'Draw';
-    return `${getTeamName(props.match.teams[final_winner])} wint na ${props.match.result_after_penalties ? 'penalties' : 'extra tijd'}`
+    const { result_after_extra_time, result_after_penalties, teams } = props.match;
+    if (!result_after_extra_time) return '';
+
+    const final_score = result_after_penalties || result_after_extra_time;
+    const [scoreA, scoreB] = final_score;
+    const final_winner = scoreA === scoreB ? null : scoreA > scoreB ? 0 : 1;
+
+    if (final_winner === null) {
+        return i18n.global.t('dict.draw');
+    }
+
+    const winnerName = getTeamName(teams[final_winner]);
+
+    if (result_after_penalties) {
+        return i18n.global.t('dict.wins_on_penalties', { team: winnerName });
+    }
+
+    return i18n.global.t('dict.wins_after_extra_time', { team: winnerName });
 })
 
 const score = computed(() => {

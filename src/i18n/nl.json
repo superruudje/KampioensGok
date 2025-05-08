@@ -24,7 +24,9 @@
         "view_details": "Toon details",
         "view_all": "Toon alle",
         "hide": "Verberg",
-        "shortcut": "Wijzig team"
+        "shortcut": "Wijzig team",
+        "download": "Download",
+        "mail_sheet": "Sheet inzenden"
     },
     "footer": {
         "visit": "bezoek ook",
@@ -82,7 +84,13 @@
         "group_stage": "poulefase",
         "round_32": "ronde of 32",
         "round_16": "ronde of 16",
-        "finals": "finales"
+        "quarter_finals": "kwartfinales",
+        "semi_finals": "halve finales",
+        "bronze_final": "troostfinale",
+        "final": "finale",
+        "finals": "finales",
+        "please_note": "Let op:",
+        "tip": "Tip:"
     },
     "home": {
         "match_schedule_title": "Bekijk het Wereld Kampioenschap 2026 wedstrijdschema",
@@ -115,26 +123,97 @@
         "example3": "(winnaar correct, score niet)",
         "example4": "(winnaar correct, één score correct)",
         "example5": "(één score correct)",
+        "result_help": "* Onder uitslag wordt verstaan de stand na <b>90</b> minuten.",
         "info1": "Team correct voorspeld.",
         "info2": "Team incorrect voorspeld, maar wel in knockout.",
         "info3": "Team incorrect voorspeld (geen punten)."
     },
     "questions": {
         "champion": "Welk land wordt kampioen?",
+        "goals_amount": "Hoeveel goals worden er totaal gescoord?",
+        "goals_amount_help": "Inclusief goals in verlengingen.",
+        "cards_amount": "Hoeveel kaarten worden er in het toernooi gegeven?",
+        "cards_amount_help": "Indirecte rode kaart telt niet als extra kaart.",
         "goals_against": "Welk land krijgt de meeste tegengoals?",
         "most_cards": "Welk land krijgt de meeste kaarten?",
         "top_scorer": "Wie wordt er topscorer?",
         "top_assist": "Wie wordt de koning van de assist?",
-        "goals_amount": "Hoeveel goals worden er totaal gescoord?",
-        "cards_amount": "Hoeveel kaarten worden er in het toernooi gegeven?",
         "first_goal_nl": "Wie maakt het eerste doelpunt voor Oranje?",
         "first_card_nl": "Wie ontvangt die eerste kaart voor Oranje?",
         "nl_result": "Hoe ver gaat Oranje het schoppen?",
         "stats": "({percentage}% denkt dit ook, momenteel {current})",
-        "current": "(momenteel {current})"
+        "current": "(momenteel {current})",
+        "help": "Punten voor de bonusvragen worden pas na de poulefase toegekend."
+    },
+    "forms": {
+        "next": "Volgende",
+        "previous": "Vorige",
+        "save": "Opslaan",
+        "saved": "Formulier opgeslagen!",
+        "continue": "Verder waar ik gebleven was",
+        "reset": "Reset",
+        "auto-fill": "Automatisch invullen",
+        "please_pick": "Maak een keuze...",
+        "step1": {
+            "title": "Teamnaam",
+            "sub_title": "Schrijf je nu in voor de pool?",
+            "p1": "Vul hieronder je gegevens in om deel te nemen aan deze spannende voetbalpool rondom het Wereldkampioenschap voetbal 2026.",
+            "p2": "Het toernooi wordt groter dan ooit: met <strong>{countries}</strong> deelnemende landen en maar liefst <strong>{matches}</strong> wedstrijden wordt het een WK om niet te missen. De wedstrijden vinden plaats in de Verenigde Staten, Mexico en Canada, verspreid over meerdere speelsteden.",
+            "p3": "Tijdens het toernooi kun je punten verdienen door uitslagen (deels) goed te voorspellen. Daarnaast zijn er bonuspunten te behalen voor het voorspellen van standen, statistieken en bonusvragen. Hoe beter je voorspelt, hoe hoger je op het klassement eindigt!",
+            "p4": "Meer weten over de puntentelling en de spelregels? Bekijk:",
+            "p5": "Succes – en veel plezier met voorspellen!",
+            "name": "Je naam",
+            "team_name": "Je teamnaam"
+        },
+        "step2": {
+            "title": "Poulefase",
+            "p1": "In de poulefase van het WK 2026 strijden 48 landen verdeeld over 12 poules van 4 teams tegen elkaar. Voor elke wedstrijd in de poulefase moet je een uitslag invullen. Denk goed na over je voorspellingen — elk goed (of deels goed) antwoord levert punten op die meetellen voor het totaalklassement!"
+        },
+        "step3": {
+            "title": "Ronde of 32",
+            "p1": "Vul nu de knockout fase in voor de laatste 32 teams. Om de teams automatisch in te laten vullen op basis van jouw voorspellingen, klik je op de knop <b>‘Automatisch invullen’</b>. De poulewinnaars en de beste nummers drie worden dan berekend op basis van jouw eerder ingevulde voorspellingen uit stap 2. Je kunt de automatisch ingevulde teams nog handmatig aanpassen als je wilt. Controleer goed of alles naar wens is voordat je verdergaat naar de volgende ronde.",
+            "p2": "Je voorspelt de stand na 90 minuten speeltijd, dus zonder eventuele verlenging of strafschoppen. Bij een gelijk spel kun je de volgende fase selecteren welke team jij denkt dat er door gaat."
+        },
+        "step4": {
+            "title": "Ronde of 16",
+            "p1": "Vul nu de knockout fase in voor de laatste 16 teams. Om de teams automatisch in te laten vullen op basis van jouw voorspellingen, klik je op de knop <b>‘Auto-fill’</b>. De teams worden dan bepaald op basis van de uitslagen die jij hebt ingevuld in de eerste knockout-ronde (laatste 32). Je kunt de automatisch ingevulde teams daarna handmatig aanpassen als je wilt. Controleer goed of alles naar wens is voordat je verdergaat naar de volgende ronde."
+        },
+        "step5": {
+            "title": "Finales",
+            "p1": "Vul nu de finalerondes in: kwartfinales, halve finales en de finale. Om de teams automatisch in te laten vullen op basis van jouw voorspellingen, klik je op de knop <b>‘Auto-fill’</b>. De teams worden dan bepaald op basis van de uitslagen die jij hebt ingevuld in de vorige ronde. Je kunt de automatisch ingevulde teams daarna handmatig aanpassen als je wilt. Controleer goed of alles naar wens is voordat je verdergaat naar de volgende ronde."
+        },
+        "step6": {
+            "title": "Bonusvragen",
+            "p1": "Naast het voorspellen van de wedstrijden kun je extra punten verdienen met bonusvragen. Bij vragen waarbij een team of speler moet worden ingevuld, levert een goed antwoord 10 punten op. Voor inschattingsvragen worden er 40 punten toegekend als je het aantal exact voorspelt, 25 punten als je er maximaal vijf naast zit, en 15 punten als je er maximaal tien naast zit. In totaal zijn er 215 punten te verdienen met de bonusvragen. Een goede score op deze vragen kan uiteindelijk het verschil maken in het klassement.",
+            "p2": "De antwoorden die je bij de bonusvragen invult, hoeven niet overeen te komen met de voorspellingen die je eerder hebt gedaan bij de wedstrijden. Zo kun je ervoor kiezen om je kansen te spreiden en strategischer te spelen."
+        },
+        "step7": {
+            "title": "Inzenden",
+            "p1": "Volg onderstaande stappen om jouw deelname te voltooien. Controleer je voorspellingen zorgvuldig, download je inzending en stuur deze op naar de organisatie.",
+            "check":{
+                "title": "Controleer",
+                "p1": "Neem alle ingevulde uitslagen en gekozen finalisten goed door. Pas eventuele fouten aan voordat je verdergaat.",
+                "p2": "Na inzending kunnen er geen aanpassingen meer worden gedaan."
+            },
+            "download": {
+                "title": "Download jouw ingevulde sheet",
+                "p1": "Klik op de downloadknop om jouw inzending op te slaan. Dit is een JSON-bestand met alle voorspellingen en gegevens die je hebt ingevuld. Bewaar deze goed."
+            },
+            "mail": {
+                "title": "Mail jouw sheet naar de organisatie",
+                "p1": "Stuur het gedownloade bestand per e-mail naar de organisatie. Gebruik hiervoor ons template door op onderstaande knop te klikken. Vergeet niet het gedownloade bestand bij te voegen."
+            },
+            "confirm": {
+                "title": "Wacht op bevestiging",
+                "p1": "Na inzending ontvang je een betaallink van de organisatie. Wanneer deze is voldaan wordt jouw scheet toegevoegd aan de pool."
+            }
+        }
     },
     "errors": {
-        "not_started": "Voorspellingen worden bekendgemaakt bij de start van het toernooi."
+        "not_started": "Voorspellingen worden bekendgemaakt bij de start van het toernooi.",
+        "already_chosen": "Deze teamnaam is al gekozen.",
+        "required": "Dit veld is verplicht.",
+        "check_form": "Controleer het formulier op fouten."
     },
     "countries": {
         "MEX": "Mexico",

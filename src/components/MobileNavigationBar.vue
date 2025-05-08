@@ -28,7 +28,7 @@ const pages = [
 <style lang="sass" scoped>
 .mob-menu-bnt
     background-color: var(--pk-ui-01--dark)
-    color: var(--pk-text-02--dark)
+    color: white
     &:hover, &.active
         background-color: var(--pk-ui-02--dark)
         color: var(--pk-interaction)

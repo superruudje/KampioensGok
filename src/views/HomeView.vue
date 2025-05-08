@@ -3,11 +3,11 @@
         <header class="bg-26-primary py-3 py-md-5">
             <div class="container">
                 <div class="row gy-3 align-items-center">
-                    <div class="col-md-6">
+                    <div class="col-md-4 col-lg-6">
                         <h1 class="fs-2 text-white fw-bolder w26-condensed">{{ $t('app.title') }}</h1>
                         <h2 class="fs-6 mb-0 txt-orange fw-bolder">Home</h2>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-8 col-lg-6">
                         <div class="card border-0 rounded-4 bg-26-ev2">
                             <div class="card-body">
                                 <div v-if="!started" class="row g-3 g-md-4 justify-content-center fw-bold w26-condensed">
@@ -39,7 +39,8 @@
                             </div>
                             <img
                                 alt="logo"
-                                class="d-none d-md-block position-absolute start-0 top-50 translate-middle h-75"
+                                height="80"
+                                class="d-none d-md-block position-absolute start-0 top-50 translate-middle"
                                 src="@/assets/images/wc26.png"/>
                         </div>
                     </div>

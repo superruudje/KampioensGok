@@ -94,55 +94,61 @@ function assignThirdPlaceTeamsToMatches(advancingTeams: string[]): Record<number
  * @return {Record<number, [string, string]>} An object representing the matches in the Round of 16, where each key corresponds to a match number and each value is a tuple of the two competing teams.
  */
 export function determineRoundOf16FromResults(matchPredictions: MatchResult[]): Record<number, [string, string]> {
-    const roundWinners= determineWinners(matchPredictions);
+    const { winners, losers } = determineWinnersAndLosers(matchPredictions);
 
     return {
-        89: [roundWinners[74], roundWinners[77]],
-        90: [roundWinners[73], roundWinners[75]],
-        91: [roundWinners[76], roundWinners[78]],
-        92: [roundWinners[79], roundWinners[80]],
-        93: [roundWinners[83], roundWinners[84]],
-        94: [roundWinners[81], roundWinners[82]],
-        95: [roundWinners[86], roundWinners[88]],
-        96: [roundWinners[85], roundWinners[87]],
+        89: [winners[74], winners[77]],
+        90: [winners[73], winners[75]],
+        91: [winners[76], winners[78]],
+        92: [winners[79], winners[80]],
+        93: [winners[83], winners[84]],
+        94: [winners[81], winners[82]],
+        95: [winners[86], winners[88]],
+        96: [winners[85], winners[87]],
 
-        97: [roundWinners[89], roundWinners[90]],
-        98: [roundWinners[93], roundWinners[94]],
-        99: [roundWinners[91], roundWinners[92]],
-        100: [roundWinners[95], roundWinners[96]],
+        97: [winners[89], winners[90]],
+        98: [winners[93], winners[94]],
+        99: [winners[91], winners[92]],
+        100: [winners[95], winners[96]],
 
-        101: [roundWinners[97], roundWinners[98]],
-        102: [roundWinners[99], roundWinners[100]],
+        101: [winners[97], winners[98]],
+        102: [winners[99], winners[100]],
 
-        104: [roundWinners[101], roundWinners[102]],
+        103: [losers[101], losers[102]],
+        104: [winners[101], winners[102]],
     };
 }
 
 /**
- * Determines the winners of matches based on the provided match predictions.
+ * Determines the winners and losers of matches based on the provided match predictions.
  *
  * @param {MatchResult[]} matchPredictions - An array of match prediction objects, where each object contains the teams, their scores, and the match identifier.
- * @return {Record<number, string>} An object where the keys are match identifiers and the values are the names of the winning teams. If the match ends in a tie, the value will be an empty string.
+ * @return {{ winners: Record<number, string>, losers: Record<number, string> }} An object containing two records:
+ * - winners: maps match IDs to winning team names (empty string for draws).
+ * - losers: maps match IDs to losing team names (empty string for draws).
  */
-function determineWinners(matchPredictions: MatchResult[]) {
-    const roundWinners: Record<number, string> = {};
+function determineWinnersAndLosers(matchPredictions: MatchResult[]) {
+    const winners: Record<number, string> = {};
+    const losers: Record<number, string> = {};
+
     for (const prediction of matchPredictions) {
         const [scoreA, scoreB] = prediction.result;
+        if (!prediction.teams) continue
+        const [teamA, teamB] = prediction.teams;
 
-        let winner: string;
         if (scoreA > scoreB) {
-            // @ts-ignore
-            winner = prediction.teams[0];
+            winners[prediction.match] = teamA;
+            losers[prediction.match] = teamB;
         } else if (scoreB > scoreA) {
-            // @ts-ignore
-            winner = prediction.teams[1];
+            winners[prediction.match] = teamB;
+            losers[prediction.match] = teamA;
         } else {
-            winner = '';
+            winners[prediction.match] = '';
+            losers[prediction.match] = '';
         }
-
-        roundWinners[prediction.match] = winner;
     }
-    return roundWinners;
+
+    return { winners, losers };
 }
 
 export function capitalize(str: string) {

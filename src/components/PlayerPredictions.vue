@@ -90,7 +90,7 @@
                 <div class="card rounded-4 mb-4">
                     <div class="card-body p-3 p-md-4">
                         <h3 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.bonus_questions')) }}</h3>
-                        <p>Punten voor de bonusvragen worden pas <u>na</u> de poulefase toegekend.</p>
+                        <p>{{ $t('questions.help') }}</p>
                         <NotStarted v-if="!started"/>
                         <template v-else>
                             <div
@@ -139,7 +139,7 @@
                             </div>
                         </template>
                         <RouterLink :to="{name: 'statistics'}">
-                            <button class="btn-wc26 btn-wc26-orange-alt w-fit">
+                            <button class="btn-wc26 btn-wc26-orange-alt w-fit mt-3">
                                 {{ $t('cta.to_stats') }}
                             </button>
                         </RouterLink>

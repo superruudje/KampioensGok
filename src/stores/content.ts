@@ -91,7 +91,7 @@ export const useTournament = defineStore('tournament', {
                 },
                 {
                     question: i18n.global.t('questions.goals_amount'),
-                    help: "Inclusief goals in verlengingen.",
+                    help: i18n.global.t('questions.goals_amount_help'),
                     answer: 10,
                     answer_type: "number",
                     type: "estimate",
@@ -100,7 +100,7 @@ export const useTournament = defineStore('tournament', {
                 },
                 {
                     question: i18n.global.t('questions.cards_amount'),
-                    help: "Indirecte rode kaart telt niet als extra kaart.",
+                    help: i18n.global.t('questions.cards_amount_help'),
                     answer: null,
                     answer_type: "number",
                     type: "estimate",

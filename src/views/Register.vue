@@ -4,7 +4,7 @@
             <div class="container-lg">
                 <div class="row text-light">
                     <div class="col-12">
-                        <h1 class="w26-condensed mb-0">Invulsheet</h1>
+                        <h1 class="w26-condensed mb-0">{{ $t('menu.register') }}</h1>
                     </div>
                 </div>
             </div>
@@ -13,13 +13,13 @@
             <div class="row justify-content-center">
                 <div class="col-12">
                     <Stepper :currentStep="currentStep" :steps="[
-                        {label: 'Persoonlijke gegevens', icon: ''},
-                        {label: 'Poulefase', icon: ''},
-                        {label: 'Knockout I', icon: ''},
-                        {label: 'Knockout II', icon: ''},
-                        {label: 'Finales', icon: ''},
-                        {label: 'Bonusvragen', icon: ''},
-                        {label: 'Inzenden', icon: ''},
+                        {label: $t('forms.step1.title'), icon: ''},
+                        {label: $t('forms.step2.title'), icon: ''},
+                        {label: $t('forms.step3.title'), icon: ''},
+                        {label: $t('forms.step4.title'), icon: ''},
+                        {label: $t('forms.step5.title'), icon: ''},
+                        {label: $t('forms.step6.title'), icon: ''},
+                        {label: $t('forms.step7.title'), icon: ''},
                     ]" class="mb-2" @go-to-step="(step) => currentStep = step"/>
                 </div>
             </div>
@@ -36,59 +36,48 @@
                             onsubmit="return false"
                             @submit="submit($event, $refs['form1'] as HTMLFormElement)">
                             <div class="card-body p-3 p-md-4">
-                                <h3 class="fw-bolder w26-condensed mb-3">Wat leuk dat je mee doet!</h3>
-                                <p>Vul hieronder je gegevens in om deel te nemen aan deze spannende voetbalpool rondom het
-                                    Wereldkampioenschap voetbal 2026.</p>
-
-                                <p>Het toernooi wordt groter dan ooit: met <strong>{{ tournament.teams.length }}</strong> deelnemende landen
-                                    en maar liefst <strong>{{ tournament.matches.length }}</strong> wedstrijden wordt het
-                                    een WK om niet te missen. De wedstrijden vinden plaats in de Verenigde Staten, Mexico en Canada,
-                                    verspreid over meerdere speelsteden.</p>
-
-                                <p>Tijdens het toernooi kun je punten verdienen door uitslagen (deels) goed te voorspellen. Daarnaast zijn
-                                    er bonuspunten te behalen voor het voorspellen van standen, statistieken en bonusvragen. Hoe beter je
-                                    voorspelt, hoe hoger je op het klassement eindigt!</p>
-
-                                <p>Meer weten over de puntentelling en de spelregels? Bekijk dan de
-                                    <RouterLink :to="{name: 'rules'}">puntentelling en de spelregels</RouterLink>
-                                    .
+                                <h3 class="fw-bolder w26-condensed mb-3">{{ $t('forms.step1.sub_title') }}</h3>
+                                <p>{{ $t('forms.step1.p1') }}</p>
+                                <p v-html="$t('forms.step1.p2', { countries: teams.length, matches: tournament.matches.length })"></p>
+                                <p>{{ $t('forms.step1.p3') }}</p>
+                                <p>{{ $t('forms.step1.p4') }}
+                                    <RouterLink :to="{name: 'rules'}">{{ $t('menu.rules') }}</RouterLink>
                                 </p>
-                                <p>Succes – en veel plezier met voorspellen!</p>
-
+                                <p>{{ $t('forms.step1.p5') }}</p>
 
                                 <div class="card rounded-4 mb-4 bg-body-tertiary">
                                     <div class="card-body">
                                         <div class="row g-4">
                                             <!-- name -->
                                             <div class="col-md-6">
-                                                <label class="form-label" for="naam">Je volledige naam</label>
+                                                <label class="form-label" for="naam">{{ $t('forms.step1.name') }}</label>
                                                 <input
                                                     id="naam"
                                                     v-model="player.name"
+                                                    :placeholder="$t('forms.step1.name')"
                                                     autocomplete="name"
                                                     class="form-control"
                                                     form="form1"
                                                     name="name"
-                                                    placeholder="Uw naam"
                                                     required
                                                     type="text">
                                                 <div class="invalid-feedback">
-                                                    Dit veld is verplicht.
+                                                    {{ $t('errors.required') }}
                                                 </div>
                                             </div>
                                             <!-- team name -->
                                             <div class="col-md-6">
-                                                <label class="form-label" for="teamnaam">Je teamnaam</label>
+                                                <label class="form-label" for="teamnaam">{{ $t('forms.step1.team_name') }}</label>
                                                 <input
                                                     id="teamnaam"
                                                     v-model="player.team_name"
-                                                    class="form-control"
+                                                    :class="['form-control', { 'is-invalid': isDuplicate && player.team_name }]"
+                                                    :placeholder="$t('forms.step1.team_name')"
                                                     form="form1"
-                                                    placeholder="Uw teamnaam"
                                                     required
                                                     type="text">
                                                 <div class="invalid-feedback">
-                                                    Dit veld is verplicht.
+                                                    {{ player.team_name ? $t('errors.already_chosen') : $t('errors.required') }}
                                                 </div>
                                             </div>
                                         </div>
@@ -102,7 +91,7 @@
                                         class="btn-wc26 btn-wc26-lightblue w-fit"
                                         type="button"
                                         @click="loadSavedPlayer">
-                                        Verder waar ik gebleven was
+                                        {{ $t('forms.continue') }}
                                     </button>
                                 </ButtonBar>
                             </div>
@@ -117,17 +106,13 @@
                             onsubmit="return false"
                             @submit="submit($event, $refs['form2'] as HTMLFormElement)">
                             <div class="card-body p-3 p-md-4">
-                                <h3 class="fw-bolder w26-condensed mb-3">Poulefase</h3>
-                                <p class="font-book">In de poulefase van het WK 2026 strijden 48 landen verdeeld over 12 poules van 4 teams
-                                    tegen elkaar. Voor elke wedstrijd in de poulefase moet je een uitslag invullen. Denk goed na over je
-                                    voorspellingen — elk goed (of deels goed) antwoord levert punten op die meetellen
-                                    voor het totaalklassement!
-                                </p>
+                                <h3 class="fw-bolder w26-condensed mb-3">{{ $t('forms.step2.title') }}</h3>
+                                <p>{{ $t('forms.step2.p1') }}</p>
                                 <div class="d-inline-flex gap-1 mb-3">
                                     <button
                                         class="btn-wc26 btn-wc26-lightblue-alt w-fit"
                                         type="button"
-                                        @click="resetPoule">Reset
+                                        @click="resetPoule">{{ $t('forms.reset') }}
                                     </button>
                                 </div>
 
@@ -170,29 +155,24 @@
                             onsubmit="return false"
                             @submit="submit($event, $refs['form3'] as HTMLFormElement)">
                             <div class="card-body p-3 p-md-4">
-                                <h3 class="fw-bolder w26-condensed mb-3">Knockout I</h3>
+                                <h3 class="fw-bolder w26-condensed mb-3">{{ $t('forms.step3.title') }}</h3>
 
                                 <div class="mb-4">
-                                    <h4 class="fw-bolder w26-condensed mb-3">Ronde van 32</h4>
-                                    <p class="font-book">Vul nu de knockoutfase in voor de laatste 32 teams.
-                                        Om de teams automatisch in te laten vullen op basis van jouw voorspellingen, klik je op
-                                        de knop <b>‘Automatisch invullen’</b>. De poulewinnaars en de beste nummers drie worden dan
-                                        berekend op basis van jouw eerder ingevulde voorspellingen uit stap 2.
-                                        Je kunt de automatisch ingevulde teams nog handmatig aanpassen als je wilt. Controleer
-                                        goed of alles naar wens is voordat je verdergaat naar de volgende ronde.</p>
-                                    <p class="font-book"><strong>Let op:</strong><br>
-                                        Je voorspelt de stand na 90 minuten speeltijd, dus zonder eventuele verlenging of strafschoppen. Bij
-                                        een gelijk spel kun je de volgende fase selecteren welke team jij denkt dat er door gaat.</p>
+                                    <p v-html="$t('forms.step3.p1')"></p>
+                                    <p>
+                                        <strong>{{ $t('dict.please_note') }}</strong><br>
+                                        {{ $t('forms.step3.p2') }}
+                                    </p>
                                     <div class="d-inline-flex gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
-                                            @click="getPredictedPoules">Automatisch invullen
+                                            @click="getPredictedPoules">{{ $t('forms.auto-fill') }}
                                         </button>
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue-alt w-fit"
                                             type="button"
-                                            @click="reset32">Reset
+                                            @click="reset32">{{ $t('forms.reset') }}
                                         </button>
                                     </div>
 
@@ -229,30 +209,24 @@
                             onsubmit="return false"
                             @submit="submit($event, $refs['form4'] as HTMLFormElement)">
                             <div class="card-body p-3 p-md-4">
-                                <h3 class="fw-bolder w26-condensed mb-3">Knockout II</h3>
+                                <h3 class="fw-bolder w26-condensed mb-3">{{ $t('forms.step4.title') }}</h3>
 
                                 <div class="mb-4">
-                                    <h4 class="fw-bolder w26-condensed mb-3">Ronde van 16</h4>
-                                    <p class="font-book">Vul nu de knockoutfase in voor de laatste 16 teams.
-                                        Om de teams automatisch in te laten vullen op basis van jouw voorspellingen, klik je op de
-                                        knop <b>‘Automatisch invullen’</b>. De teams worden dan bepaald op basis van de uitslagen
-                                        die jij hebt ingevuld in de eerste knockout-ronde (laatste 32).
-                                        Je kunt de automatisch ingevulde teams daarna handmatig aanpassen als je wilt. Controleer
-                                        goed of alles naar wens is voordat je verdergaat naar de volgende ronde.
+                                    <p v-html="$t('forms.step4.p1')"></p>
+                                    <p>
+                                        <strong>{{ $t('dict.please_note') }}</strong><br>
+                                        {{ $t('forms.step3.p2') }}
                                     </p>
-                                    <p class="font-book"><strong>Let op:</strong><br>
-                                        Je voorspelt de stand na 90 minuten speeltijd, dus zonder eventuele verlenging of strafschoppen. Bij
-                                        een gelijk spel kun je de volgende fase selecteren welke team jij denkt dat er door gaat.</p>
                                     <div class="d-inline-flex gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
-                                            @click="setTeamsForRound('round_of_32', 'round_of_16')">Automatisch invullen
+                                            @click="setTeamsForRound('round_of_32', 'round_of_16')">{{ $t('forms.auto-fill') }}
                                         </button>
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue-alt w-fit"
                                             type="button"
-                                            @click="reset16">Reset
+                                            @click="reset16">{{ $t('forms.reset') }}
                                         </button>
                                     </div>
                                     <!-- table -->
@@ -289,31 +263,28 @@
                             onsubmit="return false"
                             @submit="submit($event, $refs['form5'] as HTMLFormElement)">
                             <div class="card-body p-3 p-md-4">
-                                <h3 class="fw-bolder w26-condensed mb-3">Finales</h3>
-                                <p class="font-book">Vul nu de finalerondes in: kwartfinales, halve finales en de finale.
-                                    Om de teams automatisch in te laten vullen op basis van jouw voorspellingen, klik je op de
-                                    knop <b>‘Automatisch invullen’</b>. De teams worden dan bepaald op basis van de uitslagen
-                                    die jij hebt ingevuld in de vorige ronde.
-                                    Je kunt de automatisch ingevulde teams daarna handmatig aanpassen als je wilt. Controleer
-                                    goed of alles naar wens is voordat je verdergaat naar de volgende ronde.</p>
-                                <p class="font-book"><strong>Let op:</strong><br>
-                                    Je voorspelt de stand na 90 minuten speeltijd, dus zonder eventuele verlenging of strafschoppen.</p>
+                                <h3 class="fw-bolder w26-condensed mb-3">{{ $t('forms.step5.title') }}</h3>
+                                <p v-html="$t('forms.step5.p1')"></p>
+                                <p>
+                                    <strong>{{ $t('dict.please_note') }}</strong><br>
+                                    {{ $t('forms.step3.p2') }}
+                                </p>
 
                                 <div class="d-inline-flex gap-1 mb-3">
                                     <button
                                         class="btn-wc26 btn-wc26-lightblue-alt w-fit"
                                         type="button"
-                                        @click="resetFinals">Reset
+                                        @click="resetFinals">{{ $t('forms.reset') }}
                                     </button>
                                 </div>
                                 <div class="mb-4">
-                                    <h4 class="fw-bolder w26-condensed mb-3">Kwartfinales</h4>
+                                    <h4 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.quarter_finals')) }}</h4>
 
                                     <div class="d-inline-flex gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
-                                            @click="setTeamsForRound('round_of_16', 'quarter_finals')">Automatisch invullen
+                                            @click="setTeamsForRound('round_of_16', 'quarter_finals')">{{ $t('forms.auto-fill') }}
                                         </button>
                                     </div>
                                     <!-- table -->
@@ -337,13 +308,13 @@
                                 </div>
 
                                 <div class="mb-4">
-                                    <h4 class="fw-bolder w26-condensed mb-3">Halve-finales</h4>
+                                    <h4 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.semi_finals')) }}</h4>
 
                                     <div class="d-inline-flex gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
-                                            @click="setTeamsForRound('quarter_finals', 'semi_finals')">Automatisch invullen
+                                            @click="setTeamsForRound('quarter_finals', 'semi_finals')">{{ $t('forms.auto-fill') }}
                                         </button>
                                     </div>
                                     <!-- table -->
@@ -367,13 +338,43 @@
                                 </div>
 
                                 <div class="mb-4">
-                                    <h4 class="fw-bolder w26-condensed mb-3">Finale</h4>
+                                    <h4 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.bronze_final')) }}</h4>
 
                                     <div class="d-inline-flex gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
-                                            @click="setTeamsForRound('semi_finals', 'final')">Automatisch invullen
+                                            @click="setTeamsForRound('semi_finals', 'final_bronze')">{{ $t('forms.auto-fill') }}
+                                        </button>
+                                    </div>
+                                    <!-- table -->
+                                    <div class="w-100 overflow-hidden overflow-x-auto">
+                                        <table class="table align-middle">
+                                            <TableHead/>
+                                            <tbody>
+                                            <TableRow
+                                                v-for="match in tournament.matchesByPouleName('final_bronze')"
+                                                :key="match.num"
+                                                :match="match"
+                                                :prediction="getPrediction(match.num)"
+                                                :predictions="player.predictions"
+                                                form="form5"
+                                                @update:team="handleTeamUpdate"
+                                                @update:score="handleScoreUpdate"
+                                            />
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h4 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.final')) }}</h4>
+
+                                    <div class="d-inline-flex gap-1 mb-3">
+                                        <button
+                                            class="btn-wc26 btn-wc26-lightblue w-fit"
+                                            type="button"
+                                            @click="setTeamsForRound('semi_finals', 'final')">{{ $t('forms.auto-fill') }}
                                         </button>
                                     </div>
                                     <!-- table -->
@@ -410,24 +411,19 @@
                             onsubmit="return false"
                             @submit="submit($event, $refs['form6'] as HTMLFormElement)">
                             <div class="card-body p-3 p-md-4">
-                                <h2 class="fw-bolder w26-condensed mb-3">Bonusvragen</h2>
+                                <h2 class="fw-bolder w26-condensed mb-3">{{ $t('forms.step6.title') }}</h2>
 
-                                <p class="font-book">Naast het voorspellen van de wedstrijden kun je extra punten verdienen met
-                                    bonusvragen. Bij
-                                    vragen waarbij een team of speler moet worden ingevuld, levert een goed antwoord 10 punten op.
-                                    Voor inschattingsvragen worden er 40 punten toegekend als je het aantal exact voorspelt, 25
-                                    punten als je er maximaal vijf naast zit, en 15 punten als je er maximaal tien naast zit. In
-                                    totaal zijn er 215 punten te verdienen met de bonusvragen. Een goede score op deze vragen kan
-                                    uiteindelijk het verschil maken in het klassement.</p>
-                                <p class="font-book"><strong>Tip:</strong> De antwoorden die je bij de bonusvragen invult, hoeven
-                                    niet overeen te komen met de voorspellingen die je eerder hebt gedaan bij de wedstrijden. Zo kun
-                                    je ervoor kiezen om je kansen te spreiden en strategischer te spelen.</p>
+                                <p>{{ $t('forms.step6.p1') }}</p>
+                                <p>
+                                    <strong>{{ $t('dict.tip') }}</strong><br>
+                                    {{ $t('forms.step6.p2') }}
+                                </p>
 
                                 <div class="d-inline-flex gap-1 mb-3">
                                     <button
                                         class="btn-wc26 btn-wc26-lightblue-alt w-fit"
                                         type="button"
-                                        @click="resetBonus">Reset
+                                        @click="resetBonus">{{ $t('forms.reset') }}
                                     </button>
                                 </div>
 
@@ -440,7 +436,7 @@
                                                 <label :for="'q_' + idx" class="form-label">{{ idx + 1 }}. {{ q.question }} <span
                                                     class="badge bg-26-interaction txt-pk-elevation-01">{{
                                                         q.points || '40'
-                                                    }}pnt.</span></label>
+                                                    }}{{ $t('dict.points_abbr') }}</span></label>
                                                 <select
                                                     v-if="q.answer_type === 'team'"
                                                     :id="'q_' + idx"
@@ -448,7 +444,7 @@
                                                     class="form-select"
                                                     form="form6"
                                                     required>
-                                                    <option :value="''">Maak een keuze...</option>
+                                                    <option :value="''">{{ $t('forms.please_pick') }}</option>
                                                     <option v-for="t in teams" :value="t.id">{{ $t('countries.' + t.id) }}</option>
                                                 </select>
                                                 <select
@@ -458,7 +454,7 @@
                                                     class="form-select"
                                                     form="form6"
                                                     required>
-                                                    <option :value="''">Maak een keuze...</option>
+                                                    <option :value="''">{{ $t('forms.please_pick') }}</option>
                                                     <template v-for="team in teams">
                                                         <option v-for="player in team.squad" :value="player">{{ team.short_name }} - {{
                                                                 player
@@ -488,6 +484,9 @@
                                                     required
                                                     type="text">
                                                 <div v-if="q.help" class="form-text">{{ q.help }}</div>
+                                                <div class="invalid-feedback">
+                                                    {{ $t('errors.required') }}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -507,19 +506,19 @@
                             onsubmit="return false"
                             @submit="submit($event, $refs['form7'] as HTMLFormElement)">
                             <div class="card-body p-3 p-md-4">
-                                <h2 class="fw-bolder w26-condensed mb-3">Inzenden</h2>
-                                <p class="font-book">Volg onderstaande stappen om jouw deelname te voltooien. Controleer je voorspellingen
-                                    zorgvuldig, download je inzending en stuur deze op naar de organisatie.</p>
+                                <h2 class="fw-bolder w26-condensed mb-3">{{ $t('forms.step7.title') }}</h2>
+                                <p>{{ $t('forms.step7.p1') }}</p>
 
                                 <article class="mb-4">
-                                    <h4 class="fw-bolder w26-condensed mb-3">1. Controleer</h4>
-                                    <p class="font-book">
-                                        Neem alle ingevulde uitslagen en gekozen finalisten goed door. Pas eventuele fouten aan voordat je
-                                        verdergaat.<br><strong>Let op:</strong> na inzending kunnen er geen aanpassingen meer worden gedaan
+                                    <h4 class="fw-bolder w26-condensed mb-3">1. {{ $t('forms.step7.check.title') }}</h4>
+                                    <p>{{ $t('forms.step7.check.p1') }}</p>
+                                    <p>
+                                        <strong>{{ $t('dict.please_note') }}</strong><br>
+                                        {{ $t('forms.step7.check.p2') }}
                                     </p>
 
                                     <template v-for="round in roundNames">
-                                        <h6 class="fw-bolder w26-condensed mb-3">{{ round.replaceAll('_', ' ') }}</h6>
+                                        <h6 class="fw-bolder w26-condensed mb-3">{{ capitalize(round.replaceAll('_', ' ')) }}</h6>
                                         <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
 
                                             <div
@@ -551,36 +550,37 @@
 
 
                                 <article class="mb-4">
-                                    <h4 class="fw-bolder w26-condensed mb-3">2. Download jouw ingevulde sheet</h4>
-                                    <p class="font-book">Klik op de downloadknop om jouw inzending op te slaan. Dit is een JSON-bestand met
-                                        alle voorspellingen en
-                                        gegevens die je hebt ingevuld. Bewaar deze goed.</p>
+                                    <h4 class="fw-bolder w26-condensed mb-3">2. {{ $t('forms.step7.download.title') }}</h4>
+                                    <p>{{ $t('forms.step7.download.p1') }}</p>
 
                                     <div class="d-inline-flex gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
-                                            @click="downloadPlayerAsJSON"><i class="bi bi-filetype-json me-2"></i>Download
+                                            @click="downloadPlayerAsJSON"><i class="bi bi-filetype-json me-2"></i>{{ $t('cta.download') }}
                                         </button>
                                     </div>
                                 </article>
 
                                 <article class="mb-4">
-                                    <h4 class="fw-bolder w26-condensed mb-3">3. Mail jouw sheet naar de organisatie</h4>
-                                    <p class="font-book">Stuur het gedownloade bestand per e-mail naar de organisatie via <a
-                                        :href="'mailto:wk26pool@gmail.com?subject=' + mailSubject +  '&body=' + mailBody"
-                                        class=""
-                                        target="_blank">[e-mailadres]</a>.
-                                        Zorg dat je het juiste
-                                        bestand meestuurt, zodat je deelname geldig is.
-                                    </p>
+                                    <h4 class="fw-bolder w26-condensed mb-3">3. {{ $t('forms.step7.mail.title') }}</h4>
+                                    <p>{{ $t('forms.step7.mail.p1') }}</p>
+
+                                    <div class="d-inline-flex gap-1 mb-3">
+                                        <a
+                                            :href="'mailto:' + email + '?subject=' + mailSubject +  '&body=' + mailBody"
+                                            target="_blank"
+                                            rel="noopener noreferrer">
+                                            <button class="btn-wc26 btn-wc26-lightblue w-fit" type="button">
+                                                {{ $t('cta.mail_sheet') }}
+                                            </button>
+                                        </a>
+                                    </div>
                                 </article>
 
                                 <article class="mb-4">
-                                    <h4 class="fw-bolder w26-condensed mb-3">4. Wacht op bevestiging</h4>
-                                    <p class="font-book">Na inzending ontvang je een betaallink van de organisatie. Wanneer deze is voldaan
-                                        wordt jouw scheet toegevoegd aan de pool. Veel success!
-                                    </p>
+                                    <h4 class="fw-bolder w26-condensed mb-3">4. {{ $t('forms.step7.confirm.title') }}</h4>
+                                    <p>{{ $t('forms.step7.confirm.p1') }}</p>
                                 </article>
 
 
@@ -601,16 +601,17 @@ import {storeToRefs} from "pinia";
 import {computed, onBeforeMount, type Ref, ref, watch} from "vue";
 import type {MatchResult, Player} from "@/types/pool.ts";
 import type {TeamStats} from "@/types/tournament.ts";
-import {calculateAndAssignThirds, determineRoundOf16FromResults} from "@/helpers/magic.ts";
+import {calculateAndAssignThirds, capitalize, determineRoundOf16FromResults} from "@/helpers/magic.ts";
 import FormError from "@/components/Invulsheet/FormError.vue";
 import ButtonBar from "@/components/Invulsheet/ButtonBar.vue";
 import TableHead from "@/components/Invulsheet/TableHead.vue";
 import TableRow from "@/components/Invulsheet/TableRow.vue";
 import Stepper from "@/components/Invulsheet/Stepper.vue";
 import dayjs from "dayjs";
+import {i18n} from "@/i18n";
 
 const tournament = useTournament();
-const {teams, teamImages} = storeToRefs(tournament);
+const {teams, teamImages, players} = storeToRefs(tournament);
 
 const currentStep: Ref<number> = ref(1);
 const saveState: Ref<{ player: Player, step: number } | null> = ref(null);
@@ -631,6 +632,7 @@ const wasValidated = ref(false);
 const isValid = ref(false);
 const predictedPouleStandings: Ref<Record<string, TeamStats>> = ref({});
 
+const email = '1234@gmail.com'
 const mailSubject = 'WK26%20invulsheet';
 const mailBody = 'Ik%20schrijf%20me%20in%20voor%20de%20WK26%20Pool!%0A%0ANaam%3A%0AEmail%3A%0ATelefoonnummer%3A%0AVoeg%20mij%20toe%20aan%20de%20Whatsapp%20groep%3A%20Ja%2FNee%0A%0A------------------------------------------------------------------%0A%0ANa%20inzending%20ontvang%20je%20een%20betaallink%20van%20%E2%82%AC11.%20Wanneer%20deze%20is%20voldaan%20wordt%20jouw%20sheet%20toegevoegd%20aan%20de%20pool.%0A%5BVergeet%20jouw%20invulsheet%20niet%20bij%20te%20voegen!%5D%0A%0A%0A';
 const roundNames = [
@@ -641,6 +643,29 @@ const roundNames = [
     'final'
 ] as const;
 
+const isDuplicate = computed(() =>
+    players.value
+        .map(p => p.team_name.toLowerCase())
+        .includes(player.value.team_name.toLowerCase())
+)
+
+/**
+ * A computed property that calculates the teams advancing in each round of a tournament
+ * based on player predictions.
+ *
+ * This object contains rounds mapped to an array of team names progressing through the
+ * tournament structure. The rounds are defined by the `roundNames` array and include:
+ * - round_of_32
+ * - round_of_16
+ * - quarter_finals
+ * - semi_finals
+ * - final
+ *
+ * The calculation is derived from player predictions, extracted based on the match number
+ * and predicted teams for each match within a given round.
+ *
+ * @type {import('vue').ComputedRef<Record<string, string[]>>}
+ */
 const advancingTeams = computed(() => {
     type Round = typeof roundNames[number];
 
@@ -734,6 +759,12 @@ function getPredictedPoules() {
     })
 }
 
+/**
+ * Retrieves the image associated with the given team name. If no specific image is found for the provided team, a default image is returned.
+ *
+ * @param {string} team - The name of the team whose image is to be retrieved.
+ * @return {string} The image URL associated with the team, or the default image URL if no match is found.
+ */
 function getImage(team: string) {
     return teamImages.value[team] || teamImages.value[`default`];
 }
@@ -767,7 +798,9 @@ function setTeamsForRound(previousRound: string, roundToPredict: string) {
 }
 
 /**
+ * Moves to the previous step in a process and updates the validation state.
  *
+ * @return {void} Does not return a value.
  */
 function previous() {
     wasValidated.value = false;
@@ -781,7 +814,7 @@ function previous() {
  * @param form
  */
 function submit(event: Event, form: HTMLFormElement) {
-    if (!form.checkValidity()) {
+    if (!form.checkValidity() || isDuplicate.value) {
         if (event) {
             event.preventDefault();
             event.stopPropagation();
@@ -866,6 +899,13 @@ function resetFinals() {
     wasValidated.value = false;
 }
 
+/**
+ * Resets the bonus values for each bonus question in a tournament.
+ * Iterates over all bonus questions in the tournament and clears their corresponding player bonus values.
+ * Also sets the validation state to false.
+ *
+ * @return {void} Does not return any value.
+ */
 function resetBonus() {
     tournament.bonusQuestions.forEach((q, idx) => {
         player.value.bonus[idx] = '';
@@ -881,7 +921,7 @@ function resetBonus() {
  * @return {void} Does not return any value, the method modifies the `player.value.predictions` object in place.
  */
 function prepare() {
-    let debug = true;
+    let debug = false;
     // add poule matches
     tournament.getPouleMatches.forEach(poule => {
         poule.matches.forEach(match => {
@@ -895,7 +935,7 @@ function prepare() {
     });
 
     // add knockout matches
-    ['round_of_32', 'round_of_16', 'quarter_finals', 'semi_finals', 'final'].forEach((round: string) => {
+    ['round_of_32', 'round_of_16', 'quarter_finals', 'semi_finals', 'final_bronze', 'final'].forEach((round: string) => {
         tournament.matchesByPouleName(round).forEach(match => {
             const num = Math.floor(Math.random() * 5);
             player.value.predictions.push({
@@ -922,7 +962,7 @@ function prepare() {
  */
 function save() {
     localStorage.setItem("invulsheet", JSON.stringify({player: player.value, step: currentStep.value}));
-    window.alert('Formulier opgeslagen!');
+    window.alert(i18n.global.t('forms.saved'));
 }
 
 /**
@@ -937,6 +977,11 @@ function getLocaleStorage() {
     saveState.value = invulsheet ? JSON.parse(invulsheet) : null;
 }
 
+/**
+ * Loads the saved player data from the save state and updates the current player and game step.
+ *
+ * @return {void} Does not return a value.
+ */
 function loadSavedPlayer() {
     if (saveState.value) {
         Object.assign(player.value, saveState.value.player);
@@ -968,7 +1013,7 @@ function downloadPlayerAsJSON() {
 }
 
 watch(currentStep, () => {
-    window.scrollTo({top: 0, behavior: "smooth"});
+    setTimeout(() => window.scrollTo({top: 0, behavior: "instant"}), 200)
 })
 
 onBeforeMount(() => prepare());
