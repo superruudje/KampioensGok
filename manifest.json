@@ -1,24 +1,25 @@
 {
+  "id": "/",
+  "start_url": "/",
   "author": "Rudi Haamke",
   "version": "2.0.0",
   "name": "WK 2026 Pool",
   "description": "Volg de actuele stand van je WK pool en zie wie er aan kop gaat!",
   "short_name": "WK26POOL",
-  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#000",
   "theme_color": "#000",
   "icons": [
     {
-      "src": "/app_icons/icon-180.png",
+      "src": "/appicons/appicon-180x180.png",
       "sizes": "180x180",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/app_icons/icon-180.png",
-      "sizes": "180x180",
+      "src": "/appicons/appicon-500x500.png",
+      "sizes": "500x500",
       "type": "image/png",
       "purpose": "any"
     }
