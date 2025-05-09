@@ -18,7 +18,7 @@ export interface Player {
     round_of_16: string[],
     quarter_finals: string[],
     semi_finals: string[],
-    final_bronze: string[],
+    bronze_final: string[],
     final: string[],
     score?: number,
     pos?: number

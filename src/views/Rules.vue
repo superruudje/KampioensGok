@@ -14,11 +14,11 @@
                 <div class="col-md-8">
                     <div class="card rounded-4 mb-4">
                         <div class="card-body p-3 p-md-4">
-                            <h3 class="fw-bolder w26-condensed mb-3">{{ $t('rules.point_system') }}</h3>
+                            <h3 class="fw-bolder txt-blue w26-condensed mb-3">{{ $t('rules.point_system') }}</h3>
                             <p>{{ $t('rules.text_1') }}</p>
                             <p v-html="$t('rules.points_total', { points: totalPoints })"></p>
 
-                            <article>
+                            <article class="mb-5">
                                 <h5 class="txt-blue fw-bolder">{{ $t('rules.match_result') }}</h5>
                                 <p v-html="$t('rules.text_2', { matches: tournament.matches.length, matchPoints })"></p>
                                 <ul>
@@ -31,7 +31,7 @@
                                     <table class="table text-nowrap">
                                         <thead>
                                         <tr class="text-capitalize">
-                                            <th class="txt-orange" scope="col">{{ $t('dict.result') }}</th>
+                                            <th class="txt-orange" scope="col">{{ $t('dict.result') }}*</th>
                                             <th class="txt-orange" scope="col">{{ $t('dict.prediction') }}</th>
                                             <th class="txt-orange" scope="col">{{ $t('dict.points') }}</th>
                                         </tr>
@@ -67,11 +67,10 @@
                                     </table>
                                 </div>
                                 <div class="small" v-html="$t('rules.result_help')"></div>
-                                <hr class="my-4">
                             </article>
-                            <article>
-                                <h5 class="txt-blue fw-bolder">Knock-out fase</h5>
-                                <p>Voor elk correct voorspelde team in de knock-out fase zijn er punten te verdienen.</p>
+                            <article class="mb-5">
+                                <h5 class="txt-blue fw-bolder">Knock-out</h5>
+                                <p>{{$t('rules.knockout_text')}}</p>
                                 <p v-html="$t('rules.points_total', { points: knockoutPoints })"></p>
                                 <ul>
                                     <li v-html="$t('rules.knockout1')"></li>
@@ -79,42 +78,26 @@
                                     <li v-html="$t('rules.knockout3')"></li>
                                     <li v-html="$t('rules.knockout4')"></li>
                                     <li v-html="$t('rules.knockout5')"></li>
-
-                                    <li><b class="txt-orange">5 pnt. </b>per correct voorspelde 1/32 finalist.</li>
-                                    <li><b class="txt-orange">10 pnt. </b>per correct voorspelde 1/16 finalist.</li>
-                                    <li><b class="txt-orange">20 pnt. </b>per correct voorspelde kwartfinalist.</li>
-                                    <li><b class="txt-orange">30 pnt. </b>per correct voorspelde halve finalist</li>
-                                    <li><b class="txt-orange">50 pnt. </b>per correct voorspelde finalist.</li>
                                 </ul>
-                                <hr class="my-4">
                             </article>
-                            <h5 class="txt-blue fw-bolder">{{ capitalize($t('dict.bonus_questions')) }}</h5>
-                            <p>Bij vragen waarbij er een <b>team</b> of <b>speler</b> opgegeven moet worden, zijn er <b
-                                class="txt-orange">10 pnt. </b> te verdienen<sup>1</sup>.
-                                Bij inschattingsvragen<sup>2,
-                                    3</sup> is de puntverdeling als volgt:</p>
-                            <ul>
-                                <li><b class="txt-orange">40 pnt. </b>wanneer het aantal exact is voorspeld.</li>
-                                <li><b class="txt-orange">25 pnt. </b>wanneer het voorspelde aantal er max. 5 naast zit.
-                                </li>
-                                <li><b class="txt-orange">15 pnt. </b>wanneer het voorspelde aantal er max. 10 naast
-                                    zit.
-                                </li>
-                            </ul>
-                            <p>Totaal zijn er <b class="txt-orange">{{ bonusPoints }} pnt.</b> te verdienen met bonusvragen.</p>
-                            <div class="small">1: Correct voorspelde kampioen is <b class="txt-orange">75 pnt.</b></div>
-                            <div class="small">2: Indirecte rode kaart (bij 2x geel) telt niet als extra kaart.</div>
-                            <div class="small">3: Totaal aantal goals is incl. verlengingen.</div>
+                            <article>
+                                <h5 class="txt-blue fw-bolder">{{ capitalize($t('dict.bonus_questions')) }}</h5>
+                                <p v-html="$t('rules.bonus_text')"></p>
+                                <ul>
+                                    <li v-html="$t('rules.bonus1')"></li>
+                                    <li v-html="$t('rules.bonus2')"></li>
+                                    <li v-html="$t('rules.bonus3')"></li>
+                                </ul>
+                                <p v-html="$t('rules.points_total', { points: bonusPoints })"></p>
+                            </article>
                         </div>
                     </div>
                     <div class="card rounded-4">
                         <div class="card-body p-3 p-md-4">
-                            <h3 class="fw-bolder w26-condensed mb-3">Prijzenpot</h3>
-                            <p>Elke deelnemer betaalt €11, waarvan €10 direct in de prijzenpot gaat en €1 bestemd is voor
-                                administratiekosten. Hoe meer deelnemers, hoe groter de prijzenpot! De exacte inhoud van de prijzenpot wordt
-                                bekendgemaakt zodra de inschrijvingen zijn gesloten.</p>
+                            <h3 class="fw-bolder txt-blue w26-condensed mb-3">{{ $t('rules.prize_pool') }}</h3>
+                            <p>{{ $t('rules.prize_text') }}</p>
                             <RouterLink :to="{name: 'register'}">
-                                <button class="btn-wc26 btn-wc26-orange-alt w-fit">Meedoen</button>
+                                <button class="btn-wc26 btn-wc26-orange-alt w-fit">{{ $t('cta.join') }}</button>
                             </RouterLink>
                         </div>
                     </div>
@@ -122,7 +105,7 @@
                 <div class="col-md-4">
                     <div class="card rounded-4">
                         <div class="card-body p-3 p-md-4">
-                            <h3 class="fw-bolder w26-condensed mb-3">FAQ</h3>
+                            <h3 class="fw-bolder txt-blue w26-condensed mb-3">FAQ</h3>
                             <h6 class="txt-blue fw-bolder">1. Tot wanneer kan ik mijn voorspelling aanpassen?</h6>
                             <p>Je hebt tot uiterlijk vrijdag 14 juni 20:59 uur om jouw invulsheet te mailen naar de
                                 organisatie.</p>

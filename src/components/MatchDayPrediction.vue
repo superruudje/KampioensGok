@@ -13,7 +13,7 @@
                     {{ localeDate }}
                     <span
                         :class="{'text-decoration-line-through': played}"
-                        class="badge ms-auto fs-9 bg-26-interaction txt-pk-elevation-01">{{ matchDay.type.replaceAll('_', ' ') }}</span>
+                        class="badge ms-auto fs-9 bg-26-interaction txt-pk-elevation-01">{{ $t('dict.' + matchDay.type) }}</span>
                 </button>
             </h2>
             <div :id="'matchday_' + match_day.matchDayId + `_${played ? 'played' : 'unplayed'}`" class="accordion-collapse collapse" data-bs-parent="#accordionExample">

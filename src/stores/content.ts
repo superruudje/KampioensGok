@@ -14,6 +14,7 @@ import {
     type TeamStats
 } from "@/types/tournament.ts";
 import type {MatchResult, Player, Question} from "@/types/pool.ts";
+import {capitalize} from "@/helpers/magic.ts";
 
 interface TournamentState {
     teams: Team[];
@@ -26,7 +27,7 @@ interface TournamentState {
         round_of_16: string[],
         quarter_final: string[],
         semi_final: string[],
-        final_bronze: string[],
+        bronze_final: string[],
         final: string[],
     },
 
@@ -56,7 +57,7 @@ export const useTournament = defineStore('tournament', {
             round_of_16: [],
             quarter_final: [],
             semi_final: [],
-            final_bronze: [],
+            bronze_final: [],
             final: [],
         },
 
@@ -794,6 +795,37 @@ export const useTournament = defineStore('tournament', {
             return this.matches.find(item => item.num === matchNum)
         },
         /**
+         * Generates a summary of the match result, including details such as the winner and how the match was decided.
+         *
+         * @param {Match} match - An object representing the match details, containing scores after extra time, penalties, and team information.
+         * @return {string} The match summary as a string, indicating the winner (if applicable) and the method of victory (e.g., penalties or extra time). Returns an empty string if no extra time result is provided.
+         */
+        getMatchSummary(match: Match): string {
+            if (match.result.length === 0) return match.poule_name.length === 1 ?
+                i18n.global.t('dict.group') + ' ' + match.poule_name :
+                capitalize(i18n.global.t('dict.' + match.poule_name));
+
+            const { result, result_after_extra_time, result_after_penalties, teams } = match;
+
+            const final_score = result_after_penalties || result_after_extra_time || result;
+            const [scoreA, scoreB] = final_score;
+            const final_winner = scoreA === scoreB ? null : scoreA > scoreB ? 0 : 1;
+
+            if (final_winner === null) {
+                return i18n.global.t('dict.draw');
+            }
+
+            const winnerName = i18n.global.t('countries.' + teams[final_winner]);
+
+            if (result_after_penalties) {
+                return i18n.global.t('dict.wins_on_penalties', { team: winnerName });
+            } else if (result_after_extra_time) {
+                return i18n.global.t('dict.wins_after_extra_time', { team: winnerName });
+            } else {
+                return i18n.global.t('dict.wins_on_score', { team: winnerName });
+            }
+        },
+        /**
          * Calculate total score
          * @param name team name
          * @param snapshot
@@ -943,21 +975,21 @@ export const useTournament = defineStore('tournament', {
 
             if (this.arrayEquals(prediction, final_score)) {
                 score += 10
-                reason.push('correct voorspeld')
+                reason.push(i18n.global.t('dict.pred_correct'))
             } else if (final_winner === null && winner_prediction === null) {
                 score += 7
-                reason.push('gelijkspel voorspeld')
+                reason.push(i18n.global.t('dict.pred_draw'))
             } else {
                 if (final_winner === winner_prediction) {
                     score += 5
-                    reason.push('winnaar voorspeld')
+                    reason.push(i18n.global.t('dict.pred_winner'))
                 }
                 if (prediction[0] === final_score[0] || prediction[1] === final_score[1]) {
                     score += 2
-                    reason.push('score voorspeld')
+                    reason.push(i18n.global.t('dict.pred_score'))
                 }
             }
-            if (!reason.length) reason = ["Geen punten"]
+            if (!reason.length) reason = [i18n.global.t('dict.no_points')]
             return {score, reason}
         },
         /**

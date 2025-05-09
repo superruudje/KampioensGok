@@ -1,50 +1,31 @@
 <template>
     <div id="match_card" class="card rounded-4">
         <div class="card-body p-3 p-md-4">
-            <div class="d-flex mb-3">
-                <span class="fw-lighter text-secondary">#{{ match.num }}&emsp;</span>
-                <span
-                    v-if="match.poule_name || summary"
-                    class="fw-lighter text-secondary">
-                    {{ summary ? summary : `${match.poule_name.replaceAll('_', ' ')}` }}
-                </span>
+            <div class="d-flex gap-2 mb-3 fw-lighter text-secondary">
+                <span>#{{ match.num }}</span>
+                <span>{{ tournament.getMatchSummary(match) }}</span>
             </div>
-            <div class="d-flex gap-2 gap-md-3 mb-3">
-                <div class="flex-grow-1 d-flex flex-column gap-2 justify-content-center">
-                    <div v-for="n in 2" class="d-flex align-items-center gap-2">
+            <div class="d-flex align-items-center gap-2 gap-md-3 flex-nowrap mb-3">
+                <div class="flex-grow-1 d-flex flex-column gap-2 overflow-hidden">
+                    <div v-for="n in 2" class="d-flex gap-2 align-items-center">
                         <img
                             :alt="`team${n}`"
                             :src="getTeamImage(match.teams[n-1])"
                             class="border"
                             loading="lazy"
                             width="30px"/>
-                        <span>{{ $t('countries.' + match.teams[n - 1]) }}</span>
+                        <span class="me-auto">{{ isTeam(match.teams[n - 1]) ? $t('countries.' + match.teams[n - 1]) : match.teams[n - 1] }}</span>
+                        <span
+                            v-if="match.result_after_penalties"
+                            class="fs-6 lh-1">({{ match.result_after_penalties[n - 1] }})</span>
+                        <span
+                            v-if="match.result_after_extra_time"
+                            class="fs-6 lh-1">({{ match.result_after_extra_time[n - 1] }})</span>
+                        <span class="fs-4 fw-bold lh-1">{{ match.result[n - 1] != null ? match.result[n - 1] : '?' }}</span>
                     </div>
                 </div>
-                <div
-                    v-if="match.result_after_penalties?.length"
-                    class="flex-shrink-0 d-flex flex-column gap-2 justify-content-center">
-                    <span class="fs-5 lh-1">({{ match.result_after_penalties[0] }})</span>
-                    <span class="fs-5 lh-1">({{ match.result_after_penalties[1] }})</span>
-                </div>
-                <div
-                    v-if="match.result_after_extra_time?.length"
-                    class="flex-shrink-0 d-flex flex-column gap-2 justify-content-center">
-                    <span class="fs-4 fw-bold lh-1">{{
-                            match.result_after_extra_time[0] != null ? match.result_after_extra_time[0] : '?'
-                        }}</span>
-                    <span class="fs-4 fw-bold lh-1">{{
-                            match.result_after_extra_time[1] != null ? match.result_after_extra_time[1] : '?'
-                        }}</span>
-                </div>
-                <div
-                    v-else
-                    class="flex-shrink-0 d-flex flex-column gap-2 justify-content-center">
-                    <span class="fs-4 fw-bold lh-1">{{ match.result[0] != null ? match.result[0] : '?' }}</span>
-                    <span class="fs-4 fw-bold lh-1">{{ match.result[1] != null ? match.result[1] : '?' }}</span>
-                </div>
                 <div class="vr"></div>
-                <div class="d-flex flex-column gap-2 justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center align-items-center">
                     <span v-if="match.result?.length" class="fw-lighter lh-1">{{ $t('dict.full_time') }}</span>
                     <span v-else class="fw-lighter lh-1">{{ match.time }}</span>
                 </div>
@@ -68,7 +49,6 @@ import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
 import {computed} from "vue";
 import type {Match} from "@/types/tournament.ts";
-import {i18n} from "@/i18n";
 
 const tournament = useTournament()
 const {teamImages, teams} = storeToRefs(tournament)
@@ -79,39 +59,6 @@ const props = defineProps<{
 
 const location = computed(() => {
     return tournament.getLocation(props.match.location_id)
-})
-
-/**
- * Computes a summary of the match results based on extra time and penalty details.
- *
- * If there is no result after extra time, it returns an empty string.
- * It determines the match outcome (win, loss, or draw) based on the scores and
- * calculates the final winner (team or draw). Depending on the match result,
- * it provides a localized string indicating whether the match ended in a draw,
- * was won after penalties, or was won after extra time.
- *
- * @constant {Function} summary
- * @returns {string} A localized string summarizing the match result.
- */
-const summary = computed(() => {
-    const { result_after_extra_time, result_after_penalties, teams } = props.match;
-    if (!result_after_extra_time) return '';
-
-    const final_score = result_after_penalties || result_after_extra_time;
-    const [scoreA, scoreB] = final_score;
-    const final_winner = scoreA === scoreB ? null : scoreA > scoreB ? 0 : 1;
-
-    if (final_winner === null) {
-        return i18n.global.t('dict.draw');
-    }
-
-    const winnerName = getTeamName(teams[final_winner]);
-
-    if (result_after_penalties) {
-        return i18n.global.t('dict.wins_on_penalties', { team: winnerName });
-    }
-
-    return i18n.global.t('dict.wins_after_extra_time', { team: winnerName });
 })
 
 /**
@@ -126,19 +73,13 @@ function getTeamImage(teamName: string) {
 }
 
 /**
- * Retrieves the full name of the team based on its short name.
- *
- * @param {string} teamName - The short name of the team to search for.
- * @return {string} The full name of the team if found; otherwise, the original short name provided.
+ * Check if is valid team id
+ * @param teamName
  */
-function getTeamName(teamName: string) {
-    return teams.value.find((e) => e.short_name === teamName)?.full_name || teamName
+function isTeam(teamName: string) {
+    return teams.value.some(t => t.short_name === teamName)
 }
 
 </script>
 
-<style lang="sass" scoped>
-.teams
-    flex: 1 1 0
-    gap: 12px
-</style>
+<style lang="sass" scoped></style>

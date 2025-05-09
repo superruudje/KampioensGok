@@ -344,7 +344,7 @@
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
-                                            @click="setTeamsForRound('semi_finals', 'final_bronze')">{{ $t('forms.auto-fill') }}
+                                            @click="setTeamsForRound('semi_finals', 'bronze_final')">{{ $t('forms.auto-fill') }}
                                         </button>
                                     </div>
                                     <!-- table -->
@@ -353,7 +353,7 @@
                                             <TableHead/>
                                             <tbody>
                                             <TableRow
-                                                v-for="match in tournament.matchesByPouleName('final_bronze')"
+                                                v-for="match in tournament.matchesByPouleName('bronze_final')"
                                                 :key="match.num"
                                                 :match="match"
                                                 :prediction="getPrediction(match.num)"
@@ -518,7 +518,7 @@
                                     </p>
 
                                     <template v-for="round in roundNames">
-                                        <h6 class="fw-bolder w26-condensed mb-3">{{ capitalize(round.replaceAll('_', ' ')) }}</h6>
+                                        <h6 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.' + round)) }}</h6>
                                         <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
 
                                             <div
@@ -624,7 +624,7 @@ const player: Ref<Player> = ref({
     round_of_16: [],
     quarter_finals: [],
     semi_finals: [],
-    final_bronze: [],
+    bronze_final: [],
     final: []
 })
 
@@ -640,6 +640,7 @@ const roundNames = [
     'round_of_16',
     'quarter_finals',
     'semi_finals',
+    'bronze_final',
     'final'
 ] as const;
 
@@ -674,6 +675,7 @@ const advancingTeams = computed(() => {
         round_of_16: [],
         quarter_finals: [],
         semi_finals: [],
+        bronze_final: [],
         final: []
     };
 
@@ -888,7 +890,7 @@ function reset16() {
  * @return {void} Does not return a value, modifies predictions in place.
  */
 function resetFinals() {
-    ['quarter_finals', 'semi_finals', 'final'].forEach((round: string) => {
+    ['quarter_finals', 'semi_finals', 'bronze_final', 'final'].forEach((round: string) => {
         tournament.matchesByPouleName(round).forEach(match => {
             const pred = player.value.predictions.find(prediction => prediction.match === match.num)
             if (!pred) return
@@ -921,7 +923,7 @@ function resetBonus() {
  * @return {void} Does not return any value, the method modifies the `player.value.predictions` object in place.
  */
 function prepare() {
-    let debug = false;
+    let debug = true;
     // add poule matches
     tournament.getPouleMatches.forEach(poule => {
         poule.matches.forEach(match => {
@@ -935,7 +937,7 @@ function prepare() {
     });
 
     // add knockout matches
-    ['round_of_32', 'round_of_16', 'quarter_finals', 'semi_finals', 'final_bronze', 'final'].forEach((round: string) => {
+    ['round_of_32', 'round_of_16', 'quarter_finals', 'semi_finals', 'bronze_final', 'final'].forEach((round: string) => {
         tournament.matchesByPouleName(round).forEach(match => {
             const num = Math.floor(Math.random() * 5);
             player.value.predictions.push({

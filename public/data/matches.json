@@ -3,14 +3,17 @@
         "num": 1,
         "match_day_id": 1,
         "time": "21:00",
+        "poule_name": "A",
         "location_id": 3,
         "teams": [
             "MEX",
             "BEL"
         ],
-        "result": [],
-        "events": [],
-        "poule_name": "A"
+        "result": [
+            1,
+            3
+        ],
+        "events": []
     },
     {
         "num": 2,
@@ -57,7 +60,10 @@
         "time": "21:00",
         "poule_name": "C",
         "location_id": 7,
-        "teams": ["SRB", "BRA"],
+        "teams": [
+            "SRB",
+            "BRA"
+        ],
         "result": [],
         "events": []
     },
@@ -80,7 +86,10 @@
         "time": "21:00",
         "poule_name": "C",
         "location_id": 13,
-        "teams": ["UZB", "MAR"],
+        "teams": [
+            "UZB",
+            "MAR"
+        ],
         "result": [],
         "events": []
     },
@@ -103,7 +112,10 @@
         "time": "21:00",
         "poule_name": "E",
         "location_id": 14,
-        "teams": ["ARG", "AUT"],
+        "teams": [
+            "ARG",
+            "AUT"
+        ],
         "result": [],
         "events": []
     },
@@ -113,7 +125,10 @@
         "time": "21:00",
         "poule_name": "E",
         "location_id": 9,
-        "teams": ["IRN", "CIV"],
+        "teams": [
+            "IRN",
+            "CIV"
+        ],
         "result": [],
         "events": []
     },
@@ -123,7 +138,10 @@
         "time": "21:00",
         "poule_name": "F",
         "location_id": 8,
-        "teams": ["FRA", "DEN"],
+        "teams": [
+            "FRA",
+            "DEN"
+        ],
         "result": [],
         "events": []
     },
@@ -133,7 +151,10 @@
         "time": "21:00",
         "poule_name": "F",
         "location_id": 5,
-        "teams": ["IRQ", "TUN"],
+        "teams": [
+            "IRQ",
+            "TUN"
+        ],
         "result": [],
         "events": []
     },
@@ -143,7 +164,10 @@
         "time": "21:00",
         "poule_name": "H",
         "location_id": 12,
-        "teams": ["ESP", "NGA"],
+        "teams": [
+            "ESP",
+            "NGA"
+        ],
         "result": [],
         "events": []
     },
@@ -153,7 +177,10 @@
         "time": "21:00",
         "poule_name": "H",
         "location_id": 6,
-        "teams": ["CZE", "NCL"],
+        "teams": [
+            "CZE",
+            "NCL"
+        ],
         "result": [],
         "events": []
     },
@@ -163,7 +190,10 @@
         "time": "21:00",
         "poule_name": "G",
         "location_id": 11,
-        "teams": ["ENG", "CRO"],
+        "teams": [
+            "ENG",
+            "CRO"
+        ],
         "result": [],
         "events": []
     },
@@ -173,7 +203,10 @@
         "time": "21:00",
         "poule_name": "G",
         "location_id": 16,
-        "teams": ["JPN", "PAN"],
+        "teams": [
+            "JPN",
+            "PAN"
+        ],
         "result": [],
         "events": []
     },
@@ -183,7 +216,10 @@
         "time": "21:00",
         "poule_name": "I",
         "location_id": 13,
-        "teams": ["POR", "URU"],
+        "teams": [
+            "POR",
+            "URU"
+        ],
         "result": [],
         "events": []
     },
@@ -193,7 +229,10 @@
         "time": "21:00",
         "poule_name": "I",
         "location_id": 7,
-        "teams": ["EGY", "CRC"],
+        "teams": [
+            "EGY",
+            "CRC"
+        ],
         "result": [],
         "events": []
     },
@@ -203,7 +242,10 @@
         "time": "21:00",
         "poule_name": "J",
         "location_id": 10,
-        "teams": ["ITA", "ECU"],
+        "teams": [
+            "ITA",
+            "ECU"
+        ],
         "result": [],
         "events": []
     },
@@ -213,7 +255,10 @@
         "time": "21:00",
         "poule_name": "J",
         "location_id": 15,
-        "teams": ["KOR", "MLI"],
+        "teams": [
+            "KOR",
+            "MLI"
+        ],
         "result": [],
         "events": []
     },
@@ -223,7 +268,10 @@
         "time": "21:00",
         "poule_name": "L",
         "location_id": 1,
-        "teams": ["NED", "PAR"],
+        "teams": [
+            "NED",
+            "PAR"
+        ],
         "result": [],
         "events": []
     },
@@ -233,7 +281,10 @@
         "time": "21:00",
         "poule_name": "L",
         "location_id": 8,
-        "teams": ["ALG", "NZL"],
+        "teams": [
+            "ALG",
+            "NZL"
+        ],
         "result": [],
         "events": []
     },
@@ -243,7 +294,10 @@
         "time": "21:00",
         "poule_name": "K",
         "location_id": 9,
-        "teams": ["GER", "CHI"],
+        "teams": [
+            "GER",
+            "CHI"
+        ],
         "result": [],
         "events": []
     },
@@ -253,7 +307,10 @@
         "time": "21:00",
         "poule_name": "K",
         "location_id": 3,
-        "teams": ["AUS", "GUA"],
+        "teams": [
+            "AUS",
+            "GUA"
+        ],
         "result": [],
         "events": []
     },
@@ -315,7 +372,10 @@
         "time": "21:00",
         "poule_name": "C",
         "location_id": 14,
-        "teams": ["BRA", "UZB"],
+        "teams": [
+            "BRA",
+            "UZB"
+        ],
         "result": [],
         "events": []
     },
@@ -325,7 +385,10 @@
         "time": "21:00",
         "poule_name": "C",
         "location_id": 7,
-        "teams": ["MAR", "SRB"],
+        "teams": [
+            "MAR",
+            "SRB"
+        ],
         "result": [],
         "events": []
     },
@@ -361,7 +424,10 @@
         "time": "21:00",
         "poule_name": "E",
         "location_id": 1,
-        "teams": ["AUT", "IRN"],
+        "teams": [
+            "AUT",
+            "IRN"
+        ],
         "result": [],
         "events": []
     },
@@ -371,7 +437,10 @@
         "time": "21:00",
         "poule_name": "E",
         "location_id": 10,
-        "teams": ["CIV", "ARG"],
+        "teams": [
+            "CIV",
+            "ARG"
+        ],
         "result": [],
         "events": []
     },
@@ -381,7 +450,10 @@
         "time": "21:00",
         "poule_name": "F",
         "location_id": 9,
-        "teams": ["DEN", "IRQ"],
+        "teams": [
+            "DEN",
+            "IRQ"
+        ],
         "result": [],
         "events": []
     },
@@ -391,7 +463,10 @@
         "time": "21:00",
         "poule_name": "F",
         "location_id": 5,
-        "teams": ["TUN", "FRA"],
+        "teams": [
+            "TUN",
+            "FRA"
+        ],
         "result": [],
         "events": []
     },
@@ -401,7 +476,10 @@
         "time": "21:00",
         "poule_name": "H",
         "location_id": 12,
-        "teams": ["NGA", "CZE"],
+        "teams": [
+            "NGA",
+            "CZE"
+        ],
         "result": [],
         "events": []
     },
@@ -411,7 +489,10 @@
         "time": "21:00",
         "poule_name": "H",
         "location_id": 6,
-        "teams": ["NCL", "ESP"],
+        "teams": [
+            "NCL",
+            "ESP"
+        ],
         "result": [],
         "events": []
     },
@@ -421,7 +502,10 @@
         "time": "21:00",
         "poule_name": "G",
         "location_id": 11,
-        "teams": ["CRO", "JPN"],
+        "teams": [
+            "CRO",
+            "JPN"
+        ],
         "result": [],
         "events": []
     },
@@ -431,7 +515,10 @@
         "time": "21:00",
         "poule_name": "G",
         "location_id": 2,
-        "teams": ["PAN", "ENG"],
+        "teams": [
+            "PAN",
+            "ENG"
+        ],
         "result": [],
         "events": []
     },
@@ -441,7 +528,10 @@
         "time": "21:00",
         "poule_name": "I",
         "location_id": 13,
-        "teams": ["URU", "EGY"],
+        "teams": [
+            "URU",
+            "EGY"
+        ],
         "result": [],
         "events": []
     },
@@ -451,7 +541,10 @@
         "time": "21:00",
         "poule_name": "I",
         "location_id": 14,
-        "teams": ["CRC", "POR"],
+        "teams": [
+            "CRC",
+            "POR"
+        ],
         "result": [],
         "events": []
     },
@@ -461,7 +554,10 @@
         "time": "21:00",
         "poule_name": "J",
         "location_id": 8,
-        "teams": ["ECU", "KOR"],
+        "teams": [
+            "ECU",
+            "KOR"
+        ],
         "result": [],
         "events": []
     },
@@ -471,7 +567,10 @@
         "time": "21:00",
         "poule_name": "J",
         "location_id": 15,
-        "teams": ["MLI", "ITA"],
+        "teams": [
+            "MLI",
+            "ITA"
+        ],
         "result": [],
         "events": []
     },
@@ -481,7 +580,10 @@
         "time": "21:00",
         "poule_name": "L",
         "location_id": 7,
-        "teams": ["PAR", "ALG"],
+        "teams": [
+            "PAR",
+            "ALG"
+        ],
         "result": [],
         "events": []
     },
@@ -491,7 +593,10 @@
         "time": "21:00",
         "poule_name": "L",
         "location_id": 1,
-        "teams": ["NZL", "NED"],
+        "teams": [
+            "NZL",
+            "NED"
+        ],
         "result": [],
         "events": []
     },
@@ -501,7 +606,10 @@
         "time": "21:00",
         "poule_name": "K",
         "location_id": 9,
-        "teams": ["CHI", "AUS"],
+        "teams": [
+            "CHI",
+            "AUS"
+        ],
         "result": [],
         "events": []
     },
@@ -511,7 +619,10 @@
         "time": "21:00",
         "poule_name": "K",
         "location_id": 4,
-        "teams": ["GUA", "GER"],
+        "teams": [
+            "GUA",
+            "GER"
+        ],
         "result": [],
         "events": []
     },
@@ -521,7 +632,10 @@
         "time": "21:00",
         "poule_name": "C",
         "location_id": 12,
-        "teams": ["SRB", "UZB"],
+        "teams": [
+            "SRB",
+            "UZB"
+        ],
         "result": [],
         "events": []
     },
@@ -531,7 +645,10 @@
         "time": "21:00",
         "poule_name": "C",
         "location_id": 6,
-        "teams": ["BRA", "MAR"],
+        "teams": [
+            "BRA",
+            "MAR"
+        ],
         "result": [],
         "events": []
     },
@@ -593,7 +710,10 @@
         "time": "21:00",
         "poule_name": "E",
         "location_id": 14,
-        "teams": ["ARG", "IRN"],
+        "teams": [
+            "ARG",
+            "IRN"
+        ],
         "result": [],
         "events": []
     },
@@ -603,7 +723,10 @@
         "time": "21:00",
         "poule_name": "E",
         "location_id": 13,
-        "teams": ["AUT", "CIV"],
+        "teams": [
+            "AUT",
+            "CIV"
+        ],
         "result": [],
         "events": []
     },
@@ -613,7 +736,10 @@
         "time": "21:00",
         "poule_name": "F",
         "location_id": 8,
-        "teams": ["FRA", "IRQ"],
+        "teams": [
+            "FRA",
+            "IRQ"
+        ],
         "result": [],
         "events": []
     },
@@ -623,7 +749,10 @@
         "time": "21:00",
         "poule_name": "F",
         "location_id": 10,
-        "teams": ["DEN", "TUN"],
+        "teams": [
+            "DEN",
+            "TUN"
+        ],
         "result": [],
         "events": []
     },
@@ -659,7 +788,10 @@
         "time": "21:00",
         "poule_name": "I",
         "location_id": 7,
-        "teams": ["POR", "EGY"],
+        "teams": [
+            "POR",
+            "EGY"
+        ],
         "result": [],
         "events": []
     },
@@ -669,7 +801,10 @@
         "time": "21:00",
         "poule_name": "I",
         "location_id": 1,
-        "teams": ["URU", "CRC"],
+        "teams": [
+            "URU",
+            "CRC"
+        ],
         "result": [],
         "events": []
     },
@@ -679,7 +814,10 @@
         "time": "21:00",
         "poule_name": "G",
         "location_id": 16,
-        "teams": ["ENG", "JPN"],
+        "teams": [
+            "ENG",
+            "JPN"
+        ],
         "result": [],
         "events": []
     },
@@ -689,7 +827,10 @@
         "time": "21:00",
         "poule_name": "G",
         "location_id": 2,
-        "teams": ["CRO", "PAN"],
+        "teams": [
+            "CRO",
+            "PAN"
+        ],
         "result": [],
         "events": []
     },
@@ -699,7 +840,10 @@
         "time": "21:00",
         "poule_name": "H",
         "location_id": 9,
-        "teams": ["ESP", "CZE"],
+        "teams": [
+            "ESP",
+            "CZE"
+        ],
         "result": [],
         "events": []
     },
@@ -709,7 +853,10 @@
         "time": "21:00",
         "poule_name": "H",
         "location_id": 4,
-        "teams": ["NGA", "NCL"],
+        "teams": [
+            "NGA",
+            "NCL"
+        ],
         "result": [],
         "events": []
     },
@@ -719,7 +866,10 @@
         "time": "21:00",
         "poule_name": "L",
         "location_id": 13,
-        "teams": ["NED", "ALG"],
+        "teams": [
+            "NED",
+            "ALG"
+        ],
         "result": [],
         "events": []
     },
@@ -729,7 +879,10 @@
         "time": "21:00",
         "poule_name": "L",
         "location_id": 14,
-        "teams": ["PAR", "NZL"],
+        "teams": [
+            "PAR",
+            "NZL"
+        ],
         "result": [],
         "events": []
     },
@@ -739,7 +892,10 @@
         "time": "21:00",
         "poule_name": "J",
         "location_id": 10,
-        "teams": ["ITA", "KOR"],
+        "teams": [
+            "ITA",
+            "KOR"
+        ],
         "result": [],
         "events": []
     },
@@ -749,7 +905,10 @@
         "time": "21:00",
         "poule_name": "J",
         "location_id": 8,
-        "teams": ["ECU", "MLI"],
+        "teams": [
+            "ECU",
+            "MLI"
+        ],
         "result": [],
         "events": []
     },
@@ -759,7 +918,10 @@
         "time": "21:00",
         "poule_name": "K",
         "location_id": 12,
-        "teams": ["GER", "AUS"],
+        "teams": [
+            "GER",
+            "AUS"
+        ],
         "result": [],
         "events": []
     },
@@ -769,7 +931,10 @@
         "time": "21:00",
         "poule_name": "K",
         "location_id": 6,
-        "teams": ["CHI", "GUA"],
+        "teams": [
+            "CHI",
+            "GUA"
+        ],
         "result": [],
         "events": []
     },
@@ -779,10 +944,18 @@
         "time": "21:00",
         "poule_name": "round_of_32",
         "location_id": 11,
-        "teams": ["2A", "2B"],
-        "result": [],
-        "result_after_extra_time": [],
-        "result_after_penalties": [],
+        "teams": [
+            "MEX",
+            "USA"
+        ],
+        "result": [
+            0,
+            0
+        ],
+        "result_after_extra_time": [
+            0,
+            1
+        ],
         "events": []
     },
     {
@@ -796,7 +969,6 @@
             "3A/B/C/D/F"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -810,7 +982,6 @@
             "2C"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -824,7 +995,6 @@
             "2F"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -838,7 +1008,6 @@
             "3C/D/F/G/H"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -852,7 +1021,6 @@
             "2I"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -866,7 +1034,6 @@
             "3C/E/F/H/I"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -880,7 +1047,6 @@
             "3E/H/I/J/K"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -894,7 +1060,6 @@
             "3B/E/F/I/J"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -908,7 +1073,6 @@
             "3A/E/H/I/J"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -922,7 +1086,6 @@
             "2L"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -936,7 +1099,6 @@
             "2J"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -950,7 +1112,6 @@
             "3E/F/G/I/J"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -964,7 +1125,6 @@
             "2H"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -978,7 +1138,6 @@
             "3D/E/I/J/L"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -992,7 +1151,6 @@
             "2G"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1006,7 +1164,6 @@
             "W77"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1020,7 +1177,6 @@
             "W75"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1034,7 +1190,6 @@
             "W78"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1048,7 +1203,6 @@
             "W80"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1062,7 +1216,6 @@
             "W84"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1076,7 +1229,6 @@
             "W82"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1090,7 +1242,6 @@
             "W88"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1104,7 +1255,6 @@
             "W87"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1118,7 +1268,6 @@
             "W90"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1132,7 +1281,6 @@
             "W94"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1146,7 +1294,6 @@
             "W92"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1160,7 +1307,6 @@
             "W96"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1174,7 +1320,6 @@
             "W98"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1188,21 +1333,19 @@
             "W100"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
         "num": 103,
         "match_day_id": 33,
         "time": "21:00",
-        "poule_name": "final_bronze",
+        "poule_name": "bronze_final",
         "location_id": 12,
         "teams": [
             "L101",
             "L102"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -1216,7 +1359,6 @@
             "W102"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     }
 ]

@@ -6,8 +6,8 @@
                     <div class="col-md-10 text-center">
                         <h4 class="w26-condensed mb-0">{{ label }} • {{ matchType }}</h4>
                         <hr>
-                        <div class="opacity-50" :class="{'mb-3': !summary }">{{ location?.stadium }} • {{ location?.city }}</div>
-                        <div v-if="summary" class="mb-3">{{ summary }}</div>
+                        <div class="opacity-50">{{ location?.stadium }} • {{ location?.city }}</div>
+                        <div class="mb-3">{{ tournament.getMatchSummary(match) }}</div>
                         <div class="d-flex align-items-center justify-content-center gap-3 gap-md-4">
                             <div
                                 class="d-flex flex-grow-1 flex-shrink-0 align-items-center justify-content-end gap-2"
@@ -99,7 +99,7 @@ const { locale } = useI18n();
 const route = useRoute();
 
 const tournament = useTournament();
-const {teamImages, teams} = storeToRefs(tournament);
+const {teamImages} = storeToRefs(tournament);
 
 
 const match: Ref<Match | null | undefined> = ref(null);
@@ -124,27 +124,6 @@ const matchType = computed(() => {
         return match.value?.poule_name.replaceAll("_", " ");
 })
 
-const summary = computed(() => {
-    const { result_after_extra_time, result_after_penalties, teams } = match.value as Match;
-    if (!result_after_extra_time) return '';
-
-    const final_score = result_after_penalties || result_after_extra_time;
-    const [scoreA, scoreB] = final_score;
-    const final_winner = scoreA === scoreB ? null : scoreA > scoreB ? 0 : 1;
-
-    if (final_winner === null) {
-        return i18n.global.t('dict.draw');
-    }
-
-    const winnerName = getTeamName(teams[final_winner]);
-
-    if (result_after_penalties) {
-        return i18n.global.t('dict.wins_on_penalties', { team: winnerName });
-    }
-
-    return i18n.global.t('dict.wins_after_extra_time', { team: winnerName });
-})
-
 /**
  * Retrieves the image URL associated with a given team name.
  *
@@ -153,16 +132,6 @@ const summary = computed(() => {
  */
 function getTeamImage(teamName: string) {
     return teamImages.value[teamName] || teamImages.value[`default`]
-}
-
-/**
- * Retrieves the full team name corresponding to the given short name.
- *
- * @param {string} teamName - The short name of the team to search for.
- * @return {string} The full team name if found; otherwise, returns the provided short name.
- */
-function getTeamName(teamName: string) {
-    return teams.value.find((e) => e.short_name === teamName)?.full_name || teamName
 }
 
 onBeforeMount(() => {
@@ -177,6 +146,4 @@ onBeforeRouteUpdate((to, from) => {
 
 </script>
 
-<style lang="sass" scoped>
-
-</style>
+<style lang="sass" scoped></style>

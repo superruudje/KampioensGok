@@ -29,7 +29,7 @@
                 <!-- voorspelling -->
                 <div class="card rounded-4 mb-4">
                     <div class="card-body p-3 p-md-4">
-                        <h3 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.prediction', 2)) }} {{ $t('dict.round_32') }}</h3>
+                        <h3 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.prediction', 2)) }} {{ $t('dict.round_of_32') }}</h3>
                         <NotStarted v-if="!started"/>
                         <template v-else>
                             <MatchDayPrediction
@@ -47,7 +47,7 @@
                 <!-- voorspelling -->
                 <div class="card rounded-4 mb-4">
                     <div class="card-body p-3 p-md-4">
-                        <h3 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.prediction', 2)) }} {{ $t('dict.round_16') }}</h3>
+                        <h3 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.prediction', 2)) }} {{ $t('dict.round_of_16') }}</h3>
                         <NotStarted v-if="!started"/>
                         <template v-else>
                             <MatchDayPrediction
@@ -68,7 +68,7 @@
                         <h3 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.prediction', 2)) }} {{ $t('dict.finals') }}</h3>
                         <NotStarted v-if="!started"/>
                         <div v-else>
-                            <div v-for="round in ['quarter_final', 'semi_final', 'final']">
+                            <div v-for="round in ['quarter_finals', 'semi_finals', 'bronze_final', 'final']">
                                 <MatchDayPrediction
                                     v-for="(matchDay) in tournament.playedMatchesByMatchDayType(round as MatchDayType)"
                                     :match_day="matchDay"

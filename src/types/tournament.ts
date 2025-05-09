@@ -56,9 +56,9 @@ export enum MatchDayType {
     MatchDay3 = 'match_day_3',
     RoundOf32 = 'round_of_32',
     RoundOf16 = 'round_of_16',
-    QuaterFinal = 'quarter_final',
-    SemiFinal = 'semi_final',
-    FinalBronze = 'final_bronze',
+    QuaterFinal = 'quarter_finals',
+    SemiFinal = 'semi_finals',
+    FinalBronze = 'bronze_final',
     Final = 'final'
 }
 
