@@ -156,7 +156,7 @@
         "please_pick": "Maak een keuze...",
         "step1": {
             "title": "Teamnaam",
-            "sub_title": "Schrijf je nu in voor de pool?",
+            "sub_title": "Schrijf je nu in voor de pool!",
             "p1": "Vul hieronder je gegevens in om deel te nemen aan deze spannende voetbalpool rondom het Wereldkampioenschap voetbal 2026.",
             "p2": "Het toernooi wordt groter dan ooit: met <strong>{countries}</strong> deelnemende landen en maar liefst <strong>{matches}</strong> wedstrijden wordt het een WK om niet te missen. De wedstrijden vinden plaats in de Verenigde Staten, Mexico en Canada, verspreid over meerdere speelsteden.",
             "p3": "Tijdens het toernooi kun je punten verdienen door uitslagen (deels) goed te voorspellen. Daarnaast zijn er bonuspunten te behalen voor het voorspellen van standen, statistieken en bonusvragen. Hoe beter je voorspelt, hoe hoger je op het klassement eindigt!",
