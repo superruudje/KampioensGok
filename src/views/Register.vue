@@ -923,7 +923,7 @@ function resetBonus() {
  * @return {void} Does not return any value, the method modifies the `player.value.predictions` object in place.
  */
 function prepare() {
-    let debug = true;
+    let debug = false;
     // add poule matches
     tournament.getPouleMatches.forEach(poule => {
         poule.matches.forEach(match => {
