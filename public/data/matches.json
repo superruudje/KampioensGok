@@ -9,7 +9,6 @@
             "BEL"
         ],
         "result": [],
-        "result_after_extra_time": [],
         "events": [],
         "poule_name": "A"
     },
@@ -24,8 +23,6 @@
             "SEN"
         ],
         "result": [],
-        "result_after_extra_time": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -39,8 +36,6 @@
             "SUI"
         ],
         "result": [],
-        "result_after_extra_time": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -54,7 +49,6 @@
             "POL"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -65,7 +59,6 @@
         "location_id": 7,
         "teams": ["SRB", "BRA"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -79,7 +72,6 @@
             "RSA"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -90,7 +82,6 @@
         "location_id": 13,
         "teams": ["UZB", "MAR"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -104,7 +95,6 @@
             "CMR"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -115,7 +105,6 @@
         "location_id": 14,
         "teams": ["ARG", "AUT"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -126,7 +115,6 @@
         "location_id": 9,
         "teams": ["IRN", "CIV"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -137,7 +125,6 @@
         "location_id": 8,
         "teams": ["FRA", "DEN"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -148,7 +135,6 @@
         "location_id": 5,
         "teams": ["IRQ", "TUN"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -159,7 +145,6 @@
         "location_id": 12,
         "teams": ["ESP", "NGA"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -170,7 +155,6 @@
         "location_id": 6,
         "teams": ["CZE", "NCL"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -181,7 +165,6 @@
         "location_id": 11,
         "teams": ["ENG", "CRO"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -192,7 +175,6 @@
         "location_id": 16,
         "teams": ["JPN", "PAN"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -203,7 +185,6 @@
         "location_id": 13,
         "teams": ["POR", "URU"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -214,7 +195,6 @@
         "location_id": 7,
         "teams": ["EGY", "CRC"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -225,7 +205,6 @@
         "location_id": 10,
         "teams": ["ITA", "ECU"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -236,7 +215,6 @@
         "location_id": 15,
         "teams": ["KOR", "MLI"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -247,7 +225,6 @@
         "location_id": 1,
         "teams": ["NED", "PAR"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -258,7 +235,6 @@
         "location_id": 8,
         "teams": ["ALG", "NZL"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -269,7 +245,6 @@
         "location_id": 9,
         "teams": ["GER", "CHI"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -280,7 +255,6 @@
         "location_id": 3,
         "teams": ["AUS", "GUA"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -294,7 +268,6 @@
             "BEL"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -308,7 +281,6 @@
             "SUI"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -322,7 +294,6 @@
             "KSA"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -336,7 +307,6 @@
             "JOR"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -347,7 +317,6 @@
         "location_id": 14,
         "teams": ["BRA", "UZB"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -358,7 +327,6 @@
         "location_id": 7,
         "teams": ["MAR", "SRB"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -372,7 +340,6 @@
             "POL"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -386,7 +353,6 @@
             "QAT"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -397,7 +363,6 @@
         "location_id": 1,
         "teams": ["AUT", "IRN"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -408,7 +373,6 @@
         "location_id": 10,
         "teams": ["CIV", "ARG"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -419,7 +383,6 @@
         "location_id": 9,
         "teams": ["DEN", "IRQ"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -430,7 +393,6 @@
         "location_id": 5,
         "teams": ["TUN", "FRA"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -441,7 +403,6 @@
         "location_id": 12,
         "teams": ["NGA", "CZE"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -452,7 +413,6 @@
         "location_id": 6,
         "teams": ["NCL", "ESP"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -463,7 +423,6 @@
         "location_id": 11,
         "teams": ["CRO", "JPN"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -474,7 +433,6 @@
         "location_id": 2,
         "teams": ["PAN", "ENG"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -485,7 +443,6 @@
         "location_id": 13,
         "teams": ["URU", "EGY"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -496,7 +453,6 @@
         "location_id": 14,
         "teams": ["CRC", "POR"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -507,7 +463,6 @@
         "location_id": 8,
         "teams": ["ECU", "KOR"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -518,7 +473,6 @@
         "location_id": 15,
         "teams": ["MLI", "ITA"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -529,7 +483,6 @@
         "location_id": 7,
         "teams": ["PAR", "ALG"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -540,7 +493,6 @@
         "location_id": 1,
         "teams": ["NZL", "NED"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -551,7 +503,6 @@
         "location_id": 9,
         "teams": ["CHI", "AUS"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -562,7 +513,6 @@
         "location_id": 4,
         "teams": ["GUA", "GER"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -573,7 +523,6 @@
         "location_id": 12,
         "teams": ["SRB", "UZB"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -584,7 +533,6 @@
         "location_id": 6,
         "teams": ["BRA", "MAR"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -598,7 +546,6 @@
             "CAN"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -612,7 +559,6 @@
             "KSA"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -626,7 +572,6 @@
             "MEX"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -640,7 +585,6 @@
             "JOR"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -651,7 +595,6 @@
         "location_id": 14,
         "teams": ["ARG", "IRN"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -662,7 +605,6 @@
         "location_id": 13,
         "teams": ["AUT", "CIV"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -673,7 +615,6 @@
         "location_id": 8,
         "teams": ["FRA", "IRQ"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -684,7 +625,6 @@
         "location_id": 10,
         "teams": ["DEN", "TUN"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -698,7 +638,6 @@
             "USA"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -712,7 +651,6 @@
             "QAT"
         ],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -723,7 +661,6 @@
         "location_id": 7,
         "teams": ["POR", "EGY"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -734,7 +671,6 @@
         "location_id": 1,
         "teams": ["URU", "CRC"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -745,7 +681,6 @@
         "location_id": 16,
         "teams": ["ENG", "JPN"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -756,7 +691,6 @@
         "location_id": 2,
         "teams": ["CRO", "PAN"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -767,7 +701,6 @@
         "location_id": 9,
         "teams": ["ESP", "CZE"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -778,7 +711,6 @@
         "location_id": 4,
         "teams": ["NGA", "NCL"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -789,7 +721,6 @@
         "location_id": 13,
         "teams": ["NED", "ALG"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -800,7 +731,6 @@
         "location_id": 14,
         "teams": ["PAR", "NZL"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -811,7 +741,6 @@
         "location_id": 10,
         "teams": ["ITA", "KOR"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -822,7 +751,6 @@
         "location_id": 8,
         "teams": ["ECU", "MLI"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -833,7 +761,6 @@
         "location_id": 12,
         "teams": ["GER", "AUS"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
@@ -844,7 +771,6 @@
         "location_id": 6,
         "teams": ["CHI", "GUA"],
         "result": [],
-        "result_after_penalties": [],
         "events": []
     },
     {
