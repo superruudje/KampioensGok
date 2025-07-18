@@ -110,6 +110,11 @@
                                 <p>{{ $t('forms.step2.p1') }}</p>
                                 <div class="d-inline-flex gap-1 mb-3">
                                     <button
+                                        class="btn-wc26 btn-wc26-orange-alt w-fit"
+                                        type="button"
+                                        @click="randomize('poule')">{{ $t('forms.random') }}
+                                    </button>
+                                    <button
                                         class="btn-wc26 btn-wc26-lightblue-alt w-fit"
                                         type="button"
                                         @click="resetPoule">{{ $t('forms.reset') }}
@@ -170,6 +175,11 @@
                                             @click="getPredictedPoules">{{ $t('forms.auto-fill') }}
                                         </button>
                                         <button
+                                            class="btn-wc26 btn-wc26-orange-alt w-fit"
+                                            type="button"
+                                            @click="randomize('round_of_32')">{{ $t('forms.random') }}
+                                        </button>
+                                        <button
                                             class="btn-wc26 btn-wc26-lightblue-alt w-fit"
                                             type="button"
                                             @click="reset32">{{ $t('forms.reset') }}
@@ -222,6 +232,11 @@
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
                                             @click="setTeamsForRound('round_of_32', 'round_of_16')">{{ $t('forms.auto-fill') }}
+                                        </button>
+                                        <button
+                                            class="btn-wc26 btn-wc26-orange-alt w-fit"
+                                            type="button"
+                                            @click="randomize('round_of_16')">{{ $t('forms.random') }}
                                         </button>
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue-alt w-fit"
@@ -286,6 +301,11 @@
                                             type="button"
                                             @click="setTeamsForRound('round_of_16', 'quarter_finals')">{{ $t('forms.auto-fill') }}
                                         </button>
+                                        <button
+                                            class="btn-wc26 btn-wc26-orange-alt w-fit"
+                                            type="button"
+                                            @click="randomize('quarter_finals')">{{ $t('forms.random') }}
+                                        </button>
                                     </div>
                                     <!-- table -->
                                     <div class="w-100 overflow-hidden overflow-x-auto">
@@ -315,6 +335,11 @@
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
                                             @click="setTeamsForRound('quarter_finals', 'semi_finals')">{{ $t('forms.auto-fill') }}
+                                        </button>
+                                        <button
+                                            class="btn-wc26 btn-wc26-orange-alt w-fit"
+                                            type="button"
+                                            @click="randomize('semi_finals')">{{ $t('forms.random') }}
                                         </button>
                                     </div>
                                     <!-- table -->
@@ -346,6 +371,11 @@
                                             type="button"
                                             @click="setTeamsForRound('semi_finals', 'bronze_final')">{{ $t('forms.auto-fill') }}
                                         </button>
+                                        <button
+                                            class="btn-wc26 btn-wc26-orange-alt w-fit"
+                                            type="button"
+                                            @click="randomize('bronze_final')">{{ $t('forms.random') }}
+                                        </button>
                                     </div>
                                     <!-- table -->
                                     <div class="w-100 overflow-hidden overflow-x-auto">
@@ -375,6 +405,11 @@
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
                                             @click="setTeamsForRound('semi_finals', 'final')">{{ $t('forms.auto-fill') }}
+                                        </button>
+                                        <button
+                                            class="btn-wc26 btn-wc26-orange-alt w-fit"
+                                            type="button"
+                                            @click="randomize('final')">{{ $t('forms.random') }}
                                         </button>
                                     </div>
                                     <!-- table -->
@@ -445,7 +480,7 @@
                                                     form="form6"
                                                     required>
                                                     <option :value="''">{{ $t('forms.please_pick') }}</option>
-                                                    <option v-for="t in teams" :value="t.id">{{ $t('countries.' + t.id) }}</option>
+                                                    <option v-for="t in teams.sort((a, b) => a.id.localeCompare(b.id))" :value="t.id">{{ $t('countries.' + t.id) }}</option>
                                                 </select>
                                                 <select
                                                     v-if="q.answer_type === 'player'"
@@ -706,7 +741,7 @@ function getPrediction(matchNum: number) {
 /**
  * Updates a team value in a specific prediction for the given match.
  *
- * @param {Object} params - The parameters object.
+ * @param {Object} params - The parameter object.
  * @param {number} params.match - The match identifier to locate the prediction*/
 function handleTeamUpdate({match, teamIndex, value}: { match: number; teamIndex: number; value: string }) {
     let prediction = player.value.predictions.find(p => p.match === match);
@@ -913,6 +948,55 @@ function resetBonus() {
         player.value.bonus[idx] = '';
     });
     wasValidated.value = false;
+}
+
+/**
+ * Generates a pair of realistic scores biased towards lower values.
+ *
+ * @return {Array<number>} An array of two numbers representing realistic scores.
+ */
+function getRealisticScore(): [number, number] {
+    const weights = [0, 1, 1, 2, 2, 3, 4]; // Bias toward lower scores
+    const randomScore = () => weights[Math.floor(Math.random() * weights.length)];
+
+    const isDraw = Math.random() < 0.188; // 18.8% chance of a draw
+
+    if (isDraw) {
+        const score = randomScore();
+        return [score, score];
+    } else {
+        let home = randomScore();
+        let away = randomScore();
+        while (home === away) {
+            away = randomScore(); // Ensure scores differ
+        }
+        return [home, away];
+    }
+}
+
+/**
+ * Randomizes the predictions for matches based on the specified phase of the tournament.
+ * For the "poule" phase, it processes matches grouped by poules.
+ * For other phases, it processes matches by their respective poule name.
+ *
+ * @param {string} phase - The current phase of the tournament. It determines which matches are processed.
+ * @return {void} This function does not return any value.
+ */
+function randomize(phase: string) {
+
+    if (phase === 'poule') {
+        tournament.getPouleMatches.forEach(poule => {
+            poule.matches.forEach(match => {
+                let pred = player.value.predictions.find(pred => pred.match === match.num)
+                if (pred) pred.result = getRealisticScore();
+            })
+        });
+    } else {
+        tournament.matchesByPouleName(phase).forEach(match => {
+            let pred = player.value.predictions.find(pred => pred.match === match.num)
+            if (pred) pred.result = getRealisticScore();
+        })
+    }
 }
 
 /**

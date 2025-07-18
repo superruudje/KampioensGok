@@ -177,6 +177,7 @@
         "saved": "Formulier opgeslagen!",
         "continue": "Verder waar ik gebleven was",
         "reset": "Reset",
+        "random": "Ik doe een gok",
         "auto-fill": "Automatisch invullen",
         "please_pick": "Maak een keuze...",
         "step1": {
@@ -201,11 +202,11 @@
         },
         "step4": {
             "title": "Ronde of 16",
-            "p1": "Vul nu de knockout fase in voor de laatste 16 teams. Om de teams automatisch in te laten vullen op basis van jouw voorspellingen, klik je op de knop <b>‘Auto-fill’</b>. De teams worden dan bepaald op basis van de uitslagen die jij hebt ingevuld in de eerste knockout-ronde (laatste 32). Je kunt de automatisch ingevulde teams daarna handmatig aanpassen als je wilt. Controleer goed of alles naar wens is voordat je verdergaat naar de volgende ronde."
+            "p1": "Vul nu de knockout fase in voor de laatste 16 teams. Om de teams automatisch in te laten vullen op basis van jouw voorspellingen, klik je op de knop <b>‘Automatisch invullen’</b>. De teams worden dan bepaald op basis van de uitslagen die jij hebt ingevuld in de eerste knockout-ronde (laatste 32). Je kunt de automatisch ingevulde teams daarna handmatig aanpassen als je wilt. Controleer goed of alles naar wens is voordat je verdergaat naar de volgende ronde."
         },
         "step5": {
             "title": "Finales",
-            "p1": "Vul nu de finalerondes in: kwartfinales, halve finales en de finale. Om de teams automatisch in te laten vullen op basis van jouw voorspellingen, klik je op de knop <b>‘Auto-fill’</b>. De teams worden dan bepaald op basis van de uitslagen die jij hebt ingevuld in de vorige ronde. Je kunt de automatisch ingevulde teams daarna handmatig aanpassen als je wilt. Controleer goed of alles naar wens is voordat je verdergaat naar de volgende ronde."
+            "p1": "Vul nu de finalerondes in: kwartfinales, halve finales en de finale. Om de teams automatisch in te laten vullen op basis van jouw voorspellingen, klik je op de knop <b>‘Automatisch invullen’</b>. De teams worden dan bepaald op basis van de uitslagen die jij hebt ingevuld in de vorige ronde. Je kunt de automatisch ingevulde teams daarna handmatig aanpassen als je wilt. Controleer goed of alles naar wens is voordat je verdergaat naar de volgende ronde."
         },
         "step6": {
             "title": "Bonusvragen",

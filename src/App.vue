@@ -13,9 +13,9 @@
                 <Transition name="fade">
                     <div v-if="!tournament.loading">
                         <router-view v-slot="{ Component }">
-                            <transition name="fade">
+                            <Transition name="fade">
                                 <component :is="Component"/>
-                            </transition>
+                            </Transition>
                         </router-view>
                     </div>
                     <div v-else>
