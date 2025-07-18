@@ -945,17 +945,11 @@
         "poule_name": "round_of_32",
         "location_id": 11,
         "teams": [
-            "MEX",
-            "USA"
+            "2A",
+            "2B"
         ],
-        "result": [
-            0,
-            0
-        ],
-        "result_after_extra_time": [
-            0,
-            1
-        ],
+        "result": [],
+        "result_after_extra_time": [],
         "events": []
     },
     {
