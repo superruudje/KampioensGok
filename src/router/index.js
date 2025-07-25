@@ -31,7 +31,7 @@ const router = createRouter({
                         if (!tournament.players.length) await tournament.fetchData()
 
                         // Convert dashes back to spaces to match player names
-                        const normalizedId = (to.params.id).replace(/-/g, ' ')
+                        const normalizedId = (to.params.id).replace(/\+/g, ' ')
                         const participant = tournament.getParticipant(normalizedId)
 
                         participant ? next() : next({ name: '404' })

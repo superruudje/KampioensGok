@@ -31,12 +31,12 @@ const player: Ref<Player | null | undefined> = ref(null);
 
 onBeforeMount(() => {
     let id = route.params.id as string;
-    player.value = tournament.getParticipant(id.replace(/-/g, ' ') as string);
+    player.value = tournament.getParticipant(id.replace(/\+/g, ' ') as string);
 })
 
 onBeforeRouteUpdate((to, from) => {
     let id = route.params.id as string;
-    if (!tournament.getParticipant(id.replace(/-/g, ' ') as string)) router.push({name: '404'})
+    if (!tournament.getParticipant(id.replace(/\+/g, ' ') as string)) router.push({name: '404'})
     else player.value = tournament.getParticipant(to.params.id as string);
 })
 </script>

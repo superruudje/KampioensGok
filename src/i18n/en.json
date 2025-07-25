@@ -238,6 +238,7 @@
     "errors": {
         "not_started": "Predictions will be revealed at the start of the tournament.",
         "already_chosen": "This team name is already chosen.",
+        "forbidden_char": "Team name may not contain the '+' character.",
         "required": "This field is required.",
         "check_form": "Please, check the form for errors."
     },

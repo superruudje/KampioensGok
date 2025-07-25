@@ -71,7 +71,7 @@
                                             <th v-else scope="row">{{ idx + 1 }}</th>
                                             <td>
                                                 <RouterLink
-                                                    :to="{name: 'player', params: {id: player.team_name.replace(/\s+/g, '-')}}"
+                                                    :to="{name: 'player', params: {id: player.team_name.replace(/\s+/g, '+')}}"
                                                     class="w26-condensed text-light text-decoration-none">{{
                                                         player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name
                                                     }}

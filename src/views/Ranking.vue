@@ -58,7 +58,7 @@
                                         </td>
                                         <td>{{ player.score }}</td>
                                         <td class="text-nowrap w26-condensed">
-                                            <RouterLink :to="{name: 'player', params: {id: player.team_name.replace(/\s+/g, '-')}}">{{
+                                            <RouterLink :to="{name: 'player', params: {id: player.team_name.replace(/\s+/g, '+')}}">{{
                                                     player.team_name.length > 30 ? player.team_name.slice(0, 30) + '...' : player.team_name
                                                 }}
                                             </RouterLink>

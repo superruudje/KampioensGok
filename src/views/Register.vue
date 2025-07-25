@@ -74,17 +74,22 @@
                                                     :class="['form-control', { 'is-invalid': isDuplicate && player.team_name }]"
                                                     :placeholder="$t('forms.step1.team_name')"
                                                     form="form1"
+                                                    pattern="^[^+]*$"
                                                     required
                                                     type="text">
                                                 <div class="invalid-feedback">
-                                                    {{ player.team_name ? $t('errors.already_chosen') : $t('errors.required') }}
+                                                    {{
+                                                        isDuplicate ? $t('errors.already_chosen') :
+                                                            player.team_name.includes('+') ? $t('errors.forbidden_char') :
+                                                                $t('errors.required')
+                                                    }}
                                                 </div>
                                             </div>
                                         </div>
+                                        <FormError v-if="wasValidated && !isValid" class="mt-3"/>
                                     </div>
                                 </div>
 
-                                <FormError v-if="wasValidated && !isValid" class="mb-3"/>
                                 <ButtonBar :form="'form1'" is-first @save="save">
                                     <button
                                         v-if="saveState"
@@ -108,7 +113,7 @@
                             <div class="card-body p-3 p-md-4">
                                 <h3 class="fw-bolder w26-condensed mb-3">{{ $t('forms.step2.title') }}</h3>
                                 <p>{{ $t('forms.step2.p1') }}</p>
-                                <div class="d-inline-flex gap-1 mb-3">
+                                <div class="d-inline-flex flex-wrap gap-1 mb-3">
                                     <button
                                         class="btn-wc26 btn-wc26-orange-alt w-fit"
                                         type="button"
@@ -168,7 +173,7 @@
                                         <strong>{{ $t('dict.please_note') }}</strong><br>
                                         {{ $t('forms.step3.p2') }}
                                     </p>
-                                    <div class="d-inline-flex gap-1 mb-3">
+                                    <div class="d-inline-flex flex-wrap gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
@@ -227,7 +232,7 @@
                                         <strong>{{ $t('dict.please_note') }}</strong><br>
                                         {{ $t('forms.step3.p2') }}
                                     </p>
-                                    <div class="d-inline-flex gap-1 mb-3">
+                                    <div class="d-inline-flex flex-wrap gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
@@ -285,7 +290,7 @@
                                     {{ $t('forms.step3.p2') }}
                                 </p>
 
-                                <div class="d-inline-flex gap-1 mb-3">
+                                <div class="d-inline-flex flex-wrap gap-1 mb-3">
                                     <button
                                         class="btn-wc26 btn-wc26-lightblue-alt w-fit"
                                         type="button"
@@ -295,7 +300,7 @@
                                 <div class="mb-4">
                                     <h4 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.quarter_finals')) }}</h4>
 
-                                    <div class="d-inline-flex gap-1 mb-3">
+                                    <div class="d-inline-flex flex-wrap gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
@@ -330,7 +335,7 @@
                                 <div class="mb-4">
                                     <h4 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.semi_finals')) }}</h4>
 
-                                    <div class="d-inline-flex gap-1 mb-3">
+                                    <div class="d-inline-flex flex-wrap gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
@@ -365,7 +370,7 @@
                                 <div class="mb-4">
                                     <h4 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.bronze_final')) }}</h4>
 
-                                    <div class="d-inline-flex gap-1 mb-3">
+                                    <div class="d-inline-flex flex-wrap gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
@@ -400,7 +405,7 @@
                                 <div class="mb-4">
                                     <h4 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.final')) }}</h4>
 
-                                    <div class="d-inline-flex gap-1 mb-3">
+                                    <div class="d-inline-flex flex-wrap gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
@@ -454,7 +459,7 @@
                                     {{ $t('forms.step6.p2') }}
                                 </p>
 
-                                <div class="d-inline-flex gap-1 mb-3">
+                                <div class="d-inline-flex flex-wrap gap-1 mb-3">
                                     <button
                                         class="btn-wc26 btn-wc26-lightblue-alt w-fit"
                                         type="button"
@@ -480,7 +485,9 @@
                                                     form="form6"
                                                     required>
                                                     <option :value="''">{{ $t('forms.please_pick') }}</option>
-                                                    <option v-for="t in teams.sort((a, b) => a.id.localeCompare(b.id))" :value="t.id">{{ $t('countries.' + t.id) }}</option>
+                                                    <option v-for="t in teams.sort((a, b) => a.id.localeCompare(b.id))" :value="t.id">
+                                                        {{ $t('countries.' + t.id) }}
+                                                    </option>
                                                 </select>
                                                 <select
                                                     v-if="q.answer_type === 'player'"
@@ -588,7 +595,7 @@
                                     <h4 class="fw-bolder w26-condensed mb-3">2. {{ $t('forms.step7.download.title') }}</h4>
                                     <p>{{ $t('forms.step7.download.p1') }}</p>
 
-                                    <div class="d-inline-flex gap-1 mb-3">
+                                    <div class="d-inline-flex flex-wrap gap-1 mb-3">
                                         <button
                                             class="btn-wc26 btn-wc26-lightblue w-fit"
                                             type="button"
@@ -601,11 +608,11 @@
                                     <h4 class="fw-bolder w26-condensed mb-3">3. {{ $t('forms.step7.mail.title') }}</h4>
                                     <p>{{ $t('forms.step7.mail.p1') }}</p>
 
-                                    <div class="d-inline-flex gap-1 mb-3">
+                                    <div class="d-inline-flex flex-wrap gap-1 mb-3">
                                         <a
                                             :href="'mailto:' + email + '?subject=' + mailSubject +  '&body=' + mailBody"
-                                            target="_blank"
-                                            rel="noopener noreferrer">
+                                            rel="noopener noreferrer"
+                                            target="_blank">
                                             <button class="btn-wc26 btn-wc26-lightblue w-fit" type="button">
                                                 {{ $t('cta.mail_sheet') }}
                                             </button>
@@ -851,19 +858,25 @@ function previous() {
  * @param form
  */
 function submit(event: Event, form: HTMLFormElement) {
-    if (!form.checkValidity() || isDuplicate.value) {
-        if (event) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-        wasValidated.value = true;
-        isValid.value = false;
-    } else {
-        wasValidated.value = false;
-        isValid.value = true;
+    wasValidated.value = false;
+    isValid.value = true;
 
-        currentStep.value++;
-    }
+    setTimeout(() => {
+        if (!form.checkValidity() || isDuplicate.value) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            wasValidated.value = true;
+            isValid.value = false;
+        } else {
+            wasValidated.value = false;
+            isValid.value = true;
+
+            currentStep.value++;
+        }
+    }, 300);
+
 }
 
 /**

@@ -238,6 +238,7 @@
     "errors": {
         "not_started": "Voorspellingen worden bekendgemaakt bij de start van het toernooi.",
         "already_chosen": "Deze teamnaam is al gekozen.",
+        "forbidden_char": "Teamnaam mag geen '+' karakter bevatten.",
         "required": "Dit veld is verplicht.",
         "check_form": "Controleer het formulier op fouten."
     },
