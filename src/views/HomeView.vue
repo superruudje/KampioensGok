@@ -94,7 +94,7 @@
                             :image="false"
                             :list="prediction_ned"
                             table_header="Score"
-                            title="Hoe ver komt NL?"/>
+                            :title="$t('questions.nl_result')"/>
                     </div>
                     <div class="col-12 col-md-8">
                         <div class="card rounded-4">

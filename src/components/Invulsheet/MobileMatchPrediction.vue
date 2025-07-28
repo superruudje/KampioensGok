@@ -176,7 +176,7 @@ const completed = computed(() => {
 
     const validTeams = Array.isArray(teams) &&
         teams.length === 2 &&
-        teams.every(val => val.trim().length > 0)
+        teams.every(val => typeof val === 'string' && val.trim().length > 0)
 
     return validResult && validTeams
 })
