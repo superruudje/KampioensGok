@@ -2,7 +2,7 @@
     <button
         id="back-to-top"
         :class="[show ? 'd-block' : 'd-none']"
-        class="btn-wc26 sm btn-wc26-lightblue-alt w-fit"
+        class="btn-wc26 border sm btn-wc26-lightblue-alt w-fit"
         title="Go to top"
         @click="topFunction()">
         Top<i class="bi bi-arrow-up ms-2"></i>

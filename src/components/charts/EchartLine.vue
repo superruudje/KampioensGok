@@ -2,20 +2,25 @@
     <v-chart :option="chartOptions" autoresize class="chart"/>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import VChart from "vue-echarts"
 import {use} from "echarts/core"
-import {LineChart, BarChart} from "echarts/charts";
-import {TitleComponent, LegendComponent, TooltipComponent, GridComponent, ToolboxComponent} from "echarts/components";
+import {LineChart} from "echarts/charts";
+import {GridComponent, LegendComponent, TitleComponent, ToolboxComponent, TooltipComponent} from "echarts/components";
 import {CanvasRenderer} from "echarts/renderers";
 import {computed} from "vue";
 
 use([LineChart, TitleComponent, TooltipComponent, LegendComponent, CanvasRenderer, GridComponent, ToolboxComponent]);
 
+interface chartData {
+    data: { category: string, value?: number }[],
+    name: string,
+}
+
 // Define props
-const props = defineProps({
-    data: {type: Array, required: true},
-});
+const props = defineProps<{
+    data: chartData[]
+}>();
 
 // Compute chart options dynamically based on props
 const chartOptions = computed(() => ({

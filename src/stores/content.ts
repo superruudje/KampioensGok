@@ -711,7 +711,7 @@ export const useTournament = defineStore('tournament', {
             } finally {
                 setTimeout(() => {
                     this.loading = false;
-                }, 800)
+                }, 300)
             }
         },
         /**
@@ -1010,6 +1010,7 @@ export const useTournament = defineStore('tournament', {
                 matches.forEach(matchResult => {
                     if (!matchResult.teams || !matchResult.teams.includes(team)) return;
                     const [scoreA, scoreB] = matchResult.result;
+                    if (!scoreA || !scoreB) return;
                     const winner = getMatchWinner(scoreA, scoreB, matchResult.teams);
 
                     if (winner === null) {

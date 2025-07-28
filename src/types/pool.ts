@@ -26,6 +26,6 @@ export interface Player {
 
 export interface MatchResult {
     match: number,
-    result: number[],
+    result: (number | null)[],
     teams?: string[],
 }

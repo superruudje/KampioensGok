@@ -130,23 +130,21 @@
                                     <template
                                         v-for="poule in tournament.getPouleMatches"
                                         :key="poule.name">
-                                        <h4 class="fw-bolder w26-condensed mb-1">Groep {{ poule.name }}</h4>
-                                        <div class="w-100 overflow-hidden overflow-x-auto">
-                                            <table class="table align-middle">
-                                                <TableHead/>
-                                                <tbody>
-                                                <TableRow
-                                                    v-for="match in poule.matches"
-                                                    :key="match.num"
+                                        <h4 class="fw-bolder w26-condensed mb-1">{{ $t('dict.group') }} {{ poule.name }}</h4>
+                                        <div class="row g-3">
+                                            <div
+                                                v-for="match in poule.matches"
+                                                :key="match.num"
+                                                class="col-12 col-md-6 col-lg-4">
+                                                <MobileMatchPrediction
                                                     :match="match"
                                                     :prediction="getPrediction(match.num)"
                                                     :predictions="player.predictions"
+                                                    :was-validated="wasValidated"
                                                     disable-teams
                                                     form="form2"
-                                                    @update:score="handleScoreUpdate"
-                                                />
-                                                </tbody>
-                                            </table>
+                                                    @update:score="handleScoreUpdate"/>
+                                            </div>
                                         </div>
                                     </template>
                                 </div>
@@ -191,22 +189,20 @@
                                         </button>
                                     </div>
 
-                                    <div class="w-100 overflow-hidden overflow-x-auto">
-                                        <table class="table align-middle">
-                                            <TableHead/>
-                                            <tbody>
-                                            <TableRow
-                                                v-for="match in tournament.matchesByPouleName('round_of_32')"
-                                                :key="match.num"
+                                    <div class="row g-3">
+                                        <div
+                                            v-for="match in tournament.matchesByPouleName('round_of_32')"
+                                            :key="match.num"
+                                            class="col-12 col-md-6 col-lg-4">
+                                            <MobileMatchPrediction
                                                 :match="match"
                                                 :prediction="getPrediction(match.num)"
                                                 :predictions="player.predictions"
+                                                :was-validated="wasValidated"
                                                 form="form3"
                                                 @update:team="handleTeamUpdate"
-                                                @update:score="handleScoreUpdate"
-                                            />
-                                            </tbody>
-                                        </table>
+                                                @update:score="handleScoreUpdate"/>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -249,23 +245,22 @@
                                             @click="reset16">{{ $t('forms.reset') }}
                                         </button>
                                     </div>
-                                    <!-- table -->
-                                    <div class="w-100 overflow-hidden overflow-x-auto">
-                                        <table class="table align-middle">
-                                            <TableHead/>
-                                            <tbody>
-                                            <TableRow
-                                                v-for="match in tournament.matchesByPouleName('round_of_16')"
-                                                :key="match.num"
+
+                                    <div class="row g-3">
+                                        <div
+                                            v-for="match in tournament.matchesByPouleName('round_of_16')"
+                                            :key="match.num"
+                                            class="col-12 col-md-6 col-lg-4">
+                                            <MobileMatchPrediction
                                                 :match="match"
                                                 :prediction="getPrediction(match.num)"
                                                 :predictions="player.predictions"
+                                                :was-validated="wasValidated"
                                                 form="form4"
                                                 @update:team="handleTeamUpdate"
                                                 @update:score="handleScoreUpdate"
                                             />
-                                            </tbody>
-                                        </table>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -297,6 +292,7 @@
                                         @click="resetFinals">{{ $t('forms.reset') }}
                                     </button>
                                 </div>
+                                <!-- Quarter finals -->
                                 <div class="mb-4">
                                     <h4 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.quarter_finals')) }}</h4>
 
@@ -312,26 +308,25 @@
                                             @click="randomize('quarter_finals')">{{ $t('forms.random') }}
                                         </button>
                                     </div>
-                                    <!-- table -->
-                                    <div class="w-100 overflow-hidden overflow-x-auto">
-                                        <table class="table align-middle">
-                                            <TableHead/>
-                                            <tbody>
-                                            <TableRow
-                                                v-for="match in tournament.matchesByPouleName('quarter_finals')"
-                                                :key="match.num"
+
+                                    <div class="row g-3">
+                                        <div
+                                            v-for="match in tournament.matchesByPouleName('quarter_finals')"
+                                            :key="match.num"
+                                            class="col-12 col-md-6 col-lg-4">
+                                            <MobileMatchPrediction
                                                 :match="match"
                                                 :prediction="getPrediction(match.num)"
                                                 :predictions="player.predictions"
+                                                :was-validated="wasValidated"
                                                 form="form5"
                                                 @update:team="handleTeamUpdate"
                                                 @update:score="handleScoreUpdate"
                                             />
-                                            </tbody>
-                                        </table>
+                                        </div>
                                     </div>
                                 </div>
-
+                                <!-- Semi finals -->
                                 <div class="mb-4">
                                     <h4 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.semi_finals')) }}</h4>
 
@@ -347,26 +342,25 @@
                                             @click="randomize('semi_finals')">{{ $t('forms.random') }}
                                         </button>
                                     </div>
-                                    <!-- table -->
-                                    <div class="w-100 overflow-hidden overflow-x-auto">
-                                        <table class="table align-middle">
-                                            <TableHead/>
-                                            <tbody>
-                                            <TableRow
-                                                v-for="match in tournament.matchesByPouleName('semi_finals')"
-                                                :key="match.num"
+
+                                    <div class="row g-3">
+                                        <div
+                                            v-for="match in tournament.matchesByPouleName('semi_finals')"
+                                            :key="match.num"
+                                            class="col-12 col-md-6 col-lg-4">
+                                            <MobileMatchPrediction
                                                 :match="match"
                                                 :prediction="getPrediction(match.num)"
                                                 :predictions="player.predictions"
+                                                :was-validated="wasValidated"
                                                 form="form5"
                                                 @update:team="handleTeamUpdate"
                                                 @update:score="handleScoreUpdate"
                                             />
-                                            </tbody>
-                                        </table>
+                                        </div>
                                     </div>
                                 </div>
-
+                                <!-- Bronze finals -->
                                 <div class="mb-4">
                                     <h4 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.bronze_final')) }}</h4>
 
@@ -382,26 +376,25 @@
                                             @click="randomize('bronze_final')">{{ $t('forms.random') }}
                                         </button>
                                     </div>
-                                    <!-- table -->
-                                    <div class="w-100 overflow-hidden overflow-x-auto">
-                                        <table class="table align-middle">
-                                            <TableHead/>
-                                            <tbody>
-                                            <TableRow
-                                                v-for="match in tournament.matchesByPouleName('bronze_final')"
-                                                :key="match.num"
+
+                                    <div class="row g-3">
+                                        <div
+                                            v-for="match in tournament.matchesByPouleName('bronze_final')"
+                                            :key="match.num"
+                                            class="col-12 col-md-6 col-lg-4">
+                                            <MobileMatchPrediction
                                                 :match="match"
                                                 :prediction="getPrediction(match.num)"
                                                 :predictions="player.predictions"
+                                                :was-validated="wasValidated"
                                                 form="form5"
                                                 @update:team="handleTeamUpdate"
                                                 @update:score="handleScoreUpdate"
                                             />
-                                            </tbody>
-                                        </table>
+                                        </div>
                                     </div>
                                 </div>
-
+                                <!-- Finals -->
                                 <div class="mb-4">
                                     <h4 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.final')) }}</h4>
 
@@ -417,23 +410,22 @@
                                             @click="randomize('final')">{{ $t('forms.random') }}
                                         </button>
                                     </div>
-                                    <!-- table -->
-                                    <div class="w-100 overflow-hidden overflow-x-auto">
-                                        <table class="table align-middle">
-                                            <TableHead/>
-                                            <tbody>
-                                            <TableRow
-                                                v-for="match in tournament.matchesByPouleName('final')"
-                                                :key="match.num"
+
+                                    <div class="row g-3">
+                                        <div
+                                            v-for="match in tournament.matchesByPouleName('final')"
+                                            :key="match.num"
+                                            class="col-12 col-md-6 col-lg-4">
+                                            <MobileMatchPrediction
                                                 :match="match"
                                                 :prediction="getPrediction(match.num)"
                                                 :predictions="player.predictions"
+                                                :was-validated="wasValidated"
                                                 form="form5"
                                                 @update:team="handleTeamUpdate"
                                                 @update:score="handleScoreUpdate"
                                             />
-                                            </tbody>
-                                        </table>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -646,11 +638,10 @@ import type {TeamStats} from "@/types/tournament.ts";
 import {calculateAndAssignThirds, capitalize, determineRoundOf16FromResults} from "@/helpers/magic.ts";
 import FormError from "@/components/Invulsheet/FormError.vue";
 import ButtonBar from "@/components/Invulsheet/ButtonBar.vue";
-import TableHead from "@/components/Invulsheet/TableHead.vue";
-import TableRow from "@/components/Invulsheet/TableRow.vue";
 import Stepper from "@/components/Invulsheet/Stepper.vue";
 import dayjs from "dayjs";
 import {i18n} from "@/i18n";
+import MobileMatchPrediction from "@/components/Invulsheet/MobileMatchPrediction.vue";
 
 const tournament = useTournament();
 const {teams, teamImages, players} = storeToRefs(tournament);
@@ -766,7 +757,7 @@ function handleTeamUpdate({match, teamIndex, value}: { match: number; teamIndex:
  * @param {number} params.value - The new score value to be assigned.
  * @return {void} No return value.
  */
-function handleScoreUpdate({match, teamIndex, value}: { match: number; teamIndex: number; value: number }) {
+function handleScoreUpdate({match, teamIndex, value}: { match: number; teamIndex: number; value: number | null }) {
     let prediction = player.value.predictions.find(p => p.match === match);
     if (!prediction) return
 

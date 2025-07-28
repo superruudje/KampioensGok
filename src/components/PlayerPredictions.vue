@@ -2,7 +2,7 @@
     <div id="player-page">
         <div class="row g-4">
             <div class="col-md-6">
-                <!-- voorspelling -->
+                <!-- predictions -->
                 <div class="card rounded-4 mb-4">
                     <div class="card-body p-3 p-md-4">
                         <h3 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.prediction', 2)) }} {{
@@ -26,7 +26,7 @@
                         </template>
                     </div>
                 </div>
-                <!-- voorspelling -->
+                <!-- predictions -->
                 <div class="card rounded-4 mb-4">
                     <div class="card-body p-3 p-md-4">
                         <h3 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.prediction', 2)) }} {{ $t('dict.round_of_32') }}</h3>
@@ -44,7 +44,7 @@
                         </template>
                     </div>
                 </div>
-                <!-- voorspelling -->
+                <!-- predictions -->
                 <div class="card rounded-4 mb-4">
                     <div class="card-body p-3 p-md-4">
                         <h3 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.prediction', 2)) }} {{ $t('dict.round_of_16') }}</h3>
@@ -62,7 +62,7 @@
                         </template>
                     </div>
                 </div>
-                <!-- voorspelling -->
+                <!-- predictions -->
                 <div class="card rounded-4">
                     <div class="card-body p-3 p-md-4">
                         <h3 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.prediction', 2)) }} {{ $t('dict.finals') }}</h3>
@@ -86,7 +86,7 @@
             </div>
 
             <div class="col-md-6">
-                <!-- bonus vragen -->
+                <!-- bonus -->
                 <div class="card rounded-4 mb-4">
                     <div class="card-body p-3 p-md-4">
                         <h3 class="fw-bolder w26-condensed mb-3">{{ capitalize($t('dict.bonus_questions')) }}</h3>
@@ -145,7 +145,7 @@
                         </RouterLink>
                     </div>
                 </div>
-                <!-- scoreverloop -->
+                <!-- score progression -->
                 <div class="card rounded-4 mb-4">
                     <div class="card-body p-3 p-md-4">
                         <h3 class="fw-bolder w26-condensed mb-3">{{ $t('heading.progression') }}</h3>

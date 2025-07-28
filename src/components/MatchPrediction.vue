@@ -145,9 +145,9 @@ function inKnockOut(teamName: string) {
             return knock_out.value.round_of_32.some(t => t === teamName)
         case 'round_of_16':
             return knock_out.value.round_of_16.some(t => t === teamName)
-        case 'quarter_final':
+        case 'quarter_finals':
             return knock_out.value.quarter_final.some(t => t === teamName)
-        case 'semi_final':
+        case 'semi_finals':
             return knock_out.value.semi_final.some(t => t === teamName)
         case 'bronze_final':
             return knock_out.value.bronze_final.some(t => t === teamName)

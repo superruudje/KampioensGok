@@ -5,6 +5,7 @@
                 <span class="text-light w26-condensed text-uppercase">{{ $t('app.title') }} - {{
                         $t('app.participants', {count: tournament.players.length})
                     }}</span>
+                <router-link class="text-light w26-condensed text-uppercase" :to="{name: 'register'}">{{ $t('cta.join') }}</router-link>
             </div>
         </header>
         <div class="body">

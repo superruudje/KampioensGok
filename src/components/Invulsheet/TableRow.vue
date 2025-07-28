@@ -17,8 +17,12 @@
             </select>
         </td>
         <td class="text-nowrap">
-            <img :src="getImagePred(0)" alt="teamA" class="border"
-                 loading="lazy" width="30px"/>
+            <img
+                :src="getImagePred(0)"
+                alt="teamA"
+                class="border"
+                loading="lazy"
+                width="30px"/>
         </td>
         <td>
             <input
@@ -26,13 +30,12 @@
                 :form="form"
                 :value="prediction.result?.[0]"
                 class="form-control form-control-sm"
-                inputmode="numeric"
                 min="0"
-                pattern="[0-9]*"
+                max="9"
                 placeholder="0"
                 required
                 style="width: 80px;"
-                type="text"
+                type="number"
                 @input="setPredictionScore(0, $event)"
                 @keyup="gotoNext($event)"/>
         </td>
@@ -44,17 +47,21 @@
                 class="form-control form-control-sm"
                 inputmode="numeric"
                 min="0"
-                pattern="[0-9]*"
+                max="9"
                 placeholder="0"
                 required
                 style="width: 80px;"
-                type="text"
+                type="number"
                 @input="setPredictionScore(1, $event)"
                 @keyup="gotoNext($event)"/>
         </td>
         <td class="text-nowrap">
-            <img :src="getImagePred(1)" alt="teamB" class="border"
-                 loading="lazy" width="30px"/>
+            <img
+                :src="getImagePred(1)"
+                alt="teamB"
+                class="border"
+                loading="lazy"
+                width="30px"/>
         </td>
         <td>
             <select
