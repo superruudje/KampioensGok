@@ -106,22 +106,12 @@
                     <div class="card rounded-4">
                         <div class="card-body p-3 p-md-4">
                             <h3 class="fw-bolder txt-blue w26-condensed mb-3">FAQ</h3>
-                            <h6 class="txt-blue fw-bolder">1. Tot wanneer kan ik mijn voorspelling aanpassen?</h6>
-                            <p>Je hebt tot uiterlijk vrijdag 14 juni 20:59 uur om jouw invulsheet te mailen naar de
-                                organisatie.</p>
-                            <h6 class="txt-blue fw-bolder">2. Wanneer worden de uitslagen ingevoerd?</h6>
-                            <p>Uitslagen worden zo snel mogelijk na de gespeelde wedstrijd ingevoerd. Mocht dit niet
-                                lukken,
-                                dan zullen de uitslagen in ieder geval voor 12.00 uur op de volgende dag ingevoerd
-                                worden.</p>
-                            <h6 class="txt-blue fw-bolder">3. Wanneer worden de punten voor de bonusvragen
-                                toegekend?</h6>
-                            <p>Antwoorden op de bonusvragen worden na de poulefase ingevoerd. Zodra het antwoord op de desbetreffende
-                                bonusvraag bekend is, zal deze worden ingevoerd en worden de
-                                punten
-                                daarvan direct toegekend. Sommige antwoorden zullen echter pas bekend zijn na afloop van
-                                het
-                                toernooi.</p>
+                            <h6 class="txt-blue fw-bolder">1. {{ $t('faq.faq1') }}</h6>
+                            <p>{{ $t('faq.ans1') }}</p>
+                            <h6 class="txt-blue fw-bolder">2. {{ $t('faq.faq2') }}</h6>
+                            <p>{{ $t('faq.ans2') }}</p>
+                            <h6 class="txt-blue fw-bolder">3. {{ $t('faq.faq3') }}</h6>
+                            <p>{{ $t('faq.ans3') }}</p>
                         </div>
                     </div>
                 </div>

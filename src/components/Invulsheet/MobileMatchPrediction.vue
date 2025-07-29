@@ -17,7 +17,7 @@
                     <img
                         :src="getImagePred(0)"
                         alt="teamA"
-                        class="border mb-2"
+                        class="border mb-1"
                         loading="lazy"
                         style="max-width: 60px">
                     <div class="fs-7">{{ prediction.teams?.[0] ? $t('countries.' + prediction.teams?.[0]) : match.teams[0] }}</div>
@@ -27,11 +27,10 @@
                         <img
                             :src="getImagePred(0)"
                             alt="teamA"
-                            class="border mb-2"
+                            class="border mb-1"
                             loading="lazy"
                             style="max-width: 60px">
                     </label>
-
                     <select
                         :id="match.num + '_team1'"
                         :disabled="disableTeams"
@@ -97,7 +96,7 @@
                     <img
                         :src="getImagePred(1)"
                         alt="teamA"
-                        class="border mb-2"
+                        class="border mb-1"
                         loading="lazy"
                         style="max-width: 60px">
                     <div class="fs-7">{{ prediction.teams?.[1] ? $t('countries.' + prediction.teams?.[1]) : match.teams[1] }}</div>
@@ -107,7 +106,7 @@
                         <img
                             :src="getImagePred(1)"
                             alt="teamB"
-                            class="border mb-2"
+                            class="border mb-1"
                             loading="lazy"
                             style="max-width: 60px">
                     </label>
@@ -125,6 +124,15 @@
                         </option>
                     </select>
                 </template>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <span class="d-block mb-2">Popular predictions</span>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <div v-for="topResult in topResults">
+                    <div class="border rounded-4 py-1 px-2">{{ topResult.result.join(' - ') }}</div>
+                    <span class="small">{{ topResult.percentage }}%</span>
+                </div>
             </div>
         </div>
     </div>
@@ -156,6 +164,8 @@ const props = defineProps<{
     disableTeams?: boolean
     wasValidated?: boolean
 }>();
+
+const topResults = tournament.getTopPredictedResults(props.match.num);
 
 /**
  * A computed boolean value that indicates if the `prediction` object passed via `props` is valid.

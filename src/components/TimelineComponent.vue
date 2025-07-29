@@ -13,6 +13,7 @@
             </div>
             <div class="mx-3 text-center icon bg-white">
                 <FontAwesomeIcon v-if="e.type === 'goal'" :icon="faSoccerBall"/>
+                <FontAwesomeIcon v-else-if="e.type === 'own_goal'" class="text-red" :icon="faSoccerBall"/>
                 <FontAwesomeIcon v-else-if="e.type === 'substitution'" :icon="faArrowsTurnToDots"/>
                 <FontAwesomeIcon v-else :class="{'text-yellow' : e.type === 'yellow_card', 'text-red' : e.type === 'red_card'}"
                                  :icon="faMobile"/>

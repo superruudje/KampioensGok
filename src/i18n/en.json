@@ -49,7 +49,8 @@
         "upcoming_matches": "Upcoming matches",
         "fixtures_results": "Fixtures & results",
         "tournament_stats": "Tournament stats",
-        "ranking_scores": "Ranking and score progression"
+        "ranking_scores": "Ranking and score progression",
+        "my_page": "My predictions"
     },
     "dict": {
         "amount": "amount",
@@ -100,7 +101,10 @@
         "final": "final",
         "finals": "finals",
         "please_note": "Please note:",
-        "tip": "Tip:"
+        "tip": "Tip:",
+        "no_timeline": "No timeline available.",
+        "who_r_u": "Who are you?",
+        "shortcut": "Shortcut"
     },
     "home": {
         "match_schedule_title": "View the World Cup 2026 match schedule",
@@ -168,7 +172,8 @@
         "nl_result": "How far will the Dutch team make it?",
         "stats": "({percentage}% thinks the same, currently {current})",
         "current": "(currently {current})",
-        "help": "Points for the bonus questions will only be awarded after the group stage."
+        "help": "Points for the bonus questions will only be awarded after the group stage.",
+        "group_prediction": "What do we think?"
     },
     "forms": {
         "next": "Next",
@@ -233,6 +238,10 @@
                 "title": "Wait for confirmation",
                 "p1": "After submission, you will receive a payment link from the organization. Once the payment is completed, your sheet will be added to the pool."
             }
+        },
+        "my_page": {
+            "text": "By telling the website who you are, you can create a personal shortcut. This shortcut gives you quick access to your own predictions page, making it easy to check what you’ve submitted.",
+            "placeholder": "Pick your team"
         }
     },
     "errors": {
@@ -291,5 +300,13 @@
         "PAR": "Paraguay",
         "ALG": "Algeria",
         "NZL": "New Zealand"
+    },
+    "faq": {
+        "faq1": "Until when can I change my predictions?",
+        "ans1": "You can update your entry form and submit it to the organizers until Friday, June 5, 2025.",
+        "faq2": "When are match results updated?",
+        "ans2": "Match results are entered shortly after each game finishes. If that’s not possible, they’ll be updated no later than 12:00 PM the following day.",
+        "faq3": "When are the bonus question points awarded?",
+        "ans3": "Bonus question answers are processed after the group stage. Points are awarded as soon as answers are confirmed, although some won’t be finalized until the tournament concludes."
     }
 }

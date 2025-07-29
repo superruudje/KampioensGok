@@ -60,7 +60,7 @@
                         <div class="card-body p-3 p-md-4">
                             <h3 class="fw-bolder w26-condensed mb-3">Timeline</h3>
                             <div v-if="!match.events?.length">
-                                Nog geen timeline.
+                                {{ $t('dict.no_timeline') }}
                             </div>
                             <TimelineComponent
                                 v-else
@@ -73,8 +73,8 @@
                     <PredictionTableCard
                         :image="false"
                         :list="tournament.getGroupedMatchPrediction(match?.num)"
-                        table_header="Uitslag"
-                        title="Wat denken we?"/>
+                        :table_header="$t('dict.result')"
+                        :title="$t('questions.group_prediction')"/>
                 </div>
             </div>
         </main>

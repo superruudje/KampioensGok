@@ -70,6 +70,11 @@ export interface Location {
     capacity: number;
 }
 
+export interface TournamentPoule {
+    name: string;
+    teams: string[];
+}
+
 export interface Poule {
     id?: number;
     name: string;

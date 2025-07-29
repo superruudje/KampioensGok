@@ -4,8 +4,8 @@
             <div class="container-lg">
                 <div class="row text-light">
                     <div class="col-12">
-                        <h1 class="w26-condensed">Mijn voorspellingen</h1>
-                        <h2 class="fs-6 mb-0 txt-orange">Wie ben je?</h2>
+                        <h1 class="w26-condensed">{{ $t('heading.my_page') }}</h1>
+                        <h2 class="fs-6 mb-0 txt-orange">{{ $t('dict.who_r_u') }}</h2>
                     </div>
                 </div>
             </div>
@@ -19,14 +19,12 @@
                 <div class="col-12">
                     <div class="card rounded-4">
                         <div class="card-body p-3 p-md-4">
-                            <h3 class="fw-bolder w26-condensed mb-3">Snelkoppeling</h3>
-                            <p>Door de website te laten weten wie je bent, kun je een persoonlijke snelkoppeling maken.
-                                Met deze snelkoppeling krijg je snel toegang tot je eigen pagina met voorspellingen. Dit
-                                is handig als je snel wilt controleren wat je voorspeld hebt.</p>
+                            <h3 class="fw-bolder w26-condensed mb-3">{{ $t('dict.shortcut') }}</h3>
+                            <p>{{ $t('forms.my_page.text') }}</p>
                             <div class="mb-3">
-                                <label class="form-label" for="isWho">Wie ben je?</label>
+                                <label class="form-label" for="isWho">{{ $t('dict.who_r_u') }}</label>
                                 <select id="isWho" v-model="team" class="form-select">
-                                    <option :value="''">Kies een speler</option>
+                                    <option :value="''">{{ $t('forms.my_page.placeholder') }}</option>
                                     <option
                                         v-for="player in sortedPlayers"
                                         :value="player.team_name">
@@ -38,7 +36,7 @@
                                 :disabled="!team"
                                 class="btn-wc26 btn-wc26-orange-alt w-fit sm"
                                 @click="selectProfile">
-                                Opslaan
+                                {{ $t('forms.save') }}
                             </button>
                         </div>
                     </div>

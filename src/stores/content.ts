@@ -11,7 +11,7 @@ import {
     type Poule,
     type PouleWithMatches,
     type Team,
-    type TeamStats
+    type TeamStats, type TournamentPoule
 } from "@/types/tournament.ts";
 import type {MatchResult, Player, Question} from "@/types/pool.ts";
 import {capitalize} from "@/helpers/magic.ts";
@@ -21,7 +21,7 @@ interface TournamentState {
     matches: Match[];
     match_days: MatchDay[];
     players: Player[];
-    poules: Poule[];
+    poules: TournamentPoule[];
     knock_out: {
         round_of_32: string[],
         round_of_16: string[],
@@ -31,6 +31,7 @@ interface TournamentState {
         final: string[],
     },
 
+    roundOf32Start: number;
     roundOf16Start: number;
     quarterFinalsStart: number;
     semiFinalsStart: number;
@@ -61,10 +62,11 @@ export const useTournament = defineStore('tournament', {
             final: [],
         },
 
-        roundOf16Start: 13,
-        quarterFinalsStart: 17,
-        semiFinalsStart: 19,
-        finalStart: 21,
+        roundOf32Start: 17,
+        roundOf16Start: 23,
+        quarterFinalsStart: 27,
+        semiFinalsStart: 30,
+        finalStart: 32,
 
         teamImages: {},
         locations: [],
@@ -241,7 +243,7 @@ export const useTournament = defineStore('tournament', {
 
                 // Filter matches that belong to the poule (matching teams)
                 const pouleMatches = state.matches.filter(match =>
-                    match.teams.some(teamName => pouleTeams.some(team => team.team === teamName))
+                    match.teams.some(teamName => pouleTeams.some(team => team === teamName))
                 );
 
                 // Group filtered matches by match day
@@ -914,6 +916,11 @@ export const useTournament = defineStore('tournament', {
             const slice_num = snapshot !== null ? snapshot : Object.keys(this.playedMatchesGroupedByDay).length
             const keys = Object.keys(this.playedMatchesGroupedByDay).slice(0, slice_num)
 
+            if (keys.length > this.roundOf32Start) {
+                this.knock_out.round_of_32.forEach(team => {
+                    if (player.round_of_32.includes(team)) score += 5
+                })
+            }
             if (keys.length > this.roundOf16Start) {
                 this.knock_out.round_of_16.forEach(team => {
                     if (player.round_of_16.includes(team)) score += 10
@@ -1047,7 +1054,7 @@ export const useTournament = defineStore('tournament', {
             return this.poules.map(poule => {
                 let computed_poule: Poule = {name: poule.name, teams: []};
 
-                let poule_teams = poule.teams.map((teamStat: TeamStats) => calculateTeamStats(teamStat.team, matches));
+                let poule_teams: TeamStats[] = poule.teams.map((team: string) => calculateTeamStats(team, matches));
 
                 computed_poule.teams = poule_teams.sort((a, b) => {
                     if (b.points !== a.points) return b.points - a.points;
@@ -1107,6 +1114,53 @@ export const useTournament = defineStore('tournament', {
          */
         getTeam(teamId: string) {
             return this.teams.find(team => team.id === teamId)
+        },
+        /**
+         * Retrieves the top predicted results for a specific match, ranked by the count of predictions.
+         *
+         * @param {number} matchNumber - The match number for which top predictions are to be retrieved.
+         * @return {Array<{result: [number, number], count: number, percentage: number}>}
+         * An array of objects, each representing a prediction result:
+         * - result: An array of two numbers representing the predicted score.
+         * - count: The number of predictions matching this result.
+         * - percentage: The percentage of predictions this result represents relative to the total.
+         */
+        getTopPredictedResults(matchNumber: number): {
+            result: [number, number]
+            count: number
+            percentage: number
+        }[] {
+            const resultMap = new Map<string, { result: [number, number], count: number }>()
+
+            let total = 0
+
+            for (const player of this.players) {
+                const prediction = player.predictions.find(p => p.match === matchNumber)
+                if (
+                    prediction &&
+                    Array.isArray(prediction.result) &&
+                    prediction.result.length === 2 &&
+                    prediction.result.every(val => typeof val === 'number' && !isNaN(val))
+                ) {
+                    const key = prediction.result.join('-') // e.g., "3-4"
+                    if (!resultMap.has(key)) {
+                        resultMap.set(key, { result: prediction.result as [number, number], count: 1 })
+                    } else {
+                        resultMap.get(key)!.count++
+                    }
+                    total++
+                }
+            }
+
+            const sorted = Array.from(resultMap.values())
+                .sort((a, b) => b.count - a.count)
+                .slice(0, 4)
+
+            return sorted.map(entry => ({
+                result: entry.result,
+                count: entry.count,
+                percentage: Math.round((entry.count / total) * 100)
+            }))
         }
     }
 })

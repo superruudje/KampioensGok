@@ -49,7 +49,8 @@
         "upcoming_matches": "Aankomende wedstrijden",
         "fixtures_results": "Wedstrijden en uitslagen",
         "tournament_stats": "Toernooi statistieken",
-        "ranking_scores": "Ranking en scoreverloop"
+        "ranking_scores": "Ranking en scoreverloop",
+        "my_page": "Mijn voorspellingen"
     },
     "dict": {
         "amount": "aantal",
@@ -100,7 +101,10 @@
         "final": "finale",
         "finals": "finales",
         "please_note": "Let op:",
-        "tip": "Tip:"
+        "tip": "Tip:",
+        "no_timeline": "Nog geen timeline.",
+        "who_r_u": "Wie ben je?",
+        "shortcut": "Snelkoppeling"
     },
     "home": {
         "match_schedule_title": "Bekijk het Wereld Kampioenschap 2026 wedstrijdschema",
@@ -168,7 +172,8 @@
         "nl_result": "Hoe ver gaat Oranje het schoppen?",
         "stats": "({percentage}% denkt dit ook, momenteel {current})",
         "current": "(momenteel {current})",
-        "help": "Punten voor de bonusvragen worden pas na de poulefase toegekend."
+        "help": "Punten voor de bonusvragen worden pas na de poulefase toegekend.",
+        "group_prediction": "Wat denken we?"
     },
     "forms": {
         "next": "Volgende",
@@ -233,6 +238,10 @@
                 "title": "Wacht op bevestiging",
                 "p1": "Na inzending ontvang je een betaallink van de organisatie. Wanneer deze is voldaan wordt jouw scheet toegevoegd aan de pool."
             }
+        },
+        "my_page": {
+            "text": "Door de website te laten weten wie je bent, kun je een persoonlijke snelkoppeling maken. Met deze snelkoppeling krijg je snel toegang tot je eigen pagina met voorspellingen. Dit is handig als je snel wilt controleren wat je voorspeld hebt.",
+            "placeholder": "Kies jouw team"
         }
     },
     "errors": {
@@ -291,5 +300,13 @@
         "PAR": "Paraguay",
         "ALG": "Algerije",
         "NZL": "Nieuw-Zeeland"
+    },
+    "faq": {
+        "faq1": "Tot wanneer kan ik mijn voorspelling aanpassen?",
+        "ans1": "Je hebt tot uiterlijk vrijdag 5 juni 2025 om jouw invulsheet te mailen naar de organisatie.",
+        "faq2": "Wanneer worden de uitslagen ingevoerd?",
+        "ans2": "Uitslagen worden zo snel mogelijk na de gespeelde wedstrijd ingevoerd. Mocht dit niet lukken, dan zullen de uitslagen in ieder geval voor 12.00 uur op de volgende dag ingevoerd worden.",
+        "faq3": "Wanneer worden de punten voor de bonusvragen toegekend?",
+        "ans3": "Antwoorden op de bonusvragen worden na de poulefase ingevoerd. Zodra het antwoord op de desbetreffende bonusvraag bekend is, zal deze worden ingevoerd en worden de punten daarvan direct toegekend. Sommige antwoorden zullen echter pas bekend zijn na afloop van het toernooi."
     }
 }
