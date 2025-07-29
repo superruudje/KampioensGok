@@ -9,11 +9,22 @@
             "MEX",
             "BEL"
         ],
-        "result": [
-            1,
-            3
-        ],
-        "events": []
+        "result": [],
+        "events": [
+            {
+                "type": "own_goal",
+                "minute": 9,
+                "player": "Jan Klaassen",
+                "team": "MEX",
+                "note": "(og)"
+            },
+            {
+                "type": "own_goal",
+                "minute": 15,
+                "player": "Jan Klaassen",
+                "team": "BEL"
+            }
+        ]
     },
     {
         "num": 2,

@@ -1216,7 +1216,7 @@
             "NGA",
             "PAR"
         ],
-        "bronze_final": [],
+        "bronze_final": ["MAR", "NGA"],
         "final": [
             "POR",
             "PAR"
@@ -2439,7 +2439,7 @@
             "NGA",
             "ECU"
         ],
-        "bronze_final": [],
+        "bronze_final": ["MAR", "NGA"],
         "final": [
             "POR",
             "ECU"
