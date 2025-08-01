@@ -1161,6 +1161,43 @@ export const useTournament = defineStore('tournament', {
                 count: entry.count,
                 percentage: Math.round((entry.count / total) * 100)
             }))
+        },
+        getTopPredictedTeams(matchNumber: number): {
+            teams: [string, string]
+            count: number
+            percentage: number
+        }[] {
+            const teamMap = new Map<string, { teams: [string, string], count: number }>()
+
+            let total = 0
+
+            for (const player of this.players) {
+                const prediction = player.predictions.find(p => p.match === matchNumber)
+                if (
+                    prediction &&
+                    Array.isArray(prediction.teams) &&
+                    prediction.teams.length === 2 &&
+                    prediction.teams.every(t => t.trim() !== '')
+                ) {
+                    const key = prediction.teams.join('-') // e.g., "MEX-BEL"
+                    if (!teamMap.has(key)) {
+                        teamMap.set(key, { teams: prediction.teams as [string, string], count: 1 })
+                    } else {
+                        teamMap.get(key)!.count++
+                    }
+                    total++
+                }
+            }
+
+            const sorted = Array.from(teamMap.values())
+                .sort((a, b) => b.count - a.count)
+                .slice(0, 4)
+
+            return sorted.map(entry => ({
+                teams: entry.teams,
+                count: entry.count,
+                percentage: Math.round((entry.count / total) * 100)
+            }))
         }
     }
 })

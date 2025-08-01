@@ -24,6 +24,7 @@
         "view_details": "View details",
         "view_all": "View all",
         "hide": "Hide",
+        "show": "Show",
         "shortcut": "Change team",
         "download": "Download",
         "mail_sheet": "Submit your sheet",
@@ -104,7 +105,8 @@
         "tip": "Tip:",
         "no_timeline": "No timeline available.",
         "who_r_u": "Who are you?",
-        "shortcut": "Shortcut"
+        "shortcut": "Shortcut",
+        "pop_predictions": "popular predictions"
     },
     "home": {
         "match_schedule_title": "View the World Cup 2026 match schedule",

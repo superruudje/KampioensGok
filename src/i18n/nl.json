@@ -24,6 +24,7 @@
         "view_details": "Toon details",
         "view_all": "Toon alle",
         "hide": "Verberg",
+        "show": "Toon",
         "shortcut": "Wijzig team",
         "download": "Download",
         "mail_sheet": "Sheet inzenden",
@@ -104,7 +105,8 @@
         "tip": "Tip:",
         "no_timeline": "Nog geen timeline.",
         "who_r_u": "Wie ben je?",
-        "shortcut": "Snelkoppeling"
+        "shortcut": "Snelkoppeling",
+        "pop_predictions": "populaire voorspellingen"
     },
     "home": {
         "match_schedule_title": "Bekijk het Wereld Kampioenschap 2026 wedstrijdschema",

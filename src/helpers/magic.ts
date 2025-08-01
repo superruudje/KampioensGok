@@ -133,7 +133,11 @@ function determineWinnersAndLosers(matchPredictions: MatchResult[]) {
 
     for (const prediction of matchPredictions) {
         const [scoreA, scoreB] = prediction.result;
-        if (!prediction.teams || !scoreA || !scoreB) continue
+        if (
+            !prediction.teams ||
+            scoreA === undefined || scoreA === null ||
+            scoreB === undefined || scoreB === null
+        ) continue
         const [teamA, teamB] = prediction.teams;
 
         if (scoreA > scoreB) {

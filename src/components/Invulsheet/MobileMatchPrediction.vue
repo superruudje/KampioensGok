@@ -127,11 +127,40 @@
             </div>
         </div>
         <div class="text-center mt-3">
-            <span class="d-block mb-2">Popular predictions</span>
-            <div class="d-flex flex-wrap justify-content-center gap-3">
+            <span
+                @click="showPopularPredictions = !showPopularPredictions"
+                class="d-block mb-2 user-select-none"
+                role="button">
+                {{ showPopularPredictions ? $t('cta.hide') : $t('cta.show') }} {{ $t('dict.pop_predictions') }}
+            </span>
+            <div v-if="showPopularPredictions" class="d-flex flex-wrap justify-content-center gap-3">
                 <div v-for="topResult in topResults">
                     <div class="border rounded-4 py-1 px-2">{{ topResult.result.join(' - ') }}</div>
                     <span class="small">{{ topResult.percentage }}%</span>
+                </div>
+            </div>
+        </div>
+        <div v-if="!disableTeams && showPopularPredictions" class="text-center mt-3">
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <div v-for="topTeam in topTeams">
+                    <div class="border rounded-4 py-1 px-2 d-flex align-items-center gap-1">
+                        <img
+                            class="border"
+                            :alt="`team-${topTeam.teams[0]}`"
+                            :title="`team-${topTeam.teams[0]}`"
+                            :src="getImage(topTeam.teams[0])"
+                            loading="lazy"
+                            style="max-width: 30px">
+                        <span>-</span>
+                        <img
+                            class="border"
+                            :alt="`team-${topTeam.teams[1]}`"
+                            :title="`team-${topTeam.teams[1]}`"
+                            :src="getImage(topTeam.teams[1])"
+                            loading="lazy"
+                            style="max-width: 30px">
+                    </div>
+                    <span class="small">{{ topTeam.percentage }}%</span>
                 </div>
             </div>
         </div>
@@ -143,11 +172,11 @@ import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
 import type {Match, Team} from "@/types/tournament.ts";
 import type {MatchResult} from "@/types/pool.ts";
-import {computed} from "vue";
+import {computed, ref} from "vue";
 import dayjs from "dayjs";
 import {useI18n} from "vue-i18n";
 
-const { locale } = useI18n();
+const {locale} = useI18n();
 
 const tournament = useTournament();
 const {teams, teamImages} = storeToRefs(tournament);
@@ -165,7 +194,9 @@ const props = defineProps<{
     wasValidated?: boolean
 }>();
 
+const showPopularPredictions = ref<boolean>(false);
 const topResults = tournament.getTopPredictedResults(props.match.num);
+const topTeams = tournament.getTopPredictedTeams(props.match.num);
 
 /**
  * A computed boolean value that indicates if the `prediction` object passed via `props` is valid.
@@ -268,6 +299,10 @@ function getImagePred(teamIndex: number) {
     return props.prediction.teams[teamIndex] ? teamImages.value[props.prediction.teams[teamIndex]] : teamImages.value[`default`];
 }
 
+function getImage(team: string) {
+    return teamImages.value[team] || teamImages.value[`default`];
+}
+
 /**
  * Focus on the next form input element
  * @param event
@@ -305,6 +340,7 @@ function gotoNext(event: KeyboardEvent) {
 .was-validated .form-select:invalid:not([multiple]):not([size])
     padding-right: 2.4rem
     background-position: right 0 center, center right 1.2rem
+
 .form-select
     padding: 2px 1.2rem 2px 4px
     border-width: 0

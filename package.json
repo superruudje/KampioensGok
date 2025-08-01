@@ -1,6 +1,7 @@
 {
   "name": "kampioens-gok",
   "version": "0.1.0",
+  "author": "Rudi Haamke (superruudje)",
   "private": true,
   "type": "module",
   "scripts": {
@@ -40,10 +41,10 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.32.0",
-    "eslint-plugin-vue": "^10.3.0",
+    "eslint-plugin-vue": "^10.4.0",
     "prettier": "^3.6.2",
     "sass": "^1.89.2",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.2",
     "vite": "^6.3.5",
     "vue-tsc": "^3.0.4"
   }
