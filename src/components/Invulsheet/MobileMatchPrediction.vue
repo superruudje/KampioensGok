@@ -60,10 +60,11 @@
                         maxlength="1"
                         min="0"
                         pattern="[0-9]*"
-                        placeholder="+"
+                        placeholder="..."
                         required
                         style="all: unset"
-                        type="tel"
+                        type="text"
+                        autocomplete="off"
                         @input="setPredictionScore(0, $event)"
                         @keyup="gotoNext($event)"
                     />
@@ -82,10 +83,11 @@
                         inputmode="numeric"
                         min="0"
                         pattern="[0-9]*"
-                        placeholder="+"
+                        placeholder="..."
                         required
                         style="all: unset"
                         type="text"
+                        autocomplete="off"
                         @input="setPredictionScore(1, $event)"
                         @keyup="gotoNext($event)"
                     />
