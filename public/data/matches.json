@@ -163,7 +163,7 @@
         "poule_name": "F",
         "location_id": 5,
         "teams": [
-            "IRQ",
+            "GHA",
             "TUN"
         ],
         "result": [],
@@ -268,7 +268,7 @@
         "location_id": 15,
         "teams": [
             "KOR",
-            "MLI"
+            "CPV"
         ],
         "result": [],
         "events": []
@@ -320,7 +320,7 @@
         "location_id": 3,
         "teams": [
             "AUS",
-            "GUA"
+            "COL"
         ],
         "result": [],
         "events": []
@@ -463,7 +463,7 @@
         "location_id": 9,
         "teams": [
             "DEN",
-            "IRQ"
+            "GHA"
         ],
         "result": [],
         "events": []
@@ -579,7 +579,7 @@
         "poule_name": "J",
         "location_id": 15,
         "teams": [
-            "MLI",
+            "CPV",
             "ITA"
         ],
         "result": [],
@@ -631,7 +631,7 @@
         "poule_name": "K",
         "location_id": 4,
         "teams": [
-            "GUA",
+            "COL",
             "GER"
         ],
         "result": [],
@@ -749,7 +749,7 @@
         "location_id": 8,
         "teams": [
             "FRA",
-            "IRQ"
+            "GHA"
         ],
         "result": [],
         "events": []
@@ -918,7 +918,7 @@
         "location_id": 8,
         "teams": [
             "ECU",
-            "MLI"
+            "CPV"
         ],
         "result": [],
         "events": []
@@ -944,7 +944,7 @@
         "location_id": 6,
         "teams": [
             "CHI",
-            "GUA"
+            "COL"
         ],
         "result": [],
         "events": []
