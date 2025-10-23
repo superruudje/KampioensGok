@@ -351,7 +351,7 @@
                     1
                 ],
                 "teams": [
-                    "IRQ",
+                    "GHA",
                     "TUN"
                 ]
             },
@@ -363,7 +363,7 @@
                 ],
                 "teams": [
                     "DEN",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -385,7 +385,7 @@
                 ],
                 "teams": [
                     "FRA",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -616,7 +616,7 @@
                 ],
                 "teams": [
                     "KOR",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -637,7 +637,7 @@
                     1
                 ],
                 "teams": [
-                    "MLI",
+                    "CPV",
                     "ITA"
                 ]
             },
@@ -660,7 +660,7 @@
                 ],
                 "teams": [
                     "ECU",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -682,7 +682,7 @@
                 ],
                 "teams": [
                     "AUS",
-                    "GUA"
+                    "COL"
                 ]
             },
             {
@@ -703,7 +703,7 @@
                     4
                 ],
                 "teams": [
-                    "GUA",
+                    "COL",
                     "GER"
                 ]
             },
@@ -726,7 +726,7 @@
                 ],
                 "teams": [
                     "CHI",
-                    "GUA"
+                    "COL"
                 ]
             },
             {
@@ -836,7 +836,7 @@
                 ],
                 "teams": [
                     "UZB",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -912,7 +912,7 @@
                     4
                 ],
                 "teams": [
-                    "GUA",
+                    "COL",
                     "ALG"
                 ]
             },
@@ -924,7 +924,7 @@
                 ],
                 "teams": [
                     "CZE",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -1000,7 +1000,7 @@
                     3
                 ],
                 "teams": [
-                    "IRQ",
+                    "GHA",
                     "EGY"
                 ]
             },
@@ -1023,7 +1023,7 @@
                 ],
                 "teams": [
                     "ALG",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -1077,7 +1077,7 @@
                     4
                 ],
                 "teams": [
-                    "MLI",
+                    "CPV",
                     "POR"
                 ]
             },
@@ -1156,7 +1156,7 @@
             "TUN",
             "MAR",
             "UZB",
-            "IRQ",
+            "GHA",
             "CRC",
             "RSA",
             "CIV",
@@ -1169,10 +1169,10 @@
             "FRA",
             "JPN",
             "POR",
-            "GUA",
+            "COL",
             "ALG",
             "CZE",
-            "MLI",
+            "CPV",
             "SUI",
             "ECU",
             "KOR",
@@ -1187,12 +1187,12 @@
             "RSA",
             "KSA",
             "MAR",
-            "IRQ",
+            "GHA",
             "EGY",
             "BRA",
             "NGA",
             "ALG",
-            "MLI",
+            "CPV",
             "FRA",
             "POR",
             "NCL",
@@ -1203,7 +1203,7 @@
         "quarter_finals": [
             "RSA",
             "MAR",
-            "MLI",
+            "CPV",
             "POR",
             "EGY",
             "NGA",
@@ -1577,7 +1577,7 @@
                     1
                 ],
                 "teams": [
-                    "IRQ",
+                    "GHA",
                     "TUN"
                 ]
             },
@@ -1589,7 +1589,7 @@
                 ],
                 "teams": [
                     "DEN",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -1611,7 +1611,7 @@
                 ],
                 "teams": [
                     "FRA",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -1842,7 +1842,7 @@
                 ],
                 "teams": [
                     "KOR",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -1863,7 +1863,7 @@
                     2
                 ],
                 "teams": [
-                    "MLI",
+                    "CPV",
                     "ITA"
                 ]
             },
@@ -1886,7 +1886,7 @@
                 ],
                 "teams": [
                     "ECU",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -1908,7 +1908,7 @@
                 ],
                 "teams": [
                     "AUS",
-                    "GUA"
+                    "COL"
                 ]
             },
             {
@@ -1929,7 +1929,7 @@
                     1
                 ],
                 "teams": [
-                    "GUA",
+                    "COL",
                     "GER"
                 ]
             },
@@ -1952,7 +1952,7 @@
                 ],
                 "teams": [
                     "CHI",
-                    "GUA"
+                    "COL"
                 ]
             },
             {
@@ -2050,7 +2050,7 @@
                     5
                 ],
                 "teams": [
-                    "IRQ",
+                    "GHA",
                     "MAR"
                 ]
             },
@@ -2171,7 +2171,7 @@
                     4
                 ],
                 "teams": [
-                    "MLI",
+                    "CPV",
                     "NCL"
                 ]
             },
@@ -2182,7 +2182,7 @@
                     3
                 ],
                 "teams": [
-                    "GUA",
+                    "COL",
                     "ECU"
                 ]
             },
@@ -2379,7 +2379,7 @@
             "SUI",
             "CIV",
             "MEX",
-            "IRQ",
+            "GHA",
             "MAR",
             "UZB",
             "TUN",
@@ -2401,9 +2401,9 @@
             "KOR",
             "KSA",
             "ENG",
-            "MLI",
+            "CPV",
             "NCL",
-            "GUA",
+            "COL",
             "ECU",
             "QAT",
             "JPN"
@@ -2803,7 +2803,7 @@
                     1
                 ],
                 "teams": [
-                    "IRQ",
+                    "GHA",
                     "TUN"
                 ]
             },
@@ -2815,7 +2815,7 @@
                 ],
                 "teams": [
                     "DEN",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -2837,7 +2837,7 @@
                 ],
                 "teams": [
                     "FRA",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -3068,7 +3068,7 @@
                 ],
                 "teams": [
                     "KOR",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -3089,7 +3089,7 @@
                     1
                 ],
                 "teams": [
-                    "MLI",
+                    "CPV",
                     "ITA"
                 ]
             },
@@ -3112,7 +3112,7 @@
                 ],
                 "teams": [
                     "ECU",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -3134,7 +3134,7 @@
                 ],
                 "teams": [
                     "AUS",
-                    "GUA"
+                    "COL"
                 ]
             },
             {
@@ -3155,7 +3155,7 @@
                     2
                 ],
                 "teams": [
-                    "GUA",
+                    "COL",
                     "GER"
                 ]
             },
@@ -3178,7 +3178,7 @@
                 ],
                 "teams": [
                     "CHI",
-                    "GUA"
+                    "COL"
                 ]
             },
             {
@@ -3276,7 +3276,7 @@
                     1
                 ],
                 "teams": [
-                    "IRQ",
+                    "GHA",
                     "MAR"
                 ]
             },
@@ -3364,7 +3364,7 @@
                     1
                 ],
                 "teams": [
-                    "GUA",
+                    "COL",
                     "NED"
                 ]
             },
@@ -3397,7 +3397,7 @@
                     1
                 ],
                 "teams": [
-                    "MLI",
+                    "CPV",
                     "CZE"
                 ]
             },
@@ -3442,7 +3442,7 @@
                 ],
                 "teams": [
                     "JOR",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -3496,7 +3496,7 @@
                     3
                 ],
                 "teams": [
-                    "MLI",
+                    "CPV",
                     "RSA"
                 ]
             },
@@ -3519,7 +3519,7 @@
                 ],
                 "teams": [
                     "MEX",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -3562,7 +3562,7 @@
                     0
                 ],
                 "teams": [
-                    "IRQ",
+                    "GHA",
                     "KSA"
                 ]
             },
@@ -3595,7 +3595,7 @@
                     0
                 ],
                 "teams": [
-                    "IRQ",
+                    "GHA",
                     "RSA"
                 ]
             }
@@ -3616,7 +3616,7 @@
             "CMR",
             "CIV",
             "MEX",
-            "IRQ",
+            "GHA",
             "MAR",
             "BRA",
             "FRA",
@@ -3632,13 +3632,13 @@
             "KSA",
             "CRO",
             "EGY",
-            "GUA",
+            "COL",
             "NED",
             "ESP",
             "KOR",
             "CAN",
             "PAN",
-            "MLI",
+            "CPV",
             "CZE",
             "CHI",
             "ITA",
@@ -3649,7 +3649,7 @@
             "MEX",
             "USA",
             "JOR",
-            "IRQ",
+            "GHA",
             "BRA",
             "IRN",
             "TUN",
@@ -3658,14 +3658,14 @@
             "KOR",
             "KSA",
             "CRO",
-            "MLI",
+            "CPV",
             "RSA",
             "CAN",
             "CHI"
         ],
         "quarter_finals": [
             "MEX",
-            "IRQ",
+            "GHA",
             "NED",
             "KSA",
             "BRA",
@@ -3674,7 +3674,7 @@
             "CAN"
         ],
         "semi_finals": [
-            "IRQ",
+            "GHA",
             "KSA",
             "BRA",
             "RSA"
@@ -3684,7 +3684,7 @@
             "BRA"
         ],
         "final": [
-            "IRQ",
+            "GHA",
             "RSA"
         ]
     },
@@ -4040,7 +4040,7 @@
                     2
                 ],
                 "teams": [
-                    "IRQ",
+                    "GHA",
                     "TUN"
                 ]
             },
@@ -4052,7 +4052,7 @@
                 ],
                 "teams": [
                     "DEN",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -4074,7 +4074,7 @@
                 ],
                 "teams": [
                     "FRA",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -4305,7 +4305,7 @@
                 ],
                 "teams": [
                     "KOR",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -4326,7 +4326,7 @@
                     3
                 ],
                 "teams": [
-                    "MLI",
+                    "CPV",
                     "ITA"
                 ]
             },
@@ -4349,7 +4349,7 @@
                 ],
                 "teams": [
                     "ECU",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -4371,7 +4371,7 @@
                 ],
                 "teams": [
                     "AUS",
-                    "GUA"
+                    "COL"
                 ]
             },
             {
@@ -4392,7 +4392,7 @@
                     1
                 ],
                 "teams": [
-                    "GUA",
+                    "COL",
                     "GER"
                 ]
             },
@@ -4415,7 +4415,7 @@
                 ],
                 "teams": [
                     "CHI",
-                    "GUA"
+                    "COL"
                 ]
             },
             {
@@ -4601,7 +4601,7 @@
                     1
                 ],
                 "teams": [
-                    "GUA",
+                    "COL",
                     "NZL"
                 ]
             },
@@ -4624,7 +4624,7 @@
                 ],
                 "teams": [
                     "CAN",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -4634,7 +4634,7 @@
                     3
                 ],
                 "teams": [
-                    "MLI",
+                    "CPV",
                     "CZE"
                 ]
             },
@@ -4711,7 +4711,7 @@
                     2
                 ],
                 "teams": [
-                    "GUA",
+                    "COL",
                     "NGA"
                 ]
             },
@@ -4744,7 +4744,7 @@
                     4
                 ],
                 "teams": [
-                    "IRQ",
+                    "GHA",
                     "KOR"
                 ]
             },
@@ -4766,7 +4766,7 @@
                     3
                 ],
                 "teams": [
-                    "GUA",
+                    "COL",
                     "PAN"
                 ]
             },
@@ -4869,13 +4869,13 @@
             "SUI",
             "PAN",
             "CRC",
-            "GUA",
+            "COL",
             "NZL",
             "NGA",
             "ECU",
             "CAN",
-            "IRQ",
-            "MLI",
+            "GHA",
+            "CPV",
             "CZE",
             "CHI",
             "KOR",
@@ -4891,19 +4891,19 @@
             "ARG",
             "MEX",
             "NCL",
-            "GUA",
+            "COL",
             "NGA",
             "POL",
             "PAN",
             "CZE",
             "USA",
-            "IRQ",
+            "GHA",
             "KOR"
         ],
         "quarter_finals": [
             "POR",
             "KSA",
-            "GUA",
+            "COL",
             "PAN",
             "SRB",
             "MEX",
@@ -5277,7 +5277,7 @@
                     1
                 ],
                 "teams": [
-                    "IRQ",
+                    "GHA",
                     "TUN"
                 ]
             },
@@ -5289,7 +5289,7 @@
                 ],
                 "teams": [
                     "DEN",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -5311,7 +5311,7 @@
                 ],
                 "teams": [
                     "FRA",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -5542,7 +5542,7 @@
                 ],
                 "teams": [
                     "KOR",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -5563,7 +5563,7 @@
                     3
                 ],
                 "teams": [
-                    "MLI",
+                    "CPV",
                     "ITA"
                 ]
             },
@@ -5586,7 +5586,7 @@
                 ],
                 "teams": [
                     "ECU",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -5608,7 +5608,7 @@
                 ],
                 "teams": [
                     "AUS",
-                    "GUA"
+                    "COL"
                 ]
             },
             {
@@ -5629,7 +5629,7 @@
                     1
                 ],
                 "teams": [
-                    "GUA",
+                    "COL",
                     "GER"
                 ]
             },
@@ -5652,7 +5652,7 @@
                 ],
                 "teams": [
                     "CHI",
-                    "GUA"
+                    "COL"
                 ]
             },
             {
@@ -5762,7 +5762,7 @@
                 ],
                 "teams": [
                     "BRA",
-                    "IRQ"
+                    "GHA"
                 ]
             },
             {
@@ -5850,7 +5850,7 @@
                 ],
                 "teams": [
                     "NCL",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -5882,7 +5882,7 @@
                     4
                 ],
                 "teams": [
-                    "GUA",
+                    "COL",
                     "ALG"
                 ]
             },
@@ -5926,7 +5926,7 @@
                     2
                 ],
                 "teams": [
-                    "IRQ",
+                    "GHA",
                     "AUT"
                 ]
             },
@@ -5949,7 +5949,7 @@
                 ],
                 "teams": [
                     "NED",
-                    "MLI"
+                    "CPV"
                 ]
             },
             {
@@ -6003,7 +6003,7 @@
                     2
                 ],
                 "teams": [
-                    "MLI",
+                    "CPV",
                     "PAN"
                 ]
             },
@@ -6078,7 +6078,7 @@
             "SUI",
             "311",
             "189",
-            "GUA",
+            "COL",
             "GER",
             "Joey Veerman",
             "Brian Brobbey",
@@ -6093,7 +6093,7 @@
             "TUN",
             "MAR",
             "BRA",
-            "IRQ",
+            "GHA",
             "CRC",
             "RSA",
             "AUT",
@@ -6109,12 +6109,12 @@
             "CHI",
             "NED",
             "NCL",
-            "MLI",
+            "CPV",
             "SUI",
             "CRO",
             "ITA",
             "CZE",
-            "GUA",
+            "COL",
             "ALG",
             "QAT",
             "ENG"
@@ -6124,12 +6124,12 @@
             "RSA",
             "SEN",
             "TUN",
-            "IRQ",
+            "GHA",
             "AUT",
             "JOR",
             "ESP",
             "NED",
-            "MLI",
+            "CPV",
             "POL",
             "PAN",
             "CZE",
@@ -6140,7 +6140,7 @@
         "quarter_finals": [
             "KSA",
             "SEN",
-            "MLI",
+            "CPV",
             "PAN",
             "AUT",
             "JOR",
