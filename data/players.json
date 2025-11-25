@@ -88,7 +88,7 @@
                 ],
                 "teams": [
                     "KSA",
-                    "CMR"
+                    "SCO"
                 ]
             },
             {
@@ -98,7 +98,7 @@
                     4
                 ],
                 "teams": [
-                    "CMR",
+                    "SCO",
                     "SUI"
                 ]
             },
@@ -120,7 +120,7 @@
                     1
                 ],
                 "teams": [
-                    "CMR",
+                    "SCO",
                     "CAN"
                 ]
             },
@@ -142,7 +142,7 @@
                     5
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "BRA"
                 ]
             },
@@ -176,7 +176,7 @@
                 ],
                 "teams": [
                     "MAR",
-                    "SRB"
+                    "CUW"
                 ]
             },
             {
@@ -186,7 +186,7 @@
                     5
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "UZB"
                 ]
             },
@@ -341,7 +341,7 @@
                 ],
                 "teams": [
                     "FRA",
-                    "DEN"
+                    "NOR"
                 ]
             },
             {
@@ -362,7 +362,7 @@
                     1
                 ],
                 "teams": [
-                    "DEN",
+                    "NOR",
                     "GHA"
                 ]
             },
@@ -395,7 +395,7 @@
                     2
                 ],
                 "teams": [
-                    "DEN",
+                    "NOR",
                     "TUN"
                 ]
             },
@@ -418,7 +418,7 @@
                 ],
                 "teams": [
                     "JPN",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -439,7 +439,7 @@
                     1
                 ],
                 "teams": [
-                    "PAN",
+                    "HTI",
                     "ENG"
                 ]
             },
@@ -462,7 +462,7 @@
                 ],
                 "teams": [
                     "CRO",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -484,7 +484,7 @@
                 ],
                 "teams": [
                     "CZE",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -505,7 +505,7 @@
                     2
                 ],
                 "teams": [
-                    "NCL",
+                    "PAN",
                     "ESP"
                 ]
             },
@@ -528,7 +528,7 @@
                 ],
                 "teams": [
                     "NGA",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -814,7 +814,7 @@
                 ],
                 "teams": [
                     "IRN",
-                    "CMR"
+                    "SCO"
                 ]
             },
             {
@@ -946,7 +946,7 @@
                 ],
                 "teams": [
                     "KOR",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -968,7 +968,7 @@
                 ],
                 "teams": [
                     "QAT",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -978,7 +978,7 @@
                     4
                 ],
                 "teams": [
-                    "CMR",
+                    "SCO",
                     "RSA"
                 ]
             },
@@ -1044,8 +1044,8 @@
                     1
                 ],
                 "teams": [
-                    "NCL",
-                    "PAN"
+                    "PAN",
+                    "HTI"
                 ]
             },
             {
@@ -1099,7 +1099,7 @@
                     4
                 ],
                 "teams": [
-                    "PAN",
+                    "HTI",
                     "PAR"
                 ]
             },
@@ -1152,7 +1152,7 @@
             "BEL",
             "KSA",
             "IRN",
-            "CMR",
+            "SCO",
             "TUN",
             "MAR",
             "UZB",
@@ -1176,14 +1176,14 @@
             "SUI",
             "ECU",
             "KOR",
-            "NCL",
+            "PAN",
             "AUS",
             "PAR",
             "QAT",
-            "PAN"
+            "HTI"
         ],
         "round_of_16": [
-            "CMR",
+            "SCO",
             "RSA",
             "KSA",
             "MAR",
@@ -1195,8 +1195,8 @@
             "CPV",
             "FRA",
             "POR",
-            "NCL",
             "PAN",
+            "HTI",
             "ECU",
             "PAR"
         ],
@@ -1207,7 +1207,7 @@
             "POR",
             "EGY",
             "NGA",
-            "PAN",
+            "HTI",
             "PAR"
         ],
         "semi_finals": [
@@ -1314,7 +1314,7 @@
                 ],
                 "teams": [
                     "KSA",
-                    "CMR"
+                    "SCO"
                 ]
             },
             {
@@ -1324,7 +1324,7 @@
                     1
                 ],
                 "teams": [
-                    "CMR",
+                    "SCO",
                     "SUI"
                 ]
             },
@@ -1346,7 +1346,7 @@
                     4
                 ],
                 "teams": [
-                    "CMR",
+                    "SCO",
                     "CAN"
                 ]
             },
@@ -1368,7 +1368,7 @@
                     4
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "BRA"
                 ]
             },
@@ -1402,7 +1402,7 @@
                 ],
                 "teams": [
                     "MAR",
-                    "SRB"
+                    "CUW"
                 ]
             },
             {
@@ -1412,7 +1412,7 @@
                     3
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "UZB"
                 ]
             },
@@ -1567,7 +1567,7 @@
                 ],
                 "teams": [
                     "FRA",
-                    "DEN"
+                    "NOR"
                 ]
             },
             {
@@ -1588,7 +1588,7 @@
                     5
                 ],
                 "teams": [
-                    "DEN",
+                    "NOR",
                     "GHA"
                 ]
             },
@@ -1621,7 +1621,7 @@
                     2
                 ],
                 "teams": [
-                    "DEN",
+                    "NOR",
                     "TUN"
                 ]
             },
@@ -1644,7 +1644,7 @@
                 ],
                 "teams": [
                     "JPN",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -1665,7 +1665,7 @@
                     5
                 ],
                 "teams": [
-                    "PAN",
+                    "HTI",
                     "ENG"
                 ]
             },
@@ -1688,7 +1688,7 @@
                 ],
                 "teams": [
                     "CRO",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -1710,7 +1710,7 @@
                 ],
                 "teams": [
                     "CZE",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -1731,7 +1731,7 @@
                     1
                 ],
                 "teams": [
-                    "NCL",
+                    "PAN",
                     "ESP"
                 ]
             },
@@ -1754,7 +1754,7 @@
                 ],
                 "teams": [
                     "NGA",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -2127,7 +2127,7 @@
                     1
                 ],
                 "teams": [
-                    "PAN",
+                    "HTI",
                     "POR"
                 ]
             },
@@ -2172,7 +2172,7 @@
                 ],
                 "teams": [
                     "CPV",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -2270,7 +2270,7 @@
                     5
                 ],
                 "teams": [
-                    "NCL",
+                    "PAN",
                     "JPN"
                 ]
             },
@@ -2364,7 +2364,7 @@
             }
         ],
         "bonus": [
-            "DEN",
+            "NOR",
             "150",
             "230",
             "KOR",
@@ -2393,7 +2393,7 @@
             "NGA",
             "POL",
             "FRA",
-            "PAN",
+            "HTI",
             "POR",
             "AUS",
             "NZL",
@@ -2402,7 +2402,7 @@
             "KSA",
             "ENG",
             "CPV",
-            "NCL",
+            "PAN",
             "COL",
             "ECU",
             "QAT",
@@ -2421,7 +2421,7 @@
             "KOR",
             "FRA",
             "POR",
-            "NCL",
+            "PAN",
             "JPN",
             "ENG",
             "ECU"
@@ -2540,7 +2540,7 @@
                 ],
                 "teams": [
                     "KSA",
-                    "CMR"
+                    "SCO"
                 ]
             },
             {
@@ -2550,7 +2550,7 @@
                     2
                 ],
                 "teams": [
-                    "CMR",
+                    "SCO",
                     "SUI"
                 ]
             },
@@ -2572,7 +2572,7 @@
                     3
                 ],
                 "teams": [
-                    "CMR",
+                    "SCO",
                     "CAN"
                 ]
             },
@@ -2594,7 +2594,7 @@
                     0
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "BRA"
                 ]
             },
@@ -2628,7 +2628,7 @@
                 ],
                 "teams": [
                     "MAR",
-                    "SRB"
+                    "CUW"
                 ]
             },
             {
@@ -2638,7 +2638,7 @@
                     0
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "UZB"
                 ]
             },
@@ -2793,7 +2793,7 @@
                 ],
                 "teams": [
                     "FRA",
-                    "DEN"
+                    "NOR"
                 ]
             },
             {
@@ -2814,7 +2814,7 @@
                     2
                 ],
                 "teams": [
-                    "DEN",
+                    "NOR",
                     "GHA"
                 ]
             },
@@ -2847,7 +2847,7 @@
                     2
                 ],
                 "teams": [
-                    "DEN",
+                    "NOR",
                     "TUN"
                 ]
             },
@@ -2870,7 +2870,7 @@
                 ],
                 "teams": [
                     "JPN",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -2891,7 +2891,7 @@
                     1
                 ],
                 "teams": [
-                    "PAN",
+                    "HTI",
                     "ENG"
                 ]
             },
@@ -2914,7 +2914,7 @@
                 ],
                 "teams": [
                     "CRO",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -2936,7 +2936,7 @@
                 ],
                 "teams": [
                     "CZE",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -2957,7 +2957,7 @@
                     4
                 ],
                 "teams": [
-                    "NCL",
+                    "PAN",
                     "ESP"
                 ]
             },
@@ -2980,7 +2980,7 @@
                 ],
                 "teams": [
                     "NGA",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -3255,7 +3255,7 @@
                 ],
                 "teams": [
                     "JOR",
-                    "CMR"
+                    "SCO"
                 ]
             },
             {
@@ -3387,7 +3387,7 @@
                 ],
                 "teams": [
                     "CAN",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -3613,7 +3613,7 @@
         ],
         "round_of_32": [
             "JOR",
-            "CMR",
+            "SCO",
             "CIV",
             "MEX",
             "GHA",
@@ -3637,7 +3637,7 @@
             "ESP",
             "KOR",
             "CAN",
-            "PAN",
+            "HTI",
             "CPV",
             "CZE",
             "CHI",
@@ -3777,7 +3777,7 @@
                 ],
                 "teams": [
                     "KSA",
-                    "CMR"
+                    "SCO"
                 ]
             },
             {
@@ -3787,7 +3787,7 @@
                     0
                 ],
                 "teams": [
-                    "CMR",
+                    "SCO",
                     "SUI"
                 ]
             },
@@ -3809,7 +3809,7 @@
                     0
                 ],
                 "teams": [
-                    "CMR",
+                    "SCO",
                     "CAN"
                 ]
             },
@@ -3831,7 +3831,7 @@
                     2
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "BRA"
                 ]
             },
@@ -3865,7 +3865,7 @@
                 ],
                 "teams": [
                     "MAR",
-                    "SRB"
+                    "CUW"
                 ]
             },
             {
@@ -3875,7 +3875,7 @@
                     1
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "UZB"
                 ]
             },
@@ -4030,7 +4030,7 @@
                 ],
                 "teams": [
                     "FRA",
-                    "DEN"
+                    "NOR"
                 ]
             },
             {
@@ -4051,7 +4051,7 @@
                     0
                 ],
                 "teams": [
-                    "DEN",
+                    "NOR",
                     "GHA"
                 ]
             },
@@ -4084,7 +4084,7 @@
                     1
                 ],
                 "teams": [
-                    "DEN",
+                    "NOR",
                     "TUN"
                 ]
             },
@@ -4107,7 +4107,7 @@
                 ],
                 "teams": [
                     "JPN",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -4128,7 +4128,7 @@
                     1
                 ],
                 "teams": [
-                    "PAN",
+                    "HTI",
                     "ENG"
                 ]
             },
@@ -4151,7 +4151,7 @@
                 ],
                 "teams": [
                     "CRO",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -4173,7 +4173,7 @@
                 ],
                 "teams": [
                     "CZE",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -4194,7 +4194,7 @@
                     1
                 ],
                 "teams": [
-                    "NCL",
+                    "PAN",
                     "ESP"
                 ]
             },
@@ -4217,7 +4217,7 @@
                 ],
                 "teams": [
                     "NGA",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -4524,8 +4524,8 @@
                     0
                 ],
                 "teams": [
-                    "SRB",
-                    "DEN"
+                    "CUW",
+                    "NOR"
                 ]
             },
             {
@@ -4569,7 +4569,7 @@
                 ],
                 "teams": [
                     "NED",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -4590,7 +4590,7 @@
                     1
                 ],
                 "teams": [
-                    "PAN",
+                    "HTI",
                     "CRC"
                 ]
             },
@@ -4689,7 +4689,7 @@
                     0
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "ARG"
                 ]
             },
@@ -4701,7 +4701,7 @@
                 ],
                 "teams": [
                     "MEX",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -4723,7 +4723,7 @@
                 ],
                 "teams": [
                     "POL",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -4767,7 +4767,7 @@
                 ],
                 "teams": [
                     "COL",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -4777,7 +4777,7 @@
                     1
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "MEX"
                 ]
             },
@@ -4800,7 +4800,7 @@
                 ],
                 "teams": [
                     "KSA",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -4810,7 +4810,7 @@
                     1
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "USA"
                 ]
             },
@@ -4821,7 +4821,7 @@
                     2
                 ],
                 "teams": [
-                    "PAN",
+                    "HTI",
                     "USA"
                 ]
             },
@@ -4833,7 +4833,7 @@
                 ],
                 "teams": [
                     "KSA",
-                    "SRB"
+                    "CUW"
                 ]
             }
         ],
@@ -4842,7 +4842,7 @@
             "234",
             "212",
             "RSA",
-            "NCL",
+            "PAN",
             "Jeremie Frimpong",
             "Lutsharel Geertruida",
             "Memphis Depay",
@@ -4855,8 +4855,8 @@
             "SEN",
             "FRA",
             "MAR",
-            "SRB",
-            "DEN",
+            "CUW",
+            "NOR",
             "POR",
             "BRA",
             "ARG",
@@ -4864,10 +4864,10 @@
             "MEX",
             "CIV",
             "NED",
-            "NCL",
+            "PAN",
             "POL",
             "SUI",
-            "PAN",
+            "HTI",
             "CRC",
             "COL",
             "NZL",
@@ -4887,14 +4887,14 @@
             "POR",
             "KSA",
             "MAR",
-            "SRB",
+            "CUW",
             "ARG",
             "MEX",
-            "NCL",
+            "PAN",
             "COL",
             "NGA",
             "POL",
-            "PAN",
+            "HTI",
             "CZE",
             "USA",
             "GHA",
@@ -4904,25 +4904,25 @@
             "POR",
             "KSA",
             "COL",
-            "PAN",
-            "SRB",
+            "HTI",
+            "CUW",
             "MEX",
             "USA",
             "KOR"
         ],
         "semi_finals": [
             "KSA",
-            "PAN",
-            "SRB",
+            "HTI",
+            "CUW",
             "USA"
         ],
         "bronze_final": [
-            "PAN",
+            "HTI",
             "USA"
         ],
         "final": [
             "KSA",
-            "SRB"
+            "CUW"
         ]
     },
     {
@@ -5014,7 +5014,7 @@
                 ],
                 "teams": [
                     "KSA",
-                    "CMR"
+                    "SCO"
                 ]
             },
             {
@@ -5024,7 +5024,7 @@
                     3
                 ],
                 "teams": [
-                    "CMR",
+                    "SCO",
                     "SUI"
                 ]
             },
@@ -5046,7 +5046,7 @@
                     1
                 ],
                 "teams": [
-                    "CMR",
+                    "SCO",
                     "CAN"
                 ]
             },
@@ -5068,7 +5068,7 @@
                     4
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "BRA"
                 ]
             },
@@ -5102,7 +5102,7 @@
                 ],
                 "teams": [
                     "MAR",
-                    "SRB"
+                    "CUW"
                 ]
             },
             {
@@ -5112,7 +5112,7 @@
                     2
                 ],
                 "teams": [
-                    "SRB",
+                    "CUW",
                     "UZB"
                 ]
             },
@@ -5267,7 +5267,7 @@
                 ],
                 "teams": [
                     "FRA",
-                    "DEN"
+                    "NOR"
                 ]
             },
             {
@@ -5288,7 +5288,7 @@
                     4
                 ],
                 "teams": [
-                    "DEN",
+                    "NOR",
                     "GHA"
                 ]
             },
@@ -5321,7 +5321,7 @@
                     3
                 ],
                 "teams": [
-                    "DEN",
+                    "NOR",
                     "TUN"
                 ]
             },
@@ -5344,7 +5344,7 @@
                 ],
                 "teams": [
                     "JPN",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -5365,7 +5365,7 @@
                     3
                 ],
                 "teams": [
-                    "PAN",
+                    "HTI",
                     "ENG"
                 ]
             },
@@ -5388,7 +5388,7 @@
                 ],
                 "teams": [
                     "CRO",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -5410,7 +5410,7 @@
                 ],
                 "teams": [
                     "CZE",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -5431,7 +5431,7 @@
                     1
                 ],
                 "teams": [
-                    "NCL",
+                    "PAN",
                     "ESP"
                 ]
             },
@@ -5454,7 +5454,7 @@
                 ],
                 "teams": [
                     "NGA",
-                    "NCL"
+                    "PAN"
                 ]
             },
             {
@@ -5729,7 +5729,7 @@
                 ],
                 "teams": [
                     "SEN",
-                    "CMR"
+                    "SCO"
                 ]
             },
             {
@@ -5817,7 +5817,7 @@
                 ],
                 "teams": [
                     "POL",
-                    "DEN"
+                    "NOR"
                 ]
             },
             {
@@ -5827,7 +5827,7 @@
                     3
                 ],
                 "teams": [
-                    "PAN",
+                    "HTI",
                     "KOR"
                 ]
             },
@@ -5849,7 +5849,7 @@
                     3
                 ],
                 "teams": [
-                    "NCL",
+                    "PAN",
                     "CPV"
                 ]
             },
@@ -5960,7 +5960,7 @@
                 ],
                 "teams": [
                     "POL",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -6004,7 +6004,7 @@
                 ],
                 "teams": [
                     "CPV",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -6037,7 +6037,7 @@
                 ],
                 "teams": [
                     "KSA",
-                    "PAN"
+                    "HTI"
                 ]
             },
             {
@@ -6058,7 +6058,7 @@
                     0
                 ],
                 "teams": [
-                    "PAN",
+                    "HTI",
                     "AUT"
                 ]
             },
@@ -6087,7 +6087,7 @@
         ],
         "round_of_32": [
             "SEN",
-            "CMR",
+            "SCO",
             "ARG",
             "KSA",
             "TUN",
@@ -6103,12 +6103,12 @@
             "PAR",
             "ESP",
             "POL",
-            "DEN",
-            "PAN",
+            "NOR",
+            "HTI",
             "KOR",
             "CHI",
             "NED",
-            "NCL",
+            "PAN",
             "CPV",
             "SUI",
             "CRO",
@@ -6131,7 +6131,7 @@
             "NED",
             "CPV",
             "POL",
-            "PAN",
+            "HTI",
             "CZE",
             "ENG",
             "SUI",
@@ -6141,7 +6141,7 @@
             "KSA",
             "SEN",
             "CPV",
-            "PAN",
+            "HTI",
             "AUT",
             "JOR",
             "ENG",
@@ -6149,12 +6149,12 @@
         ],
         "semi_finals": [
             "KSA",
-            "PAN",
+            "HTI",
             "AUT",
             "SUI"
         ],
         "bronze_final": [
-            "PAN",
+            "HTI",
             "AUT"
         ],
         "final": [

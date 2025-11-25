@@ -10,21 +10,7 @@
             "BEL"
         ],
         "result": [],
-        "events": [
-            {
-                "type": "own_goal",
-                "minute": 9,
-                "player": "Jan Klaassen",
-                "team": "MEX",
-                "note": "(og)"
-            },
-            {
-                "type": "own_goal",
-                "minute": 15,
-                "player": "Jan Klaassen",
-                "team": "BEL"
-            }
-        ]
+        "events": []
     },
     {
         "num": 2,
@@ -72,7 +58,7 @@
         "poule_name": "C",
         "location_id": 7,
         "teams": [
-            "SRB",
+            "CUW",
             "BRA"
         ],
         "result": [],
@@ -112,7 +98,7 @@
         "location_id": 15,
         "teams": [
             "KSA",
-            "CMR"
+            "SCO"
         ],
         "result": [],
         "events": []
@@ -151,7 +137,7 @@
         "location_id": 8,
         "teams": [
             "FRA",
-            "DEN"
+            "NOR"
         ],
         "result": [],
         "events": []
@@ -190,7 +176,7 @@
         "location_id": 6,
         "teams": [
             "CZE",
-            "NCL"
+            "PAN"
         ],
         "result": [],
         "events": []
@@ -216,7 +202,7 @@
         "location_id": 16,
         "teams": [
             "JPN",
-            "PAN"
+            "HTI"
         ],
         "result": [],
         "events": []
@@ -345,7 +331,7 @@
         "poule_name": "B",
         "location_id": 11,
         "teams": [
-            "CMR",
+            "SCO",
             "SUI"
         ],
         "result": [],
@@ -398,7 +384,7 @@
         "location_id": 7,
         "teams": [
             "MAR",
-            "SRB"
+            "CUW"
         ],
         "result": [],
         "events": []
@@ -462,7 +448,7 @@
         "poule_name": "F",
         "location_id": 9,
         "teams": [
-            "DEN",
+            "NOR",
             "GHA"
         ],
         "result": [],
@@ -501,7 +487,7 @@
         "poule_name": "H",
         "location_id": 6,
         "teams": [
-            "NCL",
+            "PAN",
             "ESP"
         ],
         "result": [],
@@ -527,7 +513,7 @@
         "poule_name": "G",
         "location_id": 2,
         "teams": [
-            "PAN",
+            "HTI",
             "ENG"
         ],
         "result": [],
@@ -644,7 +630,7 @@
         "poule_name": "C",
         "location_id": 12,
         "teams": [
-            "SRB",
+            "CUW",
             "UZB"
         ],
         "result": [],
@@ -670,7 +656,7 @@
         "poule_name": "B",
         "location_id": 2,
         "teams": [
-            "CMR",
+            "SCO",
             "CAN"
         ],
         "result": [],
@@ -761,7 +747,7 @@
         "poule_name": "F",
         "location_id": 10,
         "teams": [
-            "DEN",
+            "NOR",
             "TUN"
         ],
         "result": [],
@@ -840,7 +826,7 @@
         "location_id": 2,
         "teams": [
             "CRO",
-            "PAN"
+            "HTI"
         ],
         "result": [],
         "events": []
@@ -866,7 +852,7 @@
         "location_id": 4,
         "teams": [
             "NGA",
-            "NCL"
+            "PAN"
         ],
         "result": [],
         "events": []
