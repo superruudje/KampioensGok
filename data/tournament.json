@@ -4,108 +4,108 @@
             "name": "A",
             "teams": [
                 "MEX",
-                "BEL",
-                "JOR",
-                "SEN"
+                "RSA",
+                "KOR",
+                "CZE/DEN/IRL/MKD"
             ]
         },
         {
             "name": "B",
             "teams": [
                 "CAN",
+                "QAT",
                 "SUI",
-                "KSA",
-                "SCO"
+                "BIH/ITA/NIR/WAL"
             ]
         },
         {
             "name": "C",
             "teams": [
-                "CUW",
                 "BRA",
-                "UZB",
-                "MAR"
+                "MAR",
+                "HTI",
+                "SCO"
             ]
         },
         {
             "name": "D",
             "teams": [
                 "USA",
-                "POL",
-                "QAT",
-                "RSA"
+                "PAR",
+                "AUS",
+                "KOS/ROU/SVK/TUR"
             ]
         },
         {
             "name": "E",
             "teams": [
-                "ARG",
-                "AUT",
-                "IRN",
-                "CIV"
+                "GER",
+                "CUW",
+                "CIV",
+                "ECU"
             ]
         },
         {
             "name": "F",
             "teams": [
-                "FRA",
-                "NOR",
-                "GHA",
-                "TUN"
+                "NED",
+                "JPN",
+                "TUN",
+                "ALB/POL/SWE/URK"
             ]
         },
         {
             "name": "G",
             "teams": [
-                "ENG",
-                "CRO",
-                "JPN",
-                "HTI"
+                "BEL",
+                "EGY",
+                "IRN",
+                "NZL"
             ]
         },
         {
             "name": "H",
             "teams": [
                 "ESP",
-                "NGA",
-                "CZE",
-                "PAN"
+                "CPV",
+                "KSA",
+                "URU"
             ]
         },
         {
             "name": "I",
             "teams": [
-                "POR",
-                "URU",
-                "EGY",
-                "CRC"
+                "FRA",
+                "SEN",
+                "NOR",
+                "BOL/IRQ/SUR"
             ]
         },
         {
             "name": "J",
             "teams": [
-                "ITA",
-                "ECU",
-                "KOR",
-                "CPV"
+                "ARG",
+                "ALG",
+                "AUT",
+                "JOR"
             ]
         },
         {
             "name": "K",
             "teams": [
-                "GER",
-                "CHI",
-                "AUS",
-                "COL"
+                "POR",
+                "UZB",
+                "COL",
+                "COD/JAM/NCL"
             ]
         },
         {
             "name": "L",
             "teams": [
-                "NED",
-                "PAR",
-                "ALG",
-                "NZL"
+                "ENG",
+                "CRO",
+                "GHA",
+                "PAN"
             ]
         }
     ],
