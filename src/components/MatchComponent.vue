@@ -10,11 +10,11 @@
                     <div v-for="n in 2" class="d-flex gap-2 align-items-center">
                         <img
                             :alt="`team${n}`"
-                            :src="getTeamImage(match.teams[n-1])"
+                            :src="getTeamImage(match.teams[n-1] as string)"
                             class="border"
                             loading="lazy"
                             width="30px"/>
-                        <span class="me-auto">{{ isTeam(match.teams[n - 1]) ? $t('countries.' + match.teams[n - 1]) : match.teams[n - 1] }}</span>
+                        <span class="me-auto">{{ isTeam(match.teams[n - 1] as string) ? $t('countries.' + match.teams[n - 1]) : match.teams[n - 1] }}</span>
                         <span
                             v-if="match.result_after_penalties"
                             class="fs-6 lh-1">({{ match.result_after_penalties[n - 1] }})</span>

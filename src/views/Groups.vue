@@ -49,7 +49,7 @@
                                                 </td>
                                                 <td class="text-nowrap text-start d-flex align-items-center">
                                                     <img :src="getImage(t.team)" alt="team logo" class="border" loading="lazy" width="32px">
-                                                    <span class="ms-2 txt-blue fw-bold">{{ $t('countries.' + t.team) }}</span>
+                                                    <span class="ms-2 txt-blue fw-bold">{{ isTeam(t.team) ? $t('countries.' + t.team) : t.team }}</span>
                                                 </td>
                                                 <td>{{ t.matches.length }}</td>
                                                 <td class="d-none d-sm-table-cell">{{ t.matches.filter(g => g === "W").length }}</td>
@@ -110,7 +110,7 @@ import {type Ref, ref} from "vue";
 import type {Poule} from "@/types/tournament.ts";
 
 const tournament = useTournament();
-const {teamImages} = storeToRefs(tournament)
+const {teamImages, teams} = storeToRefs(tournament)
 const openPoule: Ref<string | null> = ref(null);
 
 const poules: Poule[] = tournament.getPoules();
@@ -129,6 +129,14 @@ function getImage(teamName: string) {
  */
 function openPouleDetails(poule: string) {
     openPoule.value = openPoule.value === poule ? null : poule
+}
+
+/**
+ * Check if is valid team id
+ * @param teamName
+ */
+function isTeam(teamName: string) {
+    return teams.value.some(t => t.short_name === teamName)
 }
 
 </script>

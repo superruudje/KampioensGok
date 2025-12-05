@@ -205,7 +205,7 @@
         "step3": {
             "title": "Ronde of 32",
             "p1": "Vul nu de knockout fase in voor de laatste 32 teams. Om de teams automatisch in te laten vullen op basis van jouw voorspellingen, klik je op de knop <b>‘Automatisch invullen’</b>. De poulewinnaars en de beste nummers drie worden dan berekend op basis van jouw eerder ingevulde voorspellingen uit stap 2. Je kunt de automatisch ingevulde teams nog handmatig aanpassen als je wilt. Controleer goed of alles naar wens is voordat je verdergaat naar de volgende ronde.",
-            "p2": "Je voorspelt de stand na 90 minuten speeltijd, dus zonder eventuele verlenging of strafschoppen. Bij een gelijk spel kun je de volgende fase selecteren welke team jij denkt dat er door gaat."
+            "p2": "Je voorspelt de stand na 90 minuten speeltijd, dus zonder eventuele verlenging of strafschoppen. Bij een gelijk spel kun je in de volgende fase selecteren welke team jij denkt dat er door gaat."
         },
         "step4": {
             "title": "Ronde of 16",

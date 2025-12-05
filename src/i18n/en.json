@@ -205,7 +205,7 @@
         "step3": {
             "title": "Round of 32",
             "p1": "Now fill in the knockout stage for the final 32 teams. To automatically populate the teams based on your predictions, click the <b>‘Auto-fill’</b> button. The group winners and the best third-placed teams will then be calculated based on your earlier predictions from step 2. You can still manually adjust the automatically filled teams if you wish. Make sure everything is correct before proceeding to the next round.",
-            "p2": "You predict the score after 90 minutes of play, so without extra time or penalty shootouts. In case of a draw, you can select which team you think will advance to the next round."
+            "p2": "You predict the score after 90 minutes of play, so without extra time or penalty shootouts. In case of a draw, in the next step you can select which team you think will advance to the next round."
         },
         "step4": {
             "title": "Round of 16",

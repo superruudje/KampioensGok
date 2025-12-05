@@ -20,7 +20,7 @@
                         class="border mb-1"
                         loading="lazy"
                         style="max-width: 60px">
-                    <div class="fs-7">{{ prediction.teams?.[0] ? $t('countries.' + prediction.teams?.[0]) : match.teams[0] }}</div>
+                    <div class="fs-7">{{ teamA }}</div>
                 </template>
                 <template v-else>
                     <label :for="match.num + '_team1'" class="d-block cursor-pointer">
@@ -40,8 +40,8 @@
                         required
                         @input="setPredictionTeam(0, $event)">
                         <option :value="''">{{ match.teams[0] }}</option>
-                        <option v-for="t in getPossibleTeams(match.teams[0])" :value="t.id">
-                            {{ $t('countries.' + t.id) }} ({{ t.poule_name }})
+                        <option v-for="t in getPossibleTeams(match.teams[0] as string)" :value="t.id">
+                            {{ isTeam(t.short_name) ? $t('countries.' + t.short_name) : t.short_name }} ({{ t.poule_name }})
                         </option>
                     </select>
                 </template>
@@ -101,7 +101,7 @@
                         class="border mb-1"
                         loading="lazy"
                         style="max-width: 60px">
-                    <div class="fs-7">{{ prediction.teams?.[1] ? $t('countries.' + prediction.teams?.[1]) : match.teams[1] }}</div>
+                    <div class="fs-7">{{ teamB }}</div>
                 </template>
                 <template v-else>
                     <label :for="match.num + '_team2'" class="d-block cursor-pointer">
@@ -121,8 +121,8 @@
                         required
                         @input="setPredictionTeam(1, $event)">
                         <option :value="''">{{ match.teams[1] }}</option>
-                        <option v-for="t in getPossibleTeams(match.teams[1])" :value="t.id">
-                            {{ $t('countries.' + t.id) }} - ({{ t.poule_name }})
+                        <option v-for="t in getPossibleTeams(match.teams[1] as string)" :value="t.id">
+                            {{ isTeam(t.short_name) ? $t('countries.' + t.short_name) : t.short_name }} - ({{ t.poule_name }})
                         </option>
                     </select>
                 </template>
@@ -177,6 +177,7 @@ import type {MatchResult} from "@/types/pool.ts";
 import {computed, ref} from "vue";
 import dayjs from "dayjs";
 import {useI18n} from "vue-i18n";
+import {i18n} from "@/i18n";
 
 const {locale} = useI18n();
 
@@ -231,6 +232,16 @@ const matchDay = computed(() => {
 const dateLabel = computed(() => {
     dayjs.locale(locale.value);
     return dayjs(matchDay.value?.date).format("D MMM");
+})
+
+const teamA = computed(() => {
+    let team = props.prediction?.teams ? props.prediction.teams[0] : props.match.teams[0]
+    return isTeam(team as string) ? i18n.global.t('countries.' + team) : team
+})
+
+const teamB = computed(() => {
+    let team = props.prediction?.teams ? props.prediction.teams[1] : props.match.teams[1]
+    return isTeam(team as string) ? i18n.global.t('countries.' + team) : team
 })
 
 /**
@@ -298,7 +309,8 @@ function getPossibleTeams(teamPlaceholder: string): Team[] {
  */
 function getImagePred(teamIndex: number) {
     if (!props.prediction?.teams) return teamImages.value[`default`]
-    return props.prediction.teams[teamIndex] ? teamImages.value[props.prediction.teams[teamIndex]] : teamImages.value[`default`];
+    const t = props.prediction.teams[teamIndex] as string;
+    return isTeam(t) ? teamImages.value[t] : teamImages.value[`default`];
 }
 
 function getImage(team: string) {
@@ -333,6 +345,14 @@ function gotoNext(event: KeyboardEvent) {
             break;
         }
     }
+}
+
+/**
+ * Check if is valid team id
+ * @param teamName
+ */
+function isTeam(teamName: string) {
+    return teams.value.some(t => t.id === teamName)
 }
 
 </script>
