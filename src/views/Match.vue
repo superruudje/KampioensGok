@@ -12,15 +12,15 @@
                             <div
                                 class="d-flex flex-grow-1 flex-shrink-0 align-items-center justify-content-end gap-2"
                                 style="flex-basis: 30%">
-                                <h1 class="mb-0 d-none d-md-block">{{ $t('countries.' + match.teams[0]) }}</h1>
-                                <h6 class="mb-0 d-md-none">{{ $t('countries.' + match.teams[0]) }}</h6>
+                                <h1 class="mb-0 d-none d-md-block">{{ isTeam(match.teams[0] as string) ? $t('countries.' + match.teams[0]) : match.teams[0] }}</h1>
+                                <h6 class="mb-0 d-md-none">{{ isTeam(match.teams[0] as string) ? $t('countries.' + match.teams[0]) : match.teams[0] }}</h6>
                                 <img
-                                    :src="getTeamImage(match.teams[0])"
+                                    :src="getTeamImage(match.teams[0] as string)"
                                     alt="teamA"
                                     class="border d-none d-md-block"
                                     width="48"/>
                                 <img
-                                    :src="getTeamImage(match.teams[0])"
+                                    :src="getTeamImage(match.teams[0] as string)"
                                     alt="teamA"
                                     class="border d-md-none"
                                     width="32"/>
@@ -32,15 +32,15 @@
                             <div
                                 class="d-flex flex-row-reverse flex-grow-1 flex-shrink-0 align-items-center justify-content-end gap-2"
                                 style="flex-basis: 30%">
-                                <h1 class="mb-0 d-none d-md-block">{{ $t('countries.' + match.teams[1]) }}</h1>
-                                <h6 class="mb-0 d-md-none">{{ $t('countries.' + match.teams[1]) }}</h6>
+                                <h1 class="mb-0 d-none d-md-block">{{ isTeam(match.teams[1] as string) ? $t('countries.' + match.teams[1]) : match.teams[1] }}</h1>
+                                <h6 class="mb-0 d-md-none">{{ isTeam(match.teams[1] as string) ? $t('countries.' + match.teams[1]) : match.teams[1] }}</h6>
                                 <img
-                                    :src="getTeamImage(match.teams[1])"
+                                    :src="getTeamImage(match.teams[1] as string)"
                                     alt="teamA"
                                     class="border d-none d-md-block"
                                     width="48"/>
                                 <img
-                                    :src="getTeamImage(match.teams[1])"
+                                    :src="getTeamImage(match.teams[1] as string)"
                                     alt="teamA"
                                     class="border d-md-none"
                                     width="32"/>
@@ -99,7 +99,7 @@ const { locale } = useI18n();
 const route = useRoute();
 
 const tournament = useTournament();
-const {teamImages} = storeToRefs(tournament);
+const {teamImages, teams} = storeToRefs(tournament);
 
 
 const match: Ref<Match | null | undefined> = ref(null);
@@ -132,6 +132,14 @@ const matchType = computed(() => {
  */
 function getTeamImage(teamName: string) {
     return teamImages.value[teamName] || teamImages.value[`default`]
+}
+
+/**
+ * Check if is valid team id
+ * @param teamName
+ */
+function isTeam(teamName: string) {
+    return teams.value.some(t => t.id === teamName)
 }
 
 onBeforeMount(() => {
