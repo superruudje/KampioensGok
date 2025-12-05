@@ -77,7 +77,7 @@ function getTeamImage(teamName: string) {
  * @param teamName
  */
 function isTeam(teamName: string) {
-    return teams.value.some(t => t.short_name === teamName)
+    return teams.value.some(t => t.id === teamName)
 }
 
 </script>
