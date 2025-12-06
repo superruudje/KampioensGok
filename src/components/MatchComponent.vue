@@ -27,7 +27,7 @@
                 <div class="vr"></div>
                 <div class="d-flex flex-column justify-content-center align-items-center">
                     <span v-if="match.result?.length" class="fw-lighter lh-1">{{ $t('dict.full_time') }}</span>
-                    <span v-else class="fw-lighter lh-1">{{ match.time }}</span>
+                    <span v-else class="fw-lighter lh-1">{{ match.time }} (ET)</span>
                 </div>
             </div>
 
