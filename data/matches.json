@@ -2,7 +2,7 @@
     {
         "num": 1,
         "match_day_id": 1,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "A",
         "location_id": 3,
         "teams": [
@@ -15,7 +15,7 @@
     {
         "num": 2,
         "match_day_id": 1,
-        "time": "21:00",
+        "time": "22:00",
         "poule_name": "A",
         "location_id": 4,
         "teams": [
@@ -28,12 +28,12 @@
     {
         "num": 3,
         "match_day_id": 2,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "B",
         "location_id": 1,
         "teams": [
             "CAN",
-            "QAT"
+            "BIH/ITA/NIR/WAL"
         ],
         "result": [],
         "events": []
@@ -56,10 +56,10 @@
         "match_day_id": 3,
         "time": "21:00",
         "poule_name": "C",
-        "location_id": 7,
+        "location_id": 13,
         "teams": [
-            "BRA",
-            "MAR"
+            "HTI",
+            "SCO"
         ],
         "result": [],
         "events": []
@@ -67,7 +67,7 @@
     {
         "num": 6,
         "match_day_id": 3,
-        "time": "21:00",
+        "time": "00:00",
         "poule_name": "D",
         "location_id": 2,
         "teams": [
@@ -80,12 +80,12 @@
     {
         "num": 7,
         "match_day_id": 3,
-        "time": "21:00",
+        "time": "18:00",
         "poule_name": "C",
-        "location_id": 13,
+        "location_id": 7,
         "teams": [
-            "HTI",
-            "SCO"
+            "BRA",
+            "MAR"
         ],
         "result": [],
         "events": []
@@ -93,12 +93,12 @@
     {
         "num": 8,
         "match_day_id": 3,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "B",
         "location_id": 15,
         "teams": [
-            "SUI",
-            "BIH/ITA/NIR/WAL"
+            "QAT",
+            "SUI"
         ],
         "result": [],
         "events": []
@@ -106,20 +106,7 @@
     {
         "num": 9,
         "match_day_id": 4,
-        "time": "21:00",
-        "poule_name": "E",
-        "location_id": 14,
-        "teams": [
-            "GER",
-            "CUW"
-        ],
-        "result": [],
-        "events": []
-    },
-    {
-        "num": 10,
-        "match_day_id": 4,
-        "time": "21:00",
+        "time": "19:00",
         "poule_name": "E",
         "location_id": 9,
         "teams": [
@@ -130,9 +117,22 @@
         "events": []
     },
     {
+        "num": 10,
+        "match_day_id": 4,
+        "time": "13:00",
+        "poule_name": "E",
+        "location_id": 14,
+        "teams": [
+            "GER",
+            "CUW"
+        ],
+        "result": [],
+        "events": []
+    },
+    {
         "num": 11,
         "match_day_id": 4,
-        "time": "21:00",
+        "time": "16:00",
         "poule_name": "F",
         "location_id": 8,
         "teams": [
@@ -145,12 +145,12 @@
     {
         "num": 12,
         "match_day_id": 4,
-        "time": "21:00",
+        "time": "22:00",
         "poule_name": "F",
         "location_id": 5,
         "teams": [
-            "TUN",
-            "ALB/POL/SWE/URK"
+            "ALB/POL/SWE/URK",
+            "TUN"
         ],
         "result": [],
         "events": []
@@ -158,20 +158,7 @@
     {
         "num": 13,
         "match_day_id": 5,
-        "time": "21:00",
-        "poule_name": "H",
-        "location_id": 12,
-        "teams": [
-            "ESP",
-            "CPV"
-        ],
-        "result": [],
-        "events": []
-    },
-    {
-        "num": 14,
-        "match_day_id": 5,
-        "time": "21:00",
+        "time": "18:00",
         "poule_name": "H",
         "location_id": 6,
         "teams": [
@@ -182,20 +169,20 @@
         "events": []
     },
     {
-        "num": 15,
+        "num": 14,
         "match_day_id": 5,
-        "time": "21:00",
-        "poule_name": "G",
-        "location_id": 11,
+        "time": "12:00",
+        "poule_name": "H",
+        "location_id": 12,
         "teams": [
-            "BEL",
-            "EGY"
+            "ESP",
+            "CPV"
         ],
         "result": [],
         "events": []
     },
     {
-        "num": 16,
+        "num": 15,
         "match_day_id": 5,
         "time": "21:00",
         "poule_name": "G",
@@ -208,9 +195,22 @@
         "events": []
     },
     {
+        "num": 16,
+        "match_day_id": 5,
+        "time": "15:00",
+        "poule_name": "G",
+        "location_id": 11,
+        "teams": [
+            "BEL",
+            "EGY"
+        ],
+        "result": [],
+        "events": []
+    },
+    {
         "num": 17,
         "match_day_id": 6,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "I",
         "location_id": 13,
         "teams": [
@@ -223,12 +223,12 @@
     {
         "num": 18,
         "match_day_id": 6,
-        "time": "21:00",
+        "time": "18:00",
         "poule_name": "I",
         "location_id": 7,
         "teams": [
-            "NOR",
-            "BOL/IRQ/SUR"
+            "BOL/IRQ/SUR",
+            "NOR"
         ],
         "result": [],
         "events": []
@@ -249,7 +249,7 @@
     {
         "num": 20,
         "match_day_id": 6,
-        "time": "21:00",
+        "time": "00:00",
         "poule_name": "J",
         "location_id": 15,
         "teams": [
@@ -262,20 +262,7 @@
     {
         "num": 21,
         "match_day_id": 7,
-        "time": "21:00",
-        "poule_name": "L",
-        "location_id": 1,
-        "teams": [
-            "ENG",
-            "CRO"
-        ],
-        "result": [],
-        "events": []
-    },
-    {
-        "num": 22,
-        "match_day_id": 7,
-        "time": "21:00",
+        "time": "19:00",
         "poule_name": "L",
         "location_id": 8,
         "teams": [
@@ -286,14 +273,27 @@
         "events": []
     },
     {
+        "num": 22,
+        "match_day_id": 7,
+        "time": "16:00",
+        "poule_name": "L",
+        "location_id": 1,
+        "teams": [
+            "ENG",
+            "CRO"
+        ],
+        "result": [],
+        "events": []
+    },
+    {
         "num": 23,
         "match_day_id": 7,
-        "time": "21:00",
+        "time": "13:00",
         "poule_name": "K",
         "location_id": 9,
         "teams": [
             "POR",
-            "UZB"
+            "COD/JAM/NCL"
         ],
         "result": [],
         "events": []
@@ -301,12 +301,12 @@
     {
         "num": 24,
         "match_day_id": 7,
-        "time": "21:00",
+        "time": "22:00",
         "poule_name": "K",
         "location_id": 3,
         "teams": [
-            "COL",
-            "COD/JAM/NCL"
+            "UZB",
+            "COL"
         ],
         "result": [],
         "events": []
@@ -314,12 +314,12 @@
     {
         "num": 25,
         "match_day_id": 8,
-        "time": "21:00",
+        "time": "12:00",
         "poule_name": "A",
         "location_id": 6,
         "teams": [
-            "RSA",
-            "CZE/DEN/IRL/MKD"
+            "CZE/DEN/IRL/MKD",
+            "RSA"
         ],
         "result": [],
         "events": []
@@ -327,12 +327,12 @@
     {
         "num": 26,
         "match_day_id": 8,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "B",
-        "location_id": 11,
+        "location_id": 2,
         "teams": [
-            "CAN",
-            "SUI"
+            "SUI",
+            "BIH/ITA/NIR/WAL"
         ],
         "result": [],
         "events": []
@@ -340,12 +340,12 @@
     {
         "num": 27,
         "match_day_id": 8,
-        "time": "21:00",
+        "time": "18:00",
         "poule_name": "B",
-        "location_id": 2,
+        "location_id": 11,
         "teams": [
-            "QAT",
-            "BIH/ITA/NIR/WAL"
+            "CAN",
+            "QAT"
         ],
         "result": [],
         "events": []
@@ -379,12 +379,12 @@
     {
         "num": 30,
         "match_day_id": 9,
-        "time": "21:00",
+        "time": "18:00",
         "poule_name": "C",
         "location_id": 7,
         "teams": [
-            "MAR",
-            "SCO"
+            "SCO",
+            "MAR"
         ],
         "result": [],
         "events": []
@@ -392,7 +392,20 @@
     {
         "num": 31,
         "match_day_id": 9,
-        "time": "21:00",
+        "time": "00:00",
+        "poule_name": "D",
+        "location_id": 16,
+        "teams": [
+            "KOS/ROU/SVK/TUR",
+            "PAR"
+        ],
+        "result": [],
+        "events": []
+    },
+    {
+        "num": 32,
+        "match_day_id": 9,
+        "time": "15:00",
         "poule_name": "D",
         "location_id": 15,
         "teams": [
@@ -403,22 +416,9 @@
         "events": []
     },
     {
-        "num": 32,
-        "match_day_id": 9,
-        "time": "21:00",
-        "poule_name": "D",
-        "location_id": 16,
-        "teams": [
-            "PAR",
-            "KOS/ROU/SVK/TUR"
-        ],
-        "result": [],
-        "events": []
-    },
-    {
         "num": 33,
         "match_day_id": 10,
-        "time": "21:00",
+        "time": "16:00",
         "poule_name": "E",
         "location_id": 1,
         "teams": [
@@ -431,12 +431,12 @@
     {
         "num": 34,
         "match_day_id": 10,
-        "time": "21:00",
+        "time": "20:00",
         "poule_name": "E",
         "location_id": 10,
         "teams": [
-            "CUW",
-            "ECU"
+            "ECU",
+            "CUW"
         ],
         "result": [],
         "events": []
@@ -444,12 +444,12 @@
     {
         "num": 35,
         "match_day_id": 10,
-        "time": "21:00",
+        "time": "13:00",
         "poule_name": "F",
         "location_id": 9,
         "teams": [
             "NED",
-            "TUN"
+            "ALB/POL/SWE/URK"
         ],
         "result": [],
         "events": []
@@ -457,12 +457,12 @@
     {
         "num": 36,
         "match_day_id": 10,
-        "time": "21:00",
+        "time": "00:00",
         "poule_name": "F",
         "location_id": 5,
         "teams": [
-            "JPN",
-            "ALB/POL/SWE/URK"
+            "TUN",
+            "JPN"
         ],
         "result": [],
         "events": []
@@ -470,7 +470,20 @@
     {
         "num": 37,
         "match_day_id": 11,
-        "time": "21:00",
+        "time": "18:00",
+        "poule_name": "H",
+        "location_id": 6,
+        "teams": [
+            "URU",
+            "CPV"
+        ],
+        "result": [],
+        "events": []
+    },
+    {
+        "num": 38,
+        "match_day_id": 11,
+        "time": "12:00",
         "poule_name": "H",
         "location_id": 12,
         "teams": [
@@ -481,22 +494,9 @@
         "events": []
     },
     {
-        "num": 38,
-        "match_day_id": 11,
-        "time": "21:00",
-        "poule_name": "H",
-        "location_id": 6,
-        "teams": [
-            "CPV",
-            "URU"
-        ],
-        "result": [],
-        "events": []
-    },
-    {
         "num": 39,
         "match_day_id": 11,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "G",
         "location_id": 11,
         "teams": [
@@ -513,8 +513,8 @@
         "poule_name": "G",
         "location_id": 2,
         "teams": [
-            "EGY",
-            "NZL"
+            "NZL",
+            "EGY"
         ],
         "result": [],
         "events": []
@@ -522,12 +522,12 @@
     {
         "num": 41,
         "match_day_id": 12,
-        "time": "21:00",
+        "time": "20:00",
         "poule_name": "I",
-        "location_id": 13,
+        "location_id": 14,
         "teams": [
-            "FRA",
-            "NOR"
+            "NOR",
+            "SEN"
         ],
         "result": [],
         "events": []
@@ -535,11 +535,11 @@
     {
         "num": 42,
         "match_day_id": 12,
-        "time": "21:00",
+        "time": "17:00",
         "poule_name": "I",
-        "location_id": 14,
+        "location_id": 13,
         "teams": [
-            "SEN",
+            "FRA",
             "BOL/IRQ/SUR"
         ],
         "result": [],
@@ -548,7 +548,7 @@
     {
         "num": 43,
         "match_day_id": 12,
-        "time": "21:00",
+        "time": "13:00",
         "poule_name": "J",
         "location_id": 8,
         "teams": [
@@ -561,12 +561,12 @@
     {
         "num": 44,
         "match_day_id": 12,
-        "time": "21:00",
+        "time": "23:00",
         "poule_name": "J",
         "location_id": 15,
         "teams": [
-            "ALG",
-            "JOR"
+            "JOR",
+            "ALG"
         ],
         "result": [],
         "events": []
@@ -574,7 +574,7 @@
     {
         "num": 45,
         "match_day_id": 13,
-        "time": "21:00",
+        "time": "16:00",
         "poule_name": "L",
         "location_id": 7,
         "teams": [
@@ -587,12 +587,12 @@
     {
         "num": 46,
         "match_day_id": 13,
-        "time": "21:00",
+        "time": "19:00",
         "poule_name": "L",
         "location_id": 1,
         "teams": [
-            "CRO",
-            "PAN"
+            "PAN",
+            "CRO"
         ],
         "result": [],
         "events": []
@@ -600,12 +600,12 @@
     {
         "num": 47,
         "match_day_id": 13,
-        "time": "21:00",
+        "time": "13:00",
         "poule_name": "K",
         "location_id": 9,
         "teams": [
             "POR",
-            "COL"
+            "UZB"
         ],
         "result": [],
         "events": []
@@ -613,11 +613,11 @@
     {
         "num": 48,
         "match_day_id": 13,
-        "time": "21:00",
+        "time": "22:00",
         "poule_name": "K",
         "location_id": 4,
         "teams": [
-            "UZB",
+            "COL",
             "COD/JAM/NCL"
         ],
         "result": [],
@@ -626,12 +626,12 @@
     {
         "num": 49,
         "match_day_id": 14,
-        "time": "21:00",
+        "time": "18:00",
         "poule_name": "C",
         "location_id": 12,
         "teams": [
-            "BRA",
-            "SCO"
+            "SCO",
+            "BRA"
         ],
         "result": [],
         "events": []
@@ -639,7 +639,7 @@
     {
         "num": 50,
         "match_day_id": 14,
-        "time": "21:00",
+        "time": "18:00",
         "poule_name": "C",
         "location_id": 6,
         "teams": [
@@ -652,12 +652,12 @@
     {
         "num": 51,
         "match_day_id": 14,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "B",
         "location_id": 2,
         "teams": [
-            "CAN",
-            "BIH/ITA/NIR/WAL"
+            "SUI",
+            "CAN"
         ],
         "result": [],
         "events": []
@@ -665,11 +665,11 @@
     {
         "num": 52,
         "match_day_id": 14,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "B",
         "location_id": 16,
         "teams": [
-            "SUI",
+            "BIH/ITA/NIR/WAL",
             "QAT"
         ],
         "result": [],
@@ -682,8 +682,8 @@
         "poule_name": "A",
         "location_id": 3,
         "teams": [
-            "MEX",
-            "CZE/DEN/IRL/MKD"
+            "CZE/DEN/IRL/MKD",
+            "MEX"
         ],
         "result": [],
         "events": []
@@ -695,8 +695,8 @@
         "poule_name": "A",
         "location_id": 5,
         "teams": [
-            "KOR",
-            "RSA"
+            "RSA",
+            "KOR"
         ],
         "result": [],
         "events": []
@@ -704,20 +704,7 @@
     {
         "num": 55,
         "match_day_id": 15,
-        "time": "21:00",
-        "poule_name": "E",
-        "location_id": 14,
-        "teams": [
-            "GER",
-            "ECU"
-        ],
-        "result": [],
-        "events": []
-    },
-    {
-        "num": 56,
-        "match_day_id": 15,
-        "time": "21:00",
+        "time": "16:00",
         "poule_name": "E",
         "location_id": 13,
         "teams": [
@@ -728,13 +715,26 @@
         "events": []
     },
     {
+        "num": 56,
+        "match_day_id": 15,
+        "time": "16:00",
+        "poule_name": "E",
+        "location_id": 14,
+        "teams": [
+            "ECU",
+            "GER"
+        ],
+        "result": [],
+        "events": []
+    },
+    {
         "num": 57,
         "match_day_id": 15,
-        "time": "21:00",
+        "time": "19:00",
         "poule_name": "F",
-        "location_id": 8,
+        "location_id": 10,
         "teams": [
-            "NED",
+            "JPN",
             "ALB/POL/SWE/URK"
         ],
         "result": [],
@@ -743,12 +743,12 @@
     {
         "num": 58,
         "match_day_id": 15,
-        "time": "21:00",
+        "time": "19:00",
         "poule_name": "F",
-        "location_id": 10,
+        "location_id": 8,
         "teams": [
-            "JPN",
-            "TUN"
+            "TUN",
+            "NED"
         ],
         "result": [],
         "events": []
@@ -756,12 +756,12 @@
     {
         "num": 59,
         "match_day_id": 15,
-        "time": "21:00",
+        "time": "22:00",
         "poule_name": "D",
         "location_id": 11,
         "teams": [
-            "USA",
-            "KOS/ROU/SVK/TUR"
+            "KOS/ROU/SVK/TUR",
+            "USA"
         ],
         "result": [],
         "events": []
@@ -769,7 +769,7 @@
     {
         "num": 60,
         "match_day_id": 15,
-        "time": "21:00",
+        "time": "22:00",
         "poule_name": "D",
         "location_id": 15,
         "teams": [
@@ -782,12 +782,12 @@
     {
         "num": 61,
         "match_day_id": 16,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "I",
         "location_id": 7,
         "teams": [
-            "FRA",
-            "BOL/IRQ/SUR"
+            "NOR",
+            "FRA"
         ],
         "result": [],
         "events": []
@@ -795,12 +795,12 @@
     {
         "num": 62,
         "match_day_id": 16,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "I",
         "location_id": 1,
         "teams": [
             "SEN",
-            "NOR"
+            "BOL/IRQ/SUR"
         ],
         "result": [],
         "events": []
@@ -808,20 +808,7 @@
     {
         "num": 63,
         "match_day_id": 16,
-        "time": "21:00",
-        "poule_name": "G",
-        "location_id": 16,
-        "teams": [
-            "BEL",
-            "NZL"
-        ],
-        "result": [],
-        "events": []
-    },
-    {
-        "num": 64,
-        "match_day_id": 16,
-        "time": "21:00",
+        "time": "23:00",
         "poule_name": "G",
         "location_id": 2,
         "teams": [
@@ -832,22 +819,22 @@
         "events": []
     },
     {
-        "num": 65,
+        "num": 64,
         "match_day_id": 16,
-        "time": "21:00",
-        "poule_name": "H",
-        "location_id": 9,
+        "time": "23:00",
+        "poule_name": "G",
+        "location_id": 16,
         "teams": [
-            "ESP",
-            "URU"
+            "NZL",
+            "BEL"
         ],
         "result": [],
         "events": []
     },
     {
-        "num": 66,
+        "num": 65,
         "match_day_id": 16,
-        "time": "21:00",
+        "time": "20:00",
         "poule_name": "H",
         "location_id": 4,
         "teams": [
@@ -858,14 +845,27 @@
         "events": []
     },
     {
+        "num": 66,
+        "match_day_id": 16,
+        "time": "20:00",
+        "poule_name": "H",
+        "location_id": 9,
+        "teams": [
+            "URU",
+            "ESP"
+        ],
+        "result": [],
+        "events": []
+    },
+    {
         "num": 67,
         "match_day_id": 17,
-        "time": "21:00",
+        "time": "17:00",
         "poule_name": "L",
         "location_id": 13,
         "teams": [
-            "ENG",
-            "PAN"
+            "PAN",
+            "ENG"
         ],
         "result": [],
         "events": []
@@ -873,7 +873,7 @@
     {
         "num": 68,
         "match_day_id": 17,
-        "time": "21:00",
+        "time": "17:00",
         "poule_name": "L",
         "location_id": 14,
         "teams": [
@@ -886,20 +886,7 @@
     {
         "num": 69,
         "match_day_id": 17,
-        "time": "21:00",
-        "poule_name": "J",
-        "location_id": 10,
-        "teams": [
-            "ARG",
-            "JOR"
-        ],
-        "result": [],
-        "events": []
-    },
-    {
-        "num": 70,
-        "match_day_id": 17,
-        "time": "21:00",
+        "time": "22:00",
         "poule_name": "J",
         "location_id": 8,
         "teams": [
@@ -910,14 +897,27 @@
         "events": []
     },
     {
+        "num": 70,
+        "match_day_id": 17,
+        "time": "22:00",
+        "poule_name": "J",
+        "location_id": 10,
+        "teams": [
+            "JOR",
+            "ARG"
+        ],
+        "result": [],
+        "events": []
+    },
+    {
         "num": 71,
         "match_day_id": 17,
-        "time": "21:00",
+        "time": "19:30",
         "poule_name": "K",
         "location_id": 12,
         "teams": [
-            "POR",
-            "COD/JAM/NCL"
+            "COL",
+            "POR"
         ],
         "result": [],
         "events": []
@@ -925,12 +925,12 @@
     {
         "num": 72,
         "match_day_id": 17,
-        "time": "21:00",
+        "time": "19:30",
         "poule_name": "K",
         "location_id": 6,
         "teams": [
-            "UZB",
-            "COL"
+            "COD/JAM/NCL",
+            "UZB"
         ],
         "result": [],
         "events": []
@@ -938,7 +938,7 @@
     {
         "num": 73,
         "match_day_id": 18,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "round_of_32",
         "location_id": 11,
         "teams": [
@@ -952,7 +952,7 @@
     {
         "num": 74,
         "match_day_id": 19,
-        "time": "21:00",
+        "time": "16:30",
         "poule_name": "round_of_32",
         "location_id": 7,
         "teams": [
@@ -978,7 +978,7 @@
     {
         "num": 76,
         "match_day_id": 19,
-        "time": "21:00",
+        "time": "13:00",
         "poule_name": "round_of_32",
         "location_id": 9,
         "teams": [
@@ -991,7 +991,7 @@
     {
         "num": 77,
         "match_day_id": 20,
-        "time": "21:00",
+        "time": "17:00",
         "poule_name": "round_of_32",
         "location_id": 13,
         "teams": [
@@ -1004,7 +1004,7 @@
     {
         "num": 78,
         "match_day_id": 20,
-        "time": "21:00",
+        "time": "13:00",
         "poule_name": "round_of_32",
         "location_id": 8,
         "teams": [
@@ -1030,7 +1030,7 @@
     {
         "num": 80,
         "match_day_id": 21,
-        "time": "21:00",
+        "time": "12:00",
         "poule_name": "round_of_32",
         "location_id": 6,
         "teams": [
@@ -1043,7 +1043,7 @@
     {
         "num": 81,
         "match_day_id": 21,
-        "time": "21:00",
+        "time": "20:00",
         "poule_name": "round_of_32",
         "location_id": 15,
         "teams": [
@@ -1056,7 +1056,7 @@
     {
         "num": 82,
         "match_day_id": 21,
-        "time": "21:00",
+        "time": "16:00",
         "poule_name": "round_of_32",
         "location_id": 16,
         "teams": [
@@ -1069,7 +1069,7 @@
     {
         "num": 83,
         "match_day_id": 22,
-        "time": "21:00",
+        "time": "19:00",
         "poule_name": "round_of_32",
         "location_id": 1,
         "teams": [
@@ -1082,7 +1082,7 @@
     {
         "num": 84,
         "match_day_id": 22,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "round_of_32",
         "location_id": 11,
         "teams": [
@@ -1095,7 +1095,7 @@
     {
         "num": 85,
         "match_day_id": 22,
-        "time": "21:00",
+        "time": "23:00",
         "poule_name": "round_of_32",
         "location_id": 2,
         "teams": [
@@ -1108,7 +1108,7 @@
     {
         "num": 86,
         "match_day_id": 23,
-        "time": "21:00",
+        "time": "18:00",
         "poule_name": "round_of_32",
         "location_id": 12,
         "teams": [
@@ -1121,7 +1121,7 @@
     {
         "num": 87,
         "match_day_id": 23,
-        "time": "21:00",
+        "time": "21:30",
         "poule_name": "round_of_32",
         "location_id": 10,
         "teams": [
@@ -1134,7 +1134,7 @@
     {
         "num": 88,
         "match_day_id": 23,
-        "time": "21:00",
+        "time": "14:00",
         "poule_name": "round_of_32",
         "location_id": 8,
         "teams": [
@@ -1147,7 +1147,7 @@
     {
         "num": 89,
         "match_day_id": 24,
-        "time": "21:00",
+        "time": "17:00",
         "poule_name": "round_of_16",
         "location_id": 14,
         "teams": [
@@ -1160,7 +1160,7 @@
     {
         "num": 90,
         "match_day_id": 24,
-        "time": "21:00",
+        "time": "13:00",
         "poule_name": "round_of_16",
         "location_id": 9,
         "teams": [
@@ -1173,7 +1173,7 @@
     {
         "num": 91,
         "match_day_id": 25,
-        "time": "21:00",
+        "time": "16:00",
         "poule_name": "round_of_16",
         "location_id": 13,
         "teams": [
@@ -1186,7 +1186,7 @@
     {
         "num": 92,
         "match_day_id": 25,
-        "time": "21:00",
+        "time": "20:00",
         "poule_name": "round_of_16",
         "location_id": 3,
         "teams": [
@@ -1199,7 +1199,7 @@
     {
         "num": 93,
         "match_day_id": 26,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "round_of_16",
         "location_id": 8,
         "teams": [
@@ -1212,7 +1212,7 @@
     {
         "num": 94,
         "match_day_id": 26,
-        "time": "21:00",
+        "time": "20:00",
         "poule_name": "round_of_16",
         "location_id": 16,
         "teams": [
@@ -1225,7 +1225,7 @@
     {
         "num": 95,
         "match_day_id": 27,
-        "time": "21:00",
+        "time": "12:00",
         "poule_name": "round_of_16",
         "location_id": 6,
         "teams": [
@@ -1238,7 +1238,7 @@
     {
         "num": 96,
         "match_day_id": 27,
-        "time": "21:00",
+        "time": "16:00",
         "poule_name": "round_of_16",
         "location_id": 2,
         "teams": [
@@ -1251,7 +1251,7 @@
     {
         "num": 97,
         "match_day_id": 28,
-        "time": "21:00",
+        "time": "16:00",
         "poule_name": "quarter_finals",
         "location_id": 7,
         "teams": [
@@ -1264,7 +1264,7 @@
     {
         "num": 98,
         "match_day_id": 29,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "quarter_finals",
         "location_id": 11,
         "teams": [
@@ -1277,7 +1277,7 @@
     {
         "num": 99,
         "match_day_id": 30,
-        "time": "21:00",
+        "time": "17:00",
         "poule_name": "quarter_finals",
         "location_id": 12,
         "teams": [
@@ -1303,7 +1303,7 @@
     {
         "num": 101,
         "match_day_id": 31,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "semi_finals",
         "location_id": 8,
         "teams": [
@@ -1316,7 +1316,7 @@
     {
         "num": 102,
         "match_day_id": 32,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "semi_finals",
         "location_id": 6,
         "teams": [
@@ -1329,7 +1329,7 @@
     {
         "num": 103,
         "match_day_id": 33,
-        "time": "21:00",
+        "time": "17:00",
         "poule_name": "bronze_final",
         "location_id": 12,
         "teams": [
@@ -1342,7 +1342,7 @@
     {
         "num": 104,
         "match_day_id": 34,
-        "time": "21:00",
+        "time": "15:00",
         "poule_name": "final",
         "location_id": 13,
         "teams": [
