@@ -4,31 +4,57 @@
             <div class="container">
                 <div class="row gy-3 text-light">
                     <div class="col-12">
-                        <h1 class="d-none d-md-block w26-condensed mb-3">{{ $t('heading.fixtures_results') }}</h1>
-                        <div class="d-flex justify-content-center align-items-center position-relative">
-                            <div class="me-2">
-                                <button class="btn btn-sm rounded-pill text-light" style="background-color: rgba(255, 255, 255, 0.1);"
-                                        type="button" @click="prev">
-                                    <i class="bi bi-chevron-left"></i>
-                                </button>
+                        <div class="d-flex flex-column">
+                            <h1 class="d-none d-md-block w26-condensed">{{ $t('heading.fixtures_results') }}</h1>
+                            <div class="d-none d-md-block mb-4">
+                                <a
+                                    href="/docs/FWC26_Match_Schedule.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <button
+                                        class="btn-wc26 btn-wc26-orange w-fit">
+                                        {{ $t('cta.view_schedule') }}
+                                    </button>
+                                </a>
                             </div>
-                            <div class="flex-grow-1 py-1 swiper">
-                                <div id="swiper" class="swiper-wrapper w-100 h-100 d-flex gap-3 position-relative z-1">
-                                    <div v-for="date in playDates" :id="'chip_' + date"
-                                         class="swiper-slide flex-shrink-0 w-auto h-100 position-relative">
-                                        <button :class="{'active' : date === activeChip}"
-                                                class="btn btn-sm btn-trans w-100 rounded-pill px-4 py-2"
-                                                type="button" @click="selectDay(date)">
-                                            <span class="text-capitalize">{{ localeDate(date) }}</span>
-                                        </button>
+                            <div class="d-md-none mb-4">
+                                <a
+                                    href="/docs/FWC26_Match_Schedule.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <button
+                                        class="btn-wc26 sm btn-wc26-orange">
+                                        {{ $t('cta.view_schedule') }}
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center position-relative">
+                                <div class="me-2">
+                                    <button class="btn btn-sm rounded-pill text-light" style="background-color: rgba(255, 255, 255, 0.1);"
+                                            type="button" @click="prev">
+                                        <i class="bi bi-chevron-left"></i>
+                                    </button>
+                                </div>
+                                <div class="flex-grow-1 py-1 swiper">
+                                    <div id="swiper" class="swiper-wrapper w-100 h-100 d-flex gap-3 position-relative z-1">
+                                        <div v-for="date in playDates" :id="'chip_' + date"
+                                             class="swiper-slide flex-shrink-0 w-auto h-100 position-relative">
+                                            <button :class="{'active' : date === activeChip}"
+                                                    class="btn btn-sm btn-trans w-100 rounded-pill px-4 py-2"
+                                                    type="button" @click="selectDay(date)">
+                                                <span class="text-capitalize">{{ localeDate(date) }}</span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="ms-2">
-                                <button class="btn btn-sm rounded-pill text-light" style="background-color: rgba(255, 255, 255, 0.1);"
-                                        type="button" @click="next">
-                                    <i class="bi bi-chevron-right"></i>
-                                </button>
+                                <div class="ms-2">
+                                    <button class="btn btn-sm rounded-pill text-light" style="background-color: rgba(255, 255, 255, 0.1);"
+                                            type="button" @click="next">
+                                        <i class="bi bi-chevron-right"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -57,7 +83,7 @@
 import {storeToRefs} from "pinia";
 import {useTournament} from "@/stores/content.js";
 import MatchDayComponent from "@/components/MatchDayComponent.vue";
-import {computed, onBeforeMount, ref, watch} from "vue";
+import {computed, type ComputedRef, onBeforeMount, ref, watch} from "vue";
 import dayjs from 'dayjs';
 import {useI18n} from "vue-i18n";
 
@@ -70,7 +96,7 @@ const activeChip = ref('')
 /**
  * Get a list of play dates.
  */
-const playDates = computed(() => {
+const playDates: ComputedRef<string[]> = computed(() => {
     return [...new Set(tournament.matchesGroupedByDay.map(matchDay => matchDay.matchDayDate))];
 })
 
@@ -80,7 +106,7 @@ const playDates = computed(() => {
 function prev() {
     const idx = playDates.value.findIndex(d => d === activeChip.value)
     if (idx > 0)
-        activeChip.value = playDates.value[idx - 1]
+        activeChip.value = playDates.value[idx - 1] as string
 }
 
 /**
@@ -89,7 +115,7 @@ function prev() {
 function next() {
     const idx = playDates.value.findIndex(d => d === activeChip.value)
     if (idx !== playDates.value.length - 1)
-        activeChip.value = playDates.value[idx + 1]
+        activeChip.value = playDates.value[idx + 1] as string
 }
 
 /**

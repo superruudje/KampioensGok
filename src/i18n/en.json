@@ -28,7 +28,8 @@
         "shortcut": "Change team",
         "download": "Download",
         "mail_sheet": "Submit your sheet",
-        "join": "Join"
+        "join": "Join",
+        "view_schedule": "View full schedule"
     },
     "footer": {
         "visit": "also visit",
