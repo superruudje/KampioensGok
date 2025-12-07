@@ -14,7 +14,9 @@
                             class="border"
                             loading="lazy"
                             width="30px"/>
-                        <span class="me-auto">{{ isTeam(match.teams[n - 1] as string) ? $t('countries.' + match.teams[n - 1]) : match.teams[n - 1] }}</span>
+                        <span class="me-auto">{{
+                                isTeam(match.teams[n - 1] as string) ? $t('countries.' + match.teams[n - 1]) : match.teams[n - 1]
+                            }}</span>
                         <span
                             v-if="match.result_after_penalties"
                             class="fs-6 lh-1">({{ match.result_after_penalties[n - 1] }})</span>
@@ -27,7 +29,10 @@
                 <div class="vr"></div>
                 <div class="d-flex flex-column justify-content-center align-items-center">
                     <span v-if="match.result?.length" class="fw-lighter lh-1">{{ $t('dict.full_time') }}</span>
-                    <span v-else class="fw-lighter lh-1">{{ match.time }} (ET)</span>
+                    <template v-else>
+                        <span>{{ convertToGMT1(match.time, 'America/New_York') }}</span>
+                        <span class="fw-lighter small lh-1">{{ match.time }} (NY)</span>
+                    </template>
                 </div>
             </div>
 
@@ -49,6 +54,7 @@ import {useTournament} from "@/stores/content.ts";
 import {storeToRefs} from "pinia";
 import {computed} from "vue";
 import type {Match} from "@/types/tournament.ts";
+import {convertToGMT1} from "@/helpers/magic.ts";
 
 const tournament = useTournament()
 const {teamImages, teams} = storeToRefs(tournament)

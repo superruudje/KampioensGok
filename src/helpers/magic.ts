@@ -1,5 +1,11 @@
 import type {TeamStats} from "@/types/tournament.ts";
 import type {MatchResult} from "@/types/pool.ts";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 export function calculateAndAssignThirds(pouleResults: Record<string, TeamStats>): Record<number, string> {
     const bestThird = getBestThirdTeams(pouleResults);
@@ -55,13 +61,18 @@ function assignThirdPlaceTeamsToMatches(advancingTeams: string[]): Record<number
 
     const matches = Object.keys(matchOptions).map(Number);
 
-    function backtrack(index: number, remainingTeams: string[], currentAssignment: Record<number, string>): Record<number, string> | null {
-        if (index === matches.length) {
-            return currentAssignment;
-        }
+    function backtrack(
+        index: number,
+        remainingTeams: string[],
+        currentAssignment: Record<number, string>
+    ): Record<number, string> | null {
+        if (index === matches.length) return currentAssignment;
 
         const match = matches[index];
+        if (!match) return null;
+
         const options = matchOptions[match];
+        if (!options) return null;
 
         for (const team of options) {
             if (remainingTeams.includes(team)) {
@@ -97,25 +108,25 @@ export function determineRoundOf16FromResults(matchPredictions: MatchResult[]): 
     const { winners, losers } = determineWinnersAndLosers(matchPredictions);
 
     return {
-        89: [winners[74], winners[77]],
-        90: [winners[73], winners[75]],
-        91: [winners[76], winners[78]],
-        92: [winners[79], winners[80]],
-        93: [winners[83], winners[84]],
-        94: [winners[81], winners[82]],
-        95: [winners[86], winners[88]],
-        96: [winners[85], winners[87]],
+        89: [winners[74]!, winners[77]!],
+        90: [winners[73]!, winners[75]!],
+        91: [winners[76]!, winners[78]!],
+        92: [winners[79]!, winners[80]!],
+        93: [winners[83]!, winners[84]!],
+        94: [winners[81]!, winners[82]!],
+        95: [winners[86]!, winners[88]!],
+        96: [winners[85]!, winners[87]!],
 
-        97: [winners[89], winners[90]],
-        98: [winners[93], winners[94]],
-        99: [winners[91], winners[92]],
-        100: [winners[95], winners[96]],
+        97: [winners[89]!, winners[90]!],
+        98: [winners[93]!, winners[94]!],
+        99: [winners[91]!, winners[92]!],
+        100: [winners[95]!, winners[96]!],
 
-        101: [winners[97], winners[98]],
-        102: [winners[99], winners[100]],
+        101: [winners[97]!, winners[98]!],
+        102: [winners[99]!, winners[100]!],
 
-        103: [losers[101], losers[102]],
-        104: [winners[101], winners[102]],
+        103: [losers[101]!, losers[102]!],
+        104: [winners[101]!, winners[102]!],
     };
 }
 
@@ -138,14 +149,14 @@ function determineWinnersAndLosers(matchPredictions: MatchResult[]) {
             scoreA === undefined || scoreA === null ||
             scoreB === undefined || scoreB === null
         ) continue
-        const [teamA, teamB] = prediction.teams;
+        const [teamA, teamB]: string[] = prediction.teams;
 
         if (scoreA > scoreB) {
-            winners[prediction.match] = teamA;
-            losers[prediction.match] = teamB;
+            winners[prediction.match] = teamA as string;
+            losers[prediction.match] = teamB as string;
         } else if (scoreB > scoreA) {
-            winners[prediction.match] = teamB;
-            losers[prediction.match] = teamA;
+            winners[prediction.match] = teamB as string;
+            losers[prediction.match] = teamA as string;
         } else {
             winners[prediction.match] = '';
             losers[prediction.match] = '';
@@ -157,4 +168,13 @@ function determineWinnersAndLosers(matchPredictions: MatchResult[]) {
 
 export function capitalize(str: string) {
     return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+export function convertToGMT1(time: string, sourceTz: string): string {
+    const today = dayjs().format('YYYY-MM-DD');
+
+    return dayjs
+        .tz(`${today} ${time}`, sourceTz)
+        .tz('Europe/Amsterdam')
+        .format('HH:mm');
 }
