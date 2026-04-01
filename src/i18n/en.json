@@ -152,7 +152,7 @@
         "bonus2": "<b class='txt-orange'>25 pts</b> when the predicted number is off by a maximum of 5.",
         "bonus3": "<b class='txt-orange'>15 pts</b> when the predicted number is off by a maximum of 10.",
         "prize_pool": "Prize pool",
-        "prize_text": "Each participant pays €11, of which €10 goes directly into the prize pool and €1 is allocated for administrative costs. The more participants, the larger the prize pool! The exact contents of the prize pool will be announced once registrations have closed.",
+        "prize_text": "Each participant pays €10, with 100% going directly into the prize pool. The more participants, the bigger the prize! Full prize details will be announced after registrations close.",
         "info1": "Team predicted correctly.",
         "info2": "Team predicted incorrectly, but in knock-out.",
         "info3": "Team predicted incorrectly (no points).",
