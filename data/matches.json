@@ -20,7 +20,7 @@
         "location_id": 4,
         "teams": [
             "KOR",
-            "CZE/DEN/IRL/MKD"
+            "CZE"
         ],
         "result": [],
         "events": []
@@ -33,7 +33,7 @@
         "location_id": 1,
         "teams": [
             "CAN",
-            "BIH/ITA/NIR/WAL"
+            "BIH"
         ],
         "result": [],
         "events": []
@@ -72,7 +72,7 @@
         "location_id": 2,
         "teams": [
             "AUS",
-            "KOS/ROU/SVK/TUR"
+            "TUR"
         ],
         "result": [],
         "events": []
@@ -149,7 +149,7 @@
         "poule_name": "F",
         "location_id": 5,
         "teams": [
-            "ALB/POL/SWE/URK",
+            "SWE",
             "TUN"
         ],
         "result": [],
@@ -227,7 +227,7 @@
         "poule_name": "I",
         "location_id": 7,
         "teams": [
-            "BOL/IRQ/SUR",
+            "IRQ",
             "NOR"
         ],
         "result": [],
@@ -293,7 +293,7 @@
         "location_id": 9,
         "teams": [
             "POR",
-            "COD/JAM/NCL"
+            "COD"
         ],
         "result": [],
         "events": []
@@ -318,7 +318,7 @@
         "poule_name": "A",
         "location_id": 6,
         "teams": [
-            "CZE/DEN/IRL/MKD",
+            "CZE",
             "RSA"
         ],
         "result": [],
@@ -332,7 +332,7 @@
         "location_id": 2,
         "teams": [
             "SUI",
-            "BIH/ITA/NIR/WAL"
+            "BIH"
         ],
         "result": [],
         "events": []
@@ -396,7 +396,7 @@
         "poule_name": "D",
         "location_id": 16,
         "teams": [
-            "KOS/ROU/SVK/TUR",
+            "TUR",
             "PAR"
         ],
         "result": [],
@@ -449,7 +449,7 @@
         "location_id": 9,
         "teams": [
             "NED",
-            "ALB/POL/SWE/URK"
+            "SWE"
         ],
         "result": [],
         "events": []
@@ -540,7 +540,7 @@
         "location_id": 13,
         "teams": [
             "FRA",
-            "BOL/IRQ/SUR"
+            "IRQ"
         ],
         "result": [],
         "events": []
@@ -618,7 +618,7 @@
         "location_id": 4,
         "teams": [
             "COL",
-            "COD/JAM/NCL"
+            "COD"
         ],
         "result": [],
         "events": []
@@ -669,7 +669,7 @@
         "poule_name": "B",
         "location_id": 16,
         "teams": [
-            "BIH/ITA/NIR/WAL",
+            "BIH",
             "QAT"
         ],
         "result": [],
@@ -682,7 +682,7 @@
         "poule_name": "A",
         "location_id": 3,
         "teams": [
-            "CZE/DEN/IRL/MKD",
+            "CZE",
             "MEX"
         ],
         "result": [],
@@ -735,7 +735,7 @@
         "location_id": 10,
         "teams": [
             "JPN",
-            "ALB/POL/SWE/URK"
+            "SWE"
         ],
         "result": [],
         "events": []
@@ -760,7 +760,7 @@
         "poule_name": "D",
         "location_id": 11,
         "teams": [
-            "KOS/ROU/SVK/TUR",
+            "TUR",
             "USA"
         ],
         "result": [],
@@ -800,7 +800,7 @@
         "location_id": 1,
         "teams": [
             "SEN",
-            "BOL/IRQ/SUR"
+            "IRQ"
         ],
         "result": [],
         "events": []
@@ -929,7 +929,7 @@
         "poule_name": "K",
         "location_id": 6,
         "teams": [
-            "COD/JAM/NCL",
+            "COD",
             "UZB"
         ],
         "result": [],
