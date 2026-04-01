@@ -305,7 +305,11 @@
         "NED": "Netherlands",
         "PAR": "Paraguay",
         "ALG": "Algeria",
-        "NZL": "New Zealand"
+        "NZL": "New Zealand",
+        "BIH": "Bosnia-Herzegovina",
+        "TUR": "Türkiye",
+        "SWE": "Sweden",
+        "COD": "Congo DR"
     },
     "faq": {
         "faq1": "Until when can I change my predictions?",

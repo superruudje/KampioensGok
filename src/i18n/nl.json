@@ -305,7 +305,11 @@
         "NED": "Nederland",
         "PAR": "Paraguay",
         "ALG": "Algerije",
-        "NZL": "Nieuw-Zeeland"
+        "NZL": "Nieuw-Zeeland",
+        "BIH": "Bosnië-Herzegovina",
+        "TUR": "Turkiye",
+        "SWE": "Zweden",
+        "COD": "Congo DR"
     },
     "faq": {
         "faq1": "Tot wanneer kan ik mijn voorspelling aanpassen?",

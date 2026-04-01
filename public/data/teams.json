@@ -102,9 +102,9 @@
         ]
     },
     {
-        "id": "PO-D",
-        "short_name": "CZE/DEN/IRL/MKD",
-        "full_name": "CZE/DEN/IRL/MKD",
+        "id": "CZE",
+        "short_name": "CZE",
+        "full_name": "Czechia",
         "poule_name": "A",
         "squad": [
             "Bart Verbruggen",
@@ -239,9 +239,9 @@
         ]
     },
     {
-        "id": "PO-A",
-        "short_name": "BIH/ITA/NIR/WAL",
-        "full_name": "BIH/ITA/NIR/WAL",
+        "id": "BIH",
+        "short_name": "BIH",
+        "full_name": "Bosnia-Herzegovina",
         "poule_name": "B",
         "squad": [
             "Bart Verbruggen",
@@ -513,9 +513,9 @@
         ]
     },
     {
-        "id": "PO-C",
-        "short_name": "KOS/ROU/SVK/TUR",
-        "full_name": "KOS/ROU/SVK/TUR",
+        "id": "TUR",
+        "short_name": "TUR",
+        "full_name": "Türkiye",
         "poule_name": "D",
         "squad": [
             "Bart Verbruggen",
@@ -787,9 +787,9 @@
         ]
     },
     {
-        "id": "PO-B",
-        "short_name": "ALB/POL/SWE/URK",
-        "full_name": "ALB/POL/SWE/URK",
+        "id": "SWE",
+        "short_name": "SWE",
+        "full_name": "Sweden",
         "poule_name": "F",
         "squad": [
             "Bart Verbruggen",
@@ -1198,9 +1198,9 @@
         ]
     },
     {
-        "id": "PO-2",
-        "short_name": "BOL/IRQ/SUR",
-        "full_name": "BOL/IRQ/SUR",
+        "id": "IRQ",
+        "short_name": "IRQ",
+        "full_name": "Iraq",
         "poule_name": "I",
         "squad": [
             "Bart Verbruggen",
@@ -1472,9 +1472,9 @@
         ]
     },
     {
-        "id": "PO-1",
-        "short_name": "COD/JAM/NCL",
-        "full_name": "COD/JAM/NCL",
+        "id": "COD",
+        "short_name": "COD",
+        "full_name": "Congo DR",
         "poule_name": "K",
         "squad": [
             "Bart Verbruggen",
