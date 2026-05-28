@@ -12,6 +12,8 @@ export interface Question {
 export interface Player {
     name: string,
     team_name: string,
+    email: string,
+    tel: string,
     predictions: MatchResult[],
     bonus: any[],
     round_of_32: string[],

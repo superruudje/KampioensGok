@@ -85,6 +85,42 @@
                                                     }}
                                                 </div>
                                             </div>
+                                            <!-- email -->
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="email">
+                                                    {{ $t('forms.step1.email') }}
+                                                </label>
+                                                <input
+                                                    id="email"
+                                                    v-model="player.email"
+                                                    :placeholder="$t('forms.step1.email')"
+                                                    autocomplete="email"
+                                                    class="form-control"
+                                                    form="form1"
+                                                    required
+                                                    type="email">
+                                                <div class="invalid-feedback">
+                                                    {{ $t('errors.required') }}
+                                                </div>
+                                            </div>
+                                            <!-- telephone -->
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="telephone">
+                                                    {{ $t('forms.step1.tel') }}
+                                                </label>
+                                                <input
+                                                    id="telephone"
+                                                    v-model="player.tel"
+                                                    :placeholder="$t('forms.step1.tel')"
+                                                    autocomplete="tel"
+                                                    class="form-control"
+                                                    form="form1"
+                                                    required
+                                                    type="tel">
+                                                <div class="invalid-feedback">
+                                                    {{ $t('errors.required') }}
+                                                </div>
+                                            </div>
                                         </div>
                                         <FormError v-if="wasValidated && !isValid" class="mt-3"/>
                                     </div>
@@ -618,7 +654,7 @@
 
                                     <div class="d-inline-flex flex-wrap gap-1 mb-3">
                                         <a
-                                            :href="'mailto:' + email + '?subject=' + mailSubject +  '&body=' + mailBody"
+                                            :href="`mailto:${email}?subject=${mailSubject}&body=${mailBody}`"
                                             rel="noopener noreferrer"
                                             target="_blank">
                                             <button class="btn-wc26 btn-wc26-lightblue w-fit" type="button">
@@ -667,6 +703,8 @@ const saveState: Ref<{ player: Player, step: number } | null> = ref(null);
 const player: Ref<Player> = ref({
     name: '',
     team_name: '',
+    email: '',
+    tel: '',
     predictions: [] as MatchResult[],
     bonus: [],
     round_of_32: [],
@@ -681,9 +719,10 @@ const wasValidated = ref(false);
 const isValid = ref(false);
 const predictedPouleStandings: Ref<Record<string, TeamStats>> = ref({});
 
-const email = '1234@gmail.com'
-const mailSubject = 'WK26%20invulsheet';
-const mailBody = 'Ik%20schrijf%20me%20in%20voor%20de%20WK26%20Pool!%0A%0ANaam%3A%0AEmail%3A%0ATelefoonnummer%3A%0AVoeg%20mij%20toe%20aan%20de%20Whatsapp%20groep%3A%20Ja%2FNee%0A%0A------------------------------------------------------------------%0A%0ANa%20inzending%20ontvang%20je%20een%20betaallink%20van%20%E2%82%AC11.%20Wanneer%20deze%20is%20voldaan%20wordt%20jouw%20sheet%20toegevoegd%20aan%20de%20pool.%0A%5BVergeet%20jouw%20invulsheet%20niet%20bij%20te%20voegen!%5D%0A%0A%0A';
+const email = 'levidewitt@live.nl,rjhaamke@gmail.com'
+const mailSubject = computed(() =>
+    encodeURIComponent(`WK26 Invulsheet - ${player.value.team_name}`)
+);
 const roundNames = [
     'round_of_32',
     'round_of_16',
@@ -692,6 +731,27 @@ const roundNames = [
     'bronze_final',
     'final'
 ] as const;
+
+const mailBody = computed(() => {
+    const body = `
+Ik schrijf me in voor de WK26 Pool!
+
+Naam: ${player.value.name}
+Teamnaam: ${player.value.team_name}
+Email: ${player.value.email}
+Telefoonnummer: ${player.value.tel}
+Voeg mij toe aan de Whatsapp groep: Ja/Nee
+
+------------------------------------------------------------------
+
+LET OP:
+Vergeet niet jouw ingevulde JSON invulsheet als bijlage toe te voegen aan deze e-mail.
+
+Na inzending ontvang je een betaallink van €10.
+Wanneer deze is voldaan wordt jouw team toegevoegd aan de pool.
+`;
+    return encodeURIComponent(body.trim());
+});
 
 const isDuplicate = computed(() =>
     players.value

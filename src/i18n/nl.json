@@ -198,7 +198,9 @@
             "p4": "Meer weten over de puntentelling en de spelregels? Bekijk:",
             "p5": "Succes – en veel plezier met voorspellen!",
             "name": "Je naam",
-            "team_name": "Je teamnaam"
+            "team_name": "Je teamnaam",
+            "email": "Je e-mailadres",
+            "tel": "Je telefoonnummer"
         },
         "step2": {
             "title": "Poulefase",

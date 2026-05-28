@@ -198,7 +198,9 @@
             "p4": "Want to know more about the scoring system and the rules? See:",
             "p5": "Good luck – and have fun predicting!",
             "name": "Your name",
-            "team_name": "Your team name"
+            "team_name": "Your team name",
+            "email": "Your email",
+            "tel": "Your telephone number"
         },
         "step2": {
             "title": "Group stage",
