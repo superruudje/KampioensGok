@@ -110,24 +110,24 @@ export const useTournament = defineStore('tournament', {
                     match_day_answered: 22,
                     current_answer: this.totalCards.red + this.totalCards.yellow
                 },
-                {
-                    question: i18n.global.t('questions.goals_against'),
-                    answer: "",
-                    answer_type: "team",
-                    type: "exact",
-                    points: 10,
-                    match_day_answered: 22,
-                    current_answer: this.goalsAgainstRanking[0]?.label
-                },
-                {
-                    question: i18n.global.t('questions.most_cards'),
-                    answer: "",
-                    answer_type: "team",
-                    type: "exact",
-                    points: 10,
-                    match_day_answered: 22,
-                    current_answer: this.totalCardsPerTeam[0]?.label
-                },
+                // {
+                //     question: i18n.global.t('questions.goals_against'),
+                //     answer: "",
+                //     answer_type: "team",
+                //     type: "exact",
+                //     points: 10,
+                //     match_day_answered: 22,
+                //     current_answer: this.goalsAgainstRanking[0]?.label
+                // },
+                // {
+                //     question: i18n.global.t('questions.most_cards'),
+                //     answer: "",
+                //     answer_type: "team",
+                //     type: "exact",
+                //     points: 10,
+                //     match_day_answered: 22,
+                //     current_answer: this.totalCardsPerTeam[0]?.label
+                // },
                 {
                     question: i18n.global.t('questions.top_scorer'),
                     answer: "",
@@ -137,15 +137,15 @@ export const useTournament = defineStore('tournament', {
                     match_day_answered: 22,
                     current_answer: this.topScorers[0]?.label
                 },
-                {
-                    question: i18n.global.t('questions.top_assist'),
-                    answer: "",
-                    answer_type: "player",
-                    type: "exact",
-                    points: 10,
-                    match_day_answered: 22,
-                    current_answer: this.topAssist[0]?.label
-                },
+                // {
+                //     question: i18n.global.t('questions.top_assist'),
+                //     answer: "",
+                //     answer_type: "player",
+                //     type: "exact",
+                //     points: 10,
+                //     match_day_answered: 22,
+                //     current_answer: this.topAssist[0]?.label
+                // },
                 {
                     question: i18n.global.t('questions.first_goal_nl'),
                     answer: "",
