@@ -128,7 +128,7 @@
                 </template>
             </div>
         </div>
-        <div class="text-center mt-3">
+        <div v-if="topTeams.length" class="text-center mt-3">
             <span
                 @click="showPopularPredictions = !showPopularPredictions"
                 class="d-block mb-2 user-select-none"
