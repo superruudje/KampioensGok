@@ -107,7 +107,9 @@
         "no_timeline": "No timeline available.",
         "who_r_u": "Who are you?",
         "shortcut": "Shortcut",
-        "pop_predictions": "popular predictions"
+        "pop_predictions": "popular predictions",
+        "incl_bonus": "Bonus points",
+        "incl_knockout": "Knockout points"
     },
     "home": {
         "match_schedule_title": "View the World Cup 2026 match schedule",

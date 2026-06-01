@@ -149,7 +149,7 @@
                 <div class="card rounded-4 mb-4">
                     <div class="card-body p-3 p-md-4">
                         <h3 class="fw-bolder w26-condensed mb-3">{{ $t('heading.progression') }}</h3>
-                        <div style="height: 300px">
+                        <div v-if="LINE_CHART.length" style="height: 300px">
                             <EchartLine :data="LINE_CHART"/>
                         </div>
                     </div>

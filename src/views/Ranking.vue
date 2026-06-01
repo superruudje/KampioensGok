@@ -30,6 +30,26 @@
                                         }}
                                     </option>
                                 </select>
+                                <div class="form-check">
+                                    <input
+                                        id="include-bonus"
+                                        v-model="includeBonusPoints"
+                                        class="form-check-input"
+                                        type="checkbox">
+                                    <label class="form-check-label" for="include-bonus">
+                                        {{ $t('dict.incl_bonus') }}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input
+                                        id="include-knockout"
+                                        v-model="includeKnockoutPoints"
+                                        class="form-check-input"
+                                        type="checkbox">
+                                    <label class="form-check-label" for="include-knockout">
+                                        {{ $t('dict.incl_knockout') }}
+                                    </label>
+                                </div>
                             </div>
                             <p class="font-book mb-4">{{ $t('ranking.ranking_text') }}</p>
                             <div class="w-100 overflow-hidden overflow-x-auto mb-3">
@@ -152,7 +172,7 @@
                                 </select>
                             </div>
 
-                            <div style="height: 800px">
+                            <div v-if="LINE_CHART.length" style="height: 800px">
                                 <EchartLine :data="LINE_CHART"/>
                             </div>
                         </div>
@@ -181,6 +201,9 @@ const standing: Ref<Player[]> = ref([]);
 const old_standing: Ref<Player[]> = ref([]);
 const snapshot: Ref<number> = ref(0);
 
+const includeBonusPoints = ref(true);
+const includeKnockoutPoints = ref(true);
+
 const snapshots = computed(() => {
     return playedMatchesGroupedByDay.value.map(groupDay => {
         return {label: groupDay.matchDayDate, id: groupDay.matchDayId}
@@ -192,15 +215,27 @@ function getLabel(date: string) {
     return dayjs(date).format('dddd D MMMM YYYY');
 }
 
-watch(snapshot, (newSnapshot) => {
-    standing.value = tournament.getStanding(newSnapshot);
-    old_standing.value = tournament.getStanding(newSnapshot - 1);
-})
+watch(
+    [snapshot, includeBonusPoints, includeKnockoutPoints],
+    ([newSnapshot]) => {
+        standing.value = tournament.getStanding(
+            newSnapshot,
+            includeBonusPoints.value,
+            includeKnockoutPoints.value
+        );
+
+        old_standing.value = tournament.getStanding(
+            newSnapshot - 1,
+            includeBonusPoints.value,
+            includeKnockoutPoints.value
+        );
+    }
+);
 
 onMounted(() => {
     snapshot.value = snapshots.value.at(-1)?.id || 0;
-    standing.value = tournament.getStanding(snapshot.value);
-    old_standing.value = tournament.getStanding(snapshot.value - 1);
+    standing.value = tournament.getStanding(snapshot.value, includeBonusPoints.value, includeKnockoutPoints.value);
+    old_standing.value = tournament.getStanding(snapshot.value - 1, includeBonusPoints.value, includeKnockoutPoints.value);
 })
 
 /**

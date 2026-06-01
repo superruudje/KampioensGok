@@ -751,9 +751,17 @@ export const useTournament = defineStore('tournament', {
          * Return standing
          * @returns {*}
          */
-        getStanding(snapshot: number | null): Player[] {
+        getStanding(
+            snapshot: number | null,
+            includeBonus = true,
+            includeKnockout = true): Player[] {
             return this.players.map(player => {
-                const score = this.getParticipantTotalScore(player.team_name, snapshot)
+                const score = this.getParticipantTotalScore(
+                    player.team_name,
+                    snapshot,
+                    includeBonus,
+                    includeKnockout
+                )
 
                 return {
                     name: player.name,
@@ -831,10 +839,24 @@ export const useTournament = defineStore('tournament', {
          * Calculate total score
          * @param name team name
          * @param snapshot
+         * @param includeBonus
+         * @param includeKnockout
          * @returns {*}
          */
-        getParticipantTotalScore(name: string, snapshot: number | null) {
-            return this.getParticipantScoreMatches(name, snapshot) + this.getParticipantScoreBonus(name, snapshot) + this.getParticipantScoreKnockOut(name, snapshot)
+        getParticipantTotalScore(
+            name: string,
+            snapshot: number | null,
+            includeBonus = true,
+            includeKnockout = true
+        ) {
+            let score = this.getParticipantScoreMatches(name, snapshot);
+            if (includeBonus) {
+                score += this.getParticipantScoreBonus(name, snapshot);
+            }
+            if (includeKnockout) {
+                score += this.getParticipantScoreKnockOut(name, snapshot);
+            }
+            return score;
         },
         /**
          * Calculate total score.

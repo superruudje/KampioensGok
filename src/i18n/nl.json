@@ -107,7 +107,9 @@
         "no_timeline": "Nog geen timeline.",
         "who_r_u": "Wie ben je?",
         "shortcut": "Snelkoppeling",
-        "pop_predictions": "populaire voorspellingen"
+        "pop_predictions": "populaire voorspellingen",
+        "incl_bonus": "Bonus punten",
+        "incl_knockout": "Knockout punten"
     },
     "home": {
         "match_schedule_title": "Bekijk het Wereld Kampioenschap 2026 wedstrijdschema",
