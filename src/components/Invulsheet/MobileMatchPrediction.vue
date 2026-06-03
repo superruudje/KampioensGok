@@ -128,20 +128,20 @@
                 </template>
             </div>
         </div>
-        <div v-if="topTeams.length" class="text-center mt-3">
-            <span
-                @click="showPopularPredictions = !showPopularPredictions"
-                class="d-block mb-2 user-select-none"
-                role="button">
-                {{ showPopularPredictions ? $t('cta.hide') : $t('cta.show') }} {{ $t('dict.pop_predictions') }}
-            </span>
-            <div v-if="showPopularPredictions" class="d-flex flex-wrap justify-content-center gap-3">
-                <div v-for="topResult in topResults">
-                    <div class="border rounded-4 py-1 px-2">{{ topResult.result.join(' - ') }}</div>
-                    <span class="small">{{ topResult.percentage }}%</span>
-                </div>
-            </div>
-        </div>
+<!--        <div v-if="topTeams.length" class="text-center mt-3">-->
+<!--            <span-->
+<!--                @click="showPopularPredictions = !showPopularPredictions"-->
+<!--                class="d-block mb-2 user-select-none"-->
+<!--                role="button">-->
+<!--                {{ showPopularPredictions ? $t('cta.hide') : $t('cta.show') }} {{ $t('dict.pop_predictions') }}-->
+<!--            </span>-->
+<!--            <div v-if="showPopularPredictions" class="d-flex flex-wrap justify-content-center gap-3">-->
+<!--                <div v-for="topResult in topResults">-->
+<!--                    <div class="border rounded-4 py-1 px-2">{{ topResult.result.join(' - ') }}</div>-->
+<!--                    <span class="small">{{ topResult.percentage }}%</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <div v-if="!disableTeams && showPopularPredictions" class="text-center mt-3">
             <div class="d-flex flex-wrap justify-content-center gap-3">
                 <div v-for="topTeam in topTeams">
