@@ -8650,5 +8650,6185 @@
             "FRA",
             "BRA"
         ]
+    },
+    {
+        "name": "Brian den Elzen",
+        "team_name": "Bde94",
+        "email": "briandenelzen@hotmail.com",
+        "tel": "0614663855",
+        "predictions": [
+            {
+                "match": 1,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "MEX",
+                    "RSA"
+                ]
+            },
+            {
+                "match": 2,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "KOR",
+                    "CZE"
+                ]
+            },
+            {
+                "match": 25,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "CZE",
+                    "RSA"
+                ]
+            },
+            {
+                "match": 28,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "MEX",
+                    "KOR"
+                ]
+            },
+            {
+                "match": 53,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "CZE",
+                    "MEX"
+                ]
+            },
+            {
+                "match": 54,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "RSA",
+                    "KOR"
+                ]
+            },
+            {
+                "match": 3,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "CAN",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 8,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "QAT",
+                    "SUI"
+                ]
+            },
+            {
+                "match": 26,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "SUI",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 27,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "CAN",
+                    "QAT"
+                ]
+            },
+            {
+                "match": 51,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "SUI",
+                    "CAN"
+                ]
+            },
+            {
+                "match": 52,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "BIH",
+                    "QAT"
+                ]
+            },
+            {
+                "match": 5,
+                "result": [
+                    0,
+                    3
+                ],
+                "teams": [
+                    "HTI",
+                    "SCO"
+                ]
+            },
+            {
+                "match": 7,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "BRA",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 29,
+                "result": [
+                    5,
+                    0
+                ],
+                "teams": [
+                    "BRA",
+                    "HTI"
+                ]
+            },
+            {
+                "match": 30,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "SCO",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 49,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "SCO",
+                    "BRA"
+                ]
+            },
+            {
+                "match": 50,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "MAR",
+                    "HTI"
+                ]
+            },
+            {
+                "match": 4,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "PAR"
+                ]
+            },
+            {
+                "match": 6,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "AUS",
+                    "TUR"
+                ]
+            },
+            {
+                "match": 31,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "TUR",
+                    "PAR"
+                ]
+            },
+            {
+                "match": 32,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "AUS"
+                ]
+            },
+            {
+                "match": 59,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "TUR",
+                    "USA"
+                ]
+            },
+            {
+                "match": 60,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "PAR",
+                    "AUS"
+                ]
+            },
+            {
+                "match": 9,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "CIV",
+                    "ECU"
+                ]
+            },
+            {
+                "match": 10,
+                "result": [
+                    4,
+                    0
+                ],
+                "teams": [
+                    "GER",
+                    "CUW"
+                ]
+            },
+            {
+                "match": 33,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "GER",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 34,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "ECU",
+                    "CUW"
+                ]
+            },
+            {
+                "match": 55,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "CUW",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 56,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "ECU",
+                    "GER"
+                ]
+            },
+            {
+                "match": 11,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 12,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "SWE",
+                    "TUN"
+                ]
+            },
+            {
+                "match": 35,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 36,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "TUN",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 57,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "JPN",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 58,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "TUN",
+                    "NED"
+                ]
+            },
+            {
+                "match": 15,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "IRN",
+                    "NZL"
+                ]
+            },
+            {
+                "match": 16,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "BEL",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 39,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "BEL",
+                    "IRN"
+                ]
+            },
+            {
+                "match": 40,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "NZL",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 63,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "EGY",
+                    "IRN"
+                ]
+            },
+            {
+                "match": 64,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "NZL",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 13,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "KSA",
+                    "URU"
+                ]
+            },
+            {
+                "match": 14,
+                "result": [
+                    5,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 37,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "URU",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 38,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "KSA"
+                ]
+            },
+            {
+                "match": 65,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "CPV",
+                    "KSA"
+                ]
+            },
+            {
+                "match": 66,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "URU",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 17,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 18,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "IRQ",
+                    "NOR"
+                ]
+            },
+            {
+                "match": 41,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "NOR",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 42,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "IRQ"
+                ]
+            },
+            {
+                "match": 61,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "NOR",
+                    "FRA"
+                ]
+            },
+            {
+                "match": 62,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "SEN",
+                    "IRQ"
+                ]
+            },
+            {
+                "match": 19,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ARG",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 20,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "AUT",
+                    "JOR"
+                ]
+            },
+            {
+                "match": 43,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ARG",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 44,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "JOR",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 69,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "ALG",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 70,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "JOR",
+                    "ARG"
+                ]
+            },
+            {
+                "match": 23,
+                "result": [
+                    4,
+                    0
+                ],
+                "teams": [
+                    "POR",
+                    "COD"
+                ]
+            },
+            {
+                "match": 24,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "UZB",
+                    "COL"
+                ]
+            },
+            {
+                "match": 47,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "POR",
+                    "UZB"
+                ]
+            },
+            {
+                "match": 48,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "COL",
+                    "COD"
+                ]
+            },
+            {
+                "match": 71,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "COL",
+                    "POR"
+                ]
+            },
+            {
+                "match": 72,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "COD",
+                    "UZB"
+                ]
+            },
+            {
+                "match": 21,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "GHA",
+                    "PAN"
+                ]
+            },
+            {
+                "match": 22,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "ENG",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 45,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ENG",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 46,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "PAN",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 67,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "PAN",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 68,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "CRO",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 73,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "CZE",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 74,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "GER",
+                    "KOR"
+                ]
+            },
+            {
+                "match": 75,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "NED",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 76,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "BRA",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 77,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "SCO"
+                ]
+            },
+            {
+                "match": 78,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "ECU",
+                    "NOR"
+                ]
+            },
+            {
+                "match": 79,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "MEX",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 80,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ENG",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 81,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "CAN"
+                ]
+            },
+            {
+                "match": 82,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "BEL",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 83,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "COL",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 84,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "ESP",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 85,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "SUI",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 86,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ARG",
+                    "URU"
+                ]
+            },
+            {
+                "match": 87,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "POR",
+                    "AUS"
+                ]
+            },
+            {
+                "match": 88,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "TUR",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 89,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "GER",
+                    "FRA"
+                ]
+            },
+            {
+                "match": 90,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "CZE",
+                    "NED"
+                ]
+            },
+            {
+                "match": 91,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "BRA",
+                    "NOR"
+                ]
+            },
+            {
+                "match": 92,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "MEX",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 93,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "CRO",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 94,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 95,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ARG",
+                    "TUR"
+                ]
+            },
+            {
+                "match": 96,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "SUI",
+                    "POR"
+                ]
+            },
+            {
+                "match": 97,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "FRA",
+                    "NED"
+                ]
+            },
+            {
+                "match": 98,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "ESP",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 99,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "BRA",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 100,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "ARG",
+                    "POR"
+                ]
+            },
+            {
+                "match": 101,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "FRA",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 102,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "BRA",
+                    "POR"
+                ]
+            },
+            {
+                "match": 103,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "ESP",
+                    "POR"
+                ]
+            },
+            {
+                "match": 104,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "FRA",
+                    "BRA"
+                ]
+            }
+        ],
+        "bonus": [
+            "FRA",
+            "329",
+            "416",
+            "FRA - Kylian Mbappe",
+            "NED - Cody Gakpo",
+            "NED - Ryan Gravenberch"
+        ],
+        "round_of_32": [
+            "CZE",
+            "BIH",
+            "GER",
+            "KOR",
+            "NED",
+            "MAR",
+            "BRA",
+            "JPN",
+            "FRA",
+            "SCO",
+            "ECU",
+            "NOR",
+            "MEX",
+            "SWE",
+            "ENG",
+            "SEN",
+            "USA",
+            "CAN",
+            "BEL",
+            "ALG",
+            "COL",
+            "CRO",
+            "ESP",
+            "AUT",
+            "SUI",
+            "CIV",
+            "ARG",
+            "URU",
+            "POR",
+            "AUS",
+            "TUR",
+            "EGY"
+        ],
+        "round_of_16": [
+            "GER",
+            "FRA",
+            "CZE",
+            "NED",
+            "BRA",
+            "NOR",
+            "MEX",
+            "ENG",
+            "CRO",
+            "ESP",
+            "USA",
+            "BEL",
+            "ARG",
+            "TUR",
+            "SUI",
+            "POR"
+        ],
+        "quarter_finals": [
+            "FRA",
+            "NED",
+            "ESP",
+            "BEL",
+            "BRA",
+            "ENG",
+            "ARG",
+            "POR"
+        ],
+        "semi_finals": [
+            "FRA",
+            "ESP",
+            "BRA",
+            "POR"
+        ],
+        "bronze_final": [
+            "ESP",
+            "POR"
+        ],
+        "final": [
+            "FRA",
+            "BRA"
+        ]
+    },
+    {
+        "name": "Kevin Koole",
+        "team_name": "Wokkels",
+        "email": "k_koole90@hotmail.com",
+        "tel": "0611517383",
+        "predictions": [
+            {
+                "match": 1,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "MEX",
+                    "RSA"
+                ]
+            },
+            {
+                "match": 2,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "KOR",
+                    "CZE"
+                ]
+            },
+            {
+                "match": 25,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "CZE",
+                    "RSA"
+                ]
+            },
+            {
+                "match": 28,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "MEX",
+                    "KOR"
+                ]
+            },
+            {
+                "match": 53,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "CZE",
+                    "MEX"
+                ]
+            },
+            {
+                "match": 54,
+                "result": [
+                    0,
+                    0
+                ],
+                "teams": [
+                    "RSA",
+                    "KOR"
+                ]
+            },
+            {
+                "match": 3,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "CAN",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 8,
+                "result": [
+                    0,
+                    3
+                ],
+                "teams": [
+                    "QAT",
+                    "SUI"
+                ]
+            },
+            {
+                "match": 26,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "SUI",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 27,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "CAN",
+                    "QAT"
+                ]
+            },
+            {
+                "match": 51,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "SUI",
+                    "CAN"
+                ]
+            },
+            {
+                "match": 52,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "BIH",
+                    "QAT"
+                ]
+            },
+            {
+                "match": 5,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "HTI",
+                    "SCO"
+                ]
+            },
+            {
+                "match": 7,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "BRA",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 29,
+                "result": [
+                    4,
+                    0
+                ],
+                "teams": [
+                    "BRA",
+                    "HTI"
+                ]
+            },
+            {
+                "match": 30,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "SCO",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 49,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "SCO",
+                    "BRA"
+                ]
+            },
+            {
+                "match": 50,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "MAR",
+                    "HTI"
+                ]
+            },
+            {
+                "match": 4,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "PAR"
+                ]
+            },
+            {
+                "match": 6,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "AUS",
+                    "TUR"
+                ]
+            },
+            {
+                "match": 31,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "TUR",
+                    "PAR"
+                ]
+            },
+            {
+                "match": 32,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "AUS"
+                ]
+            },
+            {
+                "match": 59,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "TUR",
+                    "USA"
+                ]
+            },
+            {
+                "match": 60,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "PAR",
+                    "AUS"
+                ]
+            },
+            {
+                "match": 9,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "CIV",
+                    "ECU"
+                ]
+            },
+            {
+                "match": 10,
+                "result": [
+                    4,
+                    0
+                ],
+                "teams": [
+                    "GER",
+                    "CUW"
+                ]
+            },
+            {
+                "match": 33,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "GER",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 34,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "ECU",
+                    "CUW"
+                ]
+            },
+            {
+                "match": 55,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "CUW",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 56,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "ECU",
+                    "GER"
+                ]
+            },
+            {
+                "match": 11,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 12,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "SWE",
+                    "TUN"
+                ]
+            },
+            {
+                "match": 35,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "NED",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 36,
+                "result": [
+                    0,
+                    0
+                ],
+                "teams": [
+                    "TUN",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 57,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "JPN",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 58,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "TUN",
+                    "NED"
+                ]
+            },
+            {
+                "match": 15,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "IRN",
+                    "NZL"
+                ]
+            },
+            {
+                "match": 16,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "BEL",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 39,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "BEL",
+                    "IRN"
+                ]
+            },
+            {
+                "match": 40,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "NZL",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 63,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "EGY",
+                    "IRN"
+                ]
+            },
+            {
+                "match": 64,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "NZL",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 13,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "KSA",
+                    "URU"
+                ]
+            },
+            {
+                "match": 14,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 37,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "URU",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 38,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "ESP",
+                    "KSA"
+                ]
+            },
+            {
+                "match": 65,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "CPV",
+                    "KSA"
+                ]
+            },
+            {
+                "match": 66,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "URU",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 17,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 18,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "IRQ",
+                    "NOR"
+                ]
+            },
+            {
+                "match": 41,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "NOR",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 42,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "IRQ"
+                ]
+            },
+            {
+                "match": 61,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "NOR",
+                    "FRA"
+                ]
+            },
+            {
+                "match": 62,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "SEN",
+                    "IRQ"
+                ]
+            },
+            {
+                "match": 19,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ARG",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 20,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "AUT",
+                    "JOR"
+                ]
+            },
+            {
+                "match": 43,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "ARG",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 44,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "JOR",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 69,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "ALG",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 70,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "JOR",
+                    "ARG"
+                ]
+            },
+            {
+                "match": 23,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "POR",
+                    "COD"
+                ]
+            },
+            {
+                "match": 24,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "UZB",
+                    "COL"
+                ]
+            },
+            {
+                "match": 47,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "POR",
+                    "UZB"
+                ]
+            },
+            {
+                "match": 48,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "COL",
+                    "COD"
+                ]
+            },
+            {
+                "match": 71,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "COL",
+                    "POR"
+                ]
+            },
+            {
+                "match": 72,
+                "result": [
+                    0,
+                    0
+                ],
+                "teams": [
+                    "COD",
+                    "UZB"
+                ]
+            },
+            {
+                "match": 21,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "GHA",
+                    "PAN"
+                ]
+            },
+            {
+                "match": 22,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "ENG",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 45,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ENG",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 46,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "PAN",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 67,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "PAN",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 68,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "CRO",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 73,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "KOR",
+                    "CAN"
+                ]
+            },
+            {
+                "match": 74,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "GER",
+                    "CZE"
+                ]
+            },
+            {
+                "match": 75,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 76,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "BRA",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 77,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "FRA",
+                    "SCO"
+                ]
+            },
+            {
+                "match": 78,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "ECU",
+                    "NOR"
+                ]
+            },
+            {
+                "match": 79,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "MEX",
+                    "TUN"
+                ]
+            },
+            {
+                "match": 80,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ENG",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 81,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "USA",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 82,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "BEL",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 83,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "POR",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 84,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ESP",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 85,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "SUI",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 86,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "ARG",
+                    "URU"
+                ]
+            },
+            {
+                "match": 87,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "COL",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 88,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "PAR",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 89,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "GER",
+                    "FRA"
+                ]
+            },
+            {
+                "match": 90,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "CAN",
+                    "NED"
+                ]
+            },
+            {
+                "match": 91,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "BRA",
+                    "ECU"
+                ]
+            },
+            {
+                "match": 92,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "MEX",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 93,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "POR",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 94,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 95,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ARG",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 96,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "SUI",
+                    "COL"
+                ]
+            },
+            {
+                "match": 97,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "NED"
+                ]
+            },
+            {
+                "match": 98,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 99,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "BRA",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 100,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "ARG",
+                    "COL"
+                ]
+            },
+            {
+                "match": 101,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "FRA",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 102,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "BRA",
+                    "ARG"
+                ]
+            },
+            {
+                "match": 103,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "ARG"
+                ]
+            },
+            {
+                "match": 104,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "FRA",
+                    "BRA"
+                ]
+            }
+        ],
+        "bonus": [
+            "FRA",
+            "359",
+            "301",
+            "BRA - Vinicius Junior",
+            "NED - Justin Kluivert",
+            "NED - Jan Paul van Hecke"
+        ],
+        "round_of_32": [
+            "KOR",
+            "CAN",
+            "GER",
+            "CZE",
+            "NED",
+            "MAR",
+            "BRA",
+            "SWE",
+            "FRA",
+            "SCO",
+            "ECU",
+            "NOR",
+            "MEX",
+            "TUN",
+            "ENG",
+            "ALG",
+            "USA",
+            "BIH",
+            "BEL",
+            "SEN",
+            "POR",
+            "GHA",
+            "ESP",
+            "AUT",
+            "SUI",
+            "JPN",
+            "ARG",
+            "URU",
+            "COL",
+            "CRO",
+            "PAR",
+            "EGY"
+        ],
+        "round_of_16": [
+            "GER",
+            "FRA",
+            "CAN",
+            "NED",
+            "BRA",
+            "ECU",
+            "MEX",
+            "ENG",
+            "POR",
+            "ESP",
+            "USA",
+            "BEL",
+            "ARG",
+            "EGY",
+            "SUI",
+            "COL"
+        ],
+        "quarter_finals": [
+            "FRA",
+            "NED",
+            "ESP",
+            "BEL",
+            "BRA",
+            "ENG",
+            "ARG",
+            "COL"
+        ],
+        "semi_finals": [
+            "FRA",
+            "ESP",
+            "BRA",
+            "ARG"
+        ],
+        "bronze_final": [
+            "ESP",
+            "ARG"
+        ],
+        "final": [
+            "FRA",
+            "BRA"
+        ]
+    },
+    {
+        "name": "Mats",
+        "team_name": "Net Knicks",
+        "email": "matsfrijlink@live.nl",
+        "tel": "0681051777",
+        "predictions": [
+            {
+                "match": 1,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "MEX",
+                    "RSA"
+                ]
+            },
+            {
+                "match": 2,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "KOR",
+                    "CZE"
+                ]
+            },
+            {
+                "match": 25,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "CZE",
+                    "RSA"
+                ]
+            },
+            {
+                "match": 28,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "MEX",
+                    "KOR"
+                ]
+            },
+            {
+                "match": 53,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "CZE",
+                    "MEX"
+                ]
+            },
+            {
+                "match": 54,
+                "result": [
+                    0,
+                    0
+                ],
+                "teams": [
+                    "RSA",
+                    "KOR"
+                ]
+            },
+            {
+                "match": 3,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "CAN",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 8,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "QAT",
+                    "SUI"
+                ]
+            },
+            {
+                "match": 26,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "SUI",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 27,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "CAN",
+                    "QAT"
+                ]
+            },
+            {
+                "match": 51,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "SUI",
+                    "CAN"
+                ]
+            },
+            {
+                "match": 52,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "BIH",
+                    "QAT"
+                ]
+            },
+            {
+                "match": 5,
+                "result": [
+                    0,
+                    3
+                ],
+                "teams": [
+                    "HTI",
+                    "SCO"
+                ]
+            },
+            {
+                "match": 7,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "BRA",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 29,
+                "result": [
+                    5,
+                    0
+                ],
+                "teams": [
+                    "BRA",
+                    "HTI"
+                ]
+            },
+            {
+                "match": 30,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "SCO",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 49,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "SCO",
+                    "BRA"
+                ]
+            },
+            {
+                "match": 50,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "MAR",
+                    "HTI"
+                ]
+            },
+            {
+                "match": 4,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "USA",
+                    "PAR"
+                ]
+            },
+            {
+                "match": 6,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "AUS",
+                    "TUR"
+                ]
+            },
+            {
+                "match": 31,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "TUR",
+                    "PAR"
+                ]
+            },
+            {
+                "match": 32,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "AUS"
+                ]
+            },
+            {
+                "match": 59,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "TUR",
+                    "USA"
+                ]
+            },
+            {
+                "match": 60,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "PAR",
+                    "AUS"
+                ]
+            },
+            {
+                "match": 9,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "CIV",
+                    "ECU"
+                ]
+            },
+            {
+                "match": 10,
+                "result": [
+                    5,
+                    0
+                ],
+                "teams": [
+                    "GER",
+                    "CUW"
+                ]
+            },
+            {
+                "match": 33,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "GER",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 34,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ECU",
+                    "CUW"
+                ]
+            },
+            {
+                "match": 55,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "CUW",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 56,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "ECU",
+                    "GER"
+                ]
+            },
+            {
+                "match": 11,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 12,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "SWE",
+                    "TUN"
+                ]
+            },
+            {
+                "match": 35,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "NED",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 36,
+                "result": [
+                    1,
+                    3
+                ],
+                "teams": [
+                    "TUN",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 57,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "JPN",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 58,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "TUN",
+                    "NED"
+                ]
+            },
+            {
+                "match": 15,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "IRN",
+                    "NZL"
+                ]
+            },
+            {
+                "match": 16,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "BEL",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 39,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "BEL",
+                    "IRN"
+                ]
+            },
+            {
+                "match": 40,
+                "result": [
+                    0,
+                    3
+                ],
+                "teams": [
+                    "NZL",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 63,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "EGY",
+                    "IRN"
+                ]
+            },
+            {
+                "match": 64,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "NZL",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 13,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "KSA",
+                    "URU"
+                ]
+            },
+            {
+                "match": 14,
+                "result": [
+                    6,
+                    1
+                ],
+                "teams": [
+                    "ESP",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 37,
+                "result": [
+                    4,
+                    0
+                ],
+                "teams": [
+                    "URU",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 38,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "KSA"
+                ]
+            },
+            {
+                "match": 65,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "CPV",
+                    "KSA"
+                ]
+            },
+            {
+                "match": 66,
+                "result": [
+                    2,
+                    3
+                ],
+                "teams": [
+                    "URU",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 17,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "FRA",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 18,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "IRQ",
+                    "NOR"
+                ]
+            },
+            {
+                "match": 41,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "NOR",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 42,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "IRQ"
+                ]
+            },
+            {
+                "match": 61,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "NOR",
+                    "FRA"
+                ]
+            },
+            {
+                "match": 62,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "SEN",
+                    "IRQ"
+                ]
+            },
+            {
+                "match": 19,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "ARG",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 20,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "AUT",
+                    "JOR"
+                ]
+            },
+            {
+                "match": 43,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ARG",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 44,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "JOR",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 69,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "ALG",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 70,
+                "result": [
+                    0,
+                    3
+                ],
+                "teams": [
+                    "JOR",
+                    "ARG"
+                ]
+            },
+            {
+                "match": 23,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "POR",
+                    "COD"
+                ]
+            },
+            {
+                "match": 24,
+                "result": [
+                    0,
+                    3
+                ],
+                "teams": [
+                    "UZB",
+                    "COL"
+                ]
+            },
+            {
+                "match": 47,
+                "result": [
+                    4,
+                    1
+                ],
+                "teams": [
+                    "POR",
+                    "UZB"
+                ]
+            },
+            {
+                "match": 48,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "COL",
+                    "COD"
+                ]
+            },
+            {
+                "match": 71,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "COL",
+                    "POR"
+                ]
+            },
+            {
+                "match": 72,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "COD",
+                    "UZB"
+                ]
+            },
+            {
+                "match": 21,
+                "result": [
+                    4,
+                    0
+                ],
+                "teams": [
+                    "GHA",
+                    "PAN"
+                ]
+            },
+            {
+                "match": 22,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ENG",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 45,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "ENG",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 46,
+                "result": [
+                    1,
+                    3
+                ],
+                "teams": [
+                    "PAN",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 67,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "PAN",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 68,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "CRO",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 73,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "CZE",
+                    "QAT"
+                ]
+            },
+            {
+                "match": 74,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ECU",
+                    "KOR"
+                ]
+            },
+            {
+                "match": 75,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "JPN",
+                    "BRA"
+                ]
+            },
+            {
+                "match": 76,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "MAR",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 77,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "AUS"
+                ]
+            },
+            {
+                "match": 78,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "GER",
+                    "NOR"
+                ]
+            },
+            {
+                "match": 79,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "MEX",
+                    "SCO"
+                ]
+            },
+            {
+                "match": 80,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "CRO",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 81,
+                "result": [
+                    0,
+                    0
+                ],
+                "teams": [
+                    "USA",
+                    "CAN"
+                ]
+            },
+            {
+                "match": 82,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "EGY",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 83,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "COL",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 84,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 85,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "SUI",
+                    "NED"
+                ]
+            },
+            {
+                "match": 86,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ARG",
+                    "KSA"
+                ]
+            },
+            {
+                "match": 87,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "POR",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 88,
+                "result": [
+                    0,
+                    0
+                ],
+                "teams": [
+                    "TUR",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 89,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "ECU",
+                    "FRA"
+                ]
+            },
+            {
+                "match": 90,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "CZE",
+                    "BRA"
+                ]
+            },
+            {
+                "match": 91,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "MAR",
+                    "GER"
+                ]
+            },
+            {
+                "match": 92,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "MEX",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 93,
+                "result": [
+                    0,
+                    0
+                ],
+                "teams": [
+                    "ENG",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 94,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "USA",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 95,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "ARG",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 96,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "POR"
+                ]
+            },
+            {
+                "match": 97,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "BRA"
+                ]
+            },
+            {
+                "match": 98,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "ENG",
+                    "USA"
+                ]
+            },
+            {
+                "match": 99,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "GER",
+                    "MEX"
+                ]
+            },
+            {
+                "match": 100,
+                "result": [
+                    0,
+                    0
+                ],
+                "teams": [
+                    "ARG",
+                    "POR"
+                ]
+            },
+            {
+                "match": 101,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "FRA",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 102,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "GER",
+                    "ARG"
+                ]
+            },
+            {
+                "match": 103,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "FRA",
+                    "ARG"
+                ]
+            },
+            {
+                "match": 104,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "ENG",
+                    "GER"
+                ]
+            }
+        ],
+        "bonus": [
+            "ENG",
+            "201",
+            "400",
+            "ENG - Harry Kane",
+            "NED - Cody Gakpo",
+            "NED - Marten de Roon"
+        ],
+        "round_of_32": [
+            "CZE",
+            "QAT",
+            "ECU",
+            "KOR",
+            "JPN",
+            "BRA",
+            "MAR",
+            "SWE",
+            "FRA",
+            "AUS",
+            "GER",
+            "NOR",
+            "MEX",
+            "SCO",
+            "CRO",
+            "SEN",
+            "USA",
+            "CAN",
+            "EGY",
+            "AUT",
+            "COL",
+            "ENG",
+            "ESP",
+            "ALG",
+            "SUI",
+            "NED",
+            "ARG",
+            "KSA",
+            "POR",
+            "GHA",
+            "TUR",
+            "BEL"
+        ],
+        "round_of_16": [
+            "ECU",
+            "FRA",
+            "CZE",
+            "BRA",
+            "MAR",
+            "GER",
+            "MEX",
+            "CRO",
+            "ENG",
+            "ESP",
+            "USA",
+            "EGY",
+            "ARG",
+            "BEL",
+            "NED",
+            "POR"
+        ],
+        "quarter_finals": [
+            "FRA",
+            "BRA",
+            "ENG",
+            "USA",
+            "GER",
+            "MEX",
+            "ARG",
+            "POR"
+        ],
+        "semi_finals": [
+            "FRA",
+            "ENG",
+            "GER",
+            "ARG"
+        ],
+        "bronze_final": [
+            "FRA",
+            "ARG"
+        ],
+        "final": [
+            "ENG",
+            "GER"
+        ]
+    },
+    {
+        "name": "April Requerme",
+        "team_name": "FC Jollibee",
+        "email": "aprilrequerme@gmail.com",
+        "tel": "+31630121181",
+        "predictions": [
+            {
+                "match": 1,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "MEX",
+                    "RSA"
+                ]
+            },
+            {
+                "match": 2,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "KOR",
+                    "CZE"
+                ]
+            },
+            {
+                "match": 25,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "CZE",
+                    "RSA"
+                ]
+            },
+            {
+                "match": 28,
+                "result": [
+                    3,
+                    2
+                ],
+                "teams": [
+                    "MEX",
+                    "KOR"
+                ]
+            },
+            {
+                "match": 53,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "CZE",
+                    "MEX"
+                ]
+            },
+            {
+                "match": 54,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "RSA",
+                    "KOR"
+                ]
+            },
+            {
+                "match": 3,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "CAN",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 8,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "QAT",
+                    "SUI"
+                ]
+            },
+            {
+                "match": 26,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "SUI",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 27,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "CAN",
+                    "QAT"
+                ]
+            },
+            {
+                "match": 51,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "SUI",
+                    "CAN"
+                ]
+            },
+            {
+                "match": 52,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "BIH",
+                    "QAT"
+                ]
+            },
+            {
+                "match": 5,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "HTI",
+                    "SCO"
+                ]
+            },
+            {
+                "match": 7,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "BRA",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 29,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "BRA",
+                    "HTI"
+                ]
+            },
+            {
+                "match": 30,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "SCO",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 49,
+                "result": [
+                    1,
+                    3
+                ],
+                "teams": [
+                    "SCO",
+                    "BRA"
+                ]
+            },
+            {
+                "match": 50,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "MAR",
+                    "HTI"
+                ]
+            },
+            {
+                "match": 4,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "PAR"
+                ]
+            },
+            {
+                "match": 6,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "AUS",
+                    "TUR"
+                ]
+            },
+            {
+                "match": 31,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "TUR",
+                    "PAR"
+                ]
+            },
+            {
+                "match": 32,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "AUS"
+                ]
+            },
+            {
+                "match": 59,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "TUR",
+                    "USA"
+                ]
+            },
+            {
+                "match": 60,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "PAR",
+                    "AUS"
+                ]
+            },
+            {
+                "match": 9,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "CIV",
+                    "ECU"
+                ]
+            },
+            {
+                "match": 10,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "GER",
+                    "CUW"
+                ]
+            },
+            {
+                "match": 33,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "GER",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 34,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "ECU",
+                    "CUW"
+                ]
+            },
+            {
+                "match": 55,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "CUW",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 56,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ECU",
+                    "GER"
+                ]
+            },
+            {
+                "match": 11,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 12,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "SWE",
+                    "TUN"
+                ]
+            },
+            {
+                "match": 35,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 36,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "TUN",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 57,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "JPN",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 58,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "TUN",
+                    "NED"
+                ]
+            },
+            {
+                "match": 15,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "IRN",
+                    "NZL"
+                ]
+            },
+            {
+                "match": 16,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "BEL",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 39,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "BEL",
+                    "IRN"
+                ]
+            },
+            {
+                "match": 40,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "NZL",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 63,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "EGY",
+                    "IRN"
+                ]
+            },
+            {
+                "match": 64,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "NZL",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 13,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "KSA",
+                    "URU"
+                ]
+            },
+            {
+                "match": 14,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 37,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "URU",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 38,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "KSA"
+                ]
+            },
+            {
+                "match": 65,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "CPV",
+                    "KSA"
+                ]
+            },
+            {
+                "match": 66,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "URU",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 17,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "FRA",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 18,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "IRQ",
+                    "NOR"
+                ]
+            },
+            {
+                "match": 41,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "NOR",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 42,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "IRQ"
+                ]
+            },
+            {
+                "match": 61,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "NOR",
+                    "FRA"
+                ]
+            },
+            {
+                "match": 62,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "SEN",
+                    "IRQ"
+                ]
+            },
+            {
+                "match": 19,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ARG",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 20,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "AUT",
+                    "JOR"
+                ]
+            },
+            {
+                "match": 43,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ARG",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 44,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "JOR",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 69,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "ALG",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 70,
+                "result": [
+                    1,
+                    3
+                ],
+                "teams": [
+                    "JOR",
+                    "ARG"
+                ]
+            },
+            {
+                "match": 23,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "POR",
+                    "COD"
+                ]
+            },
+            {
+                "match": 24,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "UZB",
+                    "COL"
+                ]
+            },
+            {
+                "match": 47,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "POR",
+                    "UZB"
+                ]
+            },
+            {
+                "match": 48,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "COL",
+                    "COD"
+                ]
+            },
+            {
+                "match": 71,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "COL",
+                    "POR"
+                ]
+            },
+            {
+                "match": 72,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "COD",
+                    "UZB"
+                ]
+            },
+            {
+                "match": 21,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "GHA",
+                    "PAN"
+                ]
+            },
+            {
+                "match": 22,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "ENG",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 45,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ENG",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 46,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "PAN",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 67,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "PAN",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 68,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "CRO",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 73,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "KOR",
+                    "SUI"
+                ]
+            },
+            {
+                "match": 74,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "GER",
+                    "RSA"
+                ]
+            },
+            {
+                "match": 75,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "JPN",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 76,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "BRA",
+                    "NED"
+                ]
+            },
+            {
+                "match": 77,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "FRA",
+                    "PAR"
+                ]
+            },
+            {
+                "match": 78,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ECU",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 79,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "MEX",
+                    "HTI"
+                ]
+            },
+            {
+                "match": 80,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ENG",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 81,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "TUR",
+                    "TUN"
+                ]
+            },
+            {
+                "match": 82,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "NZL",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 83,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "COD",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 84,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "ESP",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 85,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "CAN",
+                    "IRN"
+                ]
+            },
+            {
+                "match": 86,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "ARG",
+                    "URU"
+                ]
+            },
+            {
+                "match": 87,
+                "result": [
+                    3,
+                    2
+                ],
+                "teams": [
+                    "POR",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 88,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "USA",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 89,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "GER",
+                    "FRA"
+                ]
+            },
+            {
+                "match": 90,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "KOR",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 91,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 92,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "MEX",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 93,
+                "result": [
+                    2,
+                    3
+                ],
+                "teams": [
+                    "CRO",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 94,
+                "result": [
+                    3,
+                    3
+                ],
+                "teams": [
+                    "TUR",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 95,
+                "result": [
+                    3,
+                    3
+                ],
+                "teams": [
+                    "ARG",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 96,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "CAN",
+                    "POR"
+                ]
+            },
+            {
+                "match": 97,
+                "result": [
+                    3,
+                    2
+                ],
+                "teams": [
+                    "FRA",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 98,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ESP",
+                    "TUR"
+                ]
+            },
+            {
+                "match": 99,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "MEX"
+                ]
+            },
+            {
+                "match": 100,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "ARG",
+                    "POR"
+                ]
+            },
+            {
+                "match": 101,
+                "result": [
+                    2,
+                    3
+                ],
+                "teams": [
+                    "FRA",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 102,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "POR"
+                ]
+            },
+            {
+                "match": 103,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "FRA",
+                    "POR"
+                ]
+            },
+            {
+                "match": 104,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "ESP",
+                    "NED"
+                ]
+            }
+        ],
+        "bonus": [
+            "NED",
+            "310",
+            "460",
+            "NED - Tijjani Reijnders",
+            "NED - Wout Weghorst",
+            "NED - Jurrien Timber"
+        ],
+        "round_of_32": [
+            "KOR",
+            "SUI",
+            "GER",
+            "RSA",
+            "JPN",
+            "MAR",
+            "BRA",
+            "NED",
+            "FRA",
+            "PAR",
+            "ECU",
+            "SEN",
+            "MEX",
+            "HTI",
+            "ENG",
+            "CIV",
+            "TUR",
+            "TUN",
+            "NZL",
+            "CPV",
+            "COD",
+            "CRO",
+            "ESP",
+            "AUT",
+            "CAN",
+            "IRN",
+            "ARG",
+            "URU",
+            "POR",
+            "GHA",
+            "USA",
+            "BEL"
+        ],
+        "round_of_16": [
+            "GER",
+            "FRA",
+            "KOR",
+            "JPN",
+            "NED",
+            "SEN",
+            "MEX",
+            "ENG",
+            "CRO",
+            "ESP",
+            "TUR",
+            "CPV",
+            "ARG",
+            "BEL",
+            "CAN",
+            "POR"
+        ],
+        "quarter_finals": [
+            "FRA",
+            "JPN",
+            "ESP",
+            "TUR",
+            "NED",
+            "MEX",
+            "ARG",
+            "POR"
+        ],
+        "semi_finals": [
+            "FRA",
+            "ESP",
+            "NED",
+            "POR"
+        ],
+        "bronze_final": [
+            "FRA",
+            "POR"
+        ],
+        "final": [
+            "ESP",
+            "NED"
+        ]
+    },
+    {
+        "name": "Tommy",
+        "team_name": "Extreem Links",
+        "email": "tomdeb12@live.nl",
+        "tel": "0624896782",
+        "predictions": [
+            {
+                "match": 1,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "MEX",
+                    "RSA"
+                ]
+            },
+            {
+                "match": 2,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "KOR",
+                    "CZE"
+                ]
+            },
+            {
+                "match": 25,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "CZE",
+                    "RSA"
+                ]
+            },
+            {
+                "match": 28,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "MEX",
+                    "KOR"
+                ]
+            },
+            {
+                "match": 53,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "CZE",
+                    "MEX"
+                ]
+            },
+            {
+                "match": 54,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "RSA",
+                    "KOR"
+                ]
+            },
+            {
+                "match": 3,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "CAN",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 8,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "QAT",
+                    "SUI"
+                ]
+            },
+            {
+                "match": 26,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "SUI",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 27,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "CAN",
+                    "QAT"
+                ]
+            },
+            {
+                "match": 51,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "SUI",
+                    "CAN"
+                ]
+            },
+            {
+                "match": 52,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "BIH",
+                    "QAT"
+                ]
+            },
+            {
+                "match": 5,
+                "result": [
+                    0,
+                    3
+                ],
+                "teams": [
+                    "HTI",
+                    "SCO"
+                ]
+            },
+            {
+                "match": 7,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "BRA",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 29,
+                "result": [
+                    4,
+                    0
+                ],
+                "teams": [
+                    "BRA",
+                    "HTI"
+                ]
+            },
+            {
+                "match": 30,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "SCO",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 49,
+                "result": [
+                    1,
+                    5
+                ],
+                "teams": [
+                    "SCO",
+                    "BRA"
+                ]
+            },
+            {
+                "match": 50,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "MAR",
+                    "HTI"
+                ]
+            },
+            {
+                "match": 4,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "PAR"
+                ]
+            },
+            {
+                "match": 6,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "AUS",
+                    "TUR"
+                ]
+            },
+            {
+                "match": 31,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "TUR",
+                    "PAR"
+                ]
+            },
+            {
+                "match": 32,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "AUS"
+                ]
+            },
+            {
+                "match": 59,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "TUR",
+                    "USA"
+                ]
+            },
+            {
+                "match": 60,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "PAR",
+                    "AUS"
+                ]
+            },
+            {
+                "match": 9,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "CIV",
+                    "ECU"
+                ]
+            },
+            {
+                "match": 10,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "GER",
+                    "CUW"
+                ]
+            },
+            {
+                "match": 33,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "GER",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 34,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ECU",
+                    "CUW"
+                ]
+            },
+            {
+                "match": 55,
+                "result": [
+                    1,
+                    3
+                ],
+                "teams": [
+                    "CUW",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 56,
+                "result": [
+                    1,
+                    3
+                ],
+                "teams": [
+                    "ECU",
+                    "GER"
+                ]
+            },
+            {
+                "match": 11,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 12,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "SWE",
+                    "TUN"
+                ]
+            },
+            {
+                "match": 35,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "NED",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 36,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "TUN",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 57,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "JPN",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 58,
+                "result": [
+                    0,
+                    3
+                ],
+                "teams": [
+                    "TUN",
+                    "NED"
+                ]
+            },
+            {
+                "match": 15,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "IRN",
+                    "NZL"
+                ]
+            },
+            {
+                "match": 16,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "BEL",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 39,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "BEL",
+                    "IRN"
+                ]
+            },
+            {
+                "match": 40,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "NZL",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 63,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "EGY",
+                    "IRN"
+                ]
+            },
+            {
+                "match": 64,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "NZL",
+                    "BEL"
+                ]
+            },
+            {
+                "match": 13,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "KSA",
+                    "URU"
+                ]
+            },
+            {
+                "match": 14,
+                "result": [
+                    4,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 37,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "URU",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 38,
+                "result": [
+                    4,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "KSA"
+                ]
+            },
+            {
+                "match": 65,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "CPV",
+                    "KSA"
+                ]
+            },
+            {
+                "match": 66,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "URU",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 17,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "FRA",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 18,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "IRQ",
+                    "NOR"
+                ]
+            },
+            {
+                "match": 41,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "NOR",
+                    "SEN"
+                ]
+            },
+            {
+                "match": 42,
+                "result": [
+                    5,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "IRQ"
+                ]
+            },
+            {
+                "match": 61,
+                "result": [
+                    1,
+                    3
+                ],
+                "teams": [
+                    "NOR",
+                    "FRA"
+                ]
+            },
+            {
+                "match": 62,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "SEN",
+                    "IRQ"
+                ]
+            },
+            {
+                "match": 19,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ARG",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 20,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "AUT",
+                    "JOR"
+                ]
+            },
+            {
+                "match": 43,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "ARG",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 44,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "JOR",
+                    "ALG"
+                ]
+            },
+            {
+                "match": 69,
+                "result": [
+                    1,
+                    3
+                ],
+                "teams": [
+                    "ALG",
+                    "AUT"
+                ]
+            },
+            {
+                "match": 70,
+                "result": [
+                    0,
+                    4
+                ],
+                "teams": [
+                    "JOR",
+                    "ARG"
+                ]
+            },
+            {
+                "match": 23,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "POR",
+                    "COD"
+                ]
+            },
+            {
+                "match": 24,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "UZB",
+                    "COL"
+                ]
+            },
+            {
+                "match": 47,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "POR",
+                    "UZB"
+                ]
+            },
+            {
+                "match": 48,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "COL",
+                    "COD"
+                ]
+            },
+            {
+                "match": 71,
+                "result": [
+                    2,
+                    2
+                ],
+                "teams": [
+                    "COL",
+                    "POR"
+                ]
+            },
+            {
+                "match": 72,
+                "result": [
+                    0,
+                    0
+                ],
+                "teams": [
+                    "COD",
+                    "UZB"
+                ]
+            },
+            {
+                "match": 21,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "GHA",
+                    "PAN"
+                ]
+            },
+            {
+                "match": 22,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "ENG",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 45,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "ENG",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 46,
+                "result": [
+                    0,
+                    3
+                ],
+                "teams": [
+                    "PAN",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 67,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "PAN",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 68,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "CRO",
+                    "GHA"
+                ]
+            },
+            {
+                "match": 73,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "KOR",
+                    "CAN"
+                ]
+            },
+            {
+                "match": 74,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "GER",
+                    "CZE"
+                ]
+            },
+            {
+                "match": 75,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "NED",
+                    "MAR"
+                ]
+            },
+            {
+                "match": 76,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "BRA",
+                    "JPN"
+                ]
+            },
+            {
+                "match": 77,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "SCO"
+                ]
+            },
+            {
+                "match": 78,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "CIV",
+                    "IRQ"
+                ]
+            },
+            {
+                "match": 79,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "MEX",
+                    "SWE"
+                ]
+            },
+            {
+                "match": 80,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "CRO",
+                    "KSA"
+                ]
+            },
+            {
+                "match": 81,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "TUR",
+                    "BIH"
+                ]
+            },
+            {
+                "match": 82,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "BEL",
+                    "NOR"
+                ]
+            },
+            {
+                "match": 83,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "COL",
+                    "ENG"
+                ]
+            },
+            {
+                "match": 84,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "ESP",
+                    "ARG"
+                ]
+            },
+            {
+                "match": 85,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "SUI",
+                    "IRN"
+                ]
+            },
+            {
+                "match": 86,
+                "result": [
+                    3,
+                    0
+                ],
+                "teams": [
+                    "AUT",
+                    "CPV"
+                ]
+            },
+            {
+                "match": 87,
+                "result": [
+                    3,
+                    1
+                ],
+                "teams": [
+                    "POR",
+                    "PAR"
+                ]
+            },
+            {
+                "match": 88,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "USA",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 89,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "GER",
+                    "FRA"
+                ]
+            },
+            {
+                "match": 90,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "CAN",
+                    "NED"
+                ]
+            },
+            {
+                "match": 91,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "BRA",
+                    "CIV"
+                ]
+            },
+            {
+                "match": 92,
+                "result": [
+                    0,
+                    0
+                ],
+                "teams": [
+                    "MEX",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 93,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "ENG",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 94,
+                "result": [
+                    0,
+                    1
+                ],
+                "teams": [
+                    "TUR",
+                    "NOR"
+                ]
+            },
+            {
+                "match": 95,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "AUT",
+                    "EGY"
+                ]
+            },
+            {
+                "match": 96,
+                "result": [
+                    1,
+                    2
+                ],
+                "teams": [
+                    "SUI",
+                    "POR"
+                ]
+            },
+            {
+                "match": 97,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "NED"
+                ]
+            },
+            {
+                "match": 98,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "NOR"
+                ]
+            },
+            {
+                "match": 99,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "BRA",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 100,
+                "result": [
+                    0,
+                    2
+                ],
+                "teams": [
+                    "AUT",
+                    "POR"
+                ]
+            },
+            {
+                "match": 101,
+                "result": [
+                    1,
+                    0
+                ],
+                "teams": [
+                    "FRA",
+                    "ESP"
+                ]
+            },
+            {
+                "match": 102,
+                "result": [
+                    1,
+                    1
+                ],
+                "teams": [
+                    "CRO",
+                    "POR"
+                ]
+            },
+            {
+                "match": 103,
+                "result": [
+                    2,
+                    0
+                ],
+                "teams": [
+                    "ESP",
+                    "CRO"
+                ]
+            },
+            {
+                "match": 104,
+                "result": [
+                    2,
+                    1
+                ],
+                "teams": [
+                    "FRA",
+                    "POR"
+                ]
+            }
+        ],
+        "bonus": [
+            "FRA",
+            "219",
+            "389",
+            "FRA - Kylian Mbappe",
+            "NED - Donyell Malen",
+            "NED - Nathan Ake"
+        ],
+        "round_of_32": [
+            "KOR",
+            "CAN",
+            "GER",
+            "CZE",
+            "NED",
+            "MAR",
+            "BRA",
+            "JPN",
+            "FRA",
+            "SCO",
+            "CIV",
+            "IRQ",
+            "MEX",
+            "SWE",
+            "CRO",
+            "KSA",
+            "TUR",
+            "BIH",
+            "BEL",
+            "NOR",
+            "COL",
+            "ENG",
+            "ESP",
+            "ARG",
+            "SUI",
+            "IRN",
+            "AUT",
+            "CPV",
+            "POR",
+            "PAR",
+            "USA",
+            "EGY"
+        ],
+        "round_of_16": [
+            "GER",
+            "FRA",
+            "CAN",
+            "NED",
+            "BRA",
+            "CIV",
+            "MEX",
+            "CRO",
+            "ENG",
+            "ESP",
+            "TUR",
+            "NOR",
+            "AUT",
+            "EGY",
+            "SUI",
+            "POR"
+        ],
+        "quarter_finals": [
+            "FRA",
+            "NED",
+            "ESP",
+            "NOR",
+            "BRA",
+            "CRO",
+            "AUT",
+            "POR"
+        ],
+        "semi_finals": [
+            "FRA",
+            "ESP",
+            "CRO",
+            "POR"
+        ],
+        "bronze_final": [
+            "ESP",
+            "CRO"
+        ],
+        "final": [
+            "FRA",
+            "POR"
+        ]
     }
 ]
