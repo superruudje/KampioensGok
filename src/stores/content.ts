@@ -243,7 +243,7 @@ export const useTournament = defineStore('tournament', {
 
                 // Filter matches that belong to the poule (matching teams)
                 const pouleMatches = state.matches.filter(match =>
-                    match.teams.some(teamName => pouleTeams.some(team => team === teamName))
+                    match.teams.every(teamName => pouleTeams.includes(teamName))
                 );
 
                 // Group filtered matches by match day
@@ -1032,14 +1032,21 @@ export const useTournament = defineStore('tournament', {
                 return scoreA > scoreB ? teams[0] : teams[1];
             };
 
+            const isValidScore = (result: unknown): result is [number, number] => {
+                return Array.isArray(result) &&
+                result.length === 2 &&
+                result.every(score => typeof score === 'number' && !Number.isNaN(score));
+            };
+
             // Utility to calculate team stats
             const calculateTeamStats = (team: string, matches: MatchResult[]): TeamStats => {
                 let team_stats = {team, points: 0, for: 0, against: 0, matches: []} as TeamStats;
 
                 matches.forEach(matchResult => {
                     if (!matchResult.teams || !matchResult.teams.includes(team)) return;
+                    if (!isValidScore(matchResult.result)) return;
+
                     const [scoreA, scoreB] = matchResult.result;
-                    if (!scoreA || !scoreB) return;
                     const winner = getMatchWinner(scoreA, scoreB, matchResult.teams);
 
                     if (winner === null) {
