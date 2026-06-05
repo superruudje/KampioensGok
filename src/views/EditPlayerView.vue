@@ -860,7 +860,6 @@ function handleScoreUpdate({match, teamIndex, value}: { match: number; teamIndex
  */
 function getPredictedPoules() {
     const pouleTables = tournament.getPoules(player.value.predictions);
-    console.log(pouleTables)
     predictedPouleStandings.value = {};
     pouleTables.forEach(pouleTable => {
         predictedPouleStandings.value['1' + pouleTable.name] = pouleTable.teams[0];
