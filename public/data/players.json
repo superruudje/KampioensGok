@@ -8550,8 +8550,8 @@
                     2
                 ],
                 "teams": [
-                    "ESP",
-                    "POR"
+                    "FRA",
+                    "BRA"
                 ]
             },
             {
@@ -8561,8 +8561,8 @@
                     2
                 ],
                 "teams": [
-                    "FRA",
-                    "BRA"
+                    "ESP",
+                    "POR"
                 ]
             }
         ],
@@ -8643,12 +8643,12 @@
             "POR"
         ],
         "bronze_final": [
-            "ESP",
-            "POR"
-        ],
-        "final": [
             "FRA",
             "BRA"
+        ],
+        "final": [
+            "ESP",
+            "POR"
         ]
     },
     {
