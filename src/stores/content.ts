@@ -793,6 +793,21 @@ export const useTournament = defineStore('tournament', {
             return this.getStanding(null).find(p => p.team_name === teamName)?.pos || 0
         },
         /**
+         * Get player by token.
+         * @param token
+         */
+        getPlayerByToken(token: string) {
+            const player = this.players.find(
+                player => player.token === token
+            );
+
+            if (!player) {
+                throw new Error('Player not found');
+            }
+
+            return JSON.parse(JSON.stringify(player));
+        },
+        /**
          * Return participant by team name
          */
         getParticipant(teamName: string): Player | undefined {

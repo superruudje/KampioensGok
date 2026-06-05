@@ -65,6 +65,7 @@
                         style="all: unset"
                         type="text"
                         autocomplete="off"
+                        :readonly="readonly"
                         @input="setPredictionScore(0, $event)"
                         @keyup="gotoNext($event)"
                     />
@@ -88,6 +89,7 @@
                         style="all: unset"
                         type="text"
                         autocomplete="off"
+                        :readonly="readonly"
                         @input="setPredictionScore(1, $event)"
                         @keyup="gotoNext($event)"
                     />
@@ -195,6 +197,7 @@ const props = defineProps<{
     form: string,
     disableTeams?: boolean
     wasValidated?: boolean
+    readonly?: boolean
 }>();
 
 const showPopularPredictions = ref<boolean>(false);

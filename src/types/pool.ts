@@ -10,6 +10,7 @@ export interface Question {
 }
 
 export interface Player {
+    token?: string,
     name: string,
     team_name: string,
     email: string,
