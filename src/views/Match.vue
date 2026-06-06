@@ -12,8 +12,10 @@
                             <div
                                 class="d-flex flex-grow-1 flex-shrink-0 align-items-center justify-content-end gap-2"
                                 style="flex-basis: 30%">
-                                <h1 class="mb-0 d-none d-md-block">{{ isTeam(match.teams[0] as string) ? $t('countries.' + match.teams[0]) : match.teams[0] }}</h1>
-                                <h6 class="mb-0 d-md-none">{{ isTeam(match.teams[0] as string) ? $t('countries.' + match.teams[0]) : match.teams[0] }}</h6>
+                                <h1 class="mb-0 d-none d-md-block">
+                                    {{ isTeam(match.teams[0] as string) ? $t('countries.' + match.teams[0]) : match.teams[0] }}</h1>
+                                <h6 class="mb-0 d-md-none">
+                                    {{ isTeam(match.teams[0] as string) ? $t('countries.' + match.teams[0]) : match.teams[0] }}</h6>
                                 <img
                                     :src="getTeamImage(match.teams[0] as string)"
                                     alt="teamA"
@@ -32,8 +34,10 @@
                             <div
                                 class="d-flex flex-row-reverse flex-grow-1 flex-shrink-0 align-items-center justify-content-end gap-2"
                                 style="flex-basis: 30%">
-                                <h1 class="mb-0 d-none d-md-block">{{ isTeam(match.teams[1] as string) ? $t('countries.' + match.teams[1]) : match.teams[1] }}</h1>
-                                <h6 class="mb-0 d-md-none">{{ isTeam(match.teams[1] as string) ? $t('countries.' + match.teams[1]) : match.teams[1] }}</h6>
+                                <h1 class="mb-0 d-none d-md-block">
+                                    {{ isTeam(match.teams[1] as string) ? $t('countries.' + match.teams[1]) : match.teams[1] }}</h1>
+                                <h6 class="mb-0 d-md-none">
+                                    {{ isTeam(match.teams[1] as string) ? $t('countries.' + match.teams[1]) : match.teams[1] }}</h6>
                                 <img
                                     :src="getTeamImage(match.teams[1] as string)"
                                     alt="teamA"
@@ -70,7 +74,13 @@
                     </div>
                 </div>
                 <div class="col-md-4">
+                    <div v-if="!started" class="card rounded-4">
+                        <div class="card-body p-3 p-md-4">
+                            <NotStarted />
+                        </div>
+                    </div>
                     <PredictionTableCard
+                        v-else
                         :image="false"
                         :list="tournament.getGroupedMatchPrediction(match?.num)"
                         :table_header="$t('dict.result')"
@@ -91,15 +101,16 @@ import {storeToRefs} from "pinia";
 import TimelineComponent from "@/components/TimelineComponent.vue";
 import PredictionTableCard from "@/components/PredictionTableCard.vue";
 import dayjs from "dayjs";
-import { useI18n } from 'vue-i18n'
+import {useI18n} from 'vue-i18n'
 import {i18n} from "@/i18n";
+import NotStarted from "@/components/NotStarted.vue";
 
-const { locale } = useI18n();
+const {locale} = useI18n();
 
 const route = useRoute();
 
 const tournament = useTournament();
-const {teamImages, teams} = storeToRefs(tournament);
+const {teamImages, teams, playedMatches} = storeToRefs(tournament);
 
 
 const match: Ref<Match | null | undefined> = ref(null);
@@ -122,6 +133,10 @@ const matchType = computed(() => {
         return `${i18n.global.t('dict.group')} ${match.value?.poule_name}`;
     else
         return match.value?.poule_name.replaceAll("_", " ");
+})
+
+const started = computed(() => {
+    return playedMatches.value.length
 })
 
 /**
