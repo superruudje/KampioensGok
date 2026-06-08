@@ -28,8 +28,8 @@
                                     width="32"/>
                             </div>
                             <div class="d-flex align-items-center fs-2">
-                                <span>{{ match.result[0] != null ? match.result[0] : '?' }}</span>-
-                                <span>{{ match.result[1] != null ? match.result[1] : '?' }}</span>
+                                <span>{{ match.result?.[0] != null ? match.result[0] : '?' }}</span>-
+                                <span>{{ match.result?.[1] != null ? match.result[1] : '?' }}</span>
                             </div>
                             <div
                                 class="d-flex flex-row-reverse flex-grow-1 flex-shrink-0 align-items-center justify-content-end gap-2"

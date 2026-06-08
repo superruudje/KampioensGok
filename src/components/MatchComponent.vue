@@ -23,7 +23,7 @@
                         <span
                             v-if="match.result_after_extra_time"
                             class="fs-6 lh-1">({{ match.result_after_extra_time[n - 1] }})</span>
-                        <span class="fs-4 fw-bold lh-1">{{ match.result[n - 1] != null ? match.result[n - 1] : '?' }}</span>
+                        <span class="fs-4 fw-bold lh-1">{{ match.result?.[n - 1] ?? '?' }}</span>
                     </div>
                 </div>
                 <div class="vr"></div>

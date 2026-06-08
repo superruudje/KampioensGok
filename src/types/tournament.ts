@@ -36,16 +36,16 @@ export interface Match {
     location_id: number;
 
     /** Participating teams (home/away order) */
-    teams: string[];
+    teams: [string, string];
 
     /** Final result after regular time */
-    result: number[];
+    result?: [number, number];
 
     /** Result after extra time */
-    result_after_extra_time?: number[];
+    result_after_extra_time?: [number, number];
 
     /** Result after penalty shootout */
-    result_after_penalties?: number[];
+    result_after_penalties?: [number, number];
 
     /** Match events such as goals and cards */
     events?: MatchEvent[];

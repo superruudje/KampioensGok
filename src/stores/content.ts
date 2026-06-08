@@ -1,6 +1,7 @@
 import {defineStore} from "pinia";
 import {filename} from 'pathe/utils'
 import {i18n} from "@/i18n";
+import {results} from "@/data/results.ts";
 
 import {
     type Location,
@@ -44,6 +45,19 @@ interface TournamentState {
     pageNumber: number;
     pageSize: number | string;
     loading: boolean;
+}
+
+function getFinalResult(match: Match): [number, number] | null {
+    const result =
+        match.result_after_penalties ??
+        match.result_after_extra_time ??
+        match.result;
+    return Array.isArray(result) &&
+
+    result.length === 2 &&
+    result.every(score => typeof score === 'number')
+        ? [result[0], result[1]]
+        : null;
 }
 
 export const useTournament = defineStore('tournament', {
@@ -424,15 +438,12 @@ export const useTournament = defineStore('tournament', {
          * @returns {{average: number, matches}}
          */
         averageGoalsPerMatch(state): number {
-            const validMatches = state.matches.filter(match => {
-                const result = match.result_after_extra_time ?? match.result;
-                return Array.isArray(result) &&
-                    result.length === 2 &&
-                    result.every(score => typeof score === 'number');
-            });
+            const validMatches = state.matches.filter(
+                match => getFinalResult(match) !== null
+            );
 
             const totalGoals = validMatches.reduce((sum, match) => {
-                const result = match.result_after_extra_time ?? match.result;
+                const result = getFinalResult(match)!;
                 return sum + result[0] + result[1];
             }, 0);
 
@@ -699,7 +710,14 @@ export const useTournament = defineStore('tournament', {
                 ]);
 
                 this.teams = teams
-                this.matches = matches as Match[]
+                this.matches = (matches as Match[]).map(match => {
+                    const result = results[match.num];
+
+                    return {
+                        ...match,
+                        ...(result ?? {})
+                    };
+                });
                 this.match_days = matchDays as MatchDay[]
                 this.locations = locations
                 this.players = players
@@ -826,29 +844,45 @@ export const useTournament = defineStore('tournament', {
          * @return {string} The match summary as a string, indicating the winner (if applicable) and the method of victory (e.g., penalties or extra time). Returns an empty string if no extra time result is provided.
          */
         getMatchSummary(match: Match): string {
-            if (match.result.length === 0) return match.poule_name.length === 1 ?
-                i18n.global.t('dict.group') + ' ' + match.poule_name :
-                capitalize(i18n.global.t('dict.' + match.poule_name));
+            const finalScore = getFinalResult(match);
 
-            const { result, result_after_extra_time, result_after_penalties, teams } = match;
+            if (!finalScore) {
+                return match.poule_name.length === 1
+                    ? `${i18n.global.t('dict.group')} ${match.poule_name}`
+                    : capitalize(i18n.global.t(`dict.${match.poule_name}`));
+            }
 
-            const final_score = result_after_penalties || result_after_extra_time || result;
-            const [scoreA, scoreB] = final_score;
-            const final_winner = scoreA === scoreB ? null : scoreA > scoreB ? 0 : 1;
+            const [scoreA, scoreB] = finalScore;
+            const finalWinner =
+                scoreA === scoreB
+                    ? null
+                    : scoreA > scoreB
+                        ? 0
+                        : 1;
 
-            if (final_winner === null) {
+            if (finalWinner === null) {
                 return i18n.global.t('dict.draw');
             }
 
-            const winnerName = i18n.global.t('countries.' + teams[final_winner]);
+            const winnerName = i18n.global.t(
+                'countries.' + match.teams[finalWinner]
+            );
 
-            if (result_after_penalties) {
-                return i18n.global.t('dict.wins_on_penalties', { team: winnerName });
-            } else if (result_after_extra_time) {
-                return i18n.global.t('dict.wins_after_extra_time', { team: winnerName });
-            } else {
-                return i18n.global.t('dict.wins_on_score', { team: winnerName });
+            if (match.result_after_penalties?.length === 2) {
+                return i18n.global.t('dict.wins_on_penalties', {
+                    team: winnerName
+                });
             }
+
+            if (match.result_after_extra_time?.length === 2) {
+                return i18n.global.t('dict.wins_after_extra_time', {
+                    team: winnerName
+                });
+            }
+
+            return i18n.global.t('dict.wins_on_score', {
+                team: winnerName
+            });
         },
         /**
          * Calculate total score

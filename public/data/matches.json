@@ -8,9 +8,7 @@
         "teams": [
             "MEX",
             "RSA"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 2,
@@ -21,9 +19,7 @@
         "teams": [
             "KOR",
             "CZE"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 3,
@@ -34,9 +30,7 @@
         "teams": [
             "CAN",
             "BIH"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 4,
@@ -47,9 +41,7 @@
         "teams": [
             "USA",
             "PAR"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 5,
@@ -60,9 +52,7 @@
         "teams": [
             "HTI",
             "SCO"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 6,
@@ -73,9 +63,7 @@
         "teams": [
             "AUS",
             "TUR"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 7,
@@ -86,9 +74,7 @@
         "teams": [
             "BRA",
             "MAR"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 8,
@@ -99,9 +85,7 @@
         "teams": [
             "QAT",
             "SUI"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 9,
@@ -112,9 +96,7 @@
         "teams": [
             "CIV",
             "ECU"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 10,
@@ -125,9 +107,7 @@
         "teams": [
             "GER",
             "CUW"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 11,
@@ -138,9 +118,7 @@
         "teams": [
             "NED",
             "JPN"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 12,
@@ -151,9 +129,7 @@
         "teams": [
             "SWE",
             "TUN"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 13,
@@ -164,9 +140,7 @@
         "teams": [
             "KSA",
             "URU"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 14,
@@ -177,9 +151,7 @@
         "teams": [
             "ESP",
             "CPV"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 15,
@@ -190,9 +162,7 @@
         "teams": [
             "IRN",
             "NZL"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 16,
@@ -203,9 +173,7 @@
         "teams": [
             "BEL",
             "EGY"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 17,
@@ -216,9 +184,7 @@
         "teams": [
             "FRA",
             "SEN"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 18,
@@ -229,9 +195,7 @@
         "teams": [
             "IRQ",
             "NOR"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 19,
@@ -242,9 +206,7 @@
         "teams": [
             "ARG",
             "ALG"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 20,
@@ -255,9 +217,7 @@
         "teams": [
             "AUT",
             "JOR"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 21,
@@ -268,9 +228,7 @@
         "teams": [
             "GHA",
             "PAN"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 22,
@@ -281,9 +239,7 @@
         "teams": [
             "ENG",
             "CRO"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 23,
@@ -294,9 +250,7 @@
         "teams": [
             "POR",
             "COD"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 24,
@@ -307,9 +261,7 @@
         "teams": [
             "UZB",
             "COL"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 25,
@@ -320,9 +272,7 @@
         "teams": [
             "CZE",
             "RSA"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 26,
@@ -333,9 +283,7 @@
         "teams": [
             "SUI",
             "BIH"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 27,
@@ -346,9 +294,7 @@
         "teams": [
             "CAN",
             "QAT"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 28,
@@ -359,9 +305,7 @@
         "teams": [
             "MEX",
             "KOR"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 29,
@@ -372,9 +316,7 @@
         "teams": [
             "BRA",
             "HTI"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 30,
@@ -385,9 +327,7 @@
         "teams": [
             "SCO",
             "MAR"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 31,
@@ -398,9 +338,7 @@
         "teams": [
             "TUR",
             "PAR"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 32,
@@ -411,9 +349,7 @@
         "teams": [
             "USA",
             "AUS"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 33,
@@ -424,9 +360,7 @@
         "teams": [
             "GER",
             "CIV"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 34,
@@ -437,9 +371,7 @@
         "teams": [
             "ECU",
             "CUW"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 35,
@@ -450,9 +382,7 @@
         "teams": [
             "NED",
             "SWE"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 36,
@@ -463,9 +393,7 @@
         "teams": [
             "TUN",
             "JPN"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 37,
@@ -476,9 +404,7 @@
         "teams": [
             "URU",
             "CPV"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 38,
@@ -489,9 +415,7 @@
         "teams": [
             "ESP",
             "KSA"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 39,
@@ -502,9 +426,7 @@
         "teams": [
             "BEL",
             "IRN"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 40,
@@ -515,9 +437,7 @@
         "teams": [
             "NZL",
             "EGY"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 41,
@@ -528,9 +448,7 @@
         "teams": [
             "NOR",
             "SEN"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 42,
@@ -541,9 +459,7 @@
         "teams": [
             "FRA",
             "IRQ"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 43,
@@ -554,9 +470,7 @@
         "teams": [
             "ARG",
             "AUT"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 44,
@@ -567,9 +481,7 @@
         "teams": [
             "JOR",
             "ALG"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 45,
@@ -580,9 +492,7 @@
         "teams": [
             "ENG",
             "GHA"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 46,
@@ -593,9 +503,7 @@
         "teams": [
             "PAN",
             "CRO"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 47,
@@ -606,9 +514,7 @@
         "teams": [
             "POR",
             "UZB"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 48,
@@ -619,9 +525,7 @@
         "teams": [
             "COL",
             "COD"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 49,
@@ -632,9 +536,7 @@
         "teams": [
             "SCO",
             "BRA"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 50,
@@ -645,9 +547,7 @@
         "teams": [
             "MAR",
             "HTI"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 51,
@@ -658,9 +558,7 @@
         "teams": [
             "SUI",
             "CAN"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 52,
@@ -671,9 +569,7 @@
         "teams": [
             "BIH",
             "QAT"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 53,
@@ -684,9 +580,7 @@
         "teams": [
             "CZE",
             "MEX"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 54,
@@ -697,9 +591,7 @@
         "teams": [
             "RSA",
             "KOR"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 55,
@@ -710,9 +602,7 @@
         "teams": [
             "CUW",
             "CIV"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 56,
@@ -723,9 +613,7 @@
         "teams": [
             "ECU",
             "GER"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 57,
@@ -736,9 +624,7 @@
         "teams": [
             "JPN",
             "SWE"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 58,
@@ -749,9 +635,7 @@
         "teams": [
             "TUN",
             "NED"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 59,
@@ -762,9 +646,7 @@
         "teams": [
             "TUR",
             "USA"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 60,
@@ -775,9 +657,7 @@
         "teams": [
             "PAR",
             "AUS"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 61,
@@ -788,9 +668,7 @@
         "teams": [
             "NOR",
             "FRA"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 62,
@@ -801,9 +679,7 @@
         "teams": [
             "SEN",
             "IRQ"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 63,
@@ -814,9 +690,7 @@
         "teams": [
             "EGY",
             "IRN"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 64,
@@ -827,9 +701,7 @@
         "teams": [
             "NZL",
             "BEL"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 65,
@@ -840,9 +712,7 @@
         "teams": [
             "CPV",
             "KSA"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 66,
@@ -853,9 +723,7 @@
         "teams": [
             "URU",
             "ESP"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 67,
@@ -866,9 +734,7 @@
         "teams": [
             "PAN",
             "ENG"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 68,
@@ -879,9 +745,7 @@
         "teams": [
             "CRO",
             "GHA"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 69,
@@ -892,9 +756,7 @@
         "teams": [
             "ALG",
             "AUT"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 70,
@@ -905,9 +767,7 @@
         "teams": [
             "JOR",
             "ARG"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 71,
@@ -918,9 +778,7 @@
         "teams": [
             "COL",
             "POR"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 72,
@@ -931,9 +789,7 @@
         "teams": [
             "COD",
             "UZB"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 73,
@@ -944,10 +800,7 @@
         "teams": [
             "2A",
             "2B"
-        ],
-        "result": [],
-        "result_after_extra_time": [],
-        "events": []
+        ]
     },
     {
         "num": 74,
@@ -958,9 +811,7 @@
         "teams": [
             "1E",
             "3A/B/C/D/F"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 75,
@@ -971,9 +822,7 @@
         "teams": [
             "1F",
             "2C"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 76,
@@ -984,9 +833,7 @@
         "teams": [
             "1C",
             "2F"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 77,
@@ -997,9 +844,7 @@
         "teams": [
             "1I",
             "3C/D/F/G/H"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 78,
@@ -1010,9 +855,7 @@
         "teams": [
             "2E",
             "2I"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 79,
@@ -1023,9 +866,7 @@
         "teams": [
             "1A",
             "3C/E/F/H/I"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 80,
@@ -1036,9 +877,7 @@
         "teams": [
             "1L",
             "3E/H/I/J/K"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 81,
@@ -1049,9 +888,7 @@
         "teams": [
             "1D",
             "3B/E/F/I/J"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 82,
@@ -1062,9 +899,7 @@
         "teams": [
             "1G",
             "3A/E/H/I/J"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 83,
@@ -1075,9 +910,7 @@
         "teams": [
             "2K",
             "2L"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 84,
@@ -1088,9 +921,7 @@
         "teams": [
             "1H",
             "2J"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 85,
@@ -1101,9 +932,7 @@
         "teams": [
             "1B",
             "3E/F/G/I/J"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 86,
@@ -1114,9 +943,7 @@
         "teams": [
             "1J",
             "2H"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 87,
@@ -1127,9 +954,7 @@
         "teams": [
             "1K",
             "3D/E/I/J/L"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 88,
@@ -1140,9 +965,7 @@
         "teams": [
             "2D",
             "2G"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 89,
@@ -1153,9 +976,7 @@
         "teams": [
             "W74",
             "W77"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 90,
@@ -1166,9 +987,7 @@
         "teams": [
             "W73",
             "W75"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 91,
@@ -1179,9 +998,7 @@
         "teams": [
             "W76",
             "W78"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 92,
@@ -1192,9 +1009,7 @@
         "teams": [
             "W79",
             "W80"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 93,
@@ -1205,9 +1020,7 @@
         "teams": [
             "W83",
             "W84"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 94,
@@ -1218,9 +1031,7 @@
         "teams": [
             "W81",
             "W82"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 95,
@@ -1231,9 +1042,7 @@
         "teams": [
             "W86",
             "W88"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 96,
@@ -1244,9 +1053,7 @@
         "teams": [
             "W85",
             "W87"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 97,
@@ -1257,9 +1064,7 @@
         "teams": [
             "W89",
             "W90"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 98,
@@ -1270,9 +1075,7 @@
         "teams": [
             "W93",
             "W94"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 99,
@@ -1283,9 +1086,7 @@
         "teams": [
             "W91",
             "W92"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 100,
@@ -1296,9 +1097,7 @@
         "teams": [
             "W95",
             "W96"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 101,
@@ -1309,9 +1108,7 @@
         "teams": [
             "W97",
             "W98"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 102,
@@ -1322,9 +1119,7 @@
         "teams": [
             "W99",
             "W100"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 103,
@@ -1335,9 +1130,7 @@
         "teams": [
             "L101",
             "L102"
-        ],
-        "result": [],
-        "events": []
+        ]
     },
     {
         "num": 104,
@@ -1348,8 +1141,6 @@
         "teams": [
             "W101",
             "W102"
-        ],
-        "result": [],
-        "events": []
+        ]
     }
 ]
