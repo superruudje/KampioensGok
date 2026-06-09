@@ -47,7 +47,15 @@ const chartOptions = computed(() => ({
         }
     },
     legend: {
-        top: "bottom",
+        type: 'scroll',
+        orient: 'horizontal',
+        bottom: 0,
+    },
+    grid: {
+        left: 20,
+        right: 20,
+        top: 20,
+        bottom: 80
     },
     xAxis: {
         type: "category",
