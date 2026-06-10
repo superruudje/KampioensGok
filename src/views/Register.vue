@@ -517,37 +517,37 @@
                                                         {{ $t('countries.' + t.id) }}
                                                     </option>
                                                 </select>
-<!--                                                <select-->
-<!--                                                    v-if="q.answer_type === 'player'"-->
-<!--                                                    :id="'q_' + idx"-->
-<!--                                                    v-model="player.bonus[idx]"-->
-<!--                                                    class="form-select"-->
-<!--                                                    form="form6"-->
-<!--                                                    required>-->
-<!--                                                    <option :value="''">{{ $t('forms.please_pick') }}</option>-->
-<!--                                                    <template v-for="team in teams">-->
-<!--                                                        <option v-for="player in team.squad" :value="player">{{ team.short_name }} - {{-->
-<!--                                                                player-->
-<!--                                                            }}-->
-<!--                                                        </option>-->
-<!--                                                    </template>-->
-<!--                                                </select>-->
-                                                <template v-if="q.answer_type === 'player'">
-                                                    <input
-                                                        id="myBrowser"
-                                                        v-model="player.bonus[idx]"
-                                                        class="form-select"
-                                                        form="form6"
-                                                        list="browsers"
-                                                        name="myBrowser"
-                                                        :placeholder="$t('forms.please_search')"
-                                                        required/>
-                                                    <datalist id="browsers">
-                                                        <template v-for="team in teams">
-                                                            <option v-for="player in team.squad" :value="`${team.short_name} - ${player}`"></option>
-                                                        </template>
-                                                    </datalist>
-                                                </template>
+                                                <select
+                                                    v-if="q.answer_type === 'player'"
+                                                    :id="'q_' + idx"
+                                                    v-model="player.bonus[idx]"
+                                                    class="form-select"
+                                                    form="form6"
+                                                    required>
+                                                    <option :value="''">{{ $t('forms.please_pick') }}</option>
+                                                    <template v-for="team in teams">
+                                                        <option v-for="player in team.squad" :value="player">{{ team.short_name }} - {{
+                                                                player
+                                                            }}
+                                                        </option>
+                                                    </template>
+                                                </select>
+<!--                                                <template v-if="q.answer_type === 'player'">-->
+<!--                                                    <input-->
+<!--                                                        id="myBrowser"-->
+<!--                                                        v-model="player.bonus[idx]"-->
+<!--                                                        class="form-select"-->
+<!--                                                        form="form6"-->
+<!--                                                        list="browsers"-->
+<!--                                                        name="myBrowser"-->
+<!--                                                        :placeholder="$t('forms.please_search')"-->
+<!--                                                        required/>-->
+<!--                                                    <datalist id="browsers">-->
+<!--                                                        <template v-for="team in teams">-->
+<!--                                                            <option v-for="player in team.squad" :value="`${team.short_name} - ${player}`"></option>-->
+<!--                                                        </template>-->
+<!--                                                    </datalist>-->
+<!--                                                </template>-->
                                                 <input
                                                     v-if="q.answer_type === 'number'"
                                                     :id="'q_' + idx"
