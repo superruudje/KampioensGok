@@ -526,7 +526,7 @@
                                                     required>
                                                     <option :value="''">{{ $t('forms.please_pick') }}</option>
                                                     <template v-for="team in teams">
-                                                        <option v-for="player in team.squad" :value="player">{{ team.short_name }} - {{
+                                                        <option v-for="player in team.squad" :value="`${team.short_name} - ${player}`">{{ team.short_name }} - {{
                                                                 player
                                                             }}
                                                         </option>

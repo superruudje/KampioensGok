@@ -36,6 +36,13 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div v-else class="row g-3 g-md-4 justify-content-center fw-bold w26-condensed">
+                                    <div class="col-auto">
+                                        <span class="fs-1 text-white">
+                                            #1 {{ standing_top_10[0].team_name }}
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                             <img
                                 alt="logo"

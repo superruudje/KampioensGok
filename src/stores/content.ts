@@ -12,7 +12,8 @@ import {
     type Poule,
     type PouleWithMatches,
     type Team,
-    type TeamStats, type TournamentPoule
+    type TeamStats,
+    type TournamentPoule
 } from "@/types/tournament.ts";
 import type {MatchResult, Player, Question} from "@/types/pool.ts";
 import {capitalize} from "@/helpers/magic.ts";
@@ -595,21 +596,20 @@ export const useTournament = defineStore('tournament', {
          */
         topAssist(state): { label: string; team: string; count: number }[] {
             const scorersMap: Record<string, { team: string; count: number }> = {};
-
             state.matches.forEach(match => {
                 if (!match.events || !Array.isArray(match.events)) return;
-
                 match.events.forEach(event => {
-                    if (event.type === 'goal') {
-                        const player = event.assist || '-';
-                        const team = event.team;
-
-                        if (!scorersMap[player]) {
-                            scorersMap[player] = {team, count: 0};
-                        }
-
-                        scorersMap[player].count++;
+                    if (event.type !== 'goal' || !event.assist) {
+                        return;
                     }
+
+                    const player = event.assist;
+                    const team = event.team;
+
+                    if (!scorersMap[player]) {
+                        scorersMap[player] = {team, count: 0};
+                    }
+                    scorersMap[player].count++;
                 });
             });
 
@@ -1083,8 +1083,8 @@ export const useTournament = defineStore('tournament', {
 
             const isValidScore = (result: unknown): result is [number, number] => {
                 return Array.isArray(result) &&
-                result.length === 2 &&
-                result.every(score => typeof score === 'number' && !Number.isNaN(score));
+                    result.length === 2 &&
+                    result.every(score => typeof score === 'number' && !Number.isNaN(score));
             };
 
             // Utility to calculate team stats
@@ -1222,7 +1222,7 @@ export const useTournament = defineStore('tournament', {
                 ) {
                     const key = prediction.result.join('-') // e.g., "3-4"
                     if (!resultMap.has(key)) {
-                        resultMap.set(key, { result: prediction.result as [number, number], count: 1 })
+                        resultMap.set(key, {result: prediction.result as [number, number], count: 1})
                     } else {
                         resultMap.get(key)!.count++
                     }
@@ -1259,7 +1259,7 @@ export const useTournament = defineStore('tournament', {
                 ) {
                     const key = prediction.teams.join('-') // e.g., "MEX-BEL"
                     if (!teamMap.has(key)) {
-                        teamMap.set(key, { teams: prediction.teams as [string, string], count: 1 })
+                        teamMap.set(key, {teams: prediction.teams as [string, string], count: 1})
                     } else {
                         teamMap.get(key)!.count++
                     }

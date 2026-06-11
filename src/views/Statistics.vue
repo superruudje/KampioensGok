@@ -125,29 +125,10 @@
                 </div>
                 <div class="col-md-4">
                     <PredictionTableCard
-                        :list="tournament.getBonusPrediction(3)"
-                        :table_header="$t('dict.country')"
-                        :title="$t('questions.goals_against')"/>
-                </div>
-                <div class="col-md-4">
-                    <PredictionTableCard
-                        :list="tournament.getBonusPrediction(4)"
-                        :table_header="$t('dict.country')"
-                        :title="$t('questions.most_cards')"/>
-                </div>
-                <div class="col-md-4">
-                    <PredictionTableCard
                         :image="false"
-                        :list="tournament.getBonusPrediction(5)"
+                        :list="tournament.getBonusPrediction(3)"
                         :table_header="$t('dict.player')"
                         :title="$t('questions.top_scorer')"/>
-                </div>
-                <div class="col-md-4">
-                    <PredictionTableCard
-                        :image="false"
-                        :list="tournament.getBonusPrediction(7)"
-                        :table_header="$t('dict.player')"
-                        :title="$t('questions.top_assist')"/>
                 </div>
                 <div class="col-md-4">
                     <PredictionTableCard
@@ -180,14 +161,14 @@
                 <div class="col-md-4">
                     <PredictionTableCard
                         :image="false"
-                        :list="tournament.getBonusPrediction(7)"
+                        :list="tournament.getBonusPrediction(4)"
                         :table_header="$t('dict.player')"
                         :title="$t('questions.first_goal_nl')"/>
                 </div>
                 <div class="col-md-4">
                     <PredictionTableCard
                         :image="false"
-                        :list="tournament.getBonusPrediction(8)"
+                        :list="tournament.getBonusPrediction(5)"
                         :table_header="$t('dict.player')"
                         :title="$t('questions.first_card_nl')"/>
                 </div>
