@@ -96,6 +96,49 @@ export const results: Record<
     },
     3: {
         result: [1, 1],
-        events: []
+        events: [
+            {
+                minute: 11,
+                type: 'yellow_card',
+                player: 'Alistair Johnston',
+                team: 'CAN'
+            },
+            {
+                minute: 21,
+                type: 'goal',
+                player: 'Jovo Lukic',
+                team: 'BIH'
+            },
+            {
+                minute: 44,
+                type: 'yellow_card',
+                player: 'Ermedin Demirovic',
+                team: 'BIH'
+            },
+            {
+                minute: 46,
+                type: 'yellow_card',
+                player: 'Jovo Lukic',
+                team: 'BIH'
+            },
+            {
+                minute: 53,
+                type: 'yellow_card',
+                player: 'Luc De Fougerolles',
+                team: 'CAN'
+            },
+            {
+                minute: 78,
+                type: 'goal',
+                player: 'Cyle Larin',
+                team: 'CAN'
+            },
+            {
+                minute: 93,
+                type: 'yellow_card',
+                player: 'Nikola Katic',
+                team: 'BIH'
+            },
+        ]
     }
 };
