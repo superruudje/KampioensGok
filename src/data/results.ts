@@ -67,6 +67,31 @@ export const results: Record<
     },
     2: {
         result: [2, 1],
-        events: []
+        events: [
+            {
+                minute: 59,
+                type: 'goal',
+                player: 'Ladislav Krejci',
+                team: 'CZE'
+            },
+            {
+                minute: 67,
+                type: 'goal',
+                player: 'Hwang Inbeom',
+                team: 'KOR'
+            },
+            {
+                minute: 80,
+                type: 'goal',
+                player: 'Oh Hyeongyu',
+                team: 'KOR'
+            },
+            {
+                minute: 96,
+                type: 'yellow_card',
+                player: 'Lee Gihyuk',
+                team: 'KOR'
+            },
+        ]
     }
 };
