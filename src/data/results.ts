@@ -64,5 +64,9 @@ export const results: Record<
                 team: 'MEX'
             },
         ]
+    },
+    2: {
+        result: [2, 1],
+        events: []
     }
 };
