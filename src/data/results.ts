@@ -93,5 +93,9 @@ export const results: Record<
                 team: 'KOR'
             },
         ]
+    },
+    3: {
+        result: [1, 1],
+        events: []
     }
 };
