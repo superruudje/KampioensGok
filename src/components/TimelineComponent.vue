@@ -14,7 +14,7 @@
 
         <div
             v-for="e in ordered_timeline"
-            :key="`${e.minute}-${e.player}`"
+            :key="`${e.minute}-${e.extraMinute ?? 0}-${e.player}`"
             class="position-relative z-1 d-flex justify-content-around align-items-center w-100"
         >
             <div class="time-line text-end">
@@ -23,11 +23,11 @@
                     <span class="small text-black-50 lh-1">{{ e.assist }}</span>
                     <span v-if="e.note" class="small text-black-50 lh-1">{{ e.note }}</span>
                 </template>
-                <span v-else class="text-black-50">{{ e.minute }}'</span>
+                <span v-else class="text-black-50">{{ formatMinute(e) }}</span>
             </div>
             <div class="mx-3 text-center icon bg-white">
                 <FontAwesomeIcon v-if="e.type === 'goal'" :icon="faSoccerBall"/>
-                <FontAwesomeIcon v-else-if="e.type === 'own_goal'" :icon="faSoccerBall" class="text-red"/>
+                <FontAwesomeIcon v-else-if="e.type === 'own_goal'" :icon="faSoccerBall"/>
                 <FontAwesomeIcon v-else-if="e.type === 'substitution'" :icon="faArrowsTurnToDots"/>
                 <FontAwesomeIcon
                     v-else
@@ -45,7 +45,7 @@
                     <span class="small text-black-50 lh-1">{{ e.assist }}</span>
                     <span v-if="e.note" class="small text-black-50 lh-1">{{ e.note }}</span>
                 </template>
-                <span v-else class="text-black-50">{{ e.minute }}'</span>
+                <span v-else class="text-black-50">{{ formatMinute(e) }}</span>
             </div>
         </div>
     </div>
@@ -70,12 +70,22 @@ const {teamImages} = storeToRefs(tournament);
 
 const ordered_timeline = computed(() => {
     return props.timeline
-        ? [...props.timeline].sort((a, b) => b.minute - a.minute)
-        : []
-})
+        ? [...props.timeline].sort((a, b) => getSortMinute(b) - getSortMinute(a))
+        : [];
+});
 
 function getTeamImage(teamName: string) {
     return teamImages.value[teamName] || teamImages.value[`default`]
+}
+
+function getSortMinute(event: MatchEvent): number {
+    return event.minute + (event.extraMinute ?? 0) / 100;
+}
+
+function formatMinute(event: MatchEvent): string {
+    return event.extraMinute != null
+        ? `${event.minute}+${event.extraMinute}'`
+        : `${event.minute}'`;
 }
 </script>
 

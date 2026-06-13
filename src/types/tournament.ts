@@ -75,6 +75,10 @@ export interface MatchEvent {
 
     /** Minute in which the event occurred */
     minute: number;
+    /**
+     * Additional time (e.g. 45+3 => 3)
+     */
+    extraMinute?: number;
 
     /** Player involved in the event */
     player: string;
