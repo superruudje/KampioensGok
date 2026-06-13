@@ -140,5 +140,9 @@ export const results: Record<
                 team: 'BIH'
             },
         ]
+    },
+    4: {
+        result: [4, 1],
+        events: []
     }
 };
