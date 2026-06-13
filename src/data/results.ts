@@ -224,5 +224,9 @@ export const results: Record<
                 team: 'USA',
             },
         ]
+    },
+    8: {
+        result: [1, 1],
+        events: []
     }
 };
