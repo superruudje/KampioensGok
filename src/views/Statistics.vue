@@ -26,7 +26,7 @@
                                 </div>
                                 <div class="num-stat-item">
                                     <div class="fs-4 fw-bold">
-                                        {{ tournament.averageGoalsPerMatch * tournament.matches.length }}
+                                        {{ Math.round(tournament.averageGoalsPerMatch * tournament.matches.length) }}
                                     </div>
                                     <div class="fw-lighter">{{ capitalize($t('dict.goal', 2)) }} {{ $t('dict.expected') }}</div>
                                 </div>
@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="num-stat-item">
                                     <div class="fs-4 fw-bold">
-                                        {{ tournament.averageCardsPerMatch * tournament.matches.length }}
+                                        {{ Math.round(tournament.averageCardsPerMatch * tournament.matches.length) }}
                                     </div>
                                     <div class="fw-lighter">{{ capitalize($t('dict.card', 2)) }} {{ $t('dict.expected') }}</div>
                                 </div>
