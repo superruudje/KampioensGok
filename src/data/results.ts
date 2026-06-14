@@ -353,6 +353,56 @@ export const results: Record<
     },
     10: {
         result: [7, 1],
-        events: []
+        events: [
+            {
+                minute: 6,
+                type: 'goal',
+                player: 'Felix Nmecha',
+                team: 'GER',
+            },
+            {
+                minute: 21,
+                type: 'goal',
+                player: 'Livano Comenencia',
+                team: 'CUW',
+            },
+            {
+                minute: 38,
+                type: 'goal',
+                player: 'Nico Schlotterbeck',
+                team: 'GER',
+            },
+            {
+                minute: 45,
+                extraMinute: 5,
+                type: 'goal',
+                player: 'Kai Havertz',
+                team: 'GER',
+            },
+            {
+                minute: 47,
+                type: 'goal',
+                player: 'Jamal Musiala',
+                team: 'GER',
+            },
+            {
+                minute: 68,
+                type: 'goal',
+                player: 'Nathaniel Brown',
+                team: 'GER',
+            },
+            {
+                minute: 78,
+                type: 'goal',
+                player: 'Deniz Undav',
+                team: 'GER',
+            },
+            {
+                minute: 88,
+                type: 'goal',
+                player: 'Kai Havertz',
+                team: 'GER',
+            },
+        ]
     }
 };
