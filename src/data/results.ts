@@ -227,18 +227,128 @@ export const results: Record<
     },
     5: {
         result: [0, 1],
-        events: []
+        events: [
+            {
+                minute: 28,
+                type: 'goal',
+                player: 'John McGinn',
+                team: 'SCO',
+            },
+            {
+                minute: 39,
+                type: 'yellow_card',
+                player: 'Jean-Ricner Bellegarde',
+                team: 'HTI'
+            },
+            {
+                minute: 46,
+                type: 'yellow_card',
+                player: 'Aaron Hickey',
+                team: 'SCO'
+            },
+            {
+                minute: 90,
+                extraMinute: 1,
+                type: 'yellow_card',
+                player: 'Findlay Curtis',
+                team: 'SCO'
+            },
+            {
+                minute: 90,
+                extraMinute: 5,
+                type: 'yellow_card',
+                player: 'Kenny McLean',
+                team: 'SCO'
+            },
+        ]
     },
     6: {
         result: [2, 0],
-        events: []
+        events: [
+            {
+                minute: 27,
+                type: 'goal',
+                player: 'Nestory Irankunda',
+                team: 'AUS',
+            },
+            {
+                minute: 75,
+                type: 'goal',
+                player: 'Connor Metcalfe',
+                team: 'AUS',
+            },
+            {
+                minute: 86,
+                type: 'yellow_card',
+                player: 'Yunus Akgun',
+                team: 'TUR'
+            },
+        ]
     },
     7: {
         result: [1, 1],
-        events: []
+        events: [
+            {
+                minute: 21,
+                type: 'goal',
+                player: 'Ismael Saibari',
+                team: 'MAR',
+            },
+            {
+                minute: 32,
+                type: 'goal',
+                player: 'Vinicius Junior',
+                team: 'BRA',
+            },
+            {
+                minute: 37,
+                type: 'yellow_card',
+                player: 'Casemiro',
+                team: 'BRA'
+            },
+            {
+                minute: 43,
+                type: 'yellow_card',
+                player: 'Roger Ibanez',
+                team: 'BRA'
+            },
+        ]
     },
     8: {
         result: [1, 1],
-        events: []
+        events: [
+            {
+                minute: 13,
+                type: 'yellow_card',
+                player: 'Mahmoud Abunada',
+                team: 'QAT'
+            },
+            {
+                minute: 17,
+                type: 'goal',
+                player: 'Breel Embolo',
+                team: 'SUI',
+            },
+            {
+                minute: 23,
+                type: 'yellow_card',
+                player: 'Jassem Gaber',
+                team: 'QAT'
+            },
+            {
+                minute: 42,
+                type: 'yellow_card',
+                player: 'Denis Zakaria',
+                team: 'SUI'
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'own_goal',
+                player: 'Miro Muheim',
+                team: 'SUI',
+                note: '(OG)'
+            },
+        ]
     }
 };
