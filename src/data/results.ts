@@ -350,5 +350,9 @@ export const results: Record<
                 note: '(OG)'
             },
         ]
+    },
+    10: {
+        result: [7, 1],
+        events: []
     }
 };
