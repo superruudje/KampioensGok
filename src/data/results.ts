@@ -404,5 +404,9 @@ export const results: Record<
                 team: 'GER',
             },
         ]
+    },
+    11: {
+        result: [2, 2],
+        events: []
     }
 };
