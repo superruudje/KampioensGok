@@ -225,6 +225,14 @@ export const results: Record<
             },
         ]
     },
+    5: {
+        result: [0, 1],
+        events: []
+    },
+    6: {
+        result: [2, 0],
+        events: []
+    },
     7: {
         result: [1, 1],
         events: []
