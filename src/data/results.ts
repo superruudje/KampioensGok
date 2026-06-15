@@ -543,5 +543,23 @@ export const results: Record<
                 team: 'SWE',
             },
         ]
+    },
+    14: {
+        result: [0, 0],
+        events: [
+            {
+                minute: 16,
+                type: 'yellow_card',
+                player: 'Sidny Lopes Cabral',
+                team: 'CPV'
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'yellow_card',
+                player: 'Pedri',
+                team: 'ESP'
+            },
+        ]
     }
 };
