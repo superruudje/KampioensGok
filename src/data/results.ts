@@ -357,7 +357,39 @@ export const results: Record<
     },
     9: {
         result: [1, 0],
-        events: []
+        events: [
+            {
+                minute: 28,
+                type: 'yellow_card',
+                player: 'Seko Fofana',
+                team: 'CIV'
+            },
+            {
+                minute: 38,
+                type: 'yellow_card',
+                player: 'Franck Kessie',
+                team: 'CIV'
+            },
+            {
+                minute: 40,
+                type: 'yellow_card',
+                player: 'Guela Doue',
+                team: 'CIV'
+            },
+            {
+                minute: 73,
+                type: 'yellow_card',
+                player: 'Jackson Porozo',
+                team: 'ECO'
+            },
+            {
+                minute: 90,
+                type: 'goal',
+                player: 'Amad Diallo',
+                assist: 'Wilfried Singo',
+                team: 'CIV'
+            },
+        ]
     },
     10: {
         result: [7, 1],
@@ -415,10 +447,101 @@ export const results: Record<
     },
     11: {
         result: [2, 2],
-        events: []
+        events: [
+            {
+                minute: 50,
+                type: 'goal',
+                player: 'Virgil van Dijk',
+                assist: 'Ryan Gravenberch',
+                team: 'NED',
+            },
+            {
+                minute: 57,
+                type: 'goal',
+                player: 'Keito Nakamura',
+                assist: 'Takefusa Kubo',
+                team: 'JPN',
+            },
+            {
+                minute: 61,
+                type: 'yellow_card',
+                player: 'Crysencio Summerville',
+                team: 'NED'
+            },
+            {
+                minute: 64,
+                type: 'goal',
+                player: 'Crysencio Summerville',
+                assist: 'Ryan Gravenberch',
+                team: 'NED',
+            },
+            {
+                minute: 83,
+                type: 'yellow_card',
+                player: 'Memphis Depay',
+                team: 'NED'
+            },
+            {
+                minute: 88,
+                type: 'goal',
+                player: 'Daichi Kamada',
+                team: 'JPN',
+            },
+            {
+                minute: 90,
+                extraMinute: 1,
+                type: 'yellow_card',
+                player: 'Micky van de Van',
+                team: 'NED'
+            },
+        ]
     },
     12: {
         result: [5, 1],
-        events: []
+        events: [
+            {
+                minute: 7,
+                type: 'goal',
+                player: 'Yasin Ayari',
+                team: 'SWE',
+            },
+            {
+                minute: 30,
+                type: 'goal',
+                player: 'Alexander Isak',
+                team: 'SWE',
+            },
+            {
+                minute: 43,
+                type: 'goal',
+                player: 'Omar Rekik',
+                team: 'TUN',
+            },
+            {
+                minute: 54,
+                type: 'yellow_card',
+                player: 'Rani Khedira',
+                team: 'TUN'
+            },
+            {
+                minute: 59,
+                type: 'goal',
+                player: 'Viktor Gyokeres',
+                team: 'SWE',
+            },
+            {
+                minute: 84,
+                type: 'goal',
+                player: 'Mattias Svanberg',
+                team: 'SWE',
+            },
+            {
+                minute: 90,
+                extraMinute: 6,
+                type: 'goal',
+                player: 'Yasin Ayari',
+                team: 'SWE',
+            },
+        ]
     }
 };
