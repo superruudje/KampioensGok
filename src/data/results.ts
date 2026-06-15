@@ -269,6 +269,7 @@ export const results: Record<
                 minute: 27,
                 type: 'goal',
                 player: 'Nestory Irankunda',
+                assist: 'Paul Okon-Engstler',
                 team: 'AUS',
             },
             {
@@ -292,12 +293,14 @@ export const results: Record<
                 minute: 21,
                 type: 'goal',
                 player: 'Ismael Saibari',
+                assist: 'Brahim Díaz',
                 team: 'MAR',
             },
             {
                 minute: 32,
                 type: 'goal',
                 player: 'Vinicius Junior',
+                assist: 'Bruno Guimarães',
                 team: 'BRA',
             },
             {
@@ -328,6 +331,7 @@ export const results: Record<
                 type: 'goal',
                 player: 'Breel Embolo',
                 team: 'SUI',
+                note: '(PEN)'
             },
             {
                 minute: 23,
