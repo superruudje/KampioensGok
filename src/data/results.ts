@@ -544,6 +544,10 @@ export const results: Record<
             },
         ]
     },
+    13: {
+        result: [1, 1],
+        events: []
+    },
     14: {
         result: [0, 0],
         events: [
@@ -561,6 +565,10 @@ export const results: Record<
                 team: 'ESP'
             },
         ]
+    },
+    15: {
+        result: [2, 2],
+        events: []
     },
     16: {
         result: [1, 1],
