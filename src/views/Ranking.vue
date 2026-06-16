@@ -64,7 +64,10 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr v-for="(player, idx) in paginatedData" :key="idx">
+                                    <tr 
+                                        v-for="(player, idx) in paginatedData" 
+                                        :key="`${player.name}-${player.team_name}`"
+                                    >
                                         <th scope="row">
                                             {{ player.pos }}
                                         </th>
