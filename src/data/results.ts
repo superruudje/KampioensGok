@@ -667,5 +667,9 @@ export const results: Record<
                 team: 'BEL'
             },
         ]
+    },
+    17: {
+        result: [3, 1],
+        events: []
     }
 };
