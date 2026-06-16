@@ -509,12 +509,14 @@ export const results: Record<
                 minute: 30,
                 type: 'goal',
                 player: 'Alexander Isak',
+                assist: 'Viktor Gyökeres',
                 team: 'SWE',
             },
             {
                 minute: 43,
                 type: 'goal',
                 player: 'Omar Rekik',
+                assist: 'Hannibal Mejbri',
                 team: 'TUN',
             },
             {
@@ -527,6 +529,7 @@ export const results: Record<
                 minute: 59,
                 type: 'goal',
                 player: 'Viktor Gyokeres',
+                assist: 'Alexander Isak',
                 team: 'SWE',
             },
             {
@@ -546,7 +549,26 @@ export const results: Record<
     },
     13: {
         result: [1, 1],
-        events: []
+        events: [
+            {
+                minute: 41,
+                type: 'goal',
+                player: 'Abduleleh Alamri',
+                team: 'KSA',
+            },
+            {
+                minute: 44,
+                type: 'yellow_card',
+                player: 'Abduleleh Alamri',
+                team: 'KSA'
+            },
+            {
+                minute: 80,
+                type: 'goal',
+                player: 'Maxi Araujo',
+                team: 'URU',
+            },
+        ]
     },
     14: {
         result: [0, 0],
@@ -568,10 +590,82 @@ export const results: Record<
     },
     15: {
         result: [2, 2],
-        events: []
+        events: [
+            {
+                minute: 7,
+                type: 'goal',
+                player: 'Elijah Just',
+                team: 'NZL',
+            },
+            {
+                minute: 32,
+                type: 'goal',
+                player: 'Ramin Rezaeian',
+                team: 'IRN',
+            },
+            {
+                minute: 54,
+                type: 'goal',
+                player: 'Elijah Just',
+                assist: 'Chris Wood',
+                team: 'NZL',
+            },
+            {
+                minute: 64,
+                type: 'goal',
+                player: 'Mohammad Mohebbi',
+                assist: 'Ramin Rezaeian',
+                team: 'IRN',
+            },
+            {
+                minute: 89,
+                type: 'yellow_card',
+                player: 'Ehsan Hajisafi',
+                team: 'IRN'
+            },
+        ]
     },
     16: {
         result: [1, 1],
-        events: []
+        events: [
+            {
+                minute: 13,
+                type: 'yellow_card',
+                player: 'Marawan Attia',
+                team: 'EGY'
+            },
+            {
+                minute: 14,
+                type: 'yellow_card',
+                player: 'Timothy Castagne',
+                team: 'BEL'
+            },
+            {
+                minute: 19,
+                type: 'goal',
+                player: 'Emam Ashour',
+                assist: 'Mohamed Salah',
+                team: 'EGY',
+            },
+            {
+                minute: 34,
+                type: 'yellow_card',
+                player: 'Ahmed Fatouh',
+                team: 'EGY'
+            },
+            {
+                minute: 66,
+                type: 'own_goal',
+                player: 'Mohamed Hany',
+                team: 'EGY',
+                note: '(OG)'
+            },
+            {
+                minute: 75,
+                type: 'yellow_card',
+                player: 'Maxim de Cuyper',
+                team: 'BEL'
+            },
+        ]
     }
 };
