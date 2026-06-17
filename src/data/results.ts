@@ -802,6 +802,10 @@ export const results: Record<
             },
         ]
     },
+    22: {
+        result: [4, 2],
+        events: []
+    },
     23: {
         result: [1, 1],
         events: []
