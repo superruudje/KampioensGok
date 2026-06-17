@@ -670,18 +670,136 @@ export const results: Record<
     },
     17: {
         result: [3, 1],
-        events: []
+        events: [
+            {
+                minute: 66,
+                type: 'goal',
+                player: 'Kylian Mbappe',
+                team: 'FRA',
+            },
+            {
+                minute: 82,
+                type: 'goal',
+                player: 'Bradley Barcola',
+                team: 'FRA',
+            },
+            {
+                minute: 90,
+                extraMinute: 5,
+                type: 'goal',
+                player: 'Bradley Barcola',
+                team: 'SEN',
+            },
+            {
+                minute: 90,
+                extraMinute: 6,
+                type: 'goal',
+                player: 'Kylian Mbappe',
+                team: 'FRA',
+            },
+        ]
     },
     18: {
         result: [1, 4],
-        events: []
+        events: [
+            {
+                minute: 29,
+                type: 'goal',
+                player: 'Erling Haaland',
+                team: 'NOR',
+            },
+            {
+                minute: 39,
+                type: 'goal',
+                player: 'Aymen Hussein',
+                team: 'IRQ',
+            },
+            {
+                minute: 43,
+                type: 'goal',
+                player: 'Erling Haaland',
+                team: 'NOR',
+            },
+            {
+                minute: 76,
+                type: 'goal',
+                player: 'Leo Ostigard',
+                team: 'NOR',
+            },
+            {
+                minute: 86,
+                type: 'yellow_card',
+                player: 'Zaid Tahseen',
+                team: 'IRQ'
+            },
+            {
+                minute: 90,
+                extraMinute: 6,
+                type: 'own_goal',
+                player: 'Aymen Hussein',
+                team: 'IRQ',
+                note: '(OG)'
+            },
+        ]
     },
     19: {
         result: [3, 0],
-        events: []
+        events: [
+            {
+                minute: 17,
+                type: 'goal',
+                player: 'Lionel Messi',
+                team: 'ARG',
+            },
+            {
+                minute: 60,
+                type: 'goal',
+                player: 'Lionel Messi',
+                team: 'ARG',
+            },
+            {
+                minute: 76,
+                type: 'goal',
+                player: 'Lionel Messi',
+                team: 'ARG',
+            },
+        ]
     },
     20: {
         result: [3, 1],
-        events: []
+        events: [
+            {
+                minute: 20,
+                type: 'goal',
+                player: 'Romano Schmid',
+                team: 'AUT',
+            },
+            {
+                minute: 50,
+                type: 'goal',
+                player: 'Ali Olwan',
+                team: 'JOR',
+            },
+            {
+                minute: 76,
+                type: 'own_goal',
+                player: 'Yazan Alarab',
+                team: 'JOR',
+                note: '(OG)'
+            },
+            {
+                minute: 77,
+                type: 'yellow_card',
+                player: 'Marcel Sabitzer',
+                team: 'AUT'
+            },
+            {
+                minute: 90,
+                extraMinute: 12,
+                type: 'goal',
+                player: 'Marko Arnautovic',
+                team: 'AUT',
+            },
+        ]
     }
 };
