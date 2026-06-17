@@ -801,5 +801,9 @@ export const results: Record<
                 team: 'AUT',
             },
         ]
+    },
+    23: {
+        result: [1, 1],
+        events: []
     }
 };
