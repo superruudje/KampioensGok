@@ -671,5 +671,17 @@ export const results: Record<
     17: {
         result: [3, 1],
         events: []
+    },
+    18: {
+        result: [1, 4],
+        events: []
+    },
+    19: {
+        result: [3, 0],
+        events: []
+    },
+    20: {
+        result: [3, 1],
+        events: []
     }
 };
