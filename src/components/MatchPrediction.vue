@@ -29,7 +29,9 @@
                                 class="border"
                                 loading="lazy"
                                 width="30px"/>
-                            <span class="me-auto text-truncate">{{ isTeam(match.teams[n - 1]) ? $t('countries.' + match.teams[n - 1]) : match.teams[n - 1] }}</span>
+                            <span class="me-auto text-truncate">{{
+                                    isTeam(match.teams[n - 1]) ? $t('countries.' + match.teams[n - 1]) : match.teams[n - 1]
+                                }}</span>
                             <span
                                 v-if="match.result_after_penalties"
                                 class="fs-6 lh-1">({{ match.result_after_penalties[n - 1] }})</span>
@@ -68,15 +70,26 @@
                             <span class="fs-4 fw-bold lh-1">{{ player_prediction[n - 1] }}</span>
                         </div>
                     </div>
+                    <template v-if="!match.result?.length">
+                        <div class="vr"></div>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <span>{{ convertToGMT1(match.time, 'America/New_York') }}</span>
+                            <span class="fw-lighter small lh-1">{{ match.time }} (NY)</span>
+                        </div>
+                    </template>
                 </div>
 
-                <div>
+                <div class="d-flex flex-wrap gap-1 justify-content-between align-items-center">
                     <button
-                        class="btn-wc26 sm btn-wc26-orange w-fit"
                         :class="{ active: viewPredictions }"
+                        class="btn-wc26 sm btn-wc26-orange w-fit"
                         @click="viewPredictions = !viewPredictions">
                         Pool
                     </button>
+                    <span class="fw-lighter small group-name">
+                        {{ location?.city }}, {{ location?.country }}
+                        <i class="bi bi-pin-map ms-1"></i>
+                    </span>
                 </div>
 
             </div>
@@ -84,9 +97,9 @@
                 v-if="viewPredictions"
                 class="border-top p-3 p-md-4 bg-body-tertiary rounded-bottom-4">
                 <PredictionTable
+                    :image="false"
                     :list="tournament.getGroupedMatchPrediction(match.num)"
-                    :table_header="$t('dict.result')"
-                    :image="false"/>
+                    :table_header="$t('dict.result')"/>
             </div>
         </div>
     </div>
@@ -98,7 +111,7 @@ import {storeToRefs} from "pinia";
 import {computed, ref} from "vue";
 import type {Match, MatchDayType} from "@/types/tournament.ts";
 import PredictionTable from "@/components/PredictionTable.vue";
-import {i18n} from "@/i18n";
+import {convertToGMT1} from "@/helpers/magic.ts";
 
 const tournament = useTournament()
 const {teamImages, teams, knock_out} = storeToRefs(tournament)
@@ -117,6 +130,10 @@ const viewPredictions = ref(false);
 
 const score = computed(() => {
     return props.played ? tournament.getPredictionScore(player_prediction, props.match) : {score: 0, reason: []}
+})
+
+const location = computed(() => {
+    return tournament.getLocation(props.match.location_id)
 })
 
 function getTeamImage(teamName: string) {

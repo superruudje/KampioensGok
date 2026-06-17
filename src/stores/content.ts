@@ -163,21 +163,21 @@ export const useTournament = defineStore('tournament', {
                 // },
                 {
                     question: i18n.global.t('questions.first_goal_nl'),
-                    answer: "",
+                    answer: "NED - Virgil van Dijk",
                     answer_type: "player",
                     type: "exact",
                     points: 10,
                     match_day_answered: 13,
-                    current_answer: ""
+                    current_answer: "NED - Virgil van Dijk"
                 },
                 {
                     question: i18n.global.t('questions.first_card_nl'),
-                    answer: "",
+                    answer: "NED - Crysencio Summerville",
                     answer_type: "player",
                     type: "exact",
                     points: 10,
                     match_day_answered: 13,
-                    current_answer: ""
+                    current_answer: "NED - Crysencio Summerville"
                 },
             ]
         },
