@@ -963,5 +963,9 @@ export const results: Record<
     25: {
         result: [1, 1],
         events: []
+    },
+    26: {
+        result: [4, 1],
+        events: []
     }
 };
