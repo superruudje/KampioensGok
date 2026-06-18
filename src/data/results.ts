@@ -959,5 +959,9 @@ export const results: Record<
                 team: 'COL',
             },
         ]
+    },
+    25: {
+        result: [1, 1],
+        events: []
     }
 };
