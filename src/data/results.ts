@@ -804,18 +804,160 @@ export const results: Record<
     },
     21: {
         result: [1, 0],
-        events: []
+        events: [
+            {
+                minute: 16,
+                type: 'yellow_card',
+                player: 'Caleb Yirenkyi',
+                team: 'GHA'
+            },
+            {
+                minute: 72,
+                type: 'yellow_card',
+                player: 'Cesar Blackman',
+                team: 'PAN'
+            },
+            {
+                minute: 90,
+                extraMinute: 5,
+                type: 'goal',
+                player: 'Caleb Yirenkyi',
+                team: 'GHA',
+            },
+            {
+                minute: 90,
+                extraMinute: 9,
+                type: 'yellow_card',
+                player: 'Carlos Harvey',
+                team: 'PAN'
+            },
+        ]
     },
     22: {
         result: [4, 2],
-        events: []
+        events: [
+            {
+                minute: 12,
+                type: 'goal',
+                player: 'Harry Kane',
+                team: 'ENG',
+            },
+            {
+                minute: 36,
+                type: 'goal',
+                player: 'Martin Baturina',
+                team: 'CRO',
+            },
+            {
+                minute: 42,
+                type: 'goal',
+                player: 'Harry Kane',
+                team: 'ENG',
+            },
+            {
+                minute: 45,
+                extraMinute: 5,
+                type: 'goal',
+                player: 'Petar Musa',
+                team: 'CRO',
+            },
+            {
+                minute: 47,
+                type: 'goal',
+                player: 'Jude Bellingham',
+                team: 'ENG',
+            },
+            {
+                minute: 85,
+                type: 'goal',
+                player: 'Marcus Rashford',
+                team: 'ENG',
+            },
+        ]
     },
     23: {
         result: [1, 1],
-        events: []
+        events: [
+            {
+                minute: 6,
+                type: 'goal',
+                player: 'Joao Neves',
+                team: 'POR',
+            },
+            {
+                minute: 13,
+                type: 'yellow_card',
+                player: 'Bernardo Silva',
+                team: 'POR'
+            },
+            {
+                minute: 32,
+                type: 'yellow_card',
+                player: 'Chancel Mbemba',
+                team: 'COD'
+            },
+            {
+                minute: 45,
+                extraMinute: 5,
+                type: 'goal',
+                player: 'Yoane Wissa',
+                team: 'COD',
+            },
+            {
+                minute: 88,
+                type: 'yellow_card',
+                player: 'Nelson Semedo',
+                team: 'POR'
+            },
+            {
+                minute: 90,
+                extraMinute: 2,
+                type: 'yellow_card',
+                player: 'Tomas Araujo',
+                team: 'POR'
+            },
+        ]
     },
     24: {
         result: [1, 3],
-        events: []
+        events: [
+            {
+                minute: 7,
+                type: 'yellow_card',
+                player: 'Johan Mojica',
+                team: 'COL'
+            },
+            {
+                minute: 34,
+                type: 'yellow_card',
+                player: 'Abdukodir Khusanov',
+                team: 'UZB'
+            },
+            {
+                minute: 40,
+                type: 'goal',
+                player: 'Daniel Munoz',
+                team: 'COL',
+            },
+            {
+                minute: 60,
+                type: 'goal',
+                player: 'Abbosbek Fayzullaev',
+                team: 'UZB',
+            },
+            {
+                minute: 65,
+                type: 'goal',
+                player: 'Luis Diaz',
+                team: 'COL',
+            },
+            {
+                minute: 90,
+                extraMinute: 9,
+                type: 'goal',
+                player: 'Jaminton Campaz',
+                team: 'COL',
+            },
+        ]
     }
 };
