@@ -675,19 +675,22 @@ export const results: Record<
                 minute: 66,
                 type: 'goal',
                 player: 'Kylian Mbappe',
+                assist: 'Michael Olise',
                 team: 'FRA',
             },
             {
                 minute: 82,
                 type: 'goal',
                 player: 'Bradley Barcola',
+                assist: 'Adrien Rabiot',
                 team: 'FRA',
             },
             {
                 minute: 90,
                 extraMinute: 5,
                 type: 'goal',
-                player: 'Bradley Barcola',
+                player: 'Ibrahim Mbaye',
+                assist: 'Iliman Ndiaye',
                 team: 'SEN',
             },
             {
@@ -706,12 +709,14 @@ export const results: Record<
                 minute: 29,
                 type: 'goal',
                 player: 'Erling Haaland',
+                assist: 'D. M. Wolfe',
                 team: 'NOR',
             },
             {
                 minute: 39,
                 type: 'goal',
                 player: 'Aymen Hussein',
+                assist: 'Amir Al-Ammari',
                 team: 'IRQ',
             },
             {
@@ -724,6 +729,7 @@ export const results: Record<
                 minute: 76,
                 type: 'goal',
                 player: 'Leo Ostigard',
+                assist: 'Martin Ødegaard',
                 team: 'NOR',
             },
             {
@@ -749,6 +755,7 @@ export const results: Record<
                 minute: 17,
                 type: 'goal',
                 player: 'Lionel Messi',
+                assist: 'R. D. Paul',
                 team: 'ARG',
             },
             {
@@ -761,6 +768,7 @@ export const results: Record<
                 minute: 76,
                 type: 'goal',
                 player: 'Lionel Messi',
+                assist: 'Nico González',
                 team: 'ARG',
             },
         ]
@@ -772,12 +780,14 @@ export const results: Record<
                 minute: 20,
                 type: 'goal',
                 player: 'Romano Schmid',
+                assist: 'Xaver Schlager',
                 team: 'AUT',
             },
             {
                 minute: 50,
                 type: 'goal',
                 player: 'Ali Olwan',
+                assist: 'Noor Al Rawabdeh',
                 team: 'JOR',
             },
             {
@@ -799,6 +809,7 @@ export const results: Record<
                 type: 'goal',
                 player: 'Marko Arnautovic',
                 team: 'AUT',
+                note: '(PEN)'
             },
         ]
     },
@@ -841,17 +852,20 @@ export const results: Record<
                 type: 'goal',
                 player: 'Harry Kane',
                 team: 'ENG',
+                note: '(PEN)'
             },
             {
                 minute: 36,
                 type: 'goal',
                 player: 'Martin Baturina',
+                assist: 'Petar Sučić',
                 team: 'CRO',
             },
             {
                 minute: 42,
                 type: 'goal',
                 player: 'Harry Kane',
+                assist: 'Declan Rice',
                 team: 'ENG',
             },
             {
@@ -859,18 +873,21 @@ export const results: Record<
                 extraMinute: 5,
                 type: 'goal',
                 player: 'Petar Musa',
+                assist: 'Ivan Perišić',
                 team: 'CRO',
             },
             {
                 minute: 47,
                 type: 'goal',
                 player: 'Jude Bellingham',
+                assist: 'Elliot Anderson',
                 team: 'ENG',
             },
             {
                 minute: 85,
                 type: 'goal',
                 player: 'Marcus Rashford',
+                assist: 'Bukayo Saka',
                 team: 'ENG',
             },
         ]
@@ -882,6 +899,7 @@ export const results: Record<
                 minute: 6,
                 type: 'goal',
                 player: 'Joao Neves',
+                assist: 'Pedro Neto',
                 team: 'POR',
             },
             {
@@ -901,6 +919,7 @@ export const results: Record<
                 extraMinute: 5,
                 type: 'goal',
                 player: 'Yoane Wissa',
+                assist: 'Arthur Masuaku',
                 team: 'COD',
             },
             {
@@ -937,6 +956,7 @@ export const results: Record<
                 minute: 40,
                 type: 'goal',
                 player: 'Daniel Munoz',
+                assist: 'Luis Diaz',
                 team: 'COL',
             },
             {
@@ -949,6 +969,7 @@ export const results: Record<
                 minute: 65,
                 type: 'goal',
                 player: 'Luis Diaz',
+                assist: 'Gustavo Puerta',
                 team: 'COL',
             },
             {
@@ -956,16 +977,201 @@ export const results: Record<
                 extraMinute: 9,
                 type: 'goal',
                 player: 'Jaminton Campaz',
+                assist: 'J. C. Hernandez',
                 team: 'COL',
             },
         ]
     },
     25: {
         result: [1, 1],
-        events: []
+        events: [
+            {
+                minute: 6,
+                type: 'goal',
+                player: 'Michal Sadilek',
+                assist: 'Alexandr Sojka',
+                team: 'CZE',
+            },
+            {
+                minute: 33,
+                type: 'yellow_card',
+                player: 'Teboho Mokoena',
+                team: 'RSA'
+            },
+            {
+                minute: 40,
+                type: 'yellow_card',
+                player: 'Thalente Mbatha',
+                team: 'RSA'
+            },
+            {
+                minute: 75,
+                type: 'yellow_card',
+                player: 'Ladislav Krejci',
+                team: 'CZE'
+            },
+            {
+                minute: 6,
+                type: 'goal',
+                player: 'Teboho Mokoena',
+                team: 'RSA',
+                note: '(PEN)'
+            },
+        ]
     },
     26: {
         result: [4, 1],
-        events: []
+        events: [
+            {
+                minute: 59,
+                type: 'yellow_card',
+                player: 'Amar Dedic',
+                team: 'BIH'
+            },
+            {
+                minute: 61,
+                type: 'yellow_card',
+                player: 'Edin Dzeko',
+                team: 'BIH'
+            },
+            {
+                minute: 65,
+                type: 'yellow_card',
+                player: 'Nico Elvedi',
+                team: 'SUI'
+            },
+            {
+                minute: 74,
+                type: 'goal',
+                player: 'Johan Manzambi',
+                team: 'SUI',
+            },
+            {
+                minute: 80,
+                type: 'red_card',
+                player: 'Tarik Muharemovic',
+                team: 'BIH'
+            },
+            {
+                minute: 84,
+                type: 'goal',
+                player: 'Ruben Vargas',
+                assist: 'Breel Embolo',
+                team: 'SUI',
+            },
+            {
+                minute: 90,
+                type: 'goal',
+                player: 'Johan Manzambi',
+                assist: 'Ruben Vargas',
+                team: 'SUI',
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'goal',
+                player: 'Ermin Mahmic',
+                team: 'BIH',
+            },
+            {
+                minute: 90,
+                extraMinute: 7,
+                type: 'goal',
+                player: 'Granit Xhaka',
+                team: 'SUI',
+                note: '(PEN)'
+            },
+        ]
+    },
+    27: {
+        result: [6, 0],
+        events: [
+            {
+                minute: 9,
+                type: 'yellow_card',
+                player: 'Derek Cornelius',
+                team: 'CAN'
+            },
+            {
+                minute: 16,
+                type: 'goal',
+                player: 'Cyle Larin',
+                team: 'CAN',
+            },
+            {
+                minute: 29,
+                type: 'goal',
+                player: 'Jonathan David',
+                team: 'CAN',
+            },
+            {
+                minute: 33,
+                type: 'red_card',
+                player: 'Homam Al-Amin',
+                team: 'QAT'
+            },
+            {
+                minute: 45,
+                extraMinute: 3,
+                type: 'goal',
+                player: 'Jonathan David',
+                team: 'CAN',
+            },
+            {
+                minute: 53,
+                type: 'red_card',
+                player: 'Assim Madibo',
+                team: 'QAT'
+            },
+            {
+                minute: 62,
+                type: 'yellow_card',
+                player: 'A. F. Abdoulla',
+                team: 'QAT'
+            },
+            {
+                minute: 64,
+                type: 'goal',
+                player: 'Nathan-Dylan Saliba',
+                team: 'CAN',
+            },
+            {
+                minute: 75,
+                type: 'own_goal',
+                player: 'Mohammed Al-Mannai',
+                team: 'BIH',
+                note: '(OG)'
+            },
+            {
+                minute: 90,
+                extraMinute: 2,
+                type: 'goal',
+                player: 'Jonathan David',
+                team: 'CAN',
+            },
+        ]
+    },
+    28: {
+        result: [1, 0],
+        events: [
+            {
+                minute: 4,
+                type: 'yellow_card',
+                player: 'Lee Kang-in',
+                team: 'KOR'
+            },
+            {
+                minute: 50,
+                type: 'goal',
+                player: 'Luis Romo',
+                team: 'MEX',
+            },
+            {
+                minute: 58,
+                type: 'yellow_card',
+                player: 'Paik Seung-Ho',
+                team: 'KOR'
+            },
+        ]
     }
 };
