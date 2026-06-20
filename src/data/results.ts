@@ -1173,5 +1173,21 @@ export const results: Record<
                 team: 'KOR'
             },
         ]
+    },
+    29: {
+        result: [3, 0],
+        events: []
+    },
+    30: {
+        result: [0, 1],
+        events: []
+    },
+    31: {
+        result: [0, 1],
+        events: []
+    },
+    32: {
+        result: [2, 0],
+        events: []
     }
 };
