@@ -1176,7 +1176,52 @@ export const results: Record<
     },
     29: {
         result: [3, 0],
-        events: []
+        events: [
+            {
+                minute: 4,
+                type: 'yellow_card',
+                player: 'Carlens Arcus',
+                team: 'HTI'
+            },
+            {
+                minute: 23,
+                type: 'goal',
+                player: 'Matheus Cunha',
+                team: 'BRA',
+            },
+            {
+                minute: 36,
+                type: 'goal',
+                player: 'Matheus Cunha',
+                team: 'BRA',
+            },
+            {
+                minute: 45,
+                extraMinute: 3,
+                type: 'goal',
+                player: 'Vinicius Junior',
+                team: 'BRA',
+            },
+            {
+                minute: 45,
+                extraMinute: 4,
+                type: 'yellow_card',
+                player: 'Frantzy Pierrot',
+                team: 'HTI'
+            },
+            {
+                minute: 65,
+                type: 'yellow_card',
+                player: 'Douglas Santor',
+                team: 'BRA'
+            },
+            {
+                minute: 72,
+                type: 'yellow_card',
+                player: 'Danley Jean Jacques',
+                team: 'HTI'
+            },
+        ]
     },
     30: {
         result: [0, 1],
@@ -1189,5 +1234,88 @@ export const results: Record<
     32: {
         result: [2, 0],
         events: []
+    },
+    33: {
+        result: [2, 1],
+        events: [
+            {
+                minute: 30,
+                type: 'goal',
+                player: 'Franck Kessie',
+                team: 'CIV',
+            },
+            {
+                minute: 68,
+                type: 'goal',
+                player: 'Deniz Undav',
+                team: 'GER',
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'goal',
+                player: 'Deniz Undav',
+                team: 'GER',
+            },
+        ]
+    },
+    35: {
+        result: [5, 1],
+        events: [
+            {
+                minute: 5,
+                type: 'goal',
+                player: 'Brian Brobbey',
+                team: 'NED',
+            },
+            {
+                minute: 17,
+                type: 'goal',
+                player: 'Brian Brobbey',
+                team: 'NED',
+            },
+            {
+                minute: 47,
+                type: 'goal',
+                player: 'Cody Gakpo',
+                team: 'NED',
+            },
+            {
+                minute: 53,
+                type: 'yellow_card',
+                player: 'Gabriel Gudmundsson',
+                team: 'SWE'
+            },
+            {
+                minute: 54,
+                type: 'goal',
+                player: 'Cody Gakpo',
+                team: 'NED',
+            },
+            {
+                minute: 59,
+                type: 'goal',
+                player: 'Anthony Elanga',
+                team: 'SWE',
+            },
+            {
+                minute: 75,
+                type: 'yellow_card',
+                player: 'Yasin Ayari',
+                team: 'SWE'
+            },
+            {
+                minute: 80,
+                type: 'yellow_card',
+                player: 'Lucas Bergvall',
+                team: 'SWE'
+            },
+            {
+                minute: 89,
+                type: 'goal',
+                player: 'Crysencio Summerville',
+                team: 'NED',
+            },
+        ]
     }
 };
