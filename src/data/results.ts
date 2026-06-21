@@ -1329,5 +1329,9 @@ export const results: Record<
     38: {
         result: [4, 0],
         events: []
+    },
+    39: {
+        result: [0, 0],
+        events: []
     }
 };
