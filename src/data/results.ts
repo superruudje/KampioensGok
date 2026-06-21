@@ -1259,6 +1259,10 @@ export const results: Record<
             },
         ]
     },
+    34: {
+        result: [0, 0],
+        events: []
+    },
     35: {
         result: [5, 1],
         events: [
@@ -1317,5 +1321,9 @@ export const results: Record<
                 team: 'NED',
             },
         ]
+    },
+    36: {
+        result: [0, 4],
+        events: []
     }
 };
