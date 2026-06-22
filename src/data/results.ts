@@ -1326,12 +1326,24 @@ export const results: Record<
         result: [0, 4],
         events: []
     },
+    37: {
+        result: [2, 2],
+        events: []
+    },
     38: {
         result: [4, 0],
         events: []
     },
     39: {
         result: [0, 0],
+        events: []
+    },
+    40: {
+        result: [1, 3],
+        events: []
+    },
+    43: {
+        result: [2, 0],
         events: []
     }
 };
