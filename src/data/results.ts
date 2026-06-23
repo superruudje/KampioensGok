@@ -1342,8 +1342,20 @@ export const results: Record<
         result: [1, 3],
         events: []
     },
+    41: {
+        result: [3, 2],
+        events: []
+    },
+    42: {
+        result: [3, 0],
+        events: []
+    },
     43: {
         result: [2, 0],
+        events: []
+    },
+    44: {
+        result: [1, 2],
         events: []
     }
 };
