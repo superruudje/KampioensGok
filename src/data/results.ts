@@ -1389,5 +1389,13 @@ export const results: Record<
     52: {
         result: [3, 1],
         events: []
+    },
+    53: {
+        result: [0, 3],
+        events: []
+    },
+    54: {
+        result: [1, 0],
+        events: []
     }
 };
