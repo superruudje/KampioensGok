@@ -1225,15 +1225,131 @@ export const results: Record<
     },
     30: {
         result: [0, 1],
-        events: []
+        events: [
+            {
+                minute: 2,
+                type: 'goal',
+                player: 'Ismael Saibari',
+                assist: 'Brahim Diaz',
+                team: 'MAR',
+            },
+            {
+                minute: 22,
+                type: 'yellow_card',
+                player: 'Issa Diop',
+                team: 'MAR'
+            },
+            {
+                minute: 65,
+                type: 'yellow_card',
+                player: 'Andy Robertson',
+                team: 'SCO'
+            },
+        ]
     },
     31: {
         result: [0, 1],
-        events: []
+        events: [
+            {
+                minute: 2,
+                type: 'goal',
+                player: 'Matias Galarza',
+                assist: 'Julio Enciso',
+                team: 'PAR',
+            },
+            {
+                minute: 4,
+                type: 'yellow_card',
+                player: 'Matias Galarza',
+                team: 'PAR'
+            },
+            {
+                minute: 37,
+                type: 'yellow_card',
+                player: 'Carlos Gonzalez',
+                team: 'PAR'
+            },
+            {
+                minute: 45,
+                extraMinute: 3,
+                type: 'red_card',
+                player: 'Miguel Almiron',
+                team: 'PAR'
+            },
+            {
+                minute: 63,
+                type: 'yellow_card',
+                player: 'Vincenzo Montella',
+                team: 'TUR'
+            },
+            {
+                minute: 71,
+                type: 'yellow_card',
+                player: 'Eren Elmali',
+                team: 'TUR'
+            },
+        ]
     },
     32: {
         result: [2, 0],
-        events: []
+        events: [
+            {
+                minute: 11,
+                type: 'own_goal',
+                player: 'Cameron Burgess',
+                team: 'AUS',
+                note: '(OG)'
+            },
+            {
+                minute: 16,
+                type: 'yellow_card',
+                player: 'Jordan Bos',
+                team: 'AUS'
+            },
+            {
+                minute: 32,
+                type: 'yellow_card',
+                player: 'Alessandro Circati',
+                team: 'AUS'
+            },
+            {
+                minute: 43,
+                type: 'goal',
+                player: 'Alex Freeman',
+                team: 'USA',
+            },
+            {
+                minute: 56,
+                type: 'yellow_card',
+                player: 'Antonee Robinson',
+                team: 'USA'
+            },
+            {
+                minute: 89,
+                type: 'yellow_card',
+                player: 'Folarin Balogun',
+                team: 'USA'
+            },
+            {
+                minute: 89,
+                type: 'yellow_card',
+                player: 'Jacob Italiano',
+                team: 'AUS'
+            },
+            {
+                minute: 89,
+                type: 'yellow_card',
+                player: 'Harry Souttar',
+                team: 'AUS'
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'yellow_card',
+                player: 'Chris Richards',
+                team: 'USA'
+            },
+        ]
     },
     33: {
         result: [2, 1],
@@ -1248,6 +1364,7 @@ export const results: Record<
                 minute: 68,
                 type: 'goal',
                 player: 'Deniz Undav',
+                assist: 'Nadiem Amiri',
                 team: 'GER',
             },
             {
@@ -1255,13 +1372,52 @@ export const results: Record<
                 extraMinute: 4,
                 type: 'goal',
                 player: 'Deniz Undav',
+                assist: 'Felix Nmecha',
                 team: 'GER',
             },
         ]
     },
     34: {
         result: [0, 0],
-        events: []
+        events: [
+            {
+                minute: 38,
+                type: 'yellow_card',
+                player: 'Jordy Alcivar',
+                team: 'ECU'
+            },
+            {
+                minute: 38,
+                type: 'yellow_card',
+                player: 'Leandro Bacuna',
+                team: 'CUW'
+            },
+            {
+                minute: 53,
+                type: 'yellow_card',
+                player: 'Juninho Bacuna',
+                team: 'CUW'
+            },
+            {
+                minute: 56,
+                type: 'yellow_card',
+                player: 'Livano Comenencia',
+                team: 'CUW'
+            },
+            {
+                minute: 75,
+                type: 'yellow_card',
+                player: 'Jurien Gaari',
+                team: 'CUW'
+            },
+            {
+                minute: 90,
+                extraMinute: 1,
+                type: 'yellow_card',
+                player: 'Gervane Kastaneer',
+                team: 'CUW'
+            },
+        ]
     },
     35: {
         result: [5, 1],
@@ -1324,11 +1480,92 @@ export const results: Record<
     },
     36: {
         result: [0, 4],
-        events: []
+        events: [
+            {
+                minute: 5,
+                type: 'goal',
+                player: 'Daichi Kamada',
+                assist: 'Keito Nakamura',
+                team: 'JPN',
+            },
+            {
+                minute: 31,
+                type: 'goal',
+                player: 'Ayasa Ueda',
+                assist: 'Kou Itakura',
+                team: 'JPN',
+            },
+            {
+                minute: 69,
+                type: 'goal',
+                player: 'Junya Ito',
+                assist: 'Ayase Ueda',
+                team: 'JPN',
+            },
+            {
+                minute: 83,
+                type: 'goal',
+                player: 'Ayasa Ueda',
+                assist: 'Kaishu Sano',
+                team: 'JPN',
+            },
+        ]
     },
     37: {
         result: [2, 2],
-        events: []
+        events: [
+            {
+                minute: 5,
+                type: 'yellow_card',
+                player: 'Sidney Lopes Cabral',
+                team: 'CPV'
+            },
+            {
+                minute: 20,
+                type: 'yellow_card',
+                player: 'Rodrigo Bentancur',
+                team: 'URU'
+            },
+            {
+                minute: 21,
+                type: 'goal',
+                player: 'Kevin Pina',
+                team: 'CPV',
+            },
+            {
+                minute: 44,
+                type: 'goal',
+                player: 'Maxi Araujo',
+                team: 'URU',
+            },
+            {
+                minute: 45,
+                extraMinute: 6,
+                type: 'goal',
+                player: 'Agustin Canobbio',
+                assist: 'Maximiliano Araujo',
+                team: 'URU',
+            },
+            {
+                minute: 58,
+                type: 'yellow_card',
+                player: 'Mathias Olivera',
+                team: 'URU'
+            },
+            {
+                minute: 61,
+                type: 'goal',
+                player: 'Helio Varela',
+                team: 'CPV',
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'yellow_card',
+                player: 'Diney Borges',
+                team: 'CPV'
+            },
+        ]
     },
     38: {
         result: [4, 0],

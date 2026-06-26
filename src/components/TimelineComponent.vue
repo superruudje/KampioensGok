@@ -1,11 +1,11 @@
 <template>
     <div class="d-flex justify-content-around align-items-center w-100 mb-3">
         <div class="time-line text-end">
-            <img :src="getTeamImage(teams[0])" :alt="teams[0]" class="team-flag">
+            <img :src="getTeamImage(teams[0])" :alt="teams[0]" class="team-flag border">
         </div>
         <div class="mx-3 icon"></div>
         <div class="time-line">
-            <img :src="getTeamImage(teams[1])" :alt="teams[1]" class="team-flag">
+            <img :src="getTeamImage(teams[1])" :alt="teams[1]" class="team-flag border">
         </div>
     </div>
 
@@ -106,6 +106,5 @@ function formatMinute(event: MatchEvent): string {
 
 .team-flag
     width: 48px
-    height: 48px
     object-fit: contain
 </style>
