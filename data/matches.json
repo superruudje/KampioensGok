@@ -820,7 +820,7 @@
         "poule_name": "round_of_32",
         "location_id": 5,
         "teams": [
-            "1F",
+            "NED",
             "MAR"
         ]
     },
@@ -832,7 +832,7 @@
         "location_id": 9,
         "teams": [
             "BRA",
-            "2F"
+            "JPN"
         ]
     },
     {
@@ -853,7 +853,7 @@
         "poule_name": "round_of_32",
         "location_id": 8,
         "teams": [
-            "2E",
+            "CIV",
             "2I"
         ]
     },
@@ -887,7 +887,7 @@
         "location_id": 15,
         "teams": [
             "USA",
-            "3B/E/F/I/J"
+            "BIH"
         ]
     },
     {
@@ -963,7 +963,7 @@
         "poule_name": "round_of_32",
         "location_id": 8,
         "teams": [
-            "2D",
+            "AUS",
             "2G"
         ]
     },
