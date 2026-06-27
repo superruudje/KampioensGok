@@ -1658,5 +1658,29 @@ export const results: Record<
     60: {
         result: [0, 0],
         events: []
-    }
+    },
+    61: {
+        result: [1, 4],
+        events: []
+    },
+    62: {
+        result: [5, 0],
+        events: []
+    },
+    63: {
+        result: [1, 1],
+        events: []
+    },
+    64: {
+        result: [1, 5],
+        events: []
+    },
+    65: {
+        result: [0, 0],
+        events: []
+    },
+    66: {
+        result: [0, 1],
+        events: []
+    },
 };
