@@ -865,7 +865,7 @@
         "location_id": 3,
         "teams": [
             "MEX",
-            "3C/E/F/H/I"
+            "ECU"
         ]
     },
     {
@@ -875,8 +875,8 @@
         "poule_name": "round_of_32",
         "location_id": 6,
         "teams": [
-            "1L",
-            "3E/H/I/J/K"
+            "ENG",
+            "COD"
         ]
     },
     {
@@ -898,7 +898,7 @@
         "location_id": 16,
         "teams": [
             "BEL",
-            "3A/E/H/I/J"
+            "SEN"
         ]
     },
     {
@@ -908,8 +908,8 @@
         "poule_name": "round_of_32",
         "location_id": 1,
         "teams": [
-            "2K",
-            "2L"
+            "POR",
+            "CRO"
         ]
     },
     {
@@ -920,7 +920,7 @@
         "location_id": 11,
         "teams": [
             "ESP",
-            "2J"
+            "AUT"
         ]
     },
     {
@@ -931,7 +931,7 @@
         "location_id": 2,
         "teams": [
             "SUI",
-            "3E/F/G/I/J"
+            "ALG"
         ]
     },
     {
@@ -952,8 +952,8 @@
         "poule_name": "round_of_32",
         "location_id": 10,
         "teams": [
-            "1K",
-            "3D/E/I/J/L"
+            "COL",
+            "GHA"
         ]
     },
     {
