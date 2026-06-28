@@ -1683,4 +1683,28 @@ export const results: Record<
         result: [0, 1],
         events: []
     },
+    67: {
+        result: [0, 2],
+        events: []
+    },
+    68: {
+        result: [2, 1],
+        events: []
+    },
+    69: {
+        result: [3, 3],
+        events: []
+    },
+    70: {
+        result: [1, 3],
+        events: []
+    },
+    71: {
+        result: [0, 0],
+        events: []
+    },
+    72: {
+        result: [3, 1],
+        events: []
+    }
 };
