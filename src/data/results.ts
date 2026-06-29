@@ -1569,43 +1569,366 @@ export const results: Record<
     },
     38: {
         result: [4, 0],
-        events: []
+        events: [
+            {
+                minute: 10,
+                type: 'goal',
+                player: 'Lamine Yamal',
+                assist: 'Mikel Oyarzabal',
+                team: 'ESP',
+            },
+            {
+                minute: 21,
+                type: 'goal',
+                player: 'Mikel Oyarzabal',
+                assist: 'Aymeric Laporte',
+                team: 'ESP',
+            },
+            {
+                minute: 24,
+                type: 'goal',
+                player: 'Mikel Oyarzabal',
+                assist: 'Dani Olmo',
+                team: 'ESP',
+            },
+            {
+                minute: 30,
+                type: 'yellow_card',
+                player: 'Salem Aldawsari',
+                team: 'KSA'
+            },
+            {
+                minute: 49,
+                type: 'own_goal',
+                player: 'Hassan Altambakti',
+                team: 'KSA',
+                note: "(OG)"
+            },
+            {
+                minute: 60,
+                type: 'yellow_card',
+                player: 'Mohamed Kanno',
+                team: 'KSA'
+            },
+        ]
     },
     39: {
         result: [0, 0],
-        events: []
+        events: [
+            {
+                minute: 3,
+                type: 'yellow_card',
+                player: 'Romelu Lukaku',
+                team: 'BEL'
+            },
+            {
+                minute: 33,
+                type: 'yellow_card',
+                player: 'Saeid Ezatolahi',
+                team: 'IRN'
+            },
+            {
+                minute: 66,
+                type: 'red_card',
+                player: 'Nathan Ngoy',
+                team: 'BEL'
+            },
+        ]
     },
     40: {
         result: [1, 3],
-        events: []
+        events: [
+            {
+                minute: 15,
+                type: 'goal',
+                player: 'Finn Surman',
+                assist: 'Tim Payne',
+                team: 'NZL',
+            },
+            {
+                minute: 17,
+                type: 'yellow_card',
+                player: 'Mohanad Lashin',
+                team: 'EGY'
+            },
+            {
+                minute: 20,
+                type: 'yellow_card',
+                player: 'Sarpreet Singh',
+                team: 'NZL'
+            },
+            {
+                minute: 34,
+                type: 'yellow_card',
+                player: 'Callum McCowatt',
+                team: 'NZL'
+            },
+            {
+                minute: 58,
+                type: 'goal',
+                player: 'Mostafa Zico',
+                assist: 'Mohamed Hany',
+                team: 'EGY',
+            },
+            {
+                minute: 67,
+                type: 'goal',
+                player: 'Mahamed Salah',
+                assist: 'Mostafa Zico',
+                team: 'EGY',
+            },
+            {
+                minute: 82,
+                type: 'goal',
+                player: 'Mahmoud Trezeguet',
+                assist: 'Mohamed Salah',
+                team: 'EGY',
+            },
+        ]
     },
     41: {
         result: [3, 2],
-        events: []
+        events: [
+            {
+                minute: 43,
+                type: 'goal',
+                player: 'Marcus Holmgren Pedersen',
+                team: 'NOR',
+            },
+            {
+                minute: 48,
+                type: 'goal',
+                player: 'Erling Haaland',
+                assist: 'Martin Ødegaard',
+                team: 'NOR',
+            },
+            {
+                minute: 53,
+                type: 'goal',
+                player: 'Ismaila Sarr',
+                assist: 'Sadio Mané',
+                team: 'SEN',
+            },
+            {
+                minute: 58,
+                type: 'goal',
+                player: 'Erling Haaland',
+                assist: 'Patrick Berg',
+                team: 'NOR',
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'goal',
+                player: 'Ismaila Sarr',
+                assist: 'Nicolas Jackson',
+                team: 'SEN',
+            },
+        ]
     },
     42: {
         result: [3, 0],
-        events: []
+        events: [
+            {
+                minute: 6,
+                type: 'yellow_card',
+                player: 'Amir Alammari',
+                team: 'IRQ'
+            },
+            {
+                minute: 14,
+                type: 'goal',
+                player: 'Kylian Mbappe',
+                assist: 'Michael Olise',
+                team: 'FRA',
+            },
+            {
+                minute: 54,
+                type: 'goal',
+                player: 'Kylian Mbappe',
+                assist: 'Ousmane Dembélé',
+                team: 'FRA',
+            },
+            {
+                minute: 66,
+                type: 'goal',
+                player: 'Ousmane Dembélé',
+                assist: 'Michael Olise',
+                team: 'FRA',
+            },
+        ]
     },
     43: {
         result: [2, 0],
-        events: []
+        events: [
+            {
+                minute: 38,
+                type: 'goal',
+                player: 'Lionel Messi',
+                assist: 'Facundo Medina',
+                team: 'ARG',
+            },
+            {
+                minute: 40,
+                type: 'yellow_card',
+                player: 'Stefan Posch',
+                team: 'AUT'
+            },
+            {
+                minute: 76,
+                type: 'yellow_card',
+                player: 'Konrad Laimer',
+                team: 'AUT'
+            },
+            {
+                minute: 76,
+                type: 'yellow_card',
+                player: 'Facundo Medina',
+                team: 'ARG'
+            },
+            {
+                minute: 90,
+                extraMinute: 2,
+                type: 'yellow_card',
+                player: 'Leandro Paredes',
+                team: 'ARG'
+            },
+            {
+                minute: 90,
+                extraMinute: 5,
+                type: 'goal',
+                player: 'Lionel Messi',
+                team: 'ARG',
+            },
+        ]
     },
     44: {
         result: [1, 2],
-        events: []
+        events: [
+            {
+                minute: 36,
+                type: 'goal',
+                player: 'Nizar Alrashdan',
+                team: 'JOR',
+            },
+            {
+                minute: 44,
+                type: 'yellow_card',
+                player: 'Ramiz Zerrouki',
+                team: 'ALG'
+            },
+            {
+                minute: 64,
+                type: 'yellow_card',
+                player: 'Husam Abudahab',
+                team: 'JOR'
+            },
+            {
+                minute: 69,
+                type: 'goal',
+                player: 'Nadhir Benbouali',
+                assist: 'Riyad Mahrez',
+                team: 'ALG',
+            },
+            {
+                minute: 82,
+                type: 'goal',
+                player: 'Amine Gouiri',
+                team: 'ALG',
+            },
+        ]
     },
     45: {
         result: [0, 0],
-        events: []
+        events: [
+            {
+                minute: 41,
+                type: 'yellow_card',
+                player: 'Declan Rice',
+                team: 'ENG'
+            },
+            {
+                minute: 60,
+                type: 'yellow_card',
+                player: 'Inaki Williams',
+                team: 'GHA'
+            },
+        ]
     },
     46: {
         result: [0, 1],
-        events: []
+        events: [
+            {
+                minute: 54,
+                type: 'goal',
+                player: 'Ante Budimir',
+                assist: 'Josip Stanišić',
+                team: 'CRO',
+            },
+            {
+                minute: 61,
+                type: 'yellow_card',
+                player: 'Edgar Yoel Barcenas',
+                team: 'PAN'
+            },
+            {
+                minute: 90,
+                extraMinute: 2,
+                type: 'yellow_card',
+                player: 'Petar Sucic',
+                team: 'CRO'
+            },
+        ]
     },
     47: {
         result: [5, 0],
-        events: []
+        events: [
+            {
+                minute: 6,
+                type: 'goal',
+                player: 'Cristiano Ronaldo',
+                assist: 'João Cancelo',
+                team: 'POR',
+            },
+            {
+                minute: 14,
+                type: 'yellow_card',
+                player: 'Odiljon Xamrobekov',
+                team: 'UZB'
+            },
+            {
+                minute: 17,
+                type: 'goal',
+                player: 'Nuno Mendes',
+                team: 'POR',
+            },
+            {
+                minute: 39,
+                type: 'goal',
+                player: 'Cristiano Ronaldo',
+                assist: 'Bruno Fernandes',
+                team: 'POR',
+            },
+            {
+                minute: 60,
+                type: 'own_goal',
+                player: 'Abduvohid Nematov',
+                team: 'UZB',
+                note: '(OG)'
+            },
+            {
+                minute: 68,
+                type: 'yellow_card',
+                player: 'Renato Veiga',
+                team: 'POR'
+            },
+            {
+                minute: 87,
+                type: 'goal',
+                player: 'Rafael Leao',
+                team: 'POR',
+            },
+        ]
     },
     48: {
         result: [1, 0],
