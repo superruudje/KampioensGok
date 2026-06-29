@@ -2029,5 +2029,9 @@ export const results: Record<
     72: {
         result: [3, 1],
         events: []
+    },
+    73: {
+        result: [0, 1],
+        events: []
     }
 };

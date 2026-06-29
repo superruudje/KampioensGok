@@ -144,7 +144,9 @@
             "AUS",
             "EGY"
         ],
-        "round_of_16": [],
+        "round_of_16": [
+            "CAN"
+        ],
         "quarter_final": [],
         "semi_final": [],
         "bronze_final": [],
