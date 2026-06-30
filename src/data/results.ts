@@ -2034,6 +2034,18 @@ export const results: Record<
         result: [0, 1],
         events: []
     },
+    74: {
+        result: [1, 1],
+        result_after_extra_time: [1, 1],
+        result_after_penalties: [3, 4],
+        events: []
+    },
+    75: {
+        result: [1, 1],
+        result_after_extra_time: [1, 1],
+        result_after_penalties: [2, 3],
+        events: []
+    },
     76: {
         result: [2, 1],
         events: []
