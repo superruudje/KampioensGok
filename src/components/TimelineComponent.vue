@@ -1,11 +1,11 @@
 <template>
     <div class="d-flex justify-content-around align-items-center w-100 mb-3">
         <div class="time-line text-end">
-            <img :src="getTeamImage(teams[0])" :alt="teams[0]" class="team-flag border">
+            <img :alt="teams[0]" :src="getTeamImage(teams[0])" class="team-flag border">
         </div>
         <div class="mx-3 icon"></div>
         <div class="time-line">
-            <img :src="getTeamImage(teams[1])" :alt="teams[1]" class="team-flag border">
+            <img :alt="teams[1]" :src="getTeamImage(teams[1])" class="team-flag border">
         </div>
     </div>
 
@@ -15,37 +15,51 @@
         <div
             v-for="e in ordered_timeline"
             :key="`${e.minute}-${e.extraMinute ?? 0}-${e.player}`"
-            class="position-relative z-1 d-flex justify-content-around align-items-center w-100"
+            class="position-relative z-1 d-flex justify-content-around align-items-baseline w-100"
         >
             <div class="time-line text-end">
                 <template v-if="e.team === teams[0]">
-                    <span class="txt-blue fw-semibold d-block lh-1">{{ e.player }}</span>
-                    <span class="small text-black-50 lh-1">{{ e.assist }}</span>
-                    <span v-if="e.note" class="small text-black-50 lh-1">{{ e.note }}</span>
-                </template>
-                <span v-else class="text-black-50">{{ formatMinute(e) }}</span>
-            </div>
-            <div class="mx-3 text-center icon bg-white">
-                <FontAwesomeIcon v-if="e.type === 'goal'" :icon="faSoccerBall"/>
-                <FontAwesomeIcon v-else-if="e.type === 'own_goal'" :icon="faSoccerBall"/>
-                <FontAwesomeIcon v-else-if="e.type === 'substitution'" :icon="faArrowsTurnToDots"/>
-                <FontAwesomeIcon
-                    v-else
-                    :class="{
+                    <div class="d-flex gap-1 justify-content-end">
+                        <span class="txt-blue fw-semibold d-block lh-1">{{ e.player }}</span>
+                        <FontAwesomeIcon v-if="e.type === 'goal'" :icon="faSoccerBall"/>
+                        <FontAwesomeIcon v-else-if="e.type === 'own_goal'" :icon="faSoccerBall"/>
+                        <FontAwesomeIcon v-else-if="e.type === 'substitution'" :icon="faArrowsTurnToDots"/>
+                        <FontAwesomeIcon
+                            v-else
+                            :class="{
                         'text-yellow' : e.type === 'yellow_card',
                         'text-red' : e.type === 'red_card'
                     }"
-                    :icon="faMobile"
-                />
+                            :icon="faMobile"
+                        />
+                    </div>
+                    <span class="small text-black-50 lh-1">{{ e.assist }}</span>
+                    <span v-if="e.note" class="small text-black-50 lh-1">{{ e.note }}</span>
+                </template>
+            </div>
+            <div class="mx-3 text-center icon bg-white">
+                <span class="text-black small">{{ formatMinute(e) }}</span>
             </div>
 
             <div class="time-line">
                 <template v-if="e.team === teams[1]">
-                    <span class="txt-blue fw-semibold d-block lh-1">{{ e.player }}</span>
+                    <div class="d-flex gap-1 justify-content-start">
+                        <FontAwesomeIcon v-if="e.type === 'goal'" :icon="faSoccerBall"/>
+                        <FontAwesomeIcon v-else-if="e.type === 'own_goal'" :icon="faSoccerBall"/>
+                        <FontAwesomeIcon v-else-if="e.type === 'substitution'" :icon="faArrowsTurnToDots"/>
+                        <FontAwesomeIcon
+                            v-else
+                            :class="{
+                        'text-yellow' : e.type === 'yellow_card',
+                        'text-red' : e.type === 'red_card'
+                    }"
+                            :icon="faMobile"
+                        />
+                        <span class="txt-blue fw-semibold d-block lh-1">{{ e.player }}</span>
+                    </div>
                     <span class="small text-black-50 lh-1">{{ e.assist }}</span>
                     <span v-if="e.note" class="small text-black-50 lh-1">{{ e.note }}</span>
                 </template>
-                <span v-else class="text-black-50">{{ formatMinute(e) }}</span>
             </div>
         </div>
     </div>
