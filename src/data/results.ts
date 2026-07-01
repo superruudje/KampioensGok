@@ -2268,5 +2268,9 @@ export const results: Record<
     79: {
         result: [2, 0],
         events: []
+    },
+    80: {
+        result: [2, 1],
+        events: []
     }
 };
