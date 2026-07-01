@@ -2049,5 +2049,17 @@ export const results: Record<
     76: {
         result: [2, 1],
         events: []
+    },
+    77: {
+        result: [3, 0],
+        events: []
+    },
+    78: {
+        result: [1, 2],
+        events: []
+    },
+    79: {
+        result: [2, 0],
+        events: []
     }
 };
