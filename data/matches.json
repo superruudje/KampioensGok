@@ -974,8 +974,8 @@
         "poule_name": "round_of_16",
         "location_id": 14,
         "teams": [
-            "PAN",
-            "W77"
+            "PAR",
+            "FRA"
         ]
     },
     {
@@ -997,7 +997,7 @@
         "location_id": 13,
         "teams": [
             "BRA",
-            "W78"
+            "NOR"
         ]
     },
     {
@@ -1007,7 +1007,7 @@
         "poule_name": "round_of_16",
         "location_id": 3,
         "teams": [
-            "W79",
+            "MEX",
             "W80"
         ]
     },

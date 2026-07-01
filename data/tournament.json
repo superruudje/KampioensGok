@@ -146,9 +146,12 @@
         ],
         "round_of_16": [
             "CAN",
-            "PAN",
             "MAR",
-            "BRA"
+            "PAR",
+            "FRA",
+            "BRA",
+            "NOR",
+            "MEX"
         ],
         "quarter_final": [],
         "semi_final": [],
