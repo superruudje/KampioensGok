@@ -1932,23 +1932,230 @@ export const results: Record<
     },
     48: {
         result: [1, 0],
-        events: []
+        events: [
+            {
+                minute: 56,
+                type: 'yellow_card',
+                player: 'Jhon Lucumi',
+                team: 'COL'
+            },
+            {
+                minute: 76,
+                type: 'goal',
+                player: 'Daniel Munoz',
+                assist: 'J. F. Quintero',
+                team: 'COL',
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'yellow_card',
+                player: 'Charles Pickel',
+                team: 'COD'
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'yellow_card',
+                player: 'Jefferson Lerma',
+                team: 'COL'
+            },
+        ]
     },
     49: {
         result: [0, 3],
-        events: []
+        events: [
+            {
+                minute: 7,
+                type: 'goal',
+                player: 'Vinicius Junior',
+                team: 'BRA',
+            },
+            {
+                minute: 45,
+                extraMinute: 3,
+                type: 'goal',
+                player: 'Vinicius Junior',
+                assist: 'Bruno Guimarães',
+                team: 'BRA',
+            },
+            {
+                minute: 60,
+                type: 'goal',
+                player: 'Matheus Cunha',
+                assist: 'Bruno Guimarães',
+                team: 'BRA',
+            },
+            {
+                minute: 62,
+                type: 'yellow_card',
+                player: 'Danilo',
+                team: 'BRA'
+            },
+            {
+                minute: 82,
+                type: 'yellow_card',
+                player: 'Fabinho',
+                team: 'BRA'
+            },
+            {
+                minute: 89,
+                type: 'yellow_card',
+                player: 'Ryan Christie',
+                team: 'SCO'
+            },
+        ]
     },
     50: {
         result: [4, 2],
-        events: []
+        events: [
+            {
+                minute: 10,
+                type: 'own_goal',
+                player: 'Yassine Bounou',
+                team: 'MAR',
+                note: '(OG)'
+            },
+            {
+                minute: 39,
+                type: 'goal',
+                player: 'Achraf Hakimi',
+                team: 'MAR',
+            },
+            {
+                minute: 43,
+                type: 'goal',
+                player: 'Wilson Isidor',
+                assist: 'Jean-Kevin Duverne',
+                team: 'HTI',
+            },
+            {
+                minute: 45,
+                extraMinute: 1,
+                type: 'goal',
+                player: 'Ismael Saibari',
+                assist: 'Achraf Hakimi',
+                team: 'MAR',
+            },
+            {
+                minute: 78,
+                type: 'goal',
+                player: 'Soufiane Rahimi',
+                team: 'MAR',
+            },
+            {
+                minute: 79,
+                type: 'yellow_card',
+                player: 'Johny Placide',
+                team: 'HTI'
+            },
+            {
+                minute: 79,
+                type: 'yellow_card',
+                player: 'Duckens Nazon',
+                team: 'HTI'
+            },
+            {
+                minute: 89,
+                type: 'goal',
+                player: 'Gessime Yassine',
+                assist: 'Soufiane Rahimi',
+                team: 'MAR',
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'yellow_card',
+                player: 'Josue Casimir',
+                team: 'HTI'
+            },
+        ]
     },
     51: {
         result: [2, 1],
-        events: []
+        events: [
+            {
+                minute: 32,
+                type: 'yellow_card',
+                player: 'Cyle Larin',
+                team: 'CAN'
+            },
+            {
+                minute: 32,
+                type: 'yellow_card',
+                player: 'Granit Xhaka',
+                team: 'SUI'
+            },
+            {
+                minute: 46,
+                type: 'goal',
+                player: 'Ruben Vargas',
+                assist: 'Johan Manzambi',
+                team: 'SUI'
+            },
+            {
+                minute: 57,
+                type: 'goal',
+                player: 'Johan Manzambi',
+                assist: 'Breel Embolo',
+                team: 'SUI'
+            },
+            {
+                minute: 76,
+                type: 'goal',
+                player: 'Promise David',
+                assist: 'Nathan-Dylan Saliba',
+                team: 'CAN'
+            },
+            {
+                minute: 87,
+                type: 'yellow_card',
+                player: 'Liam Millar',
+                team: 'CAN'
+            },
+        ]
     },
     52: {
         result: [3, 1],
-        events: []
+        events: [
+            {
+                minute: 29,
+                type: 'goal',
+                player: 'Kerim Alajbegovic',
+                team: 'BIH'
+            },
+            {
+                minute: 34,
+                type: 'own_goal',
+                player: 'Mahmoud Abunada',
+                team: 'QAT',
+                note: '(OG)'
+            },
+            {
+                minute: 42,
+                type: 'goal',
+                player: 'Hassan Alhaydos',
+                team: 'QAT'
+            },
+            {
+                minute: 78,
+                type: 'yellow_card',
+                player: 'Ahmed Fathy',
+                team: 'QAT'
+            },
+            {
+                minute: 80,
+                type: 'goal',
+                player: 'Ermin Mahmic',
+                team: 'BIH'
+            },
+            {
+                minute: 82,
+                type: 'yellow_card',
+                player: 'Ermin Mahmic',
+                team: 'BIH'
+            },
+        ]
     },
     53: {
         result: [0, 3],
