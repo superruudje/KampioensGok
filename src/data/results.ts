@@ -2272,5 +2272,14 @@ export const results: Record<
     80: {
         result: [2, 1],
         events: []
+    },
+    81: {
+        result: [2, 0],
+        events: []
+    },
+    82: {
+        result: [2, 2],
+        result_after_extra_time: [3, 2],
+        events: []
     }
 };
