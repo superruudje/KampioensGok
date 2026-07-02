@@ -152,7 +152,9 @@
             "BRA",
             "NOR",
             "MEX",
-            "ENG"
+            "ENG",
+            "BEL",
+            "USA"
         ],
         "quarter_final": [],
         "semi_final": [],
