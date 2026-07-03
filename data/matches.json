@@ -1018,8 +1018,8 @@
         "poule_name": "round_of_16",
         "location_id": 8,
         "teams": [
-            "W83",
-            "W84"
+            "POR",
+            "ESP"
         ]
     },
     {
@@ -1051,7 +1051,7 @@
         "poule_name": "round_of_16",
         "location_id": 2,
         "teams": [
-            "W85",
+            "SUI",
             "W87"
         ]
     },
