@@ -2293,5 +2293,20 @@ export const results: Record<
     85: {
         result: [2, 0],
         events: []
+    },
+    86: {
+        result: [1, 1],
+        result_after_extra_time: [3, 2],
+        events: []
+    },
+    87: {
+        result: [1, 0],
+        events: []
+    },
+    88: {
+        result: [1, 1],
+        result_after_extra_time: [1, 1],
+        result_after_penalties: [2, 4],
+        events: []
     }
 };
