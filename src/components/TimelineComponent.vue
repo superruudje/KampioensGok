@@ -37,7 +37,7 @@
                     <span v-if="e.note" class="small text-black-50 lh-1">{{ e.note }}</span>
                 </template>
             </div>
-            <div class="mx-3 text-center icon bg-white">
+            <div class="mx-3 text-center bg-white">
                 <span class="text-black small">{{ formatMinute(e) }}</span>
             </div>
 
@@ -106,9 +106,6 @@ function formatMinute(event: MatchEvent): string {
 <style lang="sass" scoped>
 .time-line
     flex: 1
-
-.icon
-    width: 24px
 
 .line
     border-color: rgba(0, 0, 0, 0.5) !important

@@ -2159,27 +2159,203 @@ export const results: Record<
     },
     53: {
         result: [0, 3],
-        events: []
+        events: [
+            {
+                minute: 55,
+                type: 'goal',
+                player: 'Mateo Chavez',
+                team: 'MEX'
+            },
+            {
+                minute: 61,
+                type: 'goal',
+                player: 'Julian Quinones',
+                team: 'MEX'
+            },
+            {
+                minute: 63,
+                type: 'yellow_card',
+                player: 'Edson Alvarez',
+                team: 'MEX'
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'goal',
+                player: 'Alvaro Fidalgo',
+                team: 'MEX'
+            },
+        ]
     },
     54: {
         result: [1, 0],
-        events: []
+        events: [
+            {
+                minute: 62,
+                type: 'goal',
+                player: 'Thapelo Maseko',
+                team: 'RSA'
+            },
+            {
+                minute: 72,
+                type: 'yellow_card',
+                player: 'Aubrey Modiba',
+                team: 'RSA'
+            },
+            {
+                minute: 78,
+                type: 'yellow_card',
+                player: 'Cho Guesung',
+                team: 'KOR'
+            },
+        ]
     },
     55: {
         result: [0, 2],
-        events: []
+        events: [
+            {
+                minute: 7,
+                type: 'goal',
+                player: 'Nicolas Pepe',
+                team: 'CIV'
+            },
+            {
+                minute: 34,
+                type: 'yellow_card',
+                player: 'Nicolas Pepe',
+                team: 'CIV'
+            },
+            {
+                minute: 64,
+                type: 'goal',
+                player: 'Nicolas Pepe',
+                team: 'CIV'
+            },
+            {
+                minute: 75,
+                type: 'yellow_card',
+                player: 'Juninho Bacuna',
+                team: 'CUW'
+            },
+            {
+                minute: 83,
+                type: 'yellow_card',
+                player: 'Gervane Kastaneer',
+                team: 'CUW'
+            },
+        ]
     },
     56: {
         result: [2, 1],
-        events: []
+        events: [
+            {
+                minute: 2,
+                type: 'goal',
+                player: 'Leroy Sane',
+                team: 'GER'
+            },
+            {
+                minute: 9,
+                type: 'goal',
+                player: 'Nilson Angulo',
+                team: 'ECU'
+            },
+            {
+                minute: 43,
+                type: 'yellow_card',
+                player: 'Piero Hincapie',
+                team: 'ECU'
+            },
+            {
+                minute: 44,
+                type: 'yellow_card',
+                player: 'Aleksander Pavlovic',
+                team: 'GER'
+            },
+            {
+                minute: 50,
+                type: 'yellow_card',
+                player: 'Alan Franco',
+                team: 'ECU'
+            },
+            {
+                minute: 77,
+                type: 'goal',
+                player: 'Gonzalo Plata',
+                team: 'ECU'
+            },
+            {
+                minute: 89,
+                type: 'yellow_card',
+                player: 'Gonzalo Plata',
+                team: 'ECU'
+            },
+        ]
     },
     57: {
         result: [1, 1],
-        events: []
+        events: [
+            {
+                minute: 32,
+                type: 'yellow_card',
+                player: 'Isak Hien',
+                team: 'SWE'
+            },
+            {
+                minute: 56,
+                type: 'goal',
+                player: 'Daizen Maeda',
+                team: 'JPN'
+            },
+            {
+                minute: 62,
+                type: 'goal',
+                player: 'Anthony Elanga',
+                team: 'SWE'
+            },
+            {
+                minute: 77,
+                type: 'yellow_card',
+                player: 'Shogo Taniguchi',
+                team: 'JPN'
+            },
+            {
+                minute: 84,
+                type: 'yellow_card',
+                player: 'Viktor Gyokeres',
+                team: 'SWE'
+            },
+        ]
     },
     58: {
         result: [1, 3],
-        events: []
+        events: [
+            {
+                minute: 3,
+                type: 'own_goal',
+                player: 'Ellyes Skhiri',
+                team: 'TUN',
+                note: '(OG)'
+            },
+            {
+                minute: 7,
+                type: 'goal',
+                player: 'Brian Brobbey',
+                team: 'NED',
+            },
+            {
+                minute: 54,
+                type: 'goal',
+                player: 'Hazem Mastouri',
+                team: 'TUN',
+            },
+            {
+                minute: 62,
+                type: 'goal',
+                player: 'Jan Paul van Hecke',
+                team: 'NED',
+            },
+        ]
     },
     59: {
         result: [3, 2],
@@ -2308,5 +2484,13 @@ export const results: Record<
         result_after_extra_time: [1, 1],
         result_after_penalties: [2, 4],
         events: []
-    }
+    },
+    89: {
+        result: [0, 1],
+        events: []
+    },
+    90: {
+        result: [0, 3],
+        events: []
+    },
 };

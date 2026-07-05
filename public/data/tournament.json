@@ -162,7 +162,10 @@
             "EGY",
             "COL"
         ],
-        "quarter_final": [],
+        "quarter_final": [
+            "MAR",
+            "FRA"
+        ],
         "semi_final": [],
         "bronze_final": [],
         "final": []
