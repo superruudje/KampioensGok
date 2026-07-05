@@ -2422,7 +2422,7 @@ export const results: Record<
             {
                 minute: 7,
                 type: 'goal',
-                player: 'Ousmane Dembele',
+                player: 'Ousmane Dembélé',
                 team: 'FRA',
             },
             {
@@ -2434,7 +2434,7 @@ export const results: Record<
             {
                 minute: 20,
                 type: 'goal',
-                player: 'Ousmane Dembele',
+                player: 'Ousmane Dembélé',
                 team: 'FRA',
             },
             {
@@ -2446,7 +2446,7 @@ export const results: Record<
             {
                 minute: 32,
                 type: 'goal',
-                player: 'Ousmane Dembele',
+                player: 'Ousmane Dembélé',
                 team: 'FRA',
             },
             {
@@ -2592,67 +2592,668 @@ export const results: Record<
     },
     64: {
         result: [1, 5],
-        events: []
+        events: [
+            {
+                minute: 28,
+                type: 'goal',
+                player: 'Leandro Trossard',
+                team: 'BEL',
+            },
+            {
+                minute: 46,
+                type: 'yellow_card',
+                player: 'Marko Stamenic',
+                team: 'NZL'
+            },
+            {
+                minute: 50,
+                type: 'goal',
+                player: 'Leandro Trossard',
+                team: 'BEL',
+            },
+            {
+                minute: 56,
+                type: 'yellow_card',
+                player: 'Elijah Just',
+                team: 'NZL'
+            },
+            {
+                minute: 66,
+                type: 'goal',
+                player: 'Kevin de Bruyne',
+                team: 'BEL',
+            },
+            {
+                minute: 84,
+                type: 'goal',
+                player: 'Elijah Just',
+                team: 'NZL',
+            },
+            {
+                minute: 86,
+                type: 'goal',
+                player: 'Romelu Lukakau',
+                team: 'BEL',
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'goal',
+                player: 'Alexis Saelemaekers',
+                team: 'BEL',
+            },
+        ]
     },
     65: {
         result: [0, 0],
-        events: []
+        events: [
+            {
+                minute: 4,
+                type: 'yellow_card',
+                player: 'Saud Abdulhamid',
+                team: 'KSA'
+            },
+            {
+                minute: 8,
+                type: 'yellow_card',
+                player: 'Wagner Pina',
+                team: 'CPV'
+            },
+            {
+                minute: 67,
+                type: 'yellow_card',
+                player: 'Nasser Aldawsari',
+                team: 'KSA'
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'yellow_card',
+                player: 'Feras Albikan',
+                team: 'KSA'
+            },
+        ]
     },
     66: {
         result: [0, 1],
-        events: []
+        events: [
+            {
+                minute: 42,
+                type: 'goal',
+                player: 'Alex Baena',
+                team: 'ESP',
+            },
+            {
+                minute: 46,
+                type: 'yellow_card',
+                player: 'Alex Baena',
+                team: 'ESP'
+            },
+            {
+                minute: 54,
+                type: 'yellow_card',
+                player: 'Juan Manuel Sanabria',
+                team: 'URU'
+            },
+            {
+                minute: 58,
+                type: 'yellow_card',
+                player: 'Guillermo Varela',
+                team: 'URU'
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'yellow_card',
+                player: 'Nicolas de la Cruz',
+                team: 'URU'
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'red_card',
+                player: 'Agustin Canobbio',
+                team: 'URU'
+            },
+        ]
     },
     67: {
         result: [0, 2],
-        events: []
+        events: [
+            {
+                minute: 53,
+                type: 'yellow_card',
+                player: 'Jose Fajardo',
+                team: 'PAN'
+            },
+            {
+                minute: 60,
+                type: 'yellow_card',
+                player: 'Jarell Quansah',
+                team: 'ENG'
+            },
+            {
+                minute: 62,
+                type: 'goal',
+                player: 'Jude Bellingham',
+                team: 'ENG',
+            },
+            {
+                minute: 67,
+                type: 'goal',
+                player: 'Harry Kane',
+                team: 'ENG',
+            },
+            {
+                minute: 83,
+                type: 'yellow_card',
+                player: 'Andres Andrade',
+                team: 'PAN'
+            },
+        ]
     },
     68: {
         result: [2, 1],
-        events: []
+        events: [
+            {
+                minute: 31,
+                type: 'goal',
+                player: 'Petar Sucic',
+                team: 'CRO',
+            },
+            {
+                minute: 68,
+                type: 'yellow_card',
+                player: 'Ivan Perisic',
+                team: 'CRO'
+            },
+            {
+                minute: 73,
+                type: 'goal',
+                player: 'Derrick Luckassen',
+                team: 'GHA',
+            },
+            {
+                minute: 83,
+                type: 'goal',
+                player: 'Nikola Vlasic',
+                team: 'CRO',
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'yellow_card',
+                player: 'Kojo Peprah Oppong',
+                team: 'GHA'
+            },
+        ]
     },
     69: {
         result: [3, 3],
-        events: []
+        events: [
+            {
+                minute: 11,
+                type: 'yellow_card',
+                player: 'Marko Arnautovic',
+                team: 'AUT'
+            },
+            {
+                minute: 28,
+                type: 'goal',
+                player: 'Marko Arnautovic',
+                team: 'AUT',
+            },
+            {
+                minute: 45,
+                type: 'goal',
+                player: 'Rafik Belghali',
+                team: 'ALG',
+            },
+            {
+                minute: 55,
+                type: 'goal',
+                player: 'Marcel Sabitzer',
+                team: 'AUT',
+            },
+            {
+                minute: 60,
+                type: 'goal',
+                player: 'Riyad Mahrez',
+                team: 'ALG',
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'goal',
+                player: 'Riyad Mahrez',
+                team: 'ALG',
+            },
+            {
+                minute: 90,
+                extraMinute: 6,
+                type: 'goal',
+                player: 'Sasa Kalajdzic',
+                team: 'AUT',
+            },
+        ]
+
     },
     70: {
         result: [1, 3],
-        events: []
+        events: [
+            {
+                minute: 17,
+                type: 'yellow_card',
+                player: 'Mohannad Abutaha',
+                team: 'JOR'
+            },
+            {
+                minute: 19,
+                type: 'goal',
+                player: 'Giovani Lo Ceiso',
+                team: 'ARG',
+            },
+            {
+                minute: 31,
+                type: 'goal',
+                player: 'Lautaro Martinez',
+                team: 'ARG',
+            },
+            {
+                minute: 55,
+                type: 'goal',
+                player: 'Mousa Altamari',
+                team: 'JOR',
+            },
+            {
+                minute: 64,
+                type: 'yellow_card',
+                player: 'Yazan Alarab',
+                team: 'JOR'
+            },
+            {
+                minute: 80,
+                type: 'goal',
+                player: 'Lionel Messi',
+                team: 'ARG',
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'yellow_card',
+                player: 'Mohammad Abuzraiq',
+                team: 'JOR'
+            },
+        ]
     },
     71: {
         result: [0, 0],
-        events: []
+        events: [
+            {
+                minute: 86,
+                type: 'yellow_card',
+                player: 'Gustavo Puerta',
+                team: 'COL'
+            },
+        ]
     },
     72: {
         result: [3, 1],
-        events: []
+        events: [
+            {
+                minute: 10,
+                type: 'goal',
+                player: 'Eldor Shomurodov',
+                team: 'UZB',
+            },
+            {
+                minute: 21,
+                type: 'yellow_card',
+                player: 'Noah Sadiki',
+                team: 'COD'
+            },
+            {
+                minute: 43,
+                type: 'yellow_card',
+                player: 'Abdukodir Khusanov',
+                team: 'UZB'
+            },
+            {
+                minute: 45,
+                extraMinute: 4,
+                type: 'yellow_card',
+                player: 'Nathanael Mbuku',
+                team: 'COD'
+            },
+            {
+                minute: 47,
+                type: 'yellow_card',
+                player: 'Sherzod Nasrullaev',
+                team: 'UZB'
+            },
+            {
+                minute: 62,
+                type: 'yellow_card',
+                player: 'Samuel Moutoussamy',
+                team: 'COD'
+            },
+            {
+                minute: 68,
+                type: 'goal',
+                player: 'Yoane Wissa',
+                team: 'COD',
+            },
+            {
+                minute: 78,
+                type: 'goal',
+                player: 'Fiston Mayele',
+                team: 'COD',
+            },
+            {
+                minute: 90,
+                extraMinute: 1,
+                type: 'goal',
+                player: 'Yoane Wissa',
+                team: 'COD',
+            },
+        ]
     },
     73: {
         result: [0, 1],
-        events: []
+        events: [
+            {
+                minute: 54,
+                type: 'yellow_card',
+                player: 'Nathan Saliba',
+                team: 'CAN'
+            },
+            {
+                minute: 67,
+                type: 'yellow_card',
+                player: 'Niko Sigur',
+                team: 'CAN'
+            },
+            {
+                minute: 90,
+                extraMinute: 2,
+                type: 'goal',
+                player: 'Stephen Eustaquio',
+                team: 'CAN',
+            },
+        ]
     },
     74: {
         result: [1, 1],
         result_after_extra_time: [1, 1],
         result_after_penalties: [3, 4],
-        events: []
+        events: [
+            {
+                minute: 42,
+                type: 'goal',
+                player: 'Julio Enciso',
+                team: 'PAR',
+            },
+            {
+                minute: 54,
+                type: 'goal',
+                player: 'Kai Havertz',
+                team: 'GER',
+            },
+            {
+                minute: 65,
+                type: 'yellow_card',
+                player: 'Andres Cubas',
+                team: 'PAR'
+            },
+            {
+                minute: 105,
+                type: 'yellow_card',
+                player: 'Gustavo Alfaro',
+                team: 'PAR'
+            },
+            {
+                minute: 105,
+                extraMinute: 1,
+                type: 'yellow_card',
+                player: 'Julian Nagelsmann',
+                team: 'GER'
+            },
+            {
+                minute: 106,
+                type: 'yellow_card',
+                player: 'Kai Havertz',
+                team: 'GER'
+            },
+            {
+                minute: 115,
+                type: 'yellow_card',
+                player: 'Jamal Musiala',
+                team: 'GER'
+            },
+            {
+                minute: 116,
+                type: 'yellow_card',
+                player: 'Mads Buttgereit',
+                team: 'GER'
+            },
+            {
+                minute: 117,
+                type: 'yellow_card',
+                player: 'Alejandro Manograsso',
+                team: 'PAR'
+            },
+            {
+                minute: 117,
+                type: 'yellow_card',
+                player: 'Matias Galarza',
+                team: 'PAR'
+            },
+            {
+                minute: 121,
+                type: 'penalty_goal',
+                player: 'Mauricio',
+                team: 'PAR'
+            },
+            {
+                minute: 122,
+                type: 'penalty_goal',
+                player: 'Joshua Kimmich',
+                team: 'GER'
+            },
+            {
+                minute: 123,
+                type: 'penalty_goal',
+                player: 'Gustavo Gomez',
+                team: 'PAR'
+            },
+            {
+                minute: 124,
+                type: 'penalty_goal',
+                player: 'Jamal Musiala',
+                team: 'GER'
+            },
+            {
+                minute: 125,
+                type: 'penalty_goal',
+                player: 'Matias Galarza',
+                team: 'PAR'
+            },
+            {
+                minute: 126,
+                type: 'penalty_goal',
+                player: 'Nadiem Amiri',
+                team: 'GER'
+            },
+            {
+                minute: 127,
+                type: 'penalty_goal',
+                player: 'Jose Canale',
+                team: 'PAR'
+            },
+        ]
     },
     75: {
         result: [1, 1],
         result_after_extra_time: [1, 1],
         result_after_penalties: [2, 3],
-        events: []
+        events: [
+            {
+                minute: 47,
+                type: 'yellow_card',
+                player: 'Issa Diop',
+                team: 'MAR'
+            },
+            {
+                minute: 72,
+                type: 'goal',
+                player: 'Cody Gakpo',
+                team: 'NED',
+            },
+            {
+                minute: 90,
+                extraMinute: 1,
+                type: 'goal',
+                player: 'Issa Diop',
+                team: 'MAR',
+            },
+            {
+                minute: 121,
+                type: 'penalty_goal',
+                player: 'Teun Koopmeiners',
+                team: 'NED'
+            },
+            {
+                minute: 122,
+                type: 'penalty_goal',
+                player: 'Soufiane Rahimi',
+                team: 'MAR'
+            },
+            {
+                minute: 123,
+                type: 'penalty_goal',
+                player: 'Wout Weghorst',
+                team: 'NED'
+            },
+            {
+                minute: 124,
+                type: 'penalty_goal',
+                player: 'Chemsdine Talbi',
+                team: 'MAR'
+            },
+            {
+                minute: 125,
+                type: 'penalty_goal',
+                player: 'Ismael Saibari',
+                team: 'MAR'
+            },
+        ]
     },
     76: {
         result: [2, 1],
-        events: []
+        events: [
+            {
+                minute: 12,
+                type: 'yellow_card',
+                player: 'Kaishu Sano',
+                team: 'JPN'
+            },
+            {
+                minute: 14,
+                type: 'yellow_card',
+                player: 'Casemiro',
+                team: 'BRA'
+            },
+            {
+                minute: 29,
+                type: 'goal',
+                player: 'Kaishu Sano',
+                team: 'JPN',
+            },
+            {
+                minute: 45,
+                type: 'yellow_card',
+                player: 'Daichi Kamada',
+                team: 'JPN'
+            },
+            {
+                minute: 48,
+                type: 'yellow_card',
+                player: 'Danilo',
+                team: 'BRA'
+            },
+            {
+                minute: 56,
+                type: 'goal',
+                player: 'Casemiro',
+                team: 'BRA',
+            },
+            {
+                minute: 84,
+                type: 'yellow_card',
+                player: 'Junnosuke Suzuki',
+                team: 'JPN'
+            },
+            {
+                minute: 90,
+                extraMinute: 5,
+                type: 'goal',
+                player: 'Gabriel Martinelli',
+                team: 'BRA',
+            },
+        ]
     },
     77: {
         result: [3, 0],
-        events: []
+        events: [
+            {
+                minute: 45,
+                type: 'goal',
+                player: 'Kylian Mbappe',
+                team: 'FRA',
+            },
+            {
+                minute: 53,
+                type: 'goal',
+                player: 'Bradley Barcola',
+                team: 'FRA',
+            },
+            {
+                minute: 74,
+                type: 'goal',
+                player: 'Kylian Mbappe',
+                team: 'FRA',
+            },
+        ]
     },
     78: {
         result: [1, 2],
-        events: []
+        events: [
+            {
+                minute: 39,
+                type: 'goal',
+                player: 'Antonio Nusa',
+                team: 'NOR',
+            },
+            {
+                minute: 45,
+                extraMinute: 1,
+                type: 'yellow_card',
+                player: 'Antonio Nusa',
+                team: 'NOR'
+            },
+            {
+                minute: 74,
+                type: 'goal',
+                player: 'Amad Diallo',
+                team: 'CIV',
+            },
+            {
+                minute: 86,
+                type: 'goal',
+                player: 'Erling Haaland',
+                team: 'NOR',
+            },
+        ]
     },
     79: {
         result: [2, 0],
