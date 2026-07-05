@@ -2359,23 +2359,236 @@ export const results: Record<
     },
     59: {
         result: [3, 2],
-        events: []
+        events: [
+            {
+                minute: 3,
+                type: 'goal',
+                player: 'Auston Trusty',
+                team: 'USA',
+            },
+            {
+                minute: 10,
+                type: 'goal',
+                player: 'Arda Guler',
+                team: 'TUR',
+            },
+            {
+                minute: 19,
+                type: 'yellow_card',
+                player: 'Sebastian Berhalter',
+                team: 'USA'
+            },
+            {
+                minute: 31,
+                type: 'goal',
+                player: 'Baris Alper Yilmaz',
+                team: 'TUR',
+            },
+            {
+                minute: 49,
+                type: 'goal',
+                player: 'Sebastian Berhalter',
+                team: 'USA',
+            },
+            {
+                minute: 90,
+                extraMinute: 8,
+                type: 'goal',
+                player: 'Kaan Ayhan',
+                team: 'TUR',
+            },
+        ]
     },
     60: {
         result: [0, 0],
-        events: []
+        events: [
+            {
+                minute: 46,
+                type: 'yellow_card',
+                player: 'Jackson Irvine',
+                team: 'AUS'
+            },
+            {
+                minute: 77,
+                type: 'yellow_card',
+                player: 'Diego Gomes',
+                team: 'PAR'
+            },
+        ]
     },
     61: {
         result: [1, 4],
-        events: []
+        events: [
+            {
+                minute: 7,
+                type: 'goal',
+                player: 'Ousmane Dembele',
+                team: 'FRA',
+            },
+            {
+                minute: 10,
+                type: 'yellow_card',
+                player: 'Patrick Berg',
+                team: 'NOR'
+            },
+            {
+                minute: 20,
+                type: 'goal',
+                player: 'Ousmane Dembele',
+                team: 'FRA',
+            },
+            {
+                minute: 21,
+                type: 'goal',
+                player: 'Thelo Assgaard',
+                team: 'NOR',
+            },
+            {
+                minute: 32,
+                type: 'goal',
+                player: 'Ousmane Dembele',
+                team: 'FRA',
+            },
+            {
+                minute: 74,
+                type: 'yellow_card',
+                player: 'Aurelien Tchouameni',
+                team: 'FRA'
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'goal',
+                player: 'Desire Doue',
+                team: 'FRA',
+            },
+        ]
     },
     62: {
         result: [5, 0],
-        events: []
+        events: [
+            {
+                minute: 4,
+                type: 'goal',
+                player: 'Habib Diarra',
+                team: 'SEN',
+            },
+            {
+                minute: 13,
+                type: 'red_card',
+                player: 'rebin Sulaka',
+                team: 'IRQ'
+            },
+            {
+                minute: 18,
+                type: 'yellow_card',
+                player: 'Abdoulaye Seck',
+                team: 'SEN'
+            },
+            {
+                minute: 56,
+                type: 'goal',
+                player: 'Ismaila Sarr',
+                team: 'SEN',
+            },
+            {
+                minute: 59,
+                type: 'goal',
+                player: 'Pape Gueye',
+                team: 'SEN',
+            },
+            {
+                minute: 71,
+                type: 'goal',
+                player: 'Pape Gueye',
+                team: 'SEN',
+            },
+            {
+                minute: 75,
+                type: 'yellow_card',
+                player: 'Amir Alammari',
+                team: 'IRQ'
+            },
+            {
+                minute: 81,
+                type: 'yellow_card',
+                player: 'Pape Gueye',
+                team: 'SEN'
+            },
+            {
+                minute: 82,
+                type: 'goal',
+                player: 'Iliman Ndiaye',
+                team: 'SEN',
+            },
+            {
+                minute: 90,
+                type: 'yellow_card',
+                player: 'Merchas Doski',
+                team: 'IRQ'
+            },
+        ]
     },
     63: {
         result: [1, 1],
-        events: []
+        events: [
+            {
+                minute: 5,
+                type: 'goal',
+                player: 'Mahmoud Saber',
+                team: 'EGY',
+            },
+            {
+                minute: 14,
+                type: 'goal',
+                player: 'Ramin Rezaeian',
+                team: 'IRN',
+            },
+            {
+                minute: 18,
+                type: 'yellow_card',
+                player: 'Hossein Kanani',
+                team: 'IRN'
+            },
+            {
+                minute: 19,
+                type: 'yellow_card',
+                player: 'Mahmoud Saber',
+                team: 'EGY'
+            },
+            {
+                minute: 41,
+                type: 'yellow_card',
+                player: 'Yasser Ibrahim',
+                team: 'EGY'
+            },
+            {
+                minute: 43,
+                type: 'yellow_card',
+                player: 'Ali Nemati',
+                team: 'IRN'
+            },
+            {
+                minute: 79,
+                type: 'yellow_card',
+                player: 'Saeid Ezatolahi',
+                team: 'IRN'
+            },
+            {
+                minute: 90,
+                extraMinute: 2,
+                type: 'yellow_card',
+                player: 'Mohanad Lashin',
+                team: 'EGY'
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'yellow_card',
+                player: 'Shoja Khalilzadeh',
+                team: 'IRN'
+            },
+        ]
     },
     64: {
         result: [1, 5],
