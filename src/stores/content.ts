@@ -122,7 +122,7 @@ export const useTournament = defineStore('tournament', {
                     answer: null,
                     answer_type: "number",
                     type: "estimate",
-                    match_day_answered: 22,
+                    match_day_answered: 34,
                     current_answer: this.totalCards.red + this.totalCards.yellow
                 },
                 // {
@@ -149,7 +149,7 @@ export const useTournament = defineStore('tournament', {
                     answer_type: "player",
                     type: "exact",
                     points: 10,
-                    match_day_answered: 22,
+                    match_day_answered: 34,
                     current_answer: this.topScorers[0]?.label
                 },
                 // {
