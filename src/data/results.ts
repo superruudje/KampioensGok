@@ -3257,20 +3257,174 @@ export const results: Record<
     },
     79: {
         result: [2, 0],
-        events: []
+        events: [
+            {
+                minute: 22,
+                type: 'goal',
+                player: 'Julian Quinones',
+                team: 'MEX',
+            },
+            {
+                minute: 31,
+                type: 'goal',
+                player: 'Raul Jimenez',
+                team: 'MEX',
+            },
+            {
+                minute: 45,
+                extraMinute: 1,
+                type: 'yellow_card',
+                player: 'Alan Franco',
+                team: 'ECU'
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'yellow_card',
+                player: 'Kendry Paez',
+                team: 'ECU'
+            },
+            {
+                minute: 90,
+                extraMinute: 5,
+                type: 'red_card',
+                player: 'Piero Hincapie',
+                team: 'ECU'
+            },
+            {
+                minute: 90,
+                extraMinute: 9,
+                type: 'yellow_card',
+                player: 'Moises Caicedo',
+                team: 'ECU'
+            },
+        ]
     },
     80: {
         result: [2, 1],
-        events: []
+        events: [
+            {
+                minute: 7,
+                type: 'goal',
+                player: 'Brian Cipenga',
+                team: 'COD',
+            },
+            {
+                minute: 19,
+                type: 'yellow_card',
+                player: 'Jude Bellingham',
+                team: 'ENG'
+            },
+            {
+                minute: 27,
+                extraMinute: 9,
+                type: 'yellow_card',
+                player: 'Noah Sadiki',
+                team: 'COD'
+            },
+            {
+                minute: 75,
+                type: 'goal',
+                player: 'Harry Kane',
+                team: 'ENG',
+            },
+            {
+                minute: 86,
+                type: 'goal',
+                player: 'Harry Kane',
+                team: 'ENG',
+            },
+        ]
     },
     81: {
         result: [2, 0],
-        events: []
+        events: [
+            {
+                minute: 45,
+                type: 'goal',
+                player: 'Folarin Balogun',
+                team: 'USA',
+            },
+            {
+                minute: 64,
+                type: 'red_card',
+                player: 'Folarin Balogun',
+                team: 'USA'
+            },
+            {
+                minute: 80,
+                type: 'yellow_card',
+                player: 'Sergej Barbarez',
+                team: 'BIH'
+            },
+            {
+                minute: 80,
+                type: 'yellow_card',
+                player: 'Stjepan Radeljic',
+                team: 'BIH'
+            },
+            {
+                minute: 82,
+                type: 'goal',
+                player: 'Malik Tillman',
+                team: 'USA',
+            },
+        ]
     },
     82: {
         result: [2, 2],
         result_after_extra_time: [3, 2],
-        events: []
+        events: [
+            {
+                minute: 24,
+                type: 'goal',
+                player: 'Habib Diarra',
+                team: 'SEN',
+            },
+            {
+                minute: 51,
+                type: 'goal',
+                player: 'Ismaila Sarr',
+                team: 'SEN',
+            },
+            {
+                minute: 64,
+                type: 'yellow_card',
+                player: 'Brandon Mechele',
+                team: 'BEL'
+            },
+            {
+                minute: 67,
+                type: 'yellow_card',
+                player: 'Lamine Camara',
+                team: 'SEN'
+            },
+            {
+                minute: 86,
+                type: 'goal',
+                player: 'Romelu Lukaku',
+                team: 'BEL',
+            },
+            {
+                minute: 89,
+                type: 'goal',
+                player: 'Youri Tielemans',
+                team: 'BEL',
+            },
+            {
+                minute: 90,
+                type: 'yellow_card',
+                player: 'Rudi Garcia',
+                team: 'BEL'
+            },
+            {
+                minute: 120,
+                extraMinute: 5,
+                type: 'goal',
+                player: 'Youri Tielemans',
+                team: 'BEL',
+            },
+        ]
     },
     83: {
         result: [2, 1],
