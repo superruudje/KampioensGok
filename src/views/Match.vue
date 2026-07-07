@@ -27,9 +27,12 @@
                                     class="border d-md-none"
                                     width="32"/>
                             </div>
-                            <div class="d-flex align-items-center fs-2">
-                                <span>{{ match.result?.[0] != null ? match.result[0] : '?' }}</span>-
+                            <div class="d-flex align-items-center fs-2 gap-1">
+                                <span v-if="match.result_after_extra_time" class="fs-6 lh-1">({{ match.result_after_extra_time[0] }})</span>
+                                <span>{{ match.result?.[0] != null ? match.result[0] : '?' }}</span>
+                                <span>-</span>
                                 <span>{{ match.result?.[1] != null ? match.result[1] : '?' }}</span>
+                                <span v-if="match.result_after_extra_time" class="fs-6 lh-1">({{ match.result_after_extra_time[1] }})</span>
                             </div>
                             <div
                                 class="d-flex flex-row-reverse flex-grow-1 flex-shrink-0 align-items-center justify-content-end gap-2"
@@ -69,7 +72,9 @@
                             <TimelineComponent
                                 v-else
                                 :teams="match?.teams"
-                                :timeline="match?.events"/>
+                                :timeline="match?.events"
+                                :match="match"
+                            />
                         </div>
                     </div>
                 </div>
