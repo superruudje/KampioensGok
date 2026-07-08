@@ -3481,4 +3481,10 @@ export const results: Record<
         result: [3, 2],
         events: []
     },
+    96: {
+        result: [0, 0],
+        result_after_extra_time: [0, 0],
+        result_after_penalties: [4, 3],
+        events: []
+    },
 };
