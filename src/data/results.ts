@@ -3467,24 +3467,333 @@ export const results: Record<
     },
     92: {
         result: [2, 3],
-        events: []
+        events: [
+            {
+                minute: 1,
+                type: 'yellow_card',
+                player: 'Declan Rice',
+                team: 'ENG'
+            },
+            {
+                minute: 36,
+                type: 'goal',
+                player: 'Jude Bellingham',
+                team: 'ENG',
+            },
+            {
+                minute: 38,
+                type: 'goal',
+                player: 'Jude Bellingham',
+                team: 'ENG',
+            },
+            {
+                minute: 42,
+                type: 'goal',
+                player: 'Julian Quinones',
+                team: 'MEX',
+            },
+            {
+                minute: 54,
+                type: 'red_card',
+                player: 'Jarell Quansah',
+                team: 'ENG'
+            },
+            {
+                minute: 60,
+                type: 'goal',
+                player: 'Harry Kane',
+                team: 'ENG',
+            },
+            {
+                minute: 68,
+                type: 'yellow_card',
+                player: 'Marc Guehi',
+                team: 'ENG'
+            },
+            {
+                minute: 69,
+                type: 'goal',
+                player: 'Raul Jimenez',
+                team: 'MEX',
+            },
+            {
+                minute: 71,
+                type: 'yellow_card',
+                player: 'Jorge Sanchez',
+                team: 'MEX'
+            },
+            {
+                minute: 72,
+                type: 'yellow_card',
+                player: 'Nico Oreilly',
+                team: 'ENG'
+            },
+            {
+                minute: 90,
+                extraMinute: 8,
+                type: 'yellow_card',
+                player: 'Johan Vasquez',
+                team: 'MEX'
+            },
+            {
+                minute: 90,
+                extraMinute: 8,
+                type: 'yellow_card',
+                player: 'Jordan Henderson',
+                team: 'ENG'
+            },
+        ]
     },
     93: {
         result: [0, 1],
-        events: []
+        events: [
+            {
+                minute: 89,
+                type: 'yellow_card',
+                player: 'Bernardo Silva',
+                team: 'POR'
+            },
+            {
+                minute: 90,
+                extraMinute: 1,
+                type: 'goal',
+                player: 'Mikel Merino',
+                team: 'ESP',
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'yellow_card',
+                player: 'Renato Veiga',
+                team: 'POR'
+            },
+            {
+                minute: 90,
+                extraMinute: 8,
+                type: 'yellow_card',
+                player: 'Ferran Torres',
+                team: 'ESP'
+            },
+        ]
     },
     94: {
         result: [1, 4],
-        events: []
+        events: [
+            {
+                minute: 9,
+                type: 'goal',
+                player: 'Charles de Ketelaere',
+                team: 'BEL',
+            },
+            {
+                minute: 31,
+                type: 'goal',
+                player: 'Malik Tillman',
+                team: 'USA',
+            },
+            {
+                minute: 33,
+                type: 'goal',
+                player: 'Charles de Ketelaere',
+                team: 'BEL',
+            },
+            {
+                minute: 35,
+                type: 'yellow_card',
+                player: 'Weston McKennie',
+                team: 'USA'
+            },
+            {
+                minute: 57,
+                type: 'goal',
+                player: 'Hans Vanaken',
+                team: 'BEL',
+            },
+            {
+                minute: 69,
+                type: 'yellow_card',
+                player: 'Malik Tillman',
+                team: 'USA'
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'goal',
+                player: 'Romelu Lukaku',
+                team: 'BEL',
+            },
+        ]
     },
     95: {
         result: [3, 2],
-        events: []
+        events: [
+            {
+                minute: 15,
+                type: 'goal',
+                player: 'Yasser Ibrahim',
+                team: 'EGY',
+            },
+            {
+                minute: 21,
+                type: 'yellow_card',
+                player: 'Saafan Elsaghir (Staff)',
+                team: 'EGY'
+            },
+            {
+                minute: 67,
+                type: 'goal',
+                player: 'Mostafa Zico',
+                team: 'EGY',
+            },
+            {
+                minute: 79,
+                type: 'goal',
+                player: 'Cristian Romero',
+                team: 'ARG',
+            },
+            {
+                minute: 83,
+                type: 'goal',
+                player: 'Lionel Messi',
+                team: 'ARG',
+            },
+            {
+                minute: 90,
+                extraMinute: 2,
+                type: 'goal',
+                player: 'Enzo Fernandez',
+                team: 'ARG',
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'yellow_card',
+                player: 'Mostafa Shoubir',
+                team: 'EGY'
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'yellow_card',
+                player: 'Hamdy Fathy',
+                team: 'EGY'
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'red_card',
+                player: 'Saafan Elsaghir (Staff)',
+                team: 'EGY'
+            },
+            {
+                minute: 90,
+                extraMinute: 8,
+                type: 'yellow_card',
+                player: 'Marawan Attia',
+                team: 'EGY'
+            },
+            {
+                minute: 90,
+                extraMinute: 9,
+                type: 'yellow_card',
+                player: 'Hossam Hassan Hussein',
+                team: 'EGY'
+            },
+            {
+                minute: 999,
+                type: 'yellow_card',
+                player: 'Hossam Hassan Hussein',
+                team: 'EGY'
+            },
+        ]
     },
     96: {
         result: [0, 0],
         result_after_extra_time: [0, 0],
         result_after_penalties: [4, 3],
+        events: [
+            {
+                minute: 51,
+                type: 'yellow_card',
+                player: 'Granit Xhaka',
+                team: 'SUI'
+            },
+            {
+                minute: 59,
+                type: 'yellow_card',
+                player: 'Denis Zakaria',
+                team: 'SUI'
+            },
+            {
+                minute: 60,
+                type: 'yellow_card',
+                player: 'Luis Suarez',
+                team: 'COL'
+            },
+            {
+                minute: 94,
+                type: 'yellow_card',
+                player: 'Davinson Sanchez',
+                team: 'COL'
+            },
+            {
+                minute: 95,
+                type: 'yellow_card',
+                player: 'Luis Perea',
+                team: 'COL'
+            },
+            {
+                minute: 105,
+                type: 'yellow_card',
+                player: 'Miro Muheim',
+                team: 'SUI'
+            },
+            {
+                minute: 121,
+                type: 'penalty_goal',
+                player: 'Juan Quintero',
+                team: 'COL'
+            },
+            {
+                minute: 122,
+                type: 'penalty_goal',
+                player: 'Granit Xhaka',
+                team: 'SUI'
+            },
+            {
+                minute: 123,
+                type: 'penalty_goal',
+                player: 'Zeki Amdouni',
+                team: 'SUI'
+            },
+            {
+                minute: 124,
+                type: 'penalty_goal',
+                player: 'Jaminton Campaz',
+                team: 'COL'
+            },
+            {
+                minute: 125,
+                type: 'penalty_goal',
+                player: 'Cedric Itten',
+                team: 'SUI'
+            },
+            {
+                minute: 126,
+                type: 'penalty_goal',
+                player: 'Luis Diaz',
+                team: 'COL'
+            },
+            {
+                minute: 127,
+                type: 'penalty_goal',
+                player: 'Ruben Vargas',
+                team: 'SUI'
+            },
+        ]
+    },
+    97: {
+        result: [2, 0],
         events: []
     },
 };
