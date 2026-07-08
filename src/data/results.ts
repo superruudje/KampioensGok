@@ -3792,8 +3792,4 @@ export const results: Record<
             },
         ]
     },
-    97: {
-        result: [2, 0],
-        events: []
-    },
 };
