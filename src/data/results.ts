@@ -2122,6 +2122,7 @@ export const results: Record<
                 minute: 29,
                 type: 'goal',
                 player: 'Kerim Alajbegovic',
+                assist: 'Ivan Bašić',
                 team: 'BIH'
             },
             {
@@ -2135,6 +2136,7 @@ export const results: Record<
                 minute: 42,
                 type: 'goal',
                 player: 'Hassan Alhaydos',
+                assist: 'Edmilson Junior',
                 team: 'QAT'
             },
             {
@@ -2147,6 +2149,7 @@ export const results: Record<
                 minute: 80,
                 type: 'goal',
                 player: 'Ermin Mahmic',
+                assist: 'Dennis Hadžikadunić',
                 team: 'BIH'
             },
             {
@@ -2164,6 +2167,7 @@ export const results: Record<
                 minute: 55,
                 type: 'goal',
                 player: 'Mateo Chavez',
+                assist: 'Luis Romo',
                 team: 'MEX'
             },
             {
@@ -2183,6 +2187,7 @@ export const results: Record<
                 extraMinute: 4,
                 type: 'goal',
                 player: 'Alvaro Fidalgo',
+                assist: 'Roberto Alvarado',
                 team: 'MEX'
             },
         ]
@@ -2194,6 +2199,7 @@ export const results: Record<
                 minute: 62,
                 type: 'goal',
                 player: 'Thapelo Maseko',
+                assist: 'Tshepang Moremi',
                 team: 'RSA'
             },
             {
@@ -2217,6 +2223,7 @@ export const results: Record<
                 minute: 7,
                 type: 'goal',
                 player: 'Nicolas Pepe',
+                assist: 'Yan Diomande',
                 team: 'CIV'
             },
             {
@@ -2229,6 +2236,7 @@ export const results: Record<
                 minute: 64,
                 type: 'goal',
                 player: 'Nicolas Pepe',
+                assist: 'Ibrahim Sangaré',
                 team: 'CIV'
             },
             {
@@ -2252,6 +2260,7 @@ export const results: Record<
                 minute: 2,
                 type: 'goal',
                 player: 'Leroy Sane',
+                assist: 'Florian Wirtz',
                 team: 'GER'
             },
             {
@@ -2282,6 +2291,7 @@ export const results: Record<
                 minute: 77,
                 type: 'goal',
                 player: 'Gonzalo Plata',
+                assist: 'Kevin Rodríguez',
                 team: 'ECU'
             },
             {
@@ -2305,12 +2315,14 @@ export const results: Record<
                 minute: 56,
                 type: 'goal',
                 player: 'Daizen Maeda',
+                assist: 'Ritsu Doan',
                 team: 'JPN'
             },
             {
                 minute: 62,
                 type: 'goal',
                 player: 'Anthony Elanga',
+                assist: 'Viktor Gyökeres',
                 team: 'SWE'
             },
             {
@@ -2341,18 +2353,21 @@ export const results: Record<
                 minute: 7,
                 type: 'goal',
                 player: 'Brian Brobbey',
+                assist: 'Virgil van Dijk',
                 team: 'NED',
             },
             {
                 minute: 54,
                 type: 'goal',
                 player: 'Hazem Mastouri',
+                assist: 'Hannibal Mejbri',
                 team: 'TUN',
             },
             {
                 minute: 62,
                 type: 'goal',
                 player: 'Jan Paul van Hecke',
+                assist: 'Tijani Reijnders',
                 team: 'NED',
             },
         ]
@@ -2370,6 +2385,7 @@ export const results: Record<
                 minute: 10,
                 type: 'goal',
                 player: 'Arda Guler',
+                assist: 'Baris Alper Yilmaz',
                 team: 'TUR',
             },
             {
@@ -2423,6 +2439,7 @@ export const results: Record<
                 minute: 7,
                 type: 'goal',
                 player: 'Ousmane Dembélé',
+                assist: 'Kylian Mbappe',
                 team: 'FRA',
             },
             {
@@ -2435,6 +2452,7 @@ export const results: Record<
                 minute: 20,
                 type: 'goal',
                 player: 'Ousmane Dembélé',
+                assist: 'Kylian Mbappe',
                 team: 'FRA',
             },
             {
@@ -2447,6 +2465,7 @@ export const results: Record<
                 minute: 32,
                 type: 'goal',
                 player: 'Ousmane Dembélé',
+                assist: 'Aurélien Tchouaméni',
                 team: 'FRA',
             },
             {
@@ -2460,6 +2479,7 @@ export const results: Record<
                 extraMinute: 4,
                 type: 'goal',
                 player: 'Desire Doue',
+                assist: 'Bradley Barcola',
                 team: 'FRA',
             },
         ]
@@ -2489,18 +2509,21 @@ export const results: Record<
                 minute: 56,
                 type: 'goal',
                 player: 'Ismaila Sarr',
+                assist: 'Lamine Camara',
                 team: 'SEN',
             },
             {
                 minute: 59,
                 type: 'goal',
                 player: 'Pape Gueye',
+                assist: 'Ismaila Sarr',
                 team: 'SEN',
             },
             {
                 minute: 71,
                 type: 'goal',
                 player: 'Pape Gueye',
+                assist: 'Iliman Ndiaye',
                 team: 'SEN',
             },
             {
@@ -2519,6 +2542,7 @@ export const results: Record<
                 minute: 82,
                 type: 'goal',
                 player: 'Iliman Ndiaye',
+                assist: 'Pape Gueye',
                 team: 'SEN',
             },
             {
@@ -2633,6 +2657,7 @@ export const results: Record<
                 minute: 86,
                 type: 'goal',
                 player: 'Romelu Lukakau',
+                assist: 'Nicolas Raskin',
                 team: 'BEL',
             },
             {
@@ -2640,6 +2665,7 @@ export const results: Record<
                 extraMinute: 4,
                 type: 'goal',
                 player: 'Alexis Saelemaekers',
+                assist: 'Romelu Lukaku',
                 team: 'BEL',
             },
         ]
@@ -2681,6 +2707,7 @@ export const results: Record<
                 minute: 42,
                 type: 'goal',
                 player: 'Alex Baena',
+                assist: 'Marcos Llorente',
                 team: 'ESP',
             },
             {
@@ -2736,12 +2763,14 @@ export const results: Record<
                 minute: 62,
                 type: 'goal',
                 player: 'Jude Bellingham',
+                assist: 'Bukayo Saka',
                 team: 'ENG',
             },
             {
                 minute: 67,
                 type: 'goal',
                 player: 'Harry Kane',
+                assist: 'Jude Bellingham',
                 team: 'ENG',
             },
             {
@@ -2759,6 +2788,7 @@ export const results: Record<
                 minute: 31,
                 type: 'goal',
                 player: 'Petar Sucic',
+                assist: 'Mateo Kovačić',
                 team: 'CRO',
             },
             {
@@ -2771,12 +2801,14 @@ export const results: Record<
                 minute: 73,
                 type: 'goal',
                 player: 'Derrick Luckassen',
+                assist: 'Ernest Nuamah',
                 team: 'GHA',
             },
             {
                 minute: 83,
                 type: 'goal',
                 player: 'Nikola Vlasic',
+                assist: 'Luka Modrić',
                 team: 'CRO',
             },
             {
@@ -2801,6 +2833,7 @@ export const results: Record<
                 minute: 28,
                 type: 'goal',
                 player: 'Marko Arnautovic',
+                assist: 'David Alaba',
                 team: 'AUT',
             },
             {
@@ -2813,12 +2846,14 @@ export const results: Record<
                 minute: 55,
                 type: 'goal',
                 player: 'Marcel Sabitzer',
+                assist: 'Konrad Laimer',
                 team: 'AUT',
             },
             {
                 minute: 60,
                 type: 'goal',
                 player: 'Riyad Mahrez',
+                assist: 'Houssem Aouar',
                 team: 'ALG',
             },
             {
@@ -2826,6 +2861,7 @@ export const results: Record<
                 extraMinute: 3,
                 type: 'goal',
                 player: 'Riyad Mahrez',
+                assist: 'Houssem Aouar',
                 team: 'ALG',
             },
             {
@@ -2833,6 +2869,7 @@ export const results: Record<
                 extraMinute: 6,
                 type: 'goal',
                 player: 'Sasa Kalajdzic',
+                assist: 'Michael Gregoritsch',
                 team: 'AUT',
             },
         ]
@@ -2863,6 +2900,7 @@ export const results: Record<
                 minute: 55,
                 type: 'goal',
                 player: 'Mousa Altamari',
+                assist: 'Ehsan Haddad',
                 team: 'JOR',
             },
             {
@@ -2904,6 +2942,7 @@ export const results: Record<
                 minute: 10,
                 type: 'goal',
                 player: 'Eldor Shomurodov',
+                assist: 'Akmal Mozgovoy',
                 team: 'UZB',
             },
             {
@@ -2954,6 +2993,7 @@ export const results: Record<
                 extraMinute: 1,
                 type: 'goal',
                 player: 'Yoane Wissa',
+                assist: 'Meschack Elia',
                 team: 'COD',
             },
         ]
@@ -2991,12 +3031,14 @@ export const results: Record<
                 minute: 42,
                 type: 'goal',
                 player: 'Julio Enciso',
+                assist: 'Matias Galarza',
                 team: 'PAR',
             },
             {
                 minute: 54,
                 type: 'goal',
                 player: 'Kai Havertz',
+                assist: 'Florian Wirtz',
                 team: 'GER',
             },
             {
@@ -3107,6 +3149,7 @@ export const results: Record<
                 minute: 72,
                 type: 'goal',
                 player: 'Cody Gakpo',
+                assist: 'Crysencio Summerville',
                 team: 'NED',
             },
             {
@@ -3114,6 +3157,7 @@ export const results: Record<
                 extraMinute: 1,
                 type: 'goal',
                 player: 'Issa Diop',
+                assist: 'Chemsdine Talbi',
                 team: 'MAR',
             },
             {
