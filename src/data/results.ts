@@ -3428,15 +3428,104 @@ export const results: Record<
     },
     83: {
         result: [2, 1],
-        events: []
+        events: [
+            {
+                minute: 17,
+                type: 'yellow_card',
+                player: 'Ruben Dias',
+                team: 'POR'
+            },
+            {
+                minute: 53,
+                type: 'goal',
+                player: 'Ivan Perisic',
+                team: 'CRO',
+            },
+            {
+                minute: 59,
+                type: 'yellow_card',
+                player: 'Luka Modric',
+                team: 'CRO'
+            },
+            {
+                minute: 68,
+                type: 'goal',
+                player: 'Cristiano Ronaldo',
+                team: 'POR',
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'goal',
+                player: 'Goncalo Ramos',
+                team: 'POR',
+            },
+            {
+                minute: 90,
+                extraMinute: 8,
+                type: 'yellow_card',
+                player: 'Ivan Perisic',
+                team: 'CRO'
+            },
+        ]
     },
     84: {
         result: [3, 0],
-        events: []
+        events: [
+            {
+                minute: 36,
+                type: 'goal',
+                player: 'Mikel Oyarzabal',
+                team: 'ESP'
+            },
+            {
+                minute: 66,
+                type: 'goal',
+                player: 'Pedro Porro',
+                team: 'ESP'
+            },
+            {
+                minute: 83,
+                type: 'yellow_card',
+                player: 'Stefan Posch',
+                team: 'AUT'
+            },
+            {
+                minute: 89,
+                type: 'goal',
+                player: 'Mikel Oyarzabal',
+                team: 'ESP'
+            },
+        ]
     },
     85: {
         result: [2, 0],
-        events: []
+        events: [
+            {
+                minute: 10,
+                type: 'goal',
+                player: 'Breel Embolo',
+                team: 'SUI'
+            },
+            {
+                minute: 36,
+                type: 'yellow_card',
+                player: 'Fares Chaibi',
+                team: 'ALG'
+            },
+            {
+                minute: 46,
+                type: 'goal',
+                player: 'Dan Ndoye',
+                team: 'SUI'
+            },
+            {
+                minute: 72,
+                type: 'yellow_card',
+                player: 'Hicham Boudaoui',
+                team: 'ALG'
+            },
+        ]
     },
     86: {
         result: [1, 1],
