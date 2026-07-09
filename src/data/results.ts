@@ -3441,29 +3441,306 @@ export const results: Record<
     86: {
         result: [1, 1],
         result_after_extra_time: [3, 2],
-        events: []
+        events: [
+            {
+                minute: 29,
+                type: 'goal',
+                player: 'Lionel Messi',
+                team: 'ARG'
+            },
+            {
+                minute: 59,
+                type: 'goal',
+                player: 'Deroy Duarte',
+                team: 'CPV'
+            },
+            {
+                minute: 68,
+                type: 'yellow_card',
+                player: 'Kevin Pina',
+                team: 'CPV'
+            },
+            {
+                minute: 92,
+                type: 'goal',
+                player: 'Lisandro Martinez',
+                team: 'ARG'
+            },
+            {
+                minute: 103,
+                type: 'goal',
+                player: 'Sidny Lopes Cabral',
+                team: 'CPV'
+            },
+            {
+                minute: 111,
+                type: 'own_goal',
+                player: 'Diney Borges',
+                team: 'CPV',
+                note: '(OG)'
+            },
+            {
+                minute: 115,
+                type: 'yellow_card',
+                player: 'Gonzalo Montiel',
+                team: 'ARG'
+            },
+        ]
     },
     87: {
         result: [1, 0],
-        events: []
+        events: [
+            {
+                minute: 12,
+                type: 'yellow_card',
+                player: 'Jhon Arias',
+                team: 'COL'
+            },
+            {
+                minute: 14,
+                type: 'goal',
+                player: 'Jhon Arias',
+                team: 'COL'
+            },
+            {
+                minute: 49,
+                type: 'yellow_card',
+                player: 'Caleb Yirenkyi',
+                team: 'GHA'
+            },
+            {
+                minute: 66,
+                type: 'yellow_card',
+                player: 'Abdul Fatawu',
+                team: 'GHA'
+            },
+            {
+                minute: 76,
+                type: 'yellow_card',
+                player: 'Alidu Seidu',
+                team: 'GHA'
+            },
+            {
+                minute: 78,
+                type: 'yellow_card',
+                player: 'Richard Rios',
+                team: 'COL'
+            },
+        ]
     },
     88: {
         result: [1, 1],
         result_after_extra_time: [1, 1],
         result_after_penalties: [2, 4],
-        events: []
+        events: [
+            {
+                minute: 13,
+                type: 'goal',
+                player: 'Emam Ashour',
+                team: 'EGY'
+            },
+            {
+                minute: 55,
+                type: 'own_goal',
+                player: 'Mohamed Hany',
+                team: 'EGY',
+                note: '(OG)'
+            },
+            {
+                minute: 91,
+                type: 'yellow_card',
+                player: 'Saafan Elsaghir (Staff)',
+                team: 'EGY'
+            },
+            {
+                minute: 104,
+                type: 'yellow_card',
+                player: 'Haissem Hassan',
+                team: 'EGY'
+            },
+            {
+                minute: 120,
+                type: 'yellow_card',
+                player: 'Yasser Ibrahim',
+                team: 'EGY'
+            },
+            {
+                minute: 121,
+                type: 'penalty_goal',
+                player: 'Mahmoud Saber',
+                team: 'EGY'
+            },
+            {
+                minute: 122,
+                type: 'penalty_goal',
+                player: 'Jackson Irvine',
+                team: 'AUS'
+            },
+            {
+                minute: 123,
+                type: 'penalty_goal',
+                player: 'Ramy Rabia',
+                team: 'EGY'
+            },
+            {
+                minute: 124,
+                type: 'penalty_goal',
+                player: 'Awer Mabil',
+                team: 'AUS'
+            },
+            {
+                minute: 125,
+                type: 'penalty_goal',
+                player: 'Mohamed Salah',
+                team: 'EGY'
+            },
+            {
+                minute: 126,
+                type: 'penalty_goal',
+                player: 'Hossam Abdelmaguid',
+                team: 'EGY'
+            },
+        ]
     },
     89: {
         result: [0, 1],
-        events: []
+        events: [
+            {
+                minute: 19,
+                type: 'yellow_card',
+                player: 'Bradley Barcola',
+                team: 'FRA'
+            },
+            {
+                minute: 70,
+                type: 'goal',
+                player: 'Kylian Mbappe',
+                team: 'FRA'
+            },
+            {
+                minute: 81,
+                type: 'yellow_card',
+                player: 'Manu Kone',
+                team: 'FRA'
+            },
+            {
+                minute: 90,
+                extraMinute: 7,
+                type: 'yellow_card',
+                player: 'Michael Olise',
+                team: 'FRA'
+            },
+            {
+                minute: 999,
+                type: 'yellow_card',
+                player: 'Carlos Gonzales',
+                team: 'PAR'
+            },
+        ]
     },
     90: {
         result: [0, 3],
-        events: []
+        events: [
+            {
+                minute: 20,
+                type: 'yellow_card',
+                player: 'Redouane Halhal',
+                team: 'MAR'
+            },
+            {
+                minute: 40,
+                type: 'yellow_card',
+                player: 'Achraf Hakimi',
+                team: 'MAR'
+            },
+            {
+                minute: 40,
+                type: 'yellow_card',
+                player: 'Richie Laryea',
+                team: 'CAN'
+            },
+            {
+                minute: 43,
+                type: 'yellow_card',
+                player: 'Jonathan David',
+                team: 'CAN'
+            },
+            {
+                minute: 45,
+                type: 'yellow_card',
+                player: 'Azzedine Ounahi',
+                team: 'MAR'
+            },
+            {
+                minute: 45,
+                extraMinute: 6,
+                type: 'yellow_card',
+                player: 'Bilal El Khannouss',
+                team: 'MAR'
+            },
+            {
+                minute: 49,
+                type: 'yellow_card',
+                player: 'Luc de Fougerolles',
+                team: 'CAN'
+            },
+            {
+                minute: 50,
+                type: 'goal',
+                player: 'Azzedine Ounahi',
+                team: 'MAR',
+            },
+            {
+                minute: 67,
+                type: 'yellow_card',
+                player: 'Cyle Larin',
+                team: 'CAN'
+            },
+            {
+                minute: 82,
+                type: 'goal',
+                player: 'Azzedine Ounahi',
+                team: 'MAR',
+            },
+            {
+                minute: 90,
+                extraMinute: 8,
+                type: 'goal',
+                player: 'Soufiane Rahimi',
+                team: 'MAR',
+            },
+        ]
     },
     91: {
         result: [1, 2],
-        events: []
+        events: [
+            {
+                minute: 79,
+                type: 'goal',
+                player: 'Erling Haaland',
+                team: 'NOR',
+            },
+            {
+                minute: 90,
+                type: 'goal',
+                player: 'Erling Haaland',
+                team: 'NOR',
+            },
+            {
+                minute: 90,
+                extraMinute: 6,
+                type: 'yellow_card',
+                player: 'Neymar Jr',
+                team: 'BRA'
+            },
+            {
+                minute: 90,
+                extraMinute: 10,
+                type: 'goal',
+                player: 'Neymar Jr',
+                team: 'BRA',
+            },
+        ]
     },
     92: {
         result: [2, 3],
