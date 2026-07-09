@@ -69,7 +69,7 @@
                     <h2 class="w26-condensed">{{ $t('stats.team_stats') }}</h2>
                 </div>
                 <!-- meeste tegengoals -->
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <TopTable
                         key="goals_against"
                         :list="tournament.goalsAgainstRanking"
@@ -77,7 +77,7 @@
                         isTeam/>
                 </div>
                 <!-- meeste kaarten -->
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <TopTable
                         key="total_cards"
                         :list="tournament.totalCardsPerTeam"
@@ -90,14 +90,14 @@
                     <h2 class="w26-condensed">{{ $t('stats.player_stats') }}</h2>
                 </div>
                 <!-- top scorer -->
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <TopTable
                         key="top_scorer"
                         :list="tournament.topScorers"
                         :title="capitalize($t('dict.goal', 2))"/>
                 </div>
                 <!-- meest assist -->
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <TopTable
                         key="top_assist"
                         :list="tournament.topAssist"

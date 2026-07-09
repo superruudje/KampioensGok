@@ -4202,4 +4202,27 @@ export const results: Record<
             },
         ]
     },
+    97: {
+        result: [2, 0],
+        events: [
+            {
+                minute: 60,
+                type: 'goal',
+                player: 'Kylian Mbappe',
+                team: 'FRA',
+            },
+            {
+                minute: 63,
+                type: 'yellow_card',
+                player: 'Issa Diop',
+                team: 'MAR'
+            },
+            {
+                minute: 66,
+                type: 'goal',
+                player: 'Ousmane Dembele',
+                team: 'FRA',
+            },
+        ]
+    },
 };
