@@ -172,7 +172,9 @@
             "ARG",
             "SUI"
         ],
-        "semi_final": [],
+        "semi_final": [
+            "FRA"
+        ],
         "bronze_final": [],
         "final": []
     }
