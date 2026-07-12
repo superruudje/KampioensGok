@@ -4228,5 +4228,15 @@ export const results: Record<
     98: {
         result: [2, 1],
         events: []
+    },
+    99: {
+        result: [1, 1],
+        result_after_extra_time: [1, 2],
+        events: []
+    },
+    100: {
+        result: [1, 1],
+        result_after_extra_time: [3, 1],
+        events: []
     }
 };
