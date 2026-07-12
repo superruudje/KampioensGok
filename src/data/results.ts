@@ -4232,11 +4232,94 @@ export const results: Record<
     99: {
         result: [1, 1],
         result_after_extra_time: [1, 2],
-        events: []
+        events: [
+            {
+                minute: 36,
+                type: 'goal',
+                player: 'Andreas Schjelderup',
+                team: 'NOR',
+            },
+            {
+                minute: 45,
+                extraMinute: 2,
+                type: 'goal',
+                player: 'Jude Bellingham',
+                team: 'ENG',
+            },
+            {
+                minute: 93,
+                type: 'goal',
+                player: 'Jude Bellingham',
+                team: 'ENG',
+            },
+            {
+                minute: 117,
+                type: 'yellow_card',
+                player: 'Kristoffer Ajer',
+                team: 'NOR'
+            },
+        ]
+
     },
     100: {
         result: [1, 1],
         result_after_extra_time: [3, 1],
-        events: []
+        events: [
+            {
+                minute: 10,
+                type: 'goal',
+                player: 'Alexis Mac Allister',
+                team: 'ARG',
+            },
+            {
+                minute: 44,
+                type: 'yellow_card',
+                player: 'Breel Embolo',
+                team: 'SUI'
+            },
+            {
+                minute: 67,
+                type: 'goal',
+                player: 'Dan Ndoye',
+                team: 'SUI',
+            },
+            {
+                minute: 44,
+                type: 'red_card',
+                player: 'Breel Embolo',
+                team: 'SUI'
+            },
+            {
+                minute: 97,
+                type: 'yellow_card',
+                player: 'Thiago Almada',
+                team: 'ARG'
+            },
+            {
+                minute: 98,
+                type: 'yellow_card',
+                player: 'Lautaro Martinez',
+                team: 'ARG'
+            },
+            {
+                minute: 112,
+                type: 'goal',
+                player: 'Julian Alvarez',
+                team: 'ARG',
+            },
+            {
+                minute: 114,
+                type: 'yellow_card',
+                player: 'Jose Manuel Lopez',
+                team: 'ARG'
+            },
+            {
+                minute: 120,
+                extraMinute: 1,
+                type: 'goal',
+                player: 'Lautaro Martinez',
+                team: 'ARG',
+            },
+        ]
     }
 };
