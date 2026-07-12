@@ -5,8 +5,15 @@
         </div>
         <div class="mx-3 icon">
             <div class="d-flex align-items-center fs-4">
-                <span>{{ match.result?.[0] != null ? match.result[0] : '?' }}</span>-
-                <span>{{ match.result?.[1] != null ? match.result[1] : '?' }}</span>
+                <template v-if="displayResult.showPenalties">
+                    <span class="fs-7">({{ displayResult.team1Penalties }})</span>
+                    <span class="mx-1">{{ displayResult.score1 }} - {{ displayResult.score2 }}</span>
+                    <span class="fs-7">({{ displayResult.team2Penalties }})</span>
+                </template>
+                <template v-else>
+                    <span>{{ displayResult.score1 }}</span>-
+                    <span>{{ displayResult.score2 }}</span>
+                </template>
             </div>
         </div>
         <div class="time-line">
@@ -148,6 +155,34 @@ const matchWentToExtraTime = computed(() =>
 const wentToPenalties = computed(() =>
     props.match.result_after_penalties != null
 );
+
+const displayResult = computed(() => {
+    let result = props.match.result;
+    let showPenalties = false;
+    let team1Penalties = 0;
+    let team2Penalties = 0;
+
+    if (props.match.result_after_penalties) {
+        result = props.match.result_after_extra_time;
+        showPenalties = true;
+
+        team1Penalties = props.match.result_after_penalties[0];
+        team2Penalties = props.match.result_after_penalties[1];
+    } else if (props.match.result_after_extra_time) {
+        result = props.match.result_after_extra_time;
+    }
+
+    const score1 = result?.[0] != null ? result[0] : '?';
+    const score2 = result?.[1] != null ? result[1] : '?';
+
+    return {
+        score1,
+        score2,
+        showPenalties,
+        team1Penalties,
+        team2Penalties
+    };
+});
 
 function createMarker(label: string, minute: number, extraMinute?: number, sortOrder?: number) {
     return {

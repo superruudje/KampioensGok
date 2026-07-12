@@ -27,12 +27,16 @@
                                     class="border d-md-none"
                                     width="32"/>
                             </div>
-                            <div class="d-flex align-items-center fs-2 gap-1">
-                                <span v-if="match.result_after_extra_time" class="fs-6 lh-1">({{ match.result_after_extra_time[0] }})</span>
-                                <span>{{ match.result?.[0] != null ? match.result[0] : '?' }}</span>
-                                <span>-</span>
-                                <span>{{ match.result?.[1] != null ? match.result[1] : '?' }}</span>
-                                <span v-if="match.result_after_extra_time" class="fs-6 lh-1">({{ match.result_after_extra_time[1] }})</span>
+                            <div class="d-flex flex-shrink-0 flex-nowrap align-items-center fs-4">
+                                <template v-if="displayResult.showPenalties">
+                                    <span class="fs-7">({{ displayResult.team1Penalties }})</span>
+                                    <span class="mx-1">{{ displayResult.score1 }} - {{ displayResult.score2 }}</span>
+                                    <span class="fs-7">({{ displayResult.team2Penalties }})</span>
+                                </template>
+                                <template v-else>
+                                    <span>{{ displayResult.score1 }}</span>-
+                                    <span>{{ displayResult.score2 }}</span>
+                                </template>
                             </div>
                             <div
                                 class="d-flex flex-row-reverse flex-grow-1 flex-shrink-0 align-items-center justify-content-end gap-2"
@@ -52,9 +56,6 @@
                                     class="border d-md-none"
                                     width="32"/>
                             </div>
-                        </div>
-                        <div v-if="match.result_after_penalties?.length" class="small">
-                            ({{ match.result_after_penalties[0] }}-{{ match.result_after_penalties[1] }}p)
                         </div>
                     </div>
                 </div>
@@ -139,6 +140,35 @@ const matchType = computed(() => {
     else
         return match.value?.poule_name.replaceAll("_", " ");
 })
+
+const displayResult = computed(() => {
+    if (match.value == null) return {score1: '?', score2: '?', showPenalties: false, team1Penalties: 0, team2Penalties: 0};
+    let result = match.value.result;
+    let showPenalties = false;
+    let team1Penalties = 0;
+    let team2Penalties = 0;
+
+    if (match.value.result_after_penalties) {
+        result = match.value.result_after_extra_time;
+        showPenalties = true;
+
+        team1Penalties = match.value.result_after_penalties[0];
+        team2Penalties = match.value.result_after_penalties[1];
+    } else if (match.value.result_after_extra_time) {
+        result = match.value.result_after_extra_time;
+    }
+
+    const score1 = result?.[0] != null ? result[0] : '?';
+    const score2 = result?.[1] != null ? result[1] : '?';
+
+    return {
+        score1,
+        score2,
+        showPenalties,
+        team1Penalties,
+        team2Penalties
+    };
+});
 
 const started = computed(() => {
     return playedMatches.value.length

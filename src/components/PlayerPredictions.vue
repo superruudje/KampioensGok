@@ -99,8 +99,8 @@
                                 class="d-flex flex-column mb-3">
                                 <span class="txt-orange fs-6 fst-italic">{{ q.question }}</span>
 
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <span class="txt-pk-elevation-01 d-flex align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <span class="txt-pk-elevation-01 d-flex flex-wrap align-items-center">
                                       <template v-if="getQuestionPoints(q, idx) > -1">
                                         <i
                                             v-if="getQuestionPoints(q, idx) > 0"
