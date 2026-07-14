@@ -4321,5 +4321,9 @@ export const results: Record<
                 team: 'ARG',
             },
         ]
+    },
+    102: {
+        result: [0, 2],
+        events: []
     }
 };
