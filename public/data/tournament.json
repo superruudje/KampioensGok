@@ -178,7 +178,11 @@
             "ENG",
             "ARG"
         ],
-        "bronze_final": [],
-        "final": []
+        "bronze_final": [
+            "FRA"
+        ],
+        "final": [
+            "ESP"
+        ]
     }
 }
