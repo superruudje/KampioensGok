@@ -1128,7 +1128,7 @@
         "poule_name": "bronze_final",
         "location_id": 12,
         "teams": [
-            "L101",
+            "FRA",
             "L102"
         ]
     },
@@ -1139,7 +1139,7 @@
         "poule_name": "final",
         "location_id": 13,
         "teams": [
-            "W101",
+            "ESP",
             "W102"
         ]
     }
