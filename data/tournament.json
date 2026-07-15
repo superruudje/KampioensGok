@@ -179,10 +179,12 @@
             "ARG"
         ],
         "bronze_final": [
-            "FRA"
+            "FRA",
+            "ENG"
         ],
         "final": [
-            "ESP"
+            "ESP",
+            "ARG"
         ]
     }
 }
