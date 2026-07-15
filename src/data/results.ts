@@ -4325,5 +4325,9 @@ export const results: Record<
     101: {
         result: [0, 2],
         events: []
+    },
+    102: {
+        result: [1, 2],
+        events: []
     }
 };
