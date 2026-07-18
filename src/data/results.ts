@@ -3229,6 +3229,7 @@ export const results: Record<
                 minute: 56,
                 type: 'goal',
                 player: 'Casemiro',
+                assist: 'Gabriel Magalhães',
                 team: 'BRA',
             },
             {
@@ -3242,6 +3243,7 @@ export const results: Record<
                 extraMinute: 5,
                 type: 'goal',
                 player: 'Gabriel Martinelli',
+                assist: 'Bruno Guimarães',
                 team: 'BRA',
             },
         ]
@@ -3253,18 +3255,21 @@ export const results: Record<
                 minute: 45,
                 type: 'goal',
                 player: 'Kylian Mbappe',
+                assist: 'Ousmane Dembélé',
                 team: 'FRA',
             },
             {
                 minute: 53,
                 type: 'goal',
                 player: 'Bradley Barcola',
+                assist: 'Michael Olise',
                 team: 'FRA',
             },
             {
                 minute: 74,
                 type: 'goal',
                 player: 'Kylian Mbappe',
+                assist: 'Michael Olise',
                 team: 'FRA',
             },
         ]
@@ -3276,6 +3281,7 @@ export const results: Record<
                 minute: 39,
                 type: 'goal',
                 player: 'Antonio Nusa',
+                assist: 'Martin Ødegaard',
                 team: 'NOR',
             },
             {
@@ -3289,12 +3295,14 @@ export const results: Record<
                 minute: 74,
                 type: 'goal',
                 player: 'Amad Diallo',
+                assist: 'Nicolas Pepe',
                 team: 'CIV',
             },
             {
                 minute: 86,
                 type: 'goal',
                 player: 'Erling Haaland',
+                assist: 'Patrick Berg',
                 team: 'NOR',
             },
         ]
@@ -3306,12 +3314,14 @@ export const results: Record<
                 minute: 22,
                 type: 'goal',
                 player: 'Julian Quinones',
+                assist: 'Roberto Alvarado',
                 team: 'MEX',
             },
             {
                 minute: 31,
                 type: 'goal',
                 player: 'Raul Jimenez',
+                assist: 'Roberto Alvarado',
                 team: 'MEX',
             },
             {
@@ -3351,6 +3361,7 @@ export const results: Record<
                 minute: 7,
                 type: 'goal',
                 player: 'Brian Cipenga',
+                assist: 'Chancel Mbemba',
                 team: 'COD',
             },
             {
@@ -3370,12 +3381,14 @@ export const results: Record<
                 minute: 75,
                 type: 'goal',
                 player: 'Harry Kane',
+                assist: 'Anthony Gordon',
                 team: 'ENG',
             },
             {
                 minute: 86,
                 type: 'goal',
                 player: 'Harry Kane',
+                assist: 'Anthony Gordon',
                 team: 'ENG',
             },
         ]
@@ -3429,6 +3442,7 @@ export const results: Record<
                 minute: 51,
                 type: 'goal',
                 player: 'Ismaila Sarr',
+                assist: 'Moussa Niakhaté',
                 team: 'SEN',
             },
             {
@@ -3447,12 +3461,14 @@ export const results: Record<
                 minute: 86,
                 type: 'goal',
                 player: 'Romelu Lukaku',
+                assist: 'Thomas Meunier',
                 team: 'BEL',
             },
             {
                 minute: 89,
                 type: 'goal',
                 player: 'Youri Tielemans',
+                assist: 'Leandro Trossard',
                 team: 'BEL',
             },
             {
@@ -3502,6 +3518,7 @@ export const results: Record<
                 extraMinute: 4,
                 type: 'goal',
                 player: 'Goncalo Ramos',
+                assist: 'Rafael Leão',
                 team: 'POR',
             },
             {
@@ -3520,12 +3537,14 @@ export const results: Record<
                 minute: 36,
                 type: 'goal',
                 player: 'Mikel Oyarzabal',
+                assist: 'Marc Cucurella',
                 team: 'ESP'
             },
             {
                 minute: 66,
                 type: 'goal',
                 player: 'Pedro Porro',
+                assist: 'Álex Baena',
                 team: 'ESP'
             },
             {
@@ -3538,6 +3557,7 @@ export const results: Record<
                 minute: 89,
                 type: 'goal',
                 player: 'Mikel Oyarzabal',
+                assist: 'Marc Cucurella',
                 team: 'ESP'
             },
         ]
@@ -3549,6 +3569,7 @@ export const results: Record<
                 minute: 10,
                 type: 'goal',
                 player: 'Breel Embolo',
+                assist: 'Johan Manzambi',
                 team: 'SUI'
             },
             {
@@ -3579,12 +3600,14 @@ export const results: Record<
                 minute: 29,
                 type: 'goal',
                 player: 'Lionel Messi',
+                assist: 'Lisandro Martínez',
                 team: 'ARG'
             },
             {
                 minute: 59,
                 type: 'goal',
                 player: 'Deroy Duarte',
+                assist: 'Ryan Mendes',
                 team: 'CPV'
             },
             {
@@ -3597,12 +3620,14 @@ export const results: Record<
                 minute: 92,
                 type: 'goal',
                 player: 'Lisandro Martinez',
+                assist: 'A. M. Allister',
                 team: 'ARG'
             },
             {
                 minute: 103,
                 type: 'goal',
                 player: 'Sidny Lopes Cabral',
+                assist: 'J. S. Monteiro',
                 team: 'CPV'
             },
             {
@@ -3633,6 +3658,7 @@ export const results: Record<
                 minute: 14,
                 type: 'goal',
                 player: 'Jhon Arias',
+                assist: 'Luis Suárez',
                 team: 'COL'
             },
             {
@@ -3670,6 +3696,7 @@ export const results: Record<
                 minute: 13,
                 type: 'goal',
                 player: 'Emam Ashour',
+                assist: 'Karim Hafez',
                 team: 'EGY'
             },
             {
@@ -3821,6 +3848,7 @@ export const results: Record<
                 minute: 50,
                 type: 'goal',
                 player: 'Azzedine Ounahi',
+                assist: 'Achraf Hakimi',
                 team: 'MAR',
             },
             {
@@ -3833,6 +3861,7 @@ export const results: Record<
                 minute: 82,
                 type: 'goal',
                 player: 'Azzedine Ounahi',
+                assist: 'Brahim Díaz',
                 team: 'MAR',
             },
             {
@@ -3840,6 +3869,7 @@ export const results: Record<
                 extraMinute: 8,
                 type: 'goal',
                 player: 'Soufiane Rahimi',
+                assist: 'Brahim Díaz',
                 team: 'MAR',
             },
         ]
@@ -3851,12 +3881,14 @@ export const results: Record<
                 minute: 79,
                 type: 'goal',
                 player: 'Erling Haaland',
+                assist: 'Andreas Schjelderup',
                 team: 'NOR',
             },
             {
                 minute: 90,
                 type: 'goal',
                 player: 'Erling Haaland',
+                assist: 'Andreas Schjelderup',
                 team: 'NOR',
             },
             {
@@ -3888,12 +3920,14 @@ export const results: Record<
                 minute: 36,
                 type: 'goal',
                 player: 'Jude Bellingham',
+                assist: 'Bukayo Saka',
                 team: 'ENG',
             },
             {
                 minute: 38,
                 type: 'goal',
                 player: 'Jude Bellingham',
+                assist: 'Harry Kane',
                 team: 'ENG',
             },
             {
@@ -3968,6 +4002,7 @@ export const results: Record<
                 extraMinute: 1,
                 type: 'goal',
                 player: 'Mikel Merino',
+                assist: 'Ferran Torres',
                 team: 'ESP',
             },
             {
@@ -3993,6 +4028,7 @@ export const results: Record<
                 minute: 9,
                 type: 'goal',
                 player: 'Charles de Ketelaere',
+                assist: 'Nicolas Raskin',
                 team: 'BEL',
             },
             {
@@ -4005,6 +4041,7 @@ export const results: Record<
                 minute: 33,
                 type: 'goal',
                 player: 'Charles de Ketelaere',
+                assist: 'Leandro Trossard',
                 team: 'BEL',
             },
             {
@@ -4041,6 +4078,7 @@ export const results: Record<
                 minute: 15,
                 type: 'goal',
                 player: 'Yasser Ibrahim',
+                assist: 'Marwan Attia',
                 team: 'EGY',
             },
             {
@@ -4053,18 +4091,21 @@ export const results: Record<
                 minute: 67,
                 type: 'goal',
                 player: 'Mostafa Zico',
+                assist: 'Haissem Hassan',
                 team: 'EGY',
             },
             {
                 minute: 79,
                 type: 'goal',
                 player: 'Cristian Romero',
+                assist: 'Lionel Messi',
                 team: 'ARG',
             },
             {
                 minute: 83,
                 type: 'goal',
                 player: 'Lionel Messi',
+                assist: 'Gonzalo Montiel',
                 team: 'ARG',
             },
             {
@@ -4072,6 +4113,7 @@ export const results: Record<
                 extraMinute: 2,
                 type: 'goal',
                 player: 'Enzo Fernandez',
+                assist: 'Lautaro Martínez',
                 team: 'ARG',
             },
             {
@@ -4209,6 +4251,7 @@ export const results: Record<
                 minute: 60,
                 type: 'goal',
                 player: 'Kylian Mbappe',
+                assist: 'Désiré Doué',
                 team: 'FRA',
             },
             {
@@ -4221,13 +4264,60 @@ export const results: Record<
                 minute: 66,
                 type: 'goal',
                 player: 'Ousmane Dembele',
+                assist: 'Kylian Mbappe',
                 team: 'FRA',
             },
         ]
     },
     98: {
         result: [2, 1],
-        events: []
+        events: [
+            {
+                minute: 30,
+                type: 'goal',
+                player: 'Fabian Ruiz',
+                team: 'ESP',
+            },
+            {
+                minute: 41,
+                type: 'goal',
+                player: 'Charles de Ketelaere',
+                assist: 'Timothy Castagne',
+                team: 'BEL',
+            },
+            {
+                minute: 43,
+                type: 'yellow_card',
+                player: 'Pau Cubarsi',
+                team: 'ESP'
+            },
+            {
+                minute: 85,
+                type: 'yellow_card',
+                player: 'Kevin de Bruyne',
+                team: 'BEL'
+            },
+            {
+                minute: 88,
+                type: 'goal',
+                player: 'Mikel Merino',
+                team: 'ESP',
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'yellow_card',
+                player: 'Aymeric Laporte',
+                team: 'ESP',
+            },
+            {
+                minute: 90,
+                extraMinute: 5,
+                type: 'yellow_card',
+                player: 'Axel Witsel',
+                team: 'BEL',
+            },
+        ]
     },
     99: {
         result: [1, 1],
@@ -4237,6 +4327,7 @@ export const results: Record<
                 minute: 36,
                 type: 'goal',
                 player: 'Andreas Schjelderup',
+                assist: 'Martin Ødegaard',
                 team: 'NOR',
             },
             {
@@ -4244,6 +4335,7 @@ export const results: Record<
                 extraMinute: 2,
                 type: 'goal',
                 player: 'Jude Bellingham',
+                assist: 'Anthony Gordon',
                 team: 'ENG',
             },
             {
@@ -4269,6 +4361,7 @@ export const results: Record<
                 minute: 10,
                 type: 'goal',
                 player: 'Alexis Mac Allister',
+                assist: 'Lionel Messi',
                 team: 'ARG',
             },
             {
@@ -4281,6 +4374,7 @@ export const results: Record<
                 minute: 67,
                 type: 'goal',
                 player: 'Dan Ndoye',
+                assist: 'Ricardo Rodriguez',
                 team: 'SUI',
             },
             {
@@ -4305,6 +4399,7 @@ export const results: Record<
                 minute: 112,
                 type: 'goal',
                 player: 'Julian Alvarez',
+                assist: 'Flaco Lopez',
                 team: 'ARG',
             },
             {
@@ -4324,10 +4419,165 @@ export const results: Record<
     },
     101: {
         result: [0, 2],
-        events: []
+        events: [
+            {
+                minute: 8,
+                type: 'yellow_card',
+                player: 'Adrien Rabiot',
+                team: 'FRA'
+            },
+            {
+                minute: 22,
+                type: 'goal',
+                player: 'Mikel Oyarzabal',
+                team: 'ESP',
+            },
+            {
+                minute: 31,
+                type: 'yellow_card',
+                player: 'Marc Cucurella',
+                team: 'ESP'
+            },
+            {
+                minute: 58,
+                type: 'goal',
+                player: 'Pedro Porro',
+                assist: 'Dani Olmo',
+                team: 'ESP',
+            },
+            {
+                minute: 86,
+                type: 'yellow_card',
+                player: 'Kylian Mbappe',
+                team: 'FRA'
+            },
+        ]
     },
     102: {
         result: [1, 2],
-        events: []
+        events: [
+            {
+                minute: 37,
+                type: 'yellow_card',
+                player: 'Elliot Anderson',
+                team: 'ENG'
+            },
+            {
+                minute: 42,
+                type: 'yellow_card',
+                player: 'Lisandro Martinez',
+                team: 'ARG'
+            },
+            {
+                minute: 51,
+                type: 'yellow_card',
+                player: 'Cristian Romero',
+                team: 'ARG'
+            },
+            {
+                minute: 55,
+                type: 'goal',
+                player: 'Anthony Gordon',
+                assist: 'Morgan Rogers',
+                team: 'ENG',
+            },
+            {
+                minute: 85,
+                type: 'goal',
+                player: 'Enzo Fernandez',
+                assist: 'Lionel Messi',
+                team: 'ARG',
+            },
+            {
+                minute: 90,
+                extraMinute: 2,
+                type: 'goal',
+                player: 'Lautaro Martinez',
+                assist: 'Lionel Messi',
+                team: 'ARG',
+            },
+            {
+                minute: 90,
+                extraMinute: 4,
+                type: 'yellow_card',
+                player: 'Rodrigo de Paul',
+                team: 'ARG'
+            },
+        ]
+    },
+    103: {
+        result: [4, 6],
+        events: [
+            {
+                minute: 3,
+                type: 'goal',
+                player: 'Declan Rice',
+                team: 'ENG',
+            },
+            {
+                minute: 18,
+                type: 'goal',
+                player: 'Ezri Konsa',
+                assist: 'Declan Rice',
+                team: 'ENG',
+            },
+            {
+                minute: 37,
+                type: 'goal',
+                player: 'Bukayo Saka',
+                assist: 'Marcus Rashford',
+                team: 'ENG',
+            },
+            {
+                minute: 45,
+                extraMinute: 1,
+                type: 'goal',
+                player: 'Bukayo Saka',
+                assist: 'Eberechi Eze',
+                team: 'ENG',
+            },
+            {
+                minute: 48,
+                type: 'goal',
+                player: 'Kylian Mbappe',
+                assist: 'Michael Olise',
+                team: 'FRA',
+            },
+            {
+                minute: 54,
+                type: 'goal',
+                player: 'Bradley Barcola',
+                assist: 'Kylian Mbappe',
+                team: 'FRA',
+            },
+            {
+                minute: 66,
+                type: 'goal',
+                player: 'Kylian Mbappe',
+                assist: 'Michael Olise',
+                team: 'FRA',
+            },
+            {
+                minute: 87,
+                type: 'goal',
+                player: 'Bukayo Saka',
+                team: 'ENG',
+            },
+            {
+                minute: 90,
+                extraMinute: 6,
+                type: 'goal',
+                player: 'Ousmane Dembele',
+                assist: 'Dayot Upamecano',
+                team: 'FRA',
+            },
+            {
+                minute: 90,
+                extraMinute: 8,
+                type: 'goal',
+                player: 'Jude Bellingham',
+                team: 'ENG',
+            },
+        ]
     }
 };
