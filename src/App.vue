@@ -1,5 +1,6 @@
 <template>
     <div class="main-wrap">
+        <DonationModal/>
         <header class="header-wrap">
             <div class="d-flex gap-3 align-items-center justify-content-between w-100 px-4 py-2">
                 <span class="text-light w26-condensed text-uppercase">{{ $t('app.title') }} - {{
@@ -60,6 +61,7 @@ import {onBeforeMount, onMounted} from "vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import BackToTop from "@/components/BackToTop.vue";
 import MobileNavigationBar from "@/components/MobileNavigationBar.vue";
+import DonationModal from "@/components/DonationModal.vue";
 
 const tournament = useTournament();
 

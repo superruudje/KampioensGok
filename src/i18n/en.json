@@ -39,6 +39,11 @@
         "line_1": "© {year} WK 2026 POOL. All rights reserved.",
         "line_2": "WC 2026 POOL is an independent, non-commercial website intended for participants in a football pool during the FIFA World Cup 2026. This website is solely for entertainment purposes and allows users to track their predictions and scores throughout the tournament."
     },
+    "donation": {
+        "title": "Thank you for participating!",
+        "message": "Thank you for taking part in the World Cup pool! I hope you enjoyed using the website. It was developed and maintained completely free of charge and took many hours to build. If you enjoyed it, please consider making a voluntary donation via Ko-fi. Your support helps keep the website online and funds future improvements.",
+        "close": "Close"
+    },
     "time": {
         "days": "days",
         "hours": "hours",

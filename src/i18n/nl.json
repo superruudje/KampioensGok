@@ -39,6 +39,11 @@
         "line_1": "© {year} WK 2026 POOL. Alle rechten voorbehouden.",
         "line_2": "WK 2026 POOL is een onafhankelijke, niet-commerciële website bedoeld voor deelnemers aan een voetbalpool tijdens het FIFA Wereldkampioenschap 2026. Deze website is uitsluitend bedoeld voor entertainmentdoeleinden en biedt gebruikers de mogelijkheid om hun voorspellingen en scores bij te houden tijdens het toernooi."
     },
+    "donation": {
+        "title": "Bedankt voor je deelname!",
+        "message": "Bedankt dat je hebt meegedaan aan de WK-poule! De website is gratis ontwikkeld en onderhouden en heeft veel tijd gekost om te bouwen. Heb je er plezier aan beleefd? Overweeg dan een vrijwillige donatie via Ko-fi. Daarmee help je de website verder te ontwikkelen en online te houden.",
+        "close": "Sluiten"
+    },
     "time": {
         "days": "dagen",
         "hours": "uren",
