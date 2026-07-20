@@ -132,7 +132,7 @@
                                       </template>
                                     </span>
 
-                                    <span v-if="getQuestionPoints(q, idx) > -1" class="badge bg-orange">
+                                    <span v-if="getQuestionPoints(q, idx) > -1" class="badge bg-orange ms-auto">
                                       +{{ getQuestionPoints(q, idx) }}
                                     </span>
                                 </div>

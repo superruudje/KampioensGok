@@ -4579,5 +4579,62 @@ export const results: Record<
                 team: 'ENG',
             },
         ]
+    },
+    104: {
+        result: [0, 0],
+        result_after_extra_time: [1, 0],
+        events: [
+            {
+                minute: 41,
+                type: 'yellow_card',
+                player: 'Lisandro Martinez',
+                team: 'ARG'
+            },
+            {
+                minute: 52,
+                type: 'yellow_card',
+                player: 'Leandro Paredes',
+                team: 'ARG'
+            },
+            {
+                minute: 82,
+                type: 'yellow_card',
+                player: 'Enzo Fernandez',
+                team: 'ARG'
+            },
+            {
+                minute: 90,
+                extraMinute: 2,
+                type: 'yellow_card',
+                player: 'Cristian Romero',
+                team: 'ARG'
+            },
+            {
+                minute: 90,
+                extraMinute: 3,
+                type: 'red_card',
+                player: 'Enzo Fernandez',
+                team: 'ARG'
+            },
+            {
+                minute: 105,
+                type: 'yellow_card',
+                player: 'Lionel Scaloni',
+                team: 'ARG'
+            },
+            {
+                minute: 106,
+                type: 'goal',
+                player: 'Ferran Torres',
+                assist: 'Nico Williams',
+                team: 'ESP',
+            },
+            {
+                minute: 111,
+                type: 'yellow_card',
+                player: 'Alexis Mac Allister',
+                team: 'ARG'
+            },
+        ]
     }
 };

@@ -100,7 +100,7 @@ export const useTournament = defineStore('tournament', {
                 {
                     question: i18n.global.t('questions.champion'),
                     help: "",
-                    answer: "NED",
+                    answer: "ESP",
                     answer_type: "team",
                     type: "exact",
                     points: 75,
@@ -110,7 +110,7 @@ export const useTournament = defineStore('tournament', {
                 {
                     question: i18n.global.t('questions.goals_amount'),
                     help: i18n.global.t('questions.goals_amount_help'),
-                    answer: 10,
+                    answer: 308,
                     answer_type: "number",
                     type: "estimate",
                     match_day_answered: 34,
@@ -119,7 +119,7 @@ export const useTournament = defineStore('tournament', {
                 {
                     question: i18n.global.t('questions.cards_amount'),
                     help: i18n.global.t('questions.cards_amount_help'),
-                    answer: null,
+                    answer: 298,
                     answer_type: "number",
                     type: "estimate",
                     match_day_answered: 34,
@@ -145,7 +145,7 @@ export const useTournament = defineStore('tournament', {
                 // },
                 {
                     question: i18n.global.t('questions.top_scorer'),
-                    answer: "",
+                    answer: "FRA - Kylian Mbappe",
                     answer_type: "player",
                     type: "exact",
                     points: 10,
